@@ -1,0 +1,34 @@
+{
+  "name": "speak-native",
+  "version": "1.0.0",
+  "description": "日本語を考えずに英語が出てくるようになるアプリ。Gemini Flash + Claude Haiku で高速な英語会話練習PWA",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "generate-icons": "node assets/images/generate-icons.js",
+    "dev": "python -m http.server 8000",
+    "build": "npm run generate-icons"
+  },
+  "keywords": [
+    "english",
+    "learning",
+    "pwa",
+    "immersion",
+    "ai",
+    "gemini",
+    "claude"
+  ],
+  "author": "norinori-jan",
+  "license": "MIT",
+  "devDependencies": {
+    "canvas": "^2.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norinori-jan/speak-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/norinori-jan/speak-native/issues"
+  },
+  "homepage": "https://github.com/norinori-jan/speak-native#readme"
+}
