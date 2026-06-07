@@ -9,12 +9,12 @@
 <meta name="theme-color" content="#0e0f11">
 <meta name="description" content="日本語を考えずに英語が出てくるようになるアプリ。Claude API + Gemini Flashで高速英語会話練習">
 <title>Daily English Immersion</title>
-<link rel="manifest" href="pwa/manifest.json">
-<link rel="apple-touch-icon" href="assets/images/icon-192.png">
+<link rel="manifest" href="/speak-native/pwa/manifest.json">
+<link rel="apple-touch-icon" href="/speak-native/assets/images/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
+    navigator.serviceWorker.register('/speak-native/pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
   }
 </script>
 <style>
@@ -766,7 +766,6 @@
 </head>
 <body>
 
-<!-- HOME -->
 <div class="screen active" id="home">
   <div class="home-bg"></div>
   <div class="home-inner">
@@ -783,7 +782,6 @@
         <button class="provider-tab" data-provider="claude" onclick="switchProvider('claude')">Claude Haiku (Backup)</button>
       </div>
       
-      <!-- Gemini Key Tab -->
       <div id="geminiTab" class="provider-content">
         <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">🚀 無料枠で利用。フォールバック有効になります</div>
         <div class="api-input-row">
@@ -793,7 +791,6 @@
         <div class="api-status" id="geminiStatus">Gemini キーを入力してください</div>
       </div>
       
-      <!-- Claude Key Tab -->
       <div id="claudeTab" class="provider-content" style="display: none;">
         <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">バックアップ用。Gemini失敗時に自動で切り替わります</div>
         <div class="api-input-row">
@@ -868,7 +865,6 @@
   </div>
 </div>
 
-<!-- FREE TALK -->
 <div class="screen" id="freetalk">
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
@@ -894,7 +890,6 @@
   </div>
 </div>
 
-<!-- SHADOWING -->
 <div class="screen" id="shadowing">
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
@@ -910,7 +905,6 @@
   </div>
 </div>
 
-<!-- INSTANT -->
 <div class="screen" id="instant">
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
@@ -943,7 +937,6 @@
 </div>
 
 
-<!-- VOCAB -->
 <div class="screen" id="vocab">
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
@@ -957,7 +950,6 @@
   </div>
 </div>
 
-<!-- STATS -->
 <div class="screen" id="stats">
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
@@ -999,7 +991,7 @@ let STATE = {
   aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
   geminiKey: localStorage.getItem('dei_geminiKey') || '',
   claudeKey: localStorage.getItem('dei_claudeKey') || '',
-  history: [] // 直近4件のみ保持
+  history: [] 
 };
 
 let conversationHistory = [];
@@ -1105,7 +1097,6 @@ if (STATE.claudeKey) {
   document.getElementById('claudeStatus').className = 'api-status ok';
 }
 
-// Set active tab on load
 switchProvider(STATE.aiProvider);
 updateCurrentProvider();
 
@@ -1174,17 +1165,14 @@ function hideTyping() {
   if (el) el.remove();
 }
 
-// ===== HISTORY MANAGEMENT (Keep last 4 messages = 2 turns) =====
 function pushHistory(role, content) {
   STATE.history.push({ role, content });
-  // Keep only last 4 messages (2 user + 2 assistant turns)
   if (STATE.history.length > 4) {
     STATE.history = STATE.history.slice(-4);
   }
 }
 
 function getHistoryForGemini() {
-  // Convert STATE.history to Gemini format
   return STATE.history.map(msg => ({
     role: msg.role === 'user' ? 'user' : 'model',
     parts: [{ text: msg.content }]
@@ -1192,20 +1180,16 @@ function getHistoryForGemini() {
 }
 
 function getHistoryForClaude() {
-  // Convert STATE.history to Claude format
   return STATE.history.map(msg => ({
     role: msg.role,
     content: msg.content
   }));
 }
 
-// ===== GEMINI FLASH API CALL =====
-async function sendToGemini(userMessage) {
+async function sendToGemini() {
   if (!STATE.geminiKey) {
     return { error: 'Gemini key not set' };
   }
-
-  pushHistory('user', userMessage);
   
   const systemPrompt = `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English for the workplace and daily life.
 
@@ -1231,23 +1215,23 @@ Rules:
 
   try {
     const response = await fetch(
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
       {
         method: 'POST',
-        headers: { 'x-goog-api-key': STATE.geminiKey },
+        headers: { 
+          'Content-Type': 'application/json',
+          'x-goog-api-key': STATE.geminiKey 
+        },
         body: JSON.stringify(requestBody)
       }
     );
 
     const data = await response.json();
-    
     if (data.error) {
       return { error: data.error.message };
     }
 
     const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
-    pushHistory('assistant', reply);
-    
     return {
       success: true,
       reply,
@@ -1259,13 +1243,10 @@ Rules:
   }
 }
 
-// ===== CLAUDE HAIKU API CALL =====
-async function sendToClaude(userMessage) {
+async function sendToClaude() {
   if (!STATE.claudeKey) {
     return { error: 'Claude key not set' };
   }
-
-  pushHistory('user', userMessage);
 
   const systemPrompt = `You are a friendly English conversation partner. Reply in 1-2 sentences and always end with a question.
 Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
@@ -1289,14 +1270,11 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
     });
 
     const data = await response.json();
-
     if (data.error) {
       return { error: data.error.message };
     }
 
     const reply = data.content?.[0]?.text || 'No response';
-    pushHistory('assistant', reply);
-
     return {
       success: true,
       reply,
@@ -1308,409 +1286,4 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
   }
 }
 
-// ===== SEND MESSAGE WITH FALLBACK =====
 async function sendMessage() {
-  if (!STATE.geminiKey && !STATE.claudeKey) {
-    showToast('❌ APIキーを設定してください');
-    return;
-  }
-
-  const input = document.getElementById('msgInput');
-  const text = input.value.trim();
-  if (!text) return;
-
-  input.value = '';
-  input.style.height = 'auto';
-  addBubble('user', text);
-
-  showTyping();
-  document.getElementById('talkStatus').textContent = 'Thinking...';
-
-  let result;
-  let triedFallback = false;
-
-  // Try main provider
-  if (STATE.aiProvider === 'gemini' && STATE.geminiKey) {
-    result = await sendToGemini(text);
-    if (result.error && STATE.claudeKey) {
-      // Fallback to Claude
-      console.log('Gemini failed, trying Claude...');
-      STATE.history.pop(); // Remove failed user message
-      result = await sendToClaude(text);
-      triedFallback = true;
-      result.fallbackUsed = true;
-    }
-  } else if (STATE.aiProvider === 'claude' && STATE.claudeKey) {
-    result = await sendToClaude(text);
-    if (result.error && STATE.geminiKey) {
-      // Fallback to Gemini
-      console.log('Claude failed, trying Gemini...');
-      STATE.history.pop(); // Remove failed user message
-      result = await sendToGemini(text);
-      triedFallback = true;
-      result.fallbackUsed = true;
-    }
-  }
-
-  hideTyping();
-
-  if (result.error) {
-    addBubble('ai', '❌ Connection error. Check your API keys and try again.');
-    document.getElementById('talkStatus').textContent = 'Error';
-    return;
-  }
-
-  const reply = result.reply;
-  const tipMatch = reply.match(/\[Tip:(.*?)\]/s);
-  const cleanReply = reply.replace(/\[Tip:.*?\]/s, '').trim();
-
-  addBubble('ai', cleanReply);
-  if (tipMatch) {
-    addBubble('ai', '', tipMatch[1].trim());
-  }
-
-  // Show fallback indicator if used
-  if (result.fallbackUsed) {
-    console.log(`Fallback used: ${result.provider}`);
-    document.getElementById('talkStatus').textContent = 'Ready (Fallback)';
-  } else {
-    document.getElementById('talkStatus').textContent = 'Ready';
-  }
-}
-
-function handleEnter(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
-}
-function autoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
-}
-
-// ===== MIC =====
-function toggleMic() {
-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('音声入力はSafariでサポートされています');
-    return;
-  }
-  if (isRecording) {
-    recognition?.stop();
-    return;
-  }
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  recognition = new SR();
-  recognition.lang = 'en-US';
-  recognition.interimResults = false;
-  recognition.onstart = () => {
-    isRecording = true;
-    document.getElementById('micBtn').classList.add('recording');
-  };
-  recognition.onresult = e => {
-    document.getElementById('msgInput').value = e.results[0][0].transcript;
-    autoResize(document.getElementById('msgInput'));
-  };
-  recognition.onend = () => {
-    isRecording = false;
-    document.getElementById('micBtn').classList.remove('recording');
-  };
-  recognition.start();
-}
-
-// ===== SHADOWING =====
-function initShadowing() {
-  currentShadowLine = 0;
-  renderShadowScript();
-}
-
-function renderShadowScript() {
-  const body = document.getElementById('shadowBody');
-  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">Workplace Dialogue</div>' +
-    SHADOW_SCRIPTS.map((line, i) =>
-      `<div class="shadow-line ${i === currentShadowLine ? 'active' : i < currentShadowLine ? 'done' : ''}" onclick="jumpToLine(${i})">
-        ${line.en}
-        <div class="shadow-jp">${line.jp}</div>
-      </div>`
-    ).join('') + '</div>';
-}
-
-function jumpToLine(i) { currentShadowLine = i; renderShadowScript(); }
-
-function playCurrentLine() {
-  const line = SHADOW_SCRIPTS[currentShadowLine];
-  if (!line) return;
-  const utt = new SpeechSynthesisUtterance(line.en);
-  utt.lang = 'en-US'; utt.rate = 0.9;
-  window.speechSynthesis.speak(utt);
-}
-
-function toggleJP() {
-  showJP = !showJP;
-  document.querySelectorAll('.shadow-jp').forEach(el => {
-    el.style.display = showJP ? 'block' : '';
-  });
-}
-
-function nextShadowLine() {
-  if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
-    currentShadowLine++;
-    renderShadowScript();
-    playCurrentLine();
-  } else {
-    showToast('🎉 スクリプト完了！');
-  }
-}
-
-function shadowRecord() {
-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('音声入力をサポートしていません');
-    return;
-  }
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const r = new SR();
-  r.lang = 'en-US';
-  r.onresult = e => {
-    const said = e.results[0][0].transcript.toLowerCase();
-    const target = SHADOW_SCRIPTS[currentShadowLine].en.toLowerCase();
-    const similarity = said.split(' ').filter(w => target.includes(w)).length / target.split(' ').length;
-    showToast(similarity > 0.6 ? '✓ Great shadowing!' : '↻ Try again');
-  };
-  r.start();
-  showToast('🎤 聴いています...');
-}
-
-// ===== INSTANT =====
-function initInstant() {
-  instantIndex = 0; instantScore = 0;
-  updateInstantScore();
-  loadInstantQ();
-}
-
-function loadInstantQ() {
-  clearInterval(timerInterval);
-  document.getElementById('instantAnswer').classList.remove('show');
-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
-  document.getElementById('instantJP').textContent = q.jp;
-  document.getElementById('instantCounter').textContent = `Q ${instantIndex + 1} / ${INSTANT_QS.length}`;
-  startTimer();
-}
-
-function startTimer() {
-  timerVal = 3;
-  const progress = document.getElementById('timerProgress');
-  const num = document.getElementById('timerNum');
-  const circumference = 220;
-  progress.style.stroke = 'var(--accent)';
-
-  timerInterval = setInterval(() => {
-    timerVal -= 0.1;
-    const pct = timerVal / 3;
-    progress.style.strokeDashoffset = circumference * (1 - pct);
-    num.textContent = Math.ceil(timerVal);
-    if (pct < 0.3) progress.style.stroke = 'var(--danger)';
-    else if (pct < 0.6) progress.style.stroke = 'var(--accent2)';
-
-    if (timerVal <= 0) {
-      clearInterval(timerInterval);
-      showAnswer();
-    }
-  }, 100);
-}
-
-function showAnswer() {
-  clearInterval(timerInterval);
-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
-  document.getElementById('answerEN').textContent = q.en;
-  document.getElementById('answerNote').textContent = q.note;
-  document.getElementById('instantAnswer').classList.add('show');
-  const utt = new SpeechSynthesisUtterance(q.en);
-  utt.lang = 'en-US'; utt.rate = 0.85;
-  window.speechSynthesis.speak(utt);
-}
-
-function markAnswer(correct) {
-  if (!document.getElementById('instantAnswer').classList.contains('show')) {
-    showAnswer(); return;
-  }
-  if (correct) instantScore++;
-  instantIndex++;
-  updateInstantScore();
-  if (instantIndex >= INSTANT_QS.length) {
-    recordTodayStats(instantScore, INSTANT_QS.length);
-    showToast(`🎉 完了！ ${instantScore}/${INSTANT_QS.length} 正解`);
-    setTimeout(() => { instantIndex = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
-    return;
-  }
-  loadInstantQ();
-}
-
-function updateInstantScore() {
-  document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
-}
-
-// ===== STREAK =====
-const today = new Date().toDateString();
-const lastDay = localStorage.getItem('dei_lastDay');
-let streak = parseInt(localStorage.getItem('dei_streak') || '1');
-if (lastDay !== today) {
-  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
-  if (lastDay === yesterday.toDateString()) streak++;
-  else streak = 1;
-  localStorage.setItem('dei_streak', streak);
-  localStorage.setItem('dei_lastDay', today);
-}
-document.getElementById('streakDays').textContent = streak;
-
-
-// ===== GAS URL =====
-let gasUrl = localStorage.getItem('dei_gasUrl') || '';
-if (gasUrl) {
-  document.getElementById('gasUrlInput').value = gasUrl;
-  document.getElementById('gasStatus').textContent = '✓ GAS URL設定済み';
-  document.getElementById('gasStatus').className = 'api-status ok';
-}
-function saveGasUrl() {
-  const v = document.getElementById('gasUrlInput').value.trim();
-  if (!v.startsWith('https://')) { showToast('有効なURLを入力してください'); return; }
-  gasUrl = v;
-  localStorage.setItem('dei_gasUrl', v);
-  document.getElementById('gasStatus').textContent = '✓ GAS URL保存済み';
-  document.getElementById('gasStatus').className = 'api-status ok';
-  showToast('✓ GAS URL保存しました');
-}
-function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
-function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
-
-function addVocab(en, jp, note) {
-  const list = loadVocab();
-  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
-  saveVocabList(list);
-  showToast('📚 単語帳に保存しました');
-}
-
-function addVocabManual() {
-  const input = document.getElementById('vocabInput');
-  const val = input.value.trim();
-  if (!val) return;
-  addVocab(val, '', '手動追加');
-  input.value = '';
-  renderVocab();
-}
-
-function renderVocab() {
-  const list = loadVocab();
-  const body = document.getElementById('vocabBody');
-  document.getElementById('vocabCount').textContent = list.length + ' words';
-  if (list.length === 0) {
-    body.innerHTML = '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
-    return;
-  }
-  body.innerHTML = list.map((v, i) => `
-    <div class="vocab-card">
-      <div class="vocab-en">${v.en}</div>
-      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
-      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
-      <div class="vocab-meta">
-        <div class="vocab-date">${v.date}</div>
-        <button class="vocab-del" onclick="deleteVocab(${i})">✕</button>
-      </div>
-    </div>`).join('');
-}
-
-function deleteVocab(i) {
-  const list = loadVocab();
-  list.splice(i, 1);
-  saveVocabList(list);
-  renderVocab();
-}
-
-// ===== STATS =====
-function getStatsHistory() { return JSON.parse(localStorage.getItem('dei_statsHistory') || '[]'); }
-function recordTodayStats(score, total) {
-  const hist = getStatsHistory();
-  const d = new Date().toLocaleDateString('ja-JP');
-  const idx = hist.findIndex(h => h.date === d);
-  if (idx >= 0) { hist[idx].score += score; hist[idx].total += total; }
-  else hist.push({ date: d, score, total });
-  localStorage.setItem('dei_statsHistory', JSON.stringify(hist.slice(-30)));
-}
-
-function renderStats() {
-  // summary cards
-  document.getElementById('statStreak').textContent = streak;
-  const hist = getStatsHistory();
-  const allTotal = hist.reduce((s,h)=>s+h.total,0);
-  const allScore = hist.reduce((s,h)=>s+h.score,0);
-  document.getElementById('statTotal').textContent = allTotal;
-  document.getElementById('statRate').textContent = allTotal ? Math.round(allScore/allTotal*100)+'%' : '-';
-
-  // 7-day bar chart
-  const days = [];
-  for (let i=6; i>=0; i--) {
-    const d = new Date(); d.setDate(d.getDate()-i);
-    days.push({ label: ['日','月','火','水','木','金','土'][d.getDay()], date: d.toLocaleDateString('ja-JP') });
-  }
-  const maxScore = Math.max(...days.map(d => { const h=hist.find(h=>h.date===d.date); return h?h.score:0; }), 1);
-  document.getElementById('barChart').innerHTML = days.map((d,i) => {
-    const h = hist.find(h=>h.date===d.date);
-    const score = h ? h.score : 0;
-    const pct = Math.round(score/maxScore*100);
-    const isToday = i===6;
-    return `<div class="bar-col">
-      <div class="bar${isToday?' today':''}" style="height:${pct}%"></div>
-      <div class="bar-day">${d.label}</div>
-    </div>`;
-  }).join('');
-
-  // vocab growth chart
-  const vocabList = loadVocab();
-  const vocabByDay = days.map(d => vocabList.filter(v => v.date === d.date).length);
-  const maxV = Math.max(...vocabByDay, 1);
-  document.getElementById('vocabChart').innerHTML = days.map((d,i) => {
-    const pct = Math.round(vocabByDay[i]/maxV*100);
-    const isToday = i===6;
-    return `<div class="bar-col">
-      <div class="bar${isToday?' today':''}" style="height:${pct}%;background:${isToday?'#c882ff':'rgba(200,130,255,0.3)'}"></div>
-      <div class="bar-day">${d.label}</div>
-    </div>`;
-  }).join('');
-}
-
-// ===== GAS SYNC =====
-async function syncToSheets() {
-  if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
-  document.getElementById('syncLog').textContent = '同期中...';
-  const hist = getStatsHistory();
-  const vocab = loadVocab();
-  const payload = {
-    action: 'english_log',
-    streak,
-    history: hist,
-    vocab: vocab.map(v=>({en:v.en,jp:v.jp,note:v.note,date:v.date})),
-    timestamp: new Date().toISOString(),
-    provider: STATE.aiProvider  // Track which AI provider was used
-  };
-  try {
-    await fetch(gasUrl, {
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify(payload)
-    });
-    document.getElementById('syncLog').textContent = '✓ 同期完了 ' + new Date().toLocaleTimeString('ja-JP');
-    showToast('☁ Sheetsに同期しました');
-  } catch(e) {
-    document.getElementById('syncLog').textContent = 'エラー: ' + e.message;
-  }
-}
-
-
-// ===== TOAST =====
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-</script>
-</body>
-</html>
-
