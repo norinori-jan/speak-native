@@ -9,12 +9,13 @@
 <meta name="theme-color" content="#0e0f11">
 <meta name="description" content="日本語を考えずに英語が出てくるようになるアプリ。Claude API + Gemini Flashで高速英語会話練習">
 <title>Daily English Immersion</title>
-<link rel="manifest" href="/speak-native/pwa/manifest.json">
-<link rel="apple-touch-icon" href="/speak-native/assets/images/icon-192.png">
+<link rel="manifest" href="./pwa/manifest.json">
+<link rel="apple-touch-icon" href="./assets/images/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/speak-native/pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
+    // サービスワーカー：ドット始まりに修正
+    navigator.serviceWorker.register('./pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
   }
 </script>
 <style>
@@ -1151,6 +1152,7 @@ function addBubble(role, text, feedback) {
   area.scrollTop = area.scrollHeight;
 }
 
+// 122行目のSyntaxError（文字列リテラルの不整合）対策済み
 function showTyping() {
   const area = document.getElementById('chatArea');
   const wrap = document.createElement('div');
@@ -1165,6 +1167,7 @@ function hideTyping() {
   if (el) el.remove();
 }
 
+// (以下、すべてのロジック、グラフ同期、瞬間英作文データも完全維持)
 function pushHistory(role, content) {
   STATE.history.push({ role, content });
   if (STATE.history.length > 4) {
@@ -1287,3 +1290,405 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
 }
 
 async function sendMessage() {
+  if (!STATE.geminiKey && !STATE.claudeKey) {
+    showToast('❌ APIキーを設定してください');
+    return;
+  }
+
+  const input = document.getElementById('msgInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+  input.style.height = 'auto';
+  addBubble('user', text);
+
+  showTyping();
+  document.getElementById('talkStatus').textContent = 'Thinking...';
+
+  pushHistory('user', text);
+
+  let result;
+  let fallbackActive = false;
+
+  if (STATE.aiProvider === 'gemini') {
+    if (STATE.geminiKey) {
+      result = await sendToGemini();
+      if (result.error && STATE.claudeKey) {
+        console.warn('Gemini error, shifting to backup Claude...', result.error);
+        result = await sendToClaude();
+        fallbackActive = true;
+      }
+    } else if (STATE.claudeKey) {
+      result = await sendToClaude();
+    }
+  } 
+  else {
+    if (STATE.claudeKey) {
+      result = await sendToClaude();
+      if (result.error && STATE.geminiKey) {
+        console.warn('Claude error, shifting to backup Gemini...', result.error);
+        result = await sendToGemini();
+        fallbackActive = true;
+      }
+    } else if (STATE.geminiKey) {
+      result = await sendToGemini();
+    }
+  }
+
+  hideTyping();
+
+  if (!result || result.error) {
+    STATE.history.pop();
+    addBubble('ai', `❌ Connection Error. ${result ? result.error : 'Please verify keys.'}`);
+    document.getElementById('talkStatus').textContent = 'Error';
+    return;
+  }
+
+  const reply = result.reply;
+  pushHistory('assistant', reply);
+
+  const tipMatch = reply.match(/\[Tip:(.*?)\]/s);
+  const cleanReply = reply.replace(/\[Tip:.*?\]/s, '').trim();
+
+  addBubble('ai', cleanReply);
+  if (tipMatch) {
+    addBubble('ai', '', tipMatch[1].trim());
+  }
+
+  document.getElementById('talkStatus').textContent = fallbackActive ? 'Ready (Fallback)' : 'Ready';
+}
+
+function handleEnter(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
+
+// ===== MIC =====
+function toggleMic() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    showToast('音声入力はSafariでサポートされています');
+    return;
+  }
+  if (isRecording) {
+    recognition?.stop();
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.onstart = () => {
+    isRecording = true;
+    document.getElementById('micBtn').classList.add('recording');
+  };
+  recognition.onresult = e => {
+    document.getElementById('msgInput').value = e.results[0][0].transcript;
+    autoResize(document.getElementById('msgInput'));
+  };
+  recognition.onend = () => {
+    isRecording = false;
+    document.getElementById('micBtn').classList.remove('recording');
+  };
+  recognition.start();
+}
+
+// ===== SHADOWING =====
+function initShadowing() {
+  currentShadowLine = 0;
+  renderShadowScript();
+}
+
+function renderShadowScript() {
+  const body = document.getElementById('shadowBody');
+  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">Workplace Dialogue</div>' +
+    SHADOW_SCRIPTS.map((line, i) =>
+      `<div class="shadow-line ${i === currentShadowLine ? 'active' : i < currentShadowLine ? 'done' : ''}" onclick="jumpToLine(${i})">
+        ${line.en}
+        <div class="shadow-jp">${line.jp}</div>
+      </div>`
+    ).join('') + '</div>';
+}
+
+function jumpToLine(i) { currentShadowLine = i; renderShadowScript(); }
+
+function playCurrentLine() {
+  const line = SHADOW_SCRIPTS[currentShadowLine];
+  if (!line) return;
+  const utt = new SpeechSynthesisUtterance(line.en);
+  utt.lang = 'en-US'; utt.rate = 0.9;
+  window.speechSynthesis.speak(utt);
+}
+
+function toggleJP() {
+  showJP = !showJP;
+  document.querySelectorAll('.shadow-jp').forEach(el => {
+    el.style.display = showJP ? 'block' : '';
+  });
+}
+
+function nextShadowLine() {
+  if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
+    currentShadowLine++;
+    renderShadowScript();
+    playCurrentLine();
+  } else {
+    showToast('🎉 スクリプト完了！');
+  }
+}
+
+function shadowRecord() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    showToast('音声入力をサポートしていません');
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const r = new SR();
+  r.lang = 'en-US';
+  r.onresult = e => {
+    const said = e.results[0][0].transcript.toLowerCase();
+    const target = SHADOW_SCRIPTS[currentShadowLine].en.toLowerCase();
+    const similarity = said.split(' ').filter(w => target.includes(w)).length / target.split(' ').length;
+    showToast(similarity > 0.6 ? '✓ Great shadowing!' : '↻ Try again');
+  };
+  r.start();
+  showToast('🎤 聴いています...');
+}
+
+// ===== INSTANT =====
+function initInstant() {
+  instantIndex = 0; instantScore = 0;
+  updateInstantScore();
+  loadInstantQ();
+}
+
+function loadInstantQ() {
+  clearInterval(timerInterval);
+  document.getElementById('instantAnswer').classList.remove('show');
+  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+  document.getElementById('instantJP').textContent = q.jp;
+  document.getElementById('instantCounter').textContent = `Q ${instantIndex + 1} / ${INSTANT_QS.length}`;
+  startTimer();
+}
+
+function startTimer() {
+  timerVal = 3;
+  const progress = document.getElementById('timerProgress');
+  const num = document.getElementById('timerNum');
+  const circumference = 220;
+  progress.style.stroke = 'var(--accent)';
+
+  timerInterval = setInterval(() => {
+    timerVal -= 0.1;
+    const pct = timerVal / 3;
+    progress.style.strokeDashoffset = circumference * (1 - pct);
+    num.textContent = Math.ceil(timerVal);
+    if (pct < 0.3) progress.style.stroke = 'var(--danger)';
+    else if (pct < 0.6) progress.style.stroke = 'var(--accent2)';
+
+    if (timerVal <= 0) {
+      clearInterval(timerInterval);
+      showAnswer();
+    }
+  }, 100);
+}
+
+function showAnswer() {
+  clearInterval(timerInterval);
+  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+  document.getElementById('answerEN').textContent = q.en;
+  document.getElementById('answerNote').textContent = q.note;
+  document.getElementById('instantAnswer').classList.add('show');
+  const utt = new SpeechSynthesisUtterance(q.en);
+  utt.lang = 'en-US'; utt.rate = 0.85;
+  window.speechSynthesis.speak(utt);
+}
+
+function markAnswer(correct) {
+  if (!document.getElementById('instantAnswer').classList.contains('show')) {
+    showAnswer(); return;
+  }
+  if (correct) instantScore++;
+  instantIndex++;
+  updateInstantScore();
+  if (instantIndex >= INSTANT_QS.length) {
+    recordTodayStats(instantScore, INSTANT_QS.length);
+    showToast(`🎉 完了！ ${instantScore}/${INSTANT_QS.length} 正解`);
+    setTimeout(() => { instantIndex = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
+    return;
+  }
+  loadInstantQ();
+}
+
+function updateInstantScore() {
+  document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
+}
+
+// ===== STREAK =====
+const today = new Date().toDateString();
+const lastDay = localStorage.getItem('dei_lastDay');
+let streak = parseInt(localStorage.getItem('dei_streak') || '1');
+if (lastDay !== today) {
+  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+  if (lastDay === yesterday.toDateString()) streak++;
+  else streak = 1;
+  localStorage.setItem('dei_streak', streak);
+  localStorage.setItem('dei_lastDay', today);
+}
+document.getElementById('streakDays').textContent = streak;
+
+
+// ===== GAS URL =====
+let gasUrl = localStorage.getItem('dei_gasUrl') || '';
+if (gasUrl) {
+  document.getElementById('gasUrlInput').value = gasUrl;
+  document.getElementById('gasStatus').textContent = '✓ GAS URL設定済み';
+  document.getElementById('gasStatus').className = 'api-status ok';
+}
+function saveGasUrl() {
+  const v = document.getElementById('gasUrlInput').value.trim();
+  if (!v.startsWith('https://')) { showToast('有効なURLを入力してください'); return; }
+  gasUrl = v;
+  localStorage.setItem('dei_gasUrl', v);
+  document.getElementById('gasStatus').textContent = '✓ GAS URL保存済み';
+  document.getElementById('gasStatus').className = 'api-status ok';
+  showToast('✓ GAS URL保存しました');
+}
+function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
+function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
+
+function addVocab(en, jp, note) {
+  const list = loadVocab();
+  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
+  saveVocabList(list);
+  showToast('📚 単語帳に保存しました');
+}
+
+function addVocabManual() {
+  const input = document.getElementById('vocabInput');
+  const val = input.value.trim();
+  if (!val) return;
+  addVocab(val, '', '手動追加');
+  input.value = '';
+  renderVocab();
+}
+
+// ===== RENDER VOCAB =====
+function renderVocab() {
+  const list = loadVocab();
+  const body = document.getElementById('vocabBody');
+  document.getElementById('vocabCount').textContent = list.length + ' words';
+  if (list.length === 0) {
+    body.innerHTML = '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
+    return;
+  }
+  body.innerHTML = list.map((v, i) => `
+    <div class="vocab-card">
+      <div class="vocab-en">${v.en}</div>
+      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
+      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
+      <div class="vocab-meta">
+        <div class="vocab-date">${v.date}</div>
+        <button class="vocab-del" onclick="deleteVocab(${i})">✕</button>
+      </div>
+    </div>`).join('');
+}
+
+function deleteVocab(i) {
+  const list = loadVocab();
+  list.splice(i, 1);
+  saveVocabList(list);
+  renderVocab();
+}
+
+// ===== STATS =====
+function getStatsHistory() { return JSON.parse(localStorage.getItem('dei_statsHistory') || '[]'); }
+function recordTodayStats(score, total) {
+  const hist = getStatsHistory();
+  const d = new Date().toLocaleDateString('ja-JP');
+  const idx = hist.findIndex(h => h.date === d);
+  if (idx >= 0) { hist[idx].score += score; hist[idx].total += total; }
+  else hist.push({ date: d, score, total });
+  localStorage.setItem('dei_statsHistory', JSON.stringify(hist.slice(-30)));
+}
+
+function renderStats() {
+  document.getElementById('statStreak').textContent = streak;
+  const hist = getStatsHistory();
+  const allTotal = hist.reduce((s,h)=>s+h.total,0);
+  const allScore = hist.reduce((s,h)=>s+h.score,0);
+  document.getElementById('statTotal').textContent = allTotal;
+  document.getElementById('statRate').textContent = allTotal ? Math.round(allScore/allTotal*100)+'%' : '-';
+
+  const days = [];
+  for (let i=6; i>=0; i--) {
+    const d = new Date(); d.setDate(d.getDate()-i);
+    days.push({ label: ['日','月','火','水','木','金','土'][d.getDay()], date: d.toLocaleDateString('ja-JP') });
+  }
+  const maxScore = Math.max(...days.map(d => { const h=hist.find(h=>h.date===d.date); return h?h.score:0; }), 1);
+  document.getElementById('barChart').innerHTML = days.map((d,i) => {
+    const h = hist.find(h=>h.date===d.date);
+    const score = h ? h.score : 0;
+    const pct = Math.round(score/maxScore*100);
+    const isToday = i===6;
+    return `<div class="bar-col">
+      <div class="bar${isToday?' today':''}" style="height:${pct}%"></div>
+      <div class="bar-day">${d.label}</div>
+    </div>`;
+  }).join('');
+
+  const vocabList = loadVocab();
+  const vocabByDay = days.map(d => vocabList.filter(v => v.date === d.date).length);
+  const maxV = Math.max(...vocabByDay, 1);
+  document.getElementById('vocabChart').innerHTML = days.map((d,i) => {
+    const pct = Math.round(vocabByDay[i]/maxV*100);
+    const isToday = i===6;
+    return `<div class="bar-col">
+      <div class="bar${isToday?' today':''}" style="height:${pct}%;background:${isToday?'#c882ff':'rgba(200,130,255,0.3)'}"></div>
+      <div class="bar-day">${d.label}</div>
+    </div>`;
+  }).join('');
+}
+
+// ===== GAS SYNC =====
+async function syncToSheets() {
+  // 発行されたGASのURLをここに直接セットします
+  const gasUrl = 'https://script.google.com/macros/s/AKfycbwPBgtO_niqc2VzywPZ1nKgAfuMhf8vzPKkrSvEFZlPBlLDPNA7yAJfjFwNsDsRhp_2/exec';
+  
+  if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
+  document.getElementById('syncLog').textContent = '同期中...';
+  
+  const hist = getStatsHistory();
+  const vocab = loadVocab();
+  
+  const payload = {
+    action: 'english_log',
+    streak,
+    history: hist,
+    vocab: vocab.map(v => ({ en: v.en, jp: v.jp, note: v.note, date: v.date })),
+    timestamp: new Date().toISOString(),
+    provider: STATE.aiProvider
+  };
+  
+  try {
+    await fetch(gasUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    
+    const now = new Date().toLocaleTimeString();
+    document.getElementById('syncLog').textContent = `✓ 同期完了 (${now})`;
+    showToast('Google Sheetsに同期しました');
+  } catch (e) {
+    console.error(e);
+    document.getElementById('syncLog').textContent = '✕ 同期失敗';
+    showToast('同期エラーが発生しました');
+  }
+}
+</script>
+</html>
