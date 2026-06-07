@@ -1655,7 +1655,6 @@ function renderStats() {
 
 // ===== GAS SYNC =====
 async function syncToSheets() {
-  // 発行されたGASのURLをここに直接セットします
   const gasUrl = 'https://script.google.com/macros/s/AKfycbwPBgtO_niqc2VzywPZ1nKgAfuMhf8vzPKkrSvEFZlPBlLDPNA7yAJfjFwNsDsRhp_2/exec';
   
   if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
@@ -1681,14 +1680,115 @@ async function syncToSheets() {
       body: JSON.stringify(payload)
     });
     
-    const now = new Date().toLocaleTimeString();
+    const now = new Date().toLocaleTimeString('ja-JP');
     document.getElementById('syncLog').textContent = `✓ 同期完了 (${now})`;
-    showToast('Google Sheetsに同期しました');
+    showToast('☁ Sheetsに同期しました');
   } catch (e) {
     console.error(e);
     document.getElementById('syncLog').textContent = '✕ 同期失敗';
     showToast('同期エラーが発生しました');
   }
 }
+
+// ===== TRAIN MODE CONTROL =====
+let isTrainMode = false;
+function toggleTrainMode() {
+  isTrainMode = !isTrainMode;
+  const btn = document.getElementById('trainToggleBtn');
+  const badge = document.getElementById('trainBadge');
+  
+  if (isTrainMode) {
+    if (btn) btn.classList.add('active');
+    if (badge) badge.classList.add('show');
+    showToast('電車モード: 音声読み上げをオフにしました');
+    // もし再生中の音声があれば即座に停止
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+  } else {
+    if (btn) btn.classList.remove('active');
+    if (badge) badge.classList.remove('show');
+    showToast('通常モード: 音声読み上げが有効です');
+  }
+}
+
+// ===== AUDIO UTILITIES (TTS & STT) =====
+function speak(text) {
+  // 電車モード、または声を出せない環境（ミュート）の場合は一切音声を流さない
+  if (isTrainMode) {
+    console.log('Train mode active: Speech synthesis bypassed.');
+    return;
+  }
+  
+  if ('speechSynthesis' in window) {
+    // 既存の再生をクリア
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    
+    // iOS Safari等の挙動を安定させるためのオプション設定
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+    
+    window.speechSynthesis.speak(utterance);
+  } else {
+    console.warn('Speech synthesis not supported in this browser.');
+  }
+}
+
+// ===== CHAT MECHANICS =====
+async function sendMessage() {
+  const inputEl = document.getElementById('textInput');
+  const text = inputEl.value.trim();
+  if (!text) return;
+  
+  // ユーザーのメッセージを画面に表示
+  appendBubble(text, true);
+  inputEl.value = '';
+  
+  // タイピングインジケーター（...）を表示
+  showTypingIndicator();
+  
+  // APIへのリクエストを送信
+  let response;
+  if (STATE.aiProvider === 'claude') {
+    response = await sendToClaude(text);
+  } else {
+    response = await sendToGemini(text);
+  }
+  
+  // インジケーターを消去
+  hideTypingIndicator();
+  
+  if (response.error) {
+    appendBubble(`Error: ${response.error}`, false);
+    showToast('通信エラーが発生しました');
+    return;
+  }
+  
+  // AIの返答を表示
+  appendBubble(response.reply, false);
+  
+  // 自動音声再生（電車モードでなければ発動）
+  speak(response.reply);
+  
+  // 進捗と履歴の更新
+  updateStreakAndStats();
+}
+
+// 初期化処理のバインド
+document.addEventListener('DOMContentLoaded', () => {
+  // 電車モードトグルボタンのイベント登録
+  const trainBtn = document.getElementById('trainToggleBtn');
+  if (trainBtn) {
+    trainBtn.addEventListener('click', toggleTrainMode);
+  }
+  
+  // 送信ボタンやその他の初期設定
+  const sendBtn = document.getElementById('sendBtn');
+  if (sendBtn) {
+    sendBtn.addEventListener('click', sendMessage);
+  }
+});
 </script>
 </html>

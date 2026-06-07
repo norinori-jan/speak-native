@@ -2,20 +2,21 @@
   "name": "Daily English Immersion - Speak Native",
   "short_name": "Speak Native",
   "description": "日本語を考えずに英語が出てくるようになるアプリ。Gemini Flash + Claude Haiku で高速な英語会話練習",
-  "start_url": "./",
+  "start_url": "/speak-native/index.html",
+  "scope": "/speak-native/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0e0f11",
   "theme_color": "#5cefb0",
   "icons": [
     {
-      "src": "../assets/images/icon-192.png",
+      "src": "/speak-native/assets/images/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "../assets/images/icon-512.png",
+      "src": "/speak-native/assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -23,7 +24,7 @@
   ],
   "screenshots": [
     {
-      "src": "../assets/images/screenshot-narrow.png",
+      "src": "/speak-native/assets/images/screenshot-narrow.png",
       "sizes": "540x720",
       "type": "image/png",
       "form_factor": "narrow"
@@ -35,10 +36,10 @@
       "name": "Free Talk",
       "short_name": "Free Talk",
       "description": "Start AI conversation",
-      "url": "./?mode=freetalk",
+      "url": "/speak-native/index.html?mode=freetalk",
       "icons": [
         {
-          "src": "../assets/images/icon-192.png",
+          "src": "/speak-native/assets/images/icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -47,10 +48,10 @@
       "name": "Instant English",
       "short_name": "Instant",
       "description": "3-second English creation",
-      "url": "./?mode=instant",
+      "url": "/speak-native/index.html?mode=instant",
       "icons": [
         {
-          "src": "../assets/images/icon-192.png",
+          "src": "/speak-native/assets/images/icon-192.png",
           "sizes": "192x192"
         }
       ]
