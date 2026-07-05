@@ -763,70 +763,6 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-  /* ===== Mode Card Hover ===== */
-.mode-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.mode-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-.mode-card:hover .mode-icon {
-  transform: scale(1.1);
-  transition: transform 0.15s ease;
-}
-/* ===== Mode Icon Unified Style ===== */
-.mode-icon {
-  font-size: 28px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-}
-/* ===== Manage Buttons (iCloud / quick-ref) ===== */
-.manage-btn {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  font-size: 13px;
-  font-weight: 600;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.manage-btn:hover {
-  background: var(--accent2);
-  transform: translateY(-2px);
-}
-/* ===== Responsive (Smartphone) ===== */
-@media (max-width: 480px) {
-  .modes-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .mode-card {
-    padding: 12px;
-  }
-
-  .mode-icon {
-    font-size: 24px;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-  }
-
-  .manage-btn {
-    font-size: 12px;
-    padding: 8px;
-  }
-}
-
 </style>
 </head>
 <body>
@@ -839,7 +775,7 @@
       <h1 class="logo-title">Speak like<br><em>you think</em></h1>
       <p class="logo-sub">日本語を考えずに英語が出てくるようになるアプリ</p>
     </div>
-    
+
     <div class="api-section">
       <div class="api-label">AI Provider & Keys</div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
@@ -877,22 +813,10 @@
         </div>
         <div class="api-status" id="gasStatus">GAS URLを入力してください（Step2後）</div>
       </div>
-        </div> <!-- api-section 終了 -->
-
-    <!-- iCloud / quick-ref ボタン（管理系） -->
-    <div style="display:flex; gap:10px; margin-top:16px;">
-      <button class="api-save-btn" onclick="saveToiCloud()" style="flex:1;">
-        ☁ iCloudに保存
-      </button>
-      <button class="api-save-btn" onclick="sendToQuickRef()" style="flex:1; background:var(--accent2);">
-        📌 quick-ref
-      </button>
     </div>
 
-    <!-- モード選択 -->
     <div class="modes-label">Today's practice</div>
     <div class="modes-grid">
-      <!-- ここにモードカードが続く -->
       <div class="mode-card freetalk" onclick="showScreen('freetalk')">
         <div class="mode-icon">💬</div>
         <div class="mode-info">
@@ -1615,54 +1539,9 @@ if (lastDay !== today) {
   localStorage.setItem('dei_lastDay', today);
 }
 document.getElementById('streakDays').textContent = streak;
-function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
-function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
-
-function addVocab(en, jp, note) {
-  const list = loadVocab();
-  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
-  saveVocabList(list);
-  showToast('📚 単語帳に保存しました');
-}
-
-function addVocabManual() {
-  const input = document.getElementById('vocabInput');
-  const val = input.value.trim();
-  if (!val) return;
-  addVocab(val, '', '手動追加');
-  input.value = '';
-  renderVocab();
-}
-
-function renderVocab() {
-  const list = loadVocab();
-  const body = document.getElementById('vocabBody');
-  document.getElementById('vocabCount').textContent = list.length + ' words';
-  if (list.length === 0) {
-    body.innerHTML = '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
-    return;
-  }
-  body.innerHTML = list.map((v, i) => `
-    <div class="vocab-card">
-      <div class="vocab-en">${v.en}</div>
-      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
-      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
-      <div class="vocab-meta">
-        <div class="vocab-date">${v.date}</div>
-        <button class="vocab-del" onclick="deleteVocab(${i})">✕</button>
-      </div>
-    </div>`).join('');
-}
-function deleteVocab(i) {
-  const list = loadVocab();
-  list.splice(i, 1);
-  saveVocabList(list);
-  renderVocab();
-}
 
 
 // ===== GAS URL =====
-
 let gasUrl = localStorage.getItem('dei_gasUrl') || '';
 if (gasUrl) {
   document.getElementById('gasUrlInput').value = gasUrl;
@@ -1911,38 +1790,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sendBtn.addEventListener('click', sendMessage);
   }
 });
-function saveToiCloud() {
-  const data = {
-    vocab: loadVocab(),
-    stats: getStatsHistory(),
-    ts: Date.now()
-  };
-
-  const blob = new Blob([JSON.stringify(data, null, 2)], {
-    type: 'application/json'
-  });
-
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'speak-native-backup.json';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-
-  showToast('☁ iCloud Driveに保存してください（Filesで選択）');
-}
-function sendToQuickRef() {
-  const data = loadVocab();
-  const text = data.map(v => `${v.en} = ${v.jp}`).join('\n');
-
-  navigator.clipboard.writeText(text)
-    .then(() => {
-      showToast('📌 単語リストをコピーしました（quick-refに貼り付け）');
-    })
-    .catch(() => {
-      showToast('コピーできませんでした');
-    });
-}
-
 </script>
 </html>
