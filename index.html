@@ -1090,10 +1090,10 @@
     </div>
     <div style="display:flex;gap:8px;margin-bottom:8px;">
   <button style="flex:1;padding:12px;background:rgba(92,239,176,0.1);border:1px solid rgba(92,239,176,0.25);border-radius:14px;color:var(--accent);font-size:13px;font-weight:500;cursor:pointer;" onclick="saveToiCloud()">?? iCloud保存</button>
-  <button style="flex:1;padding:12px;background:rgba(126,184,255,0.1);border:1px solid rgba(126,184,255,0.25);border-radius:14px;color:var(--accent3);font-size:13px;font-weight:500;cursor:pointer;" onclick="sendToQuickRef()">?? quick-ref</button>
+  <button style="flex:1;padding:12px;background:rgba(126,184,255,0.1);border:1px solid rgba(126,184,255,0.25);border-radius:14px;color:var(--accent3);font-size:13px;font-weight:500;cursor:pointer;" onclick="sendToQuickRef()">📒 quick-ref</button>
 </div>
-<button class="gas-sync-btn" onclick="syncToSheets()">笘・Google Sheets縺ｫ蜷梧悄</button>
-    <div class="sync-log" id="syncLog">GAS URL繧定ｨｭ螳壹☆繧九→蜷梧悄縺ｧ縺阪∪縺・/div>
+<button class="gas-sync-btn" onclick="syncToSheets()">📊 Google Sheetsに同期</button>
+    <div class="sync-log" id="syncLog">GAS URLを設定すると同期できます/div>
   </div>
 </div>
 
@@ -1900,7 +1900,7 @@ function renderStats() {
 // ===== GAS SYNC =====
 async function syncToSheets() {
   if (!gasUrl) { showToast('GAS URL繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞'); return; }
-  document.getElementById('syncLog').textContent = '蜷梧悄荳ｭ...';
+  document.getElementById('syncLog').textContent = '同期中...';
   const hist = getStatsHistory();
   const vocab = loadVocab();
   const payload = {
@@ -1917,10 +1917,10 @@ async function syncToSheets() {
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify(payload)
     });
-    document.getElementById('syncLog').textContent = '笨・蜷梧悄螳御ｺ・' + new Date().toLocaleTimeString('ja-JP');
+    document.getElementById('syncLog').textContent = '✅ 同期完了' + new Date().toLocaleTimeString('ja-JP');
     showToast('笘・Sheets縺ｫ蜷梧悄縺励∪縺励◆');
   } catch(e) {
-    document.getElementById('syncLog').textContent = '繧ｨ繝ｩ繝ｼ: ' + e.message;
+    document.getElementById('syncLog').textContent = 'エラー: ' + e.message;
   }
 }
 
@@ -1957,7 +1957,7 @@ function sendToQuickRef() {
   };
   try {
     localStorage.setItem('is_transfer', JSON.stringify(payload));
-    showToast('?? quick-ref に送信しました');
+    showToast('📒 quick-ref に送信しました');
   } catch(e) { showToast('送信失敗: ' + e.message); }
 }
 
