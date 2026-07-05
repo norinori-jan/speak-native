@@ -1,0 +1,3775 @@
+﻿diff --git a/index.html b/index.html
+index 1b9b03b..75e5aa2 100644
+--- a/index.html
++++ b/index.html
+@@ -1,1794 +1,1976 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+-<meta name="apple-mobile-web-app-capable" content="yes">
+-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+-<meta name="apple-mobile-web-app-title" content="Speak Native">
+-<meta name="theme-color" content="#0e0f11">
+-<meta name="description" content="譌･譛ｬ隱槭ｒ閠・∴縺壹↓闍ｱ隱槭′蜃ｺ縺ｦ縺上ｋ繧医≧縺ｫ縺ｪ繧九い繝励Μ縲・laude API + Gemini Flash縺ｧ鬮倬溯恭隱樔ｼ夊ｩｱ邱ｴ鄙・>
+-<title>Daily English Immersion</title>
+-<link rel="manifest" href="./pwa/manifest.json">
+-<link rel="apple-touch-icon" href="./assets/images/icon-192.png">
+-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+-<script>
+-  if ('serviceWorker' in navigator) {
+-    // 繧ｵ繝ｼ繝薙せ繝ｯ繝ｼ繧ｫ繝ｼ・壹ラ繝・ヨ蟋九∪繧翫↓菫ｮ豁｣
+-    navigator.serviceWorker.register('./pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
+-  }
+-</script>
+-<style>
+-  :root {
+-    --bg: #0e0f11;
+-    --surface: #16181c;
+-    --surface2: #1e2128;
+-    --border: #2a2d35;
+-    --accent: #5cefb0;
+-    --accent2: #f0a05a;
+-    --accent3: #7eb8ff;
+-    --text: #e8eaf0;
+-    --text-muted: #6b7280;
+-    --user-bubble: #1e2a1e;
+-    --ai-bubble: #1a1e2e;
+-    --danger: #ff6b6b;
+-    --radius: 18px;
+-    --safe-bottom: env(safe-area-inset-bottom, 0px);
+-  }
+-
+-  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+-
+-  body {
+-    background: var(--bg);
+-    color: var(--text);
+-    font-family: 'DM Sans', sans-serif;
+-    min-height: 100vh;
+-    min-height: -webkit-fill-available;
+-    overflow: hidden;
+-    display: flex;
+-    flex-direction: column;
+-  }
+-
+-  /* SCREEN SYSTEM */
+-  .screen { display: none; flex-direction: column; height: 100vh; height: -webkit-fill-available; }
+-  .screen.active { display: flex; }
+-
+-  /* ===== HOME SCREEN ===== */
+-  #home {
+-    background: var(--bg);
+-    padding: 0;
+-    position: relative;
+-    overflow: hidden;
+-  }
+-
+-  .home-bg {
+-    position: absolute;
+-    inset: 0;
+-    background:
+-      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(92,239,176,0.08) 0%, transparent 60%),
+-      radial-gradient(ellipse 50% 50% at 10% 80%, rgba(126,184,255,0.06) 0%, transparent 60%);
+-    pointer-events: none;
+-  }
+-
+-  .home-inner {
+-    position: relative;
+-    z-index: 1;
+-    display: flex;
+-    flex-direction: column;
+-    height: 100%;
+-    padding: 60px 28px 32px;
+-    padding-bottom: calc(32px + var(--safe-bottom));
+-  }
+-
+-  .logo-area { margin-bottom: 40px; }
+-  .logo-tag {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 10px;
+-    letter-spacing: 3px;
+-    color: var(--accent);
+-    text-transform: uppercase;
+-    margin-bottom: 10px;
+-    opacity: 0.8;
+-  }
+-  .logo-title {
+-    font-family: 'DM Serif Display', serif;
+-    font-size: 38px;
+-    line-height: 1.1;
+-    color: var(--text);
+-    letter-spacing: -0.5px;
+-  }
+-  .logo-title em { font-style: italic; color: var(--accent); }
+-  .logo-sub {
+-    margin-top: 10px;
+-    font-size: 14px;
+-    color: var(--text-muted);
+-    line-height: 1.5;
+-    max-width: 260px;
+-  }
+-
+-  /* API Key input */
+-  .api-section {
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: var(--radius);
+-    padding: 16px;
+-    margin-bottom: 24px;
+-  }
+-  .api-label {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 10px;
+-    letter-spacing: 2px;
+-    color: var(--accent);
+-    text-transform: uppercase;
+-    margin-bottom: 8px;
+-  }
+-  .api-input-row { display: flex; gap: 8px; align-items: center; }
+-  .api-input {
+-    flex: 1;
+-    background: var(--surface2);
+-    border: 1px solid var(--border);
+-    border-radius: 10px;
+-    padding: 10px 12px;
+-    color: var(--text);
+-    font-family: 'DM Mono', monospace;
+-    font-size: 12px;
+-    outline: none;
+-  }
+-  .api-input:focus { border-color: var(--accent); }
+-  .api-save-btn {
+-    background: var(--accent);
+-    color: var(--bg);
+-    border: none;
+-    border-radius: 10px;
+-    padding: 10px 14px;
+-    font-size: 12px;
+-    font-weight: 600;
+-    cursor: pointer;
+-    white-space: nowrap;
+-  }
+-  .api-status {
+-    font-size: 11px;
+-    margin-top: 6px;
+-    color: var(--text-muted);
+-  }
+-  .api-status.ok { color: var(--accent); }
+-
+-  /* API Provider Tabs */
+-  .provider-tab {
+-    flex: 1;
+-    padding: 10px 12px;
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 10px;
+-    color: var(--text-muted);
+-    font-size: 11px;
+-    font-weight: 500;
+-    cursor: pointer;
+-    transition: all 0.15s;
+-  }
+-  .provider-tab.active {
+-    background: var(--accent);
+-    color: var(--bg);
+-    border-color: var(--accent);
+-  }
+-  .provider-content {
+-    transition: opacity 0.2s;
+-  }
+-
+-  /* Mode cards */
+-  .modes-label {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 10px;
+-    letter-spacing: 3px;
+-    color: var(--text-muted);
+-    text-transform: uppercase;
+-    margin-bottom: 14px;
+-  }
+-  .modes-grid { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+-
+-  .mode-card {
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: var(--radius);
+-    padding: 18px 20px;
+-    cursor: pointer;
+-    display: flex;
+-    align-items: center;
+-    gap: 16px;
+-    transition: all 0.2s;
+-    position: relative;
+-    overflow: hidden;
+-  }
+-  .mode-card::before {
+-    content: '';
+-    position: absolute;
+-    inset: 0;
+-    opacity: 0;
+-    transition: opacity 0.2s;
+-  }
+-  .mode-card:active { transform: scale(0.98); }
+-
+-  .mode-card.freetalk::before { background: radial-gradient(circle at left, rgba(92,239,176,0.05), transparent 70%); }
+-  .mode-card.shadowing::before { background: radial-gradient(circle at left, rgba(240,160,90,0.05), transparent 70%); }
+-  .mode-card.instant::before { background: radial-gradient(circle at left, rgba(126,184,255,0.05), transparent 70%); }
+-  .mode-card:hover::before, .mode-card:focus::before { opacity: 1; }
+-
+-  .mode-icon {
+-    width: 44px;
+-    height: 44px;
+-    border-radius: 12px;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    font-size: 20px;
+-    flex-shrink: 0;
+-  }
+-  .freetalk .mode-icon { background: rgba(92,239,176,0.12); }
+-  .shadowing .mode-icon { background: rgba(240,160,90,0.12); }
+-  .instant .mode-icon { background: rgba(126,184,255,0.12); }
+-
+-  .mode-info { flex: 1; }
+-  .mode-name {
+-    font-size: 16px;
+-    font-weight: 500;
+-    color: var(--text);
+-    margin-bottom: 3px;
+-  }
+-  .mode-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+-
+-  .mode-arrow { color: var(--text-muted); font-size: 16px; }
+-
+-  .streak-bar {
+-    margin-top: 16px;
+-    display: flex;
+-    align-items: center;
+-    gap: 10px;
+-    padding: 12px 16px;
+-    background: var(--surface);
+-    border-radius: 12px;
+-    border: 1px solid var(--border);
+-  }
+-  .streak-flame { font-size: 18px; }
+-  .streak-text { font-size: 12px; color: var(--text-muted); }
+-  .streak-text strong { color: var(--accent2); }
+-
+-  /* ===== FREETALK SCREEN ===== */
+-  #freetalk { background: var(--bg); }
+-
+-  .nav-bar {
+-    display: flex;
+-    align-items: center;
+-    padding: 52px 20px 12px;
+-    gap: 12px;
+-    background: var(--bg);
+-    border-bottom: 1px solid var(--border);
+-    flex-shrink: 0;
+-  }
+-  .back-btn {
+-    width: 36px; height: 36px;
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 10px;
+-    color: var(--text);
+-    font-size: 16px;
+-    cursor: pointer;
+-    display: flex; align-items: center; justify-content: center;
+-  }
+-  .nav-title { font-size: 16px; font-weight: 500; flex: 1; }
+-  .nav-badge {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 10px;
+-    padding: 4px 10px;
+-    border-radius: 20px;
+-    letter-spacing: 1px;
+-  }
+-  .nav-badge.green { background: rgba(92,239,176,0.12); color: var(--accent); }
+-  .nav-badge.orange { background: rgba(240,160,90,0.12); color: var(--accent2); }
+-
+-  /* Topic selector */
+-  .topic-bar {
+-    display: flex;
+-    gap: 8px;
+-    padding: 10px 20px;
+-    overflow-x: auto;
+-    flex-shrink: 0;
+-    scrollbar-width: none;
+-  }
+-  .topic-bar::-webkit-scrollbar { display: none; }
+-  .topic-chip {
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 20px;
+-    padding: 6px 14px;
+-    font-size: 12px;
+-    color: var(--text-muted);
+-    white-space: nowrap;
+-    cursor: pointer;
+-    transition: all 0.15s;
+-    flex-shrink: 0;
+-  }
+-  .topic-chip.active {
+-    background: rgba(92,239,176,0.1);
+-    border-color: var(--accent);
+-    color: var(--accent);
+-  }
+-
+-  /* Chat area */
+-  .chat-area {
+-    flex: 1;
+-    overflow-y: auto;
+-    padding: 16px 20px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 12px;
+-    -webkit-overflow-scrolling: touch;
+-  }
+-  .chat-area::-webkit-scrollbar { display: none; }
+-
+-  .bubble-wrap {
+-    display: flex;
+-    flex-direction: column;
+-    gap: 4px;
+-    animation: fadeUp 0.3s ease;
+-  }
+-  @keyframes fadeUp {
+-    from { opacity: 0; transform: translateY(8px); }
+-    to { opacity: 1; transform: translateY(0); }
+-  }
+-
+-  .bubble-wrap.user { align-items: flex-end; }
+-  .bubble-wrap.ai { align-items: flex-start; }
+-
+-  .bubble {
+-    max-width: 80%;
+-    padding: 12px 16px;
+-    border-radius: 16px;
+-    font-size: 15px;
+-    line-height: 1.55;
+-  }
+-  .bubble.user {
+-    background: var(--user-bubble);
+-    border: 1px solid rgba(92,239,176,0.2);
+-    border-bottom-right-radius: 4px;
+-    color: var(--text);
+-  }
+-  .bubble.ai {
+-    background: var(--ai-bubble);
+-    border: 1px solid rgba(126,184,255,0.15);
+-    border-bottom-left-radius: 4px;
+-    color: var(--text);
+-  }
+-  .bubble-meta {
+-    font-size: 10px;
+-    color: var(--text-muted);
+-    padding: 0 4px;
+-    font-family: 'DM Mono', monospace;
+-  }
+-
+-  /* Feedback bubble */
+-  .feedback-bubble {
+-    background: rgba(240,160,90,0.08);
+-    border: 1px solid rgba(240,160,90,0.25);
+-    border-radius: 12px;
+-    padding: 10px 14px;
+-    max-width: 88%;
+-    align-self: flex-start;
+-    animation: fadeUp 0.3s ease;
+-  }
+-  .feedback-label {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 9px;
+-    letter-spacing: 2px;
+-    color: var(--accent2);
+-    text-transform: uppercase;
+-    margin-bottom: 5px;
+-  }
+-  .feedback-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+-
+-  /* Typing indicator */
+-  .typing-indicator {
+-    display: flex;
+-    gap: 5px;
+-    align-items: center;
+-    padding: 14px 18px;
+-    background: var(--ai-bubble);
+-    border: 1px solid rgba(126,184,255,0.15);
+-    border-radius: 16px;
+-    border-bottom-left-radius: 4px;
+-    width: fit-content;
+-    animation: fadeUp 0.2s ease;
+-  }
+-  .typing-dot {
+-    width: 6px; height: 6px;
+-    background: var(--accent3);
+-    border-radius: 50%;
+-    animation: typingBounce 1.2s infinite;
+-    opacity: 0.7;
+-  }
+-  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+-  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+-  @keyframes typingBounce {
+-    0%, 60%, 100% { transform: translateY(0); }
+-    30% { transform: translateY(-5px); }
+-  }
+-
+-  /* Input area */
+-  .input-area {
+-    padding: 12px 20px;
+-    padding-bottom: calc(12px + var(--safe-bottom));
+-    background: var(--bg);
+-    border-top: 1px solid var(--border);
+-    flex-shrink: 0;
+-  }
+-  .input-row {
+-    display: flex;
+-    gap: 10px;
+-    align-items: flex-end;
+-  }
+-  .text-input {
+-    flex: 1;
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 14px;
+-    padding: 12px 14px;
+-    color: var(--text);
+-    font-family: 'DM Sans', sans-serif;
+-    font-size: 15px;
+-    outline: none;
+-    resize: none;
+-    max-height: 100px;
+-    line-height: 1.4;
+-    -webkit-appearance: none;
+-  }
+-  .text-input:focus { border-color: rgba(92,239,176,0.4); }
+-  .text-input::placeholder { color: var(--text-muted); }
+-
+-  .mic-btn {
+-    width: 46px; height: 46px;
+-    border-radius: 14px;
+-    border: 1px solid var(--border);
+-    background: var(--surface);
+-    color: var(--text-muted);
+-    font-size: 18px;
+-    cursor: pointer;
+-    display: flex; align-items: center; justify-content: center;
+-    transition: all 0.2s;
+-    flex-shrink: 0;
+-  }
+-  .mic-btn.recording {
+-    background: rgba(255,107,107,0.15);
+-    border-color: var(--danger);
+-    color: var(--danger);
+-    animation: pulse 1s infinite;
+-  }
+-  @keyframes pulse {
+-    0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,107,0.3); }
+-    50% { box-shadow: 0 0 0 8px rgba(255,107,107,0); }
+-  }
+-
+-  .send-btn {
+-    width: 46px; height: 46px;
+-    border-radius: 14px;
+-    border: none;
+-    background: var(--accent);
+-    color: var(--bg);
+-    font-size: 18px;
+-    cursor: pointer;
+-    display: flex; align-items: center; justify-content: center;
+-    flex-shrink: 0;
+-    transition: opacity 0.2s;
+-  }
+-  .send-btn:disabled { opacity: 0.3; }
+-
+-  /* ===== INSTANT SCREEN ===== */
+-  #instant { background: var(--bg); }
+-
+-  .instant-body {
+-    flex: 1;
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    justify-content: center;
+-    padding: 28px;
+-    gap: 24px;
+-  }
+-  .instant-counter {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 11px;
+-    letter-spacing: 2px;
+-    color: var(--text-muted);
+-  }
+-  .instant-card {
+-    width: 100%;
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 24px;
+-    padding: 32px 24px;
+-    text-align: center;
+-  }
+-  .instant-jp {
+-    font-family: 'DM Serif Display', serif;
+-    font-size: 28px;
+-    color: var(--text);
+-    margin-bottom: 8px;
+-    line-height: 1.3;
+-  }
+-  .instant-hint { font-size: 12px; color: var(--text-muted); }
+-
+-  .timer-ring {
+-    position: relative;
+-    width: 80px; height: 80px;
+-  }
+-  .timer-ring svg { transform: rotate(-90deg); }
+-  .timer-ring circle {
+-    fill: none;
+-    stroke: var(--border);
+-    stroke-width: 4;
+-  }
+-  .timer-ring .progress {
+-    stroke: var(--accent);
+-    stroke-dasharray: 220;
+-    stroke-dashoffset: 0;
+-    transition: stroke-dashoffset 0.1s linear, stroke 0.3s;
+-    stroke-linecap: round;
+-  }
+-  .timer-num {
+-    position: absolute;
+-    inset: 0;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    font-family: 'DM Mono', monospace;
+-    font-size: 22px;
+-    font-weight: 500;
+-    color: var(--text);
+-  }
+-
+-  .instant-answer {
+-    width: 100%;
+-    background: var(--surface2);
+-    border: 1px solid rgba(92,239,176,0.3);
+-    border-radius: 16px;
+-    padding: 20px;
+-    display: none;
+-    animation: fadeUp 0.3s ease;
+-  }
+-  .instant-answer.show { display: block; }
+-  .answer-label {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 9px;
+-    letter-spacing: 2px;
+-    color: var(--accent);
+-    text-transform: uppercase;
+-    margin-bottom: 8px;
+-  }
+-  .answer-en {
+-    font-size: 20px;
+-    font-weight: 500;
+-    color: var(--text);
+-    margin-bottom: 6px;
+-  }
+-  .answer-note { font-size: 12px; color: var(--text-muted); }
+-
+-  .instant-btns { display: flex; gap: 10px; width: 100%; }
+-  .instant-btn {
+-    flex: 1;
+-    padding: 14px;
+-    border-radius: 14px;
+-    border: 1px solid var(--border);
+-    background: var(--surface);
+-    color: var(--text);
+-    font-size: 14px;
+-    font-weight: 500;
+-    cursor: pointer;
+-    transition: all 0.15s;
+-  }
+-  .instant-btn.primary {
+-    background: var(--accent);
+-    border-color: var(--accent);
+-    color: var(--bg);
+-  }
+-  .instant-btn:active { transform: scale(0.97); }
+-
+-  /* ===== SHADOWING SCREEN ===== */
+-  #shadowing { background: var(--bg); }
+-
+-  .shadow-body {
+-    flex: 1;
+-    display: flex;
+-    flex-direction: column;
+-    padding: 20px;
+-    gap: 16px;
+-    overflow-y: auto;
+-    -webkit-overflow-scrolling: touch;
+-  }
+-
+-  .shadow-script {
+-    background: var(--surface);
+-    border: 1px solid var(--border);
+-    border-radius: 20px;
+-    padding: 22px;
+-  }
+-  .shadow-title {
+-    font-family: 'DM Mono', monospace;
+-    font-size: 10px;
+-    letter-spacing: 2px;
+-    color: var(--accent2);
+-    text-transform: uppercase;
+-    margin-bottom: 14px;
+-  }
+-  .shadow-line {
+-    font-size: 17px;
+-    line-height: 1.7;
+-    color: var(--text);
+-    cursor: pointer;
+-    transition: color 0.2s;
+-    padding: 4px 0;
+-    border-bottom: 1px solid transparent;
+-  }
+-  .shadow-line.active {
+-    color: var(--accent);
+-    border-bottom-color: rgba(92,239,176,0.2);
+-  }
+-  .shadow-line.done { color: var(--text-muted); }
+-  .shadow-jp {
+-    font-size: 12px;
+-    color: var(--text-muted);
+-    margin-top: 2px;
+-    display: none;
+-  }
+-  .shadow-line.active .shadow-jp { display: block; }
+-
+-  .shadow-controls {
+-    display: flex;
+-    gap: 10px;
+-    flex-shrink: 0;
+-    padding: 0 0 calc(var(--safe-bottom));
+-  }
+-  .shadow-btn {
+-    flex: 1;
+-    padding: 14px;
+-    border-radius: 14px;
+-    border: 1px solid var(--border);
+-    background: var(--surface);
+-    color: var(--text);
+-    font-size: 14px;
+-    font-weight: 500;
+-    cursor: pointer;
+-    transition: all 0.15s;
+-  }
+-  .shadow-btn.play {
+-    background: rgba(240,160,90,0.12);
+-    border-color: rgba(240,160,90,0.3);
+-    color: var(--accent2);
+-  }
+-  .shadow-btn.record {
+-    background: rgba(255,107,107,0.08);
+-    border-color: rgba(255,107,107,0.2);
+-    color: var(--danger);
+-  }
+-  .shadow-btn:active { transform: scale(0.97); }
+-
+-
+-  .mode-card.vocab::before { background: radial-gradient(circle at left, rgba(255,200,80,0.05), transparent 70%); }
+-  .mode-card.stats::before { background: radial-gradient(circle at left, rgba(200,130,255,0.05), transparent 70%); }
+-  .vocab .mode-icon { background: rgba(255,200,80,0.12); }
+-  .stats .mode-icon { background: rgba(200,130,255,0.12); }
+-
+-  /* ===== VOCAB SCREEN ===== */
+-  #vocab { background: var(--bg); }
+-  .vocab-body { flex:1; overflow-y:auto; padding:16px 20px; display:flex; flex-direction:column; gap:12px; -webkit-overflow-scrolling:touch; }
+-  .vocab-body::-webkit-scrollbar { display:none; }
+-  .vocab-empty { text-align:center; padding:60px 20px; color:var(--text-muted); font-size:14px; line-height:1.8; }
+-  .vocab-card {
+-    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+-    padding:16px 18px; display:flex; flex-direction:column; gap:6px;
+-    animation: fadeUp 0.2s ease;
+-  }
+-  .vocab-en { font-size:17px; font-weight:500; color:var(--text); }
+-  .vocab-jp { font-size:12px; color:var(--text-muted); }
+-  .vocab-note { font-size:11px; color:var(--accent2); font-family:'DM Mono',monospace; }
+-  .vocab-meta { display:flex; align-items:center; justify-content:space-between; margin-top:4px; }
+-  .vocab-date { font-size:10px; color:var(--text-muted); font-family:'DM Mono',monospace; }
+-  .vocab-del { background:none; border:none; color:var(--text-muted); font-size:16px; cursor:pointer; padding:0 4px; }
+-  .vocab-add-bar {
+-    padding:12px 20px; padding-bottom:calc(12px + var(--safe-bottom));
+-    border-top:1px solid var(--border); flex-shrink:0; display:flex; gap:8px;
+-  }
+-  .vocab-add-input {
+-    flex:1; background:var(--surface); border:1px solid var(--border); border-radius:12px;
+-    padding:10px 12px; color:var(--text); font-size:14px; outline:none;
+-  }
+-  .vocab-add-input:focus { border-color:rgba(255,200,80,0.4); }
+-  .vocab-add-btn {
+-    background:rgba(255,200,80,0.15); border:1px solid rgba(255,200,80,0.3);
+-    color:rgb(255,200,80); border-radius:12px; padding:10px 16px; font-size:14px; cursor:pointer;
+-  }
+-
+-  /* ===== STATS SCREEN ===== */
+-  #stats { background: var(--bg); }
+-  .stats-body { flex:1; overflow-y:auto; padding:16px 20px; display:flex; flex-direction:column; gap:16px; -webkit-overflow-scrolling:touch; }
+-  .stats-body::-webkit-scrollbar { display:none; }
+-  .stats-row { display:flex; gap:12px; }
+-  .stat-card {
+-    flex:1; background:var(--surface); border:1px solid var(--border); border-radius:16px;
+-    padding:16px; text-align:center;
+-  }
+-  .stat-num { font-family:'DM Serif Display',serif; font-size:32px; color:var(--text); }
+-  .stat-label { font-size:11px; color:var(--text-muted); margin-top:4px; }
+-  .stat-num.green { color:var(--accent); }
+-  .stat-num.purple { color:#c882ff; }
+-  .stat-num.orange { color:var(--accent2); }
+-  .graph-section {
+-    background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:18px;
+-  }
+-  .graph-title {
+-    font-family:'DM Mono',monospace; font-size:10px; letter-spacing:2px;
+-    color:var(--text-muted); text-transform:uppercase; margin-bottom:14px;
+-  }
+-  .bar-chart { display:flex; align-items:flex-end; gap:6px; height:80px; }
+-  .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
+-  .bar {
+-    width:100%; border-radius:4px 4px 0 0; background:rgba(92,239,176,0.3);
+-    transition:height 0.4s ease; min-height:2px;
+-  }
+-  .bar.today { background:var(--accent); }
+-  .bar-day { font-size:9px; color:var(--text-muted); font-family:'DM Mono',monospace; }
+-  .gas-sync-btn {
+-    width:100%; padding:14px; background:rgba(126,184,255,0.1);
+-    border:1px solid rgba(126,184,255,0.25); border-radius:14px;
+-    color:var(--accent3); font-size:14px; font-weight:500; cursor:pointer;
+-  }
+-  .sync-log { font-size:11px; color:var(--text-muted); text-align:center; margin-top:8px; font-family:'DM Mono',monospace; }
+-
+-  /* Toast */
+-  .toast {
+-    position: fixed;
+-    bottom: 100px;
+-    left: 50%;
+-    transform: translateX(-50%) translateY(20px);
+-    background: var(--surface2);
+-    border: 1px solid var(--border);
+-    border-radius: 12px;
+-    padding: 10px 18px;
+-    font-size: 13px;
+-    color: var(--text);
+-    opacity: 0;
+-    transition: all 0.3s;
+-    pointer-events: none;
+-    white-space: nowrap;
+-    z-index: 100;
+-  }
+-  .toast.show {
+-    opacity: 1;
+-    transform: translateX(-50%) translateY(0);
+-  }
+-</style>
+-</head>
+-<body>
+-
+-<div class="screen active" id="home">
+-  <div class="home-bg"></div>
+-  <div class="home-inner">
+-    <div class="logo-area">
+-      <div class="logo-tag">English Immersion</div>
+-      <h1 class="logo-title">Speak like<br><em>you think</em></h1>
+-      <p class="logo-sub">譌･譛ｬ隱槭ｒ閠・∴縺壹↓闍ｱ隱槭′蜃ｺ縺ｦ縺上ｋ繧医≧縺ｫ縺ｪ繧九い繝励Μ</p>
+-    </div>
+-
+-    <div class="api-section">
+-      <div class="api-label">AI Provider & Keys</div>
+-      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+-        <button class="provider-tab active" data-provider="gemini" onclick="switchProvider('gemini')">Gemini Flash (Free)</button>
+-        <button class="provider-tab" data-provider="claude" onclick="switchProvider('claude')">Claude Haiku (Backup)</button>
+-      </div>
+-      
+-      <div id="geminiTab" class="provider-content">
+-        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">噫 辟｡譁呎棧縺ｧ蛻ｩ逕ｨ縲ゅヵ繧ｩ繝ｼ繝ｫ繝舌ャ繧ｯ譛牙柑縺ｫ縺ｪ繧翫∪縺・/div>
+-        <div class="api-input-row">
+-          <input class="api-input" type="password" id="geminiKeyInput" placeholder="AQ.Ab8RN..." />
+-          <button class="api-save-btn" onclick="saveGeminiKey()">Save</button>
+-        </div>
+-        <div class="api-status" id="geminiStatus">Gemini 繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
+-      </div>
+-      
+-      <div id="claudeTab" class="provider-content" style="display: none;">
+-        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">繝舌ャ繧ｯ繧｢繝・・逕ｨ縲・emini螟ｱ謨玲凾縺ｫ閾ｪ蜍輔〒蛻・ｊ譖ｿ繧上ｊ縺ｾ縺・/div>
+-        <div class="api-input-row">
+-          <input class="api-input" type="password" id="claudeKeyInput" placeholder="sk-ant-..." />
+-          <button class="api-save-btn" style="background: var(--accent3);" onclick="saveClaudeKey()">Save</button>
+-        </div>
+-        <div class="api-status" id="claudeStatus">Claude 繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
+-      </div>
+-      
+-      <div style="margin-top: 12px; padding: 8px; background: rgba(92,239,176,0.05); border: 1px solid rgba(92,239,176,0.15); border-radius: 8px;">
+-        <div style="font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace;">笨・迴ｾ蝨ｨ: <span id="currentProvider">Gemini</span></div>
+-      </div>
+-      
+-      <div style="margin-top: 12px;">
+-        <div class="api-label" style="color:var(--accent3)">Google Sheets GAS URL</div>
+-        <div class="api-input-row">
+-          <input class="api-input" type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/..." style="font-size:10px;" />
+-          <button class="api-save-btn" style="background:var(--accent3);color:var(--bg);" onclick="saveGasUrl()">Save</button>
+-        </div>
+-        <div class="api-status" id="gasStatus">GAS URL繧貞・蜉帙＠縺ｦ縺上□縺輔＞・・tep2蠕鯉ｼ・/div>
+-      </div>
+-    </div>
+-
+-    <div class="modes-label">Today's practice</div>
+-    <div class="modes-grid">
+-      <div class="mode-card freetalk" onclick="showScreen('freetalk')">
+-        <div class="mode-icon">町</div>
+-        <div class="mode-info">
+-          <div class="mode-name">Free Talk</div>
+-          <div class="mode-desc">AI縺ｨ閾ｪ逕ｱ莨夊ｩｱ縲ゅユ繝ｼ繝槭ｒ驕ｸ繧薙〒隧ｱ縺吶□縺・/div>
+-        </div>
+-        <div class="mode-arrow">窶ｺ</div>
+-      </div>
+-      <div class="mode-card shadowing" onclick="showScreen('shadowing')">
+-        <div class="mode-icon">而</div>
+-        <div class="mode-info">
+-          <div class="mode-name">Shadowing</div>
+-          <div class="mode-desc">閾ｪ辟ｶ縺ｪ闍ｱ隱槭ｒ閨ｴ縺・※繝ｪ繧ｺ繝縺斐→逵滉ｼｼ繧・/div>
+-        </div>
+-        <div class="mode-arrow">窶ｺ</div>
+-      </div>
+-      <div class="mode-card instant" onclick="showScreen('instant')">
+-        <div class="mode-icon">笞｡</div>
+-        <div class="mode-info">
+-          <div class="mode-name">迸ｬ髢楢恭菴懈枚</div>
+-          <div class="mode-desc">譌･譛ｬ隱樞・闍ｱ隱槭ｒ3遘偵〒縲らｿｻ險ｳ逋悶ｒ譁ｭ縺､</div>
+-        </div>
+-        <div class="mode-arrow">窶ｺ</div>
+-      </div>
+-      <div class="mode-card vocab" onclick="showScreen('vocab')">
+-        <div class="mode-icon">答</div>
+-        <div class="mode-info">
+-          <div class="mode-name">蜊倩ｪ槫ｸｳ</div>
+-          <div class="mode-desc">莨夊ｩｱ荳ｭ縺ｫ菫晏ｭ倥＠縺溯｡ｨ迴ｾ繧貞ｾｩ鄙・/div>
+-        </div>
+-        <div class="mode-arrow">窶ｺ</div>
+-      </div>
+-      <div class="mode-card stats" onclick="showScreen('stats')">
+-        <div class="mode-icon">投</div>
+-        <div class="mode-info">
+-          <div class="mode-name">騾ｲ謐励げ繝ｩ繝・/div>
+-          <div class="mode-desc">豁｣隗｣邇・・騾｣邯壽律謨ｰ縺ｮ謗ｨ遘ｻ繧堤｢ｺ隱・/div>
+-        </div>
+-        <div class="mode-arrow">窶ｺ</div>
+-      </div>
+-    </div>
+-
+-    <div class="streak-bar">
+-      <div class="streak-flame">櫨</div>
+-      <div class="streak-text">騾｣邯・<strong id="streakDays">1</strong> 譌･逶ｮ縲・eep it up!</div>
+-    </div>
+-  </div>
+-</div>
+-
+-<div class="screen" id="freetalk">
+-  <div class="nav-bar">
+-    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+-    <div class="nav-title">Free Talk</div>
+-    <div class="nav-badge green" id="talkStatus">Ready</div>
+-  </div>
+-  <div class="topic-bar" id="topicBar">
+-    <div class="topic-chip active" data-topic="work">Work life</div>
+-    <div class="topic-chip" data-topic="weekend">Weekend</div>
+-    <div class="topic-chip" data-topic="food">Food & Restaurants</div>
+-    <div class="topic-chip" data-topic="travel">Travel</div>
+-    <div class="topic-chip" data-topic="hobby">Hobbies</div>
+-    <div class="topic-chip" data-topic="tech">Tech & News</div>
+-  </div>
+-  <div class="chat-area" id="chatArea"></div>
+-  <div class="input-area">
+-    <div class="input-row">
+-      <textarea class="text-input" id="msgInput" placeholder="Type or use mic..." rows="1"
+-        onInput="autoResize(this)" onKeydown="handleEnter(event)"></textarea>
+-      <button class="mic-btn" id="micBtn" onclick="toggleMic()">痔</button>
+-      <button class="send-btn" id="sendBtn" onclick="sendMessage()">竊・/button>
+-    </div>
+-  </div>
+-</div>
+-
+-<div class="screen" id="shadowing">
+-  <div class="nav-bar">
+-    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+-    <div class="nav-title">Shadowing</div>
+-    <div class="nav-badge orange">Workplace English</div>
+-  </div>
+-  <div class="shadow-body" id="shadowBody"></div>
+-  <div class="shadow-controls" style="padding: 0 20px 20px;">
+-    <button class="shadow-btn play" onclick="playCurrentLine()">笆ｶ Play</button>
+-    <button class="shadow-btn" onclick="toggleJP()">JP 陦ｨ遉ｺ</button>
+-    <button class="shadow-btn record" onclick="shadowRecord()">笳・骭ｲ髻ｳ</button>
+-    <button class="shadow-btn" onclick="nextShadowLine()">Next 窶ｺ</button>
+-  </div>
+-</div>
+-
+-<div class="screen" id="instant">
+-  <div class="nav-bar">
+-    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+-    <div class="nav-title">迸ｬ髢楢恭菴懈枚</div>
+-    <div class="nav-badge green" id="instantScore">0 / 0</div>
+-  </div>
+-  <div class="instant-body">
+-    <div class="instant-counter" id="instantCounter">Q 1 / 10</div>
+-    <div class="instant-card">
+-      <div class="instant-jp" id="instantJP">貅門ｙ荳ｭ...</div>
+-      <div class="instant-hint">3遘偵〒闍ｱ隱槭↓</div>
+-    </div>
+-    <div class="timer-ring">
+-      <svg width="80" height="80" viewBox="0 0 80 80">
+-        <circle cx="40" cy="40" r="35"/>
+-        <circle class="progress" id="timerProgress" cx="40" cy="40" r="35"/>
+-      </svg>
+-      <div class="timer-num" id="timerNum">3</div>
+-    </div>
+-    <div class="instant-answer" id="instantAnswer">
+-      <div class="answer-label">Model Answer</div>
+-      <div class="answer-en" id="answerEN"></div>
+-      <div class="answer-note" id="answerNote"></div>
+-    </div>
+-    <div class="instant-btns">
+-      <button class="instant-btn" onclick="markAnswer(false)">笨・諠懊＠縺・/button>
+-      <button class="instant-btn primary" onclick="markAnswer(true)">笨・險縺医◆・・/button>
+-    </div>
+-  </div>
+-</div>
+-
+-
+-<div class="screen" id="vocab">
+-  <div class="nav-bar">
+-    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+-    <div class="nav-title">蜊倩ｪ槫ｸｳ</div>
+-    <div class="nav-badge" style="background:rgba(255,200,80,0.12);color:rgb(255,200,80);" id="vocabCount">0 words</div>
+-  </div>
+-  <div class="vocab-body" id="vocabBody"></div>
+-  <div class="vocab-add-bar">
+-    <input class="vocab-add-input" id="vocabInput" placeholder="繝輔Ξ繝ｼ繧ｺ or 蜊倩ｪ槭ｒ霑ｽ蜉..." />
+-    <button class="vocab-add-btn" onclick="addVocabManual()">+ Add</button>
+-  </div>
+-</div>
+-
+-<div class="screen" id="stats">
+-  <div class="nav-bar">
+-    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+-    <div class="nav-title">騾ｲ謐励げ繝ｩ繝・/div>
+-  </div>
+-  <div class="stats-body">
+-    <div class="stats-row">
+-      <div class="stat-card">
+-        <div class="stat-num green" id="statStreak">-</div>
+-        <div class="stat-label">櫨 騾｣邯壽律謨ｰ</div>
+-      </div>
+-      <div class="stat-card">
+-        <div class="stat-num orange" id="statTotal">-</div>
+-        <div class="stat-label">笞｡ 邱丞撫鬘梧焚</div>
+-      </div>
+-      <div class="stat-card">
+-        <div class="stat-num purple" id="statRate">-</div>
+-        <div class="stat-label">笨・豁｣隗｣邇・/div>
+-      </div>
+-    </div>
+-    <div class="graph-section">
+-      <div class="graph-title">驕主悉7譌･縺ｮ豁｣隗｣謨ｰ</div>
+-      <div class="bar-chart" id="barChart"></div>
+-    </div>
+-    <div class="graph-section">
+-      <div class="graph-title">蜊倩ｪ槫ｸｳ縺ｮ謌宣聞</div>
+-      <div class="bar-chart" id="vocabChart"></div>
+-    </div>
+-    <button class="gas-sync-btn" onclick="syncToSheets()">笘・Google Sheets縺ｫ蜷梧悄</button>
+-    <div class="sync-log" id="syncLog">GAS URL繧定ｨｭ螳壹☆繧九→蜷梧悄縺ｧ縺阪∪縺・/div>
+-  </div>
+-</div>
+-
+-<div class="toast" id="toast"></div>
+-
+-<script>
+-// ===== STATE (Gemini Flash + Claude Haiku Fallback) =====
+-let STATE = {
+-  aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
+-  geminiKey: localStorage.getItem('dei_geminiKey') || '',
+-  claudeKey: localStorage.getItem('dei_claudeKey') || '',
+-  history: [] 
+-};
+-
+-let conversationHistory = [];
+-let currentTopic = 'work';
+-let recognition = null;
+-let isRecording = false;
+-let currentShadowLine = 0;
+-let showJP = false;
+-let instantIndex = 0;
+-let instantScore = 0;
+-let timerInterval = null;
+-let timerVal = 3;
+-
+-// ===== TOPICS =====
+-const TOPIC_PROMPTS = {
+-  work: "office work, team meetings, deadlines, colleagues, workplace culture",
+-  weekend: "weekend plans, hobbies, relaxing, going out",
+-  food: "restaurants, cooking, favorite foods, trying new cuisine",
+-  travel: "trips, travel experiences, places you want to visit",
+-  hobby: "personal interests, hobbies, learning new skills",
+-  tech: "technology, news, apps, innovations"
+-};
+-
+-// ===== INSTANT QUESTIONS =====
+-const INSTANT_QS = [
+-  { jp: "縺｡繧・▲縺ｨ蠕・▲縺ｦ縺上□縺輔＞", en: "Just a moment, please.", note: "縲後■繧・▲縺ｨ縲・ Just a moment / Hold on" },
+-  { jp: "縺昴ｌ縺ｯ縺・＞閠・∴縺ｧ縺吶・", en: "That's a great idea!", note: "繝薙ず繝阪せ縺ｧ繧医￥菴ｿ縺・酔諢上ヵ繝ｬ繝ｼ繧ｺ" },
+-  { jp: "遒ｺ隱阪＆縺帙※縺上□縺輔＞", en: "Let me double-check that.", note: "double-check = 縺励▲縺九ｊ遒ｺ隱阪☆繧・ },
+-  { jp: "譏取律縺ｾ縺ｧ縺ｫ邨ゅｏ繧峨○縺ｾ縺・, en: "I'll get it done by tomorrow.", note: "get it done = 繧・ｊ驕ゅ￡繧・ },
+-  { jp: "繧ゅ≧蟆代＠隧ｳ縺励￥隱ｬ譏弱＠縺ｦ繧ゅｉ縺医∪縺吶°・・, en: "Could you elaborate on that a bit more?", note: "elaborate = 隧ｳ縺励￥隱ｬ譏弱☆繧・ },
+-  { jp: "莉雁ｰ代＠蠢吶＠縺・〒縺・, en: "I'm a bit tied up right now.", note: "tied up = 謇九′髮｢縺帙↑縺・ },
+-  { jp: "驕・ｌ縺ｦ縺斐ａ繧薙↑縺輔＞", en: "Sorry I'm late. I got held up.", note: "get held up = 雜ｳ豁｢繧√＆繧後ｋ" },
+-  { jp: "縺昴ｌ縺ｯ遘√・諡・ｽ薙〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ", en: "That's not really my area.", note: "I'm not in charge of that 繧り・辟ｶ" },
+-  { jp: "騾ｱ譛ｫ菴輔＠縺ｦ縺溘・・・, en: "What did you get up to this weekend?", note: "get up to = ・槭ｒ縺吶ｋ・郁恭蝗ｽ繝ｻ雎ｪ繝ｻ閨ｷ蝣ｴ蜷代￠・・ },
+-  { jp: "縺顔夢繧梧ｧ倥〒縺励◆", en: "Great work today! / Good effort.", note: "縺顔夢繧梧ｧ・縺ｮ逶ｴ險ｳ縺ｯ縺ｪ縺・ら憾豕√〒螟峨ｏ繧・ },
+-];
+-
+-// ===== SHADOWING SCRIPTS =====
+-const SHADOW_SCRIPTS = [
+-  { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "縺｡繧・▲縺ｨ縺・＞・溽嶌隲・＠縺溘＞縺薙→縺後≠縺｣縺ｦ縲・ },
+-  { en: "Sure, what's up?", jp: "繧ゅ■繧阪ｓ縲√←縺・＠縺滂ｼ・ },
+-  { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "繝励Ο繧ｸ繧ｧ繧ｯ繝医・繧ｹ繧ｱ繧ｸ繝･繝ｼ繝ｫ縺ｫ縺､縺・※閠・∴縺ｦ縺溘ｓ縺縺代←縲√■繧・▲縺ｨ繧ｮ繝ｪ繧ｮ繝ｪ縺九↑縺ｨ諤昴▲縺ｦ縲・ },
+-  { en: "Yeah, I hear you. What do you suggest?", jp: "繧上°繧九ゅ←縺・＠縺溘ｉ縺・＞縺ｨ諤昴≧・・ },
+-  { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "邱繧∝・繧翫ｒ1騾ｱ髢灘ｻｶ縺ｰ縺帙↑縺・°縺ｪ・溘メ繝ｼ繝縺ｮ繝励Ξ繝・す繝｣繝ｼ繧よｸ帙ｋ縺ｨ諤昴≧縺励・ },
+-  { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "縺昴ｌ縺ｯ蜷育炊逧・□縺ｭ縲ゅけ繝ｩ繧､繧｢繝ｳ繝医↓遒ｺ隱阪＠縺ｦ縺九ｉ騾｣邨｡縺吶ｋ繧医・ },
+-];
+-
+-// ===== API PROVIDER SWITCH =====
+-function switchProvider(provider) {
+-  STATE.aiProvider = provider;
+-  localStorage.setItem('dei_aiProvider', provider);
+-  
+-  document.querySelectorAll('.provider-tab').forEach(t => t.classList.remove('active'));
+-  document.querySelector(`[data-provider="${provider}"]`).classList.add('active');
+-  
+-  document.querySelectorAll('.provider-content').forEach(c => c.style.display = 'none');
+-  document.getElementById(provider + 'Tab').style.display = 'block';
+-  
+-  updateCurrentProvider();
+-}
+-
+-function updateCurrentProvider() {
+-  const provider = STATE.aiProvider === 'gemini' ? 'Gemini Flash' : 'Claude Haiku';
+-  document.getElementById('currentProvider').textContent = provider;
+-}
+-
+-// ===== SAVE KEYS =====
+-function saveGeminiKey() {
+-  const key = document.getElementById('geminiKeyInput').value.trim();
+-  if (!key) {
+-    showToast('笶・繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞');
+-    return;
+-  }
+-  STATE.geminiKey = key;
+-  localStorage.setItem('dei_geminiKey', key);
+-  document.getElementById('geminiStatus').textContent = '笨・Gemini 繧ｭ繝ｼ菫晏ｭ俶ｸ医∩';
+-  document.getElementById('geminiStatus').className = 'api-status ok';
+-  showToast('笨・Gemini 繧ｭ繝ｼ菫晏ｭ倥＠縺ｾ縺励◆');
+-}
+-
+-function saveClaudeKey() {
+-  const key = document.getElementById('claudeKeyInput').value.trim();
+-  if (!key.startsWith('sk-ant-')) {
+-    showToast('笶・譛牙柑縺ｪClaude繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞');
+-    return;
+-  }
+-  STATE.claudeKey = key;
+-  localStorage.setItem('dei_claudeKey', key);
+-  document.getElementById('claudeStatus').textContent = '笨・Claude 繧ｭ繝ｼ菫晏ｭ俶ｸ医∩';
+-  document.getElementById('claudeStatus').className = 'api-status ok';
+-  showToast('笨・Claude 繧ｭ繝ｼ菫晏ｭ倥＠縺ｾ縺励◆');
+-}
+-
+-// Init - Restore saved keys
+-if (STATE.geminiKey) {
+-  document.getElementById('geminiKeyInput').value = STATE.geminiKey;
+-  document.getElementById('geminiStatus').textContent = '笨・Gemini 繧ｭ繝ｼ險ｭ螳壽ｸ医∩';
+-  document.getElementById('geminiStatus').className = 'api-status ok';
+-}
+-if (STATE.claudeKey) {
+-  document.getElementById('claudeKeyInput').value = STATE.claudeKey;
+-  document.getElementById('claudeStatus').textContent = '笨・Claude 繧ｭ繝ｼ險ｭ螳壽ｸ医∩';
+-  document.getElementById('claudeStatus').className = 'api-status ok';
+-}
+-
+-switchProvider(STATE.aiProvider);
+-updateCurrentProvider();
+-
+-// ===== SCREEN NAV =====
+-function showScreen(id) {
+-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+-  document.getElementById(id).classList.add('active');
+-  if (id === 'freetalk' && STATE.history.length === 0) initChat();
+-  if (id === 'shadowing') initShadowing();
+-  if (id === 'instant') initInstant();
+-  if (id === 'vocab') renderVocab();
+-  if (id === 'stats') renderStats();
+-}
+-
+-// ===== FREETALK =====
+-function initChat() {
+-  const area = document.getElementById('chatArea');
+-  area.innerHTML = '';
+-  STATE.history = [];
+-  addBubble('ai', `Hi! Let's talk about **${currentTopic.replace('_',' ')}** today. What's been going on for you lately? ・`);
+-}
+-
+-document.querySelectorAll('.topic-chip').forEach(chip => {
+-  chip.addEventListener('click', () => {
+-    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+-    chip.classList.add('active');
+-    currentTopic = chip.dataset.topic;
+-    STATE.history = [];
+-    document.getElementById('chatArea').innerHTML = '';
+-    initChat();
+-  });
+-});
+-
+-function addBubble(role, text, feedback) {
+-  const area = document.getElementById('chatArea');
+-  const wrap = document.createElement('div');
+-  wrap.className = `bubble-wrap ${role}`;
+-
+-  if (feedback) {
+-    const fb = document.createElement('div');
+-    fb.className = 'feedback-bubble';
+-    const cleanFb = feedback.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+-    fb.innerHTML = `<div class="feedback-label">庁 Tip <button onclick="addVocab('${feedback.replace(/'/g,"\'")}','','Free Talk Tip');renderVocab();" style="float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;">+ 菫晏ｭ・/button></div><div class="feedback-text">${cleanFb}</div>`;
+-    area.appendChild(fb);
+-  } else {
+-    const bubble = document.createElement('div');
+-    bubble.className = `bubble ${role}`;
+-    bubble.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
+-    wrap.appendChild(bubble);
+-    area.appendChild(wrap);
+-  }
+-  area.scrollTop = area.scrollHeight;
+-}
+-
+-// 122陦檎岼縺ｮSyntaxError・域枚蟄怜・繝ｪ繝・Λ繝ｫ縺ｮ荳肴紛蜷茨ｼ牙ｯｾ遲匁ｸ医∩
+-function showTyping() {
+-  const area = document.getElementById('chatArea');
+-  const wrap = document.createElement('div');
+-  wrap.id = 'typingWrap';
+-  wrap.className = 'bubble-wrap ai';
+-  wrap.innerHTML = `<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
+-  area.appendChild(wrap);
+-  area.scrollTop = area.scrollHeight;
+-}
+-function hideTyping() {
+-  const el = document.getElementById('typingWrap');
+-  if (el) el.remove();
+-}
+-
+-// (莉･荳九√☆縺ｹ縺ｦ縺ｮ繝ｭ繧ｸ繝・け縲√げ繝ｩ繝募酔譛溘∫椪髢楢恭菴懈枚繝・・繧ｿ繧ょｮ悟・邯ｭ謖・
+-function pushHistory(role, content) {
+-  STATE.history.push({ role, content });
+-  if (STATE.history.length > 4) {
+-    STATE.history = STATE.history.slice(-4);
+-  }
+-}
+-
+-function getHistoryForGemini() {
+-  return STATE.history.map(msg => ({
+-    role: msg.role === 'user' ? 'user' : 'model',
+-    parts: [{ text: msg.content }]
+-  }));
+-}
+-
+-function getHistoryForClaude() {
+-  return STATE.history.map(msg => ({
+-    role: msg.role,
+-    content: msg.content
+-  }));
+-}
+-
+-async function sendToGemini() {
+-  if (!STATE.geminiKey) {
+-    return { error: 'Gemini key not set' };
+-  }
+-  
+-  const systemPrompt = `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English for the workplace and daily life.
+-
+-Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}
+-
+-Rules:
+-- Keep responses conversational and natural (2-4 sentences max)
+-- Ask ONE follow-up question to keep conversation flowing
+-- Occasionally give a brief inline tip: highlight one natural phrase in brackets like [Tip: "I'm swamped" sounds more natural]
+-- NEVER use bullet points or formal structure
+-- Match casual workplace energy`;
+-
+-  const requestBody = {
+-    contents: [
+-      ...getHistoryForGemini()
+-    ],
+-    systemInstruction: { parts: [{ text: systemPrompt }] },
+-    generationConfig: {
+-      maxOutputTokens: 128,
+-      temperature: 0.7
+-    }
+-  };
+-
+-  try {
+-    const response = await fetch(
+-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
+-      {
+-        method: 'POST',
+-        headers: { 
+-          'Content-Type': 'application/json',
+-          'x-goog-api-key': STATE.geminiKey 
+-        },
+-        body: JSON.stringify(requestBody)
+-      }
+-    );
+-
+-    const data = await response.json();
+-    if (data.error) {
+-      return { error: data.error.message };
+-    }
+-
+-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
+-    return {
+-      success: true,
+-      reply,
+-      provider: 'gemini',
+-      fallbackUsed: false
+-    };
+-  } catch (error) {
+-    return { error: error.message };
+-  }
+-}
+-
+-async function sendToClaude() {
+-  if (!STATE.claudeKey) {
+-    return { error: 'Claude key not set' };
+-  }
+-
+-  const systemPrompt = `You are a friendly English conversation partner. Reply in 1-2 sentences and always end with a question.
+-Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
+-
+-  const requestBody = {
+-    model: 'claude-3-haiku-20240307',
+-    max_tokens: 128,
+-    system: systemPrompt,
+-    messages: getHistoryForClaude()
+-  };
+-
+-  try {
+-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+-      method: 'POST',
+-      headers: {
+-        'Content-Type': 'application/json',
+-        'X-API-Key': STATE.claudeKey,
+-        'Anthropic-Version': '2023-06-01'
+-      },
+-      body: JSON.stringify(requestBody)
+-    });
+-
+-    const data = await response.json();
+-    if (data.error) {
+-      return { error: data.error.message };
+-    }
+-
+-    const reply = data.content?.[0]?.text || 'No response';
+-    return {
+-      success: true,
+-      reply,
+-      provider: 'claude',
+-      fallbackUsed: false
+-    };
+-  } catch (error) {
+-    return { error: error.message };
+-  }
+-}
+-
+-async function sendMessage() {
+-  if (!STATE.geminiKey && !STATE.claudeKey) {
+-    showToast('笶・API繧ｭ繝ｼ繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞');
+-    return;
+-  }
+-
+-  const input = document.getElementById('msgInput');
+-  const text = input.value.trim();
+-  if (!text) return;
+-
+-  input.value = '';
+-  input.style.height = 'auto';
+-  addBubble('user', text);
+-
+-  showTyping();
+-  document.getElementById('talkStatus').textContent = 'Thinking...';
+-
+-  pushHistory('user', text);
+-
+-  let result;
+-  let fallbackActive = false;
+-
+-  if (STATE.aiProvider === 'gemini') {
+-    if (STATE.geminiKey) {
+-      result = await sendToGemini();
+-      if (result.error && STATE.claudeKey) {
+-        console.warn('Gemini error, shifting to backup Claude...', result.error);
+-        result = await sendToClaude();
+-        fallbackActive = true;
+-      }
+-    } else if (STATE.claudeKey) {
+-      result = await sendToClaude();
+-    }
+-  } 
+-  else {
+-    if (STATE.claudeKey) {
+-      result = await sendToClaude();
+-      if (result.error && STATE.geminiKey) {
+-        console.warn('Claude error, shifting to backup Gemini...', result.error);
+-        result = await sendToGemini();
+-        fallbackActive = true;
+-      }
+-    } else if (STATE.geminiKey) {
+-      result = await sendToGemini();
+-    }
+-  }
+-
+-  hideTyping();
+-
+-  if (!result || result.error) {
+-    STATE.history.pop();
+-    addBubble('ai', `笶・Connection Error. ${result ? result.error : 'Please verify keys.'}`);
+-    document.getElementById('talkStatus').textContent = 'Error';
+-    return;
+-  }
+-
+-  const reply = result.reply;
+-  pushHistory('assistant', reply);
+-
+-  const tipMatch = reply.match(/\[Tip:(.*?)\]/s);
+-  const cleanReply = reply.replace(/\[Tip:.*?\]/s, '').trim();
+-
+-  addBubble('ai', cleanReply);
+-  if (tipMatch) {
+-    addBubble('ai', '', tipMatch[1].trim());
+-  }
+-
+-  document.getElementById('talkStatus').textContent = fallbackActive ? 'Ready (Fallback)' : 'Ready';
+-}
+-
+-function handleEnter(e) {
+-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+-}
+-function autoResize(el) {
+-  el.style.height = 'auto';
+-  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+-}
+-
+-// ===== MIC =====
+-function toggleMic() {
+-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+-    showToast('髻ｳ螢ｰ蜈･蜉帙・Safari縺ｧ繧ｵ繝昴・繝医＆繧後※縺・∪縺・);
+-    return;
+-  }
+-  if (isRecording) {
+-    recognition?.stop();
+-    return;
+-  }
+-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+-  recognition = new SR();
+-  recognition.lang = 'en-US';
+-  recognition.interimResults = false;
+-  recognition.onstart = () => {
+-    isRecording = true;
+-    document.getElementById('micBtn').classList.add('recording');
+-  };
+-  recognition.onresult = e => {
+-    document.getElementById('msgInput').value = e.results[0][0].transcript;
+-    autoResize(document.getElementById('msgInput'));
+-  };
+-  recognition.onend = () => {
+-    isRecording = false;
+-    document.getElementById('micBtn').classList.remove('recording');
+-  };
+-  recognition.start();
+-}
+-
+-// ===== SHADOWING =====
+-function initShadowing() {
+-  currentShadowLine = 0;
+-  renderShadowScript();
+-}
+-
+-function renderShadowScript() {
+-  const body = document.getElementById('shadowBody');
+-  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">Workplace Dialogue</div>' +
+-    SHADOW_SCRIPTS.map((line, i) =>
+-      `<div class="shadow-line ${i === currentShadowLine ? 'active' : i < currentShadowLine ? 'done' : ''}" onclick="jumpToLine(${i})">
+-        ${line.en}
+-        <div class="shadow-jp">${line.jp}</div>
+-      </div>`
+-    ).join('') + '</div>';
+-}
+-
+-function jumpToLine(i) { currentShadowLine = i; renderShadowScript(); }
+-
+-function playCurrentLine() {
+-  const line = SHADOW_SCRIPTS[currentShadowLine];
+-  if (!line) return;
+-  const utt = new SpeechSynthesisUtterance(line.en);
+-  utt.lang = 'en-US'; utt.rate = 0.9;
+-  window.speechSynthesis.speak(utt);
+-}
+-
+-function toggleJP() {
+-  showJP = !showJP;
+-  document.querySelectorAll('.shadow-jp').forEach(el => {
+-    el.style.display = showJP ? 'block' : '';
+-  });
+-}
+-
+-function nextShadowLine() {
+-  if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
+-    currentShadowLine++;
+-    renderShadowScript();
+-    playCurrentLine();
+-  } else {
+-    showToast('脂 繧ｹ繧ｯ繝ｪ繝励ヨ螳御ｺ・ｼ・);
+-  }
+-}
+-
+-function shadowRecord() {
+-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+-    showToast('髻ｳ螢ｰ蜈･蜉帙ｒ繧ｵ繝昴・繝医＠縺ｦ縺・∪縺帙ｓ');
+-    return;
+-  }
+-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+-  const r = new SR();
+-  r.lang = 'en-US';
+-  r.onresult = e => {
+-    const said = e.results[0][0].transcript.toLowerCase();
+-    const target = SHADOW_SCRIPTS[currentShadowLine].en.toLowerCase();
+-    const similarity = said.split(' ').filter(w => target.includes(w)).length / target.split(' ').length;
+-    showToast(similarity > 0.6 ? '笨・Great shadowing!' : '竊ｻ Try again');
+-  };
+-  r.start();
+-  showToast('痔 閨ｴ縺・※縺・∪縺・..');
+-}
+-
+-// ===== INSTANT =====
+-function initInstant() {
+-  instantIndex = 0; instantScore = 0;
+-  updateInstantScore();
+-  loadInstantQ();
+-}
+-
+-function loadInstantQ() {
+-  clearInterval(timerInterval);
+-  document.getElementById('instantAnswer').classList.remove('show');
+-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+-  document.getElementById('instantJP').textContent = q.jp;
+-  document.getElementById('instantCounter').textContent = `Q ${instantIndex + 1} / ${INSTANT_QS.length}`;
+-  startTimer();
+-}
+-
+-function startTimer() {
+-  timerVal = 3;
+-  const progress = document.getElementById('timerProgress');
+-  const num = document.getElementById('timerNum');
+-  const circumference = 220;
+-  progress.style.stroke = 'var(--accent)';
+-
+-  timerInterval = setInterval(() => {
+-    timerVal -= 0.1;
+-    const pct = timerVal / 3;
+-    progress.style.strokeDashoffset = circumference * (1 - pct);
+-    num.textContent = Math.ceil(timerVal);
+-    if (pct < 0.3) progress.style.stroke = 'var(--danger)';
+-    else if (pct < 0.6) progress.style.stroke = 'var(--accent2)';
+-
+-    if (timerVal <= 0) {
+-      clearInterval(timerInterval);
+-      showAnswer();
+-    }
+-  }, 100);
+-}
+-
+-function showAnswer() {
+-  clearInterval(timerInterval);
+-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+-  document.getElementById('answerEN').textContent = q.en;
+-  document.getElementById('answerNote').textContent = q.note;
+-  document.getElementById('instantAnswer').classList.add('show');
+-  const utt = new SpeechSynthesisUtterance(q.en);
+-  utt.lang = 'en-US'; utt.rate = 0.85;
+-  window.speechSynthesis.speak(utt);
+-}
+-
+-function markAnswer(correct) {
+-  if (!document.getElementById('instantAnswer').classList.contains('show')) {
+-    showAnswer(); return;
+-  }
+-  if (correct) instantScore++;
+-  instantIndex++;
+-  updateInstantScore();
+-  if (instantIndex >= INSTANT_QS.length) {
+-    recordTodayStats(instantScore, INSTANT_QS.length);
+-    showToast(`脂 螳御ｺ・ｼ・${instantScore}/${INSTANT_QS.length} 豁｣隗｣`);
+-    setTimeout(() => { instantIndex = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
+-    return;
+-  }
+-  loadInstantQ();
+-}
+-
+-function updateInstantScore() {
+-  document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
+-}
+-
+-// ===== STREAK =====
+-const today = new Date().toDateString();
+-const lastDay = localStorage.getItem('dei_lastDay');
+-let streak = parseInt(localStorage.getItem('dei_streak') || '1');
+-if (lastDay !== today) {
+-  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+-  if (lastDay === yesterday.toDateString()) streak++;
+-  else streak = 1;
+-  localStorage.setItem('dei_streak', streak);
+-  localStorage.setItem('dei_lastDay', today);
+-}
+-document.getElementById('streakDays').textContent = streak;
+-
+-
+-// ===== GAS URL =====
+-let gasUrl = localStorage.getItem('dei_gasUrl') || '';
+-if (gasUrl) {
+-  document.getElementById('gasUrlInput').value = gasUrl;
+-  document.getElementById('gasStatus').textContent = '笨・GAS URL險ｭ螳壽ｸ医∩';
+-  document.getElementById('gasStatus').className = 'api-status ok';
+-}
+-function saveGasUrl() {
+-  const v = document.getElementById('gasUrlInput').value.trim();
+-  if (!v.startsWith('https://')) { showToast('譛牙柑縺ｪURL繧貞・蜉帙＠縺ｦ縺上□縺輔＞'); return; }
+-  gasUrl = v;
+-  localStorage.setItem('dei_gasUrl', v);
+-  document.getElementById('gasStatus').textContent = '笨・GAS URL菫晏ｭ俶ｸ医∩';
+-  document.getElementById('gasStatus').className = 'api-status ok';
+-  showToast('笨・GAS URL菫晏ｭ倥＠縺ｾ縺励◆');
+-}
+-function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
+-function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
+-
+-function addVocab(en, jp, note) {
+-  const list = loadVocab();
+-  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
+-  saveVocabList(list);
+-  showToast('答 蜊倩ｪ槫ｸｳ縺ｫ菫晏ｭ倥＠縺ｾ縺励◆');
+-}
+-
+-function addVocabManual() {
+-  const input = document.getElementById('vocabInput');
+-  const val = input.value.trim();
+-  if (!val) return;
+-  addVocab(val, '', '謇句虚霑ｽ蜉');
+-  input.value = '';
+-  renderVocab();
+-}
+-
+-// ===== RENDER VOCAB =====
+-function renderVocab() {
+-  const list = loadVocab();
+-  const body = document.getElementById('vocabBody');
+-  document.getElementById('vocabCount').textContent = list.length + ' words';
+-  if (list.length === 0) {
+-    body.innerHTML = '<div class="vocab-empty">縺ｾ縺蜊倩ｪ槭′縺ゅｊ縺ｾ縺帙ｓ縲・br>Free Talk縺ｧ陦ｨ迴ｾ繧剃ｿ晏ｭ倥☆繧九°<br>荳九°繧画焔蜍戊ｿｽ蜉縺ｧ縺阪∪縺吶・/div>';
+-    return;
+-  }
+-  body.innerHTML = list.map((v, i) => `
+-    <div class="vocab-card">
+-      <div class="vocab-en">${v.en}</div>
+-      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
+-      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
+-      <div class="vocab-meta">
+-        <div class="vocab-date">${v.date}</div>
+-        <button class="vocab-del" onclick="deleteVocab(${i})">笨・/button>
+-      </div>
+-    </div>`).join('');
+-}
+-
+-function deleteVocab(i) {
+-  const list = loadVocab();
+-  list.splice(i, 1);
+-  saveVocabList(list);
+-  renderVocab();
+-}
+-
+-// ===== STATS =====
+-function getStatsHistory() { return JSON.parse(localStorage.getItem('dei_statsHistory') || '[]'); }
+-function recordTodayStats(score, total) {
+-  const hist = getStatsHistory();
+-  const d = new Date().toLocaleDateString('ja-JP');
+-  const idx = hist.findIndex(h => h.date === d);
+-  if (idx >= 0) { hist[idx].score += score; hist[idx].total += total; }
+-  else hist.push({ date: d, score, total });
+-  localStorage.setItem('dei_statsHistory', JSON.stringify(hist.slice(-30)));
+-}
+-
+-function renderStats() {
+-  document.getElementById('statStreak').textContent = streak;
+-  const hist = getStatsHistory();
+-  const allTotal = hist.reduce((s,h)=>s+h.total,0);
+-  const allScore = hist.reduce((s,h)=>s+h.score,0);
+-  document.getElementById('statTotal').textContent = allTotal;
+-  document.getElementById('statRate').textContent = allTotal ? Math.round(allScore/allTotal*100)+'%' : '-';
+-
+-  const days = [];
+-  for (let i=6; i>=0; i--) {
+-    const d = new Date(); d.setDate(d.getDate()-i);
+-    days.push({ label: ['譌･','譛・,'轣ｫ','豌ｴ','譛ｨ','驥・,'蝨・][d.getDay()], date: d.toLocaleDateString('ja-JP') });
+-  }
+-  const maxScore = Math.max(...days.map(d => { const h=hist.find(h=>h.date===d.date); return h?h.score:0; }), 1);
+-  document.getElementById('barChart').innerHTML = days.map((d,i) => {
+-    const h = hist.find(h=>h.date===d.date);
+-    const score = h ? h.score : 0;
+-    const pct = Math.round(score/maxScore*100);
+-    const isToday = i===6;
+-    return `<div class="bar-col">
+-      <div class="bar${isToday?' today':''}" style="height:${pct}%"></div>
+-      <div class="bar-day">${d.label}</div>
+-    </div>`;
+-  }).join('');
+-
+-  const vocabList = loadVocab();
+-  const vocabByDay = days.map(d => vocabList.filter(v => v.date === d.date).length);
+-  const maxV = Math.max(...vocabByDay, 1);
+-  document.getElementById('vocabChart').innerHTML = days.map((d,i) => {
+-    const pct = Math.round(vocabByDay[i]/maxV*100);
+-    const isToday = i===6;
+-    return `<div class="bar-col">
+-      <div class="bar${isToday?' today':''}" style="height:${pct}%;background:${isToday?'#c882ff':'rgba(200,130,255,0.3)'}"></div>
+-      <div class="bar-day">${d.label}</div>
+-    </div>`;
+-  }).join('');
+-}
+-
+-// ===== GAS SYNC =====
+-async function syncToSheets() {
+-  const gasUrl = 'https://script.google.com/macros/s/AKfycbwPBgtO_niqc2VzywPZ1nKgAfuMhf8vzPKkrSvEFZlPBlLDPNA7yAJfjFwNsDsRhp_2/exec';
+-  
+-  if (!gasUrl) { showToast('GAS URL繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞'); return; }
+-  document.getElementById('syncLog').textContent = '蜷梧悄荳ｭ...';
+-  
+-  const hist = getStatsHistory();
+-  const vocab = loadVocab();
+-  
+-  const payload = {
+-    action: 'english_log',
+-    streak,
+-    history: hist,
+-    vocab: vocab.map(v => ({ en: v.en, jp: v.jp, note: v.note, date: v.date })),
+-    timestamp: new Date().toISOString(),
+-    provider: STATE.aiProvider
+-  };
+-  
+-  try {
+-    await fetch(gasUrl, {
+-      method: 'POST',
+-      mode: 'no-cors',
+-      headers: { 'Content-Type': 'application/json' },
+-      body: JSON.stringify(payload)
+-    });
+-    
+-    const now = new Date().toLocaleTimeString('ja-JP');
+-    document.getElementById('syncLog').textContent = `笨・蜷梧悄螳御ｺ・(${now})`;
+-    showToast('笘・Sheets縺ｫ蜷梧悄縺励∪縺励◆');
+-  } catch (e) {
+-    console.error(e);
+-    document.getElementById('syncLog').textContent = '笨・蜷梧悄螟ｱ謨・;
+-    showToast('蜷梧悄繧ｨ繝ｩ繝ｼ縺檎匱逕溘＠縺ｾ縺励◆');
+-  }
+-}
+-
+-// ===== TRAIN MODE CONTROL =====
+-let isTrainMode = false;
+-function toggleTrainMode() {
+-  isTrainMode = !isTrainMode;
+-  const btn = document.getElementById('trainToggleBtn');
+-  const badge = document.getElementById('trainBadge');
+-  
+-  if (isTrainMode) {
+-    if (btn) btn.classList.add('active');
+-    if (badge) badge.classList.add('show');
+-    showToast('髮ｻ霆翫Δ繝ｼ繝・ 髻ｳ螢ｰ隱ｭ縺ｿ荳翫￡繧偵が繝輔↓縺励∪縺励◆');
+-    // 繧ゅ＠蜀咲函荳ｭ縺ｮ髻ｳ螢ｰ縺後≠繧後・蜊ｳ蠎ｧ縺ｫ蛛懈ｭ｢
+-    if ('speechSynthesis' in window) {
+-      window.speechSynthesis.cancel();
+-    }
+-  } else {
+-    if (btn) btn.classList.remove('active');
+-    if (badge) badge.classList.remove('show');
+-    showToast('騾壼ｸｸ繝｢繝ｼ繝・ 髻ｳ螢ｰ隱ｭ縺ｿ荳翫￡縺梧怏蜉ｹ縺ｧ縺・);
+-  }
+-}
+-
+-// ===== AUDIO UTILITIES (TTS & STT) =====
+-function speak(text) {
+-  // 髮ｻ霆翫Δ繝ｼ繝峨√∪縺溘・螢ｰ繧貞・縺帙↑縺・腸蠅・ｼ医Α繝･繝ｼ繝茨ｼ峨・蝣ｴ蜷医・荳蛻・浹螢ｰ繧呈ｵ√＆縺ｪ縺・
+-  if (isTrainMode) {
+-    console.log('Train mode active: Speech synthesis bypassed.');
+-    return;
+-  }
+-  
+-  if ('speechSynthesis' in window) {
+-    // 譌｢蟄倥・蜀咲函繧偵け繝ｪ繧｢
+-    window.speechSynthesis.cancel();
+-    const utterance = new SpeechSynthesisUtterance(text);
+-    utterance.lang = 'en-US';
+-    
+-    // iOS Safari遲峨・謖吝虚繧貞ｮ牙ｮ壹＆縺帙ｋ縺溘ａ縺ｮ繧ｪ繝励す繝ｧ繝ｳ險ｭ螳・
+-    utterance.rate = 1.0;
+-    utterance.pitch = 1.0;
+-    
+-    window.speechSynthesis.speak(utterance);
+-  } else {
+-    console.warn('Speech synthesis not supported in this browser.');
+-  }
+-}
+-
+-// ===== CHAT MECHANICS =====
+-async function sendMessage() {
+-  const inputEl = document.getElementById('textInput');
+-  const text = inputEl.value.trim();
+-  if (!text) return;
+-  
+-  // 繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ繝｡繝・そ繝ｼ繧ｸ繧堤判髱｢縺ｫ陦ｨ遉ｺ
+-  appendBubble(text, true);
+-  inputEl.value = '';
+-  
+-  // 繧ｿ繧､繝斐Φ繧ｰ繧､繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ・・..・峨ｒ陦ｨ遉ｺ
+-  showTypingIndicator();
+-  
+-  // API縺ｸ縺ｮ繝ｪ繧ｯ繧ｨ繧ｹ繝医ｒ騾∽ｿ｡
+-  let response;
+-  if (STATE.aiProvider === 'claude') {
+-    response = await sendToClaude(text);
+-  } else {
+-    response = await sendToGemini(text);
+-  }
+-  
+-  // 繧､繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ繧呈ｶ亥悉
+-  hideTypingIndicator();
+-  
+-  if (response.error) {
+-    appendBubble(`Error: ${response.error}`, false);
+-    showToast('騾壻ｿ｡繧ｨ繝ｩ繝ｼ縺檎匱逕溘＠縺ｾ縺励◆');
+-    return;
+-  }
+-  
+-  // AI縺ｮ霑皮ｭ斐ｒ陦ｨ遉ｺ
+-  appendBubble(response.reply, false);
+-  
+-  // 閾ｪ蜍暮浹螢ｰ蜀咲函・磯崕霆翫Δ繝ｼ繝峨〒縺ｪ縺代ｌ縺ｰ逋ｺ蜍包ｼ・
+-  speak(response.reply);
+-  
+-  // 騾ｲ謐励→螻･豁ｴ縺ｮ譖ｴ譁ｰ
+-  updateStreakAndStats();
+-}
+-
+-// 蛻晄悄蛹門・逅・・繝舌う繝ｳ繝・
+-document.addEventListener('DOMContentLoaded', () => {
+-  // 髮ｻ霆翫Δ繝ｼ繝峨ヨ繧ｰ繝ｫ繝懊ち繝ｳ縺ｮ繧､繝吶Φ繝育匳骭ｲ
+-  const trainBtn = document.getElementById('trainToggleBtn');
+-  if (trainBtn) {
+-    trainBtn.addEventListener('click', toggleTrainMode);
+-  }
+-  
+-  // 騾∽ｿ｡繝懊ち繝ｳ繧・◎縺ｮ莉悶・蛻晄悄險ｭ螳・
+-  const sendBtn = document.getElementById('sendBtn');
+-  if (sendBtn) {
+-    sendBtn.addEventListener('click', sendMessage);
+-  }
+-});
+-</script>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
++<meta name="mobile-web-app-capable" content="yes">
++<meta name="apple-mobile-web-app-capable" content="yes">
++<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
++<meta name="apple-mobile-web-app-title" content="Speak Native">
++<link rel="manifest" href="./pwa/manifest.json">
++<link rel="apple-touch-icon" href="./assets/images/icon-192.png">
++<title>Daily English Immersion</title>
++<script>
++  if ('serviceWorker' in navigator) {
++    navigator.serviceWorker.register('./pwa/service-worker.js').catch(err => console.log('SW:', err));
++  }
++</script>
++<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
++<style>
++  :root {
++    --bg: #0e0f11;
++    --surface: #16181c;
++    --surface2: #1e2128;
++    --border: #2a2d35;
++    --accent: #5cefb0;
++    --accent2: #f0a05a;
++    --accent3: #7eb8ff;
++    --text: #e8eaf0;
++    --text-muted: #6b7280;
++    --user-bubble: #1e2a1e;
++    --ai-bubble: #1a1e2e;
++    --danger: #ff6b6b;
++    --radius: 18px;
++    --safe-bottom: env(safe-area-inset-bottom, 0px);
++  }
++
++  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
++
++  body {
++    background: var(--bg);
++    color: var(--text);
++    font-family: 'DM Sans', sans-serif;
++    min-height: 100vh;
++    min-height: -webkit-fill-available;
++    overflow: hidden;
++    display: flex;
++    flex-direction: column;
++  }
++
++  /* SCREEN SYSTEM */
++  .screen { display: none; flex-direction: column; height: 100vh; height: -webkit-fill-available; }
++  .screen.active { display: flex; }
++
++  /* ===== TRAIN MODE GLOBAL BADGE ===== */
++  #trainBadge {
++    display: none;
++    position: fixed;
++    top: 0;
++    left: 0;
++    right: 0;
++    z-index: 999;
++    background: rgba(92,239,176,0.12);
++    border-bottom: 1px solid rgba(92,239,176,0.25);
++    padding: 6px 20px;
++    padding-top: calc(6px + env(safe-area-inset-top, 0px));
++    text-align: center;
++    font-family: 'DM Mono', monospace;
++    font-size: 11px;
++    letter-spacing: 2px;
++    color: var(--accent);
++    backdrop-filter: blur(8px);
++    -webkit-backdrop-filter: blur(8px);
++  }
++  #trainBadge.show { display: block; }
++
++  /* ===== HOME SCREEN ===== */
++  #home {
++    background: var(--bg);
++    padding: 0;
++    position: relative;
++    overflow: hidden;
++  }
++
++  .home-bg {
++    position: absolute;
++    inset: 0;
++    background:
++      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(92,239,176,0.08) 0%, transparent 60%),
++      radial-gradient(ellipse 50% 50% at 10% 80%, rgba(126,184,255,0.06) 0%, transparent 60%);
++    pointer-events: none;
++  }
++
++  .home-inner {
++    position: relative;
++    z-index: 1;
++    display: flex;
++    flex-direction: column;
++    height: 100%;
++    padding: 52px 24px 24px;
++    padding-bottom: calc(24px + var(--safe-bottom));
++  }
++
++  .logo-area { margin-bottom: 40px; }
++  .logo-tag {
++    font-family: 'DM Mono', monospace;
++    font-size: 10px;
++    letter-spacing: 3px;
++    color: var(--accent);
++    text-transform: uppercase;
++    margin-bottom: 10px;
++    opacity: 0.8;
++  }
++  .logo-title {
++    font-family: 'DM Serif Display', serif;
++    font-size: 38px;
++    line-height: 1.1;
++    color: var(--text);
++    letter-spacing: -0.5px;
++  }
++  .logo-title em { font-style: italic; color: var(--accent); }
++  .logo-sub {
++    margin-top: 10px;
++    font-size: 14px;
++    color: var(--text-muted);
++    line-height: 1.5;
++    max-width: 260px;
++  }
++
++  /* API Key input */
++  .api-section {
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: var(--radius);
++    padding: 16px;
++    margin-bottom: 24px;
++  }
++  .api-label {
++    font-family: 'DM Mono', monospace;
++    font-size: 10px;
++    letter-spacing: 2px;
++    color: var(--accent);
++    text-transform: uppercase;
++    margin-bottom: 8px;
++  }
++  .api-input-row { display: flex; gap: 8px; align-items: center; }
++  .api-input {
++    flex: 1;
++    background: var(--surface2);
++    border: 1px solid var(--border);
++    border-radius: 10px;
++    padding: 10px 12px;
++    color: var(--text);
++    font-family: 'DM Mono', monospace;
++    font-size: 12px;
++    outline: none;
++  }
++  .api-input:focus { border-color: var(--accent); }
++  .api-save-btn {
++    background: var(--accent);
++    color: var(--bg);
++    border: none;
++    border-radius: 10px;
++    padding: 10px 14px;
++    font-size: 12px;
++    font-weight: 600;
++    cursor: pointer;
++    white-space: nowrap;
++  }
++  .api-status {
++    font-size: 11px;
++    margin-top: 6px;
++    color: var(--text-muted);
++  }
++  .api-status.ok { color: var(--accent); }
++
++  /* Provider tabs */
++  .provider-tabs {
++    display: flex;
++    gap: 6px;
++    margin-bottom: 12px;
++  }
++  .provider-tab {
++    flex: 1;
++    padding: 7px 0;
++    border-radius: 8px;
++    border: 1px solid var(--border);
++    background: transparent;
++    color: var(--text-muted);
++    font-family: 'DM Mono', monospace;
++    font-size: 11px;
++    letter-spacing: 1px;
++    cursor: pointer;
++    transition: all 0.15s;
++    text-align: center;
++  }
++  .provider-tab.active-gemini {
++    background: rgba(66,133,244,0.15);
++    border-color: rgba(66,133,244,0.5);
++    color: #7eb8ff;
++  }
++  .provider-tab.active-claude {
++    background: rgba(92,239,176,0.12);
++    border-color: rgba(92,239,176,0.4);
++    color: var(--accent);
++  }
++  .provider-panel { display: none; }
++  .provider-panel.show { display: block; }
++  .provider-note {
++    font-size: 11px;
++    color: var(--text-muted);
++    margin-top: 6px;
++    line-height: 1.5;
++  }
++  .provider-note span { color: var(--accent2); }
++
++  /* Mode cards */
++  .modes-label {
++    font-family: 'DM Mono', monospace;
++    font-size: 10px;
++    letter-spacing: 3px;
++    color: var(--text-muted);
++    text-transform: uppercase;
++    margin-bottom: 14px;
++  }
++  .modes-grid { display: flex; flex-direction: column; gap: 8px; flex: 1; }
++
++  .mode-card {
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: var(--radius);
++    padding: 14px 18px;
++    cursor: pointer;
++    display: flex;
++    align-items: center;
++    gap: 16px;
++    transition: all 0.2s;
++    position: relative;
++    overflow: hidden;
++  }
++  .mode-card::before {
++    content: '';
++    position: absolute;
++    inset: 0;
++    opacity: 0;
++    transition: opacity 0.2s;
++  }
++  .mode-card:active { transform: scale(0.98); }
++
++  .mode-card.freetalk::before { background: radial-gradient(circle at left, rgba(92,239,176,0.05), transparent 70%); }
++  .mode-card.shadowing::before { background: radial-gradient(circle at left, rgba(240,160,90,0.05), transparent 70%); }
++  .mode-card.instant::before { background: radial-gradient(circle at left, rgba(126,184,255,0.05), transparent 70%); }
++  .mode-card:hover::before, .mode-card:focus::before { opacity: 1; }
++
++  .mode-icon {
++    width: 44px;
++    height: 44px;
++    border-radius: 12px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 20px;
++    flex-shrink: 0;
++  }
++  .freetalk .mode-icon { background: rgba(92,239,176,0.12); }
++  .shadowing .mode-icon { background: rgba(240,160,90,0.12); }
++  .instant .mode-icon { background: rgba(126,184,255,0.12); }
++
++  .mode-info { flex: 1; }
++  .mode-name {
++    font-size: 16px;
++    font-weight: 500;
++    color: var(--text);
++    margin-bottom: 3px;
++  }
++  .mode-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
++
++  .mode-arrow { color: var(--text-muted); font-size: 16px; }
++
++  /* ===== STREAK + TRAIN TOGGLE ROW ===== */
++  .streak-train-row {
++    margin-top: 16px;
++    display: flex;
++    align-items: stretch;
++    gap: 10px;
++  }
++
++  .streak-bar {
++    flex: 1;
++    display: flex;
++    align-items: center;
++    gap: 10px;
++    padding: 12px 16px;
++    background: var(--surface);
++    border-radius: 12px;
++    border: 1px solid var(--border);
++  }
++  .streak-flame { font-size: 18px; }
++  .streak-text { font-size: 12px; color: var(--text-muted); }
++  .streak-text strong { color: var(--accent2); }
++
++  /* Train mode toggle button */
++  .train-toggle {
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    justify-content: center;
++    gap: 4px;
++    padding: 10px 14px;
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 12px;
++    cursor: pointer;
++    transition: all 0.2s;
++    flex-shrink: 0;
++    -webkit-tap-highlight-color: transparent;
++    user-select: none;
++  }
++  .train-toggle.active {
++    background: rgba(92,239,176,0.1);
++    border-color: rgba(92,239,176,0.4);
++  }
++  .train-toggle-icon { font-size: 18px; line-height: 1; }
++  .train-toggle-label {
++    font-family: 'DM Mono', monospace;
++    font-size: 9px;
++    letter-spacing: 1px;
++    color: var(--text-muted);
++    text-transform: uppercase;
++  }
++  .train-toggle.active .train-toggle-label { color: var(--accent); }
++
++  /* Switch inside toggle */
++  .train-switch {
++    width: 28px;
++    height: 16px;
++    background: var(--border);
++    border-radius: 8px;
++    position: relative;
++    transition: background 0.2s;
++  }
++  .train-toggle.active .train-switch { background: var(--accent); }
++  .train-switch::after {
++    content: '';
++    position: absolute;
++    top: 2px;
++    left: 2px;
++    width: 12px;
++    height: 12px;
++    background: #fff;
++    border-radius: 50%;
++    transition: transform 0.2s;
++  }
++  .train-toggle.active .train-switch::after { transform: translateX(12px); }
++
++  /* ===== FREETALK SCREEN ===== */
++  #freetalk { background: var(--bg); }
++
++  .nav-bar {
++    display: flex;
++    align-items: center;
++    padding: 52px 20px 12px;
++    gap: 12px;
++    background: var(--bg);
++    border-bottom: 1px solid var(--border);
++    flex-shrink: 0;
++  }
++  .back-btn {
++    width: 36px; height: 36px;
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 10px;
++    color: var(--text);
++    font-size: 16px;
++    cursor: pointer;
++    display: flex; align-items: center; justify-content: center;
++  }
++  .nav-title { font-size: 16px; font-weight: 500; flex: 1; }
++  .nav-badge {
++    font-family: 'DM Mono', monospace;
++    font-size: 10px;
++    padding: 4px 10px;
++    border-radius: 20px;
++    letter-spacing: 1px;
++  }
++  .nav-badge.green { background: rgba(92,239,176,0.12); color: var(--accent); }
++  .nav-badge.orange { background: rgba(240,160,90,0.12); color: var(--accent2); }
++
++  /* Topic selector */
++  .topic-bar {
++    display: flex;
++    gap: 8px;
++    padding: 10px 20px;
++    overflow-x: auto;
++    flex-shrink: 0;
++    scrollbar-width: none;
++  }
++  .topic-bar::-webkit-scrollbar { display: none; }
++  .topic-chip {
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 20px;
++    padding: 6px 14px;
++    font-size: 12px;
++    color: var(--text-muted);
++    white-space: nowrap;
++    cursor: pointer;
++    transition: all 0.15s;
++    flex-shrink: 0;
++  }
++  .topic-chip.active {
++    background: rgba(92,239,176,0.1);
++    border-color: var(--accent);
++    color: var(--accent);
++  }
++
++  /* Chat area */
++  .chat-area {
++    flex: 1;
++    overflow-y: auto;
++    padding: 16px 20px;
++    display: flex;
++    flex-direction: column;
++    gap: 12px;
++    -webkit-overflow-scrolling: touch;
++  }
++  .chat-area::-webkit-scrollbar { display: none; }
++
++  .bubble-wrap {
++    display: flex;
++    flex-direction: column;
++    gap: 4px;
++    animation: fadeUp 0.3s ease;
++  }
++  @keyframes fadeUp {
++    from { opacity: 0; transform: translateY(8px); }
++    to { opacity: 1; transform: translateY(0); }
++  }
++
++  .bubble-wrap.user { align-items: flex-end; }
++  .bubble-wrap.ai { align-items: flex-start; }
++
++  .bubble {
++    max-width: 80%;
++    padding: 12px 16px;
++    border-radius: 16px;
++    font-size: 15px;
++    line-height: 1.55;
++  }
++  .bubble.user {
++    background: var(--user-bubble);
++    border: 1px solid rgba(92,239,176,0.2);
++    border-bottom-right-radius: 4px;
++    color: var(--text);
++  }
++  .bubble.ai {
++    background: var(--ai-bubble);
++    border: 1px solid rgba(126,184,255,0.15);
++    border-bottom-left-radius: 4px;
++    color: var(--text);
++  }
++  .bubble-meta {
++    font-size: 10px;
++    color: var(--text-muted);
++    padding: 0 4px;
++    font-family: 'DM Mono', monospace;
++  }
++
++  /* Feedback bubble */
++  .feedback-bubble {
++    background: rgba(240,160,90,0.08);
++    border: 1px solid rgba(240,160,90,0.25);
++    border-radius: 12px;
++    padding: 10px 14px;
++    max-width: 88%;
++    align-self: flex-start;
++    animation: fadeUp 0.3s ease;
++  }
++  .feedback-label {
++    font-family: 'DM Mono', monospace;
++    font-size: 9px;
++    letter-spacing: 2px;
++    color: var(--accent2);
++    text-transform: uppercase;
++    margin-bottom: 5px;
++  }
++  .feedback-text { font-size: 13px; color: var(--text); line-height: 1.5; }
++
++  /* Typing indicator */
++  .typing-indicator {
++    display: flex;
++    gap: 5px;
++    align-items: center;
++    padding: 14px 18px;
++    background: var(--ai-bubble);
++    border: 1px solid rgba(126,184,255,0.15);
++    border-radius: 16px;
++    border-bottom-left-radius: 4px;
++    width: fit-content;
++    animation: fadeUp 0.2s ease;
++  }
++  .typing-dot {
++    width: 6px; height: 6px;
++    background: var(--accent3);
++    border-radius: 50%;
++    animation: typingBounce 1.2s infinite;
++    opacity: 0.7;
++  }
++  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
++  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
++  @keyframes typingBounce {
++    0%, 60%, 100% { transform: translateY(0); }
++    30% { transform: translateY(-5px); }
++  }
++
++  /* Input area */
++  .input-area {
++    padding: 12px 20px;
++    padding-bottom: calc(12px + var(--safe-bottom));
++    background: var(--bg);
++    border-top: 1px solid var(--border);
++    flex-shrink: 0;
++  }
++  .input-row {
++    display: flex;
++    gap: 10px;
++    align-items: flex-end;
++  }
++  .text-input {
++    flex: 1;
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 14px;
++    padding: 12px 14px;
++    color: var(--text);
++    font-family: 'DM Sans', sans-serif;
++    font-size: 15px;
++    outline: none;
++    resize: none;
++    max-height: 100px;
++    line-height: 1.4;
++    -webkit-appearance: none;
++  }
++  .text-input:focus { border-color: rgba(92,239,176,0.4); }
++  .text-input::placeholder { color: var(--text-muted); }
++
++  .mic-btn {
++    width: 46px; height: 46px;
++    border-radius: 14px;
++    border: 1px solid var(--border);
++    background: var(--surface);
++    color: var(--text-muted);
++    font-size: 18px;
++    cursor: pointer;
++    display: flex; align-items: center; justify-content: center;
++    transition: all 0.2s;
++    flex-shrink: 0;
++  }
++  .mic-btn.recording {
++    background: rgba(255,107,107,0.15);
++    border-color: var(--danger);
++    color: var(--danger);
++    animation: pulse 1s infinite;
++  }
++  /* Train mode: mic disabled */
++  .mic-btn.train-disabled {
++    opacity: 0.35;
++    cursor: not-allowed;
++    filter: grayscale(1);
++  }
++  @keyframes pulse {
++    0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,107,0.3); }
++    50% { box-shadow: 0 0 0 8px rgba(255,107,107,0); }
++  }
++
++  .send-btn {
++    width: 46px; height: 46px;
++    border-radius: 14px;
++    border: none;
++    background: var(--accent);
++    color: var(--bg);
++    font-size: 18px;
++    cursor: pointer;
++    display: flex; align-items: center; justify-content: center;
++    flex-shrink: 0;
++    transition: opacity 0.2s;
++  }
++  .send-btn:disabled { opacity: 0.3; }
++
++  /* ===== INSTANT SCREEN ===== */
++  #instant { background: var(--bg); }
++
++  .instant-body {
++    flex: 1;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    justify-content: center;
++    padding: 28px;
++    gap: 24px;
++  }
++  .instant-counter {
++    font-family: 'DM Mono', monospace;
++    font-size: 11px;
++    letter-spacing: 2px;
++    color: var(--text-muted);
++  }
++  .instant-card {
++    width: 100%;
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 24px;
++    padding: 32px 24px;
++    text-align: center;
++  }
++  .instant-jp {
++    font-family: 'DM Serif Display', serif;
++    font-size: 28px;
++    color: var(--text);
++    margin-bottom: 8px;
++    line-height: 1.3;
++  }
++  .instant-hint { font-size: 12px; color: var(--text-muted); }
++
++  .timer-ring {
++    position: relative;
++    width: 80px; height: 80px;
++  }
++  .timer-ring svg { transform: rotate(-90deg); }
++  .timer-ring circle {
++    fill: none;
++    stroke: var(--border);
++    stroke-width: 4;
++  }
++  .timer-ring .progress {
++    stroke: var(--accent);
++    stroke-dasharray: 220;
++    stroke-dashoffset: 0;
++    transition: stroke-dashoffset 0.1s linear, stroke 0.3s;
++    stroke-linecap: round;
++  }
++  .timer-num {
++    position: absolute;
++    inset: 0;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-family: 'DM Mono', monospace;
++    font-size: 22px;
++    font-weight: 500;
++    color: var(--text);
++  }
++
++  .instant-answer {
++    width: 100%;
++    background: var(--surface2);
++    border: 1px solid rgba(92,239,176,0.3);
++    border-radius: 16px;
++    padding: 20px;
++    display: none;
++    animation: fadeUp 0.3s ease;
++  }
++  .instant-answer.show { display: block; }
++  .answer-label {
++    font-family: 'DM Mono', monospace;
++    font-size: 9px;
++    letter-spacing: 2px;
++    color: var(--accent);
++    text-transform: uppercase;
++    margin-bottom: 8px;
++  }
++  .answer-en {
++    font-size: 20px;
++    font-weight: 500;
++    color: var(--text);
++    margin-bottom: 6px;
++  }
++  .answer-note { font-size: 12px; color: var(--text-muted); }
++
++  .instant-btns { display: flex; gap: 10px; width: 100%; }
++  .instant-btn {
++    flex: 1;
++    padding: 14px;
++    border-radius: 14px;
++    border: 1px solid var(--border);
++    background: var(--surface);
++    color: var(--text);
++    font-size: 14px;
++    font-weight: 500;
++    cursor: pointer;
++    transition: all 0.15s;
++  }
++  .instant-btn.primary {
++    background: var(--accent);
++    border-color: var(--accent);
++    color: var(--bg);
++  }
++  .instant-btn:active { transform: scale(0.97); }
++
++  /* ===== SHADOWING SCREEN ===== */
++  #shadowing { background: var(--bg); }
++
++  .shadow-body {
++    flex: 1;
++    display: flex;
++    flex-direction: column;
++    padding: 20px;
++    gap: 16px;
++    overflow-y: auto;
++    -webkit-overflow-scrolling: touch;
++  }
++
++  .shadow-script {
++    background: var(--surface);
++    border: 1px solid var(--border);
++    border-radius: 20px;
++    padding: 22px;
++  }
++  .shadow-title {
++    font-family: 'DM Mono', monospace;
++    font-size: 10px;
++    letter-spacing: 2px;
++    color: var(--accent2);
++    text-transform: uppercase;
++    margin-bottom: 14px;
++  }
++  .shadow-line {
++    font-size: 17px;
++    line-height: 1.7;
++    color: var(--text);
++    cursor: pointer;
++    transition: color 0.2s;
++    padding: 4px 0;
++    border-bottom: 1px solid transparent;
++  }
++  .shadow-line.active {
++    color: var(--accent);
++    border-bottom-color: rgba(92,239,176,0.2);
++  }
++  .shadow-line.done { color: var(--text-muted); }
++  .shadow-jp {
++    font-size: 12px;
++    color: var(--text-muted);
++    margin-top: 2px;
++    display: none;
++  }
++  .shadow-line.active .shadow-jp { display: block; }
++
++  .shadow-controls {
++    display: flex;
++    gap: 10px;
++    flex-shrink: 0;
++    flex-wrap: wrap;
++    padding: 0 0 calc(var(--safe-bottom));
++  }
++  .shadow-btn {
++    flex: 1;
++    padding: 14px;
++    border-radius: 14px;
++    border: 1px solid var(--border);
++    background: var(--surface);
++    color: var(--text);
++    font-size: 14px;
++    font-weight: 500;
++    cursor: pointer;
++    transition: all 0.15s;
++    white-space: nowrap;
++  }
++  .shadow-btn.play {
++    background: rgba(240,160,90,0.12);
++    border-color: rgba(240,160,90,0.3);
++    color: var(--accent2);
++  }
++  .shadow-btn.record {
++    background: rgba(255,107,107,0.08);
++    border-color: rgba(255,107,107,0.2);
++    color: var(--danger);
++  }
++  /* Train mode: record disabled */
++  .shadow-btn.record.train-disabled {
++    opacity: 0.35;
++    cursor: not-allowed;
++    filter: grayscale(1);
++  }
++  .shadow-btn.autoplay {
++    background: rgba(92,239,176,0.1);
++    border-color: rgba(92,239,176,0.3);
++    color: var(--accent);
++  }
++  .shadow-btn.autoplay.running {
++    background: rgba(92,239,176,0.2);
++    border-color: var(--accent);
++    animation: pulseGreen 1.5s infinite;
++  }
++  @keyframes pulseGreen {
++    0%, 100% { box-shadow: 0 0 0 0 rgba(92,239,176,0.2); }
++    50% { box-shadow: 0 0 0 6px rgba(92,239,176,0); }
++  }
++  .shadow-btn:active { transform: scale(0.97); }
++
++  .mode-card.vocab::before { background: radial-gradient(circle at left, rgba(255,200,80,0.05), transparent 70%); }
++  .mode-card.stats::before { background: radial-gradient(circle at left, rgba(200,130,255,0.05), transparent 70%); }
++  .vocab .mode-icon { background: rgba(255,200,80,0.12); }
++  .stats .mode-icon { background: rgba(200,130,255,0.12); }
++
++  /* ===== VOCAB SCREEN ===== */
++  #vocab { background: var(--bg); }
++  .vocab-body { flex:1; overflow-y:auto; padding:16px 20px; display:flex; flex-direction:column; gap:12px; -webkit-overflow-scrolling:touch; }
++  .vocab-body::-webkit-scrollbar { display:none; }
++  .vocab-empty { text-align:center; padding:60px 20px; color:var(--text-muted); font-size:14px; line-height:1.8; }
++  .vocab-card {
++    background:var(--surface); border:1px solid var(--border); border-radius:16px;
++    padding:16px 18px; display:flex; flex-direction:column; gap:6px;
++    animation: fadeUp 0.2s ease;
++  }
++  .vocab-en { font-size:17px; font-weight:500; color:var(--text); }
++  .vocab-jp { font-size:12px; color:var(--text-muted); }
++  .vocab-note { font-size:11px; color:var(--accent2); font-family:'DM Mono',monospace; }
++  .vocab-meta { display:flex; align-items:center; justify-content:space-between; margin-top:4px; }
++  .vocab-date { font-size:10px; color:var(--text-muted); font-family:'DM Mono',monospace; }
++  .vocab-del { background:none; border:none; color:var(--text-muted); font-size:16px; cursor:pointer; padding:0 4px; }
++  .vocab-add-bar {
++    padding:12px 20px; padding-bottom:calc(12px + var(--safe-bottom));
++    border-top:1px solid var(--border); flex-shrink:0; display:flex; gap:8px;
++  }
++  .vocab-add-input {
++    flex:1; background:var(--surface); border:1px solid var(--border); border-radius:12px;
++    padding:10px 12px; color:var(--text); font-size:14px; outline:none;
++  }
++  .vocab-add-input:focus { border-color:rgba(255,200,80,0.4); }
++  .vocab-add-btn {
++    background:rgba(255,200,80,0.15); border:1px solid rgba(255,200,80,0.3);
++    color:rgb(255,200,80); border-radius:12px; padding:10px 16px; font-size:14px; cursor:pointer;
++  }
++
++  /* ===== STATS SCREEN ===== */
++  #stats { background: var(--bg); }
++  .stats-body { flex:1; overflow-y:auto; padding:16px 20px; display:flex; flex-direction:column; gap:16px; -webkit-overflow-scrolling:touch; }
++  .stats-body::-webkit-scrollbar { display:none; }
++  .stats-row { display:flex; gap:12px; }
++  .stat-card {
++    flex:1; background:var(--surface); border:1px solid var(--border); border-radius:16px;
++    padding:16px; text-align:center;
++  }
++  .stat-num { font-family:'DM Serif Display',serif; font-size:32px; color:var(--text); }
++  .stat-label { font-size:11px; color:var(--text-muted); margin-top:4px; }
++  .stat-num.green { color:var(--accent); }
++  .stat-num.purple { color:#c882ff; }
++  .stat-num.orange { color:var(--accent2); }
++  .graph-section {
++    background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:18px;
++  }
++  .graph-title {
++    font-family:'DM Mono',monospace; font-size:10px; letter-spacing:2px;
++    color:var(--text-muted); text-transform:uppercase; margin-bottom:14px;
++  }
++  .bar-chart { display:flex; align-items:flex-end; gap:6px; height:80px; }
++  .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
++  .bar {
++    width:100%; border-radius:4px 4px 0 0; background:rgba(92,239,176,0.3);
++    transition:height 0.4s ease; min-height:2px;
++  }
++  .bar.today { background:var(--accent); }
++  .bar-day { font-size:9px; color:var(--text-muted); font-family:'DM Mono',monospace; }
++  .gas-sync-btn {
++    width:100%; padding:14px; background:rgba(126,184,255,0.1);
++    border:1px solid rgba(126,184,255,0.25); border-radius:14px;
++    color:var(--accent3); font-size:14px; font-weight:500; cursor:pointer;
++  }
++  .sync-log { font-size:11px; color:var(--text-muted); text-align:center; margin-top:8px; font-family:'DM Mono',monospace; }
++
++  /* Toast */
++  .toast {
++    position: fixed;
++    bottom: 100px;
++    left: 50%;
++    transform: translateX(-50%) translateY(20px);
++    background: var(--surface2);
++    border: 1px solid var(--border);
++    border-radius: 12px;
++    padding: 10px 18px;
++    font-size: 13px;
++    color: var(--text);
++    opacity: 0;
++    transition: all 0.3s;
++    pointer-events: none;
++    white-space: nowrap;
++    z-index: 100;
++  }
++  .toast.show {
++    opacity: 1;
++    transform: translateX(-50%) translateY(0);
++  }
++</style>
++</head>
++<body>
++
++<!-- TRAIN MODE GLOBAL BADGE -->
++<div id="trainBadge">噬 髮ｻ霆翫Δ繝ｼ繝我ｸｭ -- 繝槭う繧ｯ繝ｻ髻ｳ螢ｰ蜃ｺ蜉・OFF</div>
++
++<!-- HOME -->
++<div class="screen active" id="home">
++  <div class="home-bg"></div>
++  <div class="home-inner">
++    <!-- Settings button -->
++    <div style="display:flex;justify-content:flex-end;margin-bottom:8px;">
++      <button onclick="showScreen('settings')" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 12px;color:var(--text-muted);font-size:18px;cursor:pointer;">笞・/button>
++    </div>
++    <div class="logo-area">
++      <div class="logo-tag">English Immersion</div>
++      <h1 class="logo-title">Speak like<br><em>you think</em></h1>
++      <p class="logo-sub">譌･譛ｬ隱槭ｒ閠・∴縺壹↓闍ｱ隱槭′蜃ｺ縺ｦ縺上ｋ繧医≧縺ｫ縺ｪ繧九い繝励Μ</p>
++    </div>
++
++    <div class="modes-label">Today's practice</div>
++    <div class="modes-grid">
++      <div class="mode-card freetalk" onclick="showScreen('freetalk')">
++        <div class="mode-icon">町</div>
++        <div class="mode-info">
++          <div class="mode-name">Free Talk</div>
++          <div class="mode-desc">AI縺ｨ閾ｪ逕ｱ莨夊ｩｱ縲ゅユ繝ｼ繝槭ｒ驕ｸ繧薙〒隧ｱ縺吶□縺・/div>
++        </div>
++        <div class="mode-arrow">窶ｺ</div>
++      </div>
++      <div class="mode-card shadowing" onclick="showScreen('shadowing')">
++        <div class="mode-icon">而</div>
++        <div class="mode-info">
++          <div class="mode-name">Shadowing</div>
++          <div class="mode-desc">閾ｪ辟ｶ縺ｪ闍ｱ隱槭ｒ閨ｴ縺・※繝ｪ繧ｺ繝縺斐→逵滉ｼｼ繧・/div>
++        </div>
++        <div class="mode-arrow">窶ｺ</div>
++      </div>
++      <div class="mode-card instant" onclick="showScreen('instant')">
++        <div class="mode-icon">笞｡</div>
++        <div class="mode-info">
++          <div class="mode-name">迸ｬ髢楢恭菴懈枚</div>
++          <div class="mode-desc">譌･譛ｬ隱樞・闍ｱ隱槭ｒ3遘偵〒縲らｿｻ險ｳ逋悶ｒ譁ｭ縺､</div>
++        </div>
++        <div class="mode-arrow">窶ｺ</div>
++      </div>
++      <div class="mode-card vocab" onclick="showScreen('vocab')">
++        <div class="mode-icon">答</div>
++        <div class="mode-info">
++          <div class="mode-name">蜊倩ｪ槫ｸｳ</div>
++          <div class="mode-desc">莨夊ｩｱ荳ｭ縺ｫ菫晏ｭ倥＠縺溯｡ｨ迴ｾ繧貞ｾｩ鄙・/div>
++        </div>
++        <div class="mode-arrow">窶ｺ</div>
++      </div>
++      <div class="mode-card stats" onclick="showScreen('stats')">
++        <div class="mode-icon">投</div>
++        <div class="mode-info">
++          <div class="mode-name">騾ｲ謐励げ繝ｩ繝・/div>
++          <div class="mode-desc">豁｣隗｣邇・・騾｣邯壽律謨ｰ縺ｮ謗ｨ遘ｻ繧堤｢ｺ隱・/div>
++        </div>
++        <div class="mode-arrow">窶ｺ</div>
++      </div>
++    </div>
++
++    <!-- STREAK + TRAIN TOGGLE ROW -->
++    <div class="streak-train-row">
++      <div class="streak-bar">
++        <div class="streak-flame">櫨</div>
++        <div class="streak-text">騾｣邯・<strong id="streakDays">1</strong> 譌･逶ｮ縲・eep it up!</div>
++      </div>
++      <div class="train-toggle" id="trainToggle" onclick="toggleTrainMode()">
++        <div class="train-toggle-icon">噬</div>
++        <div class="train-switch"></div>
++        <div class="train-toggle-label">髮ｻ霆・/div>
++      </div>
++    </div>
++  </div>
++</div>
++
++<!-- FREE TALK -->
++<div class="screen" id="freetalk">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">Free Talk</div>
++    <div class="nav-badge green" id="talkStatus">Ready</div>
++  </div>
++  <div class="topic-bar" id="topicBar">
++    <div class="topic-chip active" data-topic="work">Work life</div>
++    <div class="topic-chip" data-topic="weekend">Weekend</div>
++    <div class="topic-chip" data-topic="food">Food & Restaurants</div>
++    <div class="topic-chip" data-topic="travel">Travel</div>
++    <div class="topic-chip" data-topic="hobby">Hobbies</div>
++    <div class="topic-chip" data-topic="tech">Tech & News</div>
++  </div>
++  <div class="chat-area" id="chatArea"></div>
++  <div class="input-area">
++    <div class="input-row">
++      <textarea class="text-input" id="msgInput" placeholder="Type or use mic..." rows="1"
++        oninput="autoResize(this)" onkeydown="handleEnter(event)"></textarea>
++      <button class="mic-btn" id="micBtn" onclick="toggleMic()" ontouchend="event.preventDefault();toggleMic();">痔</button>
++      <button class="send-btn" id="sendBtn" onclick="sendMessage()" ontouchend="event.preventDefault();sendMessage();">竊・/button>
++    </div>
++  </div>
++</div>
++
++<!-- SHADOWING -->
++<div class="screen" id="shadowing">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">Shadowing</div>
++    <div class="nav-badge orange">Workplace English</div>
++  </div>
++  <div class="shadow-body" id="shadowBody"></div>
++  <div class="shadow-controls" style="padding: 0 20px 20px;" id="shadowControls">
++    <button class="shadow-btn play" onclick="playCurrentLine()">笆ｶ Play</button>
++    <button class="shadow-btn" onclick="toggleJP()">JP 陦ｨ遉ｺ</button>
++    <button class="shadow-btn record" id="shadowRecordBtn" onclick="shadowRecord()">笳・骭ｲ髻ｳ</button>
++    <button class="shadow-btn" onclick="nextShadowLine()">Next 窶ｺ</button>
++    <button class="shadow-btn autoplay" id="autoPlayBtn" onclick="toggleAutoPlay()" style="flex-basis:100%;">笆ｶ Auto Play</button>
++  </div>
++</div>
++
++<!-- INSTANT -->
++<div class="screen" id="instant">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">迸ｬ髢楢恭菴懈枚</div>
++    <div class="nav-badge green" id="instantScore">0 / 0</div>
++  </div>
++  <div class="instant-body">
++    <div class="instant-counter" id="instantCounter">Q 1 / 10</div>
++    <div class="instant-card">
++      <div class="instant-jp" id="instantJP">貅門ｙ荳ｭ...</div>
++      <div class="instant-hint" id="instantHint">3遘偵〒闍ｱ隱槭↓</div>
++    </div>
++    <div class="timer-ring">
++      <svg width="80" height="80" viewBox="0 0 80 80">
++        <circle cx="40" cy="40" r="35"/>
++        <circle class="progress" id="timerProgress" cx="40" cy="40" r="35"/>
++      </svg>
++      <div class="timer-num" id="timerNum">3</div>
++    </div>
++    <div class="instant-answer" id="instantAnswer">
++      <div class="answer-label">Model Answer</div>
++      <div class="answer-en" id="answerEN"></div>
++      <div class="answer-note" id="answerNote"></div>
++    </div>
++    <div class="instant-btns">
++      <button class="instant-btn" onclick="markAnswer(false)">笨・諠懊＠縺・/button>
++      <button class="instant-btn primary" onclick="markAnswer(true)">笨・險縺医◆・・/button>
++    </div>
++  </div>
++</div>
++
++<!-- VOCAB -->
++<div class="screen" id="vocab">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">蜊倩ｪ槫ｸｳ</div>
++    <div class="nav-badge" style="background:rgba(255,200,80,0.12);color:rgb(255,200,80);" id="vocabCount">0 words</div>
++  </div>
++  <div class="vocab-body" id="vocabBody"></div>
++  <div class="vocab-add-bar">
++    <input class="vocab-add-input" id="vocabInput" placeholder="繝輔Ξ繝ｼ繧ｺ or 蜊倩ｪ槭ｒ霑ｽ蜉..." />
++    <button class="vocab-add-btn" onclick="addVocabManual()">+ Add</button>
++  </div>
++</div>
++
++<!-- STATS -->
++<div class="screen" id="stats">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">騾ｲ謐励げ繝ｩ繝・/div>
++  </div>
++  <div class="stats-body">
++    <div class="stats-row">
++      <div class="stat-card">
++        <div class="stat-num green" id="statStreak">-</div>
++        <div class="stat-label">櫨 騾｣邯壽律謨ｰ</div>
++      </div>
++      <div class="stat-card">
++        <div class="stat-num orange" id="statTotal">-</div>
++        <div class="stat-label">笞｡ 邱丞撫鬘梧焚</div>
++      </div>
++      <div class="stat-card">
++        <div class="stat-num purple" id="statRate">-</div>
++        <div class="stat-label">笨・豁｣隗｣邇・/div>
++      </div>
++    </div>
++    <div class="graph-section">
++      <div class="graph-title">驕主悉7譌･縺ｮ豁｣隗｣謨ｰ</div>
++      <div class="bar-chart" id="barChart"></div>
++    </div>
++    <div class="graph-section">
++      <div class="graph-title">蜊倩ｪ槫ｸｳ縺ｮ謌宣聞</div>
++      <div class="bar-chart" id="vocabChart"></div>
++    </div>
++    <div style="display:flex;gap:8px;margin-bottom:8px;">
++  <button style="flex:1;padding:12px;background:rgba(92,239,176,0.1);border:1px solid rgba(92,239,176,0.25);border-radius:14px;color:var(--accent);font-size:13px;font-weight:500;cursor:pointer;" onclick="saveToiCloud()">?? iCloud保存</button>
++  <button style="flex:1;padding:12px;background:rgba(126,184,255,0.1);border:1px solid rgba(126,184,255,0.25);border-radius:14px;color:var(--accent3);font-size:13px;font-weight:500;cursor:pointer;" onclick="sendToQuickRef()">?? quick-ref</button>
++</div>
++<button class="gas-sync-btn" onclick="syncToSheets()">笘・Google Sheets縺ｫ蜷梧悄</button>
++    <div class="sync-log" id="syncLog">GAS URL繧定ｨｭ螳壹☆繧九→蜷梧悄縺ｧ縺阪∪縺・/div>
++  </div>
++</div>
++
++<!-- SETTINGS -->
++<div class="screen" id="settings">
++  <div class="nav-bar">
++    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
++    <div class="nav-title">險ｭ螳・/div>
++  </div>
++  <div style="flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px;padding-bottom:calc(20px + var(--safe-bottom));">
++
++    <!-- Provider tabs -->
++    <div class="api-section">
++      <div class="api-label" style="margin-bottom:10px;">AI 繝励Ο繝舌う繝</div>
++      <div class="provider-tabs">
++        <button class="provider-tab" id="tabGemini" onclick="switchProvider('gemini')">鳩 Gemini</button>
++        <button class="provider-tab" id="tabClaude" onclick="switchProvider('claude')">泙 Claude</button>
++      </div>
++
++      <div class="provider-panel" id="panelGemini">
++        <div class="api-label" style="color:#7eb8ff;">Gemini API Key</div>
++        <div class="api-input-row">
++          <input class="api-input" type="password" id="geminiKeyInput" placeholder="AIza..." />
++          <button class="api-save-btn" style="background:#7eb8ff;" onclick="saveGeminiKey()">Save</button>
++        </div>
++        <div class="api-status" id="geminiStatus">Google AI Studio縺ｧ蜿門ｾ暦ｼ育┌譁呻ｼ・/div>
++        <div class="provider-note">笨ｦ <span>Gemini 2.0 Flash</span> -- 辟｡譁呎棧 1譌･1,500蝗・/div>
++      </div>
++
++      <div class="provider-panel" id="panelClaude">
++        <div class="api-label">Claude API Key</div>
++        <div class="api-input-row">
++          <input class="api-input" type="password" id="apiKeyInput" placeholder="sk-ant-..." />
++          <button class="api-save-btn" onclick="saveApiKey()">Save</button>
++        </div>
++        <div class="api-status" id="apiStatus">API繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
++        <div class="provider-note">笨ｦ <span>Claude Haiku 4.5</span> -- 譛螳峨・譛域焚蜊∝・遞句ｺｦ</div>
++      </div>
++    </div>
++
++    <!-- GAS URL -->
++    <div class="api-section">
++      <div class="api-label" style="color:var(--accent3);">Google Sheets GAS URL</div>
++      <div class="api-input-row">
++        <input class="api-input" type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/..." style="font-size:10px;" />
++        <button class="api-save-btn" style="background:var(--accent3);color:var(--bg);" onclick="saveGasUrl()">Save</button>
++      </div>
++      <div class="api-status" id="gasStatus">GAS URL繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
++    </div>
++
++    <!-- Info -->
++    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;">
++      <div class="api-label" style="margin-bottom:8px;">譁咎≡縺ｮ逶ｮ螳・/div>
++      <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">
++        鳩 Gemini Flash -- <strong style="color:var(--accent);">辟｡譁・/strong>・・譌･1,500蝗橸ｼ・br>
++        泙 Claude Haiku -- 1,000蝗槭・莨夊ｩｱ縺ｧ邏・<strong style="color:var(--accent2);">$1・育ｴ・50蜀・ｼ・/strong><br>
++        豈取律10蝗櫁ｩｱ縺励※繧・<strong style="color:var(--text);">譛・0蜀・ｨ句ｺｦ</strong>
++      </div>
++    </div>
++
++  </div>
++</div>
++
++<div class="toast" id="toast"></div>
++
++<script>
++// ===== STATE =====
++const STATE = {
++  aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
++  geminiKey:  localStorage.getItem('dei_geminiKey')  || '',
++  claudeKey:  localStorage.getItem('dei_claudeKey')  || localStorage.getItem('dei_apiKey') || '',
++  history: [] // { role: 'user'|'assistant', content: string }[] -- 逶ｴ霑・莉ｶ縺ｮ縺ｿ菫晄戟
++};
++
++function pushHistory(role, content) {
++  STATE.history.push({ role, content });
++  if (STATE.history.length > 4) STATE.history = STATE.history.slice(-4);
++}
++
++// 莉悶・髢｢謨ｰ縺九ｉ蜿ら・縺輔ｌ繧句､画焚・亥ｾ梧婿莠呈鋤・・let apiKey     = STATE.claudeKey;
++let geminiKey  = STATE.geminiKey;
++let aiProvider = STATE.aiProvider;
++let conversationHistory = STATE.history; // 蜿ら・蜈ｱ譛・let currentTopic = 'work';
++let recognition = null;
++let isRecording = false;
++let currentShadowLine = 0;
++let showJP = false;
++let instantIndex = 0;
++let instantScore = 0;
++let timerInterval = null;
++let timerVal = 3;
++let autoPlayInterval = null;
++let isAutoPlaying = false;
++
++// ===== TRAIN MODE =====
++let trainMode = localStorage.getItem('dei_trainMode') === 'on';
++
++function toggleTrainMode() {
++  trainMode = !trainMode;
++  localStorage.setItem('dei_trainMode', trainMode ? 'on' : 'off');
++  applyTrainMode();
++  showToast(trainMode ? '噬 髮ｻ霆翫Δ繝ｼ繝・ON' : '痔 騾壼ｸｸ繝｢繝ｼ繝峨↓謌ｻ繧翫∪縺励◆');
++}
++
++function applyTrainMode() {
++  const badge = document.getElementById('trainBadge');
++  const toggle = document.getElementById('trainToggle');
++  const micBtn = document.getElementById('micBtn');
++  const recordBtn = document.getElementById('shadowRecordBtn');
++  const hint = document.getElementById('instantHint');
++
++  if (trainMode) {
++    badge.classList.add('show');
++    toggle.classList.add('active');
++    micBtn.classList.add('train-disabled');
++    micBtn.title = '髮ｻ霆翫Δ繝ｼ繝我ｸｭ縺ｯ繝槭う繧ｯ辟｡蜉ｹ';
++    recordBtn.classList.add('train-disabled');
++    recordBtn.title = '髮ｻ霆翫Δ繝ｼ繝我ｸｭ縺ｯ骭ｲ髻ｳ辟｡蜉ｹ';
++    if (hint) hint.textContent = '噬 繧ｿ繧､繝槭・蠕後↓閾ｪ蜍戊｡ｨ遉ｺ';
++    // Start auto play in shadowing if currently on that screen
++    if (document.getElementById('shadowing').classList.contains('active') && !isAutoPlaying) {
++      startAutoPlay();
++    }
++  } else {
++    badge.classList.remove('show');
++    toggle.classList.remove('active');
++    micBtn.classList.remove('train-disabled');
++    micBtn.title = '';
++    recordBtn.classList.remove('train-disabled');
++    recordBtn.title = '';
++    if (hint) hint.textContent = '3遘偵〒闍ｱ隱槭↓';
++    stopAutoPlay();
++  }
++}
++
++// ===== TOPICS =====
++const TOPIC_PROMPTS = {
++  work: "office work, team meetings, deadlines, colleagues, workplace culture",
++  weekend: "weekend plans, hobbies, relaxing, going out",
++  food: "restaurants, cooking, favorite foods, trying new cuisine",
++  travel: "trips, travel experiences, places you want to visit",
++  hobby: "personal interests, hobbies, learning new skills",
++  tech: "technology, news, apps, innovations"
++};
++
++// ===== INSTANT QUESTIONS =====
++const INSTANT_QS = [
++  { jp: "縺｡繧・▲縺ｨ蠕・▲縺ｦ縺上□縺輔＞", en: "Just a moment, please.", note: "縲後■繧・▲縺ｨ縲・ Just a moment / Hold on" },
++  { jp: "縺昴ｌ縺ｯ縺・＞閠・∴縺ｧ縺吶・", en: "That's a great idea!", note: "繝薙ず繝阪せ縺ｧ繧医￥菴ｿ縺・酔諢上ヵ繝ｬ繝ｼ繧ｺ" },
++  { jp: "遒ｺ隱阪＆縺帙※縺上□縺輔＞", en: "Let me double-check that.", note: "double-check = 縺励▲縺九ｊ遒ｺ隱阪☆繧・ },
++  { jp: "譏取律縺ｾ縺ｧ縺ｫ邨ゅｏ繧峨○縺ｾ縺・, en: "I'll get it done by tomorrow.", note: "get it done = 繧・ｊ驕ゅ￡繧・ },
++  { jp: "繧ゅ≧蟆代＠隧ｳ縺励￥隱ｬ譏弱＠縺ｦ繧ゅｉ縺医∪縺吶°・・, en: "Could you elaborate on that a bit more?", note: "elaborate = 隧ｳ縺励￥隱ｬ譏弱☆繧・ },
++  { jp: "莉雁ｰ代＠蠢吶＠縺・〒縺・, en: "I'm a bit tied up right now.", note: "tied up = 謇九′髮｢縺帙↑縺・ },
++  { jp: "驕・ｌ縺ｦ縺斐ａ繧薙↑縺輔＞", en: "Sorry I'm late. I got held up.", note: "get held up = 雜ｳ豁｢繧√＆繧後ｋ" },
++  { jp: "縺昴ｌ縺ｯ遘√・諡・ｽ薙〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ", en: "That's not really my area.", note: "I'm not in charge of that 繧り・辟ｶ" },
++  { jp: "騾ｱ譛ｫ菴輔＠縺ｦ縺溘・・・, en: "What did you get up to this weekend?", note: "get up to = ・槭ｒ縺吶ｋ・郁恭蝗ｽ繝ｻ雎ｪ繝ｻ閨ｷ蝣ｴ蜷代￠・・ },
++  { jp: "縺顔夢繧梧ｧ倥〒縺励◆", en: "Great work today! / Good effort.", note: "縺顔夢繧梧ｧ・縺ｮ逶ｴ險ｳ縺ｯ縺ｪ縺・ら憾豕√〒螟峨ｏ繧・ },
++];
++
++// ===== SHADOWING SCRIPTS =====
++const SHADOW_SCRIPTS = [
++  { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "縺｡繧・▲縺ｨ縺・＞・溽嶌隲・＠縺溘＞縺薙→縺後≠縺｣縺ｦ縲・ },
++  { en: "Sure, what's up?", jp: "繧ゅ■繧阪ｓ縲√←縺・＠縺滂ｼ・ },
++  { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "繝励Ο繧ｸ繧ｧ繧ｯ繝医・繧ｹ繧ｱ繧ｸ繝･繝ｼ繝ｫ縺ｫ縺､縺・※閠・∴縺ｦ縺溘ｓ縺縺代←縲√■繧・▲縺ｨ繧ｮ繝ｪ繧ｮ繝ｪ縺九↑縺ｨ諤昴▲縺ｦ縲・ },
++  { en: "Yeah, I hear you. What do you suggest?", jp: "繧上°繧九ゅ←縺・＠縺溘ｉ縺・＞縺ｨ諤昴≧・・ },
++  { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "邱繧∝・繧翫ｒ1騾ｱ髢灘ｻｶ縺ｰ縺帙↑縺・°縺ｪ・溘メ繝ｼ繝縺ｮ繝励Ξ繝・す繝｣繝ｼ繧よｸ帙ｋ縺ｨ諤昴≧縺励・ },
++  { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "縺昴ｌ縺ｯ蜷育炊逧・□縺ｭ縲ゅけ繝ｩ繧､繧｢繝ｳ繝医↓遒ｺ隱阪＠縺ｦ縺九ｉ騾｣邨｡縺吶ｋ繧医・ },
++];
++
++// ===== PROVIDER TABS =====
++function switchProvider(p) {
++  STATE.aiProvider = p;
++  aiProvider = p;
++  localStorage.setItem('dei_aiProvider', p);
++  document.getElementById('panelGemini').classList.toggle('show', p === 'gemini');
++  document.getElementById('panelClaude').classList.toggle('show', p === 'claude');
++  document.getElementById('tabGemini').className = 'provider-tab' + (p === 'gemini' ? ' active-gemini' : '');
++  document.getElementById('tabClaude').className = 'provider-tab' + (p === 'claude' ? ' active-claude' : '');
++}
++
++// ===== API KEY -- GEMINI =====
++function saveGeminiKey() {
++  const val = document.getElementById('geminiKeyInput').value.trim();
++  if (!val.startsWith('AIza')) {
++    showToast('笶・譛牙柑縺ｪGemini API繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞');
++    return;
++  }
++  STATE.geminiKey = val;
++  geminiKey = val;
++  localStorage.setItem('dei_geminiKey', val);
++  document.getElementById('geminiStatus').textContent = '笨・Gemini API繧ｭ繝ｼ菫晏ｭ俶ｸ医∩';
++  document.getElementById('geminiStatus').className = 'api-status ok';
++  showToast('笨・Gemini API繧ｭ繝ｼ菫晏ｭ倥＠縺ｾ縺励◆');
++}
++
++// ===== API KEY -- CLAUDE =====
++function saveApiKey() {
++  const val = document.getElementById('apiKeyInput').value.trim();
++  if (!val.startsWith('sk-ant-')) {
++    showToast('笶・譛牙柑縺ｪAPI繧ｭ繝ｼ繧貞・蜉帙＠縺ｦ縺上□縺輔＞');
++    return;
++  }
++  STATE.claudeKey = val;
++  apiKey = val;
++  localStorage.setItem('dei_claudeKey', val);
++  localStorage.setItem('dei_apiKey', val); // 蠕梧婿莠呈鋤
++  document.getElementById('apiStatus').textContent = '笨・API繧ｭ繝ｼ菫晏ｭ俶ｸ医∩';
++  document.getElementById('apiStatus').className = 'api-status ok';
++  showToast('笨・API繧ｭ繝ｼ菫晏ｭ倥＠縺ｾ縺励◆');
++}
++
++// Init API UI
++(function initApiUI() {
++  if (geminiKey) {
++    document.getElementById('geminiKeyInput').value = geminiKey;
++    document.getElementById('geminiStatus').textContent = '笨・Gemini API繧ｭ繝ｼ險ｭ螳壽ｸ医∩';
++    document.getElementById('geminiStatus').className = 'api-status ok';
++  }
++  if (apiKey) {
++    document.getElementById('apiKeyInput').value = apiKey;
++    document.getElementById('apiStatus').textContent = '笨・API繧ｭ繝ｼ險ｭ螳壽ｸ医∩';
++    document.getElementById('apiStatus').className = 'api-status ok';
++  }
++  switchProvider(aiProvider);
++})();
++
++// ===== SCREEN NAV =====
++function showScreen(id) {
++  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
++  document.getElementById(id).classList.add('active');
++  if (id === 'freetalk' && conversationHistory.length === 0) initChat();
++  if (id === 'shadowing') initShadowing();
++  if (id === 'instant') initInstant();
++  if (id === 'vocab') renderVocab();
++  if (id === 'stats') renderStats();
++}
++
++// ===== FREETALK =====
++function initChat() {
++  const area = document.getElementById('chatArea');
++  area.innerHTML = '';
++  STATE.history = [];
++  conversationHistory = STATE.history; // alias 繧呈峩譁ｰ
++  addBubble('ai', `Hi! Let's talk about **${currentTopic.replace('_',' ')}** today. What's been going on for you lately? ・`);
++}
++
++document.querySelectorAll('.topic-chip').forEach(chip => {
++  chip.addEventListener('click', () => {
++    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
++    chip.classList.add('active');
++    currentTopic = chip.dataset.topic;
++    STATE.history = [];
++    conversationHistory = STATE.history;
++    document.getElementById('chatArea').innerHTML = '';
++    initChat();
++  });
++});
++
++function addBubble(role, text, feedback) {
++  const area = document.getElementById('chatArea');
++  const wrap = document.createElement('div');
++  wrap.className = `bubble-wrap ${role}`;
++
++  if (feedback) {
++    const fb = document.createElement('div');
++    fb.className = 'feedback-bubble';
++    const cleanFb = feedback.replace(/</g,'&lt;').replace(/>/g,'&gt;');
++    fb.innerHTML = `<div class="feedback-label">庁 Tip <button onclick="addVocab('${feedback.replace(/'/g,"\'")}','','Free Talk Tip');renderVocab();" style="float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;">+ 菫晏ｭ・/button></div><div class="feedback-text">${cleanFb}</div>`;
++    area.appendChild(fb);
++  } else {
++    const bubble = document.createElement('div');
++    bubble.className = `bubble ${role}`;
++    bubble.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
++    wrap.appendChild(bubble);
++    area.appendChild(wrap);
++  }
++  area.scrollTop = area.scrollHeight;
++}
++
++function showTyping() {
++  const area = document.getElementById('chatArea');
++  const wrap = document.createElement('div');
++  wrap.id = 'typingWrap';
++  wrap.className = 'bubble-wrap ai';
++  wrap.innerHTML = `<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
++  area.appendChild(wrap);
++  area.scrollTop = area.scrollHeight;
++}
++function hideTyping() {
++  const el = document.getElementById('typingWrap');
++  if (el) el.remove();
++}
++
++// ===== SYSTEM PROMPT (遏ｭ譁・音蛹・ =====
++function buildSystemPrompt() {
++  return `You are a friendly English conversation partner for a Japanese adult learner.
++Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}
++Rules (STRICT):
++- Reply in 1-2 sentences ONLY. Never exceed 2 sentences.
++- Always end with ONE short question to continue the conversation.
++- No bullet points, no lists, no markdown.
++- Occasionally (every 3-4 turns) add: [Tip: "better phrase"] -- keep it under 10 words.`;
++}
++
++// ===== GEMINI 蜻ｼ縺ｳ蜃ｺ縺・(2.0 Flash -- 辟｡譁呎棧) =====
++async function callGeminiAPI(userText) {
++  if (!STATE.geminiKey) throw new Error('Gemini API key not set');
++  const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key='
++    + encodeURIComponent(STATE.geminiKey);
++  const contents = [
++    ...STATE.history.map(h => ({
++      role: h.role === 'assistant' ? 'model' : 'user',
++      parts: [{ text: h.content }]
++    })),
++    { role: 'user', parts: [{ text: userText }] }
++  ];
++  const res = await fetch(url, {
++    method: 'POST',
++    headers: { 'Content-Type': 'application/json' },
++    body: JSON.stringify({
++      systemInstruction: { parts: [{ text: buildSystemPrompt() }] },
++      contents,
++      generationConfig: { maxOutputTokens: 128, temperature: 0.9 }
++    })
++  });
++  if (!res.ok) throw new Error('Gemini HTTP ' + res.status);
++  const data = await res.json();
++  if (data.error) throw new Error('Gemini: ' + data.error.message);
++  return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '(No response)';
++}
++
++// ===== CLAUDE 蜻ｼ縺ｳ蜃ｺ縺・(Haiku 4.5 -- 譛螳・ =====
++async function callClaudeAPI(userText) {
++  if (!STATE.claudeKey) throw new Error('Claude API key not set');
++  const messages = [
++    ...STATE.history.map(h => ({ role: h.role, content: h.content })),
++    { role: 'user', content: userText }
++  ];
++  const res = await fetch('https://api.anthropic.com/v1/messages', {
++    method: 'POST',
++    headers: {
++      'Content-Type': 'application/json',
++      'x-api-key': STATE.claudeKey,
++      'anthropic-version': '2023-06-01'
++    },
++    body: JSON.stringify({
++      model: 'claude-haiku-4-5-20251001',
++      max_tokens: 128,
++      system: buildSystemPrompt(),
++      messages
++    })
++  });
++  if (!res.ok) throw new Error('Claude HTTP ' + res.status);
++  const data = await res.json();
++  if (data.error) throw new Error('Claude: ' + data.error.message);
++  return data.content?.[0]?.text?.trim() || '(No response)';
++}
++
++// ===== sendMessage (繝輔か繝ｼ繝ｫ繝舌ャ繧ｯ1蝗槭・縺ｿ繝ｻ辟｡髯舌Ν繝ｼ繝励↑縺・ =====
++async function sendMessage() {
++  const input = document.getElementById('msgInput');
++  const userText = input.value.trim();
++  if (!userText) return; // 遨ｺ縺ｪ繧我ｽ輔ｂ縺励↑縺・ｼ亥・縺ｫ繝√ぉ繝・け・・
++  const provider = STATE.aiProvider;
++  const hasKey = provider === 'gemini' ? !!STATE.geminiKey : !!STATE.claudeKey;
++  if (!hasKey) {
++    showToast(provider === 'gemini'
++      ? '泊 Gemini API繧ｭ繝ｼ繧偵・繝ｼ繝縺ｧ險ｭ螳壹＠縺ｦ縺上□縺輔＞'
++      : '泊 Claude API繧ｭ繝ｼ繧偵・繝ｼ繝縺ｧ險ｭ螳壹＠縺ｦ縺上□縺輔＞');
++    return;
++  }
++
++  input.value = '';
++  input.style.height = 'auto';
++  addBubble('user', userText);
++  pushHistory('user', userText);
++
++  showTyping();
++  document.getElementById('talkStatus').textContent = 'Thinking...';
++
++  let reply = null;
++  let fallbackUsed = false;
++
++  try {
++    reply = provider === 'gemini' ? await callGeminiAPI(userText) : await callClaudeAPI(userText);
++  } catch (e) {
++    console.warn('[speak-native] Primary failed:', provider, e.message);
++    // Gemini 竊・Claude 縺ｫ1蝗槭□縺代ヵ繧ｩ繝ｼ繝ｫ繝舌ャ繧ｯ・育┌髯舌Ν繝ｼ繝励↑縺暦ｼ・    if (provider === 'gemini' && STATE.claudeKey) {
++      showToast('笞 Gemini螟ｱ謨・竊・Claude Haiku縺ｧ蜀崎ｩｦ陦・);
++      try {
++        reply = await callClaudeAPI(userText);
++        fallbackUsed = true;
++      } catch (e2) {
++        console.error('[speak-native] Fallback also failed:', e2.message);
++      }
++    }
++  }
++
++  hideTyping();
++
++  if (!reply) {
++    // 螟ｱ謨玲凾: history縺九ｉ莉翫・user繝｡繝・そ繝ｼ繧ｸ繧帝勁蜴ｻ縺励※UI荳翫ｂ荳雋ｫ縺輔○繧・    STATE.history.pop();
++    addBubble('ai', 'Connection error -- API繧ｭ繝ｼ繧堤｢ｺ隱阪＠縺ｦ縺上□縺輔＞縲・);
++    document.getElementById('talkStatus').textContent = 'Error';
++    return;
++  }
++
++  pushHistory('assistant', reply);
++
++  const tipMatch = reply.match(/\[Tip:(.*?)\]/s);
++  const cleanReply = reply.replace(/\[Tip:.*?\]/s, '').trim();
++  addBubble('ai', cleanReply);
++  if (tipMatch) addBubble('ai', '', tipMatch[1].trim());
++  document.getElementById('talkStatus').textContent = fallbackUsed ? 'Ready (Claude)' : 'Ready';
++}
++function handleEnter(e) {
++  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
++}
++function autoResize(el) {
++  el.style.height = 'auto';
++  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
++}
++
++// ===== MIC =====
++function toggleMic() {
++  // Train mode: mic disabled
++  if (typeof trainMode !== 'undefined' && trainMode) {
++    showToast('噬 髮ｻ霆翫Δ繝ｼ繝我ｸｭ縺ｯ繝槭う繧ｯ縺御ｽｿ縺医∪縺帙ｓ');
++    return;
++  }
++  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
++  if (!SR) {
++    showToast('髻ｳ螢ｰ蜈･蜉・ Safari縺ｮ險ｭ螳壹〒險ｱ蜿ｯ縺励※縺上□縺輔＞');
++    return;
++  }
++  if (isRecording) {
++    if (recognition) recognition.stop();
++    return;
++  }
++  recognition = new SR();
++  recognition.lang = 'en-US';
++  recognition.interimResults = false;
++  recognition.continuous = false;
++  recognition.onstart = () => {
++    isRecording = true;
++    document.getElementById('micBtn').classList.add('recording');
++  };
++  recognition.onresult = e => {
++    const transcript = e.results[0][0].transcript;
++    document.getElementById('msgInput').value = transcript;
++    autoResize(document.getElementById('msgInput'));
++  };
++  recognition.onend = () => {
++    isRecording = false;
++    document.getElementById('micBtn').classList.remove('recording');
++    // 隱崎ｭ伜ｮ御ｺ・ｾ後↓閾ｪ蜍暮∽ｿ｡
++    const val = document.getElementById('msgInput').value.trim();
++    if (val) sendMessage();
++  };
++  recognition.start();
++}
++
++// ===== SHADOWING =====
++function initShadowing() {
++  currentShadowLine = 0;
++  isAutoPlaying = false;
++  renderShadowScript();
++  updateAutoPlayBtn();
++  // Auto-start auto play in train mode
++  if (trainMode) {
++    setTimeout(() => startAutoPlay(), 500);
++  }
++}
++
++function renderShadowScript() {
++  const body = document.getElementById('shadowBody');
++  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">Workplace Dialogue</div>' +
++    SHADOW_SCRIPTS.map((line, i) =>
++      `<div class="shadow-line ${i === currentShadowLine ? 'active' : i < currentShadowLine ? 'done' : ''}" onclick="jumpToLine(${i})">
++        ${line.en}
++        <div class="shadow-jp">${line.jp}</div>
++      </div>`
++    ).join('') + '</div>';
++  // Re-apply showJP state
++  if (showJP) {
++    document.querySelectorAll('.shadow-jp').forEach(el => el.style.display = 'block');
++  }
++}
++
++function jumpToLine(i) {
++  stopAutoPlay();
++  currentShadowLine = i;
++  renderShadowScript();
++}
++
++function playCurrentLine() {
++  const line = SHADOW_SCRIPTS[currentShadowLine];
++  if (!line) return;
++  const utt = new SpeechSynthesisUtterance(line.en);
++  utt.lang = 'en-US'; utt.rate = 0.9;
++  window.speechSynthesis.speak(utt);
++}
++
++function toggleJP() {
++  showJP = !showJP;
++  document.querySelectorAll('.shadow-jp').forEach(el => {
++    el.style.display = showJP ? 'block' : '';
++  });
++}
++
++function nextShadowLine() {
++  if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
++    currentShadowLine++;
++    renderShadowScript();
++    playCurrentLine();
++  } else {
++    showToast('脂 繧ｹ繧ｯ繝ｪ繝励ヨ螳御ｺ・ｼ・);
++  }
++}
++
++function shadowRecord() {
++  // Train mode: recording disabled
++  if (trainMode) {
++    showToast('噬 髮ｻ霆翫Δ繝ｼ繝我ｸｭ縺ｯ骭ｲ髻ｳ縺御ｽｿ縺医∪縺帙ｓ');
++    return;
++  }
++  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
++    showToast('髻ｳ螢ｰ蜈･蜉帙ｒ繧ｵ繝昴・繝医＠縺ｦ縺・∪縺帙ｓ');
++    return;
++  }
++  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
++  const r = new SR();
++  r.lang = 'en-US';
++  r.onresult = e => {
++    const said = e.results[0][0].transcript.toLowerCase();
++    const target = SHADOW_SCRIPTS[currentShadowLine].en.toLowerCase();
++    const similarity = said.split(' ').filter(w => target.includes(w)).length / target.split(' ').length;
++    showToast(similarity > 0.6 ? '笨・Great shadowing!' : '竊ｻ Try again');
++  };
++  r.start();
++  showToast('痔 閨ｴ縺・※縺・∪縺・..');
++}
++
++// ===== AUTO PLAY =====
++function toggleAutoPlay() {
++  if (isAutoPlaying) {
++    stopAutoPlay();
++  } else {
++    startAutoPlay();
++  }
++}
++
++function startAutoPlay() {
++  if (isAutoPlaying) return;
++  isAutoPlaying = true;
++  updateAutoPlayBtn();
++  playAndAdvance();
++}
++
++function stopAutoPlay() {
++  isAutoPlaying = false;
++  clearTimeout(autoPlayInterval);
++  window.speechSynthesis.cancel();
++  updateAutoPlayBtn();
++}
++
++function playAndAdvance() {
++  if (!isAutoPlaying) return;
++  const line = SHADOW_SCRIPTS[currentShadowLine];
++  if (!line) { stopAutoPlay(); return; }
++
++  renderShadowScript();
++
++  const utt = new SpeechSynthesisUtterance(line.en);
++  utt.lang = 'en-US';
++  utt.rate = 0.9;
++  utt.onend = () => {
++    if (!isAutoPlaying) return;
++    if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
++      autoPlayInterval = setTimeout(() => {
++        currentShadowLine++;
++        playAndAdvance();
++      }, 1500); // 1.5遘帝俣髫・    } else {
++      isAutoPlaying = false;
++      updateAutoPlayBtn();
++      showToast('脂 Auto Play 螳御ｺ・ｼ・);
++    }
++  };
++  window.speechSynthesis.speak(utt);
++}
++
++function updateAutoPlayBtn() {
++  const btn = document.getElementById('autoPlayBtn');
++  if (!btn) return;
++  if (isAutoPlaying) {
++    btn.textContent = '竢ｹ Stop Auto Play';
++    btn.classList.add('running');
++  } else {
++    btn.textContent = '笆ｶ Auto Play';
++    btn.classList.remove('running');
++  }
++}
++
++// ===== INSTANT =====
++function initInstant() {
++  instantIndex = 0; instantScore = 0;
++  updateInstantScore();
++  // Update hint based on train mode
++  document.getElementById('instantHint').textContent = trainMode ? '噬 繧ｿ繧､繝槭・蠕後↓閾ｪ蜍戊｡ｨ遉ｺ' : '3遘偵〒闍ｱ隱槭↓';
++  loadInstantQ();
++}
++
++function loadInstantQ() {
++  clearInterval(timerInterval);
++  document.getElementById('instantAnswer').classList.remove('show');
++  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
++  document.getElementById('instantJP').textContent = q.jp;
++  document.getElementById('instantCounter').textContent = `Q ${instantIndex + 1} / ${INSTANT_QS.length}`;
++  startTimer();
++}
++
++function startTimer() {
++  timerVal = 3;
++  const progress = document.getElementById('timerProgress');
++  const num = document.getElementById('timerNum');
++  const circumference = 220;
++  progress.style.stroke = 'var(--accent)';
++
++  timerInterval = setInterval(() => {
++    timerVal -= 0.1;
++    const pct = timerVal / 3;
++    progress.style.strokeDashoffset = circumference * (1 - pct);
++    num.textContent = Math.ceil(timerVal);
++    if (pct < 0.3) progress.style.stroke = 'var(--danger)';
++    else if (pct < 0.6) progress.style.stroke = 'var(--accent2)';
++
++    if (timerVal <= 0) {
++      clearInterval(timerInterval);
++      showAnswer();
++    }
++  }, 100);
++}
++
++function showAnswer() {
++  clearInterval(timerInterval);
++  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
++  document.getElementById('answerEN').textContent = q.en;
++  document.getElementById('answerNote').textContent = q.note;
++  document.getElementById('instantAnswer').classList.add('show');
++  // Train mode: skip audio playback
++  if (!trainMode) {
++    const utt = new SpeechSynthesisUtterance(q.en);
++    utt.lang = 'en-US'; utt.rate = 0.85;
++    window.speechSynthesis.speak(utt);
++  }
++}
++
++function markAnswer(correct) {
++  if (!document.getElementById('instantAnswer').classList.contains('show')) {
++    showAnswer(); return;
++  }
++  if (correct) instantScore++;
++  instantIndex++;
++  updateInstantScore();
++  if (instantIndex >= INSTANT_QS.length) {
++    recordTodayStats(instantScore, INSTANT_QS.length);
++    showToast(`脂 螳御ｺ・ｼ・${instantScore}/${INSTANT_QS.length} 豁｣隗｣`);
++    setTimeout(() => { instantIndex = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
++    return;
++  }
++  loadInstantQ();
++}
++
++function updateInstantScore() {
++  document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
++}
++
++// ===== STREAK =====
++const today = new Date().toDateString();
++const lastDay = localStorage.getItem('dei_lastDay');
++let streak = parseInt(localStorage.getItem('dei_streak') || '1');
++if (lastDay !== today) {
++  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
++  if (lastDay === yesterday.toDateString()) streak++;
++  else streak = 1;
++  localStorage.setItem('dei_streak', streak);
++  localStorage.setItem('dei_lastDay', today);
++}
++document.getElementById('streakDays').textContent = streak;
++
++// ===== GAS URL =====
++let gasUrl = localStorage.getItem('dei_gasUrl') || '';
++if (gasUrl) {
++  document.getElementById('gasUrlInput').value = gasUrl;
++  document.getElementById('gasStatus').textContent = '笨・GAS URL險ｭ螳壽ｸ医∩';
++  document.getElementById('gasStatus').className = 'api-status ok';
++}
++function saveGasUrl() {
++  const v = document.getElementById('gasUrlInput').value.trim();
++  if (!v.startsWith('https://')) { showToast('譛牙柑縺ｪURL繧貞・蜉帙＠縺ｦ縺上□縺輔＞'); return; }
++  gasUrl = v;
++  localStorage.setItem('dei_gasUrl', v);
++  document.getElementById('gasStatus').textContent = '笨・GAS URL菫晏ｭ俶ｸ医∩';
++  document.getElementById('gasStatus').className = 'api-status ok';
++  showToast('笨・GAS URL菫晏ｭ倥＠縺ｾ縺励◆');
++}
++
++// ===== VOCAB =====
++function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
++function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
++
++function addVocab(en, jp, note) {
++  const list = loadVocab();
++  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
++  saveVocabList(list);
++  showToast('答 蜊倩ｪ槫ｸｳ縺ｫ菫晏ｭ倥＠縺ｾ縺励◆');
++}
++
++function addVocabManual() {
++  const input = document.getElementById('vocabInput');
++  const val = input.value.trim();
++  if (!val) return;
++  addVocab(val, '', '謇句虚霑ｽ蜉');
++  input.value = '';
++  renderVocab();
++}
++
++function renderVocab() {
++  const list = loadVocab();
++  const body = document.getElementById('vocabBody');
++  document.getElementById('vocabCount').textContent = list.length + ' words';
++  if (list.length === 0) {
++    body.innerHTML = '<div class="vocab-empty">縺ｾ縺蜊倩ｪ槭′縺ゅｊ縺ｾ縺帙ｓ縲・br>Free Talk縺ｧ陦ｨ迴ｾ繧剃ｿ晏ｭ倥☆繧九°<br>荳九°繧画焔蜍戊ｿｽ蜉縺ｧ縺阪∪縺吶・/div>';
++    return;
++  }
++  body.innerHTML = list.map((v, i) => `
++    <div class="vocab-card">
++      <div class="vocab-en">${v.en}</div>
++      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
++      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
++      <div class="vocab-meta">
++        <div class="vocab-date">${v.date}</div>
++        <button class="vocab-del" onclick="deleteVocab(${i})">笨・/button>
++      </div>
++    </div>`).join('');
++}
++
++function deleteVocab(i) {
++  const list = loadVocab();
++  list.splice(i, 1);
++  saveVocabList(list);
++  renderVocab();
++}
++
++// ===== STATS =====
++function getStatsHistory() { return JSON.parse(localStorage.getItem('dei_statsHistory') || '[]'); }
++function recordTodayStats(score, total) {
++  const hist = getStatsHistory();
++  const d = new Date().toLocaleDateString('ja-JP');
++  const idx = hist.findIndex(h => h.date === d);
++  if (idx >= 0) { hist[idx].score += score; hist[idx].total += total; }
++  else hist.push({ date: d, score, total });
++  localStorage.setItem('dei_statsHistory', JSON.stringify(hist.slice(-30)));
++}
++
++function renderStats() {
++  document.getElementById('statStreak').textContent = streak;
++  const hist = getStatsHistory();
++  const allTotal = hist.reduce((s,h)=>s+h.total,0);
++  const allScore = hist.reduce((s,h)=>s+h.score,0);
++  document.getElementById('statTotal').textContent = allTotal;
++  document.getElementById('statRate').textContent = allTotal ? Math.round(allScore/allTotal*100)+'%' : '-';
++
++  const days = [];
++  for (let i=6; i>=0; i--) {
++    const d = new Date(); d.setDate(d.getDate()-i);
++    days.push({ label: ['譌･','譛・,'轣ｫ','豌ｴ','譛ｨ','驥・,'蝨・][d.getDay()], date: d.toLocaleDateString('ja-JP') });
++  }
++  const maxScore = Math.max(...days.map(d => { const h=hist.find(h=>h.date===d.date); return h?h.score:0; }), 1);
++  document.getElementById('barChart').innerHTML = days.map((d,i) => {
++    const h = hist.find(h=>h.date===d.date);
++    const score = h ? h.score : 0;
++    const pct = Math.round(score/maxScore*100);
++    const isToday = i===6;
++    return `<div class="bar-col">
++      <div class="bar${isToday?' today':''}" style="height:${pct}%"></div>
++      <div class="bar-day">${d.label}</div>
++    </div>`;
++  }).join('');
++
++  const vocabList = loadVocab();
++  const vocabByDay = days.map(d => vocabList.filter(v => v.date === d.date).length);
++  const maxV = Math.max(...vocabByDay, 1);
++  document.getElementById('vocabChart').innerHTML = days.map((d,i) => {
++    const pct = Math.round(vocabByDay[i]/maxV*100);
++    const isToday = i===6;
++    return `<div class="bar-col">
++      <div class="bar${isToday?' today':''}" style="height:${pct}%;background:${isToday?'#c882ff':'rgba(200,130,255,0.3)'}"></div>
++      <div class="bar-day">${d.label}</div>
++    </div>`;
++  }).join('');
++}
++
++// ===== GAS SYNC =====
++async function syncToSheets() {
++  if (!gasUrl) { showToast('GAS URL繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞'); return; }
++  document.getElementById('syncLog').textContent = '蜷梧悄荳ｭ...';
++  const hist = getStatsHistory();
++  const vocab = loadVocab();
++  const payload = {
++    action: 'english_log',
++    streak,
++    history: hist,
++    vocab: vocab.map(v=>({en:v.en,jp:v.jp,note:v.note,date:v.date})),
++    timestamp: new Date().toISOString()
++  };
++  try {
++    await fetch(gasUrl, {
++      method:'POST',
++      mode:'no-cors',
++      headers:{'Content-Type':'application/json'},
++      body: JSON.stringify(payload)
++    });
++    document.getElementById('syncLog').textContent = '笨・蜷梧悄螳御ｺ・' + new Date().toLocaleTimeString('ja-JP');
++    showToast('笘・Sheets縺ｫ蜷梧悄縺励∪縺励◆');
++  } catch(e) {
++    document.getElementById('syncLog').textContent = '繧ｨ繝ｩ繝ｼ: ' + e.message;
++  }
++}
++
++// ===== iCLOUD / quick-ref =====
++function saveToiCloud() {
++  const hist = getStatsHistory();
++  const vocab = loadVocab();
++  const payload = {
++    source: 'speak-native', exportedAt: Date.now(),
++    streak, history: hist, vocab,
++    timestamp: new Date().toISOString()
++  };
++  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
++  const filename = `speak-native-${new Date().toISOString().slice(0,10)}.json`;
++  const url = URL.createObjectURL(blob);
++  const a = document.createElement('a'); a.href = url; a.download = filename;
++  document.body.appendChild(a); a.click(); document.body.removeChild(a);
++  setTimeout(() => URL.revokeObjectURL(url), 5000);
++  localStorage.setItem('sn_icloud_last', JSON.stringify({ savedAt: Date.now(), filename }));
++  showToast('?? iCloud Drive に保存しました');
++  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
++  if (isIOS) setTimeout(() => alert(`"${filename}" をダウンロードしました。\nファイルアプリ → iCloud Drive に移動してください。`), 500);
++}
++
++function sendToQuickRef() {
++  const vocab = loadVocab().slice(0, 5);
++  const payload = {
++    source: 'speak-native', destination: 'quick-ref',
++    title: `英語メモ ${new Date().toLocaleDateString('ja-JP')}`,
++    tags: ['英語', 'speak-native'],
++    body: vocab.map(v => `${v.en} ? ${v.jp}`).join('\n'),
++    fields: vocab.map(v => ({ key: v.en, value: v.jp })),
++    date: new Date().toISOString()
++  };
++  try {
++    localStorage.setItem('is_transfer', JSON.stringify(payload));
++    showToast('?? quick-ref に送信しました');
++  } catch(e) { showToast('送信失敗: ' + e.message); }
++}
++
++// ===== TOAST =====
++function showToast(msg) {
++  const t = document.getElementById('toast');
++  t.textContent = msg;
++  t.classList.add('show');
++  setTimeout(() => t.classList.remove('show'), 2500);
++}
++
++// ===== INIT: Apply saved train mode on load =====
++applyTrainMode();
++</script>
++</body>
+ </html>
+\ No newline at end of file
