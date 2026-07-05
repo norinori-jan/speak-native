@@ -1093,7 +1093,7 @@
   <button style="flex:1;padding:12px;background:rgba(126,184,255,0.1);border:1px solid rgba(126,184,255,0.25);border-radius:14px;color:var(--accent3);font-size:13px;font-weight:500;cursor:pointer;" onclick="sendToQuickRef()">📒 quick-ref</button>
 </div>
 <button class="gas-sync-btn" onclick="syncToSheets()">📊 Google Sheetsに同期</button>
-    <div class="sync-log" id="syncLog">GAS URLを設定すると同期できます/div>
+    <div class="sync-log" id="syncLog">GAS URLを設定すると同期できます</div>
   </div>
 </div>
 
@@ -1141,7 +1141,7 @@
         <input class="api-input" type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/..." style="font-size:10px;" />
         <button class="api-save-btn" style="background:var(--accent3);color:var(--bg);" onclick="saveGasUrl()">Save</button>
       </div>
-      <div class="api-status" id="gasStatus">GAS URL繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
+      <div class="api-status" id="gasStatus">GAS URL未設定</div>
     </div>
 
     <!-- Info -->
@@ -1788,7 +1788,7 @@ document.getElementById('streakDays').textContent = streak;
 let gasUrl = localStorage.getItem('dei_gasUrl') || '';
 if (gasUrl) {
   document.getElementById('gasUrlInput').value = gasUrl;
-  document.getElementById('gasStatus').textContent = '笨・GAS URL險ｭ螳壽ｸ医∩';
+  document.getElementById('gasStatus').textContent = '✅ GAS URL設定済み';
   document.getElementById('gasStatus').className = 'api-status ok';
 }
 function saveGasUrl() {
@@ -1796,9 +1796,9 @@ function saveGasUrl() {
   if (!v.startsWith('https://')) { showToast('譛牙柑縺ｪURL繧貞・蜉帙＠縺ｦ縺上□縺輔＞'); return; }
   gasUrl = v;
   localStorage.setItem('dei_gasUrl', v);
-  document.getElementById('gasStatus').textContent = '笨・GAS URL菫晏ｭ俶ｸ医∩';
+  document.getElementById('gasStatus').textContent = '✅ GAS URL保存済み';
   document.getElementById('gasStatus').className = 'api-status ok';
-  showToast('笨・GAS URL菫晏ｭ倥＠縺ｾ縺励◆');
+  showToast('✅ GAS URLを保存しました');
 }
 
 // ===== VOCAB =====
@@ -1899,7 +1899,7 @@ function renderStats() {
 
 // ===== GAS SYNC =====
 async function syncToSheets() {
-  if (!gasUrl) { showToast('GAS URL繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞'); return; }
+  if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
   document.getElementById('syncLog').textContent = '同期中...';
   const hist = getStatsHistory();
   const vocab = loadVocab();
@@ -1974,3 +1974,4 @@ applyTrainMode();
 </script>
 </body>
 </html>
+
