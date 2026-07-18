@@ -49,11 +49,9 @@
     flex-direction: column;
   }
 
-  /* SCREEN SYSTEM */
   .screen { display: none; flex-direction: column; height: 100vh; height: -webkit-fill-available; }
   .screen.active { display: flex; }
 
-  /* ===== HOME SCREEN ===== */
   #home {
     background: var(--bg);
     padding: 0;
@@ -106,7 +104,6 @@
     max-width: 260px;
   }
 
-  /* API Key input */
   .api-section {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -153,7 +150,6 @@
   }
   .api-status.ok { color: var(--accent); }
 
-  /* API Provider Tabs */
   .provider-tab {
     flex: 1;
     padding: 10px 12px;
@@ -175,7 +171,6 @@
     transition: opacity 0.2s;
   }
 
-  /* Mode cards */
   .modes-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -184,7 +179,7 @@
     text-transform: uppercase;
     margin-bottom: 14px;
   }
-  .modes-grid { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .modes-grid { display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
   .mode-card {
     background: var(--surface);
@@ -285,7 +280,6 @@
   .nav-badge.green { background: rgba(92,239,176,0.12); color: var(--accent); }
   .nav-badge.orange { background: rgba(240,160,90,0.12); color: var(--accent2); }
 
-  /* Topic selector */
   .topic-bar {
     display: flex;
     gap: 8px;
@@ -313,7 +307,6 @@
     color: var(--accent);
   }
 
-  /* Chat area */
   .chat-area {
     flex: 1;
     overflow-y: auto;
@@ -365,7 +358,6 @@
     font-family: 'DM Mono', monospace;
   }
 
-  /* Feedback bubble */
   .feedback-bubble {
     background: rgba(240,160,90,0.08);
     border: 1px solid rgba(240,160,90,0.25);
@@ -385,7 +377,6 @@
   }
   .feedback-text { font-size: 13px; color: var(--text); line-height: 1.5; }
 
-  /* Typing indicator */
   .typing-indicator {
     display: flex;
     gap: 5px;
@@ -412,7 +403,6 @@
     30% { transform: translateY(-5px); }
   }
 
-  /* Input area */
   .input-area {
     padding: 12px 20px;
     padding-bottom: calc(12px + var(--safe-bottom));
@@ -674,6 +664,8 @@
   .mode-card.stats::before { background: radial-gradient(circle at left, rgba(200,130,255,0.05), transparent 70%); }
   .vocab .mode-icon { background: rgba(255,200,80,0.12); }
   .stats .mode-icon { background: rgba(200,130,255,0.12); }
+  .mode-card.interpreter::before { background: radial-gradient(circle at left, rgba(126,184,255,0.05), transparent 70%); }
+  .interpreter .mode-icon { background: rgba(126,184,255,0.12); }
 
   /* ===== VOCAB SCREEN ===== */
   #vocab { background: var(--bg); }
@@ -714,7 +706,6 @@
     flex:1; min-width:80px; background:var(--surface); border:1px solid var(--border); border-radius:16px;
     padding:16px; text-align:center;
   }
-  /* Home screen settings gear */
   .home-top-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
   .settings-gear {
     width:36px; height:36px; border-radius:10px;
@@ -828,6 +819,14 @@
         <div class="mode-info">
           <div class="mode-name">瞬間英作文</div>
           <div class="mode-desc">日本語→英語を3秒で。翻訳癖を断つ</div>
+        </div>
+        <div class="mode-arrow">›</div>
+      </div>
+      <div class="mode-card interpreter" onclick="showScreen('interpreter')">
+        <div class="mode-icon">🌐</div>
+        <div class="mode-info">
+          <div class="mode-name">通訳</div>
+          <div class="mode-desc">会話をリアルタイムで日⇄英に通訳</div>
         </div>
         <div class="mode-arrow">›</div>
       </div>
@@ -980,6 +979,35 @@
   </div>
 </div>
 
+<div class="screen" id="interpreter">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="showScreen('home')">‹</button>
+    <div class="nav-title">通訳</div>
+    <div class="nav-badge green" id="interpreterStatus">Ready</div>
+  </div>
+  <div class="topic-bar" id="interpModeBar">
+    <div class="topic-chip active" data-interp-mode="bidirectional" onclick="setInterpreterMode('bidirectional')">双方向</div>
+    <div class="topic-chip" data-interp-mode="oneway" onclick="setInterpreterMode('oneway')">一方向</div>
+    <div class="topic-chip" data-interp-mode="text" onclick="setInterpreterMode('text')">電車モード(文字のみ)</div>
+  </div>
+  <div class="topic-bar" id="interpDirectionRow" style="display:none;">
+    <div class="topic-chip active" data-direction="ja-en" onclick="setInterpDirection('ja-en')">日→英</div>
+    <div class="topic-chip" data-direction="en-ja" onclick="setInterpDirection('en-ja')">英→日</div>
+  </div>
+  <div class="chat-area" id="interpArea"></div>
+  <div class="input-area">
+    <div class="input-row" id="interpSpeakerRow" style="margin-bottom:8px;">
+      <button class="instant-btn primary" id="speakerA" onclick="setSpeaker('ja')" style="flex:1;padding:10px;font-size:13px;">🇯🇵 話者A (日本語)</button>
+      <button class="instant-btn" id="speakerB" onclick="setSpeaker('en')" style="flex:1;padding:10px;font-size:13px;">🇺🇸 話者B (English)</button>
+    </div>
+    <div class="input-row">
+      <textarea class="text-input" id="interpInput" placeholder="Type or speak..." rows="1"
+        onInput="autoResize(this)" onKeydown="handleInterpEnter(event)"></textarea>
+      <button class="mic-btn" id="interpMicBtn" onclick="toggleInterpMic()">🎤</button>
+      <button class="send-btn" id="interpSendBtn" onclick="sendInterpret()">↑</button>
+    </div>
+  </div>
+</div>
 
 <div class="screen" id="vocab">
   <div class="nav-bar">
@@ -1049,6 +1077,17 @@ let instantIndex = 0;
 let instantScore = 0;
 let timerInterval = null;
 let timerVal = 3;
+
+// ===== TOAST (バグ修正: 未定義だった showToast を実装) =====
+let toastTimer = null;
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2500);
+}
 
 // ===== TOPICS =====
 const TOPIC_PROMPTS = {
@@ -1194,9 +1233,9 @@ function initChat() {
   addBubble('ai', `Hi! Let's talk about **${currentTopic.replace('_',' ')}** today. What's been going on for you lately? 😊`);
 }
 
-document.querySelectorAll('.topic-chip').forEach(chip => {
+document.querySelectorAll('.topic-chip[data-topic]').forEach(chip => {
   chip.addEventListener('click', () => {
-    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.topic-chip[data-topic]').forEach(c => c.classList.remove('active'));
     chip.classList.add('active');
     currentTopic = chip.dataset.topic;
     STATE.history = [];
@@ -1214,7 +1253,7 @@ function addBubble(role, text, feedback) {
     const fb = document.createElement('div');
     fb.className = 'feedback-bubble';
     const cleanFb = feedback.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    fb.innerHTML = `<div class="feedback-label">💡 Tip <button onclick="addVocab('${feedback.replace(/'/g,"\'")}','','Free Talk Tip');renderVocab();" style="float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;">+ 保存</button></div><div class="feedback-text">${cleanFb}</div>`;
+    fb.innerHTML = `<div class="feedback-label">💡 Tip <button onclick="addVocab('${feedback.replace(/'/g,"\\'")}','','Free Talk Tip');renderVocab();" style="float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;">+ 保存</button></div><div class="feedback-text">${cleanFb}</div>`;
     area.appendChild(fb);
   } else {
     const bubble = document.createElement('div');
@@ -1226,7 +1265,6 @@ function addBubble(role, text, feedback) {
   area.scrollTop = area.scrollHeight;
 }
 
-// 122行目のSyntaxError（文字列リテラルの不整合）対策済み
 function showTyping() {
   const area = document.getElementById('chatArea');
   const wrap = document.createElement('div');
@@ -1241,7 +1279,6 @@ function hideTyping() {
   if (el) el.remove();
 }
 
-// (以下、すべてのロジック、グラフ同期、瞬間英作文データも完全維持)
 function pushHistory(role, content) {
   STATE.history.push({ role, content });
   if (STATE.history.length > 4) {
@@ -1267,7 +1304,7 @@ async function sendToGemini() {
   if (!STATE.geminiKey) {
     return { error: 'Gemini key not set' };
   }
-  
+
   const systemPrompt = `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English for the workplace and daily life.
 
 Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}
@@ -1295,9 +1332,9 @@ Rules:
       'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
       {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
-          'x-goog-api-key': STATE.geminiKey 
+          'x-goog-api-key': STATE.geminiKey
         },
         body: JSON.stringify(requestBody)
       }
@@ -1433,7 +1470,6 @@ async function sendMessage() {
 
   pushHistory('user', text);
 
-  // 選択中のプロバイダーを最優先に、鍵が設定されている他のプロバイダーへ順にフォールバック
   const order = [STATE.aiProvider, ...Object.keys(PROVIDER_SENDERS).filter(p => p !== STATE.aiProvider)];
   let result = null;
   let usedProvider = null;
@@ -1640,6 +1676,233 @@ function updateInstantScore() {
   document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
 }
 
+// ===== 通訳 (Interpreter) =====
+// A: 双方向(bidirectional) / B: 一方向(oneway) / C: 電車モード(text, 声を出さない)
+let interpMode = 'bidirectional';
+let interpDirection = 'ja-en';   // oneway用: 'ja-en' | 'en-ja'
+let interpSpeaker = 'ja';        // bidirectional用: 'ja' | 'en'
+let interpRecognition = null;
+let interpRecording = false;
+
+function setInterpreterMode(mode) {
+  interpMode = mode;
+  document.querySelectorAll('#interpModeBar .topic-chip').forEach(c =>
+    c.classList.toggle('active', c.dataset.interpMode === mode));
+  document.getElementById('interpDirectionRow').style.display = mode === 'oneway' ? 'flex' : 'none';
+  document.getElementById('interpSpeakerRow').style.display = mode === 'bidirectional' ? 'flex' : 'none';
+  document.getElementById('interpMicBtn').style.display = mode === 'text' ? 'none' : 'flex';
+  document.getElementById('interpreterStatus').textContent =
+    mode === 'text' ? 'Text only' : 'Ready';
+}
+
+function setInterpDirection(dir) {
+  interpDirection = dir;
+  document.querySelectorAll('#interpDirectionRow .topic-chip').forEach(c =>
+    c.classList.toggle('active', c.dataset.direction === dir));
+}
+
+function setSpeaker(lang) {
+  interpSpeaker = lang;
+  document.getElementById('speakerA').classList.toggle('primary', lang === 'ja');
+  document.getElementById('speakerB').classList.toggle('primary', lang === 'en');
+}
+
+function addInterpBubble(role, text) {
+  const area = document.getElementById('interpArea');
+  const wrap = document.createElement('div');
+  wrap.className = `bubble-wrap ${role}`;
+  const bubble = document.createElement('div');
+  bubble.className = `bubble ${role}`;
+  bubble.textContent = text;
+  wrap.appendChild(bubble);
+  area.appendChild(wrap);
+  area.scrollTop = area.scrollHeight;
+}
+function showInterpTyping() {
+  const area = document.getElementById('interpArea');
+  const wrap = document.createElement('div');
+  wrap.id = 'interpTypingWrap';
+  wrap.className = 'bubble-wrap ai';
+  wrap.innerHTML = `<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
+  area.appendChild(wrap);
+  area.scrollTop = area.scrollHeight;
+}
+function hideInterpTyping() {
+  const el = document.getElementById('interpTypingWrap');
+  if (el) el.remove();
+}
+
+// 会話用(sendToXxx)とは別に、翻訳など単発の指示に使うワンショット呼び出し。
+// STATE.history を汚さずに済むので、通訳モードの裏でFree Talkの会話履歴に影響しない。
+async function sendOnceToGemini(prompt) {
+  if (!STATE.geminiKey) return { error: 'Gemini key not set' };
+  try {
+    const response = await fetch(
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': STATE.geminiKey },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { maxOutputTokens: 300, temperature: 0.2 }
+        })
+      }
+    );
+    const data = await response.json();
+    if (data.error) return { error: data.error.message };
+    return { success: true, reply: data.candidates?.[0]?.content?.parts?.[0]?.text || '', provider: 'gemini' };
+  } catch (error) { return { error: error.message }; }
+}
+
+async function sendOnceToClaude(prompt) {
+  if (!STATE.claudeKey) return { error: 'Claude key not set' };
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-API-Key': STATE.claudeKey,
+        'Anthropic-Version': '2023-06-01'
+      },
+      body: JSON.stringify({
+        model: 'claude-3-haiku-20240307',
+        max_tokens: 300,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await response.json();
+    if (data.error) return { error: data.error.message };
+    return { success: true, reply: data.content?.[0]?.text || '', provider: 'claude' };
+  } catch (error) { return { error: error.message }; }
+}
+
+async function sendOnceToOpenAI(prompt) {
+  if (!STATE.openaiKey) return { error: 'OpenAI key not set' };
+  try {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${STATE.openaiKey}` },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        max_tokens: 300,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await response.json();
+    if (data.error) return { error: data.error.message };
+    return { success: true, reply: data.choices?.[0]?.message?.content || '', provider: 'openai' };
+  } catch (error) { return { error: error.message }; }
+}
+
+const ONESHOT_SENDERS = {
+  gemini: { send: sendOnceToGemini, hasKey: () => !!STATE.geminiKey, label: 'Gemini' },
+  claude: { send: sendOnceToClaude, hasKey: () => !!STATE.claudeKey, label: 'Claude' },
+  openai: { send: sendOnceToOpenAI, hasKey: () => !!STATE.openaiKey, label: 'OpenAI' }
+};
+
+async function callAIOnce(prompt) {
+  if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
+    return { error: '設定画面でAPIキーを入力してください' };
+  }
+  const order = [STATE.aiProvider, ...Object.keys(ONESHOT_SENDERS).filter(p => p !== STATE.aiProvider)];
+  let result = null;
+  for (const key of order) {
+    const provider = ONESHOT_SENDERS[key];
+    if (!provider.hasKey()) continue;
+    result = await provider.send(prompt);
+    if (!result.error) break;
+  }
+  return result || { error: '利用可能なプロバイダーがありません' };
+}
+
+async function translateText(text, targetLabel) {
+  const prompt = `Translate the following text into ${targetLabel}. Output ONLY the translation, with no quotes, labels, or explanation.\n\n${text}`;
+  const result = await callAIOnce(prompt);
+  if (result.error) throw new Error(result.error);
+  return (result.reply || '').trim();
+}
+
+async function sendInterpret() {
+  const input = document.getElementById('interpInput');
+  const text = input.value.trim();
+  if (!text) return;
+  if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
+    showToast('❌ 設定画面でAPIキーを入力してください');
+    return;
+  }
+  input.value = '';
+  input.style.height = 'auto';
+
+  let targetLabel, targetVoiceLang;
+  if (interpMode === 'oneway') {
+    if (interpDirection === 'ja-en') { targetLabel = 'English'; targetVoiceLang = 'en-US'; }
+    else { targetLabel = 'Japanese'; targetVoiceLang = 'ja-JP'; }
+  } else if (interpMode === 'bidirectional') {
+    if (interpSpeaker === 'ja') { targetLabel = 'English'; targetVoiceLang = 'en-US'; }
+    else { targetLabel = 'Japanese'; targetVoiceLang = 'ja-JP'; }
+  } else {
+    // 電車モード: 日本語が含まれていれば英訳、それ以外は和訳と推定
+    const hasJapanese = /[\u3040-\u30ff\u3400-\u9fff]/.test(text);
+    targetLabel = hasJapanese ? 'English' : 'Japanese';
+    targetVoiceLang = null; // 音声は出さない
+  }
+
+  addInterpBubble('user', text);
+  showInterpTyping();
+  document.getElementById('interpreterStatus').textContent = 'Translating...';
+
+  try {
+    const translated = await translateText(text, targetLabel);
+    hideInterpTyping();
+    addInterpBubble('ai', translated);
+    document.getElementById('interpreterStatus').textContent = interpMode === 'text' ? 'Text only' : 'Ready';
+    if (interpMode !== 'text' && targetVoiceLang) {
+      const utt = new SpeechSynthesisUtterance(translated);
+      utt.lang = targetVoiceLang;
+      window.speechSynthesis.speak(utt);
+    }
+  } catch (e) {
+    hideInterpTyping();
+    addInterpBubble('ai', `❌ Translation Error: ${e.message}`);
+    document.getElementById('interpreterStatus').textContent = 'Error';
+  }
+}
+
+function handleInterpEnter(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendInterpret(); }
+}
+
+function toggleInterpMic() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    showToast('音声入力はSafariでサポートされています');
+    return;
+  }
+  if (interpRecording) {
+    interpRecognition?.stop();
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  interpRecognition = new SR();
+  let lang = 'ja-JP';
+  if (interpMode === 'oneway') lang = interpDirection === 'ja-en' ? 'ja-JP' : 'en-US';
+  else if (interpMode === 'bidirectional') lang = interpSpeaker === 'ja' ? 'ja-JP' : 'en-US';
+  interpRecognition.lang = lang;
+  interpRecognition.interimResults = false;
+  interpRecognition.onstart = () => {
+    interpRecording = true;
+    document.getElementById('interpMicBtn').classList.add('recording');
+  };
+  interpRecognition.onresult = e => {
+    document.getElementById('interpInput').value = e.results[0][0].transcript;
+    autoResize(document.getElementById('interpInput'));
+  };
+  interpRecognition.onend = () => {
+    interpRecording = false;
+    document.getElementById('interpMicBtn').classList.remove('recording');
+  };
+  interpRecognition.start();
+}
+
 // ===== STREAK =====
 const today = new Date().toDateString();
 const lastDay = localStorage.getItem('dei_lastDay');
@@ -1652,7 +1915,6 @@ if (lastDay !== today) {
   localStorage.setItem('dei_lastDay', today);
 }
 renderHomeStats();
-
 
 // ===== GAS URL =====
 let gasUrl = localStorage.getItem('dei_gasUrl') || '';
@@ -1776,15 +2038,16 @@ function renderStats() {
 }
 
 // ===== GAS SYNC =====
+// バグ修正: 以前はここでURLがハードコードされ、設定画面で保存したgasUrlが
+// 無視されて開発者個人のエンドポイントに送信され続けていた。
+// 保存済みのgasUrl(localStorage: dei_gasUrl)を使うように修正。
 async function syncToSheets() {
-  const gasUrl = 'https://script.google.com/macros/s/AKfycbwPBgtO_niqc2VzywPZ1nKgAfuMhf8vzPKkrSvEFZlPBlLDPNA7yAJfjFwNsDsRhp_2/exec';
-  
   if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
   document.getElementById('syncLog').textContent = '同期中...';
-  
+
   const hist = getStatsHistory();
   const vocab = loadVocab();
-  
+
   const payload = {
     action: 'english_log',
     streak,
@@ -1793,7 +2056,7 @@ async function syncToSheets() {
     timestamp: new Date().toISOString(),
     provider: STATE.aiProvider
   };
-  
+
   try {
     await fetch(gasUrl, {
       method: 'POST',
@@ -1801,7 +2064,7 @@ async function syncToSheets() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    
+
     const now = new Date().toLocaleTimeString('ja-JP');
     document.getElementById('syncLog').textContent = `✓ 同期完了 (${now})`;
     showToast('☁ Sheetsに同期しました');
@@ -1812,4 +2075,5 @@ async function syncToSheets() {
   }
 }
 </script>
+</body>
 </html>
