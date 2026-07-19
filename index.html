@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -9,15 +10,57 @@
 <meta name="theme-color" content="#0e0f11">
 <meta name="description" content="日本語を考えずに英語が出てくるようになるアプリ。Claude API + Gemini Flashで高速英語会話練習">
 <title>Daily English Immersion</title>
+
 <link rel="manifest" href="./pwa/manifest.json">
 <link rel="apple-touch-icon" href="./assets/images/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
 <script>
+  // --- PWA Service Worker ---
   if ('serviceWorker' in navigator) {
-    // サービスワーカー：ドット始まりに修正
-    navigator.serviceWorker.register('./pwa/service-worker.js').catch(err => console.log('SW registration failed:', err));
+    // サービスワーカー：ドット始まりに修正（あなたのコードを統合）
+    navigator.serviceWorker.register('./pwa/service-worker.js')
+      .catch(err => console.log('SW registration failed:', err));
+  }
+
+  // --- 文字化け防止：NFC 正規化 ---
+  function normalizeText(text) {
+    try {
+      return text.normalize("NFC");
+    } catch (e) {
+      return text; // normalize 非対応ブラウザ対策
+    }
+  }
+
+  // --- quick-ref 読み込み ---
+  async function loadQuickRef() {
+    const url = localStorage.getItem("gasUrl");
+    if (!url) return alert("GAS URL が設定されていません");
+
+    const res = await fetch(url + "?mode=quick-ref");
+    const data = await res.json();
+
+    const safe = normalizeText(data.text || "");
+    document.querySelector("#quickRefArea").value = safe;
+  }
+
+  // --- quick-ref 保存 ---
+  async function saveQuickRef() {
+    const url = localStorage.getItem("gasUrl");
+    if (!url) return alert("GAS URL が設定されていません");
+
+    const text = document.querySelector("#quickRefArea").value;
+    const safe = normalizeText(text);
+
+    await fetch(url, {
+      method: "POST",
+      body: JSON.stringify({ mode: "quick-ref", text: safe })
+    });
+
+    alert("quick-ref を保存しました");
   }
 </script>
+
 <style>
   :root {
     --bg: #0e0f11;
