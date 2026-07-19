@@ -42,6 +42,16 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+// アプリシェル本体(HTML)かどうかを判定するヘルパー。
+// ここがキャッシュ優先だと、デプロイし直してもCACHE_VERSIONを手動で
+// 上げるまで永遠に古い版が配信され続けてしまう(実際に起きた不具合)。
+function isAppShellRequest(request, url) {
+  if (request.mode === 'navigate') return true;
+  if (url.pathname.endsWith('/index.html')) return true;
+  if (url.pathname === '/' || url.pathname.endsWith('/')) return true;
+  return false;
+}
+
 // Fetch event: Network-first strategy with cache fallback
 self.addEventListener('fetch', (event) => {
   const { request } = event;
@@ -75,7 +85,29 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache-first strategy for app shell (HTML, CSS, JS)
+  // アプリシェル(index.html)は常にネットワークを優先し、
+  // 取得できた最新版をキャッシュに上書きする。
+  // オフライン時のみキャッシュにフォールバックする。
+  if (isAppShellRequest(request, url)) {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          if (response.ok) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_VERSION).then(cache => cache.put(request, responseToCache));
+          }
+          return response;
+        })
+        .catch(() => {
+          console.log('[Service Worker] Network failed for app shell, falling back to cache:', request.url);
+          return caches.match(request)
+            .then(response => response || new Response('Offline', { status: 503 }));
+        })
+    );
+    return;
+  }
+
+  // Cache-first strategy for other static assets (CSS, JS, fonts, images)
   event.respondWith(
     caches.match(request)
       .then(response => {
