@@ -980,43 +980,25 @@ Speak native 暗号版
   </div>
   <div class="vocab-body">
     <div class="api-section">
-      <div class="api-label">AI Provider & Keys</div>
+      <div class="api-label">AI Provider</div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
         <button class="provider-tab active" data-provider="gemini" onclick="switchProvider('gemini')">Gemini</button>
         <button class="provider-tab" data-provider="claude" onclick="switchProvider('claude')">Claude</button>
         <button class="provider-tab" data-provider="openai" onclick="switchProvider('openai')">OpenAI</button>
       </div>
-
-      <div id="geminiTab" class="provider-content">
-        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">🚀 無料枠で利用可能</div>
-        <div class="api-input-row">
-          <input class="api-input" type="password" id="geminiKeyInput" placeholder="Gemini API key" />
-          <button class="api-save-btn" onclick="saveGeminiKey()">Save</button>
-        </div>
-        <div class="api-status" id="geminiStatus">Gemini キーを入力してください</div>
-      </div>
-
-      <div id="claudeTab" class="provider-content" style="display: none;">
-        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Free Talkの会話生成に使用します</div>
-        <div class="api-input-row">
-          <input class="api-input" type="password" id="claudeKeyInput" placeholder="sk-ant-..." />
-          <button class="api-save-btn" style="background: var(--accent3);" onclick="saveClaudeKey()">Save</button>
-        </div>
-        <div class="api-status" id="claudeStatus">Claude キーを入力してください</div>
-      </div>
-
-      <div id="openaiTab" class="provider-content" style="display: none;">
-        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">GPTモデルで会話生成します</div>
-        <div class="api-input-row">
-          <input class="api-input" type="password" id="openaiKeyInput" placeholder="sk-proj-..." />
-          <button class="api-save-btn" style="background:#c882ff;" onclick="saveOpenaiKey()">Save</button>
-        </div>
-        <div class="api-status" id="openaiStatus">OpenAI キーを入力してください</div>
-      </div>
-
-      <div style="margin-top: 12px; padding: 8px; background: rgba(92,239,176,0.05); border: 1px solid rgba(92,239,176,0.15); border-radius: 8px;">
+      <div style="padding: 8px; background: rgba(92,239,176,0.05); border: 1px solid rgba(92,239,176,0.15); border-radius: 8px;">
         <div style="font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace;">✓ 現在使用中: <span id="currentProvider">Gemini</span></div>
       </div>
+    </div>
+
+    <div class="api-section">
+      <div class="api-label" style="color:var(--accent3)">合言葉 (App Token)</div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Workerに設定した APP_TOKEN を入力します。この端末に暗号化して保存されます</div>
+      <div class="api-input-row">
+        <input class="api-input" type="password" id="tokenInput" placeholder="APP_TOKEN" />
+        <button class="api-save-btn" style="background: var(--accent3);" onclick="saveAppToken()">Save</button>
+      </div>
+      <div class="api-status" id="tokenStatus">合言葉を入力してください</div>
     </div>
 
     <div class="api-section">
@@ -1220,9 +1202,7 @@ Speak native 暗号版
 // ===== STATE (Gemini / Claude / OpenAI) =====
 let STATE = {
   aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
-  geminiKey: '',   // 起動時に暗号化ストア(KeyVault)から復号して入る
-  claudeKey: '',
-  openaiKey: '',
+  appToken: '',   // 起動時に暗号化ストア(KeyVault)から復号して入る
   history: []
 };
 
@@ -1432,9 +1412,6 @@ function switchProvider(provider) {
   document.querySelectorAll('.provider-tab').forEach(t => t.classList.remove('active'));
   document.querySelector(`[data-provider="${provider}"]`).classList.add('active');
 
-  document.querySelectorAll('.provider-content').forEach(c => c.style.display = 'none');
-  document.getElementById(provider + 'Tab').style.display = 'block';
-
   updateCurrentProvider();
 }
 
@@ -1447,7 +1424,7 @@ function updateCurrentProvider() {
 function updateSettingsGear() {
   const gear = document.getElementById('settingsGear');
   if (!gear) return;
-  gear.classList.toggle('needs-key', !STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey);
+  gear.classList.toggle('needs-key', !STATE.appToken);
 }
 
 // ===== CLOUDFLARE WORKER (AIプロキシ) =====
@@ -1457,6 +1434,11 @@ function proxyBase() {
   return (localStorage.getItem('dei_proxyBase') || DEFAULT_PROXY_BASE).replace(/\/+$/, '');
 }
 function proxyUrl(path) { return proxyBase() + '/' + path; }
+function workerHeaders() {
+  const h = { "Content-Type": "application/json" };
+  if (STATE.appToken) h["X-App-Token"] = STATE.appToken;
+  return h;
+}
 function saveProxyBase() {
   const v = document.getElementById('proxyBaseInput').value.trim();
   if (v && !v.startsWith('https://')) { showToast('https:// から始まるURLを入力してください'); return; }
@@ -1519,36 +1501,32 @@ const KeyVault = (() => {
   return { available, encrypt, decrypt };
 })();
 
-const KEY_PROVIDERS = {
-  gemini: { stateProp: 'geminiKey', lsPlain: 'dei_geminiKey', lsEnc: 'dei_geminiKey_enc', label: 'Gemini' },
-  claude: { stateProp: 'claudeKey', lsPlain: 'dei_claudeKey', lsEnc: 'dei_claudeKey_enc', label: 'Claude' },
-  openai: { stateProp: 'openaiKey', lsPlain: 'dei_openaiKey', lsEnc: 'dei_openaiKey_enc', label: 'OpenAI' }
-};
+const TOKEN_LS_ENC = 'dei_appToken_enc';
 
-function setKeyStatus(provider, text, ok) {
-  const el = document.getElementById(provider + 'Status');
+function setTokenStatus(text, ok) {
+  const el = document.getElementById('tokenStatus');
   if (!el) return;
   el.textContent = text;
   el.className = 'api-status' + (ok ? ' ok' : '');
 }
 
-// 保存: 暗号化してからlocalStorageへ。平文は保存しない(入力欄もクリア)
-async function saveProviderKey(provider, rawKey) {
-  const cfg = KEY_PROVIDERS[provider];
+// 保存: 暗号化してlocalStorageへ。平文は保存しない(入力欄もクリア)
+async function saveAppToken() {
+  const v = document.getElementById('tokenInput').value.trim();
+  if (!v) { showToast('❌ 合言葉を入力してください'); return; }
   if (!KeyVault.available()) {
-    STATE[cfg.stateProp] = rawKey; // 暗号化不可の環境では今回のセッション中のみ保持(永続化しない)
-    setKeyStatus(provider, '⚠ この環境では暗号化保存できないため今回のみ有効', false);
+    STATE.appToken = v; // 暗号化不可の環境では今回のセッション中のみ保持
+    setTokenStatus('⚠ この環境では暗号化保存できないため今回のみ有効', false);
     showToast('⚠ 暗号化非対応環境: 保存されません');
     updateSettingsGear();
     return;
   }
   try {
-    localStorage.setItem(cfg.lsEnc, await KeyVault.encrypt(rawKey));
-    localStorage.removeItem(cfg.lsPlain);
-    STATE[cfg.stateProp] = rawKey;
-    document.getElementById(provider + 'KeyInput').value = '';
-    setKeyStatus(provider, `✓ ${cfg.label} キー暗号化保存済み`, true);
-    showToast(`🔒 ${cfg.label} キーを暗号化して保存しました`);
+    localStorage.setItem(TOKEN_LS_ENC, await KeyVault.encrypt(v));
+    STATE.appToken = v;
+    document.getElementById('tokenInput').value = '';
+    setTokenStatus('✓ 合言葉を暗号化保存済み', true);
+    showToast('🔒 合言葉を暗号化して保存しました');
     updateSettingsGear();
   } catch (e) {
     console.error(e);
@@ -1556,47 +1534,24 @@ async function saveProviderKey(provider, rawKey) {
   }
 }
 
-function saveGeminiKey() {
-  const key = document.getElementById('geminiKeyInput').value.trim();
-  if (!key) { showToast('❌ キーを入力してください'); return; }
-  return saveProviderKey('gemini', key);
-}
-function saveClaudeKey() {
-  const key = document.getElementById('claudeKeyInput').value.trim();
-  if (!key.startsWith('sk-ant-')) { showToast('❌ 有効なClaudeキーを入力してください'); return; }
-  return saveProviderKey('claude', key);
-}
-function saveOpenaiKey() {
-  const key = document.getElementById('openaiKeyInput').value.trim();
-  if (!key) { showToast('❌ キーを入力してください'); return; }
-  return saveProviderKey('openai', key);
-}
-
-// 起動時: 暗号化ストアから復号。旧バージョンの平文キーがあれば暗号化へ移行して平文を削除
+// 起動時: 暗号化ストアから復号。旧版で保存したAPIキー(平文・暗号文)は端末から削除する
 async function loadSecureKeys() {
-  for (const [provider, cfg] of Object.entries(KEY_PROVIDERS)) {
-    try {
-      const enc = localStorage.getItem(cfg.lsEnc);
-      const legacy = localStorage.getItem(cfg.lsPlain);
-      if (enc && KeyVault.available()) {
-        STATE[cfg.stateProp] = await KeyVault.decrypt(enc);
-      } else if (legacy) {
-        STATE[cfg.stateProp] = legacy;
-        if (KeyVault.available()) {
-          localStorage.setItem(cfg.lsEnc, await KeyVault.encrypt(legacy));
-          localStorage.removeItem(cfg.lsPlain); // 平文を残さない
-        }
-      }
-      if (STATE[cfg.stateProp]) {
-        document.getElementById(provider + 'KeyInput').placeholder = '●●●●●●●● (保存済み・変更する時だけ入力)';
-        setKeyStatus(provider, `✓ ${cfg.label} キー設定済み(暗号化)`, true);
-      }
-    } catch (e) {
-      // 端末鍵が消えた等で復号できない場合は再入力を促す(壊れた暗号文は破棄)
-      console.warn(cfg.label + ' key decrypt failed', e);
-      localStorage.removeItem(cfg.lsEnc);
-      setKeyStatus(provider, `⚠ ${cfg.label} キーを復号できません。再入力してください`, false);
+  ['gemini', 'claude', 'openai'].forEach(p => {
+    localStorage.removeItem(`dei_${p}Key`);
+    localStorage.removeItem(`dei_${p}Key_enc`);
+  });
+  try {
+    const enc = localStorage.getItem(TOKEN_LS_ENC);
+    if (enc && KeyVault.available()) STATE.appToken = await KeyVault.decrypt(enc);
+    if (STATE.appToken) {
+      document.getElementById('tokenInput').placeholder = '●●●●●●●● (保存済み・変更する時だけ入力)';
+      setTokenStatus('✓ 合言葉設定済み(暗号化)', true);
     }
+  } catch (e) {
+    // 端末鍵が消えた等で復号できない場合は再入力を促す(壊れた暗号文は破棄)
+    console.warn('token decrypt failed', e);
+    localStorage.removeItem(TOKEN_LS_ENC);
+    setTokenStatus('⚠ 合言葉を復号できません。再入力してください', false);
   }
   updateSettingsGear();
 }
@@ -1753,7 +1708,7 @@ async function sendToGemini() {
       proxyUrl("gemini-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -1782,7 +1737,7 @@ async function sendToClaude() {
       proxyUrl("claude-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -1811,7 +1766,7 @@ async function sendToOpenAI() {
       proxyUrl("openai-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -1828,15 +1783,15 @@ async function sendToOpenAI() {
 
 // プロバイダー名 → 送信関数・保存済みキーの対応表
 const PROVIDER_SENDERS = {
-  gemini: { send: sendToGemini, hasKey: () => !!STATE.geminiKey, label: 'Gemini' },
-  claude: { send: sendToClaude, hasKey: () => !!STATE.claudeKey, label: 'Claude' },
-  openai: { send: sendToOpenAI, hasKey: () => !!STATE.openaiKey, label: 'OpenAI' }
+  gemini: { send: sendToGemini, hasKey: () => !!STATE.appToken, label: 'Gemini' },
+  claude: { send: sendToClaude, hasKey: () => !!STATE.appToken, label: 'Claude' },
+  openai: { send: sendToOpenAI, hasKey: () => !!STATE.appToken, label: 'OpenAI' }
 };
 
 async function sendMessage() {
   await keysReady;
-  if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
-    showToast('❌ 設定画面でAPIキーを入力してください');
+  if (!STATE.appToken) {
+    showToast('❌ 設定画面で合言葉を入力してください');
     return;
   }
 
@@ -2253,7 +2208,7 @@ async function sendOnceToGemini(prompt) {
       proxyUrl("gemini-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -2280,7 +2235,7 @@ async function sendOnceToClaude(prompt) {
       proxyUrl("claude-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -2307,7 +2262,7 @@ async function sendOnceToOpenAI(prompt) {
       proxyUrl("openai-proxy"),
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: workerHeaders(),
         body: JSON.stringify(requestBody)
       }
     );
@@ -2326,15 +2281,15 @@ async function sendOnceToOpenAI(prompt) {
 }
 
 const ONESHOT_SENDERS = {
-  gemini: { send: sendOnceToGemini, hasKey: () => !!STATE.geminiKey, label: 'Gemini' },
-  claude: { send: sendOnceToClaude, hasKey: () => !!STATE.claudeKey, label: 'Claude' },
-  openai: { send: sendOnceToOpenAI, hasKey: () => !!STATE.openaiKey, label: 'OpenAI' }
+  gemini: { send: sendOnceToGemini, hasKey: () => !!STATE.appToken, label: 'Gemini' },
+  claude: { send: sendOnceToClaude, hasKey: () => !!STATE.appToken, label: 'Claude' },
+  openai: { send: sendOnceToOpenAI, hasKey: () => !!STATE.appToken, label: 'OpenAI' }
 };
 
 async function callAIOnce(prompt) {
   await keysReady;
-  if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
-    return { error: '設定画面でAPIキーを入力してください' };
+  if (!STATE.appToken) {
+    return { error: '設定画面で合言葉を入力してください' };
   }
   const order = [STATE.aiProvider, ...Object.keys(ONESHOT_SENDERS).filter(p => p !== STATE.aiProvider)];
   let result = null;
@@ -2359,8 +2314,8 @@ async function sendInterpret() {
   const input = document.getElementById('interpInput');
   const text = input.value.trim();
   if (!text) return;
-  if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
-    showToast('❌ 設定画面でAPIキーを入力してください');
+  if (!STATE.appToken) {
+    showToast('❌ 設定画面で合言葉を入力してください');
     return;
   }
   input.value = '';
