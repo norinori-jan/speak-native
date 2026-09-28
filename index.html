@@ -1,3 +1,4 @@
+Speak native 暗号版
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="Speak Native">
 <meta name="theme-color" content="#0e0f11">
 <meta name="description" content="日本語を考えずに英語が出てくるようになるアプリ。Claude API + Gemini Flashで高速英語会話練習">
-<title>Daily English Immersion</title>
+<title>Speak Native</title>
 
 <link rel="manifest" href="./pwa/manifest.json">
 <link rel="apple-touch-icon" href="./assets/images/icon-192.png">
@@ -23,42 +24,6 @@
       .catch(err => console.log('SW registration failed:', err));
   }
 
-  // --- 文字化け防止：NFC 正規化 ---
-  function normalizeText(text) {
-    try {
-      return text.normalize("NFC");
-    } catch (e) {
-      return text; // normalize 非対応ブラウザ対策
-    }
-  }
-
-  // --- quick-ref 読み込み ---
-  async function loadQuickRef() {
-    const url = localStorage.getItem("gasUrl");
-    if (!url) return alert("GAS URL が設定されていません");
-
-    const res = await fetch(url + "?mode=quick-ref");
-    const data = await res.json();
-
-    const safe = normalizeText(data.text || "");
-    document.querySelector("#quickRefArea").value = safe;
-  }
-
-  // --- quick-ref 保存 ---
-  async function saveQuickRef() {
-    const url = localStorage.getItem("gasUrl");
-    if (!url) return alert("GAS URL が設定されていません");
-
-    const text = document.querySelector("#quickRefArea").value;
-    const safe = normalizeText(text);
-
-    await fetch(url, {
-      method: "POST",
-      body: JSON.stringify({ mode: "quick-ref", text: safe })
-    });
-
-    alert("quick-ref を保存しました");
-  }
 </script>
 
 <style>
@@ -222,6 +187,50 @@
     text-transform: uppercase;
     margin-bottom: 14px;
   }
+
+  /* ===== CONV MODE TOGGLE (Business / Casual) ===== */
+  .conv-mode-toggle {
+    display: flex;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 20px;
+  }
+  .conv-mode-btn {
+    flex: 1;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .conv-mode-btn.active.business {
+    background: rgba(126,184,255,0.14);
+    color: var(--accent3);
+  }
+  .conv-mode-btn.active.casual {
+    background: rgba(240,160,90,0.14);
+    color: var(--accent2);
+  }
+  .conv-mode-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+  }
+  .conv-mode-badge.business { background: rgba(126,184,255,0.12); color: var(--accent3); }
+  .conv-mode-badge.casual { background: rgba(240,160,90,0.12); color: var(--accent2); }
   .modes-grid { display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; min-height: 0;}
 
   .mode-card {
@@ -700,6 +709,30 @@
   }
   .shadow-btn:active { transform: scale(0.97); }
 
+  .shadow-partner-line {
+    background: rgba(126,184,255,0.08);
+    border: 1px solid rgba(126,184,255,0.2);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 10px;
+    animation: fadeUp 0.2s ease;
+  }
+  .shadow-partner-line.ok {
+    background: rgba(92,239,176,0.08);
+    border-color: rgba(92,239,176,0.25);
+  }
+  .shadow-partner-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--accent3);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .shadow-partner-line.ok .shadow-partner-label { color: var(--accent); }
+
 
   .mode-card.vocab::before { background: radial-gradient(circle at left, rgba(255,200,80,0.05), transparent 70%); }
   .mode-card.stats::before { background: radial-gradient(circle at left, rgba(200,130,255,0.05), transparent 70%); }
@@ -737,6 +770,50 @@
     background:rgba(255,200,80,0.15); border:1px solid rgba(255,200,80,0.3);
     color:rgb(255,200,80); border-radius:12px; padding:10px 16px; font-size:14px; cursor:pointer;
   }
+
+  /* ===== VOCAB: mistake tag / review / related ===== */
+  .vocab-toolbar { display:flex; gap:8px; padding:0 0 4px; }
+  .vocab-tool-btn {
+    flex:1; padding:10px; border-radius:12px; border:1px solid var(--border);
+    background:var(--surface); color:var(--text); font-size:12px; font-weight:500; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; gap:4px;
+  }
+  .vocab-tool-btn.active { background:rgba(255,71,133,0.14); border-color:rgba(255,71,133,0.35); color:#ff89ba; }
+  .vocab-mistake-badge {
+    display:inline-block; font-family:'DM Mono',monospace; font-size:10px;
+    background:rgba(255,71,133,0.14); color:#ff89ba; border-radius:20px; padding:2px 8px; margin-left:6px;
+  }
+  .vocab-review-badge {
+    display:inline-block; font-family:'DM Mono',monospace; font-size:9px;
+    background:rgba(92,239,176,0.12); color:var(--accent); border-radius:20px; padding:2px 8px; margin-left:6px;
+  }
+  .vocab-related { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .vocab-related-chip {
+    font-size:10px; color:var(--text-muted); background:var(--surface2);
+    border:1px solid var(--border); border-radius:20px; padding:3px 9px;
+  }
+
+  /* ===== VOCAB REVIEW SCREEN ===== */
+  #vocabreview { background: var(--bg); }
+  .review-body {
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:28px; gap:20px; min-height:0;
+  }
+  .review-counter { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--text-muted); }
+  .review-card {
+    width:100%; background:var(--surface); border:1px solid var(--border); border-radius:24px;
+    padding:32px 24px; text-align:center;
+  }
+  .review-jp { font-family:'DM Serif Display',serif; font-size:24px; color:var(--text); margin-bottom:8px; line-height:1.4; }
+  .review-hint { font-size:12px; color:var(--text-muted); }
+  .review-answer {
+    width:100%; background:var(--surface2); border:1px solid rgba(92,239,176,0.3); border-radius:16px;
+    padding:20px; display:none; animation:fadeUp 0.3s ease;
+  }
+  .review-answer.show { display:block; }
+  .review-en { font-size:19px; font-weight:500; color:var(--text); margin-bottom:6px; }
+  .review-note { font-size:12px; color:var(--text-muted); }
+  .review-btns { display:flex; gap:10px; width:100%; }
 
   /* ===== STATS SCREEN ===== */
   #stats { background: var(--bg); }
@@ -837,6 +914,11 @@
       </div>
     </div>
 
+    <div class="conv-mode-toggle" id="convModeToggle">
+      <button class="conv-mode-btn business" data-conv-mode="business" onclick="setConvMode('business')">💼 ビジネス</button>
+      <button class="conv-mode-btn casual" data-conv-mode="casual" onclick="setConvMode('casual')">🎉 オフ・遊び</button>
+    </div>
+
     <div class="modes-label">Today's practice</div>
     <div class="modes-grid">
       <div class="mode-card freetalk" onclick="showScreen('freetalk')">
@@ -908,7 +990,7 @@
       <div id="geminiTab" class="provider-content">
         <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">🚀 無料枠で利用可能</div>
         <div class="api-input-row">
-          <input class="api-input" type="password" id="geminiKeyInput" placeholder="AQ.Ab8RN..." />
+          <input class="api-input" type="password" id="geminiKeyInput" placeholder="Gemini API key" />
           <button class="api-save-btn" onclick="saveGeminiKey()">Save</button>
         </div>
         <div class="api-status" id="geminiStatus">Gemini キーを入力してください</div>
@@ -938,6 +1020,16 @@
     </div>
 
     <div class="api-section">
+      <div class="api-label" style="color:var(--accent2)">Cloudflare Worker (AIプロキシ)</div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">/gemini-proxy /claude-proxy /openai-proxy を持つWorkerのURL。空欄なら既定を使用</div>
+      <div class="api-input-row">
+        <input class="api-input" type="text" id="proxyBaseInput" placeholder="https://xxxx.workers.dev" style="font-size:10px;" />
+        <button class="api-save-btn" style="background:var(--accent2);color:var(--bg);" onclick="saveProxyBase()">Save</button>
+      </div>
+      <div class="api-status" id="proxyStatus">既定のWorkerを使用中</div>
+    </div>
+
+    <div class="api-section">
       <div class="api-label" style="color:var(--accent3)">Google Sheets GAS URL</div>
       <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">進捗と単語帳をGoogle Sheetsに同期します（任意）</div>
       <div class="api-input-row">
@@ -953,16 +1045,10 @@
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
     <div class="nav-title">Free Talk</div>
+    <div class="conv-mode-badge" id="freetalkModeBadge"></div>
     <div class="nav-badge green" id="talkStatus">Ready</div>
   </div>
-  <div class="topic-bar" id="topicBar">
-    <div class="topic-chip active" data-topic="work">Work life</div>
-    <div class="topic-chip" data-topic="weekend">Weekend</div>
-    <div class="topic-chip" data-topic="food">Food & Restaurants</div>
-    <div class="topic-chip" data-topic="travel">Travel</div>
-    <div class="topic-chip" data-topic="hobby">Hobbies</div>
-    <div class="topic-chip" data-topic="tech">Tech & News</div>
-  </div>
+  <div class="topic-bar" id="topicBar"></div>
   <div class="chat-area" id="chatArea"></div>
   <div class="input-area">
     <div class="input-row">
@@ -978,9 +1064,10 @@
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
     <div class="nav-title">Shadowing</div>
-    <div class="nav-badge orange">Workplace English</div>
+    <div class="conv-mode-badge" id="shadowModeBadge"></div>
   </div>
   <div class="shadow-body" id="shadowBody"></div>
+  <div id="shadowFeedback" style="padding:0 20px;"></div>
   <div class="shadow-controls" style="padding: 0 20px 20px;">
     <button class="shadow-btn play" onclick="playCurrentLine()">▶ Play</button>
     <button class="shadow-btn" onclick="toggleJP()">JP 表示</button>
@@ -993,6 +1080,7 @@
   <div class="nav-bar">
     <button class="back-btn" onclick="showScreen('home')">‹</button>
     <div class="nav-title">瞬間英作文</div>
+    <div class="conv-mode-badge" id="instantModeBadge"></div>
     <div class="nav-badge green" id="instantScore">0 / 0</div>
   </div>
   <div class="instant-body">
@@ -1056,10 +1144,40 @@
     <div class="nav-title">単語帳</div>
     <div class="nav-badge" style="background:rgba(255,200,80,0.12);color:rgb(255,200,80);" id="vocabCount">0 words</div>
   </div>
-  <div class="vocab-body" id="vocabBody"></div>
+  <div class="vocab-body" id="vocabBody">
+    <div class="vocab-toolbar">
+      <button class="vocab-tool-btn" id="reviewBtn" onclick="startVocabReview()">📅 今日の復習 <span id="reviewDueCount"></span></button>
+      <button class="vocab-tool-btn" id="mistakeFilterBtn" onclick="toggleMistakeFilter()">💹 間違えやすいのみ</button>
+    </div>
+    <div id="vocabList"></div>
+  </div>
   <div class="vocab-add-bar">
     <input class="vocab-add-input" id="vocabInput" placeholder="フレーズ or 単語を追加..." />
     <button class="vocab-add-btn" onclick="addVocabManual()">+ Add</button>
+  </div>
+</div>
+
+<div class="screen" id="vocabreview">
+  <div class="nav-bar">
+    <button class="back-btn" onclick="showScreen('vocab')">‹</button>
+    <div class="nav-title">今日の復習</div>
+  </div>
+  <div class="review-body">
+    <div class="review-counter" id="reviewCounter">1 / 1</div>
+    <div class="review-card">
+      <div class="review-jp" id="reviewJP">準備中...</div>
+      <div class="review-hint" id="reviewPromptHint">英語で言ってみよう</div>
+    </div>
+    <div class="review-answer" id="reviewAnswer">
+      <div class="answer-label">Answer</div>
+      <div class="review-en" id="reviewEN"></div>
+      <div class="review-note" id="reviewNote"></div>
+      <span class="vocab-mistake-badge" id="reviewMistakeBadge" style="display:none;"></span>
+    </div>
+    <div class="review-btns">
+      <button class="instant-btn" onclick="markReview(false)">✗ 惜しい</button>
+      <button class="instant-btn primary" onclick="markReview(true)">✓ 言えた！</button>
+    </div>
   </div>
 </div>
 
@@ -1102,22 +1220,28 @@
 // ===== STATE (Gemini / Claude / OpenAI) =====
 let STATE = {
   aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
-  geminiKey: localStorage.getItem('dei_geminiKey') || '',
-  claudeKey: localStorage.getItem('dei_claudeKey') || '',
-  openaiKey: localStorage.getItem('dei_openaiKey') || '',
+  geminiKey: '',   // 起動時に暗号化ストア(KeyVault)から復号して入る
+  claudeKey: '',
+  openaiKey: '',
   history: []
 };
 
 let conversationHistory = [];
-let currentTopic = 'work';
+let currentTopic = null; // 実際の初期値は TOPIC_SETS 定義後、下部の初期化処理で設定
 let recognition = null;
 let isRecording = false;
 let currentShadowLine = 0;
 let showJP = false;
-let instantIndex = 0;
 let instantScore = 0;
 let timerInterval = null;
 let timerVal = 3;
+
+// ===== XSS対策: innerHTMLに入れる文字列は必ずこれを通す =====
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
 
 // ===== TOAST (バグ修正: 未定義だった showToast を実装) =====
 let toastTimer = null;
@@ -1130,18 +1254,83 @@ function showToast(msg) {
   toastTimer = setTimeout(() => el.classList.remove('show'), 2500);
 }
 
-// ===== TOPICS =====
-const TOPIC_PROMPTS = {
-  work: "office work, team meetings, deadlines, colleagues, workplace culture",
-  weekend: "weekend plans, hobbies, relaxing, going out",
-  food: "restaurants, cooking, favorite foods, trying new cuisine",
-  travel: "trips, travel experiences, places you want to visit",
-  hobby: "personal interests, hobbies, learning new skills",
-  tech: "technology, news, apps, innovations"
+// ===== CONV MODE (Business / Casual) =====
+let convMode = localStorage.getItem('dei_convMode') || 'business';
+
+function setConvMode(mode) {
+  convMode = mode;
+  localStorage.setItem('dei_convMode', mode);
+  document.querySelectorAll('.conv-mode-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.convMode === mode));
+  const badgeTxt = mode === 'business' ? '💼 Business' : '🎉 Casual';
+  ['freetalkModeBadge','shadowModeBadge','instantModeBadge'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + mode; }
+  });
+  // モードが変わったら各モードの状態をリセットして、新しいモードのコンテンツで作り直す
+  renderTopicBar();
+  currentTopic = TOPIC_SETS[mode][0].key;
+  document.querySelectorAll('.topic-chip[data-topic]').forEach(c =>
+    c.classList.toggle('active', c.dataset.topic === currentTopic));
+  STATE.history = [];
+  const chatArea = document.getElementById('chatArea');
+  if (chatArea) chatArea.innerHTML = '';
+  if (document.getElementById('freetalk').classList.contains('active')) initChat();
+  instantQueue = [];
+  if (document.getElementById('instant').classList.contains('active')) initInstant();
+  shadowQueue = [];
+  if (document.getElementById('shadowing').classList.contains('active')) initShadowing();
+}
+
+// ===== TOPICS (mode別) =====
+const TOPIC_SETS = {
+  business: [
+    { key: 'work', label: 'Work life', prompt: "office work, team meetings, deadlines, colleagues, workplace culture" },
+    { key: 'meetings', label: 'Meetings & negotiation', prompt: "running meetings, negotiating deadlines, giving updates, pushing back politely" },
+    { key: 'smalltalk', label: 'Client small talk', prompt: "small talk with clients or coworkers before/after a meeting, building rapport" },
+    { key: 'email', label: 'Email & Slack', prompt: "writing quick professional messages, following up, asking for clarification" },
+    { key: 'travelb', label: 'Business trip', prompt: "business travel, hotels, airport, expense reports, meeting clients abroad" },
+    { key: 'techb', label: 'Tech & News', prompt: "technology, industry news, apps, workplace tools" }
+  ],
+  casual: [
+    { key: 'weekend', label: 'Weekend', prompt: "weekend plans, hobbies, relaxing, going out with friends" },
+    { key: 'food', label: 'Food & Restaurants', prompt: "restaurants, cooking, favorite foods, trying new cuisine" },
+    { key: 'travelc', label: 'Travel', prompt: "trips, travel experiences, places you want to visit, casual vacation stories" },
+    { key: 'hobby', label: 'Hobbies', prompt: "personal interests, hobbies, learning new skills, games, movies, music" },
+    { key: 'friends', label: 'Friends & family', prompt: "catching up with friends, family life, casual gossip, plans to hang out" },
+    { key: 'fun', label: 'Random fun', prompt: "light fun topics: what if questions, favorite things, silly opinions, jokes" }
+  ]
 };
 
-// ===== INSTANT QUESTIONS =====
-const INSTANT_QS = [
+function renderTopicBar() {
+  const bar = document.getElementById('topicBar');
+  if (!bar) return;
+  const set = TOPIC_SETS[convMode];
+  bar.innerHTML = set.map((t, i) =>
+    `<div class="topic-chip${i === 0 ? ' active' : ''}" data-topic="${t.key}">${t.label}</div>`
+  ).join('');
+}
+
+function currentTopicPrompt() {
+  const set = TOPIC_SETS[convMode];
+  const t = set.find(t => t.key === currentTopic);
+  return t ? t.prompt : set[0].prompt;
+}
+
+// トピックバーはモード切替のたびに作り直すので、クリックはイベント委譲で受ける
+document.getElementById('topicBar').addEventListener('click', (e) => {
+  const chip = e.target.closest('.topic-chip[data-topic]');
+  if (!chip) return;
+  document.querySelectorAll('.topic-chip[data-topic]').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  currentTopic = chip.dataset.topic;
+  STATE.history = [];
+  document.getElementById('chatArea').innerHTML = '';
+  initChat();
+});
+
+// ===== INSTANT QUESTIONS (mode別) =====
+const INSTANT_QS_BUSINESS = [
   { jp: "ちょっと待ってください", en: "Just a moment, please.", note: "「ちょっと」= Just a moment / Hold on" },
   { jp: "それはいい考えですね", en: "That's a great idea!", note: "ビジネスでよく使う同意フレーズ" },
   { jp: "確認させてください", en: "Let me double-check that.", note: "double-check = しっかり確認する" },
@@ -1150,18 +1339,89 @@ const INSTANT_QS = [
   { jp: "今少し忙しいです", en: "I'm a bit tied up right now.", note: "tied up = 手が離せない" },
   { jp: "遅れてごめんなさい", en: "Sorry I'm late. I got held up.", note: "get held up = 足止めされる" },
   { jp: "それは私の担当ではありません", en: "That's not really my area.", note: "I'm not in charge of that も自然" },
-  { jp: "週末何してたの？", en: "What did you get up to this weekend?", note: "get up to = ～をする（英国・豪・職場向け）" },
   { jp: "お疲れ様でした", en: "Great work today! / Good effort.", note: "お疲れ様 の直訳はない。状況で変わる" },
+  { jp: "それについては後で相談させてください", en: "Let me get back to you on that.", note: "get back to you = 後で返事する" },
+  { jp: "今のところ問題ありません", en: "Everything looks good on our end so far.", note: "on our end = こちら側では" },
+  { jp: "念のため確認ですが", en: "Just to confirm, ...", note: "確認前置きの定番フレーズ" },
+];
+const INSTANT_QS_CASUAL = [
+  { jp: "週末何してたの？", en: "What did you get up to this weekend?", note: "get up to = ～をする（カジュアル）" },
+  { jp: "マジで！？", en: "No way! Seriously?", note: "驚いた時の定番リアクション" },
+  { jp: "お腹すいた", en: "I'm starving.", note: "starving = めちゃくちゃお腹すいた" },
+  { jp: "それ、めっちゃいいね", en: "That's awesome!", note: "awesome = カジュアルな絶賛表現" },
+  { jp: "今忙しい？", en: "Are you free right now?", note: "free = 手が空いている" },
+  { jp: "また今度ね", en: "Let's do it another time.", note: "予定を先送りする軽い言い方" },
+  { jp: "それ知らなかった", en: "I had no idea.", note: "had no idea = 全然知らなかった" },
+  { jp: "気にしないで", en: "Don't worry about it.", note: "軽く相手を安心させる定番フレーズ" },
+  { jp: "ちょっと疲れた", en: "I'm a little worn out.", note: "worn out = 疲れ切った" },
+  { jp: "それめっちゃ笑える", en: "That's hilarious!", note: "hilarious = 爆笑もの" },
+  { jp: "遊びに行かない？", en: "Wanna hang out?", note: "hang out = 遊ぶ・つるむ" },
+  { jp: "冗談だよ", en: "I'm just kidding.", note: "just kidding = 冗談だよ" },
 ];
 
-// ===== SHADOWING SCRIPTS =====
-const SHADOW_SCRIPTS = [
-  { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "ちょっといい？相談したいことがあって。" },
-  { en: "Sure, what's up?", jp: "もちろん、どうした？" },
-  { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "プロジェクトのスケジュールについて考えてたんだけど、ちょっとギリギリかなと思って。" },
-  { en: "Yeah, I hear you. What do you suggest?", jp: "わかる。どうしたらいいと思う？" },
-  { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "締め切りを1週間延ばせないかな？チームのプレッシャーも減ると思うし。" },
-  { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "それは合理的だね。クライアントに確認してから連絡するよ。" },
+// ===== SHADOWING SCRIPTS (mode別・複数ダイアログ) =====
+const SHADOW_SETS_BUSINESS = [
+  {
+    title: "Project Deadline Chat",
+    lines: [
+      { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "ちょっといい？相談したいことがあって。" },
+      { en: "Sure, what's up?", jp: "もちろん、どうした？" },
+      { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "プロジェクトのスケジュールについて考えてたんだけど、ちょっとギリギリかなと思って。" },
+      { en: "Yeah, I hear you. What do you suggest?", jp: "わかる。どうしたらいいと思う？" },
+      { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "締め切りを1週間延ばせないかな？チームのプレッシャーも減ると思うし。" },
+      { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "それは合理的だね。クライアントに確認してから連絡するよ。" }
+    ]
+  },
+  {
+    title: "Quick Status Update",
+    lines: [
+      { en: "Hi everyone, thanks for hopping on. Let's do a quick status update.", jp: "皆さん、集まってくれてありがとう。手短に進捗確認しましょう。" },
+      { en: "Sure, I'll go first. Everything's on track on my end.", jp: "じゃあ私から。こちらは順調です。" },
+      { en: "Great to hear. Any blockers we should know about?", jp: "それは良かった。何か障害になっていることはありますか？" },
+      { en: "Not really, but I might need another set of eyes on the report tomorrow.", jp: "特にないですが、明日レポートを誰かに確認してもらいたいです。" },
+      { en: "No problem, I can take a look first thing tomorrow.", jp: "問題ないよ、明日一番に確認するね。" }
+    ]
+  },
+  {
+    title: "Handling Pushback",
+    lines: [
+      { en: "I understand your concern, but I think this approach will save us time in the long run.", jp: "ご懸念はわかりますが、長期的にはこのやり方の方が時間の節約になると思います。" },
+      { en: "That's fair. Can you walk me through the numbers again?", jp: "それは一理ありますね。もう一度数字を説明してもらえますか？" },
+      { en: "Of course. Let me pull up the spreadsheet.", jp: "もちろんです。スプレッドシートを開きますね。" },
+      { en: "Okay, I see your point now. Let's move forward with your plan.", jp: "なるほど、納得しました。あなたの案で進めましょう。" }
+    ]
+  }
+];
+const SHADOW_SETS_CASUAL = [
+  {
+    title: "Weekend Plans",
+    lines: [
+      { en: "Hey! Any plans for the weekend?", jp: "ねえ！週末の予定ある？" },
+      { en: "Not really, maybe just chilling at home. You?", jp: "特にないかな、家でのんびりするかも。そっちは？" },
+      { en: "I was thinking about going hiking if the weather's nice.", jp: "天気が良ければハイキングに行こうかなって考えてる。" },
+      { en: "Oh that sounds fun, mind if I tag along?", jp: "それ楽しそう、一緒に行ってもいい？" },
+      { en: "Of course, the more the merrier!", jp: "もちろん、人数が多い方が楽しいし！" }
+    ]
+  },
+  {
+    title: "Catching Up Over Coffee",
+    lines: [
+      { en: "It's been forever! How have you been?", jp: "久しぶり！最近どう？" },
+      { en: "I've been good, just really busy with work lately.", jp: "元気だよ、最近ちょっと仕事が忙しくて。" },
+      { en: "I hear you. We should catch up more often.", jp: "わかるー。もっと頻繁に会おうよ。" },
+      { en: "Totally agree. Let's grab dinner next week?", jp: "完全同意。来週ご飯行かない？" },
+      { en: "Sounds perfect, I'll text you the details.", jp: "いいね、詳細はメッセージ送るね。" }
+    ]
+  },
+  {
+    title: "Movie Night Debate",
+    lines: [
+      { en: "So what do you wanna watch tonight?", jp: "今夜何見たい？" },
+      { en: "Honestly, I'm in the mood for something funny.", jp: "正直、面白いのが見たい気分。" },
+      { en: "Same here. Let's just pick a comedy and chill.", jp: "私も同じ。コメディにしてゆっくりしよう。" },
+      { en: "Deal. I'll grab the snacks.", jp: "決まり。お菓子は私が用意するね。" }
+    ]
+  }
 ];
 
 // ===== API PROVIDER SWITCH =====
@@ -1190,72 +1450,187 @@ function updateSettingsGear() {
   gear.classList.toggle('needs-key', !STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey);
 }
 
-// ===== SAVE KEYS =====
+// ===== CLOUDFLARE WORKER (AIプロキシ) =====
+// 6か所に直書きされていたURLを1か所に集約。設定画面で変更でき、空なら既定値を使う。
+const DEFAULT_PROXY_BASE = "https://speak-native.arielfortuneoffice.workers.dev";
+function proxyBase() {
+  return (localStorage.getItem('dei_proxyBase') || DEFAULT_PROXY_BASE).replace(/\/+$/, '');
+}
+function proxyUrl(path) { return proxyBase() + '/' + path; }
+function saveProxyBase() {
+  const v = document.getElementById('proxyBaseInput').value.trim();
+  if (v && !v.startsWith('https://')) { showToast('https:// から始まるURLを入力してください'); return; }
+  if (v) localStorage.setItem('dei_proxyBase', v); else localStorage.removeItem('dei_proxyBase');
+  document.getElementById('proxyStatus').textContent = '✓ Worker URL保存済み: ' + proxyBase();
+  document.getElementById('proxyStatus').className = 'api-status ok';
+  showToast('✓ Worker URLを保存しました');
+}
+
+// ===== KEY VAULT (APIキーの暗号化保存) =====
+// crypto-vault と同水準のパラメータ(AES-GCM 256bit / iv 12byte / 暗号化のたびに新規iv)。
+// 鍵は端末ごとに生成する「取り出せない(non-extractable)」CryptoKey で、IndexedDBに保存。
+// → 一度保存すればPIN入力なしで自動復号。localStorageには暗号文(envelope)しか残らない。
+// envelope形式は crypto-core.v1.js に合わせた項目(v, keySource, alg, kdf, iv, ciphertext)。
+const KeyVault = (() => {
+  const DB_NAME = 'dei_keyvault', STORE = 'keys', KEY_ID = 'device-aes-gcm-v1';
+  const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+  const unb64 = str => Uint8Array.from(atob(str), c => c.charCodeAt(0));
+
+  function available() {
+    return !!(window.crypto && crypto.subtle && window.indexedDB);
+  }
+  function openDB() {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB_NAME, 1);
+      req.onupgradeneeded = () => req.result.createObjectStore(STORE);
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+  function idb(mode, fn) {
+    return openDB().then(db => new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, mode);
+      const r = fn(tx.objectStore(STORE));
+      tx.oncomplete = () => resolve(r.result);
+      tx.onerror = () => reject(tx.error);
+    }));
+  }
+  async function getDeviceKey() {
+    let key = await idb('readonly', st => st.get(KEY_ID));
+    if (!key) {
+      key = await crypto.subtle.generateKey({ name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+      await idb('readwrite', st => st.put(key, KEY_ID));
+    }
+    return key;
+  }
+  async function encrypt(plain) {
+    const key = await getDeviceKey();
+    const iv = crypto.getRandomValues(new Uint8Array(12)); // 毎回新規iv
+    const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(plain));
+    return JSON.stringify({ v: 1, keySource: 'device', alg: 'AES-GCM-256', kdf: null, iv: b64(iv), ciphertext: b64(ct) });
+  }
+  async function decrypt(envelopeJson) {
+    const env = JSON.parse(envelopeJson);
+    if (env.keySource !== 'device') throw new Error('unsupported keySource: ' + env.keySource);
+    const key = await getDeviceKey();
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(env.iv) }, key, unb64(env.ciphertext));
+    return new TextDecoder().decode(pt);
+  }
+  return { available, encrypt, decrypt };
+})();
+
+const KEY_PROVIDERS = {
+  gemini: { stateProp: 'geminiKey', lsPlain: 'dei_geminiKey', lsEnc: 'dei_geminiKey_enc', label: 'Gemini' },
+  claude: { stateProp: 'claudeKey', lsPlain: 'dei_claudeKey', lsEnc: 'dei_claudeKey_enc', label: 'Claude' },
+  openai: { stateProp: 'openaiKey', lsPlain: 'dei_openaiKey', lsEnc: 'dei_openaiKey_enc', label: 'OpenAI' }
+};
+
+function setKeyStatus(provider, text, ok) {
+  const el = document.getElementById(provider + 'Status');
+  if (!el) return;
+  el.textContent = text;
+  el.className = 'api-status' + (ok ? ' ok' : '');
+}
+
+// 保存: 暗号化してからlocalStorageへ。平文は保存しない(入力欄もクリア)
+async function saveProviderKey(provider, rawKey) {
+  const cfg = KEY_PROVIDERS[provider];
+  if (!KeyVault.available()) {
+    STATE[cfg.stateProp] = rawKey; // 暗号化不可の環境では今回のセッション中のみ保持(永続化しない)
+    setKeyStatus(provider, '⚠ この環境では暗号化保存できないため今回のみ有効', false);
+    showToast('⚠ 暗号化非対応環境: 保存されません');
+    updateSettingsGear();
+    return;
+  }
+  try {
+    localStorage.setItem(cfg.lsEnc, await KeyVault.encrypt(rawKey));
+    localStorage.removeItem(cfg.lsPlain);
+    STATE[cfg.stateProp] = rawKey;
+    document.getElementById(provider + 'KeyInput').value = '';
+    setKeyStatus(provider, `✓ ${cfg.label} キー暗号化保存済み`, true);
+    showToast(`🔒 ${cfg.label} キーを暗号化して保存しました`);
+    updateSettingsGear();
+  } catch (e) {
+    console.error(e);
+    showToast('❌ 暗号化保存に失敗しました');
+  }
+}
+
 function saveGeminiKey() {
   const key = document.getElementById('geminiKeyInput').value.trim();
-  if (!key) {
-    showToast('❌ キーを入力してください');
-    return;
-  }
-  STATE.geminiKey = key;
-  localStorage.setItem('dei_geminiKey', key);
-  document.getElementById('geminiStatus').textContent = '✓ Gemini キー保存済み';
-  document.getElementById('geminiStatus').className = 'api-status ok';
-  showToast('✓ Gemini キー保存しました');
-  updateSettingsGear();
+  if (!key) { showToast('❌ キーを入力してください'); return; }
+  return saveProviderKey('gemini', key);
 }
-
 function saveClaudeKey() {
   const key = document.getElementById('claudeKeyInput').value.trim();
-  if (!key.startsWith('sk-ant-')) {
-    showToast('❌ 有効なClaudeキーを入力してください');
-    return;
-  }
-  STATE.claudeKey = key;
-  localStorage.setItem('dei_claudeKey', key);
-  document.getElementById('claudeStatus').textContent = '✓ Claude キー保存済み';
-  document.getElementById('claudeStatus').className = 'api-status ok';
-  showToast('✓ Claude キー保存しました');
-  updateSettingsGear();
+  if (!key.startsWith('sk-ant-')) { showToast('❌ 有効なClaudeキーを入力してください'); return; }
+  return saveProviderKey('claude', key);
 }
-
 function saveOpenaiKey() {
   const key = document.getElementById('openaiKeyInput').value.trim();
-  if (!key) {
-    showToast('❌ キーを入力してください');
-    return;
-  }
-  STATE.openaiKey = key;
-  localStorage.setItem('dei_openaiKey', key);
-  document.getElementById('openaiStatus').textContent = '✓ OpenAI キー保存済み';
-  document.getElementById('openaiStatus').className = 'api-status ok';
-  showToast('✓ OpenAI キー保存しました');
-  updateSettingsGear();
+  if (!key) { showToast('❌ キーを入力してください'); return; }
+  return saveProviderKey('openai', key);
 }
 
-// Init - Restore saved keys
-if (STATE.geminiKey) {
-  document.getElementById('geminiKeyInput').value = STATE.geminiKey;
-  document.getElementById('geminiStatus').textContent = '✓ Gemini キー設定済み';
-  document.getElementById('geminiStatus').className = 'api-status ok';
+// 起動時: 暗号化ストアから復号。旧バージョンの平文キーがあれば暗号化へ移行して平文を削除
+async function loadSecureKeys() {
+  for (const [provider, cfg] of Object.entries(KEY_PROVIDERS)) {
+    try {
+      const enc = localStorage.getItem(cfg.lsEnc);
+      const legacy = localStorage.getItem(cfg.lsPlain);
+      if (enc && KeyVault.available()) {
+        STATE[cfg.stateProp] = await KeyVault.decrypt(enc);
+      } else if (legacy) {
+        STATE[cfg.stateProp] = legacy;
+        if (KeyVault.available()) {
+          localStorage.setItem(cfg.lsEnc, await KeyVault.encrypt(legacy));
+          localStorage.removeItem(cfg.lsPlain); // 平文を残さない
+        }
+      }
+      if (STATE[cfg.stateProp]) {
+        document.getElementById(provider + 'KeyInput').placeholder = '●●●●●●●● (保存済み・変更する時だけ入力)';
+        setKeyStatus(provider, `✓ ${cfg.label} キー設定済み(暗号化)`, true);
+      }
+    } catch (e) {
+      // 端末鍵が消えた等で復号できない場合は再入力を促す(壊れた暗号文は破棄)
+      console.warn(cfg.label + ' key decrypt failed', e);
+      localStorage.removeItem(cfg.lsEnc);
+      setKeyStatus(provider, `⚠ ${cfg.label} キーを復号できません。再入力してください`, false);
+    }
+  }
+  updateSettingsGear();
 }
-if (STATE.claudeKey) {
-  document.getElementById('claudeKeyInput').value = STATE.claudeKey;
-  document.getElementById('claudeStatus').textContent = '✓ Claude キー設定済み';
-  document.getElementById('claudeStatus').className = 'api-status ok';
-}
-if (STATE.openaiKey) {
-  document.getElementById('openaiKeyInput').value = STATE.openaiKey;
-  document.getElementById('openaiStatus').textContent = '✓ OpenAI キー設定済み';
-  document.getElementById('openaiStatus').className = 'api-status ok';
-}
+const keysReady = loadSecureKeys();
+(function initProxyField() {
+  const saved = localStorage.getItem('dei_proxyBase');
+  if (saved) {
+    document.getElementById('proxyBaseInput').value = saved;
+    document.getElementById('proxyStatus').textContent = '✓ Worker URL設定済み: ' + saved;
+    document.getElementById('proxyStatus').className = 'api-status ok';
+  }
+})();
 
 switchProvider(STATE.aiProvider);
 updateCurrentProvider();
 updateSettingsGear();
 
+// ===== CONV MODE 初期化 (ビジネス/オフ・遊び) =====
+currentTopic = TOPIC_SETS[convMode][0].key;
+document.querySelectorAll('.conv-mode-btn').forEach(b =>
+  b.classList.toggle('active', b.dataset.convMode === convMode));
+renderTopicBar();
+(function initModeBadges() {
+  const badgeTxt = convMode === 'business' ? '💼 Business' : '🎉 Casual';
+  ['freetalkModeBadge','shadowModeBadge','instantModeBadge'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + convMode; }
+  });
+})();
+
 // ===== SCREEN NAV =====
 function showScreen(id) {
+  clearInterval(timerInterval);
+  window.speechSynthesis.cancel();
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   if (id === 'home') renderHomeStats();
@@ -1271,19 +1646,13 @@ function initChat() {
   const area = document.getElementById('chatArea');
   area.innerHTML = '';
   STATE.history = [];
-  addBubble('ai', `Hi! Let's talk about **${currentTopic.replace('_',' ')}** today. What's been going on for you lately? 😊`);
+  const set = TOPIC_SETS[convMode];
+  const t = set.find(t => t.key === currentTopic) || set[0];
+  const opener = convMode === 'business'
+    ? `Hi! Let's talk about **${t.label}** today. What's on your plate lately? 😊`
+    : `Hey! Let's chat about **${t.label}** today. What's new with you? 😄`;
+  addBubble('ai', opener);
 }
-
-document.querySelectorAll('.topic-chip[data-topic]').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.topic-chip[data-topic]').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    currentTopic = chip.dataset.topic;
-    STATE.history = [];
-    document.getElementById('chatArea').innerHTML = '';
-    initChat();
-  });
-});
 
 function addBubble(role, text, feedback) {
   const area = document.getElementById('chatArea');
@@ -1293,8 +1662,19 @@ function addBubble(role, text, feedback) {
   if (feedback) {
     const fb = document.createElement('div');
     fb.className = 'feedback-bubble';
-    const cleanFb = feedback.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    fb.innerHTML = `<div class="feedback-label">💡 Tip <button onclick="addVocab('${feedback.replace(/'/g,"\\'")}','','Free Talk Tip');renderVocab();" style="float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;">+ 保存</button></div><div class="feedback-text">${cleanFb}</div>`;
+    const label = document.createElement('div');
+    label.className = 'feedback-label';
+    label.textContent = '💡 Tip ';
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = '+ 保存';
+    saveBtn.style.cssText = 'float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;';
+    saveBtn.addEventListener('click', () => { addVocab(feedback, '', 'Free Talk Tip'); renderVocab(); });
+    label.appendChild(saveBtn);
+    const body = document.createElement('div');
+    body.className = 'feedback-text';
+    body.textContent = feedback;
+    fb.appendChild(label);
+    fb.appendChild(body);
     area.appendChild(fb);
   } else {
     const bubble = document.createElement('div');
@@ -1322,8 +1702,9 @@ function hideTyping() {
 
 function pushHistory(role, content) {
   STATE.history.push({ role, content });
-  if (STATE.history.length > 4) {
-    STATE.history = STATE.history.slice(-4);
+  // 直近の履歴を長めに保持し、AIが「すでに聞いた質問」を認識して繰り返さないようにする
+  if (STATE.history.length > 10) {
+    STATE.history = STATE.history.slice(-10);
   }
 }
 
@@ -1341,27 +1722,35 @@ function getHistoryForClaude() {
   }));
 }
 
-async function sendToGemini() {
-  const systemPrompt = `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English for the workplace and daily life.
+function buildSystemPrompt() {
+  const toneLine = convMode === 'business'
+    ? "Tone: professional but warm workplace English — like a helpful, friendly colleague or client. Avoid slang; use natural business phrasing."
+    : "Tone: relaxed, casual English between friends — contractions, informal phrasing, light humor are welcome.";
+  return `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English.
 
-Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}
+Topic: ${currentTopicPrompt()}
+${toneLine}
 
 Rules:
 - Keep responses conversational and natural (2-4 sentences max)
 - Ask ONE follow-up question to keep conversation flowing
 - Occasionally give a brief inline tip: highlight one natural phrase in brackets like [Tip: "I'm swamped" sounds more natural]
 - NEVER use bullet points or formal structure
-- Match casual workplace energy`;
+- IMPORTANT: Do not repeat a question, phrase, or example you (the AI) already used earlier in this conversation. Always bring something new — a different angle, a new example, a different follow-up question.`;
+}
+
+async function sendToGemini() {
+  const systemPrompt = buildSystemPrompt();
 
   const requestBody = {
     contents: [...getHistoryForGemini()],
     systemInstruction: { parts: [{ text: systemPrompt }] },
-    generationConfig: { maxOutputTokens: 128, temperature: 0.7 }
+    generationConfig: { maxOutputTokens: 512, temperature: 0.7 }
   };
 
   try {
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/gemini-proxy",
+      proxyUrl("gemini-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1379,8 +1768,7 @@ Rules:
   }
 }
 async function sendToClaude() {
-  const systemPrompt = `You are a friendly English conversation partner. Reply in 1-2 sentences and always end with a question.
-Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
+  const systemPrompt = buildSystemPrompt();
 
   const requestBody = {
     messages: [
@@ -1391,7 +1779,7 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
 
   try {
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/claude-proxy",
+      proxyUrl("claude-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1409,8 +1797,7 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
   }
 }
 async function sendToOpenAI() {
-  const systemPrompt = `You are a friendly English conversation partner helping a Japanese adult practice real-world English. Reply in 2-4 natural sentences and always end with a follow-up question.
-Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
+  const systemPrompt = buildSystemPrompt();
 
   const requestBody = {
     messages: [
@@ -1421,7 +1808,7 @@ Topic: ${TOPIC_PROMPTS[currentTopic] || currentTopic}`;
 
   try {
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/openai-proxy",
+      proxyUrl("openai-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1447,6 +1834,7 @@ const PROVIDER_SENDERS = {
 };
 
 async function sendMessage() {
+  await keysReady;
   if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
     showToast('❌ 設定画面でAPIキーを入力してください');
     return;
@@ -1541,15 +1929,51 @@ function toggleMic() {
 }
 
 // ===== SHADOWING =====
+let shadowQueue = [];
+let shadowPool = [];
+let currentDialogueIdx = 0;
+let currentDialogue = null;
+let lastDialogueIdx = -1;
+let shadowAttemptCount = 0;
+
+// 発音が通じなかった時、相手が現実的に何度も聞き返すためのフレーズ集（段階的に困惑度が上がる）
+const CLARIFY_PHRASES = [
+  { en: "Sorry, could you say that again?", jp: "ごめん、もう一回言ってもらえる？" },
+  { en: "Hmm, I didn't quite catch that. One more time?", jp: "うーん、ちょっと聞き取れなかった。もう一度？" },
+  { en: "Sorry, I'm still not getting it — could you say it a bit slower?", jp: "ごめん、まだよくわからなくて…もう少しゆっくり言ってもらえる？" }
+];
+
+function currentShadowPool() {
+  return convMode === 'business' ? SHADOW_SETS_BUSINESS : SHADOW_SETS_CASUAL;
+}
+
+function nextDialogueIndex() {
+  if (shadowQueue.length === 0) {
+    let fresh = shuffledQueue(shadowPool);
+    if (fresh.length > 1 && fresh[0] === lastDialogueIdx) {
+      [fresh[0], fresh[1]] = [fresh[1], fresh[0]];
+    }
+    shadowQueue = fresh;
+  }
+  return shadowQueue.shift();
+}
+
 function initShadowing() {
+  shadowPool = currentShadowPool();
+  currentDialogueIdx = nextDialogueIndex();
+  lastDialogueIdx = currentDialogueIdx;
+  currentDialogue = shadowPool[currentDialogueIdx].lines;
   currentShadowLine = 0;
+  shadowAttemptCount = 0;
+  document.getElementById('shadowFeedback').innerHTML = '';
   renderShadowScript();
 }
 
 function renderShadowScript() {
   const body = document.getElementById('shadowBody');
-  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">Workplace Dialogue</div>' +
-    SHADOW_SCRIPTS.map((line, i) =>
+  const title = shadowPool[currentDialogueIdx].title;
+  body.innerHTML = '<div class="shadow-script"><div class="shadow-title">' + title + '</div>' +
+    currentDialogue.map((line, i) =>
       `<div class="shadow-line ${i === currentShadowLine ? 'active' : i < currentShadowLine ? 'done' : ''}" onclick="jumpToLine(${i})">
         ${line.en}
         <div class="shadow-jp">${line.jp}</div>
@@ -1557,10 +1981,15 @@ function renderShadowScript() {
     ).join('') + '</div>';
 }
 
-function jumpToLine(i) { currentShadowLine = i; renderShadowScript(); }
+function jumpToLine(i) {
+  currentShadowLine = i;
+  shadowAttemptCount = 0;
+  document.getElementById('shadowFeedback').innerHTML = '';
+  renderShadowScript();
+}
 
 function playCurrentLine() {
-  const line = SHADOW_SCRIPTS[currentShadowLine];
+  const line = currentDialogue[currentShadowLine];
   if (!line) return;
   const utt = new SpeechSynthesisUtterance(line.en);
   utt.lang = 'en-US'; utt.rate = 0.9;
@@ -1575,13 +2004,24 @@ function toggleJP() {
 }
 
 function nextShadowLine() {
-  if (currentShadowLine < SHADOW_SCRIPTS.length - 1) {
+  if (currentShadowLine < currentDialogue.length - 1) {
     currentShadowLine++;
+    shadowAttemptCount = 0;
+    document.getElementById('shadowFeedback').innerHTML = '';
     renderShadowScript();
     playCurrentLine();
   } else {
-    showToast('🎉 スクリプト完了！');
+    showToast('🎉 ダイアログ完了！次の会話へ');
+    setTimeout(() => { initShadowing(); }, 1800);
   }
+}
+
+function showShadowPartnerLine(text, jp, ok) {
+  const el = document.getElementById('shadowFeedback');
+  el.innerHTML = `<div class="shadow-partner-line${ok ? ' ok' : ''}">
+      <div class="shadow-partner-label">${ok ? '✓ Partner' : '🎧 Partner'}</div>
+      ${text}${jp ? `<div class="shadow-jp" style="display:block;margin-top:4px;">${jp}</div>` : ''}
+    </div>`;
 }
 
 function shadowRecord() {
@@ -1593,28 +2033,95 @@ function shadowRecord() {
   const r = new SR();
   r.lang = 'en-US';
   r.onresult = e => {
-    const said = e.results[0][0].transcript.toLowerCase();
-    const target = SHADOW_SCRIPTS[currentShadowLine].en.toLowerCase();
-    const similarity = said.split(' ').filter(w => target.includes(w)).length / target.split(' ').length;
-    showToast(similarity > 0.6 ? '✓ Great shadowing!' : '↻ Try again');
+    const toWords = s => s.toLowerCase().replace(/[^a-z0-9'\s]/g, ' ').split(/\s+/).filter(Boolean);
+    const targetSet = new Set(toWords(currentDialogue[currentShadowLine].en));
+    const saidSet = new Set(toWords(e.results[0][0].transcript));
+    let hit = 0;
+    saidSet.forEach(w => { if (targetSet.has(w)) hit++; });
+    const similarity = targetSet.size ? hit / targetSet.size : 0;
+
+    if (similarity > 0.6) {
+      // 通じた: 現実的に相手が理解したリアクションを返す
+      shadowAttemptCount = 0;
+      showShadowPartnerLine('Got it, thanks!', '伝わったよ、ありがとう！', true);
+      showToast('✓ Great shadowing!');
+    } else {
+      // 発音が聞き取れなかった想定 → 現実の会話のように何度か聞き返す
+      shadowAttemptCount++;
+      if (shadowAttemptCount <= CLARIFY_PHRASES.length) {
+        const phrase = CLARIFY_PHRASES[shadowAttemptCount - 1];
+        showShadowPartnerLine(phrase.en, phrase.jp, false);
+        const utt = new SpeechSynthesisUtterance(phrase.en);
+        utt.lang = 'en-US'; utt.rate = 0.9;
+        window.speechSynthesis.speak(utt);
+        showToast(`↻ 聞き取れなかったみたい (${shadowAttemptCount}/${CLARIFY_PHRASES.length})`);
+      } else {
+        // 3回目以降もダメなら、お手本を示して先に進めるようにする(詰まらせない)
+        const failedLine = currentDialogue[currentShadowLine];
+        addMistake(failedLine.en, failedLine.jp, 'Shadowingで発音が伝わらなかった', 'shadowing');
+        showShadowPartnerLine(
+          `No worries — the target line was: "${failedLine.en}". Let's try the next one.`,
+          'このセリフでした。次に進みましょう。(💹単語帳に記録)',
+          false
+        );
+        showToast('💹 間違えやすいフレーズに記録しました');
+      }
+    }
   };
   r.start();
   showToast('🎤 聴いています...');
 }
 
 // ===== INSTANT =====
+// シャッフルして「同じ問題を連続で繰り返さない」キューを作る
+function shuffledQueue(items) {
+  const arr = items.map((_, i) => i);
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+let instantQueue = [];
+let instantPool = [];
+let instantAnswered = 0;   // このラウンドで回答した数
+let currentInstantQIdx = 0; // instantPool 内での現在の問題インデックス
+let lastInstantQIdx = -1;
+
+function currentInstantPool() {
+  return convMode === 'business' ? INSTANT_QS_BUSINESS : INSTANT_QS_CASUAL;
+}
+
 function initInstant() {
-  instantIndex = 0; instantScore = 0;
+  instantAnswered = 0; instantScore = 0;
+  instantPool = currentInstantPool();
+  instantQueue = shuffledQueue(instantPool);
+  lastInstantQIdx = -1;
   updateInstantScore();
   loadInstantQ();
+}
+
+function nextInstantQuestionIndex() {
+  if (instantQueue.length === 0) {
+    // 全問終わったら再シャッフル。ただし直前の最後の問題が次の先頭に来ないようにする
+    let fresh = shuffledQueue(instantPool);
+    if (fresh.length > 1 && fresh[0] === lastInstantQIdx) {
+      [fresh[0], fresh[1]] = [fresh[1], fresh[0]];
+    }
+    instantQueue = fresh;
+  }
+  return instantQueue.shift();
 }
 
 function loadInstantQ() {
   clearInterval(timerInterval);
   document.getElementById('instantAnswer').classList.remove('show');
-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+  currentInstantQIdx = nextInstantQuestionIndex();
+  lastInstantQIdx = currentInstantQIdx;
+  const q = instantPool[currentInstantQIdx];
   document.getElementById('instantJP').textContent = q.jp;
-  document.getElementById('instantCounter').textContent = `Q ${instantIndex + 1} / ${INSTANT_QS.length}`;
+  document.getElementById('instantCounter').textContent = `Q ${instantAnswered + 1} / ${instantPool.length}`;
   startTimer();
 }
 
@@ -1642,7 +2149,7 @@ function startTimer() {
 
 function showAnswer() {
   clearInterval(timerInterval);
-  const q = INSTANT_QS[instantIndex % INSTANT_QS.length];
+  const q = instantPool[currentInstantQIdx];
   document.getElementById('answerEN').textContent = q.en;
   document.getElementById('answerNote').textContent = q.note;
   document.getElementById('instantAnswer').classList.add('show');
@@ -1655,20 +2162,26 @@ function markAnswer(correct) {
   if (!document.getElementById('instantAnswer').classList.contains('show')) {
     showAnswer(); return;
   }
-  if (correct) instantScore++;
-  instantIndex++;
+  if (correct) {
+    instantScore++;
+  } else {
+    // ✗にしたフレーズは「間違えやすいフレーズ」として単語帳に💹自動記録
+    const q = instantPool[currentInstantQIdx];
+    addMistake(q.en, q.jp, q.note, 'instant');
+  }
+  instantAnswered++;
   updateInstantScore();
-  if (instantIndex >= INSTANT_QS.length) {
-    recordTodayStats(instantScore, INSTANT_QS.length);
-    showToast(`🎉 完了！ ${instantScore}/${INSTANT_QS.length} 正解`);
-    setTimeout(() => { instantIndex = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
+  if (instantAnswered >= instantPool.length) {
+    recordTodayStats(instantScore, instantPool.length);
+    showToast(`🎉 完了！ ${instantScore}/${instantPool.length} 正解`);
+    setTimeout(() => { instantAnswered = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
     return;
   }
   loadInstantQ();
 }
 
 function updateInstantScore() {
-  document.getElementById('instantScore').textContent = `${instantScore} / ${instantIndex}`;
+  document.getElementById('instantScore').textContent = `${instantScore} / ${instantAnswered}`;
 }
 
 // ===== 通訳 (Interpreter) =====
@@ -1737,7 +2250,7 @@ async function sendOnceToGemini(prompt) {
     };
 
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/gemini-proxy",
+      proxyUrl("gemini-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1764,7 +2277,7 @@ async function sendOnceToClaude(prompt) {
     };
 
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/claude-proxy",
+      proxyUrl("claude-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1791,7 +2304,7 @@ async function sendOnceToOpenAI(prompt) {
     };
 
     const response = await fetch(
-      "https://speak-native.arielfortuneoffice.workers.dev/openai-proxy",
+      proxyUrl("openai-proxy"),
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1819,6 +2332,7 @@ const ONESHOT_SENDERS = {
 };
 
 async function callAIOnce(prompt) {
+  await keysReady;
   if (!STATE.geminiKey && !STATE.claudeKey && !STATE.openaiKey) {
     return { error: '設定画面でAPIキーを入力してください' };
   }
@@ -1841,6 +2355,7 @@ async function translateText(text, targetLabel) {
 }
 
 async function sendInterpret() {
+  await keysReady;
   const input = document.getElementById('interpInput');
   const text = input.value.trim();
   if (!text) return;
@@ -1953,11 +2468,65 @@ function saveGasUrl() {
 function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
 function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
 
-function addVocab(en, jp, note) {
+function todayISO() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function addDaysISO(iso, days) {
+  const d = new Date(iso + 'T00:00:00');
+  d.setDate(d.getDate() + days);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+
+// ===== 単語帳の「表計算ロジック」: Leitner式間隔反復 + Jaccard類似度の関連リンク =====
+// quick-ref の spaced review / qr_links の考え方を speak-native 内だけで軽量に採用したもの
+const LEITNER_INTERVALS = [1, 2, 4, 7, 14]; // box 1〜5 に対応する復習間隔(日)
+
+function normalizeVocabItem(v) {
+  // 旧データ(box等が無い)にもデフォルト値を補って表計算ロジックが動くようにする
+  return {
+    en: v.en, jp: v.jp || '', note: v.note || '', date: v.date,
+    box: v.box || 1,
+    nextReview: v.nextReview || todayISO(),
+    mistakeCount: v.mistakeCount || 0,
+    source: v.source || 'manual'
+  };
+}
+
+function addVocab(en, jp, note, opts) {
+  opts = opts || {};
   const list = loadVocab();
-  list.unshift({ en, jp: jp||'', note: note||'', date: new Date().toLocaleDateString('ja-JP') });
+  list.unshift({
+    en, jp: jp || '', note: note || '',
+    date: new Date().toLocaleDateString('ja-JP'),
+    box: 1, nextReview: todayISO(), mistakeCount: 0,
+    source: opts.source || 'manual'
+  });
   saveVocabList(list);
   showToast('📚 単語帳に保存しました');
+}
+
+// Shadowing・瞬間英作文の「間違い」を自動記録し、💹タグ(mistakeCount>0)を付ける。
+// 既存フレーズなら回数を+1してbox(復習間隔)を1に戻し、今日また出るようにする。
+function addMistake(en, jp, note, source) {
+  const list = loadVocab().map(normalizeVocabItem);
+  const key = (en || '').trim().toLowerCase();
+  const idx = list.findIndex(v => v.en.trim().toLowerCase() === key);
+  if (idx >= 0) {
+    list[idx].mistakeCount += 1;
+    list[idx].box = 1;
+    list[idx].nextReview = todayISO();
+    if (jp && !list[idx].jp) list[idx].jp = jp;
+    if (note) list[idx].note = note;
+  } else {
+    list.unshift({
+      en, jp: jp || '', note: note || '',
+      date: new Date().toLocaleDateString('ja-JP'),
+      box: 1, nextReview: todayISO(), mistakeCount: 1,
+      source: source || 'auto'
+    });
+  }
+  saveVocabList(list);
 }
 
 function addVocabManual() {
@@ -1969,25 +2538,95 @@ function addVocabManual() {
   renderVocab();
 }
 
+// --- Jaccard類似度による関連フレーズ検出(quick-refのqr_links方式を単語帳内で採用) ---
+function tokenizeVocabText(text) {
+  return (text || '').toLowerCase()
+    .replace(/[^\wぁ-んァ-ヶ一-龠a-z0-9\s]/g, ' ')
+    .split(/\s+/).filter(Boolean);
+}
+function jaccardSim(tokensA, tokensB) {
+  const a = new Set(tokensA), b = new Set(tokensB);
+  if (a.size === 0 || b.size === 0) return 0;
+  let inter = 0;
+  a.forEach(t => { if (b.has(t)) inter++; });
+  const union = new Set([...a, ...b]).size;
+  return union === 0 ? 0 : inter / union;
+}
+function findRelatedVocab(item, list, excludeIdx) {
+  const tokensA = tokenizeVocabText(item.en + ' ' + item.jp + ' ' + item.note);
+  return list
+    .map((v, i) => i === excludeIdx ? null : { i, v, score: jaccardSim(tokensA, tokenizeVocabText(v.en + ' ' + v.jp + ' ' + v.note)) })
+    .filter(o => o && o.score >= 0.2)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+}
+
+// --- Leitner式 間隔反復ロジック(復習結果の反映) ---
+function reviewVocabResult(idx, correct) {
+  const list = loadVocab().map(normalizeVocabItem);
+  const v = list[idx];
+  if (!v) return;
+  if (correct) {
+    v.box = Math.min(v.box + 1, LEITNER_INTERVALS.length);
+  } else {
+    v.box = 1;
+    v.mistakeCount += 1;
+  }
+  v.nextReview = addDaysISO(todayISO(), LEITNER_INTERVALS[v.box - 1]);
+  saveVocabList(list);
+}
+
+function dueVocabIndexes() {
+  const list = loadVocab().map(normalizeVocabItem);
+  const today = todayISO();
+  return list.map((v, i) => (v.nextReview <= today) ? i : -1).filter(i => i >= 0);
+}
+
+let vocabMistakeFilter = false;
+function toggleMistakeFilter() {
+  vocabMistakeFilter = !vocabMistakeFilter;
+  document.getElementById('mistakeFilterBtn').classList.toggle('active', vocabMistakeFilter);
+  renderVocab();
+}
+
 // ===== RENDER VOCAB =====
 function renderVocab() {
-  const list = loadVocab();
-  const body = document.getElementById('vocabBody');
+  const rawList = loadVocab();
+  const list = rawList.map(normalizeVocabItem);
   document.getElementById('vocabCount').textContent = list.length + ' words';
-  if (list.length === 0) {
-    body.innerHTML = '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
+
+  const dueCount = dueVocabIndexes().length;
+  document.getElementById('reviewDueCount').textContent = dueCount > 0 ? `(${dueCount})` : '';
+
+  const container = document.getElementById('vocabList');
+  const shown = vocabMistakeFilter ? list.map((v,i)=>({v,i})).filter(o => o.v.mistakeCount > 0) : list.map((v,i)=>({v,i}));
+
+  if (shown.length === 0) {
+    container.innerHTML = vocabMistakeFilter
+      ? '<div class="vocab-empty">💹 間違えやすいフレーズはまだありません。</div>'
+      : '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
     return;
   }
-  body.innerHTML = list.map((v, i) => `
+
+  container.innerHTML = shown.map(({v, i}) => {
+    const related = findRelatedVocab(v, list, i);
+    const relatedHtml = related.length
+      ? `<div class="vocab-related">${related.map(r => `<span class="vocab-related-chip">🔗 ${escapeHtml(r.v.en)}</span>`).join('')}</div>`
+      : '';
+    const mistakeBadge = v.mistakeCount > 0 ? `<span class="vocab-mistake-badge">💹 ${v.mistakeCount}回</span>` : '';
+    const dueBadge = v.nextReview <= todayISO() ? `<span class="vocab-review-badge">📅 復習可</span>` : '';
+    return `
     <div class="vocab-card">
-      <div class="vocab-en">${v.en}</div>
-      ${v.jp ? `<div class="vocab-jp">${v.jp}</div>` : ''}
-      ${v.note ? `<div class="vocab-note">${v.note}</div>` : ''}
+      <div class="vocab-en">${escapeHtml(v.en)}${mistakeBadge}${dueBadge}</div>
+      ${v.jp ? `<div class="vocab-jp">${escapeHtml(v.jp)}</div>` : ''}
+      ${v.note ? `<div class="vocab-note">${escapeHtml(v.note)}</div>` : ''}
+      ${relatedHtml}
       <div class="vocab-meta">
         <div class="vocab-date">${v.date}</div>
         <button class="vocab-del" onclick="deleteVocab(${i})">✕</button>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function deleteVocab(i) {
@@ -1995,6 +2634,59 @@ function deleteVocab(i) {
   list.splice(i, 1);
   saveVocabList(list);
   renderVocab();
+}
+
+// ===== VOCAB REVIEW (Leitnerで「今日出すべき」項目だけを回す) =====
+let reviewQueue = [];
+let reviewIdx = 0;
+let reviewCorrectCount = 0;
+
+function startVocabReview() {
+  const due = dueVocabIndexes();
+  if (due.length === 0) { showToast('✓ 今日の復習はありません'); return; }
+  reviewQueue = due;
+  reviewIdx = 0; reviewCorrectCount = 0;
+  showScreen('vocabreview');
+  loadReviewCard();
+}
+
+function loadReviewCard() {
+  document.getElementById('reviewAnswer').classList.remove('show');
+  const list = loadVocab().map(normalizeVocabItem);
+  const v = list[reviewQueue[reviewIdx]];
+  document.getElementById('reviewCounter').textContent = `${reviewIdx + 1} / ${reviewQueue.length}`;
+  document.getElementById('reviewJP').textContent = v.jp || v.en;
+  document.getElementById('reviewPromptHint').textContent = v.jp ? '英語で言ってみよう' : 'この表現を思い出せる？';
+}
+
+function revealReviewAnswer() {
+  const list = loadVocab().map(normalizeVocabItem);
+  const v = list[reviewQueue[reviewIdx]];
+  document.getElementById('reviewEN').textContent = v.en;
+  document.getElementById('reviewNote').textContent = v.note || '';
+  const badge = document.getElementById('reviewMistakeBadge');
+  if (v.mistakeCount > 0) {
+    badge.style.display = 'inline-block';
+    badge.textContent = `💹 これまで${v.mistakeCount}回間違い`;
+  } else {
+    badge.style.display = 'none';
+  }
+  document.getElementById('reviewAnswer').classList.add('show');
+}
+
+function markReview(correct) {
+  if (!document.getElementById('reviewAnswer').classList.contains('show')) {
+    revealReviewAnswer(); return;
+  }
+  reviewVocabResult(reviewQueue[reviewIdx], correct);
+  if (correct) reviewCorrectCount++;
+  reviewIdx++;
+  if (reviewIdx >= reviewQueue.length) {
+    showToast(`🎉 復習完了！ ${reviewCorrectCount}/${reviewQueue.length}`);
+    setTimeout(() => showScreen('vocab'), 1500);
+    return;
+  }
+  loadReviewCard();
 }
 
 // ===== STATS =====
@@ -2070,7 +2762,11 @@ async function syncToSheets() {
     action: 'english_log',
     streak,
     history: hist,
-    vocab: vocab.map(v => ({ en: v.en, jp: v.jp, note: v.note, date: v.date })),
+    vocab: vocab.map(normalizeVocabItem).map(v => ({
+      en: v.en, jp: v.jp, note: v.note, date: v.date,
+      box: v.box, nextReview: v.nextReview, mistakeCount: v.mistakeCount, source: v.source,
+      mistakeTag: v.mistakeCount > 0 ? '💹' : ''
+    })),
     timestamp: new Date().toISOString(),
     provider: STATE.aiProvider
   };
