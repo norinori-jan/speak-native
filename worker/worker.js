@@ -8,7 +8,7 @@
 //   APP_TOKEN       : (任意) 設定するとヘッダ X-App-Token が一致しないリクエストを拒否 (Secret)
 //   CLAUDE_MODEL / OPENAI_MODEL : (任意) モデル名の上書き
 
-const GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
+const GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent";
 const CLAUDE_ENDPOINT = "https://api.anthropic.com/v1/messages";
 const OPENAI_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
