@@ -1,4 +1,3 @@
-Speak native 暗号版
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,11 +18,9 @@ Speak native 暗号版
 <script>
   // --- PWA Service Worker ---
   if ('serviceWorker' in navigator) {
-    // サービスワーカー：ドット始まりに修正（あなたのコードを統合）
     navigator.serviceWorker.register('./pwa/service-worker.js')
       .catch(err => console.log('SW registration failed:', err));
   }
-
 </script>
 
 <style>
@@ -409,6 +406,19 @@ Speak native 暗号版
     font-family: 'DM Mono', monospace;
   }
 
+  .bubble-replay-btn {
+    width: 26px; height: 26px;
+    border-radius: 8px;
+    border: 1px solid rgba(126,184,255,0.25);
+    background: rgba(126,184,255,0.08);
+    color: var(--accent3);
+    font-size: 12px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .bubble-replay-btn:active { transform: scale(0.92); }
+
   .feedback-bubble {
     background: rgba(240,160,90,0.08);
     border: 1px solid rgba(240,160,90,0.25);
@@ -630,6 +640,20 @@ Speak native 暗号版
     color: var(--bg);
   }
   .instant-btn:active { transform: scale(0.97); }
+
+  .instant-log-item {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 12px 14px; margin-bottom: 8px; text-align: left;
+  }
+  .instant-log-jp { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+  .instant-log-user { font-size: 14px; color: var(--text); margin-bottom: 2px; }
+  .instant-log-user.empty { color: var(--text-muted); font-style: italic; }
+  .instant-log-model { font-size: 12px; color: var(--accent3); }
+  .instant-log-meta { display:flex; justify-content:space-between; align-items:center; margin-top:6px; }
+  .instant-log-date { font-size: 10px; color: var(--text-muted); font-family: 'DM Mono', monospace; }
+  .instant-log-result { font-size: 11px; font-family: 'DM Mono', monospace; }
+  .instant-log-result.ok { color: var(--accent); }
+  .instant-log-result.ng { color: var(--danger); }
 
   /* ===== SHADOWING SCREEN ===== */
   #shadowing { background: var(--bg); }
@@ -984,7 +1008,8 @@ Speak native 暗号版
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
         <button class="provider-tab active" data-provider="gemini" onclick="switchProvider('gemini')">Gemini</button>
         <button class="provider-tab" data-provider="claude" onclick="switchProvider('claude')">Claude</button>
-        <button class="provider-tab" data-provider="openai" onclick="switchProvider('openai')">OpenAI</button>
+        <!-- OpenAI: クレジット切れ・個人プロジェクトでキー発行不可のため保留(2026-09-29)。コードは残し、選択肢だけ非表示にして誤操作を防止 -->
+        <button class="provider-tab" data-provider="openai" onclick="switchProvider('openai')" style="display:none;">OpenAI</button>
       </div>
       <div style="padding: 8px; background: rgba(92,239,176,0.05); border: 1px solid rgba(92,239,176,0.15); border-radius: 8px;">
         <div style="font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace;">✓ 現在使用中: <span id="currentProvider">Gemini</span></div>
@@ -1028,6 +1053,7 @@ Speak native 暗号版
     <button class="back-btn" onclick="showScreen('home')">‹</button>
     <div class="nav-title">Free Talk</div>
     <div class="conv-mode-badge" id="freetalkModeBadge"></div>
+    <button class="mic-btn" id="freetalkTTSBtn" style="width:32px;height:32px;font-size:14px;" onclick="toggleFreetalkTTS()" title="AIの発音を読み上げ">🔊</button>
     <div class="nav-badge green" id="talkStatus">Ready</div>
   </div>
   <div class="topic-bar" id="topicBar"></div>
@@ -1078,6 +1104,8 @@ Speak native 暗号版
       </svg>
       <div class="timer-num" id="timerNum">3</div>
     </div>
+    <textarea class="text-input" id="instantUserAnswer" placeholder="ここに英語で書いてみる(紙のメモ代わり)..." rows="2"
+      style="width:100%;" oninput="autoResize(this)"></textarea>
     <div class="instant-answer" id="instantAnswer">
       <div class="answer-label">Model Answer</div>
       <div class="answer-en" id="answerEN"></div>
@@ -1087,6 +1115,8 @@ Speak native 暗号版
       <button class="instant-btn" onclick="markAnswer(false)">✗ 惜しい</button>
       <button class="instant-btn primary" onclick="markAnswer(true)">✓ 言えた！</button>
     </div>
+    <button class="shadow-btn" style="width:100%;" onclick="toggleInstantLog()">📝 これまでの解答ログ <span id="instantLogCount"></span></button>
+    <div id="instantLogPanel" style="display:none;width:100%;max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch;"></div>
   </div>
 </div>
 
@@ -1155,6 +1185,7 @@ Speak native 暗号版
       <div class="review-en" id="reviewEN"></div>
       <div class="review-note" id="reviewNote"></div>
       <span class="vocab-mistake-badge" id="reviewMistakeBadge" style="display:none;"></span>
+      <button class="bubble-replay-btn" style="margin-top:8px;width:auto;padding:6px 14px;font-size:12px;gap:6px;" onclick="replayReviewAnswer()" title="もう一度聞く">🔊 もう一度聞く</button>
     </div>
     <div class="review-btns">
       <button class="instant-btn" onclick="markReview(false)">✗ 惜しい</button>
@@ -1247,7 +1278,6 @@ function setConvMode(mode) {
     const el = document.getElementById(id);
     if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + mode; }
   });
-  // モードが変わったら各モードの状態をリセットして、新しいモードのコンテンツで作り直す
   renderTopicBar();
   currentTopic = TOPIC_SETS[mode][0].key;
   document.querySelectorAll('.topic-chip[data-topic]').forEach(c =>
@@ -1297,7 +1327,6 @@ function currentTopicPrompt() {
   return t ? t.prompt : set[0].prompt;
 }
 
-// トピックバーはモード切替のたびに作り直すので、クリックはイベント委譲で受ける
 document.getElementById('topicBar').addEventListener('click', (e) => {
   const chip = e.target.closest('.topic-chip[data-topic]');
   if (!chip) return;
@@ -1428,7 +1457,6 @@ function updateSettingsGear() {
 }
 
 // ===== CLOUDFLARE WORKER (AIプロキシ) =====
-// 6か所に直書きされていたURLを1か所に集約。設定画面で変更でき、空なら既定値を使う。
 const DEFAULT_PROXY_BASE = "https://speak-native.arielfortuneoffice.workers.dev";
 function proxyBase() {
   return (localStorage.getItem('dei_proxyBase') || DEFAULT_PROXY_BASE).replace(/\/+$/, '');
@@ -1448,11 +1476,7 @@ function saveProxyBase() {
   showToast('✓ Worker URLを保存しました');
 }
 
-// ===== KEY VAULT (APIキーの暗号化保存) =====
-// crypto-vault と同水準のパラメータ(AES-GCM 256bit / iv 12byte / 暗号化のたびに新規iv)。
-// 鍵は端末ごとに生成する「取り出せない(non-extractable)」CryptoKey で、IndexedDBに保存。
-// → 一度保存すればPIN入力なしで自動復号。localStorageには暗号文(envelope)しか残らない。
-// envelope形式は crypto-core.v1.js に合わせた項目(v, keySource, alg, kdf, iv, ciphertext)。
+// ===== KEY VAULT (合言葉の暗号化保存) =====
 const KeyVault = (() => {
   const DB_NAME = 'dei_keyvault', STORE = 'keys', KEY_ID = 'device-aes-gcm-v1';
   const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
@@ -1487,7 +1511,7 @@ const KeyVault = (() => {
   }
   async function encrypt(plain) {
     const key = await getDeviceKey();
-    const iv = crypto.getRandomValues(new Uint8Array(12)); // 毎回新規iv
+    const iv = crypto.getRandomValues(new Uint8Array(12));
     const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(plain));
     return JSON.stringify({ v: 1, keySource: 'device', alg: 'AES-GCM-256', kdf: null, iv: b64(iv), ciphertext: b64(ct) });
   }
@@ -1510,12 +1534,11 @@ function setTokenStatus(text, ok) {
   el.className = 'api-status' + (ok ? ' ok' : '');
 }
 
-// 保存: 暗号化してlocalStorageへ。平文は保存しない(入力欄もクリア)
 async function saveAppToken() {
   const v = document.getElementById('tokenInput').value.trim();
   if (!v) { showToast('❌ 合言葉を入力してください'); return; }
   if (!KeyVault.available()) {
-    STATE.appToken = v; // 暗号化不可の環境では今回のセッション中のみ保持
+    STATE.appToken = v;
     setTokenStatus('⚠ この環境では暗号化保存できないため今回のみ有効', false);
     showToast('⚠ 暗号化非対応環境: 保存されません');
     updateSettingsGear();
@@ -1534,7 +1557,6 @@ async function saveAppToken() {
   }
 }
 
-// 起動時: 暗号化ストアから復号。旧版で保存したAPIキー(平文・暗号文)は端末から削除する
 async function loadSecureKeys() {
   ['gemini', 'claude', 'openai'].forEach(p => {
     localStorage.removeItem(`dei_${p}Key`);
@@ -1548,7 +1570,6 @@ async function loadSecureKeys() {
       setTokenStatus('✓ 合言葉設定済み(暗号化)', true);
     }
   } catch (e) {
-    // 端末鍵が消えた等で復号できない場合は再入力を促す(壊れた暗号文は破棄)
     console.warn('token decrypt failed', e);
     localStorage.removeItem(TOKEN_LS_ENC);
     setTokenStatus('⚠ 合言葉を復号できません。再入力してください', false);
@@ -1581,11 +1602,15 @@ renderTopicBar();
     if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + convMode; }
   });
 })();
+(function initFreetalkTTSBtn() {
+  const btn = document.getElementById('freetalkTTSBtn');
+  if (btn) btn.textContent = freetalkTTSEnabled ? '🔊' : '🔇';
+})();
 
 // ===== SCREEN NAV =====
 function showScreen(id) {
   clearInterval(timerInterval);
-  window.speechSynthesis.cancel();
+  window.speechSynthesis && window.speechSynthesis.cancel();
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   if (id === 'home') renderHomeStats();
@@ -1601,6 +1626,7 @@ function initChat() {
   const area = document.getElementById('chatArea');
   area.innerHTML = '';
   STATE.history = [];
+  window.speechSynthesis && window.speechSynthesis.cancel();
   const set = TOPIC_SETS[convMode];
   const t = set.find(t => t.key === currentTopic) || set[0];
   const opener = convMode === 'business'
@@ -1634,11 +1660,42 @@ function addBubble(role, text, feedback) {
   } else {
     const bubble = document.createElement('div');
     bubble.className = `bubble ${role}`;
-    bubble.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
+    const cleanText = text.replace(/\*\*(.*?)\*\*/g, '$1');
+    bubble.textContent = cleanText;
     wrap.appendChild(bubble);
+    if (role === 'ai' && cleanText.trim()) {
+      const replay = document.createElement('button');
+      replay.className = 'bubble-replay-btn';
+      replay.textContent = '🔊';
+      replay.title = 'もう一度聞く';
+      replay.onclick = () => speakEnglish(cleanText);
+      wrap.appendChild(replay);
+      if (freetalkTTSEnabled) speakEnglish(cleanText);
+    }
     area.appendChild(wrap);
   }
   area.scrollTop = area.scrollHeight;
+}
+
+// ===== Free Talk 読み上げ(TTS) =====
+let freetalkTTSEnabled = localStorage.getItem('dei_freetalkTTS') !== 'off';
+function speakEnglish(text) {
+  if (!text || !('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'en-US'; utt.rate = 0.95;
+  window.speechSynthesis.speak(utt);
+}
+function toggleFreetalkTTS() {
+  freetalkTTSEnabled = !freetalkTTSEnabled;
+  localStorage.setItem('dei_freetalkTTS', freetalkTTSEnabled ? 'on' : 'off');
+  if (!freetalkTTSEnabled) window.speechSynthesis.cancel();
+  const btn = document.getElementById('freetalkTTSBtn');
+  if (btn) {
+    btn.textContent = freetalkTTSEnabled ? '🔊' : '🔇';
+    btn.classList.toggle('recording', false);
+  }
+  showToast(freetalkTTSEnabled ? '🔊 自動読み上げON' : '🔇 自動読み上げOFF');
 }
 
 function showTyping() {
@@ -1657,7 +1714,6 @@ function hideTyping() {
 
 function pushHistory(role, content) {
   STATE.history.push({ role, content });
-  // 直近の履歴を長めに保持し、AIが「すでに聞いた質問」を認識して繰り返さないようにする
   if (STATE.history.length > 10) {
     STATE.history = STATE.history.slice(-10);
   }
@@ -1781,7 +1837,6 @@ async function sendToOpenAI() {
   }
 }
 
-// プロバイダー名 → 送信関数・保存済みキーの対応表
 const PROVIDER_SENDERS = {
   gemini: { send: sendToGemini, hasKey: () => !!STATE.appToken, label: 'Gemini' },
   claude: { send: sendToClaude, hasKey: () => !!STATE.appToken, label: 'Claude' },
@@ -1891,7 +1946,6 @@ let currentDialogue = null;
 let lastDialogueIdx = -1;
 let shadowAttemptCount = 0;
 
-// 発音が通じなかった時、相手が現実的に何度も聞き返すためのフレーズ集（段階的に困惑度が上がる）
 const CLARIFY_PHRASES = [
   { en: "Sorry, could you say that again?", jp: "ごめん、もう一回言ってもらえる？" },
   { en: "Hmm, I didn't quite catch that. One more time?", jp: "うーん、ちょっと聞き取れなかった。もう一度？" },
@@ -1996,12 +2050,10 @@ function shadowRecord() {
     const similarity = targetSet.size ? hit / targetSet.size : 0;
 
     if (similarity > 0.6) {
-      // 通じた: 現実的に相手が理解したリアクションを返す
       shadowAttemptCount = 0;
       showShadowPartnerLine('Got it, thanks!', '伝わったよ、ありがとう！', true);
       showToast('✓ Great shadowing!');
     } else {
-      // 発音が聞き取れなかった想定 → 現実の会話のように何度か聞き返す
       shadowAttemptCount++;
       if (shadowAttemptCount <= CLARIFY_PHRASES.length) {
         const phrase = CLARIFY_PHRASES[shadowAttemptCount - 1];
@@ -2011,7 +2063,6 @@ function shadowRecord() {
         window.speechSynthesis.speak(utt);
         showToast(`↻ 聞き取れなかったみたい (${shadowAttemptCount}/${CLARIFY_PHRASES.length})`);
       } else {
-        // 3回目以降もダメなら、お手本を示して先に進めるようにする(詰まらせない)
         const failedLine = currentDialogue[currentShadowLine];
         addMistake(failedLine.en, failedLine.jp, 'Shadowingで発音が伝わらなかった', 'shadowing');
         showShadowPartnerLine(
@@ -2028,7 +2079,6 @@ function shadowRecord() {
 }
 
 // ===== INSTANT =====
-// シャッフルして「同じ問題を連続で繰り返さない」キューを作る
 function shuffledQueue(items) {
   const arr = items.map((_, i) => i);
   for (let i = arr.length - 1; i > 0; i--) {
@@ -2040,8 +2090,8 @@ function shuffledQueue(items) {
 
 let instantQueue = [];
 let instantPool = [];
-let instantAnswered = 0;   // このラウンドで回答した数
-let currentInstantQIdx = 0; // instantPool 内での現在の問題インデックス
+let instantAnswered = 0;
+let currentInstantQIdx = 0;
 let lastInstantQIdx = -1;
 
 function currentInstantPool() {
@@ -2055,11 +2105,13 @@ function initInstant() {
   lastInstantQIdx = -1;
   updateInstantScore();
   loadInstantQ();
+  updateInstantLogCount();
+  const panel = document.getElementById('instantLogPanel');
+  if (panel) panel.style.display = 'none';
 }
 
 function nextInstantQuestionIndex() {
   if (instantQueue.length === 0) {
-    // 全問終わったら再シャッフル。ただし直前の最後の問題が次の先頭に来ないようにする
     let fresh = shuffledQueue(instantPool);
     if (fresh.length > 1 && fresh[0] === lastInstantQIdx) {
       [fresh[0], fresh[1]] = [fresh[1], fresh[0]];
@@ -2072,6 +2124,9 @@ function nextInstantQuestionIndex() {
 function loadInstantQ() {
   clearInterval(timerInterval);
   document.getElementById('instantAnswer').classList.remove('show');
+  const userInput = document.getElementById('instantUserAnswer');
+  userInput.value = '';
+  userInput.style.height = 'auto';
   currentInstantQIdx = nextInstantQuestionIndex();
   lastInstantQIdx = currentInstantQIdx;
   const q = instantPool[currentInstantQIdx];
@@ -2117,12 +2172,14 @@ function markAnswer(correct) {
   if (!document.getElementById('instantAnswer').classList.contains('show')) {
     showAnswer(); return;
   }
+  const q = instantPool[currentInstantQIdx];
+  const userAnswer = document.getElementById('instantUserAnswer').value.trim();
+  saveInstantLogEntry(q, userAnswer, correct);
   if (correct) {
     instantScore++;
   } else {
-    // ✗にしたフレーズは「間違えやすいフレーズ」として単語帳に💹自動記録
-    const q = instantPool[currentInstantQIdx];
-    addMistake(q.en, q.jp, q.note, 'instant');
+    const note = userAnswer ? `${q.note} / 自分の解答: ${userAnswer}` : q.note;
+    addMistake(q.en, q.jp, note, 'instant');
   }
   instantAnswered++;
   updateInstantScore();
@@ -2139,11 +2196,50 @@ function updateInstantScore() {
   document.getElementById('instantScore').textContent = `${instantScore} / ${instantAnswered}`;
 }
 
+// ===== 手入力の解答ログ =====
+function loadInstantLog() { return JSON.parse(localStorage.getItem('dei_instantLog') || '[]'); }
+function saveInstantLogEntry(q, userAnswer, correct) {
+  const log = loadInstantLog();
+  log.unshift({
+    jp: q.jp, userAnswer, modelAnswer: q.en, correct,
+    date: new Date().toLocaleString('ja-JP', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+  });
+  localStorage.setItem('dei_instantLog', JSON.stringify(log.slice(0, 300)));
+  updateInstantLogCount();
+}
+function updateInstantLogCount() {
+  const el = document.getElementById('instantLogCount');
+  if (el) { const n = loadInstantLog().length; el.textContent = n ? `(${n})` : ''; }
+}
+function toggleInstantLog() {
+  const panel = document.getElementById('instantLogPanel');
+  const willShow = panel.style.display === 'none';
+  panel.style.display = willShow ? 'block' : 'none';
+  if (willShow) renderInstantLog();
+}
+function renderInstantLog() {
+  const panel = document.getElementById('instantLogPanel');
+  const log = loadInstantLog();
+  if (log.length === 0) {
+    panel.innerHTML = '<div class="vocab-empty" style="padding:20px;">まだ解答ログがありません。</div>';
+    return;
+  }
+  panel.innerHTML = log.map(l => `
+    <div class="instant-log-item">
+      <div class="instant-log-jp">${escapeHtml(l.jp)}</div>
+      <div class="instant-log-user${l.userAnswer ? '' : ' empty'}">${escapeHtml(l.userAnswer) || '(手入力なし)'}</div>
+      <div class="instant-log-model">Model: ${escapeHtml(l.modelAnswer)}</div>
+      <div class="instant-log-meta">
+        <div class="instant-log-date">${escapeHtml(l.date)}</div>
+        <div class="instant-log-result ${l.correct ? 'ok' : 'ng'}">${l.correct ? '✓ 言えた' : '✗ 惜しい'}</div>
+      </div>
+    </div>`).join('');
+}
+
 // ===== 通訳 (Interpreter) =====
-// A: 双方向(bidirectional) / B: 一方向(oneway) / C: 電車モード(text, 声を出さない)
 let interpMode = 'bidirectional';
-let interpDirection = 'ja-en';   // oneway用: 'ja-en' | 'en-ja'
-let interpSpeaker = 'ja';        // bidirectional用: 'ja' | 'en'
+let interpDirection = 'ja-en';
+let interpSpeaker = 'ja';
 let interpRecognition = null;
 let interpRecording = false;
 
@@ -2195,8 +2291,6 @@ function hideInterpTyping() {
   if (el) el.remove();
 }
 
-// 会話用(sendToXxx)とは別に、翻訳など単発の指示に使うワンショット呼び出し。
-// STATE.history を汚さずに済むので、通訳モードの裏でFree Talkの会話履歴に影響しない。
 async function sendOnceToGemini(prompt) {
   try {
     const requestBody = {
@@ -2329,10 +2423,9 @@ async function sendInterpret() {
     if (interpSpeaker === 'ja') { targetLabel = 'English'; targetVoiceLang = 'en-US'; }
     else { targetLabel = 'Japanese'; targetVoiceLang = 'ja-JP'; }
   } else {
-    // 電車モード: 日本語が含まれていれば英訳、それ以外は和訳と推定
     const hasJapanese = /[\u3040-\u30ff\u3400-\u9fff]/.test(text);
     targetLabel = hasJapanese ? 'English' : 'Japanese';
-    targetVoiceLang = null; // 音声は出さない
+    targetVoiceLang = null;
   }
 
   addInterpBubble('user', text);
@@ -2433,12 +2526,9 @@ function addDaysISO(iso, days) {
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
 
-// ===== 単語帳の「表計算ロジック」: Leitner式間隔反復 + Jaccard類似度の関連リンク =====
-// quick-ref の spaced review / qr_links の考え方を speak-native 内だけで軽量に採用したもの
-const LEITNER_INTERVALS = [1, 2, 4, 7, 14]; // box 1〜5 に対応する復習間隔(日)
+const LEITNER_INTERVALS = [1, 2, 4, 7, 14];
 
 function normalizeVocabItem(v) {
-  // 旧データ(box等が無い)にもデフォルト値を補って表計算ロジックが動くようにする
   return {
     en: v.en, jp: v.jp || '', note: v.note || '', date: v.date,
     box: v.box || 1,
@@ -2461,8 +2551,6 @@ function addVocab(en, jp, note, opts) {
   showToast('📚 単語帳に保存しました');
 }
 
-// Shadowing・瞬間英作文の「間違い」を自動記録し、💹タグ(mistakeCount>0)を付ける。
-// 既存フレーズなら回数を+1してbox(復習間隔)を1に戻し、今日また出るようにする。
 function addMistake(en, jp, note, source) {
   const list = loadVocab().map(normalizeVocabItem);
   const key = (en || '').trim().toLowerCase();
@@ -2493,7 +2581,6 @@ function addVocabManual() {
   renderVocab();
 }
 
-// --- Jaccard類似度による関連フレーズ検出(quick-refのqr_links方式を単語帳内で採用) ---
 function tokenizeVocabText(text) {
   return (text || '').toLowerCase()
     .replace(/[^\wぁ-んァ-ヶ一-龠a-z0-9\s]/g, ' ')
@@ -2516,7 +2603,6 @@ function findRelatedVocab(item, list, excludeIdx) {
     .slice(0, 3);
 }
 
-// --- Leitner式 間隔反復ロジック(復習結果の反映) ---
 function reviewVocabResult(idx, correct) {
   const list = loadVocab().map(normalizeVocabItem);
   const v = list[idx];
@@ -2591,7 +2677,7 @@ function deleteVocab(i) {
   renderVocab();
 }
 
-// ===== VOCAB REVIEW (Leitnerで「今日出すべき」項目だけを回す) =====
+// ===== VOCAB REVIEW =====
 let reviewQueue = [];
 let reviewIdx = 0;
 let reviewCorrectCount = 0;
@@ -2627,6 +2713,11 @@ function revealReviewAnswer() {
     badge.style.display = 'none';
   }
   document.getElementById('reviewAnswer').classList.add('show');
+  speakEnglish(v.en);
+}
+function replayReviewAnswer() {
+  const el = document.getElementById('reviewEN');
+  if (el && el.textContent) speakEnglish(el.textContent);
 }
 
 function markReview(correct) {
@@ -2703,9 +2794,6 @@ function renderStats() {
 }
 
 // ===== GAS SYNC =====
-// バグ修正: 以前はここでURLがハードコードされ、設定画面で保存したgasUrlが
-// 無視されて開発者個人のエンドポイントに送信され続けていた。
-// 保存済みのgasUrl(localStorage: dei_gasUrl)を使うように修正。
 async function syncToSheets() {
   if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
   document.getElementById('syncLog').textContent = '同期中...';
