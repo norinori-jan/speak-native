@@ -1246,6 +1246,7 @@ let showJP = false;
 let instantScore = 0;
 let timerInterval = null;
 let timerVal = 3;
+let freetalkTTSEnabled = localStorage.getItem('dei_freetalkTTS') !== 'off'; // 使用箇所より前に宣言(TDZ対策)
 
 // ===== XSS対策: innerHTMLに入れる文字列は必ずこれを通す =====
 function escapeHtml(s) {
@@ -1678,7 +1679,6 @@ function addBubble(role, text, feedback) {
 }
 
 // ===== Free Talk 読み上げ(TTS) =====
-let freetalkTTSEnabled = localStorage.getItem('dei_freetalkTTS') !== 'off';
 function speakEnglish(text) {
   if (!text || !('speechSynthesis' in window)) return;
   window.speechSynthesis.cancel();
