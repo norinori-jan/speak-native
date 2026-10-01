@@ -1928,8 +1928,23 @@ function toggleMic() {
     document.getElementById('micBtn').classList.add('recording');
   };
   recognition.onresult = e => {
-    document.getElementById('msgInput').value = e.results[0][0].transcript;
+    const transcript = e.results[0][0].transcript;
+    document.getElementById('msgInput').value = transcript;
     autoResize(document.getElementById('msgInput'));
+    // 修正: 認識結果を入力欄に入れるだけで止まっていたため、そのまま送信まで繋げる
+    if (transcript.trim()) sendMessage();
+  };
+  recognition.onerror = (e) => {
+    console.error('SpeechRecognition error:', e.error);
+    isRecording = false;
+    document.getElementById('micBtn').classList.remove('recording');
+    const msgs = {
+      'not-allowed': '🎤 マイクの使用が許可されていません(ブラウザの設定を確認)',
+      'no-speech': '🎤 音声が検出されませんでした',
+      'audio-capture': '🎤 マイクが見つかりません',
+      'network': '🎤 音声認識のネットワークエラー'
+    };
+    showToast(msgs[e.error] || `🎤 音声認識エラー: ${e.error}`);
   };
   recognition.onend = () => {
     isRecording = false;
