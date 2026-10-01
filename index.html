@@ -1,18 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Speak Native">
 <meta name="theme-color" content="#0e0f11">
-<meta name="description" content="日本語を考えずに英語が出てくるようになるアプリ。Claude API + Gemini Flashで高速英語会話練習">
+<meta name="description" content="譌･譛ｬ隱槭ｒ閠・∴縺壹↓闍ｱ隱槭′蜃ｺ縺ｦ縺上ｋ繧医≧縺ｫ縺ｪ繧九い繝励Μ縲・laude API + Gemini Flash縺ｧ鬮倬溯恭隱樔ｼ夊ｩｱ邱ｴ鄙・>
 <title>Speak Native</title>
 
 <link rel="manifest" href="./pwa/manifest.json">
 <link rel="apple-touch-icon" href="./assets/images/icon-192.png">
+<link rel="icon" href="./favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <script>
@@ -918,80 +920,80 @@
       <div class="logo-area">
         <div class="logo-tag">English Immersion</div>
         <h1 class="logo-title">Speak like<br><em>you think</em></h1>
-        <p class="logo-sub">日本語を考えずに英語が出てくるようになるアプリ</p>
+        <p class="logo-sub">譌･譛ｬ隱槭ｒ閠・∴縺壹↓闍ｱ隱槭′蜃ｺ縺ｦ縺上ｋ繧医≧縺ｫ縺ｪ繧九い繝励Μ</p>
       </div>
-      <button class="settings-gear" id="settingsGear" onclick="showScreen('settings')">⚙️</button>
+      <button class="settings-gear" id="settingsGear" onclick="showScreen('settings')">笞呻ｸ・/button>
     </div>
 
     <div class="stats-row home-stats-row" id="homeStatsRow">
       <div class="stat-card">
         <div class="stat-num green" id="homeStatStreak">-</div>
-        <div class="stat-label">🔥 連続日数</div>
+        <div class="stat-label">櫨 騾｣邯壽律謨ｰ</div>
       </div>
       <div class="stat-card">
         <div class="stat-num orange" id="homeStatTotal">-</div>
-        <div class="stat-label">⚡ 総問題数</div>
+        <div class="stat-label">笞｡ 邱丞撫鬘梧焚</div>
       </div>
       <div class="stat-card">
         <div class="stat-num purple" id="homeStatRate">-</div>
-        <div class="stat-label">✓ 正解率</div>
+        <div class="stat-label">笨・豁｣隗｣邇・/div>
       </div>
     </div>
 
     <div class="conv-mode-toggle" id="convModeToggle">
-      <button class="conv-mode-btn business" data-conv-mode="business" onclick="setConvMode('business')">💼 ビジネス</button>
-      <button class="conv-mode-btn casual" data-conv-mode="casual" onclick="setConvMode('casual')">🎉 オフ・遊び</button>
+      <button class="conv-mode-btn business" data-conv-mode="business" onclick="setConvMode('business')">直 繝薙ず繝阪せ</button>
+      <button class="conv-mode-btn casual" data-conv-mode="casual" onclick="setConvMode('casual')">脂 繧ｪ繝輔・驕翫・</button>
     </div>
 
     <div class="modes-label">Today's practice</div>
     <div class="modes-grid">
       <div class="mode-card freetalk" onclick="showScreen('freetalk')">
-        <div class="mode-icon">💬</div>
+        <div class="mode-icon">町</div>
         <div class="mode-info">
           <div class="mode-name">Free Talk</div>
-          <div class="mode-desc">AIと自由会話。テーマを選んで話すだけ</div>
+          <div class="mode-desc">AI縺ｨ閾ｪ逕ｱ莨夊ｩｱ縲ゅユ繝ｼ繝槭ｒ驕ｸ繧薙〒隧ｱ縺吶□縺・/div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
       <div class="mode-card shadowing" onclick="showScreen('shadowing')">
-        <div class="mode-icon">🎧</div>
+        <div class="mode-icon">而</div>
         <div class="mode-info">
           <div class="mode-name">Shadowing</div>
-          <div class="mode-desc">自然な英語を聴いてリズムごと真似る</div>
+          <div class="mode-desc">閾ｪ辟ｶ縺ｪ闍ｱ隱槭ｒ閨ｴ縺・※繝ｪ繧ｺ繝縺斐→逵滉ｼｼ繧・/div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
       <div class="mode-card instant" onclick="showScreen('instant')">
-        <div class="mode-icon">⚡</div>
+        <div class="mode-icon">笞｡</div>
         <div class="mode-info">
-          <div class="mode-name">瞬間英作文</div>
-          <div class="mode-desc">日本語→英語を3秒で。翻訳癖を断つ</div>
+          <div class="mode-name">迸ｬ髢楢恭菴懈枚</div>
+          <div class="mode-desc">譌･譛ｬ隱樞・闍ｱ隱槭ｒ3遘偵〒縲らｿｻ險ｳ逋悶ｒ譁ｭ縺､</div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
       <div class="mode-card interpreter" onclick="showScreen('interpreter')">
-        <div class="mode-icon">🌐</div>
+        <div class="mode-icon">倹</div>
         <div class="mode-info">
-          <div class="mode-name">通訳</div>
-          <div class="mode-desc">会話をリアルタイムで日⇄英に通訳</div>
+          <div class="mode-name">騾夊ｨｳ</div>
+          <div class="mode-desc">莨夊ｩｱ繧偵Μ繧｢繝ｫ繧ｿ繧､繝縺ｧ譌･竍・恭縺ｫ騾夊ｨｳ</div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
       <div class="mode-card vocab" onclick="showScreen('vocab')">
-        <div class="mode-icon">📚</div>
+        <div class="mode-icon">答</div>
         <div class="mode-info">
-          <div class="mode-name">単語帳</div>
-          <div class="mode-desc">会話中に保存した表現を復習</div>
+          <div class="mode-name">蜊倩ｪ槫ｸｳ</div>
+          <div class="mode-desc">莨夊ｩｱ荳ｭ縺ｫ菫晏ｭ倥＠縺溯｡ｨ迴ｾ繧貞ｾｩ鄙・/div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
       <div class="mode-card stats" onclick="showScreen('stats')">
-        <div class="mode-icon">📊</div>
+        <div class="mode-icon">投</div>
         <div class="mode-info">
-          <div class="mode-name">進捗グラフ</div>
-          <div class="mode-desc">正解率・連続日数の推移を確認</div>
+          <div class="mode-name">騾ｲ謐励げ繝ｩ繝・/div>
+          <div class="mode-desc">豁｣隗｣邇・・騾｣邯壽律謨ｰ縺ｮ謗ｨ遘ｻ繧堤｢ｺ隱・/div>
         </div>
-        <div class="mode-arrow">›</div>
+        <div class="mode-arrow">窶ｺ</div>
       </div>
     </div>
   </div>
@@ -999,8 +1001,8 @@
 
 <div class="screen" id="settings">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
-    <div class="nav-title">設定</div>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+    <div class="nav-title">險ｭ螳・/div>
   </div>
   <div class="vocab-body">
     <div class="api-section">
@@ -1008,52 +1010,52 @@
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
         <button class="provider-tab active" data-provider="gemini" onclick="switchProvider('gemini')">Gemini</button>
         <button class="provider-tab" data-provider="claude" onclick="switchProvider('claude')">Claude</button>
-        <!-- OpenAI: クレジット切れ・個人プロジェクトでキー発行不可のため保留(2026-09-29)。コードは残し、選択肢だけ非表示にして誤操作を防止 -->
+        <!-- OpenAI: 繧ｯ繝ｬ繧ｸ繝・ヨ蛻・ｌ繝ｻ蛟倶ｺｺ繝励Ο繧ｸ繧ｧ繧ｯ繝医〒繧ｭ繝ｼ逋ｺ陦御ｸ榊庄縺ｮ縺溘ａ菫晉蕗(2026-09-29)縲ゅさ繝ｼ繝峨・谿九＠縲・∈謚櫁い縺縺鷹撼陦ｨ遉ｺ縺ｫ縺励※隱､謫堺ｽ懊ｒ髦ｲ豁｢ -->
         <button class="provider-tab" data-provider="openai" onclick="switchProvider('openai')" style="display:none;">OpenAI</button>
       </div>
       <div style="padding: 8px; background: rgba(92,239,176,0.05); border: 1px solid rgba(92,239,176,0.15); border-radius: 8px;">
-        <div style="font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace;">✓ 現在使用中: <span id="currentProvider">Gemini</span></div>
+        <div style="font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace;">笨・迴ｾ蝨ｨ菴ｿ逕ｨ荳ｭ: <span id="currentProvider">Gemini</span></div>
       </div>
     </div>
 
     <div class="api-section">
-      <div class="api-label" style="color:var(--accent3)">合言葉 (App Token)</div>
-      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Workerに設定した APP_TOKEN を入力します。この端末に暗号化して保存されます</div>
+      <div class="api-label" style="color:var(--accent3)">蜷郁ｨ闡・(App Token)</div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Worker縺ｫ險ｭ螳壹＠縺・APP_TOKEN 繧貞・蜉帙＠縺ｾ縺吶ゅ％縺ｮ遶ｯ譛ｫ縺ｫ證怜捷蛹悶＠縺ｦ菫晏ｭ倥＆繧後∪縺・/div>
       <div class="api-input-row">
         <input class="api-input" type="password" id="tokenInput" placeholder="APP_TOKEN" />
         <button class="api-save-btn" style="background: var(--accent3);" onclick="saveAppToken()">Save</button>
       </div>
-      <div class="api-status" id="tokenStatus">合言葉を入力してください</div>
+      <div class="api-status" id="tokenStatus">蜷郁ｨ闡峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞</div>
     </div>
 
     <div class="api-section">
-      <div class="api-label" style="color:var(--accent2)">Cloudflare Worker (AIプロキシ)</div>
-      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">/gemini-proxy /claude-proxy /openai-proxy を持つWorkerのURL。空欄なら既定を使用</div>
+      <div class="api-label" style="color:var(--accent2)">Cloudflare Worker (AI繝励Ο繧ｭ繧ｷ)</div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">/gemini-proxy /claude-proxy /openai-proxy 繧呈戟縺､Worker縺ｮURL縲らｩｺ谺・↑繧画里螳壹ｒ菴ｿ逕ｨ</div>
       <div class="api-input-row">
         <input class="api-input" type="text" id="proxyBaseInput" placeholder="https://xxxx.workers.dev" style="font-size:10px;" />
         <button class="api-save-btn" style="background:var(--accent2);color:var(--bg);" onclick="saveProxyBase()">Save</button>
       </div>
-      <div class="api-status" id="proxyStatus">既定のWorkerを使用中</div>
+      <div class="api-status" id="proxyStatus">譌｢螳壹・Worker繧剃ｽｿ逕ｨ荳ｭ</div>
     </div>
 
     <div class="api-section">
       <div class="api-label" style="color:var(--accent3)">Google Sheets GAS URL</div>
-      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">進捗と単語帳をGoogle Sheetsに同期します（任意）</div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">騾ｲ謐励→蜊倩ｪ槫ｸｳ繧竪oogle Sheets縺ｫ蜷梧悄縺励∪縺呻ｼ井ｻｻ諢擾ｼ・/div>
       <div class="api-input-row">
         <input class="api-input" type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/..." style="font-size:10px;" />
         <button class="api-save-btn" style="background:var(--accent3);color:var(--bg);" onclick="saveGasUrl()">Save</button>
       </div>
-      <div class="api-status" id="gasStatus">GAS URLを入力してください</div>
+      <div class="api-status" id="gasStatus">GAS URL繧貞・蜉帙＠縺ｦ縺上□縺輔＞</div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="freetalk">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
     <div class="nav-title">Free Talk</div>
     <div class="conv-mode-badge" id="freetalkModeBadge"></div>
-    <button class="mic-btn" id="freetalkTTSBtn" style="width:32px;height:32px;font-size:14px;" onclick="toggleFreetalkTTS()" title="AIの発音を読み上げ">🔊</button>
+    <button class="mic-btn" id="freetalkTTSBtn" style="width:32px;height:32px;font-size:14px;" onclick="toggleFreetalkTTS()" title="AI縺ｮ逋ｺ髻ｳ繧定ｪｭ縺ｿ荳翫￡">矧</button>
     <div class="nav-badge green" id="talkStatus">Ready</div>
   </div>
   <div class="topic-bar" id="topicBar"></div>
@@ -1062,40 +1064,40 @@
     <div class="input-row">
       <textarea class="text-input" id="msgInput" placeholder="Type or use mic..." rows="1"
         onInput="autoResize(this)" onKeydown="handleEnter(event)"></textarea>
-      <button class="mic-btn" id="micBtn" onclick="toggleMic()">🎤</button>
-      <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
+      <button class="mic-btn" id="micBtn" onclick="toggleMic()">痔</button>
+      <button class="send-btn" id="sendBtn" onclick="sendMessage()">竊・/button>
     </div>
   </div>
 </div>
 
 <div class="screen" id="shadowing">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
     <div class="nav-title">Shadowing</div>
     <div class="conv-mode-badge" id="shadowModeBadge"></div>
   </div>
   <div class="shadow-body" id="shadowBody"></div>
   <div id="shadowFeedback" style="padding:0 20px;"></div>
   <div class="shadow-controls" style="padding: 0 20px 20px;">
-    <button class="shadow-btn play" onclick="playCurrentLine()">▶ Play</button>
-    <button class="shadow-btn" onclick="toggleJP()">JP 表示</button>
-    <button class="shadow-btn record" onclick="shadowRecord()">● 録音</button>
-    <button class="shadow-btn" onclick="nextShadowLine()">Next ›</button>
+    <button class="shadow-btn play" onclick="playCurrentLine()">笆ｶ Play</button>
+    <button class="shadow-btn" onclick="toggleJP()">JP 陦ｨ遉ｺ</button>
+    <button class="shadow-btn record" onclick="shadowRecord()">笳・骭ｲ髻ｳ</button>
+    <button class="shadow-btn" onclick="nextShadowLine()">Next 窶ｺ</button>
   </div>
 </div>
 
 <div class="screen" id="instant">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
-    <div class="nav-title">瞬間英作文</div>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+    <div class="nav-title">迸ｬ髢楢恭菴懈枚</div>
     <div class="conv-mode-badge" id="instantModeBadge"></div>
     <div class="nav-badge green" id="instantScore">0 / 0</div>
   </div>
   <div class="instant-body">
     <div class="instant-counter" id="instantCounter">Q 1 / 10</div>
     <div class="instant-card">
-      <div class="instant-jp" id="instantJP">準備中...</div>
-      <div class="instant-hint">3秒で英語に</div>
+      <div class="instant-jp" id="instantJP">貅門ｙ荳ｭ...</div>
+      <div class="instant-hint">3遘偵〒闍ｱ隱槭↓</div>
     </div>
     <div class="timer-ring">
       <svg width="80" height="80" viewBox="0 0 80 80">
@@ -1104,7 +1106,7 @@
       </svg>
       <div class="timer-num" id="timerNum">3</div>
     </div>
-    <textarea class="text-input" id="instantUserAnswer" placeholder="ここに英語で書いてみる(紙のメモ代わり)..." rows="2"
+    <textarea class="text-input" id="instantUserAnswer" placeholder="縺薙％縺ｫ闍ｱ隱槭〒譖ｸ縺・※縺ｿ繧・邏吶・繝｡繝｢莉｣繧上ｊ)..." rows="2"
       style="width:100%;" oninput="autoResize(this)"></textarea>
     <div class="instant-answer" id="instantAnswer">
       <div class="answer-label">Model Answer</div>
@@ -1112,118 +1114,118 @@
       <div class="answer-note" id="answerNote"></div>
     </div>
     <div class="instant-btns">
-      <button class="instant-btn" onclick="markAnswer(false)">✗ 惜しい</button>
-      <button class="instant-btn primary" onclick="markAnswer(true)">✓ 言えた！</button>
+      <button class="instant-btn" onclick="markAnswer(false)">笨・諠懊＠縺・/button>
+      <button class="instant-btn primary" onclick="markAnswer(true)">笨・險縺医◆・・/button>
     </div>
-    <button class="shadow-btn" style="width:100%;" onclick="toggleInstantLog()">📝 これまでの解答ログ <span id="instantLogCount"></span></button>
+    <button class="shadow-btn" style="width:100%;" onclick="toggleInstantLog()">統 縺薙ｌ縺ｾ縺ｧ縺ｮ隗｣遲斐Ο繧ｰ <span id="instantLogCount"></span></button>
     <div id="instantLogPanel" style="display:none;width:100%;max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch;"></div>
   </div>
 </div>
 
 <div class="screen" id="interpreter">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
-    <div class="nav-title">通訳</div>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+    <div class="nav-title">騾夊ｨｳ</div>
     <div class="nav-badge green" id="interpreterStatus">Ready</div>
   </div>
   <div class="topic-bar" id="interpModeBar">
-    <div class="topic-chip active" data-interp-mode="bidirectional" onclick="setInterpreterMode('bidirectional')">双方向</div>
-    <div class="topic-chip" data-interp-mode="oneway" onclick="setInterpreterMode('oneway')">一方向</div>
-    <div class="topic-chip" data-interp-mode="text" onclick="setInterpreterMode('text')">電車モード(文字のみ)</div>
+    <div class="topic-chip active" data-interp-mode="bidirectional" onclick="setInterpreterMode('bidirectional')">蜿梧婿蜷・/div>
+    <div class="topic-chip" data-interp-mode="oneway" onclick="setInterpreterMode('oneway')">荳譁ｹ蜷・/div>
+    <div class="topic-chip" data-interp-mode="text" onclick="setInterpreterMode('text')">髮ｻ霆翫Δ繝ｼ繝・譁・ｭ励・縺ｿ)</div>
   </div>
   <div class="topic-bar" id="interpDirectionRow" style="display:none;">
-    <div class="topic-chip active" data-direction="ja-en" onclick="setInterpDirection('ja-en')">日→英</div>
-    <div class="topic-chip" data-direction="en-ja" onclick="setInterpDirection('en-ja')">英→日</div>
+    <div class="topic-chip active" data-direction="ja-en" onclick="setInterpDirection('ja-en')">譌･竊定恭</div>
+    <div class="topic-chip" data-direction="en-ja" onclick="setInterpDirection('en-ja')">闍ｱ竊呈律</div>
   </div>
   <div class="chat-area" id="interpArea"></div>
   <div class="input-area">
     <div class="input-row" id="interpSpeakerRow" style="margin-bottom:8px;">
-      <button class="instant-btn primary" id="speakerA" onclick="setSpeaker('ja')" style="flex:1;padding:10px;font-size:13px;">🇯🇵 話者A (日本語)</button>
-      <button class="instant-btn" id="speakerB" onclick="setSpeaker('en')" style="flex:1;padding:10px;font-size:13px;">🇺🇸 話者B (English)</button>
+      <button class="instant-btn primary" id="speakerA" onclick="setSpeaker('ja')" style="flex:1;padding:10px;font-size:13px;">・・ 隧ｱ閠・ (譌･譛ｬ隱・</button>
+      <button class="instant-btn" id="speakerB" onclick="setSpeaker('en')" style="flex:1;padding:10px;font-size:13px;">・・ 隧ｱ閠・ (English)</button>
     </div>
     <div class="input-row">
       <textarea class="text-input" id="interpInput" placeholder="Type or speak..." rows="1"
         onInput="autoResize(this)" onKeydown="handleInterpEnter(event)"></textarea>
-      <button class="mic-btn" id="interpMicBtn" onclick="toggleInterpMic()">🎤</button>
-      <button class="send-btn" id="interpSendBtn" onclick="sendInterpret()">↑</button>
+      <button class="mic-btn" id="interpMicBtn" onclick="toggleInterpMic()">痔</button>
+      <button class="send-btn" id="interpSendBtn" onclick="sendInterpret()">竊・/button>
     </div>
   </div>
 </div>
 
 <div class="screen" id="vocab">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
-    <div class="nav-title">単語帳</div>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+    <div class="nav-title">蜊倩ｪ槫ｸｳ</div>
     <div class="nav-badge" style="background:rgba(255,200,80,0.12);color:rgb(255,200,80);" id="vocabCount">0 words</div>
   </div>
   <div class="vocab-body" id="vocabBody">
     <div class="vocab-toolbar">
-      <button class="vocab-tool-btn" id="reviewBtn" onclick="startVocabReview()">📅 今日の復習 <span id="reviewDueCount"></span></button>
-      <button class="vocab-tool-btn" id="mistakeFilterBtn" onclick="toggleMistakeFilter()">💹 間違えやすいのみ</button>
+      <button class="vocab-tool-btn" id="reviewBtn" onclick="startVocabReview()">套 莉頑律縺ｮ蠕ｩ鄙・<span id="reviewDueCount"></span></button>
+      <button class="vocab-tool-btn" id="mistakeFilterBtn" onclick="toggleMistakeFilter()">鳥 髢馴＆縺医ｄ縺吶＞縺ｮ縺ｿ</button>
     </div>
     <div id="vocabList"></div>
   </div>
   <div class="vocab-add-bar">
-    <input class="vocab-add-input" id="vocabInput" placeholder="フレーズ or 単語を追加..." />
+    <input class="vocab-add-input" id="vocabInput" placeholder="繝輔Ξ繝ｼ繧ｺ or 蜊倩ｪ槭ｒ霑ｽ蜉..." />
     <button class="vocab-add-btn" onclick="addVocabManual()">+ Add</button>
   </div>
 </div>
 
 <div class="screen" id="vocabreview">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('vocab')">‹</button>
-    <div class="nav-title">今日の復習</div>
+    <button class="back-btn" onclick="showScreen('vocab')">窶ｹ</button>
+    <div class="nav-title">莉頑律縺ｮ蠕ｩ鄙・/div>
   </div>
   <div class="review-body">
     <div class="review-counter" id="reviewCounter">1 / 1</div>
     <div class="review-card">
-      <div class="review-jp" id="reviewJP">準備中...</div>
-      <div class="review-hint" id="reviewPromptHint">英語で言ってみよう</div>
+      <div class="review-jp" id="reviewJP">貅門ｙ荳ｭ...</div>
+      <div class="review-hint" id="reviewPromptHint">闍ｱ隱槭〒險縺｣縺ｦ縺ｿ繧医≧</div>
     </div>
     <div class="review-answer" id="reviewAnswer">
       <div class="answer-label">Answer</div>
       <div class="review-en" id="reviewEN"></div>
       <div class="review-note" id="reviewNote"></div>
       <span class="vocab-mistake-badge" id="reviewMistakeBadge" style="display:none;"></span>
-      <button class="bubble-replay-btn" style="margin-top:8px;width:auto;padding:6px 14px;font-size:12px;gap:6px;" onclick="replayReviewAnswer()" title="もう一度聞く">🔊 もう一度聞く</button>
+      <button class="bubble-replay-btn" style="margin-top:8px;width:auto;padding:6px 14px;font-size:12px;gap:6px;" onclick="replayReviewAnswer()" title="繧ゅ≧荳蠎ｦ閨槭￥">矧 繧ゅ≧荳蠎ｦ閨槭￥</button>
     </div>
     <div class="review-btns">
-      <button class="instant-btn" onclick="markReview(false)">✗ 惜しい</button>
-      <button class="instant-btn primary" onclick="markReview(true)">✓ 言えた！</button>
+      <button class="instant-btn" onclick="markReview(false)">笨・諠懊＠縺・/button>
+      <button class="instant-btn primary" onclick="markReview(true)">笨・險縺医◆・・/button>
     </div>
   </div>
 </div>
 
 <div class="screen" id="stats">
   <div class="nav-bar">
-    <button class="back-btn" onclick="showScreen('home')">‹</button>
-    <div class="nav-title">進捗グラフ</div>
+    <button class="back-btn" onclick="showScreen('home')">窶ｹ</button>
+    <div class="nav-title">騾ｲ謐励げ繝ｩ繝・/div>
   </div>
   <div class="stats-body">
     <div class="stats-row">
       <div class="stat-card">
         <div class="stat-num green" id="statStreak">-</div>
-        <div class="stat-label">🔥 連続日数</div>
+        <div class="stat-label">櫨 騾｣邯壽律謨ｰ</div>
       </div>
       <div class="stat-card">
         <div class="stat-num orange" id="statTotal">-</div>
-        <div class="stat-label">⚡ 総問題数</div>
+        <div class="stat-label">笞｡ 邱丞撫鬘梧焚</div>
       </div>
       <div class="stat-card">
         <div class="stat-num purple" id="statRate">-</div>
-        <div class="stat-label">✓ 正解率</div>
+        <div class="stat-label">笨・豁｣隗｣邇・/div>
       </div>
     </div>
     <div class="graph-section">
-      <div class="graph-title">過去7日の正解数</div>
+      <div class="graph-title">驕主悉7譌･縺ｮ豁｣隗｣謨ｰ</div>
       <div class="bar-chart" id="barChart"></div>
     </div>
     <div class="graph-section">
-      <div class="graph-title">単語帳の成長</div>
+      <div class="graph-title">蜊倩ｪ槫ｸｳ縺ｮ謌宣聞</div>
       <div class="bar-chart" id="vocabChart"></div>
     </div>
-    <button class="gas-sync-btn" onclick="syncToSheets()">☁ Google Sheetsに同期</button>
-    <div class="sync-log" id="syncLog">GAS URLを設定すると同期できます</div>
+    <button class="gas-sync-btn" onclick="syncToSheets()">笘・Google Sheets縺ｫ蜷梧悄</button>
+    <div class="sync-log" id="syncLog">GAS URL繧定ｨｭ螳壹☆繧九→蜷梧悄縺ｧ縺阪∪縺・/div>
   </div>
 </div>
 
@@ -1233,29 +1235,27 @@
 // ===== STATE (Gemini / Claude / OpenAI) =====
 let STATE = {
   aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
-  appToken: '',   // 起動時に暗号化ストア(KeyVault)から復号して入る
-  history: []
+  appToken: '',   // 襍ｷ蜍墓凾縺ｫ證怜捷蛹悶せ繝医い(KeyVault)縺九ｉ蠕ｩ蜿ｷ縺励※蜈･繧・  history: []
 };
 
 let conversationHistory = [];
-let currentTopic = null; // 実際の初期値は TOPIC_SETS 定義後、下部の初期化処理で設定
-let recognition = null;
+let currentTopic = null; // 螳滄圀縺ｮ蛻晄悄蛟､縺ｯ TOPIC_SETS 螳夂ｾｩ蠕後∽ｸ矩Κ縺ｮ蛻晄悄蛹門・逅・〒險ｭ螳・let recognition = null;
 let isRecording = false;
 let currentShadowLine = 0;
 let showJP = false;
 let instantScore = 0;
 let timerInterval = null;
 let timerVal = 3;
-let freetalkTTSEnabled = localStorage.getItem('dei_freetalkTTS') !== 'off'; // 使用箇所より前に宣言(TDZ対策)
+let freetalkTTSEnabled = localStorage.getItem('dei_freetalkTTS') !== 'off'; // 菴ｿ逕ｨ邂・園繧医ｊ蜑阪↓螳｣險(TDZ蟇ｾ遲・
 
-// ===== XSS対策: innerHTMLに入れる文字列は必ずこれを通す =====
+// ===== XSS蟇ｾ遲・ innerHTML縺ｫ蜈･繧後ｋ譁・ｭ怜・縺ｯ蠢・★縺薙ｌ繧帝壹☆ =====
 function escapeHtml(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-// ===== TOAST (バグ修正: 未定義だった showToast を実装) =====
+// ===== TOAST (繝舌げ菫ｮ豁｣: 譛ｪ螳夂ｾｩ縺縺｣縺・showToast 繧貞ｮ溯｣・ =====
 let toastTimer = null;
 function showToast(msg) {
   const el = document.getElementById('toast');
@@ -1274,7 +1274,7 @@ function setConvMode(mode) {
   localStorage.setItem('dei_convMode', mode);
   document.querySelectorAll('.conv-mode-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.convMode === mode));
-  const badgeTxt = mode === 'business' ? '💼 Business' : '🎉 Casual';
+  const badgeTxt = mode === 'business' ? '直 Business' : '脂 Casual';
   ['freetalkModeBadge','shadowModeBadge','instantModeBadge'].forEach(id => {
     const el = document.getElementById(id);
     if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + mode; }
@@ -1293,7 +1293,7 @@ function setConvMode(mode) {
   if (document.getElementById('shadowing').classList.contains('active')) initShadowing();
 }
 
-// ===== TOPICS (mode別) =====
+// ===== TOPICS (mode蛻･) =====
 const TOPIC_SETS = {
   business: [
     { key: 'work', label: 'Work life', prompt: "office work, team meetings, deadlines, colleagues, workplace culture" },
@@ -1339,66 +1339,66 @@ document.getElementById('topicBar').addEventListener('click', (e) => {
   initChat();
 });
 
-// ===== INSTANT QUESTIONS (mode別) =====
+// ===== INSTANT QUESTIONS (mode蛻･) =====
 const INSTANT_QS_BUSINESS = [
-  { jp: "ちょっと待ってください", en: "Just a moment, please.", note: "「ちょっと」= Just a moment / Hold on" },
-  { jp: "それはいい考えですね", en: "That's a great idea!", note: "ビジネスでよく使う同意フレーズ" },
-  { jp: "確認させてください", en: "Let me double-check that.", note: "double-check = しっかり確認する" },
-  { jp: "明日までに終わらせます", en: "I'll get it done by tomorrow.", note: "get it done = やり遂げる" },
-  { jp: "もう少し詳しく説明してもらえますか？", en: "Could you elaborate on that a bit more?", note: "elaborate = 詳しく説明する" },
-  { jp: "今少し忙しいです", en: "I'm a bit tied up right now.", note: "tied up = 手が離せない" },
-  { jp: "遅れてごめんなさい", en: "Sorry I'm late. I got held up.", note: "get held up = 足止めされる" },
-  { jp: "それは私の担当ではありません", en: "That's not really my area.", note: "I'm not in charge of that も自然" },
-  { jp: "お疲れ様でした", en: "Great work today! / Good effort.", note: "お疲れ様 の直訳はない。状況で変わる" },
-  { jp: "それについては後で相談させてください", en: "Let me get back to you on that.", note: "get back to you = 後で返事する" },
-  { jp: "今のところ問題ありません", en: "Everything looks good on our end so far.", note: "on our end = こちら側では" },
-  { jp: "念のため確認ですが", en: "Just to confirm, ...", note: "確認前置きの定番フレーズ" },
+  { jp: "縺｡繧・▲縺ｨ蠕・▲縺ｦ縺上□縺輔＞", en: "Just a moment, please.", note: "縲後■繧・▲縺ｨ縲・ Just a moment / Hold on" },
+  { jp: "縺昴ｌ縺ｯ縺・＞閠・∴縺ｧ縺吶・", en: "That's a great idea!", note: "繝薙ず繝阪せ縺ｧ繧医￥菴ｿ縺・酔諢上ヵ繝ｬ繝ｼ繧ｺ" },
+  { jp: "遒ｺ隱阪＆縺帙※縺上□縺輔＞", en: "Let me double-check that.", note: "double-check = 縺励▲縺九ｊ遒ｺ隱阪☆繧・ },
+  { jp: "譏取律縺ｾ縺ｧ縺ｫ邨ゅｏ繧峨○縺ｾ縺・, en: "I'll get it done by tomorrow.", note: "get it done = 繧・ｊ驕ゅ￡繧・ },
+  { jp: "繧ゅ≧蟆代＠隧ｳ縺励￥隱ｬ譏弱＠縺ｦ繧ゅｉ縺医∪縺吶°・・, en: "Could you elaborate on that a bit more?", note: "elaborate = 隧ｳ縺励￥隱ｬ譏弱☆繧・ },
+  { jp: "莉雁ｰ代＠蠢吶＠縺・〒縺・, en: "I'm a bit tied up right now.", note: "tied up = 謇九′髮｢縺帙↑縺・ },
+  { jp: "驕・ｌ縺ｦ縺斐ａ繧薙↑縺輔＞", en: "Sorry I'm late. I got held up.", note: "get held up = 雜ｳ豁｢繧√＆繧後ｋ" },
+  { jp: "縺昴ｌ縺ｯ遘√・諡・ｽ薙〒縺ｯ縺ゅｊ縺ｾ縺帙ｓ", en: "That's not really my area.", note: "I'm not in charge of that 繧り・辟ｶ" },
+  { jp: "縺顔夢繧梧ｧ倥〒縺励◆", en: "Great work today! / Good effort.", note: "縺顔夢繧梧ｧ・縺ｮ逶ｴ險ｳ縺ｯ縺ｪ縺・ら憾豕√〒螟峨ｏ繧・ },
+  { jp: "縺昴ｌ縺ｫ縺､縺・※縺ｯ蠕後〒逶ｸ隲・＆縺帙※縺上□縺輔＞", en: "Let me get back to you on that.", note: "get back to you = 蠕後〒霑比ｺ九☆繧・ },
+  { jp: "莉翫・縺ｨ縺薙ｍ蝠城｡後≠繧翫∪縺帙ｓ", en: "Everything looks good on our end so far.", note: "on our end = 縺薙■繧牙・縺ｧ縺ｯ" },
+  { jp: "蠢ｵ縺ｮ縺溘ａ遒ｺ隱阪〒縺吶′", en: "Just to confirm, ...", note: "遒ｺ隱榊燕鄂ｮ縺阪・螳夂分繝輔Ξ繝ｼ繧ｺ" },
 ];
 const INSTANT_QS_CASUAL = [
-  { jp: "週末何してたの？", en: "What did you get up to this weekend?", note: "get up to = ～をする（カジュアル）" },
-  { jp: "マジで！？", en: "No way! Seriously?", note: "驚いた時の定番リアクション" },
-  { jp: "お腹すいた", en: "I'm starving.", note: "starving = めちゃくちゃお腹すいた" },
-  { jp: "それ、めっちゃいいね", en: "That's awesome!", note: "awesome = カジュアルな絶賛表現" },
-  { jp: "今忙しい？", en: "Are you free right now?", note: "free = 手が空いている" },
-  { jp: "また今度ね", en: "Let's do it another time.", note: "予定を先送りする軽い言い方" },
-  { jp: "それ知らなかった", en: "I had no idea.", note: "had no idea = 全然知らなかった" },
-  { jp: "気にしないで", en: "Don't worry about it.", note: "軽く相手を安心させる定番フレーズ" },
-  { jp: "ちょっと疲れた", en: "I'm a little worn out.", note: "worn out = 疲れ切った" },
-  { jp: "それめっちゃ笑える", en: "That's hilarious!", note: "hilarious = 爆笑もの" },
-  { jp: "遊びに行かない？", en: "Wanna hang out?", note: "hang out = 遊ぶ・つるむ" },
-  { jp: "冗談だよ", en: "I'm just kidding.", note: "just kidding = 冗談だよ" },
+  { jp: "騾ｱ譛ｫ菴輔＠縺ｦ縺溘・・・, en: "What did you get up to this weekend?", note: "get up to = ・槭ｒ縺吶ｋ・医き繧ｸ繝･繧｢繝ｫ・・ },
+  { jp: "繝槭ず縺ｧ・・ｼ・, en: "No way! Seriously?", note: "鬩壹＞縺滓凾縺ｮ螳夂分繝ｪ繧｢繧ｯ繧ｷ繝ｧ繝ｳ" },
+  { jp: "縺願・縺吶＞縺・, en: "I'm starving.", note: "starving = 繧√■繧・￥縺｡繧・♀閻ｹ縺吶＞縺・ },
+  { jp: "縺昴ｌ縲√ａ縺｣縺｡繧・＞縺・・", en: "That's awesome!", note: "awesome = 繧ｫ繧ｸ繝･繧｢繝ｫ縺ｪ邨ｶ雉幄｡ｨ迴ｾ" },
+  { jp: "莉雁ｿ吶＠縺・ｼ・, en: "Are you free right now?", note: "free = 謇九′遨ｺ縺・※縺・ｋ" },
+  { jp: "縺ｾ縺滉ｻ雁ｺｦ縺ｭ", en: "Let's do it another time.", note: "莠亥ｮ壹ｒ蜈磯√ｊ縺吶ｋ霆ｽ縺・ｨ縺・婿" },
+  { jp: "縺昴ｌ遏･繧峨↑縺九▲縺・, en: "I had no idea.", note: "had no idea = 蜈ｨ辟ｶ遏･繧峨↑縺九▲縺・ },
+  { jp: "豌励↓縺励↑縺・〒", en: "Don't worry about it.", note: "霆ｽ縺冗嶌謇九ｒ螳牙ｿ・＆縺帙ｋ螳夂分繝輔Ξ繝ｼ繧ｺ" },
+  { jp: "縺｡繧・▲縺ｨ逍ｲ繧後◆", en: "I'm a little worn out.", note: "worn out = 逍ｲ繧悟・縺｣縺・ },
+  { jp: "縺昴ｌ繧√▲縺｡繧・ｬ代∴繧・, en: "That's hilarious!", note: "hilarious = 辷・ｬ代ｂ縺ｮ" },
+  { jp: "驕翫・縺ｫ陦後°縺ｪ縺・ｼ・, en: "Wanna hang out?", note: "hang out = 驕翫・繝ｻ縺､繧九・" },
+  { jp: "蜀苓ｫ・□繧・, en: "I'm just kidding.", note: "just kidding = 蜀苓ｫ・□繧・ },
 ];
 
-// ===== SHADOWING SCRIPTS (mode別・複数ダイアログ) =====
+// ===== SHADOWING SCRIPTS (mode蛻･繝ｻ隍・焚繝繧､繧｢繝ｭ繧ｰ) =====
 const SHADOW_SETS_BUSINESS = [
   {
     title: "Project Deadline Chat",
     lines: [
-      { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "ちょっといい？相談したいことがあって。" },
-      { en: "Sure, what's up?", jp: "もちろん、どうした？" },
-      { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "プロジェクトのスケジュールについて考えてたんだけど、ちょっとギリギリかなと思って。" },
-      { en: "Yeah, I hear you. What do you suggest?", jp: "わかる。どうしたらいいと思う？" },
-      { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "締め切りを1週間延ばせないかな？チームのプレッシャーも減ると思うし。" },
-      { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "それは合理的だね。クライアントに確認してから連絡するよ。" }
+      { en: "Hey, do you have a minute? I wanted to run something by you.", jp: "縺｡繧・▲縺ｨ縺・＞・溽嶌隲・＠縺溘＞縺薙→縺後≠縺｣縺ｦ縲・ },
+      { en: "Sure, what's up?", jp: "繧ゅ■繧阪ｓ縲√←縺・＠縺滂ｼ・ },
+      { en: "So I've been thinking about the project timeline, and I feel like we might be cutting it a bit close.", jp: "繝励Ο繧ｸ繧ｧ繧ｯ繝医・繧ｹ繧ｱ繧ｸ繝･繝ｼ繝ｫ縺ｫ縺､縺・※閠・∴縺ｦ縺溘ｓ縺縺代←縲√■繧・▲縺ｨ繧ｮ繝ｪ繧ｮ繝ｪ縺九↑縺ｨ諤昴▲縺ｦ縲・ },
+      { en: "Yeah, I hear you. What do you suggest?", jp: "繧上°繧九ゅ←縺・＠縺溘ｉ縺・＞縺ｨ諤昴≧・・ },
+      { en: "Maybe we could push the deadline by a week? I think that would take a lot of pressure off the team.", jp: "邱繧∝・繧翫ｒ1騾ｱ髢灘ｻｶ縺ｰ縺帙↑縺・°縺ｪ・溘メ繝ｼ繝縺ｮ繝励Ξ繝・す繝｣繝ｼ繧よｸ帙ｋ縺ｨ諤昴≧縺励・ },
+      { en: "That sounds reasonable. Let me check with the client and get back to you.", jp: "縺昴ｌ縺ｯ蜷育炊逧・□縺ｭ縲ゅけ繝ｩ繧､繧｢繝ｳ繝医↓遒ｺ隱阪＠縺ｦ縺九ｉ騾｣邨｡縺吶ｋ繧医・ }
     ]
   },
   {
     title: "Quick Status Update",
     lines: [
-      { en: "Hi everyone, thanks for hopping on. Let's do a quick status update.", jp: "皆さん、集まってくれてありがとう。手短に進捗確認しましょう。" },
-      { en: "Sure, I'll go first. Everything's on track on my end.", jp: "じゃあ私から。こちらは順調です。" },
-      { en: "Great to hear. Any blockers we should know about?", jp: "それは良かった。何か障害になっていることはありますか？" },
-      { en: "Not really, but I might need another set of eyes on the report tomorrow.", jp: "特にないですが、明日レポートを誰かに確認してもらいたいです。" },
-      { en: "No problem, I can take a look first thing tomorrow.", jp: "問題ないよ、明日一番に確認するね。" }
+      { en: "Hi everyone, thanks for hopping on. Let's do a quick status update.", jp: "逧・＆繧薙・寔縺ｾ縺｣縺ｦ縺上ｌ縺ｦ縺ゅｊ縺後→縺・よ焔遏ｭ縺ｫ騾ｲ謐礼｢ｺ隱阪＠縺ｾ縺励ｇ縺・・ },
+      { en: "Sure, I'll go first. Everything's on track on my end.", jp: "縺倥ｃ縺らｧ√°繧峨ゅ％縺｡繧峨・鬆・ｪｿ縺ｧ縺吶・ },
+      { en: "Great to hear. Any blockers we should know about?", jp: "縺昴ｌ縺ｯ濶ｯ縺九▲縺溘ゆｽ輔°髫懷ｮｳ縺ｫ縺ｪ縺｣縺ｦ縺・ｋ縺薙→縺ｯ縺ゅｊ縺ｾ縺吶°・・ },
+      { en: "Not really, but I might need another set of eyes on the report tomorrow.", jp: "迚ｹ縺ｫ縺ｪ縺・〒縺吶′縲∵・譌･繝ｬ繝昴・繝医ｒ隱ｰ縺九↓遒ｺ隱阪＠縺ｦ繧ゅｉ縺・◆縺・〒縺吶・ },
+      { en: "No problem, I can take a look first thing tomorrow.", jp: "蝠城｡後↑縺・ｈ縲∵・譌･荳逡ｪ縺ｫ遒ｺ隱阪☆繧九・縲・ }
     ]
   },
   {
     title: "Handling Pushback",
     lines: [
-      { en: "I understand your concern, but I think this approach will save us time in the long run.", jp: "ご懸念はわかりますが、長期的にはこのやり方の方が時間の節約になると思います。" },
-      { en: "That's fair. Can you walk me through the numbers again?", jp: "それは一理ありますね。もう一度数字を説明してもらえますか？" },
-      { en: "Of course. Let me pull up the spreadsheet.", jp: "もちろんです。スプレッドシートを開きますね。" },
-      { en: "Okay, I see your point now. Let's move forward with your plan.", jp: "なるほど、納得しました。あなたの案で進めましょう。" }
+      { en: "I understand your concern, but I think this approach will save us time in the long run.", jp: "縺疲・蠢ｵ縺ｯ繧上°繧翫∪縺吶′縲・聞譛溽噪縺ｫ縺ｯ縺薙・繧・ｊ譁ｹ縺ｮ譁ｹ縺梧凾髢薙・遽邏・↓縺ｪ繧九→諤昴＞縺ｾ縺吶・ },
+      { en: "That's fair. Can you walk me through the numbers again?", jp: "縺昴ｌ縺ｯ荳逅・≠繧翫∪縺吶・縲ゅｂ縺・ｸ蠎ｦ謨ｰ蟄励ｒ隱ｬ譏弱＠縺ｦ繧ゅｉ縺医∪縺吶°・・ },
+      { en: "Of course. Let me pull up the spreadsheet.", jp: "繧ゅ■繧阪ｓ縺ｧ縺吶ゅせ繝励Ξ繝・ラ繧ｷ繝ｼ繝医ｒ髢九″縺ｾ縺吶・縲・ },
+      { en: "Okay, I see your point now. Let's move forward with your plan.", jp: "縺ｪ繧九⊇縺ｩ縲∫ｴ榊ｾ励＠縺ｾ縺励◆縲ゅ≠縺ｪ縺溘・譯医〒騾ｲ繧√∪縺励ｇ縺・・ }
     ]
   }
 ];
@@ -1406,30 +1406,30 @@ const SHADOW_SETS_CASUAL = [
   {
     title: "Weekend Plans",
     lines: [
-      { en: "Hey! Any plans for the weekend?", jp: "ねえ！週末の予定ある？" },
-      { en: "Not really, maybe just chilling at home. You?", jp: "特にないかな、家でのんびりするかも。そっちは？" },
-      { en: "I was thinking about going hiking if the weather's nice.", jp: "天気が良ければハイキングに行こうかなって考えてる。" },
-      { en: "Oh that sounds fun, mind if I tag along?", jp: "それ楽しそう、一緒に行ってもいい？" },
-      { en: "Of course, the more the merrier!", jp: "もちろん、人数が多い方が楽しいし！" }
+      { en: "Hey! Any plans for the weekend?", jp: "縺ｭ縺茨ｼ・ｱ譛ｫ縺ｮ莠亥ｮ壹≠繧具ｼ・ },
+      { en: "Not really, maybe just chilling at home. You?", jp: "迚ｹ縺ｫ縺ｪ縺・°縺ｪ縲∝ｮｶ縺ｧ縺ｮ繧薙・繧翫☆繧九°繧ゅゅ◎縺｣縺｡縺ｯ・・ },
+      { en: "I was thinking about going hiking if the weather's nice.", jp: "螟ｩ豌励′濶ｯ縺代ｌ縺ｰ繝上う繧ｭ繝ｳ繧ｰ縺ｫ陦後％縺・°縺ｪ縺｣縺ｦ閠・∴縺ｦ繧九・ },
+      { en: "Oh that sounds fun, mind if I tag along?", jp: "縺昴ｌ讌ｽ縺励◎縺・∽ｸ邱偵↓陦後▲縺ｦ繧ゅ＞縺・ｼ・ },
+      { en: "Of course, the more the merrier!", jp: "繧ゅ■繧阪ｓ縲∽ｺｺ謨ｰ縺悟､壹＞譁ｹ縺梧･ｽ縺励＞縺暦ｼ・ }
     ]
   },
   {
     title: "Catching Up Over Coffee",
     lines: [
-      { en: "It's been forever! How have you been?", jp: "久しぶり！最近どう？" },
-      { en: "I've been good, just really busy with work lately.", jp: "元気だよ、最近ちょっと仕事が忙しくて。" },
-      { en: "I hear you. We should catch up more often.", jp: "わかるー。もっと頻繁に会おうよ。" },
-      { en: "Totally agree. Let's grab dinner next week?", jp: "完全同意。来週ご飯行かない？" },
-      { en: "Sounds perfect, I'll text you the details.", jp: "いいね、詳細はメッセージ送るね。" }
+      { en: "It's been forever! How have you been?", jp: "荵・＠縺ｶ繧奇ｼ∵怙霑代←縺・ｼ・ },
+      { en: "I've been good, just really busy with work lately.", jp: "蜈・ｰ励□繧医∵怙霑代■繧・▲縺ｨ莉穂ｺ九′蠢吶＠縺上※縲・ },
+      { en: "I hear you. We should catch up more often.", jp: "繧上°繧九・縲ゅｂ縺｣縺ｨ鬆ｻ郢√↓莨壹♀縺・ｈ縲・ },
+      { en: "Totally agree. Let's grab dinner next week?", jp: "螳悟・蜷梧э縲よ擂騾ｱ縺秘｣ｯ陦後°縺ｪ縺・ｼ・ },
+      { en: "Sounds perfect, I'll text you the details.", jp: "縺・＞縺ｭ縲∬ｩｳ邏ｰ縺ｯ繝｡繝・そ繝ｼ繧ｸ騾√ｋ縺ｭ縲・ }
     ]
   },
   {
     title: "Movie Night Debate",
     lines: [
-      { en: "So what do you wanna watch tonight?", jp: "今夜何見たい？" },
-      { en: "Honestly, I'm in the mood for something funny.", jp: "正直、面白いのが見たい気分。" },
-      { en: "Same here. Let's just pick a comedy and chill.", jp: "私も同じ。コメディにしてゆっくりしよう。" },
-      { en: "Deal. I'll grab the snacks.", jp: "決まり。お菓子は私が用意するね。" }
+      { en: "So what do you wanna watch tonight?", jp: "莉雁､應ｽ戊ｦ九◆縺・ｼ・ },
+      { en: "Honestly, I'm in the mood for something funny.", jp: "豁｣逶ｴ縲・擇逋ｽ縺・・縺瑚ｦ九◆縺・ｰ怜・縲・ },
+      { en: "Same here. Let's just pick a comedy and chill.", jp: "遘√ｂ蜷後§縲ゅさ繝｡繝・ぅ縺ｫ縺励※繧・▲縺上ｊ縺励ｈ縺・・ },
+      { en: "Deal. I'll grab the snacks.", jp: "豎ｺ縺ｾ繧翫ゅ♀闖灘ｭ舌・遘√′逕ｨ諢上☆繧九・縲・ }
     ]
   }
 ];
@@ -1457,7 +1457,7 @@ function updateSettingsGear() {
   gear.classList.toggle('needs-key', !STATE.appToken);
 }
 
-// ===== CLOUDFLARE WORKER (AIプロキシ) =====
+// ===== CLOUDFLARE WORKER (AI繝励Ο繧ｭ繧ｷ) =====
 const DEFAULT_PROXY_BASE = "https://speak-native.arielfortuneoffice.workers.dev";
 function proxyBase() {
   return (localStorage.getItem('dei_proxyBase') || DEFAULT_PROXY_BASE).replace(/\/+$/, '');
@@ -1470,14 +1470,14 @@ function workerHeaders() {
 }
 function saveProxyBase() {
   const v = document.getElementById('proxyBaseInput').value.trim();
-  if (v && !v.startsWith('https://')) { showToast('https:// から始まるURLを入力してください'); return; }
+  if (v && !v.startsWith('https://')) { showToast('https:// 縺九ｉ蟋九∪繧偽RL繧貞・蜉帙＠縺ｦ縺上□縺輔＞'); return; }
   if (v) localStorage.setItem('dei_proxyBase', v); else localStorage.removeItem('dei_proxyBase');
-  document.getElementById('proxyStatus').textContent = '✓ Worker URL保存済み: ' + proxyBase();
+  document.getElementById('proxyStatus').textContent = '笨・Worker URL菫晏ｭ俶ｸ医∩: ' + proxyBase();
   document.getElementById('proxyStatus').className = 'api-status ok';
-  showToast('✓ Worker URLを保存しました');
+  showToast('笨・Worker URL繧剃ｿ晏ｭ倥＠縺ｾ縺励◆');
 }
 
-// ===== KEY VAULT (合言葉の暗号化保存) =====
+// ===== KEY VAULT (蜷郁ｨ闡峨・證怜捷蛹紋ｿ晏ｭ・ =====
 const KeyVault = (() => {
   const DB_NAME = 'dei_keyvault', STORE = 'keys', KEY_ID = 'device-aes-gcm-v1';
   const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
@@ -1537,11 +1537,11 @@ function setTokenStatus(text, ok) {
 
 async function saveAppToken() {
   const v = document.getElementById('tokenInput').value.trim();
-  if (!v) { showToast('❌ 合言葉を入力してください'); return; }
+  if (!v) { showToast('笶・蜷郁ｨ闡峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞'); return; }
   if (!KeyVault.available()) {
     STATE.appToken = v;
-    setTokenStatus('⚠ この環境では暗号化保存できないため今回のみ有効', false);
-    showToast('⚠ 暗号化非対応環境: 保存されません');
+    setTokenStatus('笞 縺薙・迺ｰ蠅・〒縺ｯ證怜捷蛹紋ｿ晏ｭ倥〒縺阪↑縺・◆繧∽ｻ雁屓縺ｮ縺ｿ譛牙柑', false);
+    showToast('笞 證怜捷蛹夜撼蟇ｾ蠢懃腸蠅・ 菫晏ｭ倥＆繧後∪縺帙ｓ');
     updateSettingsGear();
     return;
   }
@@ -1549,12 +1549,12 @@ async function saveAppToken() {
     localStorage.setItem(TOKEN_LS_ENC, await KeyVault.encrypt(v));
     STATE.appToken = v;
     document.getElementById('tokenInput').value = '';
-    setTokenStatus('✓ 合言葉を暗号化保存済み', true);
-    showToast('🔒 合言葉を暗号化して保存しました');
+    setTokenStatus('笨・蜷郁ｨ闡峨ｒ證怜捷蛹紋ｿ晏ｭ俶ｸ医∩', true);
+    showToast('白 蜷郁ｨ闡峨ｒ證怜捷蛹悶＠縺ｦ菫晏ｭ倥＠縺ｾ縺励◆');
     updateSettingsGear();
   } catch (e) {
     console.error(e);
-    showToast('❌ 暗号化保存に失敗しました');
+    showToast('笶・證怜捷蛹紋ｿ晏ｭ倥↓螟ｱ謨励＠縺ｾ縺励◆');
   }
 }
 
@@ -1567,13 +1567,13 @@ async function loadSecureKeys() {
     const enc = localStorage.getItem(TOKEN_LS_ENC);
     if (enc && KeyVault.available()) STATE.appToken = await KeyVault.decrypt(enc);
     if (STATE.appToken) {
-      document.getElementById('tokenInput').placeholder = '●●●●●●●● (保存済み・変更する時だけ入力)';
-      setTokenStatus('✓ 合言葉設定済み(暗号化)', true);
+      document.getElementById('tokenInput').placeholder = '笳鞘酪笳鞘酪笳鞘酪笳鞘酪 (菫晏ｭ俶ｸ医∩繝ｻ螟画峩縺吶ｋ譎ゅ□縺大・蜉・';
+      setTokenStatus('笨・蜷郁ｨ闡芽ｨｭ螳壽ｸ医∩(證怜捷蛹・', true);
     }
   } catch (e) {
     console.warn('token decrypt failed', e);
     localStorage.removeItem(TOKEN_LS_ENC);
-    setTokenStatus('⚠ 合言葉を復号できません。再入力してください', false);
+    setTokenStatus('笞 蜷郁ｨ闡峨ｒ蠕ｩ蜿ｷ縺ｧ縺阪∪縺帙ｓ縲ょ・蜈･蜉帙＠縺ｦ縺上□縺輔＞', false);
   }
   updateSettingsGear();
 }
@@ -1582,7 +1582,7 @@ const keysReady = loadSecureKeys();
   const saved = localStorage.getItem('dei_proxyBase');
   if (saved) {
     document.getElementById('proxyBaseInput').value = saved;
-    document.getElementById('proxyStatus').textContent = '✓ Worker URL設定済み: ' + saved;
+    document.getElementById('proxyStatus').textContent = '笨・Worker URL險ｭ螳壽ｸ医∩: ' + saved;
     document.getElementById('proxyStatus').className = 'api-status ok';
   }
 })();
@@ -1591,13 +1591,13 @@ switchProvider(STATE.aiProvider);
 updateCurrentProvider();
 updateSettingsGear();
 
-// ===== CONV MODE 初期化 (ビジネス/オフ・遊び) =====
+// ===== CONV MODE 蛻晄悄蛹・(繝薙ず繝阪せ/繧ｪ繝輔・驕翫・) =====
 currentTopic = TOPIC_SETS[convMode][0].key;
 document.querySelectorAll('.conv-mode-btn').forEach(b =>
   b.classList.toggle('active', b.dataset.convMode === convMode));
 renderTopicBar();
 (function initModeBadges() {
-  const badgeTxt = convMode === 'business' ? '💼 Business' : '🎉 Casual';
+  const badgeTxt = convMode === 'business' ? '直 Business' : '脂 Casual';
   ['freetalkModeBadge','shadowModeBadge','instantModeBadge'].forEach(id => {
     const el = document.getElementById(id);
     if (el) { el.textContent = badgeTxt; el.className = 'conv-mode-badge ' + convMode; }
@@ -1605,7 +1605,7 @@ renderTopicBar();
 })();
 (function initFreetalkTTSBtn() {
   const btn = document.getElementById('freetalkTTSBtn');
-  if (btn) btn.textContent = freetalkTTSEnabled ? '🔊' : '🔇';
+  if (btn) btn.textContent = freetalkTTSEnabled ? '矧' : '這';
 })();
 
 // ===== SCREEN NAV =====
@@ -1631,8 +1631,8 @@ function initChat() {
   const set = TOPIC_SETS[convMode];
   const t = set.find(t => t.key === currentTopic) || set[0];
   const opener = convMode === 'business'
-    ? `Hi! Let's talk about **${t.label}** today. What's on your plate lately? 😊`
-    : `Hey! Let's chat about **${t.label}** today. What's new with you? 😄`;
+    ? `Hi! Let's talk about **${t.label}** today. What's on your plate lately? ・`
+    : `Hey! Let's chat about **${t.label}** today. What's new with you? ・`;
   addBubble('ai', opener);
 }
 
@@ -1646,9 +1646,9 @@ function addBubble(role, text, feedback) {
     fb.className = 'feedback-bubble';
     const label = document.createElement('div');
     label.className = 'feedback-label';
-    label.textContent = '💡 Tip ';
+    label.textContent = '庁 Tip ';
     const saveBtn = document.createElement('button');
-    saveBtn.textContent = '+ 保存';
+    saveBtn.textContent = '+ 菫晏ｭ・;
     saveBtn.style.cssText = 'float:right;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.3);color:rgb(255,200,80);border-radius:6px;padding:2px 8px;font-size:10px;cursor:pointer;';
     saveBtn.addEventListener('click', () => { addVocab(feedback, '', 'Free Talk Tip'); renderVocab(); });
     label.appendChild(saveBtn);
@@ -1667,8 +1667,8 @@ function addBubble(role, text, feedback) {
     if (role === 'ai' && cleanText.trim()) {
       const replay = document.createElement('button');
       replay.className = 'bubble-replay-btn';
-      replay.textContent = '🔊';
-      replay.title = 'もう一度聞く';
+      replay.textContent = '矧';
+      replay.title = '繧ゅ≧荳蠎ｦ閨槭￥';
       replay.onclick = () => speakEnglish(cleanText);
       wrap.appendChild(replay);
       if (freetalkTTSEnabled) speakEnglish(cleanText);
@@ -1678,7 +1678,7 @@ function addBubble(role, text, feedback) {
   area.scrollTop = area.scrollHeight;
 }
 
-// ===== Free Talk 読み上げ(TTS) =====
+// ===== Free Talk 隱ｭ縺ｿ荳翫￡(TTS) =====
 function speakEnglish(text) {
   if (!text || !('speechSynthesis' in window)) return;
   window.speechSynthesis.cancel();
@@ -1692,10 +1692,10 @@ function toggleFreetalkTTS() {
   if (!freetalkTTSEnabled) window.speechSynthesis.cancel();
   const btn = document.getElementById('freetalkTTSBtn');
   if (btn) {
-    btn.textContent = freetalkTTSEnabled ? '🔊' : '🔇';
+    btn.textContent = freetalkTTSEnabled ? '矧' : '這';
     btn.classList.toggle('recording', false);
   }
-  showToast(freetalkTTSEnabled ? '🔊 自動読み上げON' : '🔇 自動読み上げOFF');
+  showToast(freetalkTTSEnabled ? '矧 閾ｪ蜍戊ｪｭ縺ｿ荳翫￡ON' : '這 閾ｪ蜍戊ｪｭ縺ｿ荳翫￡OFF');
 }
 
 function showTyping() {
@@ -1735,8 +1735,8 @@ function getHistoryForClaude() {
 
 function buildSystemPrompt() {
   const toneLine = convMode === 'business'
-    ? "Tone: professional but warm workplace English — like a helpful, friendly colleague or client. Avoid slang; use natural business phrasing."
-    : "Tone: relaxed, casual English between friends — contractions, informal phrasing, light humor are welcome.";
+    ? "Tone: professional but warm workplace English 窶・like a helpful, friendly colleague or client. Avoid slang; use natural business phrasing."
+    : "Tone: relaxed, casual English between friends 窶・contractions, informal phrasing, light humor are welcome.";
   return `You are a friendly, natural English conversation partner helping a Japanese adult (intermediate level) practice real-world English.
 
 Topic: ${currentTopicPrompt()}
@@ -1747,7 +1747,7 @@ Rules:
 - Ask ONE follow-up question to keep conversation flowing
 - Occasionally give a brief inline tip: highlight one natural phrase in brackets like [Tip: "I'm swamped" sounds more natural]
 - NEVER use bullet points or formal structure
-- IMPORTANT: Do not repeat a question, phrase, or example you (the AI) already used earlier in this conversation. Always bring something new — a different angle, a new example, a different follow-up question.`;
+- IMPORTANT: Do not repeat a question, phrase, or example you (the AI) already used earlier in this conversation. Always bring something new 窶・a different angle, a new example, a different follow-up question.`;
 }
 
 async function sendToGemini() {
@@ -1846,7 +1846,7 @@ const PROVIDER_SENDERS = {
 async function sendMessage() {
   await keysReady;
   if (!STATE.appToken) {
-    showToast('❌ 設定画面で合言葉を入力してください');
+    showToast('笶・險ｭ螳夂判髱｢縺ｧ蜷郁ｨ闡峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞');
     return;
   }
 
@@ -1882,7 +1882,7 @@ async function sendMessage() {
 
   if (!result || result.error) {
     STATE.history.pop();
-    addBubble('ai', `❌ Connection Error. ${result ? result.error : 'Please verify keys.'}`);
+    addBubble('ai', `笶・Connection Error. ${result ? result.error : 'Please verify keys.'}`);
     document.getElementById('talkStatus').textContent = 'Error';
     return;
   }
@@ -1912,7 +1912,7 @@ function autoResize(el) {
 // ===== MIC =====
 function toggleMic() {
   if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('音声入力はSafariでサポートされています');
+    showToast('髻ｳ螢ｰ蜈･蜉帙・Safari縺ｧ繧ｵ繝昴・繝医＆繧後※縺・∪縺・);
     return;
   }
   if (isRecording) {
@@ -1931,20 +1931,19 @@ function toggleMic() {
     const transcript = e.results[0][0].transcript;
     document.getElementById('msgInput').value = transcript;
     autoResize(document.getElementById('msgInput'));
-    // 修正: 認識結果を入力欄に入れるだけで止まっていたため、そのまま送信まで繋げる
-    if (transcript.trim()) sendMessage();
+    // 菫ｮ豁｣: 隱崎ｭ倡ｵ先棡繧貞・蜉帶ｬ・↓蜈･繧後ｋ縺縺代〒豁｢縺ｾ縺｣縺ｦ縺・◆縺溘ａ縲√◎縺ｮ縺ｾ縺ｾ騾∽ｿ｡縺ｾ縺ｧ郢九￡繧・    if (transcript.trim()) sendMessage();
   };
   recognition.onerror = (e) => {
     console.error('SpeechRecognition error:', e.error);
     isRecording = false;
     document.getElementById('micBtn').classList.remove('recording');
     const msgs = {
-      'not-allowed': '🎤 マイクの使用が許可されていません(ブラウザの設定を確認)',
-      'no-speech': '🎤 音声が検出されませんでした',
-      'audio-capture': '🎤 マイクが見つかりません',
-      'network': '🎤 音声認識のネットワークエラー'
+      'not-allowed': '痔 繝槭う繧ｯ縺ｮ菴ｿ逕ｨ縺瑚ｨｱ蜿ｯ縺輔ｌ縺ｦ縺・∪縺帙ｓ(繝悶Λ繧ｦ繧ｶ縺ｮ險ｭ螳壹ｒ遒ｺ隱・',
+      'no-speech': '痔 髻ｳ螢ｰ縺梧､懷・縺輔ｌ縺ｾ縺帙ｓ縺ｧ縺励◆',
+      'audio-capture': '痔 繝槭う繧ｯ縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ',
+      'network': '痔 髻ｳ螢ｰ隱崎ｭ倥・繝阪ャ繝医Ρ繝ｼ繧ｯ繧ｨ繝ｩ繝ｼ'
     };
-    showToast(msgs[e.error] || `🎤 音声認識エラー: ${e.error}`);
+    showToast(msgs[e.error] || `痔 髻ｳ螢ｰ隱崎ｭ倥お繝ｩ繝ｼ: ${e.error}`);
   };
   recognition.onend = () => {
     isRecording = false;
@@ -1962,9 +1961,9 @@ let lastDialogueIdx = -1;
 let shadowAttemptCount = 0;
 
 const CLARIFY_PHRASES = [
-  { en: "Sorry, could you say that again?", jp: "ごめん、もう一回言ってもらえる？" },
-  { en: "Hmm, I didn't quite catch that. One more time?", jp: "うーん、ちょっと聞き取れなかった。もう一度？" },
-  { en: "Sorry, I'm still not getting it — could you say it a bit slower?", jp: "ごめん、まだよくわからなくて…もう少しゆっくり言ってもらえる？" }
+  { en: "Sorry, could you say that again?", jp: "縺斐ａ繧薙√ｂ縺・ｸ蝗櫁ｨ縺｣縺ｦ繧ゅｉ縺医ｋ・・ },
+  { en: "Hmm, I didn't quite catch that. One more time?", jp: "縺・・繧薙√■繧・▲縺ｨ閨槭″蜿悶ｌ縺ｪ縺九▲縺溘ゅｂ縺・ｸ蠎ｦ・・ },
+  { en: "Sorry, I'm still not getting it 窶・could you say it a bit slower?", jp: "縺斐ａ繧薙√∪縺繧医￥繧上°繧峨↑縺上※窶ｦ繧ゅ≧蟆代＠繧・▲縺上ｊ險縺｣縺ｦ繧ゅｉ縺医ｋ・・ }
 ];
 
 function currentShadowPool() {
@@ -2035,7 +2034,7 @@ function nextShadowLine() {
     renderShadowScript();
     playCurrentLine();
   } else {
-    showToast('🎉 ダイアログ完了！次の会話へ');
+    showToast('脂 繝繧､繧｢繝ｭ繧ｰ螳御ｺ・ｼ∵ｬ｡縺ｮ莨夊ｩｱ縺ｸ');
     setTimeout(() => { initShadowing(); }, 1800);
   }
 }
@@ -2043,14 +2042,14 @@ function nextShadowLine() {
 function showShadowPartnerLine(text, jp, ok) {
   const el = document.getElementById('shadowFeedback');
   el.innerHTML = `<div class="shadow-partner-line${ok ? ' ok' : ''}">
-      <div class="shadow-partner-label">${ok ? '✓ Partner' : '🎧 Partner'}</div>
+      <div class="shadow-partner-label">${ok ? '笨・Partner' : '而 Partner'}</div>
       ${text}${jp ? `<div class="shadow-jp" style="display:block;margin-top:4px;">${jp}</div>` : ''}
     </div>`;
 }
 
 function shadowRecord() {
   if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('音声入力をサポートしていません');
+    showToast('髻ｳ螢ｰ蜈･蜉帙ｒ繧ｵ繝昴・繝医＠縺ｦ縺・∪縺帙ｓ');
     return;
   }
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -2066,8 +2065,8 @@ function shadowRecord() {
 
     if (similarity > 0.6) {
       shadowAttemptCount = 0;
-      showShadowPartnerLine('Got it, thanks!', '伝わったよ、ありがとう！', true);
-      showToast('✓ Great shadowing!');
+      showShadowPartnerLine('Got it, thanks!', '莨昴ｏ縺｣縺溘ｈ縲√≠繧翫′縺ｨ縺・ｼ・, true);
+      showToast('笨・Great shadowing!');
     } else {
       shadowAttemptCount++;
       if (shadowAttemptCount <= CLARIFY_PHRASES.length) {
@@ -2076,21 +2075,21 @@ function shadowRecord() {
         const utt = new SpeechSynthesisUtterance(phrase.en);
         utt.lang = 'en-US'; utt.rate = 0.9;
         window.speechSynthesis.speak(utt);
-        showToast(`↻ 聞き取れなかったみたい (${shadowAttemptCount}/${CLARIFY_PHRASES.length})`);
+        showToast(`竊ｻ 閨槭″蜿悶ｌ縺ｪ縺九▲縺溘∩縺溘＞ (${shadowAttemptCount}/${CLARIFY_PHRASES.length})`);
       } else {
         const failedLine = currentDialogue[currentShadowLine];
-        addMistake(failedLine.en, failedLine.jp, 'Shadowingで発音が伝わらなかった', 'shadowing');
+        addMistake(failedLine.en, failedLine.jp, 'Shadowing縺ｧ逋ｺ髻ｳ縺御ｼ昴ｏ繧峨↑縺九▲縺・, 'shadowing');
         showShadowPartnerLine(
-          `No worries — the target line was: "${failedLine.en}". Let's try the next one.`,
-          'このセリフでした。次に進みましょう。(💹単語帳に記録)',
+          `No worries 窶・the target line was: "${failedLine.en}". Let's try the next one.`,
+          '縺薙・繧ｻ繝ｪ繝輔〒縺励◆縲よｬ｡縺ｫ騾ｲ縺ｿ縺ｾ縺励ｇ縺・・鳥蜊倩ｪ槫ｸｳ縺ｫ險倬鹸)',
           false
         );
-        showToast('💹 間違えやすいフレーズに記録しました');
+        showToast('鳥 髢馴＆縺医ｄ縺吶＞繝輔Ξ繝ｼ繧ｺ縺ｫ險倬鹸縺励∪縺励◆');
       }
     }
   };
   r.start();
-  showToast('🎤 聴いています...');
+  showToast('痔 閨ｴ縺・※縺・∪縺・..');
 }
 
 // ===== INSTANT =====
@@ -2193,14 +2192,14 @@ function markAnswer(correct) {
   if (correct) {
     instantScore++;
   } else {
-    const note = userAnswer ? `${q.note} / 自分の解答: ${userAnswer}` : q.note;
+    const note = userAnswer ? `${q.note} / 閾ｪ蛻・・隗｣遲・ ${userAnswer}` : q.note;
     addMistake(q.en, q.jp, note, 'instant');
   }
   instantAnswered++;
   updateInstantScore();
   if (instantAnswered >= instantPool.length) {
     recordTodayStats(instantScore, instantPool.length);
-    showToast(`🎉 完了！ ${instantScore}/${instantPool.length} 正解`);
+    showToast(`脂 螳御ｺ・ｼ・${instantScore}/${instantPool.length} 豁｣隗｣`);
     setTimeout(() => { instantAnswered = 0; instantScore = 0; updateInstantScore(); loadInstantQ(); }, 2000);
     return;
   }
@@ -2211,7 +2210,7 @@ function updateInstantScore() {
   document.getElementById('instantScore').textContent = `${instantScore} / ${instantAnswered}`;
 }
 
-// ===== 手入力の解答ログ =====
+// ===== 謇句・蜉帙・隗｣遲斐Ο繧ｰ =====
 function loadInstantLog() { return JSON.parse(localStorage.getItem('dei_instantLog') || '[]'); }
 function saveInstantLogEntry(q, userAnswer, correct) {
   const log = loadInstantLog();
@@ -2236,22 +2235,22 @@ function renderInstantLog() {
   const panel = document.getElementById('instantLogPanel');
   const log = loadInstantLog();
   if (log.length === 0) {
-    panel.innerHTML = '<div class="vocab-empty" style="padding:20px;">まだ解答ログがありません。</div>';
+    panel.innerHTML = '<div class="vocab-empty" style="padding:20px;">縺ｾ縺隗｣遲斐Ο繧ｰ縺後≠繧翫∪縺帙ｓ縲・/div>';
     return;
   }
   panel.innerHTML = log.map(l => `
     <div class="instant-log-item">
       <div class="instant-log-jp">${escapeHtml(l.jp)}</div>
-      <div class="instant-log-user${l.userAnswer ? '' : ' empty'}">${escapeHtml(l.userAnswer) || '(手入力なし)'}</div>
+      <div class="instant-log-user${l.userAnswer ? '' : ' empty'}">${escapeHtml(l.userAnswer) || '(謇句・蜉帙↑縺・'}</div>
       <div class="instant-log-model">Model: ${escapeHtml(l.modelAnswer)}</div>
       <div class="instant-log-meta">
         <div class="instant-log-date">${escapeHtml(l.date)}</div>
-        <div class="instant-log-result ${l.correct ? 'ok' : 'ng'}">${l.correct ? '✓ 言えた' : '✗ 惜しい'}</div>
+        <div class="instant-log-result ${l.correct ? 'ok' : 'ng'}">${l.correct ? '笨・險縺医◆' : '笨・諠懊＠縺・}</div>
       </div>
     </div>`).join('');
 }
 
-// ===== 通訳 (Interpreter) =====
+// ===== 騾夊ｨｳ (Interpreter) =====
 let interpMode = 'bidirectional';
 let interpDirection = 'ja-en';
 let interpSpeaker = 'ja';
@@ -2398,7 +2397,7 @@ const ONESHOT_SENDERS = {
 async function callAIOnce(prompt) {
   await keysReady;
   if (!STATE.appToken) {
-    return { error: '設定画面で合言葉を入力してください' };
+    return { error: '險ｭ螳夂判髱｢縺ｧ蜷郁ｨ闡峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞' };
   }
   const order = [STATE.aiProvider, ...Object.keys(ONESHOT_SENDERS).filter(p => p !== STATE.aiProvider)];
   let result = null;
@@ -2408,7 +2407,7 @@ async function callAIOnce(prompt) {
     result = await provider.send(prompt);
     if (!result.error) break;
   }
-  return result || { error: '利用可能なプロバイダーがありません' };
+  return result || { error: '蛻ｩ逕ｨ蜿ｯ閭ｽ縺ｪ繝励Ο繝舌う繝繝ｼ縺後≠繧翫∪縺帙ｓ' };
 }
 
 async function translateText(text, targetLabel) {
@@ -2424,7 +2423,7 @@ async function sendInterpret() {
   const text = input.value.trim();
   if (!text) return;
   if (!STATE.appToken) {
-    showToast('❌ 設定画面で合言葉を入力してください');
+    showToast('笶・險ｭ螳夂判髱｢縺ｧ蜷郁ｨ闡峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞');
     return;
   }
   input.value = '';
@@ -2459,7 +2458,7 @@ async function sendInterpret() {
     }
   } catch (e) {
     hideInterpTyping();
-    addInterpBubble('ai', `❌ Translation Error: ${e.message}`);
+    addInterpBubble('ai', `笶・Translation Error: ${e.message}`);
     document.getElementById('interpreterStatus').textContent = 'Error';
   }
 }
@@ -2470,7 +2469,7 @@ function handleInterpEnter(e) {
 
 function toggleInterpMic() {
   if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    showToast('音声入力はSafariでサポートされています');
+    showToast('髻ｳ螢ｰ蜈･蜉帙・Safari縺ｧ繧ｵ繝昴・繝医＆繧後※縺・∪縺・);
     return;
   }
   if (interpRecording) {
@@ -2516,17 +2515,17 @@ renderHomeStats();
 let gasUrl = localStorage.getItem('dei_gasUrl') || '';
 if (gasUrl) {
   document.getElementById('gasUrlInput').value = gasUrl;
-  document.getElementById('gasStatus').textContent = '✓ GAS URL設定済み';
+  document.getElementById('gasStatus').textContent = '笨・GAS URL險ｭ螳壽ｸ医∩';
   document.getElementById('gasStatus').className = 'api-status ok';
 }
 function saveGasUrl() {
   const v = document.getElementById('gasUrlInput').value.trim();
-  if (!v.startsWith('https://')) { showToast('有効なURLを入力してください'); return; }
+  if (!v.startsWith('https://')) { showToast('譛牙柑縺ｪURL繧貞・蜉帙＠縺ｦ縺上□縺輔＞'); return; }
   gasUrl = v;
   localStorage.setItem('dei_gasUrl', v);
-  document.getElementById('gasStatus').textContent = '✓ GAS URL保存済み';
+  document.getElementById('gasStatus').textContent = '笨・GAS URL菫晏ｭ俶ｸ医∩';
   document.getElementById('gasStatus').className = 'api-status ok';
-  showToast('✓ GAS URL保存しました');
+  showToast('笨・GAS URL菫晏ｭ倥＠縺ｾ縺励◆');
 }
 function loadVocab() { return JSON.parse(localStorage.getItem('dei_vocab') || '[]'); }
 function saveVocabList(list) { localStorage.setItem('dei_vocab', JSON.stringify(list)); }
@@ -2563,7 +2562,7 @@ function addVocab(en, jp, note, opts) {
     source: opts.source || 'manual'
   });
   saveVocabList(list);
-  showToast('📚 単語帳に保存しました');
+  showToast('答 蜊倩ｪ槫ｸｳ縺ｫ菫晏ｭ倥＠縺ｾ縺励◆');
 }
 
 function addMistake(en, jp, note, source) {
@@ -2591,14 +2590,14 @@ function addVocabManual() {
   const input = document.getElementById('vocabInput');
   const val = input.value.trim();
   if (!val) return;
-  addVocab(val, '', '手動追加');
+  addVocab(val, '', '謇句虚霑ｽ蜉');
   input.value = '';
   renderVocab();
 }
 
 function tokenizeVocabText(text) {
   return (text || '').toLowerCase()
-    .replace(/[^\wぁ-んァ-ヶ一-龠a-z0-9\s]/g, ' ')
+    .replace(/[^\w縺・繧薙ぃ-繝ｶ荳-鮴a-z0-9\s]/g, ' ')
     .split(/\s+/).filter(Boolean);
 }
 function jaccardSim(tokensA, tokensB) {
@@ -2659,18 +2658,18 @@ function renderVocab() {
 
   if (shown.length === 0) {
     container.innerHTML = vocabMistakeFilter
-      ? '<div class="vocab-empty">💹 間違えやすいフレーズはまだありません。</div>'
-      : '<div class="vocab-empty">まだ単語がありません。<br>Free Talkで表現を保存するか<br>下から手動追加できます。</div>';
+      ? '<div class="vocab-empty">鳥 髢馴＆縺医ｄ縺吶＞繝輔Ξ繝ｼ繧ｺ縺ｯ縺ｾ縺縺ゅｊ縺ｾ縺帙ｓ縲・/div>'
+      : '<div class="vocab-empty">縺ｾ縺蜊倩ｪ槭′縺ゅｊ縺ｾ縺帙ｓ縲・br>Free Talk縺ｧ陦ｨ迴ｾ繧剃ｿ晏ｭ倥☆繧九°<br>荳九°繧画焔蜍戊ｿｽ蜉縺ｧ縺阪∪縺吶・/div>';
     return;
   }
 
   container.innerHTML = shown.map(({v, i}) => {
     const related = findRelatedVocab(v, list, i);
     const relatedHtml = related.length
-      ? `<div class="vocab-related">${related.map(r => `<span class="vocab-related-chip">🔗 ${escapeHtml(r.v.en)}</span>`).join('')}</div>`
+      ? `<div class="vocab-related">${related.map(r => `<span class="vocab-related-chip">迫 ${escapeHtml(r.v.en)}</span>`).join('')}</div>`
       : '';
-    const mistakeBadge = v.mistakeCount > 0 ? `<span class="vocab-mistake-badge">💹 ${v.mistakeCount}回</span>` : '';
-    const dueBadge = v.nextReview <= todayISO() ? `<span class="vocab-review-badge">📅 復習可</span>` : '';
+    const mistakeBadge = v.mistakeCount > 0 ? `<span class="vocab-mistake-badge">鳥 ${v.mistakeCount}蝗・/span>` : '';
+    const dueBadge = v.nextReview <= todayISO() ? `<span class="vocab-review-badge">套 蠕ｩ鄙貞庄</span>` : '';
     return `
     <div class="vocab-card">
       <div class="vocab-en">${escapeHtml(v.en)}${mistakeBadge}${dueBadge}</div>
@@ -2679,7 +2678,7 @@ function renderVocab() {
       ${relatedHtml}
       <div class="vocab-meta">
         <div class="vocab-date">${v.date}</div>
-        <button class="vocab-del" onclick="deleteVocab(${i})">✕</button>
+        <button class="vocab-del" onclick="deleteVocab(${i})">笨・/button>
       </div>
     </div>`;
   }).join('');
@@ -2699,7 +2698,7 @@ let reviewCorrectCount = 0;
 
 function startVocabReview() {
   const due = dueVocabIndexes();
-  if (due.length === 0) { showToast('✓ 今日の復習はありません'); return; }
+  if (due.length === 0) { showToast('笨・莉頑律縺ｮ蠕ｩ鄙偵・縺ゅｊ縺ｾ縺帙ｓ'); return; }
   reviewQueue = due;
   reviewIdx = 0; reviewCorrectCount = 0;
   showScreen('vocabreview');
@@ -2712,7 +2711,7 @@ function loadReviewCard() {
   const v = list[reviewQueue[reviewIdx]];
   document.getElementById('reviewCounter').textContent = `${reviewIdx + 1} / ${reviewQueue.length}`;
   document.getElementById('reviewJP').textContent = v.jp || v.en;
-  document.getElementById('reviewPromptHint').textContent = v.jp ? '英語で言ってみよう' : 'この表現を思い出せる？';
+  document.getElementById('reviewPromptHint').textContent = v.jp ? '闍ｱ隱槭〒險縺｣縺ｦ縺ｿ繧医≧' : '縺薙・陦ｨ迴ｾ繧呈昴＞蜃ｺ縺帙ｋ・・;
 }
 
 function revealReviewAnswer() {
@@ -2723,7 +2722,7 @@ function revealReviewAnswer() {
   const badge = document.getElementById('reviewMistakeBadge');
   if (v.mistakeCount > 0) {
     badge.style.display = 'inline-block';
-    badge.textContent = `💹 これまで${v.mistakeCount}回間違い`;
+    badge.textContent = `鳥 縺薙ｌ縺ｾ縺ｧ${v.mistakeCount}蝗樣俣驕輔＞`;
   } else {
     badge.style.display = 'none';
   }
@@ -2743,7 +2742,7 @@ function markReview(correct) {
   if (correct) reviewCorrectCount++;
   reviewIdx++;
   if (reviewIdx >= reviewQueue.length) {
-    showToast(`🎉 復習完了！ ${reviewCorrectCount}/${reviewQueue.length}`);
+    showToast(`脂 蠕ｩ鄙貞ｮ御ｺ・ｼ・${reviewCorrectCount}/${reviewQueue.length}`);
     setTimeout(() => showScreen('vocab'), 1500);
     return;
   }
@@ -2781,7 +2780,7 @@ function renderStats() {
   const days = [];
   for (let i=6; i>=0; i--) {
     const d = new Date(); d.setDate(d.getDate()-i);
-    days.push({ label: ['日','月','火','水','木','金','土'][d.getDay()], date: d.toLocaleDateString('ja-JP') });
+    days.push({ label: ['譌･','譛・,'轣ｫ','豌ｴ','譛ｨ','驥・,'蝨・][d.getDay()], date: d.toLocaleDateString('ja-JP') });
   }
   const maxScore = Math.max(...days.map(d => { const h=hist.find(h=>h.date===d.date); return h?h.score:0; }), 1);
   document.getElementById('barChart').innerHTML = days.map((d,i) => {
@@ -2810,8 +2809,8 @@ function renderStats() {
 
 // ===== GAS SYNC =====
 async function syncToSheets() {
-  if (!gasUrl) { showToast('GAS URLを設定してください'); return; }
-  document.getElementById('syncLog').textContent = '同期中...';
+  if (!gasUrl) { showToast('GAS URL繧定ｨｭ螳壹＠縺ｦ縺上□縺輔＞'); return; }
+  document.getElementById('syncLog').textContent = '蜷梧悄荳ｭ...';
 
   const hist = getStatsHistory();
   const vocab = loadVocab();
@@ -2823,7 +2822,7 @@ async function syncToSheets() {
     vocab: vocab.map(normalizeVocabItem).map(v => ({
       en: v.en, jp: v.jp, note: v.note, date: v.date,
       box: v.box, nextReview: v.nextReview, mistakeCount: v.mistakeCount, source: v.source,
-      mistakeTag: v.mistakeCount > 0 ? '💹' : ''
+      mistakeTag: v.mistakeCount > 0 ? '鳥' : ''
     })),
     timestamp: new Date().toISOString(),
     provider: STATE.aiProvider
@@ -2838,14 +2837,16 @@ async function syncToSheets() {
     });
 
     const now = new Date().toLocaleTimeString('ja-JP');
-    document.getElementById('syncLog').textContent = `✓ 同期完了 (${now})`;
-    showToast('☁ Sheetsに同期しました');
+    document.getElementById('syncLog').textContent = `笨・蜷梧悄螳御ｺ・(${now})`;
+    showToast('笘・Sheets縺ｫ蜷梧悄縺励∪縺励◆');
   } catch (e) {
     console.error(e);
-    document.getElementById('syncLog').textContent = '✕ 同期失敗';
-    showToast('同期エラーが発生しました');
+    document.getElementById('syncLog').textContent = '笨・蜷梧悄螟ｱ謨・;
+    showToast('蜷梧悄繧ｨ繝ｩ繝ｼ縺檎匱逕溘＠縺ｾ縺励◆');
   }
 }
 </script>
 </body>
 </html>
+
+
