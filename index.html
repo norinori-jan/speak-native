@@ -2917,7 +2917,7 @@ g('stoProbeCp').onclick=async function(){
 };
 })();
 </script>
-<!--LQ-START v1-->
+<!--LQ-START v2-->
 <style>
 #lqRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
 #lqRoot.on{display:block}
@@ -2954,7 +2954,7 @@ if(window.__lq)return;window.__lq=true;
 var $=function(s,r){return(r||document).querySelector(s)};
 var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-var LV={easy:{n:6,en:'CEFR A2 (very simple, slow-paced, common words)',jp:'やさしい'},normal:{n:8,en:'CEFR B1 (everyday spoken English, some phrasal verbs)',jp:'ふつう'},hard:{n:10,en:'CEFR B2 (fast casual speech, idioms, contractions, reductions like gonna/wanna)',jp:'むずかしい'}};
+var LV={easy:{n:6,en:'CEFR A2 (very simple, slow-paced, common words)',jp:'やさしい'},normal:{n:7,en:'CEFR B1 (everyday spoken English, some phrasal verbs)',jp:'ふつう'},hard:{n:8,en:'CEFR B2 (fast casual speech, idioms, contractions, reductions like gonna/wanna)',jp:'むずかしい'}};
 var SC={daily:['日常のおしゃべり','casual small talk between two friends'],plan:['友だちとの予定','two friends making plans and choosing a time and place'],trip:['旅行','a traveler and a local or hotel staff'],food:['レストラン・カフェ','ordering food or drinks at a restaurant or cafe'],work:['仕事・職場','two coworkers talking about a task, meeting, or deadline'],shop:['買い物','a customer and a shop clerk'],phone:['電話・予約','a phone call to book or change a reservation']};
 var S={level:LS.get('dei_lq_level','normal'),scene:LS.get('dei_lq_scene','daily'),slow:false,stage:'menu',dlg:null,qs:null,qi:0,score:0,picked:null,marks:{},token:0,played:0,hist:LS.get('dei_lq_hist',{n:0,q:0,c:0}),msg:'',src:'ai'};
 var root=$('#lqRoot'),body=$('#lqBody');
@@ -2983,33 +2983,44 @@ async function playOne(i){stopAll();var my=S.token;var l=S.dlg.lines[i];await sa
 async function ask(prompt,maxTok){
  try{if(typeof keysReady!=='undefined')await keysReady}catch(e){}
  if(typeof STATE==='undefined'||!STATE.appToken)return{error:'設定画面で合言葉を入力してください'};
- var order=[STATE.aiProvider,'gemini','claude','openai'].filter(function(p,i,a){return p&&a.indexOf(p)===i});var last={error:'AIに接続できません'};
+ var order=[STATE.aiProvider,'gemini','claude','openai'].filter(function(p,i,a){return p&&a.indexOf(p)===i});var notes=[];
  for(var k=0;k<order.length;k++){var p=order[k];
   try{var url,bd,pk;
    if(p==='gemini'){url='gemini-proxy';bd={contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:maxTok,temperature:0.8}};pk=function(d){return d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts&&d.candidates[0].content.parts[0]&&d.candidates[0].content.parts[0].text}}
    else if(p==='claude'){url='claude-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.content&&d.content[0]&&d.content[0].text}}
    else{url='openai-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content}}
-   var r=await fetch(proxyUrl(url),{method:'POST',headers:workerHeaders(),body:JSON.stringify(bd)});var d=await r.json();
-   if(d.error){last={error:(d.error.message||String(d.error))};continue}
-   var t=pk(d);if(t)return{text:t};last={error:'返事が空でした'}}catch(e){last={error:e.message}}}
- return last}
+   var r=await fetch(proxyUrl(url),{method:'POST',headers:workerHeaders(),body:JSON.stringify(bd)});var raw=await r.text();var d;
+   try{d=JSON.parse(raw)}catch(e){notes.push(p+': HTTP '+r.status+' '+raw.slice(0,50).replace(/\s+/g,' '));continue}
+   if(d.error){notes.push(p+': '+String(d.error.message||d.error).slice(0,70));continue}
+   var t=pk(d);if(t)return{text:t,provider:p};notes.push(p+': 返事が空（HTTP '+r.status+'）')}catch(e){notes.push(p+': '+String(e.message||e).slice(0,60))}}
+ try{if(typeof callAIOnce==='function'){var o=await callAIOnce(prompt);if(o&&o.reply)return{text:o.reply,provider:o.provider||'app'};if(o&&o.error)notes.push('app: '+String(o.error).slice(0,60))}}catch(e){}
+ return{error:notes.join(' ／ ')||'AIに接続できません'}}
 function parseJ(t){if(!t)return null;var a=t.indexOf('{'),b=t.lastIndexOf('}');if(a<0||b<a)return null;var s=t.slice(a,b+1);try{return JSON.parse(s)}catch(e){try{return JSON.parse(s.replace(/,\s*([}\]])/g,'$1'))}catch(e2){return null}}}
+function objs(text,key){var i=text.indexOf('"'+key+'"');if(i<0)return[];var a=text.indexOf('[',i);if(a<0)return[];var out=[],depth=0,start=-1,inS=false,esc=false;
+ for(var k=a+1;k<text.length;k++){var c=text[k];if(inS){if(esc)esc=false;else if(c==='\\')esc=true;else if(c==='"')inS=false;continue}
+  if(c==='"'){inS=true;continue}
+  if(c==='{'){if(depth===0)start=k;depth++}else if(c==='}'){depth--;if(depth===0&&start>=0){try{out.push(JSON.parse(text.slice(start,k+1)))}catch(e){}start=-1}}else if(c===']'&&depth===0)break}
+ return out}
+function getDlg(t){var j=parseJ(t);if(okDlg(j))return j;var ls=objs(t||'','lines').filter(function(l){return l&&typeof l.en==='string'&&l.en});if(ls.length<4)return null;
+ var nm=/"names"\s*:\s*\[\s*"([^"]*)"\s*,\s*"([^"]*)"/.exec(t),gd=/"genders"\s*:\s*\[\s*"([fm])"\s*,\s*"([fm])"/.exec(t),sj=/"scene_jp"\s*:\s*"([^"]*)"/.exec(t);
+ return{scene_jp:sj?sj[1]:'',names:nm?[nm[1],nm[2]]:['A','B'],genders:gd?[gd[1],gd[2]]:['f','m'],lines:ls}}
+function getQs(t){var j=parseJ(t);if(okQs(j))return j.questions;var qs=objs(t||'','questions').filter(function(q){return q&&q.q_en&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(function(o){return o&&o.en})&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4});return qs.length?qs:null}
 function okDlg(d){return d&&Array.isArray(d.lines)&&d.lines.length>=4&&d.lines.every(function(l){return l&&typeof l.en==='string'&&l.en&&typeof l.jp==='string'})}
-function okQs(d){return d&&Array.isArray(d.questions)&&d.questions.length>=2&&d.questions.every(function(q){return q&&q.q_en&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(function(o){return o&&o.en})&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4})}
+function okQs(d){return d&&Array.isArray(d.questions)&&d.questions.length>=1&&d.questions.every(function(q){return q&&q.q_en&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(function(o){return o&&o.en})&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4})}
 async function genAI(){
  var lv=LV[S.level],sc=SC[S.scene];
- var p1='You write short listening-practice dialogues for a Japanese learner of English.\nLevel: '+lv.en+'. Scene: '+sc[1]+'. Variety seed: '+Math.random().toString(36).slice(2,8)+'.\nWrite a natural conversation between two people (speaker 0 and speaker 1), exactly '+lv.n+' lines, alternating speakers, starting with speaker 0. Each line is 1-2 short sentences of natural spoken English. Include 2-3 concrete details (a time, place, number, reason, or choice) that a listener could be asked about.\nReturn ONLY JSON, no markdown:\n{"title":"short English title","scene_jp":"場面を日本語で1文","names":["name of speaker 0","name of speaker 1"],"genders":["f","m"],"lines":[{"sp":0,"en":"...","jp":"自然な日本語訳"}]}\n"genders" values are "f" or "m".';
+ var p1='You write short listening-practice dialogues for a Japanese learner of English.\nLevel: '+lv.en+'. Scene: '+sc[1]+'. Variety seed: '+Math.random().toString(36).slice(2,8)+'.\nWrite a natural conversation between two people (speaker 0 and speaker 1), exactly '+lv.n+' lines, alternating speakers, starting with speaker 0. Each line is 1-2 short sentences of natural spoken English. Include 2-3 concrete details (a time, place, number, reason, or choice) that a listener could be asked about.\nKeep every sentence short. Return ONLY compact JSON on one line, no markdown:\n{"title":"short English title","scene_jp":"場面を日本語で1文","names":["name of speaker 0","name of speaker 1"],"genders":["f","m"],"lines":[{"sp":0,"en":"...","jp":"自然な日本語訳"}]}\n"genders" values are "f" or "m".';
  var d=null;
- for(var t=0;t<2&&!d;t++){var r=await ask(p1,1800);if(r.error){if(t===1)return{error:r.error};continue}var j=parseJ(r.text);if(okDlg(j))d=j}
+ for(var t=0;t<2&&!d;t++){var r=await ask(p1,1800);if(r.error){if(t===1)return{error:r.error};continue}d=getDlg(r.text);if(!d&&t===1)return{error:'会話の形式が読み取れませんでした（返事: '+String(r.text).slice(0,40).replace(/\s+/g,' ')+'…）'}}
  if(!d)return{error:'会話をうまく作れませんでした'};
  d.lines=d.lines.map(function(l,i){return{sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:i%2),en:String(l.en).trim(),jp:String(l.jp||'').trim()}});
  d.names=Array.isArray(d.names)&&d.names.length>=2?d.names:['A','B'];d.genders=Array.isArray(d.genders)&&d.genders.length>=2?d.genders:['f','m'];
  var txt=d.lines.map(function(l,i){return(i+1)+'. '+d.names[l.sp]+': '+l.en}).join('\n');
- var p2='Here is a dialogue:\n'+txt+'\n\nWrite 3 multiple-choice listening-comprehension questions about concrete facts in the dialogue (what / when / where / why / how many / which), in the order they appear. Each has a question in English and in Japanese, 4 options each in English and Japanese, exactly one correct option, and a short explanation in Japanese and in English that points to the line number.\nReturn ONLY JSON, no markdown:\n{"questions":[{"q_en":"...","q_jp":"...","options":[{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."}],"answer":0,"why_jp":"...","why_en":"..."}]}\n"answer" is the 0-based index of the correct option; put the correct option at a random position.';
+ var p2='Here is a dialogue:\n'+txt+'\n\nWrite 3 multiple-choice listening-comprehension questions about concrete facts in the dialogue (what / when / where / why / how many / which), in the order they appear. Each has a question in English and in Japanese, 4 options each in English and Japanese, exactly one correct option, and a short explanation in Japanese and in English that points to the line number.\nKeep everything short. Return ONLY compact JSON on one line, no markdown:\n{"questions":[{"q_en":"...","q_jp":"...","options":[{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."}],"answer":0,"why_jp":"...","why_en":"..."}]}\n"answer" is the 0-based index of the correct option; put the correct option at a random position.';
  var q=null;
- for(var u=0;u<2&&!q;u++){var r2=await ask(p2,1800);if(r2.error){if(u===1)return{error:r2.error};continue}var j2=parseJ(r2.text);if(okQs(j2))q=j2}
+ for(var u=0;u<2&&!q;u++){var r2=await ask(p2,1800);if(r2.error){if(u===1)return{error:r2.error};continue}q=getQs(r2.text);if(!q&&u===1)return{error:'問題の形式が読み取れませんでした'}}
  if(!q)return{error:'問題をうまく作れませんでした'};
- return{dlg:d,qs:q.questions}}
+ return{dlg:d,qs:q}}
 function genLocal(){
  var pools=[];try{if(typeof SHADOW_SETS_CASUAL!=='undefined')pools=pools.concat(SHADOW_SETS_CASUAL)}catch(e){}try{if(typeof SHADOW_SETS_BUSINESS!=='undefined')pools=pools.concat(SHADOW_SETS_BUSINESS)}catch(e){}
  if(!pools.length)return null;
@@ -3031,7 +3042,7 @@ function render(){
   h+='<div class="card"><div class="sub">むずかしさ</div><div class="row">'+Object.keys(LV).map(function(k){return'<button data-a="lv" data-v="'+k+'" class="'+sel(S.level===k).trim()+'">'+LV[k].jp+'</button>'}).join('')+'</div>';
   h+='<div class="sub" style="margin-top:8px">場面</div><div class="row">'+Object.keys(SC).map(function(k){return'<button data-a="sc" data-v="'+k+'" class="'+sel(S.scene===k).trim()+'">'+SC[k][0]+'</button>'}).join('')+'</div></div>';
   h+='<div class="row"><button class="pri big" data-a="newai">🤖 AIで新しい会話をつくる</button><button class="big" data-a="newlocal">📖 内蔵の会話で練習（通信なし）</button></div>';
-  h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="sub">'+E(hist())+'</div>';
+  h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="row"><button data-a="ping">🔧 AI接続テスト</button></div><div class="sub">'+E(hist())+'</div>';
  }else if(S.stage==='loading'){
   h+='<div class="card"><div class="en" id="lqLoad">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
  }else if(S.stage==='listen'){
@@ -3068,6 +3079,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='sc'){S.scene=b.dataset.v;render()}
  else if(a==='newai')begin(true);
  else if(a==='newlocal')begin(false);
+ else if(a==='ping'){setMsg('AIに問い合わせ中…');var pr=await ask('Reply with the single word OK.',30);setMsg(pr.error?('つながりません： '+pr.error):('つながりました（'+pr.provider+'）'))}
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll()}
  else if(a==='slow'){S.slow=!S.slow;b.classList.toggle('sel',S.slow)}
