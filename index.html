@@ -2917,5 +2917,181 @@ g('stoProbeCp').onclick=async function(){
 };
 })();
 </script>
+<!--LQ-START v1-->
+<style>
+#lqRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
+#lqRoot.on{display:block}
+#lqRoot .lqw{max-width:640px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 28px)}
+#lqRoot h2{font-size:20px;margin:6px 0 4px}
+#lqRoot .sub{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin:0 0 10px}
+#lqRoot .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#lqRoot button{font:inherit;color:inherit;background:var(--surface2,#1e2128);border:1px solid var(--border,#2a2d35);border-radius:12px;padding:11px 14px;cursor:pointer}
+#lqRoot button.pri{background:var(--accent,#5cefb0);color:#08130e;border-color:transparent;font-weight:700}
+#lqRoot button.sel{border-color:var(--accent,#5cefb0);box-shadow:0 0 0 1px var(--accent,#5cefb0) inset}
+#lqRoot button:disabled{opacity:.45}
+#lqRoot .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#lqRoot .card{background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:14px;padding:12px;margin:10px 0}
+#lqRoot .en{font-size:16px;line-height:1.5}
+#lqRoot .jp{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.5;margin-top:2px}
+#lqRoot .opt{display:block;width:100%;text-align:left;margin:8px 0}
+#lqRoot .opt.ok{border-color:var(--accent,#5cefb0);background:rgba(92,239,176,.12)}
+#lqRoot .opt.ng{border-color:var(--danger,#ff6b6b);background:rgba(255,107,107,.12)}
+#lqRoot.hjp .opt .jp,#lqRoot.hjp .qjp{display:none}
+#lqRoot .big{font-size:18px;padding:16px;width:100%}
+#lqRoot .who{font-size:15px;min-height:24px;color:var(--accent3,#7eb8ff);margin:8px 0}
+#lqRoot .msg{font-size:13px;min-height:18px;color:var(--accent2,#f0a05a);margin:6px 0}
+#lqRoot .ln{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--border,#2a2d35)}
+#lqRoot .ln:first-child{border-top:0}
+#lqRoot .ln .t{flex:1}
+#lqRoot .ln button{padding:6px 10px;border-radius:10px}
+#lqRoot .nm{font-size:11px;color:var(--accent3,#7eb8ff)}
+#lqCardBtn{cursor:pointer}
+</style>
+<div id="lqRoot" role="dialog" aria-label="聞き取りテスト"><div class="lqw" id="lqBody"></div></div>
+<script>
+(function(){
+if(window.__lq)return;window.__lq=true;
+var $=function(s,r){return(r||document).querySelector(s)};
+var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var LV={easy:{n:6,en:'CEFR A2 (very simple, slow-paced, common words)',jp:'やさしい'},normal:{n:8,en:'CEFR B1 (everyday spoken English, some phrasal verbs)',jp:'ふつう'},hard:{n:10,en:'CEFR B2 (fast casual speech, idioms, contractions, reductions like gonna/wanna)',jp:'むずかしい'}};
+var SC={daily:['日常のおしゃべり','casual small talk between two friends'],plan:['友だちとの予定','two friends making plans and choosing a time and place'],trip:['旅行','a traveler and a local or hotel staff'],food:['レストラン・カフェ','ordering food or drinks at a restaurant or cafe'],work:['仕事・職場','two coworkers talking about a task, meeting, or deadline'],shop:['買い物','a customer and a shop clerk'],phone:['電話・予約','a phone call to book or change a reservation']};
+var S={level:LS.get('dei_lq_level','normal'),scene:LS.get('dei_lq_scene','daily'),slow:false,stage:'menu',dlg:null,qs:null,qi:0,score:0,picked:null,marks:{},token:0,played:0,hist:LS.get('dei_lq_hist',{n:0,q:0,c:0}),msg:'',src:'ai'};
+var root=$('#lqRoot'),body=$('#lqBody');
+if(LS.get('dei_lq_hjp',false))root.classList.add('hjp');
+function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+/* ---------- 声 ---------- */
+function vlist(){try{return(speechSynthesis.getVoices()||[]).filter(function(v){return/^en[-_]/i.test(v.lang)})}catch(e){return[]}}
+function pick(g){var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i,M=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male/i;var re=g==='m'?M:F;
+return vs.find(function(v){return re.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return re.test(v.name)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
+function sayLine(text,sp,tok){return new Promise(function(res){
+ try{var u=new SpeechSynthesisUtterance(text);u.lang='en-US';var g=(S.dlg&&S.dlg.genders&&S.dlg.genders[sp])||(sp?'m':'f');var v=pick(g);if(v){u.voice=v;u.lang=v.lang}
+ u.rate=S.slow?0.7:0.95;u.pitch=g==='m'?0.85:1.12;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
+ var tm=setTimeout(fin,Math.max(3500,text.length*140/(S.slow?0.7:1))+2500);u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}catch(e){res()}})}
+function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+async function playAll(){if(!S.dlg)return;var my=++S.token;try{speechSynthesis.cancel()}catch(e){}
+ S.played++;var who=$('#lqWho');var ls=S.dlg.lines;
+ for(var i=0;i<ls.length;i++){if(my!==S.token)return;var sp=ls[i].sp?1:0;var nm=(S.dlg.names&&S.dlg.names[sp])||(sp?'B':'A');
+  if(who&&S.stage==='listen')who.textContent='🗣 '+nm+'　（'+(i+1)+' / '+ls.length+'）';
+  await sayLine(ls[i].en,sp,my);await wait(S.slow?500:300)}
+ if(my===S.token&&who&&S.stage==='listen')who.textContent='✔ 聞き終わりました。もう一度聞くか、問題にすすみます。';
+ var nb=$('#lqNext');if(nb)nb.disabled=false}
+function stopAll(){S.token++;try{speechSynthesis.cancel()}catch(e){}}
+async function playOne(i){stopAll();var my=S.token;var l=S.dlg.lines[i];await sayLine(l.en,l.sp?1:0,my)}
+/* ---------- AI ---------- */
+async function ask(prompt,maxTok){
+ try{if(typeof keysReady!=='undefined')await keysReady}catch(e){}
+ if(typeof STATE==='undefined'||!STATE.appToken)return{error:'設定画面で合言葉を入力してください'};
+ var order=[STATE.aiProvider,'gemini','claude','openai'].filter(function(p,i,a){return p&&a.indexOf(p)===i});var last={error:'AIに接続できません'};
+ for(var k=0;k<order.length;k++){var p=order[k];
+  try{var url,bd,pk;
+   if(p==='gemini'){url='gemini-proxy';bd={contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:maxTok,temperature:0.8}};pk=function(d){return d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts&&d.candidates[0].content.parts[0]&&d.candidates[0].content.parts[0].text}}
+   else if(p==='claude'){url='claude-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.content&&d.content[0]&&d.content[0].text}}
+   else{url='openai-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content}}
+   var r=await fetch(proxyUrl(url),{method:'POST',headers:workerHeaders(),body:JSON.stringify(bd)});var d=await r.json();
+   if(d.error){last={error:(d.error.message||String(d.error))};continue}
+   var t=pk(d);if(t)return{text:t};last={error:'返事が空でした'}}catch(e){last={error:e.message}}}
+ return last}
+function parseJ(t){if(!t)return null;var a=t.indexOf('{'),b=t.lastIndexOf('}');if(a<0||b<a)return null;var s=t.slice(a,b+1);try{return JSON.parse(s)}catch(e){try{return JSON.parse(s.replace(/,\s*([}\]])/g,'$1'))}catch(e2){return null}}}
+function okDlg(d){return d&&Array.isArray(d.lines)&&d.lines.length>=4&&d.lines.every(function(l){return l&&typeof l.en==='string'&&l.en&&typeof l.jp==='string'})}
+function okQs(d){return d&&Array.isArray(d.questions)&&d.questions.length>=2&&d.questions.every(function(q){return q&&q.q_en&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(function(o){return o&&o.en})&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4})}
+async function genAI(){
+ var lv=LV[S.level],sc=SC[S.scene];
+ var p1='You write short listening-practice dialogues for a Japanese learner of English.\nLevel: '+lv.en+'. Scene: '+sc[1]+'. Variety seed: '+Math.random().toString(36).slice(2,8)+'.\nWrite a natural conversation between two people (speaker 0 and speaker 1), exactly '+lv.n+' lines, alternating speakers, starting with speaker 0. Each line is 1-2 short sentences of natural spoken English. Include 2-3 concrete details (a time, place, number, reason, or choice) that a listener could be asked about.\nReturn ONLY JSON, no markdown:\n{"title":"short English title","scene_jp":"場面を日本語で1文","names":["name of speaker 0","name of speaker 1"],"genders":["f","m"],"lines":[{"sp":0,"en":"...","jp":"自然な日本語訳"}]}\n"genders" values are "f" or "m".';
+ var d=null;
+ for(var t=0;t<2&&!d;t++){var r=await ask(p1,1800);if(r.error){if(t===1)return{error:r.error};continue}var j=parseJ(r.text);if(okDlg(j))d=j}
+ if(!d)return{error:'会話をうまく作れませんでした'};
+ d.lines=d.lines.map(function(l,i){return{sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:i%2),en:String(l.en).trim(),jp:String(l.jp||'').trim()}});
+ d.names=Array.isArray(d.names)&&d.names.length>=2?d.names:['A','B'];d.genders=Array.isArray(d.genders)&&d.genders.length>=2?d.genders:['f','m'];
+ var txt=d.lines.map(function(l,i){return(i+1)+'. '+d.names[l.sp]+': '+l.en}).join('\n');
+ var p2='Here is a dialogue:\n'+txt+'\n\nWrite 3 multiple-choice listening-comprehension questions about concrete facts in the dialogue (what / when / where / why / how many / which), in the order they appear. Each has a question in English and in Japanese, 4 options each in English and Japanese, exactly one correct option, and a short explanation in Japanese and in English that points to the line number.\nReturn ONLY JSON, no markdown:\n{"questions":[{"q_en":"...","q_jp":"...","options":[{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."},{"en":"...","jp":"..."}],"answer":0,"why_jp":"...","why_en":"..."}]}\n"answer" is the 0-based index of the correct option; put the correct option at a random position.';
+ var q=null;
+ for(var u=0;u<2&&!q;u++){var r2=await ask(p2,1800);if(r2.error){if(u===1)return{error:r2.error};continue}var j2=parseJ(r2.text);if(okQs(j2))q=j2}
+ if(!q)return{error:'問題をうまく作れませんでした'};
+ return{dlg:d,qs:q.questions}}
+function genLocal(){
+ var pools=[];try{if(typeof SHADOW_SETS_CASUAL!=='undefined')pools=pools.concat(SHADOW_SETS_CASUAL)}catch(e){}try{if(typeof SHADOW_SETS_BUSINESS!=='undefined')pools=pools.concat(SHADOW_SETS_BUSINESS)}catch(e){}
+ if(!pools.length)return null;
+ var base=pools[Math.floor(Math.random()*pools.length)];
+ var d={title:base.title,scene_jp:'場面：'+base.title,names:['Mia','Ken'],genders:['f','m'],lines:base.lines.map(function(l,i){return{sp:i%2,en:l.en,jp:l.jp}})};
+ var others=[];pools.forEach(function(p){if(p!==base)p.lines.forEach(function(l){others.push(l)})});
+ var idx=shuffle(d.lines.map(function(_,i){return i})).slice(0,3).sort(function(a,b){return a-b});
+ var qs=idx.map(function(i){var L=d.lines[i];var ds=shuffle(others).slice(0,3);
+  var opts=shuffle([{en:L.en,jp:L.jp,ok:1}].concat(ds.map(function(x){return{en:x.en,jp:x.jp}})));
+  return{q_en:'Which sentence did you hear in the conversation?',q_jp:'会話の中で言っていたのは、どれですか？',options:opts,answer:opts.findIndex(function(o){return o.ok}),why_jp:'この文は '+(i+1)+' 行目で、'+d.names[d.lines[i].sp]+' が言いました。',why_en:'This was said in line '+(i+1)+' by '+d.names[d.lines[i].sp]+'.'}});
+ return{dlg:d,qs:qs}}
+/* ---------- 画面 ---------- */
+function hist(){var h=S.hist;return h.n?('通算 '+h.n+'回　正解 '+h.c+' / '+h.q+'問（'+Math.round(h.c/Math.max(1,h.q)*100)+'%）'):'まだ記録はありません'}
+function sel(on){return on?' sel':''}
+function render(){
+ var h='<div class="top"><h2>🎯 聞き取りテスト</h2><button data-a="close" aria-label="閉じる">✕</button></div>';
+ if(S.stage==='menu'){
+  h+='<p class="sub">2人の会話を聞いて、内容の質問に答えます。質問も選択肢も答え合わせも、<b>英語と日本語の両方</b>を表示します。文字は聞き終わるまで出ません。</p>';
+  h+='<div class="card"><div class="sub">むずかしさ</div><div class="row">'+Object.keys(LV).map(function(k){return'<button data-a="lv" data-v="'+k+'" class="'+sel(S.level===k).trim()+'">'+LV[k].jp+'</button>'}).join('')+'</div>';
+  h+='<div class="sub" style="margin-top:8px">場面</div><div class="row">'+Object.keys(SC).map(function(k){return'<button data-a="sc" data-v="'+k+'" class="'+sel(S.scene===k).trim()+'">'+SC[k][0]+'</button>'}).join('')+'</div></div>';
+  h+='<div class="row"><button class="pri big" data-a="newai">🤖 AIで新しい会話をつくる</button><button class="big" data-a="newlocal">📖 内蔵の会話で練習（通信なし）</button></div>';
+  h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="sub">'+E(hist())+'</div>';
+ }else if(S.stage==='loading'){
+  h+='<div class="card"><div class="en" id="lqLoad">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
+ }else if(S.stage==='listen'){
+  h+='<div class="card"><div class="jp" style="margin:0">'+E(S.dlg.scene_jp||'')+'</div><div class="jp">登場人物：'+E(S.dlg.names[0])+'（'+(S.dlg.genders[0]==='m'?'男性':'女性')+'）と '+E(S.dlg.names[1])+'（'+(S.dlg.genders[1]==='m'?'男性':'女性')+'）</div></div>';
+  h+='<button class="pri big" data-a="play">▶ '+(S.played?'もう一度聞く':'会話を聞く')+'</button>';
+  h+='<div class="who" id="lqWho"></div><div class="row"><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="stop">■ 止める</button></div>';
+  h+='<button class="big" id="lqNext" data-a="toq" '+(S.played?'':'disabled')+'>問題にすすむ ›</button><div class="sub" style="margin-top:8px">先に最後まで聞いてから、問題にすすみます。聞き取れなくても大丈夫。何回聞いてもかまいません。</div>';
+ }else if(S.stage==='quiz'){
+  var q=S.qs[S.qi];var done=S.picked!=null;
+  h+='<div class="sub">問題 '+(S.qi+1)+' / '+S.qs.length+'　正解 '+S.score+'</div>';
+  h+='<div class="card"><div class="en">'+E(q.q_en)+'</div><div class="jp qjp">'+E(q.q_jp||'')+'</div></div>';
+  h+=q.options.map(function(o,i){var c='opt';if(done){if(i===q.answer)c+=' ok';else if(i===S.picked)c+=' ng'}return'<button class="'+c+'" data-a="pick" data-i="'+i+'" '+(done?'disabled':'')+'><div class="en">'+E(o.en)+'</div><div class="jp">'+E(o.jp||'')+'</div></button>'}).join('');
+  if(done){h+='<div class="card"><div class="en">'+(S.picked===q.answer?'✅ 正解！':'❌ 不正解')+'</div><div class="jp" style="font-size:14px">'+E(q.why_jp||'')+'</div><div class="jp">'+E(q.why_en||'')+'</div></div>'}
+  h+='<div class="row"><button data-a="replay">🔁 会話をもう一度聞く</button><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="hjp">'+(root.classList.contains('hjp')?'日本語を出す':'日本語を隠す')+'</button></div>';
+  if(done)h+='<button class="pri big" data-a="nextq">'+(S.qi+1<S.qs.length?'次の問題 ›':'結果を見る ›')+'</button>';
+ }else if(S.stage==='result'){
+  h+='<div class="card"><div class="en" style="font-size:20px">'+S.score+' / '+S.qs.length+' 問 正解</div><div class="jp">'+(S.score===S.qs.length?'すばらしい！全問正解です。':S.score>=Math.ceil(S.qs.length/2)?'いい調子です。下の全文で、聞き取れなかった所を確認しましょう。':'まずは下の全文を読みながら、1文ずつ聞いてみましょう。')+'</div></div>';
+  h+='<div class="card"><div class="sub">全文（英語・日本語）。▶で1文ずつ聞けます。🔖は聞き取れなかった文の印で、単語帳に入れて復習できます。</div>';
+  h+=S.dlg.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+E(S.dlg.names[l.sp])+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div><button data-a="mark" data-i="'+i+'" class="'+sel(S.marks[i]).trim()+'">🔖</button></div>'}).join('')+'</div>';
+  h+='<div class="row"><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="savemarks">🔖 印をつけた文を単語帳へ</button></div><div class="msg" id="lqMsg">'+E(S.msg)+'</div>';
+  h+='<div class="row"><button class="pri" data-a="again">🔁 同じ会話をもう一度</button><button data-a="menu">メニューへ</button></div>';
+ }
+ body.innerHTML=h;root.scrollTop=0}
+function setMsg(m){S.msg=m;var e=$('#lqMsg');if(e)e.textContent=m}
+function startQuiz(){S.qs=S.qs.map(function(q){var ops=q.options.map(function(o,i){return{o:o,ok:i===q.answer}});ops=shuffle(ops);return{q_en:q.q_en,q_jp:q.q_jp,why_jp:q.why_jp,why_en:q.why_en,options:ops.map(function(x){return x.o}),answer:ops.findIndex(function(x){return x.ok})}});
+ S.qi=0;S.score=0;S.picked=null;S.marks={};S.played=0;S.stage='listen';S.msg='';render()}
+async function begin(ai){S.msg='';LS.set('dei_lq_level',S.level);LS.set('dei_lq_scene',S.scene);
+ if(ai){S.stage='loading';render();var r=await genAI();if(r.error){S.stage='menu';S.msg=r.error+'。内蔵の会話なら通信なしで練習できます。';render();return}S.dlg=r.dlg;S.qs=r.qs}
+ else{var l=genLocal();if(!l){S.msg='内蔵の会話が見つかりません';render();return}S.dlg=l.dlg;S.qs=l.qs}
+ startQuiz()}
+body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-a]');if(!b||b.disabled)return;var a=b.dataset.a,i=+b.dataset.i;
+ if(a==='close'){stopAll();root.classList.remove('on')}
+ else if(a==='lv'){S.level=b.dataset.v;render()}
+ else if(a==='sc'){S.scene=b.dataset.v;render()}
+ else if(a==='newai')begin(true);
+ else if(a==='newlocal')begin(false);
+ else if(a==='play')playAll();
+ else if(a==='stop'){stopAll()}
+ else if(a==='slow'){S.slow=!S.slow;b.classList.toggle('sel',S.slow)}
+ else if(a==='toq'){stopAll();S.stage='quiz';S.picked=null;render()}
+ else if(a==='pick'){S.picked=i;if(i===S.qs[S.qi].answer)S.score++;render()}
+ else if(a==='replay'){playAll()}
+ else if(a==='hjp'){root.classList.toggle('hjp');LS.set('dei_lq_hjp',root.classList.contains('hjp'));b.textContent=root.classList.contains('hjp')?'日本語を出す':'日本語を隠す'}
+ else if(a==='nextq'){if(S.qi+1<S.qs.length){S.qi++;S.picked=null;render()}else{stopAll();S.hist.n++;S.hist.q+=S.qs.length;S.hist.c+=S.score;LS.set('dei_lq_hist',S.hist);S.stage='result';S.msg='';render()}}
+ else if(a==='one')playOne(i);
+ else if(a==='mark'){S.marks[i]=!S.marks[i];b.classList.toggle('sel',!!S.marks[i])}
+ else if(a==='savemarks'){var n=0;S.dlg.lines.forEach(function(l,k){if(S.marks[k]){try{if(typeof addMistake==='function'){addMistake(l.en,l.jp,'聞き取りテスト','listening');n++}}catch(e){}}});setMsg(n?n+'文を単語帳に入れました':'印をつけた文がありません')}
+ else if(a==='again'){S.played=0;S.stage='listen';S.qi=0;S.score=0;S.picked=null;S.marks={};startQuizKeep()}
+ else if(a==='menu'){stopAll();S.stage='menu';S.msg='';render()}});
+function startQuizKeep(){S.stage='listen';S.msg='';render()}
+function openLQ(){S.stage='menu';S.msg='';render();root.classList.add('on');try{speechSynthesis.getVoices()}catch(e){}}
+window.__lqOpen=openLQ;
+function mount(){
+ if($('#lqCardBtn'))return;
+ var g=$('.modes-grid');
+ if(g){var c=document.createElement('div');c.className='mode-card shadowing';c.id='lqCardBtn';c.innerHTML='<div class="mode-icon">🎯</div><div class="mode-info"><div class="mode-name">聞き取りテスト</div><div class="mode-desc">2人の会話を聞いて、日本語と英語で答える</div></div><div class="mode-arrow">›</div>';c.addEventListener('click',openLQ);var sh=g.querySelector('.mode-card.shadowing');if(sh&&sh.nextSibling)g.insertBefore(c,sh.nextSibling);else g.appendChild(c)}
+ else{var f=document.createElement('button');f.id='lqCardBtn';f.textContent='🎯';f.setAttribute('aria-label','聞き取りテスト');f.style.cssText='position:fixed;right:8px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);z-index:2147483000;width:40px;height:40px;border-radius:20px;border:1px solid #888;background:rgba(20,20,30,.8);color:#fff;font-size:18px;padding:0';f.addEventListener('click',openLQ);document.body.appendChild(f)}}
+mount();
+})();
+</script>
+<!--LQ-END-->
 </body>
 </html>
