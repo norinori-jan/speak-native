@@ -2917,7 +2917,7 @@ g('stoProbeCp').onclick=async function(){
 };
 })();
 </script>
-<!--LQ-START v2-->
+<!--LQ-START v3-->
 <style>
 #lqRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
 #lqRoot.on{display:block}
@@ -2956,8 +2956,15 @@ var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){retu
 var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 var LV={easy:{n:6,en:'CEFR A2 (very simple, slow-paced, common words)',jp:'やさしい'},normal:{n:7,en:'CEFR B1 (everyday spoken English, some phrasal verbs)',jp:'ふつう'},hard:{n:8,en:'CEFR B2 (fast casual speech, idioms, contractions, reductions like gonna/wanna)',jp:'むずかしい'}};
 var SC={daily:['日常のおしゃべり','casual small talk between two friends'],plan:['友だちとの予定','two friends making plans and choosing a time and place'],trip:['旅行','a traveler and a local or hotel staff'],food:['レストラン・カフェ','ordering food or drinks at a restaurant or cafe'],work:['仕事・職場','two coworkers talking about a task, meeting, or deadline'],shop:['買い物','a customer and a shop clerk'],phone:['電話・予約','a phone call to book or change a reservation']};
-var S={level:LS.get('dei_lq_level','normal'),scene:LS.get('dei_lq_scene','daily'),slow:false,stage:'menu',dlg:null,qs:null,qi:0,score:0,picked:null,marks:{},token:0,played:0,hist:LS.get('dei_lq_hist',{n:0,q:0,c:0}),msg:'',src:'ai'};
+var S={level:LS.get('dei_lq_level','normal'),scene:LS.get('dei_lq_scene','daily'),slow:false,stage:'menu',dlg:null,qs:null,qi:0,score:0,picked:null,marks:{},token:0,played:0,hist:LS.get('dei_lq_hist',{n:0,q:0,c:0}),msg:'',src:'ai',libId:null};
 var root=$('#lqRoot'),body=$('#lqBody');
+var LIBK='dei_lq_lib';
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function libGet(){var a=LS.get(LIBK,[]);return Array.isArray(a)?a:[]}
+function libSave(dlg,qs){var a=libGet();var id='c'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);a.unshift({id:id,ts:Date.now(),level:S.level,scene:S.scene,dlg:dlg,qs:qs,plays:0,best:-1,last:-1});a=a.slice(0,60);LS.set(LIBK,a);return libGet().some(function(x){return x.id===id})?id:null}
+function libUpd(id,sc,n){var a=libGet();a.forEach(function(x){if(x.id===id){x.plays=(x.plays||0)+1;x.best=Math.max(x.best==null?-1:x.best,sc);x.last=sc;x.n=n}});LS.set(LIBK,a)}
+function libDel(id){LS.set(LIBK,libGet().filter(function(x){return x.id!==id}))}
+function fmtD(ts){var d=new Date(ts);return(d.getMonth()+1)+'/'+d.getDate()}
 if(LS.get('dei_lq_hjp',false))root.classList.add('hjp');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
@@ -3041,8 +3048,15 @@ function render(){
   h+='<p class="sub">2人の会話を聞いて、内容の質問に答えます。質問も選択肢も答え合わせも、<b>英語と日本語の両方</b>を表示します。文字は聞き終わるまで出ません。</p>';
   h+='<div class="card"><div class="sub">むずかしさ</div><div class="row">'+Object.keys(LV).map(function(k){return'<button data-a="lv" data-v="'+k+'" class="'+sel(S.level===k).trim()+'">'+LV[k].jp+'</button>'}).join('')+'</div>';
   h+='<div class="sub" style="margin-top:8px">場面</div><div class="row">'+Object.keys(SC).map(function(k){return'<button data-a="sc" data-v="'+k+'" class="'+sel(S.scene===k).trim()+'">'+SC[k][0]+'</button>'}).join('')+'</div></div>';
-  h+='<div class="row"><button class="pri big" data-a="newai">🤖 AIで新しい会話をつくる</button><button class="big" data-a="newlocal">📖 内蔵の会話で練習（通信なし）</button></div>';
+  var nlib=libGet().length;
+  h+='<div class="row"><button class="pri big" data-a="lib">📚 保存した会話で練習（通信なし）'+(nlib?'　'+nlib+'本':'')+'</button><button class="big" data-a="newai">🤖 AIで新しい会話をつくる（自動で保存）</button><button class="big" data-a="newlocal">📖 内蔵の会話で練習（通信なし）</button></div><div class="sub">AIでつくった会話は端末に保存されます。次からは通信もAIも使わず、何度でも練習できます。</div>';
   h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="row"><button data-a="ping">🔧 AI接続テスト</button></div><div class="sub">'+E(hist())+'</div>';
+ }else if(S.stage==='lib'){
+  var L=libGet();
+  h+='<div class="sub">AIでつくって保存した会話です。通信もAIも使わず、何度でも練習できます（問題の選択肢の並びは毎回変わります）。最大60本まで保存します。</div>';
+  if(!L.length)h+='<div class="card"><div class="en">まだ保存した会話はありません</div><div class="jp">メニューの「AIで新しい会話をつくる」を使うと、自動でここに保存されます。</div></div>';
+  L.forEach(function(x){var nq=(x.qs||[]).length;h+='<div class="card"><div class="en">'+E((x.dlg&&x.dlg.title)||'会話')+'</div><div class="jp">'+E((SC[x.scene]||['',''])[0])+' ／ '+E((LV[x.level]||{jp:''}).jp)+' ／ '+E(fmtD(x.ts))+'　'+(x.plays?(x.plays+'回　最高 '+x.best+'/'+nq):'まだ未挑戦')+'</div><div class="row"><button class="pri" data-a="libgo" data-id="'+E(x.id)+'">▶ 練習する</button><button data-a="libdel" data-id="'+E(x.id)+'">🗑 削除</button></div></div>'});
+  h+='<div class="row"><button data-a="menu">‹ メニューへ</button></div>';
  }else if(S.stage==='loading'){
   h+='<div class="card"><div class="en" id="lqLoad">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
  }else if(S.stage==='listen'){
@@ -3063,15 +3077,15 @@ function render(){
   h+='<div class="card"><div class="sub">全文（英語・日本語）。▶で1文ずつ聞けます。🔖は聞き取れなかった文の印で、単語帳に入れて復習できます。</div>';
   h+=S.dlg.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+E(S.dlg.names[l.sp])+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div><button data-a="mark" data-i="'+i+'" class="'+sel(S.marks[i]).trim()+'">🔖</button></div>'}).join('')+'</div>';
   h+='<div class="row"><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="savemarks">🔖 印をつけた文を単語帳へ</button></div><div class="msg" id="lqMsg">'+E(S.msg)+'</div>';
-  h+='<div class="row"><button class="pri" data-a="again">🔁 同じ会話をもう一度</button><button data-a="menu">メニューへ</button></div>';
+  h+='<div class="row"><button class="pri" data-a="again">🔁 同じ会話をもう一度</button><button data-a="menu">メニューへ</button><button data-a="lib">📚 保存した会話</button></div>';
  }
  body.innerHTML=h;root.scrollTop=0}
 function setMsg(m){S.msg=m;var e=$('#lqMsg');if(e)e.textContent=m}
 function startQuiz(){S.qs=S.qs.map(function(q){var ops=q.options.map(function(o,i){return{o:o,ok:i===q.answer}});ops=shuffle(ops);return{q_en:q.q_en,q_jp:q.q_jp,why_jp:q.why_jp,why_en:q.why_en,options:ops.map(function(x){return x.o}),answer:ops.findIndex(function(x){return x.ok})}});
  S.qi=0;S.score=0;S.picked=null;S.marks={};S.played=0;S.stage='listen';S.msg='';render()}
 async function begin(ai){S.msg='';LS.set('dei_lq_level',S.level);LS.set('dei_lq_scene',S.scene);
- if(ai){S.stage='loading';render();var r=await genAI();if(r.error){S.stage='menu';S.msg=r.error+'。内蔵の会話なら通信なしで練習できます。';render();return}S.dlg=r.dlg;S.qs=r.qs}
- else{var l=genLocal();if(!l){S.msg='内蔵の会話が見つかりません';render();return}S.dlg=l.dlg;S.qs=l.qs}
+ if(ai){S.stage='loading';render();var r=await genAI();if(r.error){S.stage='menu';S.msg=r.error+'。内蔵の会話なら通信なしで練習できます。';render();return}S.dlg=r.dlg;S.qs=r.qs;S.libId=libSave(clone(r.dlg),clone(r.qs));toast(S.libId?'会話を保存しました（📚 から何度でも練習できます）':'保存できませんでした（端末の空きが足りないかもしれません）')}
+ else{S.libId=null;var l=genLocal();if(!l){S.msg='内蔵の会話が見つかりません';render();return}S.dlg=l.dlg;S.qs=l.qs}
  startQuiz()}
 body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-a]');if(!b||b.disabled)return;var a=b.dataset.a,i=+b.dataset.i;
  if(a==='close'){stopAll();root.classList.remove('on')}
@@ -3079,6 +3093,9 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='sc'){S.scene=b.dataset.v;render()}
  else if(a==='newai')begin(true);
  else if(a==='newlocal')begin(false);
+ else if(a==='lib'){stopAll();S.stage='lib';S.msg='';render()}
+ else if(a==='libgo'){var it=libGet().filter(function(x){return x.id===b.dataset.id})[0];if(it){S.dlg=clone(it.dlg);S.qs=clone(it.qs);S.libId=it.id;startQuiz()}}
+ else if(a==='libdel'){if(confirm('この会話を削除しますか？')){libDel(b.dataset.id);render()}}
  else if(a==='ping'){setMsg('AIに問い合わせ中…');var pr=await ask('Reply with the single word OK.',30);setMsg(pr.error?('つながりません： '+pr.error):('つながりました（'+pr.provider+'）'))}
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll()}
@@ -3087,7 +3104,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='pick'){S.picked=i;if(i===S.qs[S.qi].answer)S.score++;render()}
  else if(a==='replay'){playAll()}
  else if(a==='hjp'){root.classList.toggle('hjp');LS.set('dei_lq_hjp',root.classList.contains('hjp'));b.textContent=root.classList.contains('hjp')?'日本語を出す':'日本語を隠す'}
- else if(a==='nextq'){if(S.qi+1<S.qs.length){S.qi++;S.picked=null;render()}else{stopAll();S.hist.n++;S.hist.q+=S.qs.length;S.hist.c+=S.score;LS.set('dei_lq_hist',S.hist);S.stage='result';S.msg='';render()}}
+ else if(a==='nextq'){if(S.qi+1<S.qs.length){S.qi++;S.picked=null;render()}else{stopAll();S.hist.n++;S.hist.q+=S.qs.length;S.hist.c+=S.score;LS.set('dei_lq_hist',S.hist);if(S.libId)libUpd(S.libId,S.score,S.qs.length);S.stage='result';S.msg='';render()}}
  else if(a==='one')playOne(i);
  else if(a==='mark'){S.marks[i]=!S.marks[i];b.classList.toggle('sel',!!S.marks[i])}
  else if(a==='savemarks'){var n=0;S.dlg.lines.forEach(function(l,k){if(S.marks[k]){try{if(typeof addMistake==='function'){addMistake(l.en,l.jp,'聞き取りテスト','listening');n++}}catch(e){}}});setMsg(n?n+'文を単語帳に入れました':'印をつけた文がありません')}
@@ -3105,5 +3122,377 @@ mount();
 })();
 </script>
 <!--LQ-END-->
+<!--SAY-START v1-->
+<style>
+#syRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
+#syRoot.on{display:block}
+#syRoot .syw{max-width:640px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 28px)}
+#syRoot h2{font-size:20px;margin:6px 0 4px}
+#syRoot .sub{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin:0 0 10px}
+#syRoot .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#syRoot button{font:inherit;color:inherit;background:var(--surface2,#1e2128);border:1px solid var(--border,#2a2d35);border-radius:12px;padding:11px 14px;cursor:pointer}
+#syRoot button.pri{background:var(--accent,#5cefb0);color:#08130e;border-color:transparent;font-weight:700}
+#syRoot button.sel{border-color:var(--accent,#5cefb0);box-shadow:0 0 0 1px var(--accent,#5cefb0) inset}
+#syRoot button:disabled{opacity:.45}
+#syRoot .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#syRoot .card{background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:14px;padding:12px;margin:10px 0}
+#syRoot .en{font-size:16px;line-height:1.5}
+#syRoot .jp{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.5;margin-top:2px}
+#syRoot .opt{display:block;width:100%;text-align:left;margin:8px 0}
+#syRoot .opt.ok{border-color:var(--accent,#5cefb0);background:rgba(92,239,176,.12)}
+#syRoot .opt.ng{border-color:var(--danger,#ff6b6b);background:rgba(255,107,107,.12)}
+#syRoot.hjp .opt .jp,#syRoot.hjp .qjp{display:none}
+#syRoot .big{font-size:18px;padding:16px;width:100%}
+#syRoot .who{font-size:15px;min-height:24px;color:var(--accent3,#7eb8ff);margin:8px 0}
+#syRoot .msg{font-size:13px;min-height:18px;color:var(--accent2,#f0a05a);margin:6px 0}
+#syRoot .ln{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--border,#2a2d35)}
+#syRoot .ln:first-child{border-top:0}
+#syRoot .ln .t{flex:1}
+#syRoot .ln button{padding:6px 10px;border-radius:10px}
+#syRoot .nm{font-size:11px;color:var(--accent3,#7eb8ff)}
+#syRoot textarea{width:100%;min-height:84px;font:inherit;font-size:17px;color:inherit;background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:12px;padding:10px;resize:vertical;box-sizing:border-box}
+#syRoot .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:9px;background:rgba(126,184,255,.15);color:var(--accent3,#7eb8ff);margin-bottom:4px}
+#syRoot .big2{font-size:20px;line-height:1.45;font-weight:600}
+#syRoot .hear{font-size:14px;color:var(--accent3,#7eb8ff);min-height:20px;margin:6px 0}
+#syRoot .grp{font-size:12px;color:var(--text-muted,#9aa0aa);margin:12px 0 2px}
+#syRoot .sp{display:flex;gap:8px;align-items:flex-start}
+#syRoot .sp .t{flex:1}
+#syCardBtn{cursor:pointer}
+</style>
+<div id="syRoot" role="dialog" aria-label="言いたいこと"><div class="syw" id="syBody"></div></div>
+<script>
+(function(){
+if(window.__say)return;window.__say=true;
+var $=function(s,r){return(r||document).querySelector(s)};
+var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var NK='dei_say_notes',DAY=86400000,STEP=[0,1,2,4,7,14];
+var S={stage:'home',tone:LS.get('dei_say_tone',null),text:'',cur:null,msg:'',q:[],qi:0,shown:false,heard:'',okN:0,ngN:0,busy:false,rec:null};
+var root=$('#syRoot'),body=$('#syBody');
+function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
+function tone(){if(S.tone)return S.tone;try{if(typeof convMode!=='undefined')return convMode}catch(e){}return'business'}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function notes(){var a=LS.get(NK,[]);return Array.isArray(a)?a:[]}
+function putNotes(a){LS.set(NK,a.slice(0,200))}
+function findNote(id){return notes().filter(function(x){return x.id===id})[0]}
+function dueList(){var n=Date.now();return notes().filter(function(x){return (x.due||0)<=n})}
+/* ---------- 声 ---------- */
+function vlist(){try{return(speechSynthesis.getVoices()||[]).filter(function(v){return/^en[-_]/i.test(v.lang)})}catch(e){return[]}}
+function pickV(){var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i;return vs.find(function(v){return F.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
+function say(text){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(text);u.lang='en-US';var v=pickV();if(v){u.voice=v;u.lang=v.lang}u.rate=.95;speechSynthesis.speak(u)}catch(e){}}
+/* ---------- 聞き取り（マイク） ---------- */
+function listen(lang,cb){var R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){toast('この端末では音声入力が使えません。文字で入れてください');return}
+ try{if(S.rec){S.rec.abort()}}catch(e){}
+ var r=new R();r.lang=lang;r.interimResults=false;r.maxAlternatives=1;S.rec=r;
+ r.onresult=function(ev){var t=ev.results&&ev.results[0]&&ev.results[0][0]?ev.results[0][0].transcript:'';cb(t||'')};
+ r.onerror=function(){cb('',1)};r.onend=function(){S.rec=null};try{r.start()}catch(e){cb('',1)}}
+function words(s){return String(s||'').toLowerCase().replace(/[^a-z0-9' ]+/g,' ').split(/\s+/).filter(Boolean)}
+function match(heard,target){var h=words(heard),t=words(target);if(!t.length)return 0;var n=0;t.forEach(function(w){if(h.indexOf(w)>=0)n++});return Math.round(n/t.length*100)}
+/* ---------- AI ---------- */
+async function ask(prompt,maxTok){
+ try{if(typeof keysReady!=='undefined')await keysReady}catch(e){}
+ if(typeof STATE==='undefined'||!STATE.appToken)return{error:'設定画面で合言葉を入力してください'};
+ var order=[STATE.aiProvider,'gemini','claude','openai'].filter(function(p,i,a){return p&&a.indexOf(p)===i});var notes=[];
+ for(var k=0;k<order.length;k++){var p=order[k];
+  try{var url,bd,pk;
+   if(p==='gemini'){url='gemini-proxy';bd={contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:maxTok,temperature:0.8}};pk=function(d){return d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts&&d.candidates[0].content.parts[0]&&d.candidates[0].content.parts[0].text}}
+   else if(p==='claude'){url='claude-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.content&&d.content[0]&&d.content[0].text}}
+   else{url='openai-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content}}
+   var r=await fetch(proxyUrl(url),{method:'POST',headers:workerHeaders(),body:JSON.stringify(bd)});var raw=await r.text();var d;
+   try{d=JSON.parse(raw)}catch(e){notes.push(p+': HTTP '+r.status+' '+raw.slice(0,50).replace(/\s+/g,' '));continue}
+   if(d.error){notes.push(p+': '+String(d.error.message||d.error).slice(0,70));continue}
+   var t=pk(d);if(t)return{text:t,provider:p};notes.push(p+': 返事が空（HTTP '+r.status+'）')}catch(e){notes.push(p+': '+String(e.message||e).slice(0,60))}}
+ try{if(typeof callAIOnce==='function'){var o=await callAIOnce(prompt);if(o&&o.reply)return{text:o.reply,provider:o.provider||'app'};if(o&&o.error)notes.push('app: '+String(o.error).slice(0,60))}}catch(e){}
+ return{error:notes.join(' ／ ')||'AIに接続できません'}}
+function parseJ(t){if(!t)return null;var a=t.indexOf('{'),b=t.lastIndexOf('}');if(a<0||b<a)return null;var s=t.slice(a,b+1);try{return JSON.parse(s)}catch(e){try{return JSON.parse(s.replace(/,\s*([}\]])/g,'$1'))}catch(e2){return null}}}
+async function makeEnglish(jp){
+ var tn=tone()==='business'?'polite, professional business tone':'casual, friendly everyday tone';
+ var p='You help a Japanese learner say what they want in English, quickly. Tone: '+tn+'.\nThe learner wants to say (Japanese): '+jp+'\nReturn ONLY compact JSON on one line, no markdown:\n{"easy":"the simplest natural sentence the learner can say right now: max 12 words, common words, easy to say aloud","nat":"a more natural, native-like way to say it","alt":["another short way 1","another short way 2"],"key":"2-4 key English words or phrases with Japanese meanings, like: book 予約する; available 空いている","tip":"one short Japanese sentence of advice on how to say it"}';
+ for(var t=0;t<2;t++){var r=await ask(p,700);if(r.error){if(t===1)return{error:r.error};continue}
+  var j=parseJ(r.text);if(j&&typeof j.easy==='string'&&j.easy&&typeof j.nat==='string'&&j.nat)return{j:j};
+  if(t===1)return{error:'英語の形式が読み取れませんでした（返事: '+String(r.text).slice(0,40).replace(/\s+/g,' ')+'…）'}}
+ return{error:'うまく作れませんでした'}}
+function saveNote(jp,j){var a=notes();var id='s'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+ var n={id:id,ts:Date.now(),jp:jp,easy:String(j.easy).trim(),nat:String(j.nat).trim(),alt:(Array.isArray(j.alt)?j.alt:[]).map(String).filter(Boolean).slice(0,2),key:String(j.key||''),tip:String(j.tip||''),tone:tone(),box:0,due:Date.now(),plays:0,ok:0};
+ a.unshift(n);putNotes(a);return notes().some(function(x){return x.id===id})?n:null}
+/* ---------- 時間かせぎの一言 ---------- */
+var FILL=[
+ ['考える時間がほしい',[['Let me think for a second.','ちょっと考えさせて'],['Well, let me see…','えーと、そうですね'],['That\'s a good question.','いい質問ですね'],['How should I put it…','どう言えばいいかな']]],
+ ['言葉が出てこない',[['I\'m trying to remember the word.','言葉を思い出そうとしています'],['What I mean is…','言いたいのは…'],['I\'m not sure how to say this in English.','英語でどう言うか分からない'],['Can I say it another way?','言い方を変えていい？']]],
+ ['聞き返したい',[['Sorry, could you say that again?','もう一度言ってもらえますか'],['Could you speak a little slower?','もう少しゆっくりお願いします'],['What do you mean by that?','それはどういう意味？'],['Do you mean…?','…ということですか？']]],
+ ['つなぎ・続きを話す',[['Actually,','実は'],['By the way,','ところで'],['The thing is,','問題は'],['To be honest,','正直に言うと'],['Anyway,','とにかく']]]];
+/* ---------- 画面 ---------- */
+function hist(){var a=notes();return a.length+'件'}
+function render(){
+ var h='<div class="top"><h2>💬 言いたいこと</h2><button data-a="close" aria-label="閉じる">✕</button></div>';
+ if(S.stage==='home'){
+  var n=notes().length,d=dueList().length;
+  h+='<p class="sub">日本語で「言いたいこと」を入れると、<b>いまの自分でも言える短い英語</b>と自然な言い方を出します。出した英語は自動で保存され、あとで見ないで言う練習ができます。</p>';
+  h+='<div class="row"><button data-a="tn" data-v="business" class="'+(tone()==='business'?'sel':'')+'">💼 ビジネス</button><button data-a="tn" data-v="casual" class="'+(tone()==='casual'?'sel':'')+'">🎉 カジュアル</button></div>';
+  h+='<textarea id="syText" placeholder="例：明日の会議を午後に変更できますか">'+E(S.text)+'</textarea>';
+  h+='<div class="row"><button data-a="mic">🎤 日本語で話して入力</button><button data-a="clr">消す</button></div>';
+  h+='<button class="pri big" data-a="go">英語にする</button><div class="msg" id="syMsg">'+E(S.msg)+'</div>';
+  h+='<div class="row"><button data-a="notes">📒 言いたいことノート（'+n+'件）</button></div><div class="row"><button data-a="prac" '+(n?'':'disabled')+'>🎯 見ないで言う練習（'+(d?d+'件 今日の分':'まとめて復習')+'）</button><button data-a="fill">⏱ 時間かせぎの一言</button></div>';
+ }else if(S.stage==='load'){
+  h+='<div class="card"><div class="en">英語を考えています…</div><div class="jp">10秒ほどかかることがあります</div></div>';
+ }else if(S.stage==='res'){
+  var c=S.cur;
+  h+='<div class="card"><div class="jp" style="margin:0">言いたいこと</div><div class="en">'+E(c.jp)+'</div></div>';
+  h+='<div class="card"><span class="tag">① かんたん（まずこれを言う）</span><div class="sp"><div class="t big2">'+E(c.easy)+'</div><button data-a="say" data-t="'+E(c.easy)+'">🔊</button></div></div>';
+  h+='<div class="card"><span class="tag">② 自然な言い方</span><div class="sp"><div class="t big2">'+E(c.nat)+'</div><button data-a="say" data-t="'+E(c.nat)+'">🔊</button></div></div>';
+  if(c.alt&&c.alt.length)h+='<div class="card"><span class="tag">③ 言い換え</span>'+c.alt.map(function(x){return'<div class="sp"><div class="t en">'+E(x)+'</div><button data-a="say" data-t="'+E(x)+'">🔊</button></div>'}).join('')+'</div>';
+  if(c.key)h+='<div class="card"><span class="tag">キーワード</span><div class="jp" style="font-size:14px">'+E(c.key)+'</div></div>';
+  if(c.tip)h+='<div class="card"><div class="jp" style="font-size:14px">'+E(c.tip)+'</div></div>';
+  h+='<div class="msg" id="syMsg">'+E(S.msg)+'</div><div class="row"><button class="pri" data-a="p1" data-id="'+E(c.id)+'">🎯 今すぐ見ないで言う</button><button data-a="home">‹ 次の言いたいこと</button></div>';
+ }else if(S.stage==='notes'){
+  var L=notes();
+  h+='<div class="sub">出した英語は自動でここに残ります（最大200件）。通信もAIも使わずに見られます。</div>';
+  if(!L.length)h+='<div class="card"><div class="en">まだありません</div><div class="jp">ホームで言いたいことを入れると、ここに残ります。</div></div>';
+  L.forEach(function(x){h+='<div class="card"><div class="jp" style="margin:0">'+E(x.jp)+'</div><div class="sp"><div class="t en">'+E(x.easy)+'</div><button data-a="say" data-t="'+E(x.easy)+'">🔊</button></div><div class="sp"><div class="t jp">'+E(x.nat)+'</div><button data-a="say" data-t="'+E(x.nat)+'">🔊</button></div><div class="jp">'+(x.plays?(x.plays+'回練習 ／ 言えた '+x.ok+'回'):'まだ未練習')+'</div><div class="row"><button class="pri" data-a="p1" data-id="'+E(x.id)+'">🎯 見ないで言う</button><button data-a="del" data-id="'+E(x.id)+'">🗑 削除</button></div></div>'});
+  h+='<div class="row"><button data-a="home">‹ 戻る</button></div>';
+ }else if(S.stage==='fill'){
+  h+='<div class="sub">言葉に詰まったら、まずこれを言います。▶で発音を聞いて、口に出して練習しましょう。</div>';
+  FILL.forEach(function(g){h+='<div class="grp">'+E(g[0])+'</div>';g[1].forEach(function(p){h+='<div class="card sp"><div class="t"><div class="en">'+E(p[0])+'</div><div class="jp">'+E(p[1])+'</div></div><button data-a="say" data-t="'+E(p[0])+'">🔊</button></div>'})});
+  h+='<div class="row"><button data-a="home">‹ 戻る</button></div>';
+ }else if(S.stage==='prac'){
+  var x=S.q[S.qi];
+  h+='<div class="sub">'+(S.qi+1)+' / '+S.q.length+'　言えた '+S.okN+'</div>';
+  h+='<div class="card"><div class="jp" style="margin:0">これを英語で言ってください</div><div class="big2">'+E(x.jp)+'</div></div>';
+  h+='<div class="row"><button data-a="hear">🎤 英語で言ってみる</button></div><div class="hear" id="syHear">'+E(S.heard)+'</div>';
+  if(!S.shown)h+='<button class="pri big" data-a="show">答えを見る</button>';
+  else{h+='<div class="card"><span class="tag">かんたん</span><div class="sp"><div class="t big2">'+E(x.easy)+'</div><button data-a="say" data-t="'+E(x.easy)+'">🔊</button></div><span class="tag" style="margin-top:8px">自然</span><div class="sp"><div class="t en">'+E(x.nat)+'</div><button data-a="say" data-t="'+E(x.nat)+'">🔊</button></div></div>';
+   h+='<div class="row"><button class="pri" data-a="ok">✅ 言えた</button><button data-a="ng">❌ まだ</button></div>'}
+  h+='<div class="row"><button data-a="home">やめる</button></div>';
+ }else if(S.stage==='end'){
+  h+='<div class="card"><div class="en" style="font-size:20px">'+S.okN+' / '+S.q.length+' 言えました</div><div class="jp">言えなかったものは、また近いうちに出ます（単語帳の💹にも入ります）。</div></div><div class="row"><button class="pri" data-a="home">ホームへ</button><button data-a="notes">📒 ノート</button></div>';
+ }
+ body.innerHTML=h;root.scrollTop=0}
+function setMsg(m){S.msg=m;var e=$('#syMsg');if(e)e.textContent=m}
+function startPrac(list){S.q=list;S.qi=0;S.shown=false;S.heard='';S.okN=0;S.ngN=0;S.stage=list.length?'prac':'home';if(!list.length)S.msg='練習できる言いたいことがありません';render()}
+function rate(id,good){var a=notes();a.forEach(function(x){if(x.id===id){x.plays=(x.plays||0)+1;if(good){x.ok=(x.ok||0)+1;x.box=Math.min(5,(x.box||0)+1)}else x.box=0;x.due=Date.now()+STEP[x.box]*DAY}});putNotes(a)}
+body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-a]');if(!b||b.disabled)return;var a=b.dataset.a;
+ var ta=$('#syText');if(ta)S.text=ta.value;
+ if(a==='close'){try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}root.classList.remove('on')}
+ else if(a==='tn'){S.tone=b.dataset.v;LS.set('dei_say_tone',S.tone);render()}
+ else if(a==='clr'){S.text='';render()}
+ else if(a==='mic'){listen('ja-JP',function(t,err){if(err){setMsg('聞き取れませんでした。もう一度どうぞ');return}S.text=(S.text?S.text+' ':'')+t;render()});setMsg('聞いています…日本語で話してください')}
+ else if(a==='go'){var jp=S.text.trim();if(!jp){setMsg('言いたいことを入れてください');return}
+  var ex=notes().filter(function(x){return x.jp===jp&&x.tone===tone()})[0];
+  if(ex){S.cur=ex;S.stage='res';S.msg='保存済みの同じ内容を出しました（AIは使っていません）';render();return}
+  if(S.busy)return;S.busy=true;S.stage='load';render();var r=await makeEnglish(jp);S.busy=false;
+  if(r.error){S.stage='home';S.msg=r.error;render();return}
+  var n=saveNote(jp,r.j);S.cur=n||{id:'',jp:jp,easy:r.j.easy,nat:r.j.nat,alt:r.j.alt||[],key:r.j.key||'',tip:r.j.tip||''};S.msg=n?'ノートに保存しました':'保存できませんでした（端末の空きが足りないかもしれません）';S.stage='res';render()}
+ else if(a==='say')say(b.dataset.t);
+ else if(a==='home'){try{speechSynthesis.cancel()}catch(e){}if(S.stage==='res')S.text='';S.stage='home';S.msg='';render()}
+ else if(a==='notes'){S.stage='notes';render()}
+ else if(a==='fill'){S.stage='fill';render()}
+ else if(a==='del'){if(confirm('このノートを削除しますか？')){putNotes(notes().filter(function(x){return x.id!==b.dataset.id}));render()}}
+ else if(a==='p1'){var it=findNote(b.dataset.id)||(S.cur&&S.cur.id===b.dataset.id?S.cur:null);if(it)startPrac([it])}
+ else if(a==='prac'){var d=dueList();if(!d.length)d=notes();startPrac(shuffle(d).slice(0,10))}
+ else if(a==='hear'){var x=S.q[S.qi];S.heard='聞いています…英語で言ってください';var he=$('#syHear');if(he)he.textContent=S.heard;
+  listen('en-US',function(t,err){S.heard=err?'聞き取れませんでした':('あなた： '+t+'　（'+Math.max(match(t,x.easy),match(t,x.nat))+'% 一致）');var he2=$('#syHear');if(he2)he2.textContent=S.heard})}
+ else if(a==='show'){S.shown=true;render()}
+ else if(a==='ok'||a==='ng'){var y=S.q[S.qi];var good=a==='ok';if(y.id)rate(y.id,good);if(good)S.okN++;else{try{if(typeof addMistake==='function')addMistake(y.easy,y.jp,'言いたいこと','say')}catch(e){}}
+  S.shown=false;S.heard='';if(S.qi+1<S.q.length){S.qi++;render()}else{S.stage='end';render()}}});
+function openSY(){S.stage='home';S.msg='';render();root.classList.add('on');try{speechSynthesis.getVoices()}catch(e){}}
+window.__sayOpen=openSY;
+function mount(){
+ if($('#syCardBtn'))return;
+ var g=$('.modes-grid');
+ if(g){var c=document.createElement('div');c.className='mode-card interpreter';c.id='syCardBtn';c.innerHTML='<div class="mode-icon">💬</div><div class="mode-info"><div class="mode-name">言いたいこと</div><div class="mode-desc">日本語→すぐ言える英語。保存して見ないで言う練習</div></div><div class="mode-arrow">›</div>';c.addEventListener('click',openSY);var ip=g.querySelector('.mode-card.interpreter');if(ip&&ip.nextSibling)g.insertBefore(c,ip.nextSibling);else g.appendChild(c)}
+ else{var f=document.createElement('button');f.id='syCardBtn';f.textContent='💬';f.setAttribute('aria-label','言いたいこと');f.style.cssText='position:fixed;left:8px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);z-index:2147483000;width:40px;height:40px;border-radius:20px;border:1px solid #888;background:rgba(20,20,30,.8);color:#fff;font-size:18px;padding:0';f.addEventListener('click',openSY);document.body.appendChild(f)}}
+mount();
+})();
+</script>
+<!--SAY-END-->
+<!--CONV-START v1-->
+<style>
+#cvRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
+#cvRoot.on{display:block}
+#cvRoot .cvw{max-width:640px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 28px)}
+#cvRoot h2{font-size:20px;margin:6px 0 4px}
+#cvRoot .sub{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin:0 0 10px}
+#cvRoot .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#cvRoot button{font:inherit;color:inherit;background:var(--surface2,#1e2128);border:1px solid var(--border,#2a2d35);border-radius:12px;padding:11px 14px;cursor:pointer}
+#cvRoot button.pri{background:var(--accent,#5cefb0);color:#08130e;border-color:transparent;font-weight:700}
+#cvRoot button.sel{border-color:var(--accent,#5cefb0);box-shadow:0 0 0 1px var(--accent,#5cefb0) inset}
+#cvRoot button:disabled{opacity:.45}
+#cvRoot .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#cvRoot .card{background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:14px;padding:12px;margin:10px 0}
+#cvRoot .en{font-size:17px;line-height:1.5}
+#cvRoot .jp{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.5;margin-top:2px}
+#cvRoot .big{font-size:18px;padding:16px;width:100%}
+#cvRoot .nm{font-size:11px;color:var(--accent3,#7eb8ff)}
+#cvRoot .msg{font-size:13px;min-height:18px;color:var(--accent2,#f0a05a);margin:6px 0}
+#cvRoot .hear{font-size:14px;color:var(--accent3,#7eb8ff);min-height:20px;margin:6px 0}
+#cvRoot .ln{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--border,#2a2d35)}
+#cvRoot .ln:first-child{border-top:0}
+#cvRoot .ln .t{flex:1}
+#cvRoot .ln.cur{background:rgba(126,184,255,.12);border-radius:8px}
+#cvRoot .ln button{padding:6px 10px;border-radius:10px}
+#cvRoot.hen .ln .en,#cvRoot.hen .hid-en{filter:blur(7px);user-select:none}
+#cvRoot.hjp .ln .jp{visibility:hidden}
+#cvRoot .sc{display:flex;align-items:center;gap:10px;width:100%;text-align:left;margin:8px 0}
+#cvRoot .sc .ic{font-size:24px}
+#cvRoot .sc .tx{flex:1}
+#cvRoot .bar{height:6px;border-radius:3px;background:var(--border,#2a2d35);overflow:hidden;margin-top:4px}
+#cvRoot .bar i{display:block;height:100%;background:var(--accent,#5cefb0)}
+#cvRoot .bd{font-size:12px;margin-top:3px;color:var(--text-muted,#9aa0aa)}
+#cvCardBtn{cursor:pointer}
+</style>
+<div id="cvRoot" role="dialog" aria-label="会話集"><div class="cvw" id="cvBody"></div></div>
+<script>
+(function(){
+if(window.__conv)return;window.__conv=true;
+var $=function(s,r){return(r||document).querySelector(s)};
+var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var DATA=[{"id":"meet","ic":"💼","n":"会議・日程","hint":"two coworkers talking about changing or discussing a meeting","d":[{"t":"会議の時間を変える","l":[{"sp":0,"en":"Hi Ken, do you have a minute?","jp":"ケン、ちょっといい？"},{"sp":1,"en":"Sure. What's up?","jp":"もちろん。どうしたの？"},{"sp":0,"en":"Can we move tomorrow's meeting to the afternoon?","jp":"明日の会議を午後に変更できる？"},{"sp":1,"en":"Let me check my schedule. How about three o'clock?","jp":"予定を確認するね。3時はどう？"},{"sp":0,"en":"Three works for me. I'll send a new invite.","jp":"3時で大丈夫。新しい招待を送るよ。"},{"sp":1,"en":"Great. Thanks for letting me know.","jp":"いいね。教えてくれてありがとう。"}]},{"t":"会議で意見を言う","l":[{"sp":0,"en":"Does anyone have questions about the plan?","jp":"計画について質問はありますか？"},{"sp":1,"en":"I have one. Is the deadline fixed?","jp":"一つあります。締め切りは固定ですか？"},{"sp":0,"en":"Good question. We can move it by a week.","jp":"いい質問です。1週間ならずらせます。"},{"sp":1,"en":"Then I think we should start earlier.","jp":"それなら、早めに始めるべきだと思います。"},{"sp":0,"en":"I agree. Let's begin on Monday.","jp":"賛成です。月曜日から始めましょう。"},{"sp":1,"en":"Sounds good. I'll prepare the documents.","jp":"いいですね。資料は私が準備します。"}]}]},{"id":"phone","ic":"📞","n":"電話・予約","hint":"a phone call to book a table or reach someone","d":[{"t":"レストランを予約する","l":[{"sp":0,"en":"Hello, Sakura Restaurant. How can I help you?","jp":"はい、さくらレストランです。ご用件は？"},{"sp":1,"en":"I'd like to book a table for four tonight.","jp":"今夜4人で予約したいのですが。"},{"sp":0,"en":"What time would you like?","jp":"何時がよろしいですか？"},{"sp":1,"en":"Around seven, if possible.","jp":"できれば7時ごろ。"},{"sp":0,"en":"We have a table at seven thirty. Is that okay?","jp":"7時半なら空いています。よろしいですか？"},{"sp":1,"en":"Yes, that's fine. The name is Tanaka.","jp":"はい、大丈夫です。名前は田中です。"}]},{"t":"電話を取り次ぐ","l":[{"sp":0,"en":"Good morning, this is Green Company.","jp":"おはようございます、グリーン社です。"},{"sp":1,"en":"Hello, may I speak to Ms. Brown, please?","jp":"もしもし、ブラウンさんをお願いできますか？"},{"sp":0,"en":"I'm sorry, she's in a meeting right now.","jp":"申し訳ありません、ただいま会議中です。"},{"sp":1,"en":"Could you ask her to call me back?","jp":"折り返し電話をいただけるよう伝えてもらえますか？"},{"sp":0,"en":"Of course. May I have your name, please?","jp":"もちろんです。お名前をいただけますか？"},{"sp":1,"en":"It's Sato. She already has my number.","jp":"佐藤です。番号はすでにご存じです。"}]}]},{"id":"food","ic":"🍽","n":"レストラン","hint":"ordering food and paying at a restaurant","d":[{"t":"注文する","l":[{"sp":0,"en":"Are you ready to order?","jp":"ご注文はお決まりですか？"},{"sp":1,"en":"Yes. I'll have the grilled chicken, please.","jp":"はい。グリルチキンをお願いします。"},{"sp":0,"en":"Would you like anything to drink?","jp":"お飲み物はいかがですか？"},{"sp":1,"en":"Just water for now, thanks.","jp":"とりあえずお水だけで。"},{"sp":0,"en":"Certainly. It will be about ten minutes.","jp":"かしこまりました。10分ほどかかります。"},{"sp":1,"en":"That's fine. Take your time.","jp":"大丈夫です。ゆっくりで構いません。"}]},{"t":"お会計","l":[{"sp":0,"en":"Excuse me, could we have the check, please?","jp":"すみません、お会計をお願いできますか？"},{"sp":1,"en":"Of course. Together or separately?","jp":"かしこまりました。ご一緒ですか、別々ですか？"},{"sp":0,"en":"Together, please. Can I pay by card?","jp":"一緒でお願いします。カードで払えますか？"},{"sp":1,"en":"Yes, we take all major cards.","jp":"はい、主なカードは使えます。"},{"sp":0,"en":"Here you go. The food was delicious.","jp":"どうぞ。料理はとても美味しかったです。"},{"sp":1,"en":"Thank you very much. Please come again.","jp":"ありがとうございます。またお越しください。"}]}]},{"id":"shop","ic":"🛍","n":"買い物","hint":"a customer and a shop clerk","d":[{"t":"服を探す","l":[{"sp":0,"en":"Hi, can I help you find something?","jp":"いらっしゃいませ、お探しですか？"},{"sp":1,"en":"I'm looking for a jacket in medium.","jp":"Mサイズのジャケットを探しています。"},{"sp":0,"en":"This one just came in. Would you like to try it on?","jp":"これは新入荷です。試着されますか？"},{"sp":1,"en":"Yes, please. Where is the fitting room?","jp":"はい。試着室はどこですか？"},{"sp":0,"en":"Right over there, next to the mirror.","jp":"あそこ、鏡の横です。"},{"sp":1,"en":"Thanks. I'll take a look.","jp":"ありがとう。見てみます。"}]},{"t":"値段と返品","l":[{"sp":0,"en":"How much is this bag?","jp":"このバッグはいくらですか？"},{"sp":1,"en":"It's fifty dollars, tax included.","jp":"税込みで50ドルです。"},{"sp":0,"en":"Do you have it in black?","jp":"黒はありますか？"},{"sp":1,"en":"Let me check in the back. One moment, please.","jp":"奥で確認します。少々お待ちください。"},{"sp":0,"en":"Also, can I return it if I change my mind?","jp":"それと、気が変わったら返品できますか？"},{"sp":1,"en":"Yes, within seven days with the receipt.","jp":"はい、レシートがあれば7日以内なら可能です。"}]}]},{"id":"hotel","ic":"🏨","n":"ホテル","hint":"a guest and hotel front desk staff","d":[{"t":"チェックイン","l":[{"sp":0,"en":"Welcome. Do you have a reservation?","jp":"ようこそ。ご予約はありますか？"},{"sp":1,"en":"Yes, under the name Sanada.","jp":"はい、真田の名前でお願いします。"},{"sp":0,"en":"Thank you. Two nights, is that right?","jp":"ありがとうございます。2泊でよろしいですか？"},{"sp":1,"en":"That's right. What time is check-out?","jp":"そうです。チェックアウトは何時ですか？"},{"sp":0,"en":"Eleven a.m. Here is your room key.","jp":"午前11時です。こちらが部屋の鍵です。"},{"sp":1,"en":"Thank you. Is breakfast included?","jp":"ありがとう。朝食は付いていますか？"}]},{"t":"部屋の問題","l":[{"sp":0,"en":"Front desk. How can I help you?","jp":"フロントです。どうされましたか？"},{"sp":1,"en":"The air conditioner in my room isn't working.","jp":"部屋のエアコンが動きません。"},{"sp":0,"en":"I'm so sorry. I'll send someone right away.","jp":"申し訳ありません。すぐに担当者を向かわせます。"},{"sp":1,"en":"Thank you. How long will it take?","jp":"ありがとう。どのくらいかかりますか？"},{"sp":0,"en":"About ten minutes. Is that all right?","jp":"10分ほどです。よろしいですか？"},{"sp":1,"en":"Yes, that's fine. I'll wait here.","jp":"はい、大丈夫です。ここで待ちます。"}]}]},{"id":"go","ic":"🧭","n":"道案内・移動","hint":"asking for directions or buying a train ticket","d":[{"t":"道を聞く","l":[{"sp":0,"en":"Excuse me, how do I get to the station?","jp":"すみません、駅へはどう行けばいいですか？"},{"sp":1,"en":"Go straight and turn left at the second light.","jp":"まっすぐ行って、2つ目の信号を左です。"},{"sp":0,"en":"Is it far from here?","jp":"ここから遠いですか？"},{"sp":1,"en":"No, it's about a five-minute walk.","jp":"いいえ、歩いて5分ほどです。"},{"sp":0,"en":"Great. Thank you so much.","jp":"よかった。ありがとうございます。"},{"sp":1,"en":"You're welcome. Have a nice day.","jp":"どういたしまして。良い一日を。"}]},{"t":"電車の切符","l":[{"sp":0,"en":"One ticket to Central Station, please.","jp":"セントラル駅まで切符を1枚お願いします。"},{"sp":1,"en":"That's ten dollars. One way or round trip?","jp":"10ドルです。片道ですか、往復ですか？"},{"sp":0,"en":"Round trip, please. Which platform is it?","jp":"往復で。何番ホームですか？"},{"sp":1,"en":"Platform three. The next train leaves in ten minutes.","jp":"3番ホームです。次の電車は10分後です。"},{"sp":0,"en":"Thanks. Do I need to change trains?","jp":"ありがとう。乗り換えは必要ですか？"},{"sp":1,"en":"No, it's a direct train.","jp":"いいえ、直通です。"}]}]},{"id":"talk","ic":"☕","n":"雑談","hint":"casual small talk between friends or coworkers","d":[{"t":"週末の話","l":[{"sp":0,"en":"Hey, how was your weekend?","jp":"やあ、週末はどうだった？"},{"sp":1,"en":"It was great. I went hiking with my family.","jp":"最高だったよ。家族とハイキングに行ったんだ。"},{"sp":0,"en":"Nice! Where did you go?","jp":"いいね！どこへ行ったの？"},{"sp":1,"en":"Just a small mountain near my house.","jp":"家の近くの小さな山だよ。"},{"sp":0,"en":"I wish I could do that. I stayed home all weekend.","jp":"私もしたかった。週末ずっと家にいたの。"},{"sp":1,"en":"Maybe next time you can join us.","jp":"今度は一緒にどう？"}]},{"t":"最近どう","l":[{"sp":0,"en":"Long time no see! How have you been?","jp":"久しぶり！元気にしてた？"},{"sp":1,"en":"Pretty good, just busy with work. How about you?","jp":"まあまあ元気、仕事が忙しくてね。君は？"},{"sp":0,"en":"Same here. I've been trying to learn English.","jp":"私も同じ。英語を勉強してるの。"},{"sp":1,"en":"That's great. How is it going?","jp":"いいね。どう、進んでる？"},{"sp":0,"en":"Slowly, but I'm enjoying it.","jp":"ゆっくりだけど、楽しんでるよ。"},{"sp":1,"en":"Keep it up. Let's practice together sometime.","jp":"その調子。今度一緒に練習しよう。"}]}]},{"id":"plan","ic":"🎉","n":"友だちと予定","hint":"friends making or declining plans","d":[{"t":"ランチに誘う","l":[{"sp":0,"en":"Are you free for lunch on Friday?","jp":"金曜のお昼は空いてる？"},{"sp":1,"en":"I think so. What do you have in mind?","jp":"たぶん。どうしたい？"},{"sp":0,"en":"There's a new ramen place near the office.","jp":"会社の近くに新しいラーメン屋があるよ。"},{"sp":1,"en":"Sounds good. What time should we meet?","jp":"いいね。何時に会う？"},{"sp":0,"en":"How about twelve thirty in front of the building?","jp":"12時半にビルの前でどう？"},{"sp":1,"en":"Perfect. See you then.","jp":"完璧。じゃあそのときに。"}]},{"t":"予定を断る","l":[{"sp":0,"en":"Do you want to see a movie tonight?","jp":"今夜、映画を見に行かない？"},{"sp":1,"en":"I'd love to, but I have to work late.","jp":"行きたいけど、遅くまで仕事なんだ。"},{"sp":0,"en":"That's too bad. How about tomorrow?","jp":"残念。明日はどう？"},{"sp":1,"en":"Tomorrow works for me. Let's go after work.","jp":"明日なら大丈夫。仕事の後に行こう。"},{"sp":0,"en":"Great. I'll look up the showtimes.","jp":"よかった。上映時間を調べておくね。"},{"sp":1,"en":"Thanks. Text me the details.","jp":"ありがとう。詳細をメッセージして。"}]}]},{"id":"care","ic":"🏥","n":"病院・薬局","hint":"talking to a doctor or a pharmacist about a cold","d":[{"t":"体調が悪い","l":[{"sp":0,"en":"What seems to be the problem?","jp":"どうされましたか？"},{"sp":1,"en":"I have a headache and a slight fever.","jp":"頭痛と少し熱があります。"},{"sp":0,"en":"How long have you felt this way?","jp":"いつからですか？"},{"sp":1,"en":"Since yesterday morning.","jp":"昨日の朝からです。"},{"sp":0,"en":"Let me check your temperature. Please sit down.","jp":"熱を測ります。座ってください。"},{"sp":1,"en":"Okay. Do I need any medicine?","jp":"はい。薬は必要ですか？"}]},{"t":"薬局で","l":[{"sp":0,"en":"Hi, do you have anything for a cough?","jp":"こんにちは、咳に効くものはありますか？"},{"sp":1,"en":"Yes. Are you taking any other medicine?","jp":"はい。ほかに飲んでいる薬はありますか？"},{"sp":0,"en":"No, I'm not. How often should I take it?","jp":"いいえ。どのくらいの頻度で飲めばいいですか？"},{"sp":1,"en":"One tablet three times a day after meals.","jp":"1日3回、食後に1錠です。"},{"sp":0,"en":"Thank you. Is it okay to drive after taking it?","jp":"ありがとう。飲んだ後に運転しても大丈夫ですか？"},{"sp":1,"en":"It may make you sleepy, so please be careful.","jp":"眠くなることがあるので、気をつけてください。"}]}]},{"id":"intro","ic":"🤝","n":"自己紹介","hint":"meeting someone for the first time","d":[{"t":"初対面","l":[{"sp":0,"en":"Hi, I'm Yuki. Nice to meet you.","jp":"こんにちは、ユキです。はじめまして。"},{"sp":1,"en":"Nice to meet you, too. I'm Tom.","jp":"こちらこそ、はじめまして。トムです。"},{"sp":0,"en":"What do you do, Tom?","jp":"トムさんはお仕事は何をされていますか？"},{"sp":1,"en":"I'm a designer. How about you?","jp":"デザイナーです。あなたは？"},{"sp":0,"en":"I work in sales at a software company.","jp":"ソフトウェア会社で営業をしています。"},{"sp":1,"en":"That sounds interesting. How long have you been there?","jp":"おもしろそうですね。どのくらい働いていますか？"}]},{"t":"出身と趣味","l":[{"sp":0,"en":"Where are you from?","jp":"ご出身はどちらですか？"},{"sp":1,"en":"I'm from Osaka, but I live in Tokyo now.","jp":"大阪出身ですが、今は東京に住んでいます。"},{"sp":0,"en":"What do you like to do in your free time?","jp":"暇な時間は何をするのが好きですか？"},{"sp":1,"en":"I like cooking and playing the guitar.","jp":"料理とギターが好きです。"},{"sp":0,"en":"That's cool. I'd love to hear you play sometime.","jp":"すてきですね。いつか演奏を聞いてみたいです。"},{"sp":1,"en":"Sure! I'll play for you next time.","jp":"ぜひ！今度弾きますね。"}]}]},{"id":"ask","ic":"🙏","n":"お願い・断る","hint":"asking a coworker for a favor or politely saying no","d":[{"t":"お願いする","l":[{"sp":0,"en":"Could you do me a favor?","jp":"お願いがあるんだけど、いい？"},{"sp":1,"en":"Sure. What do you need?","jp":"もちろん。何が必要？"},{"sp":0,"en":"Could you look over my report before noon?","jp":"お昼までに私の報告書を見てもらえる？"},{"sp":1,"en":"I can do that. Please send it to me now.","jp":"いいよ。今送って。"},{"sp":0,"en":"Thank you so much. I really appreciate it.","jp":"本当にありがとう。助かるよ。"},{"sp":1,"en":"No problem. I'll send my comments by eleven.","jp":"問題ないよ。11時までにコメントを送るね。"}]},{"t":"丁寧に断る","l":[{"sp":0,"en":"Can you take over this project next week?","jp":"来週このプロジェクトを引き継げる？"},{"sp":1,"en":"I'm afraid I can't. I'm already full next week.","jp":"残念ですが無理です。来週はすでにいっぱいです。"},{"sp":0,"en":"I see. Is there anyone else who could help?","jp":"そうですか。ほかに手伝える人はいますか？"},{"sp":1,"en":"Maybe Emma. I can ask her for you.","jp":"エマならできるかも。私から聞いておきます。"},{"sp":0,"en":"That would be great. Thanks for your help.","jp":"それは助かる。ありがとう。"},{"sp":1,"en":"Sorry I couldn't do more.","jp":"お役に立てなくてすみません。"}]}]},{"id":"rep","ic":"📊","n":"進捗報告","hint":"reporting progress or a delay to a manager or teammate","d":[{"t":"進み具合","l":[{"sp":0,"en":"How is the project going?","jp":"プロジェクトの調子はどう？"},{"sp":1,"en":"We're on schedule. The design is almost done.","jp":"予定どおりです。デザインはほぼ完成です。"},{"sp":0,"en":"Good. Are there any problems?","jp":"よかった。何か問題はある？"},{"sp":1,"en":"One small thing. We're waiting for the client's reply.","jp":"小さなことが一つ。お客様の返事待ちです。"},{"sp":0,"en":"Please let me know as soon as you hear back.","jp":"返事が来たらすぐ教えて。"},{"sp":1,"en":"Will do. I'll update you tomorrow.","jp":"わかりました。明日、状況を報告します。"}]},{"t":"遅れを伝える","l":[{"sp":0,"en":"I need to tell you something about the schedule.","jp":"予定についてお伝えしたいことがあります。"},{"sp":1,"en":"What happened?","jp":"何があったの？"},{"sp":0,"en":"The test is taking longer than expected.","jp":"テストが思ったより時間がかかっています。"},{"sp":1,"en":"How much longer do you need?","jp":"あとどのくらい必要？"},{"sp":0,"en":"About two more days. I'm sorry for the delay.","jp":"あと2日ほどです。遅れてすみません。"},{"sp":1,"en":"Okay. Thanks for telling me early.","jp":"わかった。早く知らせてくれてありがとう。"}]}]}];
+var NAMES=['Mia','Ken'],GEN=['f','m'];
+var PK='dei_conv_prog',CK='dei_conv_custom';
+var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false};
+var root=$('#cvRoot'),body=$('#cvBody');
+if(LS.get('dei_conv_hen',false))root.classList.add('hen');
+function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
+function prog(){var p=LS.get(PK,{});return p&&typeof p==='object'?p:{}}
+function pget(id){return prog()[id]||{l:0,s:0,a:0,b:0}}
+function pset(id,f){var p=prog();var o=p[id]||{l:0,s:0,a:0,b:0};f(o);p[id]=o;LS.set(PK,p)}
+function custom(){var a=LS.get(CK,[]);return Array.isArray(a)?a:[]}
+function dlgs(sid){var out=[];DATA.forEach(function(s){if(s.id===sid)s.d.forEach(function(d,i){out.push({id:s.id+(i+1),title:d.t,lines:d.l,scene:sid,own:0})})});custom().forEach(function(c){if(c.scene===sid)out.push({id:c.id,title:c.title,lines:c.lines,scene:sid,own:1})});return out}
+function allD(){var o=[];DATA.forEach(function(s){o=o.concat(dlgs(s.id))});return o}
+function findD(id){return allD().filter(function(d){return d.id===id})[0]}
+function mastered(id){var p=pget(id);return p.a&&p.b}
+function scn(sid){return DATA.filter(function(s){return s.id===sid})[0]}
+/* ---------- 声 ---------- */
+function vlist(){try{return(speechSynthesis.getVoices()||[]).filter(function(v){return/^en[-_]/i.test(v.lang)})}catch(e){return[]}}
+function pickV(g){var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i,M=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male/i;var re=g==='m'?M:F;
+ return vs.find(function(v){return re.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return re.test(v.name)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
+function sayLine(text,sp,tok){return new Promise(function(res){
+ try{var u=new SpeechSynthesisUtterance(text);u.lang='en-US';var g=GEN[sp]||'f';var v=pickV(g);if(v){u.voice=v;u.lang=v.lang}
+ u.rate=S.slow?0.7:0.95;u.pitch=g==='m'?0.85:1.12;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
+ var tm=setTimeout(fin,Math.max(3500,text.length*140/(S.slow?0.7:1))+2500);u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}catch(e){res()}})}
+function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+function stopAll(){S.tok++;try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}}
+async function playAll(){var d=findD(S.did);if(!d)return;var my=++S.tok;try{speechSynthesis.cancel()}catch(e){}
+ pset(d.id,function(o){o.l=(o.l||0)+1});
+ for(var i=0;i<d.lines.length;i++){if(my!==S.tok)return;mark(i);await sayLine(d.lines[i].en,d.lines[i].sp,my);await wait(S.slow?600:350)}
+ if(my===S.tok){mark(-1);var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。'}}
+function mark(i){document.querySelectorAll('#cvRoot .ln').forEach(function(e,k){e.classList.toggle('cur',k===i)});var w=$('#cvWho');if(i>=0&&w)w.textContent='🗣 '+(i+1)+' / '+findD(S.did).lines.length}
+/* ---------- マイク ---------- */
+function listen(cb){var R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){toast('この端末では音声入力が使えません。「言えた/まだ」で自己判定してください');cb('',1);return}
+ try{if(S.rec)S.rec.abort()}catch(e){}
+ var r=new R();r.lang='en-US';r.interimResults=false;r.maxAlternatives=1;S.rec=r;
+ r.onresult=function(ev){var t=ev.results&&ev.results[0]&&ev.results[0][0]?ev.results[0][0].transcript:'';cb(t||'')};
+ r.onerror=function(){cb('',1)};r.onend=function(){S.rec=null};try{r.start()}catch(e){cb('',1)}}
+function words(s){return String(s||'').toLowerCase().replace(/[^a-z0-9' ]+/g,' ').split(/\s+/).filter(Boolean)}
+function match(h,t){var a=words(h),b=words(t);if(!b.length)return 0;var n=0;b.forEach(function(w){if(a.indexOf(w)>=0)n++});return Math.round(n/b.length*100)}
+/* ---------- AI（場面ごとに会話を追加して保存） ---------- */
+async function ask(prompt,maxTok){
+ try{if(typeof keysReady!=='undefined')await keysReady}catch(e){}
+ if(typeof STATE==='undefined'||!STATE.appToken)return{error:'設定画面で合言葉を入力してください'};
+ var order=[STATE.aiProvider,'gemini','claude','openai'].filter(function(p,i,a){return p&&a.indexOf(p)===i});var notes=[];
+ for(var k=0;k<order.length;k++){var p=order[k];
+  try{var url,bd,pk;
+   if(p==='gemini'){url='gemini-proxy';bd={contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:maxTok,temperature:0.8}};pk=function(d){return d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts&&d.candidates[0].content.parts[0]&&d.candidates[0].content.parts[0].text}}
+   else if(p==='claude'){url='claude-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.content&&d.content[0]&&d.content[0].text}}
+   else{url='openai-proxy';bd={messages:[{role:'user',content:prompt}]};pk=function(d){return d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content}}
+   var r=await fetch(proxyUrl(url),{method:'POST',headers:workerHeaders(),body:JSON.stringify(bd)});var raw=await r.text();var d;
+   try{d=JSON.parse(raw)}catch(e){notes.push(p+': HTTP '+r.status+' '+raw.slice(0,50).replace(/\s+/g,' '));continue}
+   if(d.error){notes.push(p+': '+String(d.error.message||d.error).slice(0,70));continue}
+   var t=pk(d);if(t)return{text:t,provider:p};notes.push(p+': 返事が空（HTTP '+r.status+'）')}catch(e){notes.push(p+': '+String(e.message||e).slice(0,60))}}
+ try{if(typeof callAIOnce==='function'){var o=await callAIOnce(prompt);if(o&&o.reply)return{text:o.reply,provider:o.provider||'app'};if(o&&o.error)notes.push('app: '+String(o.error).slice(0,60))}}catch(e){}
+ return{error:notes.join(' ／ ')||'AIに接続できません'}}
+function parseJ(t){if(!t)return null;var a=t.indexOf('{'),b=t.lastIndexOf('}');if(a<0||b<a)return null;var s=t.slice(a,b+1);try{return JSON.parse(s)}catch(e){try{return JSON.parse(s.replace(/,\s*([}\]])/g,'$1'))}catch(e2){return null}}}
+async function genAI(sid){var sc=scn(sid);
+ var p='You write short practice dialogues for a Japanese learner of English.\nScene: '+sc.hint+'. Variety seed: '+Math.random().toString(36).slice(2,8)+'.\nWrite a natural conversation between two people (speaker 0 and speaker 1), exactly 6 lines, alternating speakers, starting with speaker 0. Each line is 1 short sentence of natural spoken English (CEFR B1). Give a Japanese translation for each line.\nReturn ONLY compact JSON on one line, no markdown:\n{"title":"short Japanese title","lines":[{"sp":0,"en":"...","jp":"..."}]}';
+ for(var t=0;t<2;t++){var r=await ask(p,900);if(r.error){if(t===1)return{error:r.error};continue}
+  var j=parseJ(r.text);if(j&&Array.isArray(j.lines)&&j.lines.length>=4&&j.lines.every(function(l){return l&&typeof l.en==='string'&&l.en&&typeof l.jp==='string'}))return{j:j};
+  if(t===1)return{error:'会話の形式が読み取れませんでした'}}
+ return{error:'うまく作れませんでした'}}
+/* ---------- 画面 ---------- */
+function badges(id){var p=pget(id);return (p.l?'👂'+p.l+'回 ':'')+(p.s?'🗣まね ':'')+(p.a?'🎭'+NAMES[0]+' ':'')+(p.b?'🎭'+NAMES[1]+' ':'')+(mastered(id)?'★マスター':'')||'まだ未練習'}
+function render(){
+ var h='<div class="top"><h2>🗂 会話集</h2><button data-a="close" aria-label="閉じる">✕</button></div>';
+ if(S.stage==='home'){
+  var all=allD(),m=all.filter(function(d){return mastered(d.id)}).length;
+  h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
+  h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
+  DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+ }else if(S.stage==='scene'){
+  var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
+  dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
+  h+='<div class="row"><button class="pri" data-a="ai">🤖 この場面の会話を AI で追加（保存）</button></div><div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
+ }else if(S.stage==='load'){
+  h+='<div class="card"><div class="en">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
+ }else if(S.stage==='dlg'){
+  var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
+  h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
+  if(S.mode==='listen'){
+   h+='<button class="pri big" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="stop">■ 止める</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div></div>'}).join('')+'</div>';
+   h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';
+  }else if(S.mode==='shadow'){
+   var l=d.lines[S.li];
+   h+='<div class="sub">'+(S.li+1)+' / '+d.lines.length+'　聞いたあと、同じように言ってください。</div>';
+   h+='<div class="card"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div>';
+   h+='<div class="row"><button class="pri" data-a="sh1">▶ 聞く</button><button data-a="shm">🎤 まねる</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢</button></div><div class="hear" id="cvHear">'+E(S.heard)+'</div>';
+   h+='<div class="row"><button data-a="shp" '+(S.li?'':'disabled')+'>‹ 前</button><button class="pri" data-a="shn">'+(S.li+1<d.lines.length?'次へ ›':'できた！')+'</button></div>';
+  }else if(S.mode==='role'){
+   if(S.ri<0){h+='<div class="sub">どちらの役で話しますか？相手のセリフは音声で流れ、あなたの番では日本語だけが出ます。</div><div class="row"><button class="pri big" data-a="rl" data-v="0">'+NAMES[0]+' の役（先に話す）</button><button class="big" data-a="rl" data-v="1">'+NAMES[1]+' の役（返事をする）</button></div>'}
+   else if(S.ri>=d.lines.length){var good=S.ngN===0;h+='<div class="card"><div class="en" style="font-size:20px">'+(good?'✅ '+NAMES[S.role]+' の役：言えました！':S.okN+' / '+(S.okN+S.ngN)+' 言えました')+'</div><div class="jp">'+(good?(mastered(d.id)?'★ この会話はマスターです！':'もう片方の役でも言えたらマスターです。'):'言えなかった所をもう一度。何回でもできます。')+'</div></div><div class="row"><button class="pri" data-a="rl" data-v="'+S.role+'">もう一度</button><button data-a="rl" data-v="'+(1-S.role)+'">'+NAMES[1-S.role]+' の役へ</button></div>'}
+   else{var L=d.lines[S.ri];h+='<div class="sub">'+NAMES[S.role]+' の役　'+(S.ri+1)+' / '+d.lines.length+'</div>';
+    if(L.sp!==S.role){h+='<div class="card"><div class="nm">'+NAMES[L.sp]+'（相手）</div><div class="en hid-en">'+E(L.en)+'</div><div class="jp">'+E(L.jp)+'</div></div><div class="row"><button data-a="re1">▶ もう一度聞く</button><button class="pri" data-a="rn">次へ ›</button></div>'}
+    else{h+='<div class="card"><div class="nm">あなたの番</div><div class="jp" style="font-size:16px;margin:0">'+E(L.jp)+'</div>'+(S.shown?'<div class="en" style="margin-top:8px">'+E(L.en)+'</div>':'')+'</div><div class="row"><button data-a="hear">🎤 言ってみる</button><button data-a="hint">💡 ヒント</button>'+(S.shown?'<button data-a="re1">🔊</button>':'<button data-a="show">答えを見る</button>')+'</div><div class="hear" id="cvHear">'+E(S.heard)+'</div><div class="row"><button class="pri" data-a="ok">✅ 言えた</button><button data-a="ng">❌ まだ</button></div>'}}
+  }
+ }
+ body.innerHTML=h;root.scrollTop=0;
+ if(S.stage==='dlg'&&S.mode==='role'&&S.ri>=0){var dd=findD(S.did);if(dd&&S.ri<dd.lines.length&&dd.lines[S.ri].sp!==S.role&&S.auto){S.auto=false;sayOne(dd.lines[S.ri])}}}
+function sayOne(l){stopAll();var my=S.tok;sayLine(l.en,l.sp,my)}
+function setMsg(m){S.msg=m;var e=$('#cvMsg');if(e)e.textContent=m}
+function setHear(t){S.heard=t;var e=$('#cvHear');if(e)e.textContent=t}
+function roleStart(r){S.role=r;S.ri=0;S.okN=0;S.ngN=0;S.shown=false;S.heard='';S.auto=true;render()}
+function roleNext(){var d=findD(S.did);S.ri++;S.shown=false;S.heard='';
+ if(S.ri>=d.lines.length){if(S.ngN===0)pset(d.id,function(o){if(S.role===0)o.a=1;else o.b=1})}else S.auto=true;render()}
+body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-a]');if(!b||b.disabled)return;var a=b.dataset.a,i=+b.dataset.i;
+ var d=S.did?findD(S.did):null;
+ if(a==='close'){stopAll();root.classList.remove('on')}
+ else if(a==='home'){stopAll();S.stage='home';render()}
+ else if(a==='scene'){S.sid=b.dataset.id;S.stage='scene';S.msg='';render()}
+ else if(a==='back'){stopAll();S.stage='scene';S.msg='';render()}
+ else if(a==='open'){S.did=b.dataset.id;S.mode='listen';S.li=0;S.ri=-1;S.stage='dlg';render()}
+ else if(a==='md'){stopAll();S.mode=b.dataset.v;S.li=0;S.ri=-1;S.heard='';render()}
+ else if(a==='play')playAll();
+ else if(a==='stop'){stopAll();mark(-1)}
+ else if(a==='slow'){S.slow=!S.slow;b.classList.toggle('sel',S.slow)}
+ else if(a==='hen'){root.classList.toggle('hen');LS.set('dei_conv_hen',root.classList.contains('hen'));b.classList.toggle('sel',root.classList.contains('hen'))}
+ else if(a==='hjp'){root.classList.toggle('hjp');b.classList.toggle('sel',root.classList.contains('hjp'))}
+ else if(a==='one'){sayOne(d.lines[i])}
+ else if(a==='sh1'){sayOne(d.lines[S.li])}
+ else if(a==='shm'){setHear('聞いています…同じように言ってください');listen(function(t,err){var l=d.lines[S.li];setHear(err?'聞き取れませんでした':('あなた： '+t+'　（'+match(t,l.en)+'% 一致）'))})}
+ else if(a==='shp'){stopAll();S.li=Math.max(0,S.li-1);S.heard='';render()}
+ else if(a==='shn'){stopAll();if(S.li+1<d.lines.length){S.li++;S.heard='';render()}else{pset(d.id,function(o){o.s=1});S.mode='role';S.ri=-1;toast('まねる完了！次は「役で話す」');render()}}
+ else if(a==='rl'){stopAll();roleStart(+b.dataset.v)}
+ else if(a==='rn'){stopAll();roleNext()}
+ else if(a==='re1'){sayOne(d.lines[S.ri])}
+ else if(a==='show'){S.shown=true;render()}
+ else if(a==='hint'){var L=d.lines[S.ri];setHear('ヒント： '+L.en.split(' ').slice(0,3).join(' ')+' …')}
+ else if(a==='hear'){var L2=d.lines[S.ri];setHear('聞いています…英語で言ってください');listen(function(t,err){setHear(err?'聞き取れませんでした':('あなた： '+t+'　（'+match(t,L2.en)+'% 一致）'))})}
+ else if(a==='ok'||a==='ng'){stopAll();if(a==='ok')S.okN++;else{S.ngN++;try{var L3=d.lines[S.ri];if(typeof addMistake==='function')addMistake(L3.en,L3.jp,'会話集','conv')}catch(e){}}roleNext()}
+ else if(a==='ai'){if(S.busy)return;S.busy=true;S.stage='load';render();var r=await genAI(S.sid);S.busy=false;
+  if(r.error){S.stage='scene';S.msg=r.error;render();return}
+  var c=custom();var id='u'+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
+  c.push({id:id,scene:S.sid,title:String(r.j.title||'AIの会話').slice(0,30),lines:r.j.lines.map(function(l,k){return{sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:k%2),en:String(l.en).trim(),jp:String(l.jp).trim()}})});
+  LS.set(CK,c.slice(-40));S.stage='scene';S.msg='会話を追加して保存しました';render()}});
+function openCV(){S.stage='home';render();root.classList.add('on');try{speechSynthesis.getVoices()}catch(e){}}
+window.__convOpen=openCV;
+function mount(){
+ if($('#cvCardBtn'))return;
+ var g=$('.modes-grid');
+ if(g){var c=document.createElement('div');c.className='mode-card shadowing';c.id='cvCardBtn';c.innerHTML='<div class="mode-icon">🗂</div><div class="mode-info"><div class="mode-name">会話集</div><div class="mode-desc">場面ごとの会話を聞いて覚え、話せたらマスター</div></div><div class="mode-arrow">›</div>';c.addEventListener('click',openCV);var ref=$('#syCardBtn')||g.querySelector('.mode-card.interpreter');if(ref&&ref.nextSibling)g.insertBefore(c,ref.nextSibling);else g.appendChild(c)}
+ else{var f=document.createElement('button');f.id='cvCardBtn';f.textContent='🗂';f.setAttribute('aria-label','会話集');f.style.cssText='position:fixed;left:54px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);z-index:2147483000;width:40px;height:40px;border-radius:20px;border:1px solid #888;background:rgba(20,20,30,.8);color:#fff;font-size:18px;padding:0';f.addEventListener('click',openCV);document.body.appendChild(f)}}
+mount();
+})();
+</script>
+<!--CONV-END-->
 </body>
 </html>
