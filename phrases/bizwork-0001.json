@@ -1,0 +1,414 @@
+{
+"id": "bizwork-0001",
+"situation": "bizwork",
+"sname": "ビジネス：職場の日常",
+"icon": "🏢",
+"level": 3,
+"title": "指示・報告・ミス・評価",
+"items": [
+{
+"en": "Do you have a minute?",
+"jp": "ちょっといいですか。",
+"say": [
+{
+"en": "Sure, what's up?",
+"jp": "はい、どうしました？"
+}
+],
+"note": "",
+"id": "bizwork-0001-001"
+},
+{
+"en": "Could you take a look at this when you get a chance?",
+"jp": "時間のある時に、これを見てもらえますか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-002"
+},
+{
+"en": "I need this done by noon tomorrow.",
+"jp": "これを明日の正午までに終わらせてください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-003"
+},
+{
+"en": "This is urgent. Please make it a priority.",
+"jp": "これは緊急です。優先してください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-004"
+},
+{
+"en": "There's no rush. Any time this week is fine.",
+"jp": "急ぎではありません。今週中ならいつでも結構です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-005"
+},
+{
+"en": "Can you handle this on your own, or do you need help?",
+"jp": "一人でできますか、手伝いが必要ですか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-006"
+},
+{
+"en": "I'll walk you through the process.",
+"jp": "手順を一緒に説明します。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-007"
+},
+{
+"en": "Let me show you how this works.",
+"jp": "これの使い方を見せます。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-008"
+},
+{
+"en": "Make sure you double-check the numbers before you send it.",
+"jp": "送る前に数字を必ず再確認してください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-009"
+},
+{
+"en": "Please proofread this before it goes out.",
+"jp": "出す前に校正してください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-010"
+},
+{
+"en": "We found a mistake in the report.",
+"jp": "報告書にミスが見つかりました。",
+"say": [
+{
+"en": "I'm sorry. I'll fix it right away.",
+"jp": "すみません。すぐ直します。"
+}
+],
+"note": "",
+"id": "bizwork-0001-011"
+},
+{
+"en": "It's not your fault. It happens.",
+"jp": "あなたのせいではありません。よくあることです。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-012"
+},
+{
+"en": "Could you explain what happened?",
+"jp": "何があったのか説明してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-013"
+},
+{
+"en": "We need to figure out what went wrong.",
+"jp": "何が悪かったのか突き止める必要があります。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-014"
+},
+{
+"en": "How can we prevent this from happening again?",
+"jp": "どうすれば再発を防げますか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-015"
+},
+{
+"en": "I'll update you as soon as I know more.",
+"jp": "詳しいことが分かり次第、お知らせします。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-016"
+},
+{
+"en": "I'll keep you posted.",
+"jp": "随時お知らせします。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-017"
+},
+{
+"en": "Let me know if you run into any issues.",
+"jp": "問題があれば知らせてください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-018"
+},
+{
+"en": "Please report to me directly.",
+"jp": "私に直接報告してください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-019"
+},
+{
+"en": "I'm going to be out of the office on Monday.",
+"jp": "月曜は不在にします。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-020"
+},
+{
+"en": "Can you cover for me while I'm away?",
+"jp": "私がいない間、代わりをお願いできますか。",
+"say": [
+{
+"en": "Of course, no problem.",
+"jp": "もちろん、大丈夫です。"
+}
+],
+"note": "",
+"id": "bizwork-0001-021"
+},
+{
+"en": "I'm taking a day off next Friday.",
+"jp": "来週の金曜は休みを取ります。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-022"
+},
+{
+"en": "Have you submitted your timesheet?",
+"jp": "勤務時間表は提出しましたか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-023"
+},
+{
+"en": "Please submit your expense report by the end of the week.",
+"jp": "経費精算書を今週末までに提出してください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-024"
+},
+{
+"en": "Your request has been approved.",
+"jp": "申請は承認されました。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-025"
+},
+{
+"en": "I'll need to get approval from my manager first.",
+"jp": "まず上司の承認が必要です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-026"
+},
+{
+"en": "It's company policy.",
+"jp": "会社の規則です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-027"
+},
+{
+"en": "We're having a team lunch on Friday. Are you in?",
+"jp": "金曜にチームでランチです。参加しますか。",
+"say": [
+{
+"en": "Sure, count me in.",
+"jp": "はい、参加します。"
+}
+],
+"note": "",
+"id": "bizwork-0001-028"
+},
+{
+"en": "Welcome to the team. Let me introduce you to everyone.",
+"jp": "チームへようこそ。皆さんに紹介します。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-029"
+},
+{
+"en": "This is Nori. He just joined us from Japan.",
+"jp": "こちらはノリ。日本から来たばかりです。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-030"
+},
+{
+"en": "Nice to meet you. I've heard a lot about you.",
+"jp": "はじめまして。お噂はかねがね。",
+"say": [
+{
+"en": "Nice to meet you too.",
+"jp": "こちらこそはじめまして。"
+}
+],
+"note": "",
+"id": "bizwork-0001-031"
+},
+{
+"en": "Let me know if you have any questions.",
+"jp": "質問があれば言ってください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-032"
+},
+{
+"en": "Your desk is over there, next to the window.",
+"jp": "あなたの席はあそこ、窓際です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-033"
+},
+{
+"en": "The printer is out of paper.",
+"jp": "プリンターの用紙が切れています。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-034"
+},
+{
+"en": "The network is down. IT is working on it.",
+"jp": "ネットワークが落ちています。ITが対応中です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-035"
+},
+{
+"en": "Have you tried turning it off and on again?",
+"jp": "電源を入れ直してみましたか。",
+"say": [],
+"note": "IT対応の定番。",
+"id": "bizwork-0001-036"
+},
+{
+"en": "I'll submit a ticket to the IT department.",
+"jp": "ITにチケットを出します。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-037"
+},
+{
+"en": "Please lock your computer when you leave your desk.",
+"jp": "席を離れる時はパソコンをロックしてください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-038"
+},
+{
+"en": "We have a deadline coming up, so we may need to work late.",
+"jp": "締め切りが近いので、残業が必要かもしれません。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-039"
+},
+{
+"en": "Can you stay a little late tonight?",
+"jp": "今夜は少し残業できますか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-040"
+},
+{
+"en": "You did a great job on the presentation.",
+"jp": "プレゼン、とても良かったです。",
+"say": [
+{
+"en": "Thank you. I appreciate it.",
+"jp": "ありがとうございます。"
+}
+],
+"note": "",
+"id": "bizwork-0001-041"
+},
+{
+"en": "We really appreciate your hard work.",
+"jp": "あなたの頑張りに本当に感謝しています。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-042"
+},
+{
+"en": "I'd like to give you some feedback.",
+"jp": "少しフィードバックをさせてください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-043"
+},
+{
+"en": "One thing you could improve is how you communicate with the client.",
+"jp": "改善できる点は、お客様とのやり取りの仕方です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-044"
+},
+{
+"en": "Let's have a one-on-one next week.",
+"jp": "来週、1対1で話しましょう。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-045"
+},
+{
+"en": "We're planning to reorganize the team next month.",
+"jp": "来月、チームを再編する予定です。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-046"
+},
+{
+"en": "Starting next quarter, you'll be reporting to Sarah.",
+"jp": "来四半期から、サラの下で働いてもらいます。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-047"
+},
+{
+"en": "There will be a company-wide announcement at three.",
+"jp": "3時に全社向けの発表があります。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-048"
+},
+{
+"en": "Please keep this confidential until it's announced.",
+"jp": "発表されるまで内密にしてください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-049"
+},
+{
+"en": "I'm sorry to hear that. Take all the time you need.",
+"jp": "それは大変でしたね。必要なだけ時間を取ってください。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-050"
+},
+{
+"en": "Are you free for coffee this afternoon?",
+"jp": "午後にコーヒーでもどうですか。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-051"
+},
+{
+"en": "Let's grab a drink after work.",
+"jp": "仕事の後に一杯行きましょう。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-052"
+},
+{
+"en": "Have a good weekend. See you on Monday.",
+"jp": "良い週末を。月曜に会いましょう。",
+"say": [],
+"note": "",
+"id": "bizwork-0001-053"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

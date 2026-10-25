@@ -1,0 +1,354 @@
+{
+"id": "biznet-0001",
+"situation": "biznet",
+"sname": "ビジネス：挨拶・出張・会食",
+"icon": "🥂",
+"level": 3,
+"title": "名刺・雑談・会食・聞き返し",
+"items": [
+{
+"en": "Hi, I don't think we've met. I'm Dan.",
+"jp": "はじめまして。ダンです。",
+"say": [
+{
+"en": "Nice to meet you, Dan. I'm Nori.",
+"jp": "はじめまして、ダン。ノリです。"
+}
+],
+"note": "",
+"id": "biznet-0001-001"
+},
+{
+"en": "What do you do?",
+"jp": "お仕事は何をされていますか。",
+"say": [
+{
+"en": "I work in engineering.",
+"jp": "エンジニアリングの仕事です。"
+}
+],
+"note": "",
+"id": "biznet-0001-002"
+},
+{
+"en": "What company are you with?",
+"jp": "どちらの会社ですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-003"
+},
+{
+"en": "How long have you been with the company?",
+"jp": "今の会社には何年いますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-004"
+},
+{
+"en": "Where are you based?",
+"jp": "拠点はどちらですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-005"
+},
+{
+"en": "Is this your first time at this conference?",
+"jp": "この会議は初めてですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-006"
+},
+{
+"en": "What brings you to town?",
+"jp": "今回はどんなご用で来られたのですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-007"
+},
+{
+"en": "How was your flight?",
+"jp": "フライトはどうでした？",
+"say": [
+{
+"en": "It was long, but fine.",
+"jp": "長かったけど、問題なしです。"
+}
+],
+"note": "",
+"id": "biznet-0001-008"
+},
+{
+"en": "How are you finding the city so far?",
+"jp": "この街の印象はどうですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-009"
+},
+{
+"en": "Is it your first time in the States?",
+"jp": "アメリカは初めてですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-010"
+},
+{
+"en": "How long are you here for?",
+"jp": "どのくらい滞在しますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-011"
+},
+{
+"en": "Have you tried the local food yet?",
+"jp": "地元の料理はもう食べましたか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-012"
+},
+{
+"en": "You should definitely try the seafood place on Main Street.",
+"jp": "メインストリートの海鮮の店はぜひ行ってみてください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-013"
+},
+{
+"en": "Let me give you my business card.",
+"jp": "名刺をお渡しします。",
+"say": [
+{
+"en": "Thank you. Here's mine.",
+"jp": "ありがとうございます。こちらが私のです。"
+}
+],
+"note": "",
+"id": "biznet-0001-014"
+},
+{
+"en": "Let's stay in touch.",
+"jp": "連絡を取り合いましょう。",
+"say": [],
+"note": "",
+"id": "biznet-0001-015"
+},
+{
+"en": "Are you on LinkedIn?",
+"jp": "LinkedInはやっていますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-016"
+},
+{
+"en": "I'll connect with you after the event.",
+"jp": "イベントの後でつながりますね。",
+"say": [],
+"note": "",
+"id": "biznet-0001-017"
+},
+{
+"en": "It was nice chatting with you.",
+"jp": "お話しできて良かったです。",
+"say": [],
+"note": "",
+"id": "biznet-0001-018"
+},
+{
+"en": "I'd better get going. I have another meeting.",
+"jp": "そろそろ行かないと。別の会議があります。",
+"say": [],
+"note": "",
+"id": "biznet-0001-019"
+},
+{
+"en": "Would you like to join us for dinner tonight?",
+"jp": "今夜、一緒に夕食はいかがですか。",
+"say": [
+{
+"en": "I'd love to. What time?",
+"jp": "ぜひ。何時ですか。"
+}
+],
+"note": "",
+"id": "biznet-0001-020"
+},
+{
+"en": "We're meeting in the lobby at seven.",
+"jp": "7時にロビーで集合です。",
+"say": [],
+"note": "",
+"id": "biznet-0001-021"
+},
+{
+"en": "What would you like to drink?",
+"jp": "何を飲みますか。",
+"say": [
+{
+"en": "I'll have a beer.",
+"jp": "ビールをいただきます。"
+}
+],
+"note": "",
+"id": "biznet-0001-022"
+},
+{
+"en": "This one's on me.",
+"jp": "ここは私がおごります。",
+"say": [
+{
+"en": "Thank you, that's very kind.",
+"jp": "ありがとう、ご親切に。"
+}
+],
+"note": "",
+"id": "biznet-0001-023"
+},
+{
+"en": "Let's split the bill.",
+"jp": "割り勘にしましょう。",
+"say": [],
+"note": "",
+"id": "biznet-0001-024"
+},
+{
+"en": "Do you have any plans for the weekend?",
+"jp": "週末の予定はありますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-025"
+},
+{
+"en": "I'm planning to do some sightseeing.",
+"jp": "観光する予定です。",
+"say": [],
+"note": "",
+"id": "biznet-0001-026"
+},
+{
+"en": "What do you do for fun?",
+"jp": "趣味は何ですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-027"
+},
+{
+"en": "Do you have any kids?",
+"jp": "お子さんはいますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-028"
+},
+{
+"en": "How's your family?",
+"jp": "ご家族はお元気ですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-029"
+},
+{
+"en": "I'm sorry, I'm not good with names. Could you tell me yours again?",
+"jp": "すみません、名前を覚えるのが苦手で。もう一度教えてください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-030"
+},
+{
+"en": "I'm afraid my English isn't perfect, but I'll do my best.",
+"jp": "英語は完璧ではありませんが、頑張ります。",
+"say": [
+{
+"en": "Your English is great.",
+"jp": "とてもお上手ですよ。"
+}
+],
+"note": "",
+"id": "biznet-0001-031"
+},
+{
+"en": "Please let me know if I'm speaking too fast.",
+"jp": "話すのが速すぎたら言ってください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-032"
+},
+{
+"en": "Could you explain that in simpler terms?",
+"jp": "もっと簡単な言葉で説明してもらえますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-033"
+},
+{
+"en": "What does that mean exactly?",
+"jp": "それは具体的にどういう意味ですか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-034"
+},
+{
+"en": "Could you give me an example?",
+"jp": "例を挙げてもらえますか。",
+"say": [],
+"note": "",
+"id": "biznet-0001-035"
+},
+{
+"en": "I'm not familiar with that term.",
+"jp": "その用語には詳しくありません。",
+"say": [],
+"note": "",
+"id": "biznet-0001-036"
+},
+{
+"en": "It's a pleasure to have you here.",
+"jp": "お越しいただき光栄です。",
+"say": [],
+"note": "",
+"id": "biznet-0001-037"
+},
+{
+"en": "I'd like to propose a toast.",
+"jp": "乾杯させてください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-038"
+},
+{
+"en": "Cheers!",
+"jp": "乾杯！",
+"say": [],
+"note": "",
+"id": "biznet-0001-039"
+},
+{
+"en": "To a successful partnership.",
+"jp": "良い提携に乾杯。",
+"say": [],
+"note": "",
+"id": "biznet-0001-040"
+},
+{
+"en": "Thank you so much for your hospitality.",
+"jp": "おもてなしに心から感謝します。",
+"say": [],
+"note": "",
+"id": "biznet-0001-041"
+},
+{
+"en": "Please give my regards to your team.",
+"jp": "チームの皆さんによろしくお伝えください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-042"
+},
+{
+"en": "Safe travels. Let us know when you get home.",
+"jp": "気をつけて。着いたら連絡ください。",
+"say": [],
+"note": "",
+"id": "biznet-0001-043"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

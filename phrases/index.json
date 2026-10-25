@@ -1,5 +1,5 @@
 {
-"updated": 1792905896752,
+"updated": 1792906582471,
 "packs": [
 {
 "id": "airport-0001",
@@ -24,6 +24,46 @@
 "count": 52,
 "situation": "restaurant",
 "sname": "レストラン・カフェ"
+},
+{
+"id": "bizmeet-0001",
+"file": "bizmeet-0001.json",
+"ver": 1,
+"count": 56,
+"situation": "bizmeet",
+"sname": "ビジネス：会議"
+},
+{
+"id": "bizphone-0001",
+"file": "bizphone-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "bizphone",
+"sname": "ビジネス：電話・オンライン"
+},
+{
+"id": "bizwork-0001",
+"file": "bizwork-0001.json",
+"ver": 1,
+"count": 53,
+"situation": "bizwork",
+"sname": "ビジネス：職場の日常"
+},
+{
+"id": "bizdeal-0001",
+"file": "bizdeal-0001.json",
+"ver": 1,
+"count": 54,
+"situation": "bizdeal",
+"sname": "ビジネス：商談・交渉・契約"
+},
+{
+"id": "biznet-0001",
+"file": "biznet-0001.json",
+"ver": 1,
+"count": 43,
+"situation": "biznet",
+"sname": "ビジネス：挨拶・出張・会食"
 }
 ]
 }

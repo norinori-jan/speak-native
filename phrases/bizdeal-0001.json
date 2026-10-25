@@ -1,0 +1,406 @@
+{
+"id": "bizdeal-0001",
+"situation": "bizdeal",
+"sname": "ビジネス：商談・交渉・契約",
+"icon": "🤝",
+"level": 3,
+"title": "見積・納期・価格・契約・クレーム",
+"items": [
+{
+"en": "Thank you for taking the time to meet with us today.",
+"jp": "本日はお時間をいただきありがとうございます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-001"
+},
+{
+"en": "Let me start by giving you a brief overview of our company.",
+"jp": "まず当社の概要を簡単にご説明します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-002"
+},
+{
+"en": "We specialize in industrial sensors for the automotive sector.",
+"jp": "当社は自動車向けの産業用センサーを専門としています。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-003"
+},
+{
+"en": "What are you currently using for this?",
+"jp": "現在はこれに何をお使いですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-004"
+},
+{
+"en": "What's the biggest challenge you're facing right now?",
+"jp": "今、一番の課題は何ですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-005"
+},
+{
+"en": "Our product can reduce your costs by up to twenty percent.",
+"jp": "当社の製品でコストを最大20%削減できます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-006"
+},
+{
+"en": "Let me walk you through a quick demo.",
+"jp": "簡単なデモをお見せします。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-007"
+},
+{
+"en": "Let me send you a quote.",
+"jp": "見積もりをお送りします。",
+"say": [
+{
+"en": "That would be great.",
+"jp": "お願いします。"
+}
+],
+"note": "",
+"id": "bizdeal-0001-008"
+},
+{
+"en": "The price includes installation and one year of support.",
+"jp": "価格には設置と1年間のサポートが含まれます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-009"
+},
+{
+"en": "That's our standard price. It does not include shipping.",
+"jp": "それが標準価格で、送料は含みません。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-010"
+},
+{
+"en": "The unit price is twelve dollars for orders over one thousand.",
+"jp": "1000個以上の注文で、単価は12ドルです。",
+"say": [],
+"note": "数量割引の言い方。",
+"id": "bizdeal-0001-011"
+},
+{
+"en": "What's your minimum order quantity?",
+"jp": "最小発注数量はいくつですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-012"
+},
+{
+"en": "Our minimum order is five hundred units.",
+"jp": "最小注文数は500個です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-013"
+},
+{
+"en": "What's the lead time?",
+"jp": "納期はどのくらいですか。",
+"say": [],
+"note": "lead time = 発注から納品まで。",
+"id": "bizdeal-0001-014"
+},
+{
+"en": "The lead time is about four to six weeks.",
+"jp": "納期は4〜6週間ほどです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-015"
+},
+{
+"en": "Can you deliver by the end of March?",
+"jp": "3月末までに納品できますか。",
+"say": [
+{
+"en": "I'll need to check with production.",
+"jp": "製造に確認が必要です。"
+}
+],
+"note": "",
+"id": "bizdeal-0001-016"
+},
+{
+"en": "We can guarantee delivery within thirty days.",
+"jp": "30日以内の納品を保証できます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-017"
+},
+{
+"en": "The price is a bit higher than we expected.",
+"jp": "価格が想定より少し高いです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-018"
+},
+{
+"en": "Is there any room for negotiation on the price?",
+"jp": "価格の交渉の余地はありますか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-019"
+},
+{
+"en": "If you commit to a larger volume, we can offer a discount.",
+"jp": "より大きな数量を確約いただければ、割引できます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-020"
+},
+{
+"en": "The best we can do is five percent off.",
+"jp": "こちらで出せる最大は5%引きです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-021"
+},
+{
+"en": "That's our final offer.",
+"jp": "これが最終提示です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-022"
+},
+{
+"en": "We'd need a better price to move forward.",
+"jp": "進めるにはもっと良い価格が必要です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-023"
+},
+{
+"en": "Let's meet in the middle.",
+"jp": "お互い歩み寄りましょう。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-024"
+},
+{
+"en": "We're willing to be flexible on the payment terms.",
+"jp": "支払い条件には柔軟に対応できます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-025"
+},
+{
+"en": "What are your payment terms?",
+"jp": "支払い条件はどうなっていますか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-026"
+},
+{
+"en": "Payment is due within thirty days of the invoice date.",
+"jp": "支払い期限は請求日から30日以内です。",
+"say": [],
+"note": "net 30 とも言う。",
+"id": "bizdeal-0001-027"
+},
+{
+"en": "We require a fifty percent deposit upfront.",
+"jp": "前払いで50%の手付金が必要です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-028"
+},
+{
+"en": "Is that price in U.S. dollars or in yen?",
+"jp": "その価格はドルですか、円ですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-029"
+},
+{
+"en": "Does that include tax?",
+"jp": "それは税込みですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-030"
+},
+{
+"en": "We'll need to review the contract with our legal team.",
+"jp": "契約書は法務チームと確認する必要があります。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-031"
+},
+{
+"en": "I'll send you a draft of the agreement.",
+"jp": "契約書の草案をお送りします。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-032"
+},
+{
+"en": "Please review the terms and let us know if you have any changes.",
+"jp": "条件をご確認の上、変更点があればお知らせください。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-033"
+},
+{
+"en": "We'd like to add a clause about confidentiality.",
+"jp": "秘密保持に関する条項を追加したいです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-034"
+},
+{
+"en": "The contract will be valid for two years.",
+"jp": "契約の有効期間は2年です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-035"
+},
+{
+"en": "Either party may terminate with thirty days' written notice.",
+"jp": "どちらの当事者も、30日前の書面通知で解約できます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-036"
+},
+{
+"en": "Who is the decision-maker on your side?",
+"jp": "御社で決定権を持つのはどなたですか。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-037"
+},
+{
+"en": "I'll need to discuss this with my boss before I can commit.",
+"jp": "お約束する前に、上司と相談する必要があります。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-038"
+},
+{
+"en": "We'll get back to you with a decision by next Friday.",
+"jp": "来週の金曜までに結論をご連絡します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-039"
+},
+{
+"en": "We're interested, but we need more time to think.",
+"jp": "興味はありますが、もう少し検討する時間が必要です。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-040"
+},
+{
+"en": "Unfortunately, it's not a good fit for us right now.",
+"jp": "残念ながら、今は当社には合いません。",
+"say": [],
+"note": "丁寧な断り。",
+"id": "bizdeal-0001-041"
+},
+{
+"en": "Thank you for your offer, but we'll have to pass.",
+"jp": "ご提案ありがとうございますが、見送らせていただきます。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-042"
+},
+{
+"en": "We'd be happy to work with you on this.",
+"jp": "ぜひ一緒に取り組みたいです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-043"
+},
+{
+"en": "Great, we have a deal.",
+"jp": "よし、合意ですね。",
+"say": [
+{
+"en": "Pleasure doing business with you.",
+"jp": "お取引できて光栄です。"
+}
+],
+"note": "",
+"id": "bizdeal-0001-044"
+},
+{
+"en": "Let's shake on it.",
+"jp": "握手で決まりにしましょう。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-045"
+},
+{
+"en": "I'll have my team prepare the paperwork.",
+"jp": "書類は私のチームが準備します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-046"
+},
+{
+"en": "The goods will ship once we receive the payment.",
+"jp": "入金確認後に出荷します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-047"
+},
+{
+"en": "There's been a delay in shipping because of customs.",
+"jp": "通関のため出荷が遅れています。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-048"
+},
+{
+"en": "The shipment was damaged in transit. We'd like a replacement.",
+"jp": "輸送中に荷物が破損しました。交換をお願いします。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-049"
+},
+{
+"en": "We'll issue a refund within five business days.",
+"jp": "5営業日以内に返金します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-050"
+},
+{
+"en": "We apologize for the mistake and will make it right.",
+"jp": "ミスをお詫びし、きちんと対応します。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-051"
+},
+{
+"en": "This is a long-term partnership, so we want to get it right.",
+"jp": "これは長期的なパートナーシップなので、きちんと進めたいです。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-052"
+},
+{
+"en": "We'd like to invite you to visit our factory.",
+"jp": "ぜひ当社の工場を見学にお越しください。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-053"
+},
+{
+"en": "It was great meeting you. I look forward to working together.",
+"jp": "お会いできて良かったです。ご一緒できるのを楽しみにしています。",
+"say": [],
+"note": "",
+"id": "bizdeal-0001-054"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

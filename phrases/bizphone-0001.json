@@ -1,0 +1,413 @@
+{
+"id": "bizphone-0001",
+"situation": "bizphone",
+"sname": "ビジネス：電話・オンライン",
+"icon": "📞",
+"level": 3,
+"title": "電話・取り次ぎ・日程調整",
+"items": [
+{
+"en": "Good morning, this is Anna from Brightline. How can I help you?",
+"jp": "おはようございます、ブライトラインのアンナです。ご用件は何でしょう。",
+"say": [
+{
+"en": "Hi, I'd like to speak with Mr. Davis, please.",
+"jp": "ミスター・デイビスをお願いします。"
+}
+],
+"note": "",
+"id": "bizphone-0001-001"
+},
+{
+"en": "Who's calling, please?",
+"jp": "どちら様ですか。",
+"say": [
+{
+"en": "This is Nori Sanada from Tokyo.",
+"jp": "東京のサナダ ノリです。"
+}
+],
+"note": "",
+"id": "bizphone-0001-002"
+},
+{
+"en": "May I ask what this is regarding?",
+"jp": "どのようなご用件でしょうか。",
+"say": [
+{
+"en": "It's about the contract we discussed.",
+"jp": "先日お話しした契約の件です。"
+}
+],
+"note": "",
+"id": "bizphone-0001-003"
+},
+{
+"en": "Hold on a moment. I'll put you through.",
+"jp": "少々お待ちください。おつなぎします。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-004"
+},
+{
+"en": "I'm sorry, he's not available right now.",
+"jp": "申し訳ありません、ただ今席を外しております。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-005"
+},
+{
+"en": "He's in a meeting right now. Can I take a message?",
+"jp": "ただ今会議中です。伝言を承りましょうか。",
+"say": [
+{
+"en": "Yes, please ask him to call me back.",
+"jp": "はい、折り返しをお願いしてください。"
+}
+],
+"note": "",
+"id": "bizphone-0001-006"
+},
+{
+"en": "Would you like to leave a voicemail?",
+"jp": "留守電にメッセージを残しますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-007"
+},
+{
+"en": "Could you spell your name for me?",
+"jp": "お名前のスペルを教えてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-008"
+},
+{
+"en": "Could I have your phone number, please?",
+"jp": "電話番号を教えてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-009"
+},
+{
+"en": "Let me repeat that back to you to make sure I got it right.",
+"jp": "正しいか確認のため、復唱します。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-010"
+},
+{
+"en": "Sorry, the line is bad. Could you speak up a little?",
+"jp": "すみません、電波が悪いです。少し大きな声でお願いできますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-011"
+},
+{
+"en": "I can barely hear you. Can I call you back?",
+"jp": "ほとんど聞こえません。かけ直してもいいですか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-012"
+},
+{
+"en": "Can you hold for a moment while I check?",
+"jp": "確認しますので少々お待ちいただけますか。",
+"say": [
+{
+"en": "Sure, no problem.",
+"jp": "はい、大丈夫です。"
+}
+],
+"note": "",
+"id": "bizphone-0001-013"
+},
+{
+"en": "Thank you for holding.",
+"jp": "お待たせしました。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-014"
+},
+{
+"en": "I'm calling to confirm your appointment for tomorrow at ten.",
+"jp": "明日10時のご予約の確認でお電話しました。",
+"say": [
+{
+"en": "Yes, I'll be there.",
+"jp": "はい、伺います。"
+}
+],
+"note": "",
+"id": "bizphone-0001-015"
+},
+{
+"en": "I'd like to reschedule our meeting.",
+"jp": "会議の日程を変更したいのです。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-016"
+},
+{
+"en": "When would be a good time for you?",
+"jp": "いつならご都合がよろしいですか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-017"
+},
+{
+"en": "I'm available any afternoon this week except Thursday.",
+"jp": "今週は木曜以外の午後ならいつでも空いています。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-018"
+},
+{
+"en": "I'll get back to you as soon as I can.",
+"jp": "できるだけ早くご連絡します。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-019"
+},
+{
+"en": "I'll call you back in about ten minutes.",
+"jp": "10分ほどでかけ直します。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-020"
+},
+{
+"en": "Would you like me to email you the details?",
+"jp": "詳細をメールでお送りしましょうか。",
+"say": [
+{
+"en": "Yes, please send it to my work email.",
+"jp": "はい、仕事用のメールにお願いします。"
+}
+],
+"note": "",
+"id": "bizphone-0001-021"
+},
+{
+"en": "What's your email address?",
+"jp": "メールアドレスは何ですか。",
+"say": [
+{
+"en": "It's nori at example dot com.",
+"jp": "nori アット example ドット com です。"
+}
+],
+"note": "at / dot / dash / underscore の読みを覚える。",
+"id": "bizphone-0001-022"
+},
+{
+"en": "Could you hold the line? I have another call coming in.",
+"jp": "そのままお待ちください。別の電話が入っています。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-023"
+},
+{
+"en": "You've reached the voicemail of Tom Baker. Please leave a message after the tone.",
+"jp": "トム・ベイカーの留守番電話です。発信音の後にメッセージをどうぞ。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-024"
+},
+{
+"en": "Our office hours are nine to five, Monday through Friday.",
+"jp": "営業時間は月曜から金曜の9時から5時です。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-025"
+},
+{
+"en": "Our office is closed today for a public holiday.",
+"jp": "本日は祝日のため休業です。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-026"
+},
+{
+"en": "Please press one for sales, two for support, or three for billing.",
+"jp": "営業は1、サポートは2、請求は3を押してください。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-027"
+},
+{
+"en": "All of our representatives are currently busy. Please stay on the line.",
+"jp": "担当者は全員対応中です。そのままお待ちください。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-028"
+},
+{
+"en": "Your call is important to us.",
+"jp": "お電話ありがとうございます。順にご対応します。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-029"
+},
+{
+"en": "I'm calling about an invoice that hasn't been paid yet.",
+"jp": "まだ支払われていない請求書の件でお電話しました。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-030"
+},
+{
+"en": "The payment has been sent. It should arrive in two to three business days.",
+"jp": "支払いは送金済みです。営業日で2〜3日で届くはずです。",
+"say": [],
+"note": "business days = 土日祝を除く日数。",
+"id": "bizphone-0001-031"
+},
+{
+"en": "Could you resend the invoice? We can't find it.",
+"jp": "請求書を再送してもらえますか。見つかりません。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-032"
+},
+{
+"en": "I haven't received the shipment yet.",
+"jp": "まだ荷物が届いていません。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-033"
+},
+{
+"en": "Can I get a tracking number?",
+"jp": "追跡番号をもらえますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-034"
+},
+{
+"en": "We'll look into it and get back to you by tomorrow.",
+"jp": "調べて、明日までにご連絡します。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-035"
+},
+{
+"en": "I apologize for the inconvenience.",
+"jp": "ご不便をおかけして申し訳ありません。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-036"
+},
+{
+"en": "Let me transfer you to the right department.",
+"jp": "適切な部署におつなぎします。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-037"
+},
+{
+"en": "Could you give me your order number?",
+"jp": "注文番号を教えてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-038"
+},
+{
+"en": "I'd like to make a reservation for a conference room.",
+"jp": "会議室の予約をしたいのですが。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-039"
+},
+{
+"en": "How many people will be attending?",
+"jp": "何名ご参加ですか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-040"
+},
+{
+"en": "We'd like to move the call to next week.",
+"jp": "電話会議を来週に移したいのですが。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-041"
+},
+{
+"en": "What time zone are you in?",
+"jp": "どちらのタイムゾーンですか。",
+"say": [
+{
+"en": "I'm in Japan, so Japan Standard Time.",
+"jp": "日本なので日本標準時です。"
+}
+],
+"note": "時差の話は国際電話で必須。",
+"id": "bizphone-0001-042"
+},
+{
+"en": "It's nine a.m. here, which is ten p.m. in Tokyo.",
+"jp": "こちらは午前9時で、東京は午後10時です。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-043"
+},
+{
+"en": "Let's use Zoom. I'll send you the link.",
+"jp": "Zoomを使いましょう。リンクを送ります。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-044"
+},
+{
+"en": "Thanks for calling. Have a nice day.",
+"jp": "お電話ありがとうございました。良い一日を。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-045"
+},
+{
+"en": "Could you say that one more time, slowly?",
+"jp": "もう一度、ゆっくり言ってもらえますか。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-046"
+},
+{
+"en": "Is this a good time to talk?",
+"jp": "今、お話しして大丈夫ですか。",
+"say": [
+{
+"en": "Yes, I have a few minutes.",
+"jp": "はい、少しなら大丈夫です。"
+}
+],
+"note": "",
+"id": "bizphone-0001-047"
+},
+{
+"en": "I'll keep it short. I just have two quick questions.",
+"jp": "手短にします。簡単な質問が2つだけです。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-048"
+},
+{
+"en": "I wanted to follow up on the email I sent last week.",
+"jp": "先週送ったメールの件でご連絡しました。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-049"
+},
+{
+"en": "I haven't heard back from you, so I wanted to check in.",
+"jp": "返信がなかったので、確認のためご連絡しました。",
+"say": [],
+"note": "",
+"id": "bizphone-0001-050"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

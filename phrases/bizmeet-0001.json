@@ -1,0 +1,449 @@
+{
+"id": "bizmeet-0001",
+"situation": "bizmeet",
+"sname": "ビジネス：会議",
+"icon": "💼",
+"level": 3,
+"title": "会議の進行・報告・決定",
+"items": [
+{
+"en": "Let's get started. Thanks, everyone, for joining.",
+"jp": "始めましょう。皆さん、ご参加ありがとうございます。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-001"
+},
+{
+"en": "Can everyone hear me okay?",
+"jp": "皆さん、聞こえていますか。",
+"say": [
+{
+"en": "Yes, loud and clear.",
+"jp": "はい、よく聞こえます。"
+}
+],
+"note": "",
+"id": "bizmeet-0001-002"
+},
+{
+"en": "I think you're on mute.",
+"jp": "ミュートになっていると思います。",
+"say": [
+{
+"en": "Sorry, can you hear me now?",
+"jp": "すみません、今聞こえますか。"
+}
+],
+"note": "オンライン会議で最頻出。",
+"id": "bizmeet-0001-003"
+},
+{
+"en": "Could you share your screen?",
+"jp": "画面共有してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-004"
+},
+{
+"en": "We can't see your screen yet.",
+"jp": "まだ画面が見えていません。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-005"
+},
+{
+"en": "You're breaking up a little. Could you say that again?",
+"jp": "音声が少し途切れています。もう一度お願いできますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-006"
+},
+{
+"en": "Let me quickly go over the agenda.",
+"jp": "まず議題をざっと確認します。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-007"
+},
+{
+"en": "We have three items to cover today.",
+"jp": "今日は3つの議題があります。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-008"
+},
+{
+"en": "The main goal of this meeting is to decide on the launch date.",
+"jp": "この会議の主な目的は、発売日を決めることです。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-009"
+},
+{
+"en": "Let's go around the room and do quick introductions.",
+"jp": "順番に簡単に自己紹介をしましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-010"
+},
+{
+"en": "Could you give us a quick update on your project?",
+"jp": "あなたのプロジェクトの状況を簡単に教えてもらえますか。",
+"say": [
+{
+"en": "Sure. We're on track.",
+"jp": "はい。順調です。"
+}
+],
+"note": "on track = 予定通り。",
+"id": "bizmeet-0001-011"
+},
+{
+"en": "We're a little behind schedule because of a supplier delay.",
+"jp": "仕入先の遅れで、少しスケジュールが遅れています。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-012"
+},
+{
+"en": "We're ahead of schedule.",
+"jp": "予定より進んでいます。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-013"
+},
+{
+"en": "The deadline has been moved up to the end of the month.",
+"jp": "締め切りが月末に前倒しになりました。",
+"say": [],
+"note": "moved up = 前倒し。pushed back = 後ろ倒し。",
+"id": "bizmeet-0001-014"
+},
+{
+"en": "The deadline has been pushed back by two weeks.",
+"jp": "締め切りが2週間延びました。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-015"
+},
+{
+"en": "Let's take that offline.",
+"jp": "それは会議の後で個別に話しましょう。",
+"say": [],
+"note": "take it offline = 会議外で話す。話が脱線した時の決まり文句。",
+"id": "bizmeet-0001-016"
+},
+{
+"en": "Let's circle back to that later.",
+"jp": "その件は後で戻りましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-017"
+},
+{
+"en": "That's a good point. Let me think about that.",
+"jp": "いい指摘ですね。少し考えさせてください。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-018"
+},
+{
+"en": "I see where you're coming from, but I have a different view.",
+"jp": "お考えは分かりますが、私は違う見方をしています。",
+"say": [],
+"note": "丁寧な反対の入り口。",
+"id": "bizmeet-0001-019"
+},
+{
+"en": "I'm not sure I follow. Could you explain a bit more?",
+"jp": "ちょっと分かりません。もう少し説明してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-020"
+},
+{
+"en": "Just to make sure we're on the same page, you're saying we should delay the release?",
+"jp": "認識を合わせたいのですが、リリースを遅らせるべきということですか。",
+"say": [
+{
+"en": "Exactly.",
+"jp": "その通りです。"
+}
+],
+"note": "on the same page = 認識が一致。",
+"id": "bizmeet-0001-021"
+},
+{
+"en": "Does anyone have any questions or concerns?",
+"jp": "質問や懸念のある方はいますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-022"
+},
+{
+"en": "Any objections?",
+"jp": "異議はありますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-023"
+},
+{
+"en": "Are we all in agreement?",
+"jp": "皆さん、同意ということでよいですか。",
+"say": [
+{
+"en": "Yes, I'm fine with that.",
+"jp": "はい、私は問題ありません。"
+}
+],
+"note": "",
+"id": "bizmeet-0001-024"
+},
+{
+"en": "Let's put it to a vote.",
+"jp": "採決を取りましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-025"
+},
+{
+"en": "We need a decision by Friday.",
+"jp": "金曜日までに結論が必要です。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-026"
+},
+{
+"en": "Who's going to take ownership of this?",
+"jp": "これは誰が担当しますか。",
+"say": [
+{
+"en": "I can take that.",
+"jp": "私が引き受けます。"
+}
+],
+"note": "ownership = 責任をもって担当すること。",
+"id": "bizmeet-0001-027"
+},
+{
+"en": "Can you take the lead on this?",
+"jp": "これを主導してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-028"
+},
+{
+"en": "Could you send me a summary by end of day?",
+"jp": "今日中に要約を送ってもらえますか。",
+"say": [
+{
+"en": "Sure, I'll send it by five.",
+"jp": "はい、5時までに送ります。"
+}
+],
+"note": "EOD = end of day。",
+"id": "bizmeet-0001-029"
+},
+{
+"en": "Please loop me in on the email thread.",
+"jp": "そのメールのやり取りに私も入れてください。",
+"say": [],
+"note": "loop in = 情報共有の輪に入れる。",
+"id": "bizmeet-0001-030"
+},
+{
+"en": "I'll follow up with you after the meeting.",
+"jp": "会議の後でご連絡します。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-031"
+},
+{
+"en": "Let's schedule a follow-up for next Tuesday.",
+"jp": "来週火曜にフォローアップの会議を入れましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-032"
+},
+{
+"en": "Does Wednesday at two work for you?",
+"jp": "水曜の2時はご都合いかがですか。",
+"say": [
+{
+"en": "That works for me.",
+"jp": "それで大丈夫です。"
+},
+{
+"en": "I'm afraid I'm busy then.",
+"jp": "あいにくその時間は埋まっています。"
+}
+],
+"note": "",
+"id": "bizmeet-0001-033"
+},
+{
+"en": "I have a conflict at that time. Could we do thirty minutes later?",
+"jp": "その時間は予定が重なっています。30分遅らせられますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-034"
+},
+{
+"en": "I'll send out a calendar invite.",
+"jp": "カレンダーの招待を送ります。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-035"
+},
+{
+"en": "We're running out of time. Let's wrap up.",
+"jp": "時間がなくなってきました。まとめに入りましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-036"
+},
+{
+"en": "We only have five minutes left.",
+"jp": "残り5分です。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-037"
+},
+{
+"en": "Let me summarize the action items.",
+"jp": "アクションアイテムをまとめます。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-038"
+},
+{
+"en": "To recap, John will handle the budget, and Maria will contact the client.",
+"jp": "整理すると、ジョンが予算を、マリアがクライアントへの連絡を担当します。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-039"
+},
+{
+"en": "The next meeting will be on the fifteenth at ten a.m.",
+"jp": "次回の会議は15日の午前10時です。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-040"
+},
+{
+"en": "Thanks for your time. Have a great day.",
+"jp": "お時間ありがとうございました。良い一日を。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-041"
+},
+{
+"en": "Could you speak a little more slowly, please?",
+"jp": "もう少しゆっくり話してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-042"
+},
+{
+"en": "Sorry, I didn't catch that. Could you repeat it?",
+"jp": "すみません、聞き取れませんでした。もう一度言ってもらえますか。",
+"say": [],
+"note": "聞き返しはこの形で十分。恥ずかしくない。",
+"id": "bizmeet-0001-043"
+},
+{
+"en": "Could you put that in writing?",
+"jp": "それを文書でもらえますか。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-044"
+},
+{
+"en": "We're going to need your sign-off on this.",
+"jp": "これには承認が必要です。",
+"say": [],
+"note": "sign-off = 承認・決裁。",
+"id": "bizmeet-0001-045"
+},
+{
+"en": "Let's keep this between us for now.",
+"jp": "今のところ、ここだけの話にしましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-046"
+},
+{
+"en": "This is confidential. Please don't share it outside the team.",
+"jp": "これは機密です。チーム外には共有しないでください。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-047"
+},
+{
+"en": "The budget has been cut by ten percent.",
+"jp": "予算が10%削減されました。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-048"
+},
+{
+"en": "Our sales were up fifteen percent compared to last quarter.",
+"jp": "売上は前四半期より15%伸びました。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-049"
+},
+{
+"en": "We missed our target by a small margin.",
+"jp": "目標をわずかに下回りました。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-050"
+},
+{
+"en": "Revenue is flat compared to last year.",
+"jp": "売上は前年とほぼ横ばいです。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-051"
+},
+{
+"en": "We need to cut costs without affecting quality.",
+"jp": "品質に影響せずにコストを削減する必要があります。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-052"
+},
+{
+"en": "Let's prioritize the tasks that have the biggest impact.",
+"jp": "影響が最も大きい作業を優先しましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-053"
+},
+{
+"en": "That's outside the scope of this project.",
+"jp": "それはこのプロジェクトの範囲外です。",
+"say": [],
+"note": "scope = 範囲。契約や追加費用の話で頻出。",
+"id": "bizmeet-0001-054"
+},
+{
+"en": "We don't have the bandwidth to take that on right now.",
+"jp": "今はそれを引き受ける余力がありません。",
+"say": [],
+"note": "bandwidth = 手が回る余力。",
+"id": "bizmeet-0001-055"
+},
+{
+"en": "Let's move forward with option B.",
+"jp": "B案で進めましょう。",
+"say": [],
+"note": "",
+"id": "bizmeet-0001-056"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}
