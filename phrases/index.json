@@ -1,0 +1,29 @@
+{
+"updated": 1792905896752,
+"packs": [
+{
+"id": "airport-0001",
+"file": "airport-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "airport",
+"sname": "空港・入国・搭乗"
+},
+{
+"id": "hotel-0001",
+"file": "hotel-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "hotel",
+"sname": "ホテル"
+},
+{
+"id": "restaurant-0001",
+"file": "restaurant-0001.json",
+"ver": 1,
+"count": 52,
+"situation": "restaurant",
+"sname": "レストラン・カフェ"
+}
+]
+}

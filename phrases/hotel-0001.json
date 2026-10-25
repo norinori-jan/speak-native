@@ -1,0 +1,458 @@
+{
+"id": "hotel-0001",
+"situation": "hotel",
+"sname": "ホテル",
+"icon": "🏨",
+"level": 2,
+"title": "チェックインから退出まで",
+"items": [
+{
+"en": "Welcome. Do you have a reservation?",
+"jp": "いらっしゃいませ。ご予約はありますか。",
+"say": [
+{
+"en": "Yes, under Sanada.",
+"jp": "はい、サナダで予約しています。"
+}
+],
+"note": "",
+"id": "hotel-0001-001"
+},
+{
+"en": "Could I have your name, please?",
+"jp": "お名前をお願いします。",
+"say": [
+{
+"en": "Norikatsu Sanada. S-A-N-A-D-A.",
+"jp": "サナダ ノリカツです。スペルはS-A-N-A-D-Aです。"
+}
+],
+"note": "",
+"id": "hotel-0001-002"
+},
+{
+"en": "How do you spell your last name?",
+"jp": "苗字のスペルは？",
+"say": [
+{
+"en": "S-A-N-A-D-A.",
+"jp": "S-A-N-A-D-Aです。"
+}
+],
+"note": "",
+"id": "hotel-0001-003"
+},
+{
+"en": "I have you down for three nights.",
+"jp": "3泊でご予約いただいています。",
+"say": [
+{
+"en": "That's right.",
+"jp": "はい、そうです。"
+}
+],
+"note": "",
+"id": "hotel-0001-004"
+},
+{
+"en": "Checkout is at eleven a.m.",
+"jp": "チェックアウトは午前11時です。",
+"say": [],
+"note": "",
+"id": "hotel-0001-005"
+},
+{
+"en": "Check-in starts at three p.m., but I'll see if your room is ready.",
+"jp": "チェックインは午後3時からですが、お部屋の準備ができているか確認します。",
+"say": [],
+"note": "",
+"id": "hotel-0001-006"
+},
+{
+"en": "Your room isn't ready yet. Would you like to leave your bags with us?",
+"jp": "お部屋はまだ準備中です。荷物をお預けになりますか。",
+"say": [
+{
+"en": "Yes, please.",
+"jp": "はい、お願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-007"
+},
+{
+"en": "I'll text you when your room is ready.",
+"jp": "お部屋の準備ができたらご連絡します。",
+"say": [],
+"note": "",
+"id": "hotel-0001-008"
+},
+{
+"en": "May I have a credit card for incidentals?",
+"jp": "諸経費のためにクレジットカードをお預かりできますか。",
+"say": [
+{
+"en": "Sure. Here you go.",
+"jp": "はい、どうぞ。"
+}
+],
+"note": "incidentals = 備品・ルームサービス等の保証金。",
+"id": "hotel-0001-009"
+},
+{
+"en": "We'll place a hold of one hundred dollars on your card.",
+"jp": "カードに100ドルの仮押さえをします。",
+"say": [],
+"note": "hold = 後で解除される預かり金。",
+"id": "hotel-0001-010"
+},
+{
+"en": "Could you fill out this registration card?",
+"jp": "この宿泊カードに記入してもらえますか。",
+"say": [],
+"note": "",
+"id": "hotel-0001-011"
+},
+{
+"en": "Could I see your passport, please?",
+"jp": "パスポートを見せてもらえますか。",
+"say": [],
+"note": "",
+"id": "hotel-0001-012"
+},
+{
+"en": "You're in room four-twelve, on the fourth floor.",
+"jp": "お部屋は412号室、4階です。",
+"say": [],
+"note": "",
+"id": "hotel-0001-013"
+},
+{
+"en": "The elevators are to your right, past the lobby.",
+"jp": "エレベーターはロビーを過ぎて右手にあります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-014"
+},
+{
+"en": "Here are your key cards. Please keep them away from your phone.",
+"jp": "こちらがルームキーです。スマホから離しておいてください。",
+"say": [],
+"note": "磁気で使えなくなることがある。",
+"id": "hotel-0001-015"
+},
+{
+"en": "Breakfast is served from six thirty to ten in the restaurant on the second floor.",
+"jp": "朝食は2階のレストランで6時半から10時までです。",
+"say": [
+{
+"en": "Is breakfast included?",
+"jp": "朝食は含まれていますか。"
+}
+],
+"note": "",
+"id": "hotel-0001-016"
+},
+{
+"en": "Breakfast is included with your stay.",
+"jp": "朝食は宿泊料金に含まれています。",
+"say": [],
+"note": "",
+"id": "hotel-0001-017"
+},
+{
+"en": "The Wi-Fi password is on the card in your room.",
+"jp": "Wi-Fiのパスワードは部屋のカードに書いてあります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-018"
+},
+{
+"en": "Just dial zero if you need anything.",
+"jp": "何かあれば0番にお電話ください。",
+"say": [],
+"note": "",
+"id": "hotel-0001-019"
+},
+{
+"en": "The pool is open until nine tonight.",
+"jp": "プールは今夜9時まで開いています。",
+"say": [],
+"note": "",
+"id": "hotel-0001-020"
+},
+{
+"en": "The gym is on the third floor and open twenty-four hours.",
+"jp": "ジムは3階で24時間利用できます。",
+"say": [],
+"note": "",
+"id": "hotel-0001-021"
+},
+{
+"en": "Would you like a wake-up call?",
+"jp": "モーニングコールはいかがですか。",
+"say": [
+{
+"en": "Yes, at seven, please.",
+"jp": "はい、7時にお願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-022"
+},
+{
+"en": "Would you like me to call you a taxi?",
+"jp": "タクシーを呼びましょうか。",
+"say": [
+{
+"en": "Yes, please. For eight o'clock.",
+"jp": "はい、8時にお願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-023"
+},
+{
+"en": "We have a shuttle to the airport every thirty minutes.",
+"jp": "空港行きのシャトルが30分おきにあります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-024"
+},
+{
+"en": "Is there anything else I can help you with?",
+"jp": "他に何かお手伝いできることはありますか。",
+"say": [
+{
+"en": "No, that's all. Thank you.",
+"jp": "いいえ、以上です。ありがとう。"
+}
+],
+"note": "",
+"id": "hotel-0001-025"
+},
+{
+"en": "Enjoy your stay.",
+"jp": "ご滞在をお楽しみください。",
+"say": [
+{
+"en": "Thank you.",
+"jp": "ありがとう。"
+}
+],
+"note": "",
+"id": "hotel-0001-026"
+},
+{
+"en": "Housekeeping. Is now a good time?",
+"jp": "ハウスキーピングです。今よろしいですか。",
+"say": [
+{
+"en": "Could you come back later?",
+"jp": "後で来てもらえますか。"
+}
+],
+"note": "",
+"id": "hotel-0001-027"
+},
+{
+"en": "Would you like your room cleaned today?",
+"jp": "今日はお部屋の清掃をしますか。",
+"say": [
+{
+"en": "No, thank you.",
+"jp": "いいえ、大丈夫です。"
+}
+],
+"note": "",
+"id": "hotel-0001-028"
+},
+{
+"en": "I'll bring extra towels right away.",
+"jp": "タオルをすぐにお持ちします。",
+"say": [],
+"note": "",
+"id": "hotel-0001-029"
+},
+{
+"en": "I'm sorry about that. We'll send someone to take a look.",
+"jp": "申し訳ありません。担当者を向かわせます。",
+"say": [
+{
+"en": "The air conditioner doesn't work.",
+"jp": "エアコンが動きません。"
+}
+],
+"note": "",
+"id": "hotel-0001-030"
+},
+{
+"en": "Would you like to change rooms?",
+"jp": "お部屋を変更しますか。",
+"say": [
+{
+"en": "Yes, that would be great.",
+"jp": "はい、お願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-031"
+},
+{
+"en": "I'm afraid we're fully booked tonight.",
+"jp": "あいにく今夜は満室です。",
+"say": [],
+"note": "",
+"id": "hotel-0001-032"
+},
+{
+"en": "We can offer you a room with two beds instead.",
+"jp": "代わりにベッドが2つのお部屋をご用意できます。",
+"say": [],
+"note": "",
+"id": "hotel-0001-033"
+},
+{
+"en": "That'll be an additional thirty dollars a night.",
+"jp": "1泊あたり30ドルの追加になります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-034"
+},
+{
+"en": "Is that a one-time stay, or would you like to extend?",
+"jp": "ご滞在はそのままですか、延長されますか。",
+"say": [],
+"note": "",
+"id": "hotel-0001-035"
+},
+{
+"en": "The room service menu is on the desk.",
+"jp": "ルームサービスのメニューは机の上です。",
+"say": [],
+"note": "",
+"id": "hotel-0001-036"
+},
+{
+"en": "Quiet hours begin at ten p.m.",
+"jp": "午後10時から静粛時間です。",
+"say": [],
+"note": "",
+"id": "hotel-0001-037"
+},
+{
+"en": "The noise is coming from the room next door. I'll call them.",
+"jp": "音は隣の部屋からですね。お電話してみます。",
+"say": [],
+"note": "",
+"id": "hotel-0001-038"
+},
+{
+"en": "Are you checking out today?",
+"jp": "今日チェックアウトですか。",
+"say": [
+{
+"en": "Yes, I'd like to check out.",
+"jp": "はい、チェックアウトをお願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-039"
+},
+{
+"en": "Did you use anything from the minibar?",
+"jp": "ミニバーをご利用になりましたか。",
+"say": [
+{
+"en": "No, nothing.",
+"jp": "いいえ、何も。"
+}
+],
+"note": "",
+"id": "hotel-0001-040"
+},
+{
+"en": "How was your stay?",
+"jp": "ご滞在はいかがでしたか。",
+"say": [
+{
+"en": "It was great, thank you.",
+"jp": "とても良かったです。"
+}
+],
+"note": "",
+"id": "hotel-0001-041"
+},
+{
+"en": "Here is your receipt. I'll also send a copy to your email.",
+"jp": "こちらが領収書です。メールにも送ります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-042"
+},
+{
+"en": "Would you like help with your luggage?",
+"jp": "荷物をお運びしましょうか。",
+"say": [
+{
+"en": "Yes, thank you.",
+"jp": "はい、お願いします。"
+}
+],
+"note": "",
+"id": "hotel-0001-043"
+},
+{
+"en": "Please leave your key cards at the front desk.",
+"jp": "ルームキーはフロントに返却してください。",
+"say": [],
+"note": "",
+"id": "hotel-0001-044"
+},
+{
+"en": "You left a charger in the room. Shall I mail it to you?",
+"jp": "充電器をお部屋にお忘れです。郵送しましょうか。",
+"say": [],
+"note": "",
+"id": "hotel-0001-045"
+},
+{
+"en": "We hope to see you again soon.",
+"jp": "またのお越しをお待ちしています。",
+"say": [],
+"note": "",
+"id": "hotel-0001-046"
+},
+{
+"en": "The city tax is not included in the room rate.",
+"jp": "宿泊税は部屋代に含まれていません。",
+"say": [],
+"note": "",
+"id": "hotel-0001-047"
+},
+{
+"en": "Parking is twenty-five dollars per night.",
+"jp": "駐車場は1泊25ドルです。",
+"say": [],
+"note": "",
+"id": "hotel-0001-048"
+},
+{
+"en": "The hot water may take a minute to warm up.",
+"jp": "お湯が出るまで少し時間がかかります。",
+"say": [],
+"note": "",
+"id": "hotel-0001-049"
+},
+{
+"en": "Do you need an adapter or an iron? We can lend you one.",
+"jp": "変換プラグやアイロンはご入り用ですか。貸し出せます。",
+"say": [],
+"note": "",
+"id": "hotel-0001-050"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

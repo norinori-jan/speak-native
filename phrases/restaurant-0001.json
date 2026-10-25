@@ -1,0 +1,512 @@
+{
+"id": "restaurant-0001",
+"situation": "restaurant",
+"sname": "レストラン・カフェ",
+"icon": "🍽️",
+"level": 2,
+"title": "席から会計まで",
+"items": [
+{
+"en": "Hi, how many in your party?",
+"jp": "いらっしゃいませ。何名様ですか。",
+"say": [
+{
+"en": "Two, please.",
+"jp": "2名です。"
+}
+],
+"note": "",
+"id": "restaurant-0001-001"
+},
+{
+"en": "Do you have a reservation?",
+"jp": "ご予約はありますか。",
+"say": [
+{
+"en": "No, we don't.",
+"jp": "いいえ、していません。"
+}
+],
+"note": "",
+"id": "restaurant-0001-002"
+},
+{
+"en": "It'll be about a fifteen-minute wait.",
+"jp": "15分ほどお待ちいただきます。",
+"say": [
+{
+"en": "That's fine.",
+"jp": "大丈夫です。"
+}
+],
+"note": "",
+"id": "restaurant-0001-003"
+},
+{
+"en": "Would you like to sit inside or outside?",
+"jp": "店内と外の席、どちらがいいですか。",
+"say": [
+{
+"en": "Inside, please.",
+"jp": "中でお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-004"
+},
+{
+"en": "Right this way, please.",
+"jp": "こちらへどうぞ。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-005"
+},
+{
+"en": "Would you like to sit at the bar or at a table?",
+"jp": "カウンターとテーブル、どちらにしますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-006"
+},
+{
+"en": "Can I get you something to drink while you look at the menu?",
+"jp": "メニューを見ている間に、お飲み物はいかがですか。",
+"say": [
+{
+"en": "Water, please.",
+"jp": "お水をお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-007"
+},
+{
+"en": "Still or sparkling?",
+"jp": "炭酸なしですか、ありですか。",
+"say": [
+{
+"en": "Tap water is fine.",
+"jp": "水道水で結構です。"
+}
+],
+"note": "",
+"id": "restaurant-0001-008"
+},
+{
+"en": "Our specials today are a grilled salmon and a mushroom risotto.",
+"jp": "本日のおすすめは、サーモンのグリルときのこのリゾットです。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-009"
+},
+{
+"en": "Are you ready to order, or do you need a few more minutes?",
+"jp": "ご注文はお決まりですか。もう少しお待ちしますか。",
+"say": [
+{
+"en": "Could we have a few more minutes?",
+"jp": "もう少しお時間をください。"
+}
+],
+"note": "",
+"id": "restaurant-0001-010"
+},
+{
+"en": "What can I get started for you?",
+"jp": "まず何になさいますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-011"
+},
+{
+"en": "Do you have any allergies or dietary restrictions?",
+"jp": "アレルギーや食事制限はありますか。",
+"say": [
+{
+"en": "I can't eat shellfish.",
+"jp": "甲殻類は食べられません。"
+}
+],
+"note": "",
+"id": "restaurant-0001-012"
+},
+{
+"en": "How would you like your steak cooked?",
+"jp": "ステーキの焼き加減はどうしますか。",
+"say": [
+{
+"en": "Medium, please.",
+"jp": "ミディアムでお願いします。"
+}
+],
+"note": "rare / medium rare / medium / well done。",
+"id": "restaurant-0001-013"
+},
+{
+"en": "Would you like fries or a side salad with that?",
+"jp": "付け合わせはフライドポテトとサラダのどちらにしますか。",
+"say": [
+{
+"en": "A side salad, please.",
+"jp": "サラダでお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-014"
+},
+{
+"en": "What kind of dressing would you like?",
+"jp": "ドレッシングは何にしますか。",
+"say": [
+{
+"en": "Italian, on the side.",
+"jp": "イタリアンを別添えで。"
+}
+],
+"note": "",
+"id": "restaurant-0001-015"
+},
+{
+"en": "Would you like to start with an appetizer?",
+"jp": "前菜から始めますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-016"
+},
+{
+"en": "Do you want to share, or should I bring everything at once?",
+"jp": "シェアしますか、それとも全部同時にお持ちしますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-017"
+},
+{
+"en": "Is that everything for you?",
+"jp": "ご注文は以上ですか。",
+"say": [
+{
+"en": "Yes, that's all for now.",
+"jp": "はい、今のところ以上です。"
+}
+],
+"note": "",
+"id": "restaurant-0001-018"
+},
+{
+"en": "Your food will be out in a few minutes.",
+"jp": "お料理はもう少しでお持ちします。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-019"
+},
+{
+"en": "Careful, the plate is hot.",
+"jp": "お皿が熱いのでお気をつけください。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-020"
+},
+{
+"en": "Can I get you anything else?",
+"jp": "他に何かお持ちしましょうか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-021"
+},
+{
+"en": "Would you like a refill?",
+"jp": "おかわりはいかがですか。",
+"say": [
+{
+"en": "Yes, please.",
+"jp": "はい、お願いします。"
+}
+],
+"note": "ソフトドリンクはおかわり自由の店が多い。",
+"id": "restaurant-0001-022"
+},
+{
+"en": "How is everything so far?",
+"jp": "ここまでいかがですか。",
+"say": [
+{
+"en": "Everything is great, thanks.",
+"jp": "どれも美味しいです。"
+}
+],
+"note": "",
+"id": "restaurant-0001-023"
+},
+{
+"en": "Is everything okay with your meal?",
+"jp": "お料理は大丈夫ですか。",
+"say": [
+{
+"en": "Actually, this isn't what I ordered.",
+"jp": "実はこれ、注文したものと違います。"
+}
+],
+"note": "",
+"id": "restaurant-0001-024"
+},
+{
+"en": "I'm so sorry. Let me take care of that right away.",
+"jp": "申し訳ありません。すぐ対応します。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-025"
+},
+{
+"en": "Are you still working on that?",
+"jp": "まだお召し上がりですか。",
+"say": [
+{
+"en": "No, you can take it.",
+"jp": "いいえ、下げて結構です。"
+}
+],
+"note": "皿を下げてよいかの確認。",
+"id": "restaurant-0001-026"
+},
+{
+"en": "Would you like a box for the rest?",
+"jp": "残りはお持ち帰り用の箱にお入れしますか。",
+"say": [
+{
+"en": "Yes, please.",
+"jp": "はい、お願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-027"
+},
+{
+"en": "Can I interest you in some dessert or coffee?",
+"jp": "デザートかコーヒーはいかがですか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-028"
+},
+{
+"en": "We have cheesecake, apple pie, and ice cream.",
+"jp": "チーズケーキ、アップルパイ、アイスがあります。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-029"
+},
+{
+"en": "Would you like regular or decaf?",
+"jp": "普通のコーヒーとカフェインレス、どちらにしますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-030"
+},
+{
+"en": "Would you like the check now, or are you all set?",
+"jp": "お会計をお持ちしますか。",
+"say": [
+{
+"en": "Could we have the check, please?",
+"jp": "お会計をお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-031"
+},
+{
+"en": "Will that be together or separate?",
+"jp": "会計は一緒ですか、別々ですか。",
+"say": [
+{
+"en": "Separate, please.",
+"jp": "別々でお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-032"
+},
+{
+"en": "I can split it for you.",
+"jp": "分けてお会計できますよ。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-033"
+},
+{
+"en": "Would you like to pay by cash or card?",
+"jp": "お支払いは現金ですか、カードですか。",
+"say": [
+{
+"en": "By card, please.",
+"jp": "カードでお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-034"
+},
+{
+"en": "Your total comes to forty-eight fifty.",
+"jp": "合計は48ドル50セントです。",
+"say": [],
+"note": "forty-eight fifty = $48.50。",
+"id": "restaurant-0001-035"
+},
+{
+"en": "Service is not included, so tip is up to you.",
+"jp": "サービス料は含まれていないので、チップはお任せします。",
+"say": [],
+"note": "アメリカでは15〜20%が目安。",
+"id": "restaurant-0001-036"
+},
+{
+"en": "Would you like to add a tip?",
+"jp": "チップを加えますか。",
+"say": [
+{
+"en": "Yes, twenty percent.",
+"jp": "はい、20%で。"
+}
+],
+"note": "",
+"id": "restaurant-0001-037"
+},
+{
+"en": "The machine will ask you for a tip. You can pick an option.",
+"jp": "端末でチップを聞かれるので、選んでください。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-038"
+},
+{
+"en": "Please insert the card here and enter your PIN.",
+"jp": "ここにカードを差して暗証番号を入力してください。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-039"
+},
+{
+"en": "Your card was declined. Do you have another one?",
+"jp": "カードが通りませんでした。別のカードはありますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-040"
+},
+{
+"en": "Here's your receipt. Have a great evening.",
+"jp": "レシートです。良い夜を。",
+"say": [
+{
+"en": "You too. Thanks.",
+"jp": "そちらも。ありがとう。"
+}
+],
+"note": "",
+"id": "restaurant-0001-041"
+},
+{
+"en": "What can I get for you?",
+"jp": "何にしますか。",
+"say": [
+{
+"en": "Can I get a cheeseburger?",
+"jp": "チーズバーガーをください。"
+}
+],
+"note": "カウンターの注文。",
+"id": "restaurant-0001-042"
+},
+{
+"en": "For here or to go?",
+"jp": "店内ですか、お持ち帰りですか。",
+"say": [
+{
+"en": "To go, please.",
+"jp": "持ち帰りでお願いします。"
+}
+],
+"note": "fast food の決まり文句。",
+"id": "restaurant-0001-043"
+},
+{
+"en": "What size would you like? Small, medium, or large?",
+"jp": "サイズはどうしますか。S、M、Lがあります。",
+"say": [
+{
+"en": "Medium, please.",
+"jp": "Mでお願いします。"
+}
+],
+"note": "",
+"id": "restaurant-0001-044"
+},
+{
+"en": "Would you like to make it a combo?",
+"jp": "セットにしますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-045"
+},
+{
+"en": "Anything to drink with that?",
+"jp": "お飲み物は付けますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-046"
+},
+{
+"en": "Name for the order?",
+"jp": "お名前は？",
+"say": [
+{
+"en": "Nori.",
+"jp": "ノリです。"
+}
+],
+"note": "カフェで名前を聞かれる。呼ばれるまで待つ。",
+"id": "restaurant-0001-047"
+},
+{
+"en": "Your order number is forty-two.",
+"jp": "注文番号は42番です。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-048"
+},
+{
+"en": "We're out of that today. Would you like something else?",
+"jp": "今日はそれは売り切れです。他のものにしますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-049"
+},
+{
+"en": "The kitchen closes at ten.",
+"jp": "ラストオーダーは10時です。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-050"
+},
+{
+"en": "It's a little spicy. Is that okay?",
+"jp": "少し辛いですがよろしいですか。",
+"say": [
+{
+"en": "Could you make it mild?",
+"jp": "辛さを控えめにできますか。"
+}
+],
+"note": "",
+"id": "restaurant-0001-051"
+},
+{
+"en": "Would you like cheese on top?",
+"jp": "チーズをのせますか。",
+"say": [],
+"note": "",
+"id": "restaurant-0001-052"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

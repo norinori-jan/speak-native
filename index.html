@@ -3494,5 +3494,191 @@ mount();
 })();
 </script>
 <!--CONV-END-->
+<!--PH-START v1-->
+<style>
+#phRoot{display:none;position:fixed;inset:0;z-index:2147483100;background:var(--bg,#0e0f11);color:var(--text,#e8eaf0);overflow:auto;-webkit-overflow-scrolling:touch;font-family:inherit}
+#phRoot.on{display:block}
+#phRoot .phw{max-width:640px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 32px)}
+#phRoot h2{font-size:20px;margin:6px 0 4px}
+#phRoot h3{font-size:15px;margin:14px 0 6px}
+#phRoot .sub{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin:0 0 10px}
+#phRoot .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#phRoot button{font:inherit;color:inherit;background:var(--surface2,#1e2128);border:1px solid var(--border,#2a2d35);border-radius:12px;padding:11px 14px;cursor:pointer;min-height:44px}
+#phRoot button.pri{background:var(--accent,#5cefb0);color:#08130e;border-color:transparent;font-weight:700}
+#phRoot button.sel{border-color:var(--accent,#5cefb0);box-shadow:0 0 0 1px var(--accent,#5cefb0) inset}
+#phRoot button:disabled{opacity:.45}
+#phRoot .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#phRoot .card{background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:14px;padding:12px;margin:10px 0}
+#phRoot .sit{display:flex;align-items:center;gap:12px;cursor:pointer}
+#phRoot .sit .ic{font-size:26px}
+#phRoot .sit .nm{font-size:16px;font-weight:600}
+#phRoot .sit .st{font-size:12px;color:var(--text-muted,#9aa0aa)}
+#phRoot .bar{height:5px;border-radius:3px;background:var(--surface2,#1e2128);overflow:hidden;margin-top:6px}
+#phRoot .bar i{display:block;height:100%;background:var(--accent,#5cefb0)}
+#phRoot .en{font-size:18px;line-height:1.55}
+#phRoot .jp{font-size:14px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin-top:4px}
+#phRoot .big{width:100%;font-size:20px;padding:22px 12px;margin:10px 0}
+#phRoot .note{font-size:12px;color:var(--text-muted,#9aa0aa);line-height:1.6;margin-top:6px}
+#phRoot .say{border-top:1px dashed var(--border,#2a2d35);margin-top:8px;padding-top:6px;font-size:14px}
+#phRoot .msg{font-size:13px;color:var(--accent,#5cefb0);min-height:18px;margin:6px 0}
+#phRoot .cnt{font-size:12px;color:var(--text-muted,#9aa0aa)}
+#phRoot .dot{display:inline-block;width:8px;height:8px;border-radius:4px;background:var(--border,#2a2d35);margin-right:6px}
+#phRoot .dot.ok{background:var(--accent,#5cefb0)}#phRoot .dot.ng{background:#ff7a7a}
+#phRoot .hid{filter:blur(7px);user-select:none}
+</style>
+<div id="phRoot" role="dialog" aria-label="聞き取りフレーズ"></div>
+<script>
+(function(){
+'use strict';
+var root=document.getElementById('phRoot');if(!root)return;
+function $(s,r){return (r||document).querySelector(s)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var DAY=86400000,STEPS=[1,3,7,21,60];
+var S={packs:[],prog:{},view:'menu',sit:null,queue:[],qi:0,stage:'listen',rate:LS.get('dei_ph_rate',0.85),msg:'',token:0,hist:LS.get('dei_ph_hist',{n:0,ok:0}),ready:false,playing:false};
+/* ---------- 保存（この端末の IndexedDB） ---------- */
+var mem={packs:{},prog:{}};
+function idb(){return new Promise(function(res,rej){if(!window.indexedDB){rej(new Error('noidb'));return}
+ var r=indexedDB.open('dei-phrases',1);
+ r.onupgradeneeded=function(){var d=r.result;if(!d.objectStoreNames.contains('packs'))d.createObjectStore('packs',{keyPath:'id'});if(!d.objectStoreNames.contains('prog'))d.createObjectStore('prog')};
+ r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}})}
+function tx(store,mode,fn){return idb().then(function(db){return new Promise(function(res,rej){var t=db.transaction(store,mode),s=t.objectStore(store),out=fn(s);t.oncomplete=function(){res(out&&out.result!==undefined?out.result:out)};t.onerror=function(){rej(t.error)};t.onabort=function(){rej(t.error)}})})}
+function loadAll(){
+ return idb().then(function(db){return Promise.all([
+  new Promise(function(res){var o=[],c=db.transaction('packs').objectStore('packs').openCursor();c.onsuccess=function(){var k=c.result;if(k){o.push(k.value);k.continue()}else res(o)};c.onerror=function(){res(o)}}),
+  new Promise(function(res){var o={},c=db.transaction('prog').objectStore('prog').openCursor();c.onsuccess=function(){var k=c.result;if(k){o[k.key]=k.value;k.continue()}else res(o)};c.onerror=function(){res(o)}})])})
+ .then(function(r){S.packs=r[0];S.prog=r[1];S.ready=true}).catch(function(){S.packs=Object.keys(mem.packs).map(function(k){return mem.packs[k]});S.prog=mem.prog;S.ready=true;S.msg='この端末では保存できません（いまの画面を閉じると消えます）'})}
+function savePack(p){mem.packs[p.id]=p;return tx('packs','readwrite',function(s){return s.put(p)}).catch(function(){})}
+function saveProg(id,v){mem.prog[id]=v;return tx('prog','readwrite',function(s){return s.put(v,id)}).catch(function(){})}
+function clearAll(){mem={packs:{},prog:{}};S.packs=[];S.prog={};return idb().then(function(db){return new Promise(function(res){var t=db.transaction(['packs','prog'],'readwrite');t.objectStore('packs').clear();t.objectStore('prog').clear();t.oncomplete=res;t.onerror=res})}).catch(function(){})}
+function okPack(p){return p&&p.app==='phrase-pack'&&typeof p.id==='string'&&/^[a-z0-9_-]{1,40}$/.test(p.id)&&typeof p.situation==='string'&&Array.isArray(p.items)&&p.items.length>0&&p.items.length<=400&&p.items.every(function(x){return x&&typeof x.id==='string'&&typeof x.en==='string'&&x.en&&typeof x.jp==='string'})}
+/* ---------- 音声（端末の読み上げ。通信なし） ---------- */
+var VO=[];function loadVoices(){try{VO=(speechSynthesis.getVoices()||[]).filter(function(v){return /^en[-_]/i.test(v.lang)})}catch(e){VO=[]}}
+try{loadVoices();speechSynthesis.addEventListener&&speechSynthesis.addEventListener('voiceschanged',loadVoices)}catch(e){}
+function pickVoice(i){var us=VO.filter(function(v){return /en[-_]US/i.test(v.lang)}),L=us.length?us:VO;return L.length?L[Math.abs(i||0)%L.length]:null}
+function stopAll(){S.token++;S.playing=false;try{speechSynthesis.cancel()}catch(e){}}
+function say(text,rate,vi,my){return new Promise(function(res){
+ if(!('speechSynthesis' in window)){res();return}
+ var u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate||S.rate;var v=pickVoice(vi);if(v)u.voice=v;
+ var done=false,fin=function(){if(done)return;done=true;clearTimeout(tm);res()};
+ var tm=setTimeout(fin,Math.max(4000,text.length*160/(u.rate||1)+3000));
+ u.onend=fin;u.onerror=fin;try{speechSynthesis.speak(u)}catch(e){fin()}})}
+function playItem(it,rate){stopAll();var my=S.token;S.playing=true;return say(it.en,rate,idxOf(it),my).then(function(){if(my===S.token)S.playing=false})}
+function idxOf(it){var h=0,s=it.id||'';for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return h}
+/* ---------- 取り込み ---------- */
+function setMsg(t){S.msg=t||'';var m=$('#phMsg',root);if(m)m.textContent=S.msg}
+function addPacks(list){
+ var n=0,items=0,chain=Promise.resolve();
+ list.forEach(function(p){if(!okPack(p))return;
+  var old=S.packs.filter(function(x){return x.id===p.id})[0];if(old&&(old.ver||1)>=(p.ver||1)&&old.items.length>=p.items.length)return;
+  n++;items+=p.items.length;
+  var clean={app:'phrase-pack',id:p.id,ver:p.ver||1,situation:p.situation,sname:String(p.sname||p.situation).slice(0,30),icon:String(p.icon||'📻').slice(0,4),level:p.level||2,title:String(p.title||'').slice(0,60),
+   items:p.items.map(function(x){return{id:String(x.id).slice(0,40),en:String(x.en).slice(0,400),jp:String(x.jp).slice(0,300),say:Array.isArray(x.say)?x.say.slice(0,4).map(function(y){return{en:String(y.en||'').slice(0,200),jp:String(y.jp||'').slice(0,200)}}):[],note:x.note?String(x.note).slice(0,300):''}}),at:Date.now()};
+  chain=chain.then(function(){return savePack(clean)}).then(function(){S.packs=S.packs.filter(function(x){return x.id!==clean.id});S.packs.push(clean)})});
+ return chain.then(function(){return{n:n,items:items}})}
+function fetchPacks(){
+ setMsg('通信して、新しいパックを探しています…');
+ return fetch('phrases/index.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(ix){
+  var need=(ix.packs||[]).filter(function(m){var o=S.packs.filter(function(x){return x.id===m.id})[0];return !o||(o.ver||1)<(m.ver||1)||o.items.length<(m.count||0)});
+  if(!need.length){setMsg('新しいパックはありません（全部この端末に入っています）');return}
+  var got=[],k=0;
+  function next(){if(k>=need.length)return Promise.resolve();var m=need[k++];setMsg('取り込み中… '+k+' / '+need.length+'（'+m.id+'）');
+   return fetch('phrases/'+String(m.file).replace(/[^A-Za-z0-9_.-]/g,'')+'?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(m.file+' HTTP '+r.status);return r.json()}).then(function(p){got.push(p)}).then(next)}
+  return next().then(function(){return addPacks(got)}).then(function(r){setMsg(r.n+'パック・'+r.items+'フレーズを、この端末に保存しました。次からは通信なしで使えます')})
+ }).catch(function(e){setMsg('取り込めませんでした：'+(e&&e.message||e)+'（通信できる場所でもう一度。ファイルからも取り込めます）')}).then(function(){render()})}
+function readFiles(files){
+ var arr=Array.prototype.slice.call(files||[]),got=[];
+ return Promise.all(arr.map(function(f){return f.text().then(function(t){try{var j=JSON.parse(t);if(Array.isArray(j))j.forEach(function(x){got.push(x)});else if(j&&Array.isArray(j.packs))j.packs.forEach(function(x){got.push(x)});else got.push(j)}catch(e){}}).catch(function(){})}))
+ .then(function(){return addPacks(got)}).then(function(r){setMsg(r.n?r.n+'パック・'+r.items+'フレーズを保存しました':'取り込める新しいパックがありませんでした');render()})}
+/* ---------- 集計・出題 ---------- */
+function sits(){var m={},o=[];S.packs.forEach(function(p){var s=m[p.situation];if(!s){s=m[p.situation]={key:p.situation,name:p.sname,icon:p.icon,items:[],packs:[]};o.push(s)}s.items=s.items.concat(p.items.map(function(x){return Object.assign({sit:p.situation,sname:p.sname,level:p.level},x)}));s.packs.push(p.id)});return o}
+function okCount(items){return items.filter(function(x){var g=S.prog[x.id];return g&&g.s>0}).length}
+function dueItems(items){var now=Date.now();return items.filter(function(x){var g=S.prog[x.id];return g&&g.due<=now})}
+function buildQueue(items,n){var now=Date.now(),due=items.filter(function(x){var g=S.prog[x.id];return g&&g.due<=now}).sort(function(a,b){return S.prog[a.id].due-S.prog[b.id].due}),nw=items.filter(function(x){return !S.prog[x.id]});
+ var q=due.slice(0,Math.ceil(n/2)).concat(nw.slice(0,n));q=q.slice(0,n);if(q.length<n){var rest=items.filter(function(x){return q.indexOf(x)<0});q=q.concat(rest.sort(function(){return Math.random()-0.5}).slice(0,n-q.length))}return q}
+function judge(it,ok){var g=S.prog[it.id]||{s:0,m:0,n:0,due:0};g.n++;if(ok){g.s++;g.due=Date.now()+STEPS[Math.min(g.s-1,STEPS.length-1)]*DAY}else{g.s=0;g.m++;g.due=Date.now()}saveProg(it.id,g);S.prog[it.id]=g;S.hist.n++;if(ok)S.hist.ok++;LS.set('dei_ph_hist',S.hist)}
+function sizeKB(){try{return Math.round(JSON.stringify(S.packs).length/1024)}catch(e){return 0}}
+/* ---------- 画面 ---------- */
+function head(title,back){return'<div class="top"><button data-a="'+(back||'close')+'" aria-label="戻る">‹ 戻る</button><span class="cnt">'+esc(title||'')+'</span><button data-a="close" aria-label="閉じる">✕</button></div>'}
+function render(){
+ var h='<div class="phw">';
+ if(!S.ready){root.innerHTML=h+'<h2>📻 聞き取りフレーズ</h2><div class="sub">読み込み中…</div></div>';return}
+ if(S.view==='menu')h+=vMenu();else if(S.view==='sit')h+=vSit();else if(S.view==='drill')h+=vDrill();else if(S.view==='list')h+=vList();else if(S.view==='flow')h+=vFlow();else if(S.view==='set')h+=vSet();
+ root.innerHTML=h+'</div>'}
+function vMenu(){
+ var L=sits(),tot=0,okc=0;L.forEach(function(s){tot+=s.items.length;okc+=okCount(s.items)});
+ var h=head('', 'close')+'<h2>📻 聞き取りフレーズ</h2><div class="sub">これだけ聞いて分かれば通用する、という言い回しを、場面ごとに。聞く→意味を思い出す→答え合わせ。AIも通信も使わず、この端末の読み上げで聞きます。</div>';
+ h+='<div class="card"><div class="cnt">この端末に保存：'+S.packs.length+'パック・'+tot+'フレーズ（約 '+sizeKB()+' KB）／ 聞けた '+okc+' ／ 練習 '+S.hist.n+'回（正解 '+S.hist.ok+'）</div>';
+ h+='<div class="row"><button class="pri" data-a="fetch">📥 新しいパックを取り込む（通信）</button><button data-a="file">📂 ファイルから取り込む</button></div><input type="file" id="phFile" accept=".json,application/json" multiple hidden><div class="msg" id="phMsg">'+esc(S.msg)+'</div></div>';
+ var due=[];L.forEach(function(s){due=due.concat(dueItems(s.items))});
+ if(due.length)h+='<div class="row"><button class="pri" data-a="review">🔁 今日の復習（'+due.length+'件）</button></div>';
+ if(!L.length)h+='<div class="card sub">まだパックがありません。上の「📥 新しいパックを取り込む」を押してください。</div>';
+ L.forEach(function(s,i){var ok=okCount(s.items),pc=Math.round(ok/s.items.length*100);h+='<div class="card sit" data-a="sit" data-i="'+i+'"><div class="ic">'+esc(s.icon)+'</div><div style="flex:1"><div class="nm">'+esc(s.name)+'</div><div class="st">'+s.items.length+'フレーズ・聞けた '+ok+'（'+pc+'%）</div><div class="bar"><i style="width:'+pc+'%"></i></div></div><div>›</div></div>'});
+ h+='<div class="row"><button data-a="set">⚙️ 保存・設定</button></div>';return h}
+function curSit(){return sits().filter(function(s){return s.key===S.sit})[0]}
+function vSit(){var s=curSit();if(!s)return head('','menu')+'<div class="sub">この場面が見つかりません</div>';
+ var due=dueItems(s.items).length;
+ return head(s.name,'menu')+'<h2>'+esc(s.icon)+' '+esc(s.name)+'</h2><div class="sub">'+s.items.length+'フレーズ。聞けた '+okCount(s.items)+'。復習の時期が来ているもの '+due+'。</div>'+
+ '<div class="row"><button class="pri big" data-a="drill">▶ 10問で練習（聞いて答え合わせ）</button></div><div class="row"><button data-a="flow">🎧 聞き流し（最初から順に）</button><button data-a="list">📖 一覧で見る</button></div>'+
+ '<div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+function startDrill(items){S.queue=items;S.qi=0;S.stage='listen';S.view='drill';render();autoPlay()}
+function cur(){return S.queue[S.qi]}
+function autoPlay(){var it=cur();if(it)setTimeout(function(){if(S.view==='drill'&&cur()===it)playItem(it)},250)}
+function vDrill(){var it=cur();if(!it)return head('','menu')+'<h2>おつかれさま</h2><div class="sub">練習は以上です。</div><div class="row"><button class="pri" data-a="menu">メニューへ</button></div>';
+ var h=head((S.qi+1)+' / '+S.queue.length,S.sit?'sit':'menu')+'<div class="cnt" style="margin-top:8px">'+esc(it.sname||'')+'</div>';
+ h+='<div class="row"><button class="pri big" data-a="play">🔊 聞く</button></div>';
+ h+='<div class="row"><button data-a="rate" data-v="0.65" class="'+(S.rate<0.75?'sel':'')+'">ゆっくり</button><button data-a="rate" data-v="0.85" class="'+(S.rate>=0.75&&S.rate<0.95?'sel':'')+'">ふつう</button><button data-a="rate" data-v="1.0" class="'+(S.rate>=0.95?'sel':'')+'">はやい</button></div>';
+ if(S.stage==='listen'){h+='<div class="card"><div class="sub">何度でも聞けます。聞こえた通りに、意味を頭で思い浮かべてから答え合わせへ。</div><div class="row"><button class="pri" data-a="reveal">答え合わせ（英文と意味を見る）</button></div></div>'}
+ else{h+='<div class="card"><div class="en">'+esc(it.en)+'</div><div class="jp">'+esc(it.jp)+'</div>';
+  if(it.say&&it.say.length)h+='<div class="say"><b>返事の例</b>'+it.say.map(function(y,k){return'<div style="margin-top:6px"><span class="en" style="font-size:15px">'+esc(y.en)+'</span> <button data-a="saysp" data-k="'+k+'" style="padding:2px 8px;min-height:30px">🔊</button><div class="jp">'+esc(y.jp)+'</div></div>'}).join('')+'</div>';
+  if(it.note)h+='<div class="note">💡 '+esc(it.note)+'</div>';
+  h+='</div><div class="row"><button class="pri" data-a="ok">✅ 聞き取れた</button><button data-a="ng">🔁 聞き取れなかった</button></div><div class="row"><button data-a="vocab">📚 単語帳に入れる</button></div>'}
+ return h+'<div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+function vList(){var s=curSit();if(!s)return head('','menu');
+ var h=head(s.name,'sit')+'<h2>'+esc(s.icon)+' '+esc(s.name)+'（一覧）</h2><div class="sub">押すと音声が出ます。</div>';
+ s.items.forEach(function(it,i){var g=S.prog[it.id];h+='<div class="card" data-a="one" data-i="'+i+'"><span class="dot '+(g?(g.s>0?'ok':'ng'):'')+'"></span><span class="en" style="font-size:16px">'+esc(it.en)+'</span><div class="jp">'+esc(it.jp)+'</div></div>'});return h}
+function vFlow(){var s=curSit();if(!s)return head('','menu');
+ return head(s.name,'sit')+'<h2>🎧 聞き流し</h2><div class="sub">英語→少し間をあけて、次へ。画面を開いたまま使ってください（画面を消すと止まります）。</div><div class="card"><div class="en" id="flEn">　</div><div class="jp" id="flJp">　</div></div><div class="row"><button class="pri" data-a="flowgo">▶ はじめる</button><button data-a="flowstop">■ 止める</button></div><div class="row"><button data-a="rate" data-v="0.65" class="'+(S.rate<0.75?'sel':'')+'">ゆっくり</button><button data-a="rate" data-v="0.85" class="'+(S.rate>=0.75&&S.rate<0.95?'sel':'')+'">ふつう</button><button data-a="rate" data-v="1.0" class="'+(S.rate>=0.95?'sel':'')+'">はやい</button></div>'}
+function vSet(){return head('設定','menu')+'<h2>⚙️ 保存・設定</h2><div class="card"><div class="cnt">保存済み '+S.packs.length+'パック（約 '+sizeKB()+' KB）。パックごとの一覧：</div>'+S.packs.map(function(p){return'<div class="note">'+esc(p.icon)+' '+esc(p.sname)+'／'+esc(p.id)+'／'+p.items.length+'件</div>'}).join('')+'<div class="row"><button data-a="wipe">🗑 保存したフレーズと記録を全部消す</button></div><div class="sub">消しても、📥 の取り込みでまた入れられます。</div></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+/* ---------- 操作 ---------- */
+root.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(!b)return;var a=b.dataset.a,i=+b.dataset.i;
+ if(a==='close'){stopAll();root.classList.remove('on')}
+ else if(a==='menu'){stopAll();S.view='menu';render()}
+ else if(a==='sit'){S.sit=sits()[i].key;S.msg='';S.view='sit';render()}
+ else if(a==='fetch')fetchPacks();
+ else if(a==='file'){var f=$('#phFile',root);if(f){f.onchange=function(){readFiles(f.files)};f.click()}}
+ else if(a==='drill'){var s=curSit();if(s)startDrill(buildQueue(s.items,10))}
+ else if(a==='review'){var all=[];sits().forEach(function(s){all=all.concat(dueItems(s.items))});S.sit=null;startDrill(all.sort(function(x,y){return S.prog[x.id].due-S.prog[y.id].due}).slice(0,15))}
+ else if(a==='list'){S.view='list';render()}
+ else if(a==='flow'){stopAll();S.view='flow';render()}
+ else if(a==='set'){S.view='set';render()}
+ else if(a==='play'){var it=cur();if(it)playItem(it)}
+ else if(a==='rate'){S.rate=+b.dataset.v;LS.set('dei_ph_rate',S.rate);render()}
+ else if(a==='reveal'){S.stage='ans';render()}
+ else if(a==='saysp'){var it2=cur();if(it2&&it2.say[+b.dataset.k]){stopAll();var my=S.token;say(it2.say[+b.dataset.k].en,S.rate,idxOf(it2)+1,my)}}
+ else if(a==='ok'||a==='ng'){var it3=cur();if(it3){judge(it3,a==='ok');S.qi++;S.stage='listen';if(S.qi>=S.queue.length){stopAll();S.view=S.sit?'sit':'menu';S.msg='1セット終わりました。おつかれさま';render()}else{render();autoPlay()}}}
+ else if(a==='vocab'){var it4=cur();try{if(typeof addMistake==='function'){addMistake(it4.en,it4.jp,'聞き取りフレーズ','listening');S.msg='単語帳に入れました'}else S.msg='単語帳が見つかりません'}catch(x){S.msg='入れられませんでした'}var m=$('#phMsg',root);if(m)m.textContent=S.msg}
+ else if(a==='one'){var s2=curSit();if(s2)playItem(s2.items[i])}
+ else if(a==='flowgo')runFlow();
+ else if(a==='flowstop')stopAll();
+ else if(a==='wipe'){if(confirm('保存したフレーズと練習の記録を、この端末から全部消します。よろしいですか？'))clearAll().then(function(){S.msg='消しました';S.view='menu';render()})}});
+function runFlow(){var s=curSit();if(!s)return;stopAll();var my=S.token,i=0;S.playing=true;
+ (function step(){if(my!==S.token||i>=s.items.length){S.playing=false;return}
+  var it=s.items[i],en=$('#flEn',root),jp=$('#flJp',root);if(en)en.textContent=it.en;if(jp)jp.textContent='';
+  say(it.en,S.rate,idxOf(it),my).then(function(){if(my!==S.token)return;if(jp)jp.textContent=it.jp;setTimeout(function(){if(my!==S.token)return;i++;step()},2200)})})()}
+function open(){S.view='menu';S.msg='';root.classList.add('on');try{loadVoices()}catch(e){}
+ if(!S.ready){render();loadAll().then(function(){render()})}else render()}
+window.__phOpen=open;
+function mount(){
+ if($('#phCardBtn'))return;
+ var g=$('.modes-grid');
+ if(g){var c=document.createElement('div');c.className='mode-card shadowing';c.id='phCardBtn';c.innerHTML='<div class="mode-icon">📻</div><div class="mode-info"><div class="mode-name">聞き取りフレーズ</div><div class="mode-desc">場面ごとに、これだけ聞けば通用する言い回し（通信なし）</div></div><div class="mode-arrow">›</div>';c.addEventListener('click',open);
+  var lq=g.querySelector('#lqCardBtn')||g.querySelector('.mode-card.shadowing');if(lq&&lq.nextSibling)g.insertBefore(c,lq.nextSibling);else g.appendChild(c)}
+ else{var f=document.createElement('button');f.id='phCardBtn';f.textContent='📻';f.setAttribute('aria-label','聞き取りフレーズ');f.style.cssText='position:fixed;left:100px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);z-index:2147483000;width:40px;height:40px;border-radius:20px;border:1px solid #888;background:rgba(20,20,30,.8);color:#fff;font-size:18px;padding:0';f.addEventListener('click',open);document.body.appendChild(f)}}
+mount();
+})();
+</script>
+<!--PH-END-->
+
 </body>
 </html>
