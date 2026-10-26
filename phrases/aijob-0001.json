@@ -1,0 +1,349 @@
+{
+"id": "aijob-0001",
+"situation": "aijob",
+"sname": "AI：採用面接・条件",
+"icon": "🧑‍🔬",
+"level": 4,
+"title": "技術面接・行動面接・報酬・株式",
+"items": [
+{
+"en": "Thanks for joining us. Tell me about your background in machine learning.",
+"jp": "お越しいただきありがとうございます。機械学習の経歴を教えてください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-001"
+},
+{
+"en": "What kind of models have you worked with?",
+"jp": "どんなモデルを扱ってきましたか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-002"
+},
+{
+"en": "Describe a project where you trained a model from scratch.",
+"jp": "モデルをゼロから学習したプロジェクトについて説明してください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-003"
+},
+{
+"en": "What was the biggest technical challenge you faced?",
+"jp": "最大の技術的課題は何でしたか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-004"
+},
+{
+"en": "How did you debug a training run that wasn't converging?",
+"jp": "収束しない学習をどうデバッグしましたか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-005"
+},
+{
+"en": "How do you decide when a model is good enough to ship?",
+"jp": "モデルが出荷できる水準かどうかを、どう判断しますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-006"
+},
+{
+"en": "Walk me through how you would evaluate a chatbot.",
+"jp": "チャットボットをどう評価するか、順に説明してください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-007"
+},
+{
+"en": "What metrics would you track in production?",
+"jp": "本番ではどんな指標を追いますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-008"
+},
+{
+"en": "How would you handle a model that gives biased answers?",
+"jp": "偏った回答をするモデルにどう対処しますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-009"
+},
+{
+"en": "How do you keep up with the latest research?",
+"jp": "最新の研究にどうついていますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-010"
+},
+{
+"en": "Which recent paper did you find most interesting, and why?",
+"jp": "最近読んだ論文で、一番面白かったものとその理由を教えてください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-011"
+},
+{
+"en": "Can you explain attention to someone with no technical background?",
+"jp": "技術の知識がない人に、アテンションをどう説明しますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-012"
+},
+{
+"en": "Let's do a coding exercise. Please share your screen.",
+"jp": "コーディングの課題をやります。画面共有してください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-013"
+},
+{
+"en": "Please think out loud so I can follow your reasoning.",
+"jp": "考えを声に出して、道筋が分かるようにしてください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-014"
+},
+{
+"en": "What's the time complexity of that solution?",
+"jp": "その解法の計算量はどのくらいですか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-015"
+},
+{
+"en": "Can you think of a more efficient approach?",
+"jp": "もっと効率の良い方法は思いつきますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-016"
+},
+{
+"en": "How would you test this function?",
+"jp": "この関数をどうテストしますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-017"
+},
+{
+"en": "We use a lot of Python and PyTorch here.",
+"jp": "ここではPythonとPyTorchをよく使います。",
+"say": [],
+"note": "",
+"id": "aijob-0001-018"
+},
+{
+"en": "How comfortable are you with distributed systems?",
+"jp": "分散システムにはどのくらい慣れていますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-019"
+},
+{
+"en": "Tell me about a time you disagreed with a teammate.",
+"jp": "同僚と意見が合わなかった時のことを教えてください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-020"
+},
+{
+"en": "How do you communicate technical results to non-technical stakeholders?",
+"jp": "技術的な結果を、技術職でない関係者にどう伝えますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-021"
+},
+{
+"en": "Our team is small, so everyone wears many hats.",
+"jp": "うちのチームは小さく、全員が多くの役割を担います。",
+"say": [],
+"note": "",
+"id": "aijob-0001-022"
+},
+{
+"en": "You'd be working closely with the research and product teams.",
+"jp": "研究チームと製品チームの両方と近く仕事をします。",
+"say": [],
+"note": "",
+"id": "aijob-0001-023"
+},
+{
+"en": "The role is a mix of research and engineering.",
+"jp": "この職務は、研究と開発の両方が混ざっています。",
+"say": [],
+"note": "",
+"id": "aijob-0001-024"
+},
+{
+"en": "We care a lot about safety and responsible deployment.",
+"jp": "安全性と責任ある展開を、とても大事にしています。",
+"say": [],
+"note": "",
+"id": "aijob-0001-025"
+},
+{
+"en": "Do you have any concerns about the ethics of this work?",
+"jp": "この仕事の倫理面で、心配はありますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-026"
+},
+{
+"en": "Why do you want to work in AI?",
+"jp": "なぜAIの分野で働きたいのですか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-027"
+},
+{
+"en": "Where do you see this field in five years?",
+"jp": "5年後、この分野はどうなっていると思いますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-028"
+},
+{
+"en": "What are you most excited about?",
+"jp": "一番わくわくするのは何ですか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-029"
+},
+{
+"en": "What are you most worried about?",
+"jp": "一番心配なのは何ですか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-030"
+},
+{
+"en": "Do you have any questions about the team or the work?",
+"jp": "チームや仕事について質問はありますか。",
+"say": [],
+"note": "",
+"id": "aijob-0001-031"
+},
+{
+"en": "The next step is a take-home assignment.",
+"jp": "次の段階は、持ち帰りの課題です。",
+"say": [],
+"note": "",
+"id": "aijob-0001-032"
+},
+{
+"en": "You'll have three days to complete it.",
+"jp": "3日間で仕上げてください。",
+"say": [],
+"note": "",
+"id": "aijob-0001-033"
+},
+{
+"en": "The final round is an on-site interview with four people.",
+"jp": "最終面接は、4人との対面面接です。",
+"say": [],
+"note": "",
+"id": "aijob-0001-034"
+},
+{
+"en": "We'll cover your travel and hotel.",
+"jp": "旅費とホテル代はこちらで負担します。",
+"say": [],
+"note": "",
+"id": "aijob-0001-035"
+},
+{
+"en": "Our offer includes salary, equity, and a signing bonus.",
+"jp": "オファーには、給与、株式報酬、入社時の一時金が含まれます。",
+"say": [],
+"note": "equity = 株式報酬。signing bonus = 入社時の一時金。",
+"id": "aijob-0001-036"
+},
+{
+"en": "The equity vests over four years with a one-year cliff.",
+"jp": "株式報酬は4年かけて権利確定し、最初の1年は据え置きです。",
+"say": [],
+"note": "vest = 権利が確定すること。cliff = 最初の据え置き期間。",
+"id": "aijob-0001-037"
+},
+{
+"en": "The salary is negotiable depending on experience.",
+"jp": "給与は経験に応じて交渉できます。",
+"say": [],
+"note": "",
+"id": "aijob-0001-038"
+},
+{
+"en": "We offer visa sponsorship for qualified candidates.",
+"jp": "条件を満たす候補者には、ビザのスポンサーをします。",
+"say": [],
+"note": "",
+"id": "aijob-0001-039"
+},
+{
+"en": "Remote work is possible, but we prefer you in the office twice a week.",
+"jp": "リモートも可能ですが、週2回の出社を希望します。",
+"say": [],
+"note": "",
+"id": "aijob-0001-040"
+},
+{
+"en": "We have a flexible vacation policy.",
+"jp": "休暇制度は柔軟です。",
+"say": [],
+"note": "",
+"id": "aijob-0001-041"
+},
+{
+"en": "The team is distributed across three time zones.",
+"jp": "チームは3つのタイムゾーンに分散しています。",
+"say": [],
+"note": "",
+"id": "aijob-0001-042"
+},
+{
+"en": "We hold a weekly reading group on new papers.",
+"jp": "毎週、新しい論文の読書会を開いています。",
+"say": [],
+"note": "",
+"id": "aijob-0001-043"
+},
+{
+"en": "You'd get access to a large amount of compute.",
+"jp": "大量の計算資源を使えます。",
+"say": [],
+"note": "",
+"id": "aijob-0001-044"
+},
+{
+"en": "You'd have a lot of ownership over your projects.",
+"jp": "自分のプロジェクトに大きな裁量があります。",
+"say": [],
+"note": "",
+"id": "aijob-0001-045"
+},
+{
+"en": "We move fast, but we take quality seriously.",
+"jp": "動きは速いですが、品質は真剣に考えています。",
+"say": [],
+"note": "",
+"id": "aijob-0001-046"
+},
+{
+"en": "We'll make a decision by the end of next week.",
+"jp": "来週末までに結論を出します。",
+"say": [],
+"note": "",
+"id": "aijob-0001-047"
+},
+{
+"en": "Thank you for your time. It was great talking with you.",
+"jp": "お時間ありがとうございました。お話しできて良かったです。",
+"say": [],
+"note": "",
+"id": "aijob-0001-048"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

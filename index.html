@@ -3553,13 +3553,23 @@ function saveProg(id,v){mem.prog[id]=v;return tx('prog','readwrite',function(s){
 function clearAll(){mem={packs:{},prog:{}};S.packs=[];S.prog={};return idb().then(function(db){return new Promise(function(res){var t=db.transaction(['packs','prog'],'readwrite');t.objectStore('packs').clear();t.objectStore('prog').clear();t.oncomplete=res;t.onerror=res})}).catch(function(){})}
 function okPack(p){return p&&p.app==='phrase-pack'&&typeof p.id==='string'&&/^[a-z0-9_-]{1,40}$/.test(p.id)&&typeof p.situation==='string'&&Array.isArray(p.items)&&p.items.length>0&&p.items.length<=400&&p.items.every(function(x){return x&&typeof x.id==='string'&&typeof x.en==='string'&&x.en&&typeof x.jp==='string'})}
 /* ---------- 音声（端末の読み上げ。通信なし） ---------- */
-var VO=[];function loadVoices(){try{VO=(speechSynthesis.getVoices()||[]).filter(function(v){return /^en[-_]/i.test(v.lang)})}catch(e){VO=[]}}
+var VO=[];
+var NOVEL=/^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Junior|Ralph|Kathy|Princess|Deranged|Hysterical|Pipe Organ|Grandma|Grandpa|Rocko|Shelley|Flo|Reed|Sandy|Eddy)\b/i;
+var PREF=/(premium|enhanced|siri|samantha|ava|allison|susan|nicky|tom|evan|alex|aaron|daniel|karen|zoe|google us english|microsoft (aria|jenny|guy|davis))/i;
+function loadVoices(){try{var all=(speechSynthesis.getVoices()||[]).filter(function(v){return /^en[-_](US|GB|AU|CA)/i.test(v.lang)&&!NOVEL.test(v.name)&&!/compact|novelty|eloquence/i.test(v.name+' '+v.voiceURI)});
+ var us=all.filter(function(v){return /en[-_]US/i.test(v.lang)});if(us.length)all=us;
+ all.sort(function(a,b){return (PREF.test(b.name)?1:0)-(PREF.test(a.name)?1:0)||(/premium|enhanced|siri/i.test(b.name)?1:0)-(/premium|enhanced|siri/i.test(a.name)?1:0)});VO=all.slice(0,8)}catch(e){VO=[]}}
 try{loadVoices();speechSynthesis.addEventListener&&speechSynthesis.addEventListener('voiceschanged',loadVoices)}catch(e){}
-function pickVoice(i){var us=VO.filter(function(v){return /en[-_]US/i.test(v.lang)}),L=us.length?us:VO;return L.length?L[Math.abs(i||0)%L.length]:null}
+function allEn(){try{return (speechSynthesis.getVoices()||[]).filter(function(v){return /^en[-_]/i.test(v.lang)})}catch(e){return[]}}
+var FEM=/(female|samantha|ava\b|allison|susan|karen|zoe|victoria|kathy|nicky|moira|tessa|fiona|aria|jenny|serena|kate\b|martha|joanna|emily|salli|kimberly|ivy|amy|sara|ellen|nora)/i,MAL=/(\bmale\b|daniel|\btom\b|alex|aaron|evan|oliver|arthur|\bguy\b|davis|ryan|matthew|joey|justin|brian|russell|gordon|\blee\b|rishi|james|george|david|mark)/i;
+function gOf(v){var n=v.name||'';if(FEM.test(n))return 'f';if(MAL.test(n))return 'm';return ''}
+function pickVoice(i){var n=LS.get('dei_ph_voice','');if(n){var f=allEn().filter(function(v){return v.name===n})[0];if(f)return f}
+ var g=LS.get('dei_ph_gender','');var pool=VO;if(g){var q=VO.filter(function(v){return gOf(v)===g});if(!q.length)q=allEn().filter(function(v){return gOf(v)===g&&!NOVEL.test(v.name)});if(q.length)pool=q}
+ return pool.length?pool[0]:null}
 function stopAll(){S.token++;S.playing=false;try{speechSynthesis.cancel()}catch(e){}}
 function say(text,rate,vi,my){return new Promise(function(res){
  if(!('speechSynthesis' in window)){res();return}
- var u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate||S.rate;var v=pickVoice(vi);if(v)u.voice=v;
+ var u=new SpeechSynthesisUtterance(text);u.lang='en-US';var ag=LS.get('dei_ph_age','');u.rate=(rate||S.rate)*(ag==='y'?1.05:ag==='o'?0.92:1);if(ag==='y')u.pitch=1.15;else if(ag==='o')u.pitch=0.85;var v=pickVoice(vi);if(v)u.voice=v;
  var done=false,fin=function(){if(done)return;done=true;clearTimeout(tm);res()};
  var tm=setTimeout(fin,Math.max(4000,text.length*160/(u.rate||1)+3000));
  u.onend=fin;u.onerror=fin;try{speechSynthesis.speak(u)}catch(e){fin()}})}
@@ -3573,7 +3583,7 @@ function addPacks(list){
   var old=S.packs.filter(function(x){return x.id===p.id})[0];if(old&&(old.ver||1)>=(p.ver||1)&&old.items.length>=p.items.length)return;
   n++;items+=p.items.length;
   var clean={app:'phrase-pack',id:p.id,ver:p.ver||1,situation:p.situation,sname:String(p.sname||p.situation).slice(0,30),icon:String(p.icon||'📻').slice(0,4),level:p.level||2,title:String(p.title||'').slice(0,60),
-   items:p.items.map(function(x){return{id:String(x.id).slice(0,40),en:String(x.en).slice(0,400),jp:String(x.jp).slice(0,300),say:Array.isArray(x.say)?x.say.slice(0,4).map(function(y){return{en:String(y.en||'').slice(0,200),jp:String(y.jp||'').slice(0,200)}}):[],note:x.note?String(x.note).slice(0,300):''}}),at:Date.now()};
+   items:p.items.map(function(x){return{id:String(x.id).slice(0,40),en:String(x.en).slice(0,400),jp:String(x.jp).slice(0,300),say:Array.isArray(x.say)?x.say.slice(0,4).map(function(y){return{en:String(y.en||'').slice(0,200),jp:String(y.jp||'').slice(0,200)}}):[],note:x.note?String(x.note).slice(0,300):''}}),ai:!!p.ai,at:Date.now()};
   chain=chain.then(function(){return savePack(clean)}).then(function(){S.packs=S.packs.filter(function(x){return x.id!==clean.id});S.packs.push(clean)})});
  return chain.then(function(){return{n:n,items:items}})}
 function fetchPacks(){
@@ -3603,7 +3613,7 @@ function head(title,back){return'<div class="top"><button data-a="'+(back||'clos
 function render(){
  var h='<div class="phw">';
  if(!S.ready){root.innerHTML=h+'<h2>📻 聞き取りフレーズ</h2><div class="sub">読み込み中…</div></div>';return}
- if(S.view==='menu')h+=vMenu();else if(S.view==='sit')h+=vSit();else if(S.view==='drill')h+=vDrill();else if(S.view==='list')h+=vList();else if(S.view==='flow')h+=vFlow();else if(S.view==='set')h+=vSet();
+ if(S.view==='menu')h+=vMenu();else if(S.view==='sit')h+=vSit();else if(S.view==='drill')h+=vDrill();else if(S.view==='list')h+=vList();else if(S.view==='flow')h+=vFlow();else if(S.view==='set')h+=vSet();else if(S.view==='voice')h+=vVoice();else if(S.view==='ai')h+=vAI();
  root.innerHTML=h+'</div>'}
 function vMenu(){
  var L=sits(),tot=0,okc=0;L.forEach(function(s){tot+=s.items.length;okc+=okCount(s.items)});
@@ -3614,12 +3624,12 @@ function vMenu(){
  if(due.length)h+='<div class="row"><button class="pri" data-a="review">🔁 今日の復習（'+due.length+'件）</button></div>';
  if(!L.length)h+='<div class="card sub">まだパックがありません。上の「📥 新しいパックを取り込む」を押してください。</div>';
  L.forEach(function(s,i){var ok=okCount(s.items),pc=Math.round(ok/s.items.length*100);h+='<div class="card sit" data-a="sit" data-i="'+i+'"><div class="ic">'+esc(s.icon)+'</div><div style="flex:1"><div class="nm">'+esc(s.name)+'</div><div class="st">'+s.items.length+'フレーズ・聞けた '+ok+'（'+pc+'%）</div><div class="bar"><i style="width:'+pc+'%"></i></div></div><div>›</div></div>'});
- h+='<div class="row"><button data-a="set">⚙️ 保存・設定</button></div>';return h}
+ h+='<div class="row"><button data-a="aiopen">🤖 AIで続きを作る</button><button data-a="set">⚙️ 保存・設定</button></div>';return h}
 function curSit(){return sits().filter(function(s){return s.key===S.sit})[0]}
 function vSit(){var s=curSit();if(!s)return head('','menu')+'<div class="sub">この場面が見つかりません</div>';
  var due=dueItems(s.items).length;
  return head(s.name,'menu')+'<h2>'+esc(s.icon)+' '+esc(s.name)+'</h2><div class="sub">'+s.items.length+'フレーズ。聞けた '+okCount(s.items)+'。復習の時期が来ているもの '+due+'。</div>'+
- '<div class="row"><button class="pri big" data-a="drill">▶ 10問で練習（聞いて答え合わせ）</button></div><div class="row"><button data-a="flow">🎧 聞き流し（最初から順に）</button><button data-a="list">📖 一覧で見る</button></div>'+
+ '<div class="row"><button class="pri big" data-a="drill">▶ 10問で練習（聞いて答え合わせ）</button></div><div class="row"><button data-a="flow">🎧 聞き流し（最初から順に）</button><button data-a="list">📖 一覧で見る</button><button data-a="aiopen" data-sit="1">🤖 この場面を増やす</button></div>'+
  '<div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
 function startDrill(items){S.queue=items;S.qi=0;S.stage='listen';S.view='drill';render();autoPlay()}
 function cur(){return S.queue[S.qi]}
@@ -3628,6 +3638,7 @@ function vDrill(){var it=cur();if(!it)return head('','menu')+'<h2>おつかれ�
  var h=head((S.qi+1)+' / '+S.queue.length,S.sit?'sit':'menu')+'<div class="cnt" style="margin-top:8px">'+esc(it.sname||'')+'</div>';
  h+='<div class="row"><button class="pri big" data-a="play">🔊 聞く</button></div>';
  h+='<div class="row"><button data-a="rate" data-v="0.65" class="'+(S.rate<0.75?'sel':'')+'">ゆっくり</button><button data-a="rate" data-v="0.85" class="'+(S.rate>=0.75&&S.rate<0.95?'sel':'')+'">ふつう</button><button data-a="rate" data-v="1.0" class="'+(S.rate>=0.95?'sel':'')+'">はやい</button></div>';
+ h+='<div class="row"><button data-a="vopen">🎙 声の設定（'+voiceLabel()+'）</button></div>';
  if(S.stage==='listen'){h+='<div class="card"><div class="sub">何度でも聞けます。聞こえた通りに、意味を頭で思い浮かべてから答え合わせへ。</div><div class="row"><button class="pri" data-a="reveal">答え合わせ（英文と意味を見る）</button></div></div>'}
  else{h+='<div class="card"><div class="en">'+esc(it.en)+'</div><div class="jp">'+esc(it.jp)+'</div>';
   if(it.say&&it.say.length)h+='<div class="say"><b>返事の例</b>'+it.say.map(function(y,k){return'<div style="margin-top:6px"><span class="en" style="font-size:15px">'+esc(y.en)+'</span> <button data-a="saysp" data-k="'+k+'" style="padding:2px 8px;min-height:30px">🔊</button><div class="jp">'+esc(y.jp)+'</div></div>'}).join('')+'</div>';
@@ -3639,7 +3650,44 @@ function vList(){var s=curSit();if(!s)return head('','menu');
  s.items.forEach(function(it,i){var g=S.prog[it.id];h+='<div class="card" data-a="one" data-i="'+i+'"><span class="dot '+(g?(g.s>0?'ok':'ng'):'')+'"></span><span class="en" style="font-size:16px">'+esc(it.en)+'</span><div class="jp">'+esc(it.jp)+'</div></div>'});return h}
 function vFlow(){var s=curSit();if(!s)return head('','menu');
  return head(s.name,'sit')+'<h2>🎧 聞き流し</h2><div class="sub">英語→少し間をあけて、次へ。画面を開いたまま使ってください（画面を消すと止まります）。</div><div class="card"><div class="en" id="flEn">　</div><div class="jp" id="flJp">　</div></div><div class="row"><button class="pri" data-a="flowgo">▶ はじめる</button><button data-a="flowstop">■ 止める</button></div><div class="row"><button data-a="rate" data-v="0.65" class="'+(S.rate<0.75?'sel':'')+'">ゆっくり</button><button data-a="rate" data-v="0.85" class="'+(S.rate>=0.75&&S.rate<0.95?'sel':'')+'">ふつう</button><button data-a="rate" data-v="1.0" class="'+(S.rate>=0.95?'sel':'')+'">はやい</button></div>'}
-function vSet(){return head('設定','menu')+'<h2>⚙️ 保存・設定</h2><div class="card"><div class="cnt">保存済み '+S.packs.length+'パック（約 '+sizeKB()+' KB）。パックごとの一覧：</div>'+S.packs.map(function(p){return'<div class="note">'+esc(p.icon)+' '+esc(p.sname)+'／'+esc(p.id)+'／'+p.items.length+'件</div>'}).join('')+'<div class="row"><button data-a="wipe">🗑 保存したフレーズと記録を全部消す</button></div><div class="sub">消しても、📥 の取り込みでまた入れられます。</div></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+
+var AI={sit:'',theme:'',n:20,paste:'',busy:false};
+function aiSitObj(){return sits().filter(function(x){return x.key===AI.sit})[0]}
+function aiPrompt(){var o=aiSitObj(),name=o?o.name:(AI.theme||'日常会話'),ex=o?o.items.slice(-40).map(function(x){return x.en}):[];
+ return AI.n+'個の、英語の聞き取り練習用フレーズを作ってください。\n場面：'+name+(AI.theme&&o?'（特に：'+AI.theme+'）':'')+'\n条件：\n- 相手側（店員・同僚・取引先など）が自分に向かって言う、自然なアメリカ英語。1〜2文。\n- 日本人が「聞き取れないと困る」ものを優先。短すぎる単語だけのものは不可。\n- 数字・日付・金額・固有の言い回しも含める。\n'+(ex.length?'- 次の既存フレーズと重複させない：\n'+ex.join('\n')+'\n':'')+'出力はJSON配列だけ。前置き・説明・コードブロック記号は不要。形式：\n[{"en":"英文","jp":"日本語訳","say":[{"en":"返事の例","jp":"返事の訳"}],"note":"ひとこと解説（なくてもよい）"}]'}
+function parseAI(t){t=String(t||'').replace(/```[a-z]*/gi,'').trim();var a=t.indexOf('['),z=t.lastIndexOf(']'),j=null;
+ if(a>=0&&z>a){try{j=JSON.parse(t.slice(a,z+1))}catch(e){}}
+ if(!j){var o=t.indexOf('{'),oz=t.lastIndexOf('}');if(o>=0&&oz>o){try{var r=JSON.parse(t.slice(o,oz+1));j=Array.isArray(r)?r:(r.items||r.phrases||null)}catch(e){}}}
+ if(!j&&a>=0){var lz=t.lastIndexOf('}');if(lz>a){try{j=JSON.parse(t.slice(a,lz+1)+']')}catch(e){}}}
+ return Array.isArray(j)?j:null}
+function aiTake(text){var arr=parseAI(text);if(!arr){S.msg='読み取れませんでした。AIの返事の「[」から「]」までを、そのまま貼ってください';return render()}
+ var o=aiSitObj(),seen={};(o?o.items:[]).forEach(function(x){seen[x.en.toLowerCase().replace(/\s+/g,' ').trim()]=1});
+ var items=[];arr.forEach(function(x){if(!x||typeof x.en!=='string'||!x.en.trim())return;var k=x.en.toLowerCase().replace(/\s+/g,' ').trim();if(seen[k])return;seen[k]=1;items.push({en:x.en.trim(),jp:typeof x.jp==='string'?x.jp:'',say:Array.isArray(x.say)?x.say.filter(function(y){return y&&typeof y.en==='string'}):[],note:typeof x.note==='string'?x.note:''})});
+ if(!items.length){S.msg='新しいフレーズがありませんでした（重複か、形式が違います）';return render()}
+ var key=o?o.key:'my'+(AI.theme?Math.abs(idxOf({id:AI.theme})).toString(36):'x'),sn=o?o.name:(AI.theme||'マイ場面').slice(0,20),ic=o?o.icon:'✨';key=String(key).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,18)||'my';
+ var id='ai-'+key+'-'+Date.now().toString(36);items.forEach(function(x,i){x.id=id+'-'+(i+1)});
+ return addPacks([{app:'phrase-pack',id:id,ver:1,situation:o?o.key:key,sname:sn,icon:ic,level:2,title:'AI作成',ai:true,items:items}]).then(function(r){AI.paste='';S.msg=r.items+'フレーズを追加して、この端末に保存しました（'+sn+'）';S.view=o?'sit':'menu';if(o)S.sit=o.key;render()})}
+function vAI(){var L=sits();
+ return head('AIで続き','menu')+'<h2>🤖 AIで続きを作る</h2><div class="sub">フレーズを増やして、この端末に保存します。<br>① アプリのAIで直接作る（通信・設定済みの合言葉を使用）<br>② 質問文をコピーして、普段使いのAIに貼り→返事をここに貼る（API不使用）</div>'+
+ '<h3>場面</h3><div class="row">'+L.map(function(x,i){return'<button data-a="aisit" data-k="'+x.key+'" class="'+(AI.sit===x.key?'sel':'')+'">'+esc(x.icon)+' '+esc(x.name)+'</button>'}).join('')+'<button data-a="aisit" data-k="" class="'+(AI.sit===''?'sel':'')+'">✨ 新しい場面</button></div>'+
+ '<h3>'+(AI.sit?'特に増やしたい内容（なくてもよい）':'新しい場面の名前')+'</h3><input id="aiTheme" value="'+esc(AI.theme)+'" placeholder="例：ゴルフ場で / 取引先の工場見学" style="width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1px solid var(--border,#2a2d35);background:var(--surface2,#1e2128);color:inherit;font:inherit">'+
+ '<h3>個数</h3><div class="row">'+[10,20,30,40].map(function(n){return'<button data-a="ain" data-v="'+n+'" class="'+(AI.n===n?'sel':'')+'">'+n+'</button>'}).join('')+'</div>'+
+ '<div class="row"><button class="pri" data-a="aigo">🤖 アプリのAIで作る（通信）</button><button data-a="aicopy">📋 質問文をコピー（API不使用）</button></div>'+
+ '<h3>AIの返事を貼る</h3><textarea id="aiPaste" rows="6" placeholder="AIの返事（[ から ] まで）を貼り付け" style="width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1px solid var(--border,#2a2d35);background:var(--surface2,#1e2128);color:inherit;font:inherit">'+esc(AI.paste)+'</textarea>'+
+ '<div class="row"><button class="pri" data-a="aitake">✅ 貼った内容を取り込む</button></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+function copyTxt(t){try{if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}catch(e){}return Promise.resolve(fb());function fb(){try{var ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok}catch(e){return false}}}
+function voiceLabel(){var g=LS.get('dei_ph_gender',''),a=LS.get('dei_ph_age',''),n=LS.get('dei_ph_voice','');return (n?n:((g==='f'?'女性':g==='m'?'男性':'おまかせ')))+'・'+(a==='y'?'若い':a==='o'?'年配':'標準')}
+function vtest(){stopAll();try{var u=new SpeechSynthesisUtterance('Thank you for coming. Could you say that one more time, please?');u.lang='en-US';var ag=LS.get('dei_ph_age','');u.rate=S.rate*(ag==='y'?1.05:ag==='o'?0.92:1);if(ag==='y')u.pitch=1.15;else if(ag==='o')u.pitch=0.85;var v=pickVoice(0);if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
+function vVoice(){var g=LS.get('dei_ph_gender',''),a=LS.get('dei_ph_age',''),pin=LS.get('dei_ph_voice','');
+ function bt(act,val,cur,label){return'<button data-a="'+act+'" data-v="'+val+'" class="'+(cur===val&&!(act==='vg'&&pin)?'sel':'')+'">'+label+'</button>'}
+ return head('声の設定','vback')+'<h2>🎙 声の設定</h2><div class="sub">押すと、その設定で試し聞きできます。</div>'+
+ '<h3>性別</h3><div class="row">'+bt('vg','',g,'おまかせ')+bt('vg','f',g,'👩 女性')+bt('vg','m',g,'👨 男性')+'</div>'+
+ '<h3>年齢の感じ</h3><div class="row">'+bt('va','',a,'標準')+bt('va','y',a,'🧒 若い')+bt('va','o',a,'🧓 年配')+'</div>'+
+ '<div class="sub">※端末の声に「男女・年齢」の情報はありません。性別は声の名前から推測しています。「若い／年配」は声の高さと速さを少し変えるだけなので、不自然に聞こえる時は「標準」にしてください。</div>'+
+ '<div class="row"><button class="pri" data-a="vtest">▶ 試し聞き</button></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'+
+ '<h3>声を直接えらぶ（これを選ぶと、上の性別は使われません）</h3>'+allEn().map(function(v,k){var bad=NOVEL.test(v.name)||VO.indexOf(v)<0;var gg=gOf(v);return'<div class="row" style="margin:4px 0"><button data-a="vt" data-k="'+k+'" style="flex:1;text-align:left">'+(pin===v.name?'✅ ':'')+(gg==='f'?'👩 ':gg==='m'?'👨 ':'・ ')+esc(v.name)+' <span class="cnt">'+esc(v.lang)+(bad?'　（自動では使わない声）':'')+'</span></button></div>'}).join('')+
+ '<div class="row"><button data-a="vt" data-k="-1">🔄 直接えらぶのをやめる（おまかせ）</button></div>'}
+function vSet(){return head('設定','menu')+'<h2>⚙️ 保存・設定</h2><div class="card"><div class="cnt">保存済み '+S.packs.length+'パック（約 '+sizeKB()+' KB）。パックごとの一覧：</div>'+S.packs.map(function(p){return'<div class="note">'+esc(p.icon)+' '+esc(p.sname)+'／'+esc(p.id)+'／'+p.items.length+'件'+(p.ai?'（AI作成）':'')+'</div>'}).join('')+'<div class="row"><button data-a="vopen">🎙 声の設定（性別・年齢・声を選ぶ）</button></div>'+'<div class="sub">機械のような声になる時は、「🎙 声の設定」で切り替えます。iPhoneは 設定→アクセシビリティ→読み上げコンテンツ→声 で「拡張」や「プレミアム」の英語の声をダウンロードすると、自然になります。</div><div class="row"><button data-a="wipe">🗑 保存したフレーズと記録を全部消す</button></div><div class="sub">消しても、📥 の取り込みでまた入れられます。</div></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
 /* ---------- 操作 ---------- */
 root.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(!b)return;var a=b.dataset.a,i=+b.dataset.i;
  if(a==='close'){stopAll();root.classList.remove('on')}
@@ -3654,6 +3702,20 @@ root.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(
  else if(a==='set'){S.view='set';render()}
  else if(a==='play'){var it=cur();if(it)playItem(it)}
  else if(a==='rate'){S.rate=+b.dataset.v;LS.set('dei_ph_rate',S.rate);render()}
+ else if(a==='aiopen'){S.prev=S.view;AI.sit=b.dataset.sit?S.sit:AI.sit;S.msg='';S.view='ai';render()}
+ else if(a==='aisit'){AI.sit=b.dataset.k;S.msg='';render()}
+ else if(a==='ain'){AI.n=+b.dataset.v;render()}
+ else if(a==='aicopy'){copyTxt(aiPrompt()).then(function(ok){S.msg=ok?'質問文をコピーしました。普段使いのAIに貼って、返事を下に貼ってください':'コピーできませんでした。下に出した文を手でコピーしてください';render();if(!ok){var m=$('#phMsg',root);if(m)m.insertAdjacentHTML('afterend','<textarea rows="8" style="width:100%;box-sizing:border-box">'+esc(aiPrompt())+'</textarea>')}})}
+ else if(a==='aitake'){var pt=($('#aiPaste',root)||{}).value||AI.paste;aiTake(pt)}
+ else if(a==='aigo'){if(typeof callAIOnce!=='function'){S.msg='このアプリのAIが使えません。「質問文をコピー」を使ってください';return render()}
+  if(AI.busy)return;AI.busy=true;S.msg='AIに作らせています…（少し待ちます）';render();
+  callAIOnce(aiPrompt()).then(function(o){AI.busy=false;if(o&&o.reply)aiTake(o.reply);else{S.msg='AIからの返事がありません：'+((o&&o.error)||'');render()}}).catch(function(e){AI.busy=false;S.msg='失敗：'+(e&&e.message||e);render()})}
+ else if(a==='vopen'){S.prev=S.view;S.view='voice';render()}
+ else if(a==='vback'){S.view=S.prev||'menu';render();if(S.view==='drill')autoPlay()}
+ else if(a==='vg'){LS.set('dei_ph_gender',b.dataset.v);LS.set('dei_ph_voice','');var gm=b.dataset.v&&!allEn().some(function(v){return gOf(v)===b.dataset.v&&!NOVEL.test(v.name)});S.msg=gm?'この端末には、その性別と判別できる声がありません（下の一覧から選べます）':'';render();vtest()}
+ else if(a==='va'){LS.set('dei_ph_age',b.dataset.v);render();vtest()}
+ else if(a==='vtest'){vtest()}
+ else if(a==='vt'){var k=+b.dataset.k;if(k<0){LS.set('dei_ph_voice','');S.msg='おまかせに戻しました'}else{var v=allEn()[k];if(v){LS.set('dei_ph_voice',v.name);S.msg=v.name+' に決めました';stopAll();try{var u=new SpeechSynthesisUtterance('Thank you for coming. Could you say that one more time, please?');u.lang='en-US';u.voice=v;u.rate=S.rate;speechSynthesis.speak(u)}catch(x){}}}render()}
  else if(a==='reveal'){S.stage='ans';render()}
  else if(a==='saysp'){var it2=cur();if(it2&&it2.say[+b.dataset.k]){stopAll();var my=S.token;say(it2.say[+b.dataset.k].en,S.rate,idxOf(it2)+1,my)}}
  else if(a==='ok'||a==='ng'){var it3=cur();if(it3){judge(it3,a==='ok');S.qi++;S.stage='listen';if(S.qi>=S.queue.length){stopAll();S.view=S.sit?'sit':'menu';S.msg='1セット終わりました。おつかれさま';render()}else{render();autoPlay()}}}
@@ -3662,6 +3724,7 @@ root.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(
  else if(a==='flowgo')runFlow();
  else if(a==='flowstop')stopAll();
  else if(a==='wipe'){if(confirm('保存したフレーズと練習の記録を、この端末から全部消します。よろしいですか？'))clearAll().then(function(){S.msg='消しました';S.view='menu';render()})}});
+root.addEventListener('input',function(e){if(e.target.id==='aiTheme')AI.theme=e.target.value;else if(e.target.id==='aiPaste')AI.paste=e.target.value});
 function runFlow(){var s=curSit();if(!s)return;stopAll();var my=S.token,i=0;S.playing=true;
  (function step(){if(my!==S.token||i>=s.items.length){S.playing=false;return}
   var it=s.items[i],en=$('#flEn',root),jp=$('#flJp',root);if(en)en.textContent=it.en;if(jp)jp.textContent='';

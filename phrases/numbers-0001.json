@@ -1,0 +1,356 @@
+{
+"id": "numbers-0001",
+"situation": "numbers",
+"sname": "数字・時間・日付の聞き取り",
+"icon": "🔢",
+"level": 3,
+"title": "金額・電話・時刻・日付・単位・スペル",
+"items": [
+{
+"en": "It's fifteen dollars. Not fifty.",
+"jp": "15ドルです。50ではありません。",
+"say": [],
+"note": "-teen と -ty の聞き分け。teen は後ろを強く、ty は前を強く。",
+"id": "numbers-0001-001"
+},
+{
+"en": "Thirteen, thirty, and fifty.",
+"jp": "13、30、50です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-002"
+},
+{
+"en": "That'll be nineteen ninety-nine.",
+"jp": "19ドル99セントです。",
+"say": [],
+"note": "nineteen ninety-nine = $19.99。",
+"id": "numbers-0001-003"
+},
+{
+"en": "The price is two fifty.",
+"jp": "値段は2ドル50セントです。",
+"say": [],
+"note": "two fifty = $2.50（ドルとセントを続けて言う）。",
+"id": "numbers-0001-004"
+},
+{
+"en": "It costs a hundred and twenty bucks.",
+"jp": "120ドルします。",
+"say": [],
+"note": "bucks = ドル（口語）。",
+"id": "numbers-0001-005"
+},
+{
+"en": "The total is one thousand two hundred and five dollars.",
+"jp": "合計は1205ドルです。",
+"say": [],
+"note": "",
+"id": "numbers-0001-006"
+},
+{
+"en": "The population is about three point six million.",
+"jp": "人口は約360万人です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-007"
+},
+{
+"en": "It's seven-oh-three, five-five-five, oh-one-nine-eight.",
+"jp": "703-555-0198です。",
+"say": [],
+"note": "電話番号は1桁ずつ。0 は oh かゼロ。",
+"id": "numbers-0001-008"
+},
+{
+"en": "My number is double-five, three-two-one.",
+"jp": "番号は55、321です。",
+"say": [],
+"note": "double = 同じ数字が2回続く。英国で多い。",
+"id": "numbers-0001-009"
+},
+{
+"en": "The flight number is United four-one-seven.",
+"jp": "便名はユナイテッド417便です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-010"
+},
+{
+"en": "Gate B twenty-two.",
+"jp": "B22番ゲートです。",
+"say": [],
+"note": "",
+"id": "numbers-0001-011"
+},
+{
+"en": "Your room number is eleven-oh-six.",
+"jp": "お部屋は1106号室です。",
+"say": [],
+"note": "4桁は2桁ずつ。eleven-oh-six = 1106。",
+"id": "numbers-0001-012"
+},
+{
+"en": "It's on the one hundred and first floor.",
+"jp": "101階です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-013"
+},
+{
+"en": "Your seat is twenty-three F.",
+"jp": "お席は23Fです。",
+"say": [],
+"note": "",
+"id": "numbers-0001-014"
+},
+{
+"en": "The meeting is at two fifteen.",
+"jp": "会議は2時15分です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-015"
+},
+{
+"en": "It's a quarter to five.",
+"jp": "5時15分前（4時45分）です。",
+"say": [],
+"note": "quarter to = 15分前、quarter past = 15分過ぎ。",
+"id": "numbers-0001-016"
+},
+{
+"en": "It's half past nine.",
+"jp": "9時半です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-017"
+},
+{
+"en": "It's ten after three.",
+"jp": "3時10分です。",
+"say": [],
+"note": "after / past = 〜過ぎ。",
+"id": "numbers-0001-018"
+},
+{
+"en": "We open at nine a.m. and close at six p.m.",
+"jp": "午前9時に開き、午後6時に閉まります。",
+"say": [],
+"note": "",
+"id": "numbers-0001-019"
+},
+{
+"en": "The train leaves at oh-seven-thirty.",
+"jp": "電車は7時30分発です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-020"
+},
+{
+"en": "It's twelve noon. Lunch time.",
+"jp": "正午です。昼食の時間です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-021"
+},
+{
+"en": "It's midnight already.",
+"jp": "もう夜中の12時です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-022"
+},
+{
+"en": "Today is Monday, October the twenty-sixth.",
+"jp": "今日は10月26日月曜日です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-023"
+},
+{
+"en": "The deadline is on the third of March.",
+"jp": "期限は3月3日です。",
+"say": [],
+"note": "英国式は日が先：the third of March。米国式は March third。",
+"id": "numbers-0001-024"
+},
+{
+"en": "My birthday is on the twenty-second of July.",
+"jp": "誕生日は7月22日です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-025"
+},
+{
+"en": "The event is on the first of next month.",
+"jp": "イベントは来月1日です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-026"
+},
+{
+"en": "It happened in nineteen ninety-eight.",
+"jp": "1998年に起きました。",
+"say": [],
+"note": "",
+"id": "numbers-0001-027"
+},
+{
+"en": "It was in two thousand and five.",
+"jp": "2005年でした。",
+"say": [],
+"note": "",
+"id": "numbers-0001-028"
+},
+{
+"en": "In twenty twenty-six, we'll expand.",
+"jp": "2026年に拡大します。",
+"say": [],
+"note": "",
+"id": "numbers-0001-029"
+},
+{
+"en": "It starts the week of the fourteenth.",
+"jp": "14日の週に始まります。",
+"say": [],
+"note": "",
+"id": "numbers-0001-030"
+},
+{
+"en": "Every other Tuesday.",
+"jp": "1週おきの火曜日です。",
+"say": [],
+"note": "every other = 1つ飛ばし。",
+"id": "numbers-0001-031"
+},
+{
+"en": "Twice a week, on Mondays and Thursdays.",
+"jp": "週2回、月曜と木曜です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-032"
+},
+{
+"en": "It'll take about two and a half hours.",
+"jp": "2時間半ほどかかります。",
+"say": [],
+"note": "",
+"id": "numbers-0001-033"
+},
+{
+"en": "The temperature is about seventy degrees.",
+"jp": "気温は約70度（華氏）です。",
+"say": [],
+"note": "華氏70°F ≒ 21℃。",
+"id": "numbers-0001-034"
+},
+{
+"en": "It's minus five outside.",
+"jp": "外は氷点下5度です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-035"
+},
+{
+"en": "It's thirty-eight degrees Celsius. That's a fever.",
+"jp": "摂氏38度です。熱があります。",
+"say": [],
+"note": "",
+"id": "numbers-0001-036"
+},
+{
+"en": "The package weighs about ten pounds.",
+"jp": "荷物の重さは約10ポンドです。",
+"say": [],
+"note": "1ポンド ≒ 0.45kg。",
+"id": "numbers-0001-037"
+},
+{
+"en": "It's about five miles from here.",
+"jp": "ここから約5マイルです。",
+"say": [],
+"note": "1マイル ≒ 1.6km。",
+"id": "numbers-0001-038"
+},
+{
+"en": "He's five foot ten.",
+"jp": "彼は身長5フィート10インチです。",
+"say": [],
+"note": "5'10\" ≒ 178cm。",
+"id": "numbers-0001-039"
+},
+{
+"en": "It's a size nine in women's shoes.",
+"jp": "女性用の靴で9サイズです。",
+"say": [],
+"note": "",
+"id": "numbers-0001-040"
+},
+{
+"en": "A twelve-ounce coffee, please.",
+"jp": "12オンスのコーヒーをお願いします。",
+"say": [],
+"note": "",
+"id": "numbers-0001-041"
+},
+{
+"en": "Take two tablets, three times a day.",
+"jp": "1回2錠、1日3回飲んでください。",
+"say": [],
+"note": "",
+"id": "numbers-0001-042"
+},
+{
+"en": "Seventy-five percent of the staff voted yes.",
+"jp": "従業員の75%が賛成しました。",
+"say": [],
+"note": "",
+"id": "numbers-0001-043"
+},
+{
+"en": "It's about one in three.",
+"jp": "3人に1人くらいです。",
+"say": [],
+"note": "",
+"id": "numbers-0001-044"
+},
+{
+"en": "Our address is one-two-three Oak Street, Suite two-oh-four.",
+"jp": "住所はオーク通り123番、204号室です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-045"
+},
+{
+"en": "The zip code is nine-oh-two-one-oh.",
+"jp": "郵便番号は90210です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-046"
+},
+{
+"en": "My email is nori dot sanada at example dot com.",
+"jp": "メールは nori.sanada@example.com です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-047"
+},
+{
+"en": "It's S as in Sam, A as in apple, N as in Nancy.",
+"jp": "SはSam、Aはapple、NはNancyのSです。",
+"say": [],
+"note": "スペルを伝える時の言い方。",
+"id": "numbers-0001-048"
+},
+{
+"en": "That's capital N, small o, hyphen, two.",
+"jp": "大文字のN、小文字のo、ハイフン、2です。",
+"say": [],
+"note": "",
+"id": "numbers-0001-049"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

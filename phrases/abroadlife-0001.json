@@ -1,0 +1,342 @@
+{
+"id": "abroadlife-0001",
+"situation": "abroadlife",
+"sname": "海外生活（暮らしの手続き）",
+"icon": "🌎",
+"level": 2,
+"title": "近所・通信・交通・保険・学校・習慣",
+"items": [
+{
+"en": "Welcome to the neighborhood! I'm your neighbor from next door.",
+"jp": "ご近所へようこそ！隣に住んでいます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-001"
+},
+{
+"en": "Let me know if you need anything.",
+"jp": "何かあれば言ってね。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-002"
+},
+{
+"en": "Trash pickup is on Monday morning. Put the bins out the night before.",
+"jp": "ごみ収集は月曜朝です。前の晩に出してください。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-003"
+},
+{
+"en": "The mailbox is at the end of the driveway.",
+"jp": "郵便受けは私道の端です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-004"
+},
+{
+"en": "Do you have a Social Security number?",
+"jp": "社会保障番号はありますか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-005"
+},
+{
+"en": "You'll need a local phone number to open an account.",
+"jp": "口座開設には現地の電話番号が必要です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-006"
+},
+{
+"en": "Which carrier are you with? We have prepaid plans.",
+"jp": "どこのキャリアですか。プリペイドもあります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-007"
+},
+{
+"en": "You can top up your card at any machine.",
+"jp": "どの機械でもカードにチャージできます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-008"
+},
+{
+"en": "Do you have a transit card?",
+"jp": "交通カードはお持ちですか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-009"
+},
+{
+"en": "Please tap in and tap out.",
+"jp": "乗る時と降りる時にタッチしてください。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-010"
+},
+{
+"en": "The bus doesn't run on Sundays.",
+"jp": "バスは日曜は運行しません。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-011"
+},
+{
+"en": "Where's the nearest grocery store?",
+"jp": "一番近いスーパーはどこですか。",
+"say": [],
+"note": "自分が聞く側の返答も練習。",
+"id": "abroadlife-0001-012"
+},
+{
+"en": "The store closes at nine on weekdays.",
+"jp": "店は平日9時に閉まります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-013"
+},
+{
+"en": "We don't accept coupons on sale items.",
+"jp": "セール品にはクーポンは使えません。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-014"
+},
+{
+"en": "Do you want a receipt in the bag or emailed?",
+"jp": "レシートは袋に入れますか、メールにしますか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-015"
+},
+{
+"en": "Your package was left at the front desk.",
+"jp": "荷物はフロントに置いてあります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-016"
+},
+{
+"en": "Your delivery will arrive between ten and two.",
+"jp": "配達は10時から2時の間に届きます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-017"
+},
+{
+"en": "Someone needs to sign for it.",
+"jp": "受け取りに署名が必要です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-018"
+},
+{
+"en": "The electricity bill is due on the fifth.",
+"jp": "電気代の期限は5日です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-019"
+},
+{
+"en": "You can set up auto-pay online.",
+"jp": "オンラインで自動引き落としを設定できます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-020"
+},
+{
+"en": "Water is included in your rent, but electricity isn't.",
+"jp": "水道は家賃に含まれますが、電気は含まれません。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-021"
+},
+{
+"en": "The internet technician will be here between one and five.",
+"jp": "インターネットの技術者は1時から5時の間に来ます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-022"
+},
+{
+"en": "Do you have renter's insurance?",
+"jp": "借家人保険には入っていますか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-023"
+},
+{
+"en": "I need to register my address with the city.",
+"jp": "市に住所を登録する必要があります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-024"
+},
+{
+"en": "Please bring a utility bill as proof of address.",
+"jp": "住所の証明に公共料金の請求書を持ってきてください。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-025"
+},
+{
+"en": "The DMV is open from eight to four.",
+"jp": "運転免許センターは8時から4時までです。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-026"
+},
+{
+"en": "You'll have to take a written test and a road test.",
+"jp": "筆記試験と路上試験を受ける必要があります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-027"
+},
+{
+"en": "Do you have a primary care doctor?",
+"jp": "かかりつけ医はいますか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-028"
+},
+{
+"en": "You need a referral to see a specialist.",
+"jp": "専門医にかかるには紹介状が必要です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-029"
+},
+{
+"en": "Your copay is thirty dollars.",
+"jp": "自己負担は30ドルです。",
+"say": [],
+"note": "copay = 診察ごとの定額自己負担。",
+"id": "abroadlife-0001-030"
+},
+{
+"en": "The deductible is one thousand dollars per year.",
+"jp": "免責額は年1000ドルです。",
+"say": [],
+"note": "deductible = 保険が効く前に自己負担する額。",
+"id": "abroadlife-0001-031"
+},
+{
+"en": "Is this covered by your insurance?",
+"jp": "これは保険の対象ですか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-032"
+},
+{
+"en": "Do you have kids? The school enrollment starts in August.",
+"jp": "お子さんはいますか。学校の登録は8月からです。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-033"
+},
+{
+"en": "The school bus picks up at seven fifteen.",
+"jp": "スクールバスは7時15分に迎えに来ます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-034"
+},
+{
+"en": "There's a farmers market on Saturday mornings.",
+"jp": "土曜の朝にファーマーズマーケットがあります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-035"
+},
+{
+"en": "The tap water is safe to drink here.",
+"jp": "ここの水道水は飲めます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-036"
+},
+{
+"en": "It gets really cold here in the winter.",
+"jp": "ここの冬はとても寒くなります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-037"
+},
+{
+"en": "You'll need snow tires.",
+"jp": "スノータイヤが必要です。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-038"
+},
+{
+"en": "Daylight saving time ends this Sunday. Set your clocks back one hour.",
+"jp": "夏時間が今度の日曜に終わります。時計を1時間戻してください。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-039"
+},
+{
+"en": "Tipping is expected at restaurants, taxis, and hair salons.",
+"jp": "レストラン、タクシー、美容室ではチップが期待されます。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-040"
+},
+{
+"en": "Most stores are closed on Thanksgiving.",
+"jp": "感謝祭はほとんどの店が休みです。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-041"
+},
+{
+"en": "Would you like to come over for Thanksgiving dinner?",
+"jp": "感謝祭の夕食にいらっしゃいませんか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-042"
+},
+{
+"en": "Do you know any good dentists around here?",
+"jp": "このあたりにいい歯医者を知りませんか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-043"
+},
+{
+"en": "There's a community center with free English classes.",
+"jp": "無料の英語教室がある市民センターがあります。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-044"
+},
+{
+"en": "Let me introduce you to my friends.",
+"jp": "友だちを紹介するね。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-045"
+},
+{
+"en": "Come join us for a barbecue on Sunday.",
+"jp": "日曜のバーベキューに来ませんか。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-046"
+},
+{
+"en": "Don't hesitate to ask if you have any questions.",
+"jp": "遠慮なく質問してください。",
+"say": [],
+"note": "",
+"id": "abroadlife-0001-047"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

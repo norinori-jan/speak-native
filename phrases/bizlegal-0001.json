@@ -1,0 +1,335 @@
+{
+"id": "bizlegal-0001",
+"situation": "bizlegal",
+"sname": "ビジネス：契約・法務",
+"icon": "⚖️",
+"level": 3,
+"title": "契約条項・NDA・知財・紛争",
+"items": [
+{
+"en": "Please read the contract carefully before signing.",
+"jp": "署名の前に契約書をよく読んでください。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-001"
+},
+{
+"en": "This agreement is governed by the laws of the State of New York.",
+"jp": "本契約はニューヨーク州法に準拠します。",
+"say": [],
+"note": "governed by = 準拠法。",
+"id": "bizlegal-0001-002"
+},
+{
+"en": "Both parties agree to the terms and conditions below.",
+"jp": "両当事者は以下の条件に同意します。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-003"
+},
+{
+"en": "The term of this agreement is one year, renewable annually.",
+"jp": "契約期間は1年で、毎年更新できます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-004"
+},
+{
+"en": "It will renew automatically unless either party gives notice.",
+"jp": "いずれかが通知しない限り自動更新されます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-005"
+},
+{
+"en": "Either party may terminate this agreement with sixty days' notice.",
+"jp": "どちらも60日前の通知で解約できます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-006"
+},
+{
+"en": "The supplier shall deliver the goods within thirty days of the order.",
+"jp": "供給者は注文から30日以内に納品するものとします。",
+"say": [],
+"note": "shall = 〜するものとする（義務）。",
+"id": "bizlegal-0001-007"
+},
+{
+"en": "The buyer is responsible for all shipping costs.",
+"jp": "買主がすべての送料を負担します。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-008"
+},
+{
+"en": "Payment shall be made within thirty days of receipt of the invoice.",
+"jp": "支払いは請求書受領から30日以内とします。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-009"
+},
+{
+"en": "In the event of a breach, the other party may seek damages.",
+"jp": "違反の場合、相手方は損害賠償を求められます。",
+"say": [],
+"note": "breach = 契約違反。",
+"id": "bizlegal-0001-010"
+},
+{
+"en": "The company shall not be liable for any indirect damages.",
+"jp": "会社は間接的な損害について責任を負いません。",
+"say": [],
+"note": "liable = 法的責任を負う。",
+"id": "bizlegal-0001-011"
+},
+{
+"en": "Neither party may assign this agreement without written consent.",
+"jp": "書面の同意なしに本契約を譲渡できません。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-012"
+},
+{
+"en": "This clause is subject to negotiation.",
+"jp": "この条項は交渉の対象です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-013"
+},
+{
+"en": "We'd like to amend section four.",
+"jp": "第4条を修正したいです。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-014"
+},
+{
+"en": "Could you clarify what this clause means?",
+"jp": "この条項の意味を明確にしてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-015"
+},
+{
+"en": "The confidentiality obligation continues for five years after termination.",
+"jp": "秘密保持義務は終了後も5年間続きます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-016"
+},
+{
+"en": "All intellectual property rights remain with the original owner.",
+"jp": "知的財産権はすべて元の所有者に残ります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-017"
+},
+{
+"en": "The software is licensed, not sold.",
+"jp": "ソフトウェアは販売ではなく、使用許諾です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-018"
+},
+{
+"en": "The license is non-exclusive and non-transferable.",
+"jp": "ライセンスは非独占で譲渡不可です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-019"
+},
+{
+"en": "We'll need you to sign a non-disclosure agreement first.",
+"jp": "まず秘密保持契約に署名してもらう必要があります。",
+"say": [],
+"note": "NDA = non-disclosure agreement。",
+"id": "bizlegal-0001-020"
+},
+{
+"en": "Please initial each page and sign on the last page.",
+"jp": "各ページにイニシャルを書き、最終ページに署名してください。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-021"
+},
+{
+"en": "The contract must be notarized.",
+"jp": "契約は公証が必要です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-022"
+},
+{
+"en": "We'll need an original copy with a wet signature.",
+"jp": "手書き署名のある原本が必要です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-023"
+},
+{
+"en": "An electronic signature is legally binding.",
+"jp": "電子署名には法的拘束力があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-024"
+},
+{
+"en": "Please send the signed copy back by courier.",
+"jp": "署名済みの書類を宅配便で返送してください。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-025"
+},
+{
+"en": "This is a legally binding agreement.",
+"jp": "これは法的拘束力のある契約です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-026"
+},
+{
+"en": "The warranty does not cover damage caused by misuse.",
+"jp": "保証は誤使用による損傷を対象としません。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-027"
+},
+{
+"en": "Force majeure events are excluded.",
+"jp": "不可抗力は除外されます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-028"
+},
+{
+"en": "Any disputes will be settled by arbitration.",
+"jp": "紛争は仲裁で解決します。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-029"
+},
+{
+"en": "The court has jurisdiction over any legal proceedings.",
+"jp": "法的手続きは裁判所が管轄します。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-030"
+},
+{
+"en": "I'd like to consult our lawyer before we proceed.",
+"jp": "進める前に弁護士に相談したいです。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-031"
+},
+{
+"en": "Our legal department will review it by Friday.",
+"jp": "当社の法務部が金曜までに確認します。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-032"
+},
+{
+"en": "We need to comply with data protection laws.",
+"jp": "個人情報保護法令を遵守する必要があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-033"
+},
+{
+"en": "We must obtain the customer's consent before collecting personal data.",
+"jp": "個人情報を集める前に、顧客の同意を得る必要があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-034"
+},
+{
+"en": "Please read our privacy policy and terms of service.",
+"jp": "プライバシーポリシーと利用規約をお読みください。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-035"
+},
+{
+"en": "By clicking accept, you agree to these terms.",
+"jp": "同意を押すと、これらの条件に同意したことになります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-036"
+},
+{
+"en": "You must be at least eighteen years old to sign.",
+"jp": "署名には18歳以上である必要があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-037"
+},
+{
+"en": "Please provide proof of address.",
+"jp": "住所の証明を提出してください。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-038"
+},
+{
+"en": "The deadline for filing is the end of the month.",
+"jp": "申請の期限は月末です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-039"
+},
+{
+"en": "A penalty applies if you file late.",
+"jp": "遅れると罰則があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-040"
+},
+{
+"en": "You may appeal the decision within thirty days.",
+"jp": "30日以内に決定に不服を申し立てられます。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-041"
+},
+{
+"en": "The patent application is still pending.",
+"jp": "特許出願はまだ審査中です。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-042"
+},
+{
+"en": "The trademark has been registered.",
+"jp": "商標は登録されました。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-043"
+},
+{
+"en": "We received a cease and desist letter.",
+"jp": "差止めの通知書を受け取りました。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-044"
+},
+{
+"en": "That would be a violation of the agreement.",
+"jp": "それは契約違反になります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-045"
+},
+{
+"en": "We're prepared to settle out of court.",
+"jp": "示談で解決する用意があります。",
+"say": [],
+"note": "",
+"id": "bizlegal-0001-046"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

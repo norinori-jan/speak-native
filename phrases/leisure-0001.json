@@ -1,0 +1,347 @@
+{
+"id": "leisure-0001",
+"situation": "leisure",
+"sname": "ジム・スポーツ・娯楽・パーティー",
+"icon": "🎳",
+"level": 2,
+"title": "ジム・試合・コンサート・公園・パーティー",
+"items": [
+{
+"en": "Welcome to the gym. Are you a member?",
+"jp": "ジムへようこそ。会員ですか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-001"
+},
+{
+"en": "You can sign up for a day pass for fifteen dollars.",
+"jp": "1日券は15ドルで入れます。",
+"say": [],
+"note": "",
+"id": "leisure-0001-002"
+},
+{
+"en": "The locker room is down the hall.",
+"jp": "ロッカールームは廊下の先です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-003"
+},
+{
+"en": "Please wipe down the machines after use.",
+"jp": "使った後はマシンを拭いてください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-004"
+},
+{
+"en": "The yoga class starts in ten minutes.",
+"jp": "ヨガのクラスは10分後に始まります。",
+"say": [],
+"note": "",
+"id": "leisure-0001-005"
+},
+{
+"en": "Do you need help with the weights?",
+"jp": "ウェイトの手伝いはいりますか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-006"
+},
+{
+"en": "Are you two playing doubles or singles?",
+"jp": "ダブルスですか、シングルスですか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-007"
+},
+{
+"en": "The court is reserved from six to seven.",
+"jp": "コートは6時から7時まで予約済みです。",
+"say": [],
+"note": "",
+"id": "leisure-0001-008"
+},
+{
+"en": "It's your serve.",
+"jp": "あなたのサーブです。",
+"say": [],
+"note": "",
+"id": "leisure-0001-009"
+},
+{
+"en": "Nice shot!",
+"jp": "ナイスショット！",
+"say": [],
+"note": "",
+"id": "leisure-0001-010"
+},
+{
+"en": "What's the score?",
+"jp": "スコアはどうなっていますか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-011"
+},
+{
+"en": "We're up by three.",
+"jp": "3点リードしています。",
+"say": [],
+"note": "",
+"id": "leisure-0001-012"
+},
+{
+"en": "The game went into overtime.",
+"jp": "試合は延長に入りました。",
+"say": [],
+"note": "",
+"id": "leisure-0001-013"
+},
+{
+"en": "Who's your favorite team?",
+"jp": "好きなチームはどこですか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-014"
+},
+{
+"en": "Do you want to grab seats near the field?",
+"jp": "フィールドの近くの席を取る？",
+"say": [],
+"note": "",
+"id": "leisure-0001-015"
+},
+{
+"en": "Tickets are sold out for tonight.",
+"jp": "今夜のチケットは売り切れです。",
+"say": [],
+"note": "",
+"id": "leisure-0001-016"
+},
+{
+"en": "The concert starts at eight, and doors open at seven.",
+"jp": "コンサートは8時開演、7時開場です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-017"
+},
+{
+"en": "Please have your tickets ready.",
+"jp": "チケットをご用意ください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-018"
+},
+{
+"en": "Please silence your phones during the performance.",
+"jp": "公演中は携帯を消音にしてください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-019"
+},
+{
+"en": "There will be a fifteen-minute intermission.",
+"jp": "15分の休憩があります。",
+"say": [],
+"note": "",
+"id": "leisure-0001-020"
+},
+{
+"en": "The movie runs about two hours.",
+"jp": "映画は約2時間です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-021"
+},
+{
+"en": "Would you like to see it in 3D?",
+"jp": "3Dで見ますか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-022"
+},
+{
+"en": "Two adults and one child, please.",
+"jp": "大人2人と子ども1人です。",
+"say": [],
+"note": "チケット購入の返事の例。",
+"id": "leisure-0001-023"
+},
+{
+"en": "Would you like popcorn and a drink?",
+"jp": "ポップコーンと飲み物はいかがですか。",
+"say": [],
+"note": "",
+"id": "leisure-0001-024"
+},
+{
+"en": "The show is sold out, but we have standing room.",
+"jp": "公演は完売ですが、立ち見があります。",
+"say": [],
+"note": "",
+"id": "leisure-0001-025"
+},
+{
+"en": "Children under five get in free.",
+"jp": "5歳未満は無料です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-026"
+},
+{
+"en": "The park is open from dawn to dusk.",
+"jp": "公園は夜明けから日没まで開いています。",
+"say": [],
+"note": "",
+"id": "leisure-0001-027"
+},
+{
+"en": "The trail is about three miles long.",
+"jp": "遊歩道は約3マイルの長さです。",
+"say": [],
+"note": "",
+"id": "leisure-0001-028"
+},
+{
+"en": "Bring plenty of water. It gets hot.",
+"jp": "水をたくさん持っていってください。暑くなります。",
+"say": [],
+"note": "",
+"id": "leisure-0001-029"
+},
+{
+"en": "Stay on the marked trail.",
+"jp": "印のついた道から外れないでください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-030"
+},
+{
+"en": "Be careful of the bears in this area.",
+"jp": "このあたりは熊に注意してください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-031"
+},
+{
+"en": "We rent bikes by the hour.",
+"jp": "自転車は時間貸しです。",
+"say": [],
+"note": "",
+"id": "leisure-0001-032"
+},
+{
+"en": "Please wear a helmet.",
+"jp": "ヘルメットをかぶってください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-033"
+},
+{
+"en": "The beach has lifeguards on duty until six.",
+"jp": "ビーチには6時まで監視員がいます。",
+"say": [],
+"note": "",
+"id": "leisure-0001-034"
+},
+{
+"en": "Swimming is not allowed after dark.",
+"jp": "日没後の遊泳は禁止です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-035"
+},
+{
+"en": "The tour includes lunch and a visit to the winery.",
+"jp": "ツアーには昼食とワイナリー見学が含まれます。",
+"say": [],
+"note": "",
+"id": "leisure-0001-036"
+},
+{
+"en": "The bus leaves at eight sharp. Please don't be late.",
+"jp": "バスは8時ちょうどに出ます。遅れないでください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-037"
+},
+{
+"en": "Please stay with the group.",
+"jp": "グループから離れないでください。",
+"say": [],
+"note": "",
+"id": "leisure-0001-038"
+},
+{
+"en": "We'll meet back here in one hour.",
+"jp": "1時間後にここに集合です。",
+"say": [],
+"note": "",
+"id": "leisure-0001-039"
+},
+{
+"en": "Would you like me to take a picture of you?",
+"jp": "写真を撮りましょうか。",
+"say": [
+{
+"en": "Yes, please. Thank you.",
+"jp": "はい、お願いします。ありがとう。"
+}
+],
+"note": "",
+"id": "leisure-0001-040"
+},
+{
+"en": "Say cheese!",
+"jp": "はい、チーズ！",
+"say": [],
+"note": "",
+"id": "leisure-0001-041"
+},
+{
+"en": "Are you coming to the party on Saturday?",
+"jp": "土曜のパーティーには来る？",
+"say": [],
+"note": "",
+"id": "leisure-0001-042"
+},
+{
+"en": "It's a potluck, so bring a dish to share.",
+"jp": "持ち寄りなので、分け合う料理を持ってきて。",
+"say": [],
+"note": "",
+"id": "leisure-0001-043"
+},
+{
+"en": "Feel free to bring a friend.",
+"jp": "友だちを連れてきてもいいよ。",
+"say": [],
+"note": "",
+"id": "leisure-0001-044"
+},
+{
+"en": "Do you want to play a board game?",
+"jp": "ボードゲームをしない？",
+"say": [],
+"note": "",
+"id": "leisure-0001-045"
+},
+{
+"en": "I'll get the next round.",
+"jp": "次は私がおごるよ。",
+"say": [],
+"note": "",
+"id": "leisure-0001-046"
+},
+{
+"en": "It's been a great evening. Thanks for coming.",
+"jp": "いい夜でした。来てくれてありがとう。",
+"say": [],
+"note": "",
+"id": "leisure-0001-047"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

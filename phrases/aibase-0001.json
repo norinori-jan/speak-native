@@ -1,0 +1,335 @@
+{
+"id": "aibase-0001",
+"situation": "aibase",
+"sname": "AI：基礎用語（LLM・トークン・プロンプト）",
+"icon": "🤖",
+"level": 4,
+"title": "LLMの基本と、聞き取りたい専門用語",
+"items": [
+{
+"en": "A large language model predicts the next token based on the context.",
+"jp": "大規模言語モデルは、文脈をもとに次のトークンを予測します。",
+"say": [],
+"note": "token = モデルが扱う文字の単位（単語の断片）。",
+"id": "aibase-0001-001"
+},
+{
+"en": "The model has billions of parameters.",
+"jp": "そのモデルには数十億のパラメータがあります。",
+"say": [],
+"note": "parameter = 学習で調整される数値（重み）。",
+"id": "aibase-0001-002"
+},
+{
+"en": "It was trained on a huge corpus of text from the internet.",
+"jp": "インターネット上の膨大な文章のコーパスで学習されました。",
+"say": [],
+"note": "corpus = 学習用の文章データの集まり。",
+"id": "aibase-0001-003"
+},
+{
+"en": "The context window is two hundred thousand tokens.",
+"jp": "コンテキストウィンドウは20万トークンです。",
+"say": [],
+"note": "context window = 一度に扱える入力の長さ。",
+"id": "aibase-0001-004"
+},
+{
+"en": "The model can't remember anything between conversations unless we give it memory.",
+"jp": "メモリを与えない限り、モデルは会話をまたいで何も覚えていません。",
+"say": [],
+"note": "",
+"id": "aibase-0001-005"
+},
+{
+"en": "The prompt you write has a huge impact on the output.",
+"jp": "書いたプロンプトが出力に大きく影響します。",
+"say": [],
+"note": "",
+"id": "aibase-0001-006"
+},
+{
+"en": "Let's try a few-shot prompt with three examples.",
+"jp": "例を3つ入れた few-shot プロンプトを試しましょう。",
+"say": [],
+"note": "few-shot = 例を数個見せて真似させる。zero-shot = 例なし。",
+"id": "aibase-0001-007"
+},
+{
+"en": "Zero-shot performance is surprisingly good.",
+"jp": "zero-shot の性能は意外とよいです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-008"
+},
+{
+"en": "Ask the model to think step by step.",
+"jp": "モデルに段階的に考えさせてください。",
+"say": [],
+"note": "chain-of-thought = 考える過程を書かせて精度を上げる方法。",
+"id": "aibase-0001-009"
+},
+{
+"en": "The temperature controls how random the output is.",
+"jp": "temperature は出力のランダムさを調整します。",
+"say": [],
+"note": "低いと安定、高いと多様。",
+"id": "aibase-0001-010"
+},
+{
+"en": "Set the temperature to zero for consistent results.",
+"jp": "結果を安定させるには temperature を0にします。",
+"say": [],
+"note": "",
+"id": "aibase-0001-011"
+},
+{
+"en": "The system prompt defines the model's role and rules.",
+"jp": "システムプロンプトがモデルの役割とルールを決めます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-012"
+},
+{
+"en": "The model sometimes hallucinates facts that don't exist.",
+"jp": "モデルは時々、存在しない事実をでっち上げます。",
+"say": [],
+"note": "hallucination = もっともらしい誤り。",
+"id": "aibase-0001-013"
+},
+{
+"en": "We need to verify the output before using it.",
+"jp": "使う前に出力を確認する必要があります。",
+"say": [],
+"note": "",
+"id": "aibase-0001-014"
+},
+{
+"en": "Inference is much cheaper than training.",
+"jp": "推論は学習よりずっと安いです。",
+"say": [],
+"note": "inference = 学習済みモデルを使うこと。",
+"id": "aibase-0001-015"
+},
+{
+"en": "Latency matters a lot for real-time applications.",
+"jp": "リアルタイム用途では遅延がとても重要です。",
+"say": [],
+"note": "",
+"id": "aibase-0001-016"
+},
+{
+"en": "The model supports multimodal input, such as text and images.",
+"jp": "このモデルはテキストと画像などのマルチモーダル入力に対応します。",
+"say": [],
+"note": "",
+"id": "aibase-0001-017"
+},
+{
+"en": "It can read a chart and summarize the findings.",
+"jp": "グラフを読んで結果を要約できます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-018"
+},
+{
+"en": "Open-weight models can be run on your own hardware.",
+"jp": "オープンウェイトのモデルは自分の機器で動かせます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-019"
+},
+{
+"en": "A smaller model can be good enough for simple tasks.",
+"jp": "簡単な作業なら、小さいモデルで十分なことがあります。",
+"say": [],
+"note": "",
+"id": "aibase-0001-020"
+},
+{
+"en": "Quantization reduces the model size with a small loss in quality.",
+"jp": "量子化で、品質をわずかに落としてモデルを小さくできます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-021"
+},
+{
+"en": "It runs locally on a laptop with sixteen gigabytes of memory.",
+"jp": "16GBメモリのノートPCでローカルに動きます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-022"
+},
+{
+"en": "The GPU is the bottleneck here.",
+"jp": "ここではGPUがボトルネックです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-023"
+},
+{
+"en": "Generative AI can create text, images, audio, and code.",
+"jp": "生成AIは文章、画像、音声、コードを作れます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-024"
+},
+{
+"en": "A chatbot is just one application of language models.",
+"jp": "チャットボットは言語モデルの用途の一つにすぎません。",
+"say": [],
+"note": "",
+"id": "aibase-0001-025"
+},
+{
+"en": "An embedding turns text into a list of numbers.",
+"jp": "埋め込みは、文章を数値の並びにします。",
+"say": [],
+"note": "embedding = 意味の近さを計れるベクトル表現。",
+"id": "aibase-0001-026"
+},
+{
+"en": "Similar meanings end up close together in the vector space.",
+"jp": "似た意味は、ベクトル空間で近くに並びます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-027"
+},
+{
+"en": "The attention mechanism lets the model focus on relevant parts of the input.",
+"jp": "アテンション機構で、入力の関連部分に注目できます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-028"
+},
+{
+"en": "The transformer architecture changed the whole field.",
+"jp": "トランスフォーマー構造が分野全体を変えました。",
+"say": [],
+"note": "",
+"id": "aibase-0001-029"
+},
+{
+"en": "It's an encoder-decoder model.",
+"jp": "それはエンコーダ・デコーダ型のモデルです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-030"
+},
+{
+"en": "The tokenizer splits the text into subword units.",
+"jp": "トークナイザは文章をサブワード単位に分けます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-031"
+},
+{
+"en": "Japanese text usually takes more tokens than English.",
+"jp": "日本語は英語より多くのトークンを使うことが多いです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-032"
+},
+{
+"en": "You're billed per million tokens, for both input and output.",
+"jp": "入力と出力の両方で、100万トークンごとに課金されます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-033"
+},
+{
+"en": "Prompt caching can cut your costs significantly.",
+"jp": "プロンプトのキャッシュでコストを大きく減らせます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-034"
+},
+{
+"en": "The model has a knowledge cutoff, so it doesn't know recent events.",
+"jp": "モデルには知識の締め切りがあり、最近の出来事は知りません。",
+"say": [],
+"note": "",
+"id": "aibase-0001-035"
+},
+{
+"en": "We can give it access to the web through a search tool.",
+"jp": "検索ツールでウェブにアクセスさせられます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-036"
+},
+{
+"en": "It's not conscious. It's a statistical model of language.",
+"jp": "意識があるわけではなく、言語の統計モデルです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-037"
+},
+{
+"en": "Benchmarks don't always reflect real-world performance.",
+"jp": "ベンチマークは実際の性能を必ずしも反映しません。",
+"say": [],
+"note": "",
+"id": "aibase-0001-038"
+},
+{
+"en": "The model scored ninety percent on the benchmark.",
+"jp": "そのモデルはベンチマークで90%を取りました。",
+"say": [],
+"note": "",
+"id": "aibase-0001-039"
+},
+{
+"en": "Scaling laws suggest that bigger models perform better.",
+"jp": "スケーリング則では、大きなモデルほど性能が高くなります。",
+"say": [],
+"note": "",
+"id": "aibase-0001-040"
+},
+{
+"en": "The research community is moving fast.",
+"jp": "研究コミュニティの進みは速いです。",
+"say": [],
+"note": "",
+"id": "aibase-0001-041"
+},
+{
+"en": "This paper introduces a new training method.",
+"jp": "この論文は新しい学習方法を紹介しています。",
+"say": [],
+"note": "",
+"id": "aibase-0001-042"
+},
+{
+"en": "The results are state of the art.",
+"jp": "結果は最先端の水準です。",
+"say": [],
+"note": "",
+"id": "aibase-0001-043"
+},
+{
+"en": "It outperforms the baseline by five points.",
+"jp": "ベースラインを5ポイント上回ります。",
+"say": [],
+"note": "",
+"id": "aibase-0001-044"
+},
+{
+"en": "We haven't seen it generalize to other tasks yet.",
+"jp": "他のタスクへの汎化はまだ見ていません。",
+"say": [],
+"note": "",
+"id": "aibase-0001-045"
+},
+{
+"en": "It's open source, so you can read the code.",
+"jp": "オープンソースなので、コードを読めます。",
+"say": [],
+"note": "",
+"id": "aibase-0001-046"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

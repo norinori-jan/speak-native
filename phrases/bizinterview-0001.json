@@ -1,0 +1,333 @@
+{
+"id": "bizinterview-0001",
+"situation": "bizinterview",
+"sname": "ビジネス：面接・採用",
+"icon": "🧑‍💼",
+"level": 3,
+"title": "面接の質問・オファー・条件",
+"items": [
+{
+"en": "Thanks for coming in today. Please have a seat.",
+"jp": "本日はお越しいただきありがとうございます。おかけください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-001"
+},
+{
+"en": "Did you have any trouble finding the office?",
+"jp": "オフィスは迷わず来られましたか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-002"
+},
+{
+"en": "Can I get you some water or coffee?",
+"jp": "お水かコーヒーはいかがですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-003"
+},
+{
+"en": "Let's start with a quick introduction.",
+"jp": "まず簡単に自己紹介をお願いします。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-004"
+},
+{
+"en": "Tell me a little about yourself.",
+"jp": "あなたについて少し教えてください。",
+"say": [],
+"note": "面接の最初の定番。",
+"id": "bizinterview-0001-005"
+},
+{
+"en": "Walk me through your resume.",
+"jp": "履歴書に沿って説明してください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-006"
+},
+{
+"en": "What made you apply for this position?",
+"jp": "なぜこの職に応募したのですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-007"
+},
+{
+"en": "Why do you want to work for our company?",
+"jp": "なぜ当社で働きたいのですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-008"
+},
+{
+"en": "What are your greatest strengths?",
+"jp": "あなたの一番の強みは何ですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-009"
+},
+{
+"en": "What would you say is your biggest weakness?",
+"jp": "あなたの一番の弱みは何ですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-010"
+},
+{
+"en": "Can you describe a challenge you faced and how you handled it?",
+"jp": "直面した課題と、その対処を説明してください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-011"
+},
+{
+"en": "Tell me about a time you worked as part of a team.",
+"jp": "チームで働いた経験を教えてください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-012"
+},
+{
+"en": "Give me an example of a time you showed leadership.",
+"jp": "リーダーシップを発揮した例を挙げてください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-013"
+},
+{
+"en": "How do you handle tight deadlines?",
+"jp": "厳しい締め切りにどう対処しますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-014"
+},
+{
+"en": "How do you deal with disagreements with coworkers?",
+"jp": "同僚との意見の対立にどう対応しますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-015"
+},
+{
+"en": "How would your previous manager describe you?",
+"jp": "前の上司はあなたをどう評するでしょうか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-016"
+},
+{
+"en": "Why did you leave your last job?",
+"jp": "前の仕事をなぜ辞めたのですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-017"
+},
+{
+"en": "What are you looking for in your next role?",
+"jp": "次の仕事に何を求めますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-018"
+},
+{
+"en": "Where do you see yourself in five years?",
+"jp": "5年後はどうなっていたいですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-019"
+},
+{
+"en": "What are your salary expectations?",
+"jp": "希望年収はどのくらいですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-020"
+},
+{
+"en": "When would you be able to start?",
+"jp": "いつから働けますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-021"
+},
+{
+"en": "Are you willing to relocate?",
+"jp": "転居は可能ですか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-022"
+},
+{
+"en": "Do you have experience with project management software?",
+"jp": "プロジェクト管理ソフトの経験はありますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-023"
+},
+{
+"en": "How proficient are you in English?",
+"jp": "英語はどのくらいできますか。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-024"
+},
+{
+"en": "Do you have any questions for us?",
+"jp": "こちらに質問はありますか。",
+"say": [
+{
+"en": "Yes. What does a typical day look like?",
+"jp": "はい。典型的な1日はどんな感じですか。"
+}
+],
+"note": "面接の最後に必ず聞かれる。",
+"id": "bizinterview-0001-025"
+},
+{
+"en": "The role involves a lot of collaboration with the overseas team.",
+"jp": "この職務は海外チームとの協働が多いです。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-026"
+},
+{
+"en": "This is a hybrid role: three days in the office, two days remote.",
+"jp": "ハイブリッド勤務で、出社3日、リモート2日です。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-027"
+},
+{
+"en": "We'll be interviewing a few more candidates this week.",
+"jp": "今週あと数名の候補者と面接します。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-028"
+},
+{
+"en": "We'll let you know our decision by the end of next week.",
+"jp": "来週末までに結果をお知らせします。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-029"
+},
+{
+"en": "We'd like to move you to the next round.",
+"jp": "次の選考に進んでいただきたいです。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-030"
+},
+{
+"en": "We'd like to offer you the position.",
+"jp": "あなたに採用のオファーを出したいです。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-031"
+},
+{
+"en": "The starting salary is sixty thousand dollars per year.",
+"jp": "初任給は年6万ドルです。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-032"
+},
+{
+"en": "The benefits include health insurance and twenty days of paid leave.",
+"jp": "福利厚生には健康保険と20日の有給休暇が含まれます。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-033"
+},
+{
+"en": "You'll have a three-month probation period.",
+"jp": "3か月の試用期間があります。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-034"
+},
+{
+"en": "Please sign and return the offer letter by Friday.",
+"jp": "オファーレターに署名して金曜までに返送してください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-035"
+},
+{
+"en": "We'll need two references.",
+"jp": "推薦者が2名必要です。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-036"
+},
+{
+"en": "We'll run a background check.",
+"jp": "身元調査を行います。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-037"
+},
+{
+"en": "Your first day will be on the first of next month.",
+"jp": "初日は来月1日です。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-038"
+},
+{
+"en": "Please bring your ID and bank details on your first day.",
+"jp": "初日は身分証と銀行口座の情報を持参してください。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-039"
+},
+{
+"en": "Your manager will be Emily. She'll meet you at nine.",
+"jp": "上司はエミリーです。9時に会います。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-040"
+},
+{
+"en": "We'll set up your laptop and email account.",
+"jp": "パソコンとメールアカウントを用意します。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-041"
+},
+{
+"en": "It was a pleasure meeting you.",
+"jp": "お会いできて光栄でした。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-042"
+},
+{
+"en": "Thank you for your time. We'll be in touch.",
+"jp": "お時間ありがとうございました。連絡します。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-043"
+},
+{
+"en": "Unfortunately, we've decided to go with another candidate.",
+"jp": "残念ながら、他の候補者に決まりました。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-044"
+},
+{
+"en": "We'll keep your resume on file for future openings.",
+"jp": "履歴書は今後の募集のために保管します。",
+"say": [],
+"note": "",
+"id": "bizinterview-0001-045"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

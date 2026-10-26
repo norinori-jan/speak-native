@@ -1,0 +1,373 @@
+{
+"id": "bizit-0001",
+"situation": "bizit",
+"sname": "ビジネス：IT・開発",
+"icon": "💻",
+"level": 3,
+"title": "障害・リリース・レビュー・セキュリティ",
+"items": [
+{
+"en": "We're having an issue in production. Can you jump on a call?",
+"jp": "本番環境で問題が起きています。通話に入れますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-001"
+},
+{
+"en": "The server is down. We're looking into it.",
+"jp": "サーバーが落ちています。調べています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-002"
+},
+{
+"en": "Can you reproduce the bug?",
+"jp": "バグを再現できますか。",
+"say": [
+{
+"en": "Yes, every time I click the save button.",
+"jp": "はい、保存ボタンを押すたびに起きます。"
+}
+],
+"note": "",
+"id": "bizit-0001-003"
+},
+{
+"en": "It only happens on iOS, not on Android.",
+"jp": "iOSでだけ起きて、Androidでは起きません。",
+"say": [],
+"note": "",
+"id": "bizit-0001-004"
+},
+{
+"en": "Which version are you running?",
+"jp": "どのバージョンを使っていますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-005"
+},
+{
+"en": "Have you cleared the cache and cookies?",
+"jp": "キャッシュとクッキーは消しましたか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-006"
+},
+{
+"en": "Could you send me the error message or a screenshot?",
+"jp": "エラーメッセージかスクリーンショットを送ってもらえますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-007"
+},
+{
+"en": "Let me check the logs.",
+"jp": "ログを確認します。",
+"say": [],
+"note": "",
+"id": "bizit-0001-008"
+},
+{
+"en": "It looks like a timeout issue.",
+"jp": "タイムアウトの問題のようです。",
+"say": [],
+"note": "",
+"id": "bizit-0001-009"
+},
+{
+"en": "I think we're hitting the rate limit.",
+"jp": "レート制限に当たっていると思います。",
+"say": [],
+"note": "rate limit = API呼び出し回数の上限。",
+"id": "bizit-0001-010"
+},
+{
+"en": "The database query is taking too long.",
+"jp": "データベースのクエリが遅すぎます。",
+"say": [],
+"note": "",
+"id": "bizit-0001-011"
+},
+{
+"en": "We need to roll back the deployment.",
+"jp": "デプロイを元に戻す必要があります。",
+"say": [],
+"note": "roll back = 前の版に戻す。",
+"id": "bizit-0001-012"
+},
+{
+"en": "I'll push a hotfix this afternoon.",
+"jp": "午後にホットフィックスを出します。",
+"say": [],
+"note": "",
+"id": "bizit-0001-013"
+},
+{
+"en": "The fix is in the staging environment. Can you test it?",
+"jp": "修正はステージング環境にあります。テストしてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-014"
+},
+{
+"en": "It passed all the tests.",
+"jp": "すべてのテストを通過しました。",
+"say": [],
+"note": "",
+"id": "bizit-0001-015"
+},
+{
+"en": "The pull request is ready for review.",
+"jp": "プルリクエストはレビューの準備ができています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-016"
+},
+{
+"en": "Could you approve my pull request?",
+"jp": "私のプルリクエストを承認してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-017"
+},
+{
+"en": "There's a merge conflict. I'll resolve it.",
+"jp": "マージの衝突があります。私が解消します。",
+"say": [],
+"note": "",
+"id": "bizit-0001-018"
+},
+{
+"en": "We're planning a release for next Thursday.",
+"jp": "来週木曜にリリースを予定しています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-019"
+},
+{
+"en": "Let's freeze the code until the release.",
+"jp": "リリースまでコードを凍結しましょう。",
+"say": [],
+"note": "code freeze = 変更禁止期間。",
+"id": "bizit-0001-020"
+},
+{
+"en": "This is a breaking change. We need to notify our customers.",
+"jp": "これは互換性のない変更です。顧客に知らせる必要があります。",
+"say": [],
+"note": "",
+"id": "bizit-0001-021"
+},
+{
+"en": "We'll be doing maintenance this Saturday from midnight to four a.m.",
+"jp": "今週土曜の深夜0時から4時までメンテナンスを行います。",
+"say": [],
+"note": "",
+"id": "bizit-0001-022"
+},
+{
+"en": "There will be a brief downtime during the update.",
+"jp": "更新中、短時間停止します。",
+"say": [],
+"note": "",
+"id": "bizit-0001-023"
+},
+{
+"en": "Please back up your files before the migration.",
+"jp": "移行の前にファイルをバックアップしてください。",
+"say": [],
+"note": "",
+"id": "bizit-0001-024"
+},
+{
+"en": "We're migrating to a new cloud provider.",
+"jp": "新しいクラウドへ移行しています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-025"
+},
+{
+"en": "Can you give me access to the repository?",
+"jp": "リポジトリへのアクセス権をもらえますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-026"
+},
+{
+"en": "I've sent you an invite. Please check your email.",
+"jp": "招待を送りました。メールを確認してください。",
+"say": [],
+"note": "",
+"id": "bizit-0001-027"
+},
+{
+"en": "Please enable two-factor authentication.",
+"jp": "二要素認証を有効にしてください。",
+"say": [],
+"note": "",
+"id": "bizit-0001-028"
+},
+{
+"en": "Your password has expired. You need to reset it.",
+"jp": "パスワードの期限が切れました。再設定が必要です。",
+"say": [],
+"note": "",
+"id": "bizit-0001-029"
+},
+{
+"en": "Don't click on links in suspicious emails.",
+"jp": "怪しいメールのリンクをクリックしないでください。",
+"say": [],
+"note": "",
+"id": "bizit-0001-030"
+},
+{
+"en": "We've detected unusual activity on your account.",
+"jp": "アカウントで不審な動きを検知しました。",
+"say": [],
+"note": "",
+"id": "bizit-0001-031"
+},
+{
+"en": "Let's schedule a code review for tomorrow.",
+"jp": "明日コードレビューの予定を入れましょう。",
+"say": [],
+"note": "",
+"id": "bizit-0001-032"
+},
+{
+"en": "We need to refactor this module. It's hard to maintain.",
+"jp": "このモジュールはリファクタリングが必要です。保守しにくいです。",
+"say": [],
+"note": "",
+"id": "bizit-0001-033"
+},
+{
+"en": "This feature is out of scope for the first release.",
+"jp": "この機能は最初のリリースの範囲外です。",
+"say": [],
+"note": "",
+"id": "bizit-0001-034"
+},
+{
+"en": "What's the estimated effort for this task?",
+"jp": "このタスクの見積もり工数はどのくらいですか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-035"
+},
+{
+"en": "I'd say about three days, including testing.",
+"jp": "テストを含めて3日くらいだと思います。",
+"say": [],
+"note": "",
+"id": "bizit-0001-036"
+},
+{
+"en": "Let's break this down into smaller tasks.",
+"jp": "これを小さなタスクに分けましょう。",
+"say": [],
+"note": "",
+"id": "bizit-0001-037"
+},
+{
+"en": "We're in the middle of a sprint.",
+"jp": "今スプリントの途中です。",
+"say": [],
+"note": "",
+"id": "bizit-0001-038"
+},
+{
+"en": "The stand-up is at nine thirty every morning.",
+"jp": "朝会は毎朝9時半です。",
+"say": [],
+"note": "",
+"id": "bizit-0001-039"
+},
+{
+"en": "What's blocking you right now?",
+"jp": "今、何が妨げになっていますか。",
+"say": [
+{
+"en": "I'm waiting on the API documentation.",
+"jp": "APIの資料待ちです。"
+}
+],
+"note": "blocker = 作業を止める要因。",
+"id": "bizit-0001-040"
+},
+{
+"en": "I'll take that ticket.",
+"jp": "そのチケットは私が担当します。",
+"say": [],
+"note": "",
+"id": "bizit-0001-041"
+},
+{
+"en": "Please update the ticket with your progress.",
+"jp": "進捗をチケットに更新してください。",
+"say": [],
+"note": "",
+"id": "bizit-0001-042"
+},
+{
+"en": "We use a ticketing system to track bugs.",
+"jp": "バグ管理にチケットシステムを使っています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-043"
+},
+{
+"en": "Can you walk me through the architecture?",
+"jp": "アーキテクチャを説明してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizit-0001-044"
+},
+{
+"en": "We use a REST API with JSON responses.",
+"jp": "JSONを返すREST APIを使っています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-045"
+},
+{
+"en": "The data is encrypted at rest and in transit.",
+"jp": "データは保存時も通信時も暗号化されています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-046"
+},
+{
+"en": "Latency has gone up since yesterday.",
+"jp": "昨日から遅延が増えています。",
+"say": [],
+"note": "",
+"id": "bizit-0001-047"
+},
+{
+"en": "We need to scale up the servers before the launch.",
+"jp": "ローンチ前にサーバーを増強する必要があります。",
+"say": [],
+"note": "",
+"id": "bizit-0001-048"
+},
+{
+"en": "The system is back online. Thanks for your patience.",
+"jp": "システムが復旧しました。お待ちいただきありがとうございました。",
+"say": [],
+"note": "",
+"id": "bizit-0001-049"
+},
+{
+"en": "We'll write a post-mortem to learn from this incident.",
+"jp": "この障害から学ぶため、事後検証をまとめます。",
+"say": [],
+"note": "",
+"id": "bizit-0001-050"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

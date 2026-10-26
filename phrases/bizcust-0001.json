@@ -1,0 +1,314 @@
+{
+"id": "bizcust-0001",
+"situation": "bizcust",
+"sname": "ビジネス：顧客対応（サポート側）",
+"icon": "🎧",
+"level": 3,
+"title": "本人確認・原因調査・返金・解約",
+"items": [
+{
+"en": "Thank you for calling customer support. How may I help you?",
+"jp": "カスタマーサポートです。ご用件をお伺いします。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-001"
+},
+{
+"en": "Could I have your account number, please?",
+"jp": "アカウント番号を教えてください。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-002"
+},
+{
+"en": "For security purposes, I need to verify your identity.",
+"jp": "セキュリティのため、本人確認が必要です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-003"
+},
+{
+"en": "Could you confirm your date of birth and the last four digits of your phone number?",
+"jp": "生年月日と電話番号の下4桁を確認できますか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-004"
+},
+{
+"en": "I'm sorry to hear you're having trouble.",
+"jp": "ご不便をおかけして申し訳ありません。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-005"
+},
+{
+"en": "Let me look into your account.",
+"jp": "アカウントを確認します。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-006"
+},
+{
+"en": "It looks like your subscription expired last week.",
+"jp": "先週、契約期間が切れたようです。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-007"
+},
+{
+"en": "I see that you were charged twice this month.",
+"jp": "今月、二重に請求されていますね。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-008"
+},
+{
+"en": "I've issued a refund. It will appear in three to five days.",
+"jp": "返金手続きをしました。3〜5日で反映されます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-009"
+},
+{
+"en": "Could you try restarting the device and tell me what happens?",
+"jp": "端末を再起動して、どうなるか教えてください。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-010"
+},
+{
+"en": "Please go to settings and tap on the network icon.",
+"jp": "設定を開いて、ネットワークのアイコンを押してください。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-011"
+},
+{
+"en": "Can you see a green light on the router?",
+"jp": "ルーターに緑のランプが見えますか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-012"
+},
+{
+"en": "I'll walk you through it step by step.",
+"jp": "順を追って説明します。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-013"
+},
+{
+"en": "Please hold while I escalate this to a specialist.",
+"jp": "専門担当に回しますので、お待ちください。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-014"
+},
+{
+"en": "Your case number is A-four-seven-two-nine.",
+"jp": "受付番号はA、4、7、2、9です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-015"
+},
+{
+"en": "You'll receive a confirmation email shortly.",
+"jp": "まもなく確認メールが届きます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-016"
+},
+{
+"en": "Is there anything else I can help you with today?",
+"jp": "他にお手伝いできることはありますか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-017"
+},
+{
+"en": "You'll be getting a short survey after this call.",
+"jp": "この通話の後、簡単なアンケートが届きます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-018"
+},
+{
+"en": "I'd like to cancel my subscription.",
+"jp": "解約したいのですが。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-019"
+},
+{
+"en": "Before you go, may I offer you a discount to stay?",
+"jp": "解約の前に、継続のための割引をご案内してもよいですか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-020"
+},
+{
+"en": "Your cancellation will take effect at the end of the billing period.",
+"jp": "解約は請求期間の終わりに有効になります。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-021"
+},
+{
+"en": "I can upgrade your plan right now.",
+"jp": "今すぐプランをアップグレードできます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-022"
+},
+{
+"en": "The new plan will start from your next billing cycle.",
+"jp": "新しいプランは次の請求期間から始まります。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-023"
+},
+{
+"en": "I'm sorry, that's not something I'm able to do.",
+"jp": "申し訳ありません、それは私にはできません。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-024"
+},
+{
+"en": "That's against our policy, but let me see what I can do.",
+"jp": "規則上は難しいですが、できることを確認します。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-025"
+},
+{
+"en": "We're experiencing a high volume of calls today.",
+"jp": "本日は電話が大変混み合っています。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-026"
+},
+{
+"en": "The estimated wait time is about fifteen minutes.",
+"jp": "お待ち時間は約15分です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-027"
+},
+{
+"en": "You can also reach us through our website's live chat.",
+"jp": "ウェブサイトのチャットでもご連絡いただけます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-028"
+},
+{
+"en": "Our support team is available twenty-four seven.",
+"jp": "サポートは年中無休24時間対応です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-029"
+},
+{
+"en": "The item is currently on backorder.",
+"jp": "その商品は現在、入荷待ちです。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-030"
+},
+{
+"en": "It should be back in stock by the end of next month.",
+"jp": "来月末には入荷する見込みです。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-031"
+},
+{
+"en": "Your order has been shipped and should arrive on Thursday.",
+"jp": "ご注文は発送済みで、木曜に届く予定です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-032"
+},
+{
+"en": "The package was marked as delivered. Did you check with your neighbors?",
+"jp": "荷物は配達済みになっています。ご近所に確認しましたか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-033"
+},
+{
+"en": "We'll send you a prepaid return label.",
+"jp": "返送用の着払いラベルをお送りします。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-034"
+},
+{
+"en": "Once we receive the item, we'll process your refund.",
+"jp": "商品を受け取り次第、返金を処理します。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-035"
+},
+{
+"en": "Could you describe the problem in more detail?",
+"jp": "問題をもう少し詳しく説明してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-036"
+},
+{
+"en": "Did this problem start after a recent update?",
+"jp": "最近の更新の後から始まりましたか。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-037"
+},
+{
+"en": "I'll need remote access to your computer, if that's okay.",
+"jp": "よろしければ、パソコンへのリモート接続が必要です。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-038"
+},
+{
+"en": "Please don't share your password with anyone, including us.",
+"jp": "パスワードは誰にも、私たちにも教えないでください。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-039"
+},
+{
+"en": "We'll never ask for your password by phone.",
+"jp": "電話でパスワードをお聞きすることはありません。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-040"
+},
+{
+"en": "Thank you for your patience and understanding.",
+"jp": "ご理解とご辛抱に感謝します。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-041"
+},
+{
+"en": "We appreciate your feedback. It helps us improve.",
+"jp": "ご意見に感謝します。改善に役立てます。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-042"
+},
+{
+"en": "Have a wonderful day.",
+"jp": "素敵な一日を。",
+"say": [],
+"note": "",
+"id": "bizcust-0001-043"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

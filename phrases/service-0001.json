@@ -1,0 +1,366 @@
+{
+"id": "service-0001",
+"situation": "service",
+"sname": "銀行・郵便・役所",
+"icon": "🏦",
+"level": 2,
+"title": "口座・両替・郵送・窓口手続き",
+"items": [
+{
+"en": "Hello, how can I help you today?",
+"jp": "こんにちは、今日はどのようなご用件でしょうか。",
+"say": [
+{
+"en": "I'd like to open a bank account.",
+"jp": "口座を開きたいのですが。"
+}
+],
+"note": "",
+"id": "service-0001-001"
+},
+{
+"en": "Could I see two forms of ID?",
+"jp": "身分証を2種類見せてもらえますか。",
+"say": [],
+"note": "",
+"id": "service-0001-002"
+},
+{
+"en": "Do you want a checking or a savings account?",
+"jp": "普通預金と貯蓄預金のどちらにしますか。",
+"say": [],
+"note": "",
+"id": "service-0001-003"
+},
+{
+"en": "Please fill out this application.",
+"jp": "この申込書に記入してください。",
+"say": [],
+"note": "",
+"id": "service-0001-004"
+},
+{
+"en": "We'll mail your debit card in about a week.",
+"jp": "デビットカードは1週間ほどで郵送します。",
+"say": [],
+"note": "",
+"id": "service-0001-005"
+},
+{
+"en": "Would you like online banking?",
+"jp": "オンラインバンキングを利用しますか。",
+"say": [],
+"note": "",
+"id": "service-0001-006"
+},
+{
+"en": "How much would you like to withdraw?",
+"jp": "いくら引き出しますか。",
+"say": [],
+"note": "",
+"id": "service-0001-007"
+},
+{
+"en": "Would you like that in twenties?",
+"jp": "20ドル札でよろしいですか。",
+"say": [],
+"note": "",
+"id": "service-0001-008"
+},
+{
+"en": "How would you like the bills?",
+"jp": "お札はどう崩しますか。",
+"say": [],
+"note": "",
+"id": "service-0001-009"
+},
+{
+"en": "Please enter your PIN.",
+"jp": "暗証番号を入力してください。",
+"say": [],
+"note": "",
+"id": "service-0001-010"
+},
+{
+"en": "There's a monthly fee unless you keep a minimum balance.",
+"jp": "最低残高を保たないと月額手数料がかかります。",
+"say": [],
+"note": "",
+"id": "service-0001-011"
+},
+{
+"en": "An international wire transfer takes about three business days.",
+"jp": "海外送金は営業日で3日ほどかかります。",
+"say": [],
+"note": "",
+"id": "service-0001-012"
+},
+{
+"en": "The transfer fee is twenty-five dollars.",
+"jp": "送金手数料は25ドルです。",
+"say": [],
+"note": "",
+"id": "service-0001-013"
+},
+{
+"en": "Could you exchange these yen for dollars?",
+"jp": "この円をドルに両替できますか。",
+"say": [],
+"note": "",
+"id": "service-0001-014"
+},
+{
+"en": "The exchange rate today is one dollar to one hundred fifty yen.",
+"jp": "今日のレートは1ドル150円です。",
+"say": [],
+"note": "",
+"id": "service-0001-015"
+},
+{
+"en": "There's a small commission for currency exchange.",
+"jp": "両替には少額の手数料がかかります。",
+"say": [],
+"note": "",
+"id": "service-0001-016"
+},
+{
+"en": "Hi, I'd like to send this package to Japan.",
+"jp": "この小包を日本に送りたいのですが。",
+"say": [],
+"note": "",
+"id": "service-0001-017"
+},
+{
+"en": "What's inside the package?",
+"jp": "中身は何ですか。",
+"say": [
+{
+"en": "Just clothes and books.",
+"jp": "衣類と本だけです。"
+}
+],
+"note": "",
+"id": "service-0001-018"
+},
+{
+"en": "Does it contain anything fragile, liquid, or perishable?",
+"jp": "割れ物、液体、傷みやすいものは入っていますか。",
+"say": [],
+"note": "",
+"id": "service-0001-019"
+},
+{
+"en": "Would you like standard or express shipping?",
+"jp": "通常便と速達のどちらにしますか。",
+"say": [],
+"note": "",
+"id": "service-0001-020"
+},
+{
+"en": "Express takes five to seven days. Standard takes about three weeks.",
+"jp": "速達は5〜7日、通常便は約3週間です。",
+"say": [],
+"note": "",
+"id": "service-0001-021"
+},
+{
+"en": "Would you like insurance for this package?",
+"jp": "この荷物に保険をかけますか。",
+"say": [],
+"note": "",
+"id": "service-0001-022"
+},
+{
+"en": "Please fill out this customs form.",
+"jp": "この税関申告書に記入してください。",
+"say": [],
+"note": "",
+"id": "service-0001-023"
+},
+{
+"en": "Please write the address in English.",
+"jp": "住所は英語で書いてください。",
+"say": [],
+"note": "",
+"id": "service-0001-024"
+},
+{
+"en": "You can track it online with this number.",
+"jp": "この番号でオンライン追跡できます。",
+"say": [],
+"note": "",
+"id": "service-0001-025"
+},
+{
+"en": "You need to sign for this letter.",
+"jp": "この手紙は受け取りに署名が必要です。",
+"say": [],
+"note": "",
+"id": "service-0001-026"
+},
+{
+"en": "We tried to deliver your package, but nobody was home.",
+"jp": "配達に伺いましたが、ご不在でした。",
+"say": [],
+"note": "",
+"id": "service-0001-027"
+},
+{
+"en": "You can pick it up at the post office with your ID.",
+"jp": "身分証を持って郵便局で受け取れます。",
+"say": [],
+"note": "",
+"id": "service-0001-028"
+},
+{
+"en": "Do you have an appointment?",
+"jp": "ご予約はありますか。",
+"say": [],
+"note": "",
+"id": "service-0001-029"
+},
+{
+"en": "Please take a number and wait until it's called.",
+"jp": "番号札を取って、呼ばれるまでお待ちください。",
+"say": [],
+"note": "",
+"id": "service-0001-030"
+},
+{
+"en": "Now serving number forty-seven at window five.",
+"jp": "47番の方、5番窓口へどうぞ。",
+"say": [],
+"note": "",
+"id": "service-0001-031"
+},
+{
+"en": "This is the wrong window. You need to go to window nine.",
+"jp": "ここは違う窓口です。9番窓口へお願いします。",
+"say": [],
+"note": "",
+"id": "service-0001-032"
+},
+{
+"en": "You need to fill out form two-fifty-eight.",
+"jp": "258番の用紙に記入が必要です。",
+"say": [],
+"note": "",
+"id": "service-0001-033"
+},
+{
+"en": "Do you have the required documents with you?",
+"jp": "必要な書類はお持ちですか。",
+"say": [],
+"note": "",
+"id": "service-0001-034"
+},
+{
+"en": "I'm afraid we need a copy of your birth certificate.",
+"jp": "出生証明書のコピーが必要です。",
+"say": [],
+"note": "",
+"id": "service-0001-035"
+},
+{
+"en": "It will take about two weeks to process.",
+"jp": "処理に約2週間かかります。",
+"say": [],
+"note": "",
+"id": "service-0001-036"
+},
+{
+"en": "We'll notify you by mail when it's ready.",
+"jp": "準備ができたら郵便でお知らせします。",
+"say": [],
+"note": "",
+"id": "service-0001-037"
+},
+{
+"en": "Your application was rejected because it was incomplete.",
+"jp": "申請は不備のため却下されました。",
+"say": [],
+"note": "",
+"id": "service-0001-038"
+},
+{
+"en": "There's a processing fee of forty dollars.",
+"jp": "手数料は40ドルです。",
+"say": [],
+"note": "",
+"id": "service-0001-039"
+},
+{
+"en": "Please come back with the correct documents.",
+"jp": "正しい書類を持ってまたお越しください。",
+"say": [],
+"note": "",
+"id": "service-0001-040"
+},
+{
+"en": "I'd like to renew my driver's license.",
+"jp": "運転免許を更新したいのですが。",
+"say": [],
+"note": "",
+"id": "service-0001-041"
+},
+{
+"en": "You'll need to take an eye test.",
+"jp": "視力検査を受けてもらいます。",
+"say": [],
+"note": "",
+"id": "service-0001-042"
+},
+{
+"en": "Please look into the camera and don't smile.",
+"jp": "カメラを見て、笑わないでください。",
+"say": [],
+"note": "",
+"id": "service-0001-043"
+},
+{
+"en": "I'd like to get a library card.",
+"jp": "図書館カードを作りたいのですが。",
+"say": [],
+"note": "",
+"id": "service-0001-044"
+},
+{
+"en": "You can borrow up to ten books for three weeks.",
+"jp": "10冊まで3週間借りられます。",
+"say": [],
+"note": "",
+"id": "service-0001-045"
+},
+{
+"en": "The book is overdue. There's a late fee of fifty cents per day.",
+"jp": "本が期限を過ぎています。1日50セントの延滞料です。",
+"say": [],
+"note": "",
+"id": "service-0001-046"
+},
+{
+"en": "Could you help me set up an internet connection?",
+"jp": "インターネット接続の設定を手伝ってもらえますか。",
+"say": [],
+"note": "",
+"id": "service-0001-047"
+},
+{
+"en": "We'll send a technician on Wednesday between nine and noon.",
+"jp": "水曜の9時から正午の間に技術者が伺います。",
+"say": [],
+"note": "",
+"id": "service-0001-048"
+},
+{
+"en": "Someone over eighteen must be home.",
+"jp": "18歳以上の方が在宅している必要があります。",
+"say": [],
+"note": "",
+"id": "service-0001-049"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

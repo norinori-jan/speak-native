@@ -1,5 +1,5 @@
 {
-"updated": 1792906582471,
+"updated": 1793002613619,
 "packs": [
 {
 "id": "airport-0001",
@@ -64,6 +64,270 @@
 "count": 43,
 "situation": "biznet",
 "sname": "ビジネス：挨拶・出張・会食"
+},
+{
+"id": "shopping-0001",
+"file": "shopping-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "shopping",
+"sname": "買い物・店"
+},
+{
+"id": "travel-0001",
+"file": "travel-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "travel",
+"sname": "道案内・交通・観光"
+},
+{
+"id": "medical-0001",
+"file": "medical-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "medical",
+"sname": "病院・薬局"
+},
+{
+"id": "trouble-0001",
+"file": "trouble-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "trouble",
+"sname": "トラブル・緊急"
+},
+{
+"id": "smalltalk-0001",
+"file": "smalltalk-0001.json",
+"ver": 1,
+"count": 49,
+"situation": "smalltalk",
+"sname": "日常会話・雑談"
+},
+{
+"id": "bizpres-0001",
+"file": "bizpres-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "bizpres",
+"sname": "ビジネス：プレゼン・発表"
+},
+{
+"id": "bizinterview-0001",
+"file": "bizinterview-0001.json",
+"ver": 1,
+"count": 45,
+"situation": "bizinterview",
+"sname": "ビジネス：面接・採用"
+},
+{
+"id": "bizfin-0001",
+"file": "bizfin-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "bizfin",
+"sname": "ビジネス：数字・請求・財務"
+},
+{
+"id": "bizhr-0001",
+"file": "bizhr-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "bizhr",
+"sname": "ビジネス：人事・規則・評価"
+},
+{
+"id": "bizit-0001",
+"file": "bizit-0001.json",
+"ver": 1,
+"count": 50,
+"situation": "bizit",
+"sname": "ビジネス：IT・開発"
+},
+{
+"id": "bizmfg-0001",
+"file": "bizmfg-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "bizmfg",
+"sname": "ビジネス：製造・物流・貿易"
+},
+{
+"id": "bizlegal-0001",
+"file": "bizlegal-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "bizlegal",
+"sname": "ビジネス：契約・法務"
+},
+{
+"id": "service-0001",
+"file": "service-0001.json",
+"ver": 1,
+"count": 49,
+"situation": "service",
+"sname": "銀行・郵便・役所"
+},
+{
+"id": "bizsales-0001",
+"file": "bizsales-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "bizsales",
+"sname": "ビジネス：営業・マーケ"
+},
+{
+"id": "bizcust-0001",
+"file": "bizcust-0001.json",
+"ver": 1,
+"count": 43,
+"situation": "bizcust",
+"sname": "ビジネス：顧客対応（サポート側）"
+},
+{
+"id": "school-0001",
+"file": "school-0001.json",
+"ver": 1,
+"count": 45,
+"situation": "school",
+"sname": "学校・留学"
+},
+{
+"id": "housing-0001",
+"file": "housing-0001.json",
+"ver": 1,
+"count": 45,
+"situation": "housing",
+"sname": "住まい・不動産"
+},
+{
+"id": "numbers-0001",
+"file": "numbers-0001.json",
+"ver": 1,
+"count": 49,
+"situation": "numbers",
+"sname": "数字・時間・日付の聞き取り"
+},
+{
+"id": "clarify-0001",
+"file": "clarify-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "clarify",
+"sname": "聞き返し・言い換え・つなぎ"
+},
+{
+"id": "leisure-0001",
+"file": "leisure-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "leisure",
+"sname": "ジム・スポーツ・娯楽・パーティー"
+},
+{
+"id": "bizidiom-0001",
+"file": "bizidiom-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "bizidiom",
+"sname": "ビジネス：決まり文句・慣用句"
+},
+{
+"id": "fastspeech-0001",
+"file": "fastspeech-0001.json",
+"ver": 1,
+"count": 44,
+"situation": "fastspeech",
+"sname": "早口・口語・縮約"
+},
+{
+"id": "abroadlife-0001",
+"file": "abroadlife-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "abroadlife",
+"sname": "海外生活（暮らしの手続き）"
+},
+{
+"id": "bizvisit-0001",
+"file": "bizvisit-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "bizvisit",
+"sname": "ビジネス：出張・受け入れ"
+},
+{
+"id": "aibase-0001",
+"file": "aibase-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "aibase",
+"sname": "AI：基礎用語（LLM・トークン・プロンプト）"
+},
+{
+"id": "aiml-0001",
+"file": "aiml-0001.json",
+"ver": 1,
+"count": 47,
+"situation": "aiml",
+"sname": "AI：機械学習・学習と評価"
+},
+{
+"id": "aidev-0001",
+"file": "aidev-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "aidev",
+"sname": "AI：開発・API・エージェント"
+},
+{
+"id": "aibiz-0001",
+"file": "aibiz-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "aibiz",
+"sname": "AI：ビジネス・規制・安全"
+},
+{
+"id": "aisci-0001",
+"file": "aisci-0001.json",
+"ver": 1,
+"count": 49,
+"situation": "aisci",
+"sname": "AI：研究・仕組み（上級）"
+},
+{
+"id": "aitalk-0001",
+"file": "aitalk-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "aitalk",
+"sname": "AI：学会・発表・質疑"
+},
+{
+"id": "aipaper-0001",
+"file": "aipaper-0001.json",
+"ver": 1,
+"count": 46,
+"situation": "aipaper",
+"sname": "AI：論文の読書会"
+},
+{
+"id": "aijob-0001",
+"file": "aijob-0001.json",
+"ver": 1,
+"count": 48,
+"situation": "aijob",
+"sname": "AI：採用面接・条件"
+},
+{
+"id": "aiprod-0001",
+"file": "aiprod-0001.json",
+"ver": 1,
+"count": 45,
+"situation": "aiprod",
+"sname": "AI：製品会議・運用"
 }
 ]
 }

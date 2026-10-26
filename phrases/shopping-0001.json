@@ -1,0 +1,392 @@
+{
+"id": "shopping-0001",
+"situation": "shopping",
+"sname": "買い物・店",
+"icon": "🛍️",
+"level": 2,
+"title": "店員の声かけ・試着・会計・返品",
+"items": [
+{
+"en": "Hi, can I help you find anything?",
+"jp": "いらっしゃいませ。お探しのものはありますか。",
+"say": [
+{
+"en": "I'm just looking, thanks.",
+"jp": "見ているだけです、ありがとう。"
+},
+{
+"en": "Yes, I'm looking for a jacket.",
+"jp": "はい、ジャケットを探しています。"
+}
+],
+"note": "",
+"id": "shopping-0001-001"
+},
+{
+"en": "Let me know if you need anything.",
+"jp": "何かあれば声をかけてください。",
+"say": [],
+"note": "",
+"id": "shopping-0001-002"
+},
+{
+"en": "What size are you looking for?",
+"jp": "サイズはいくつをお探しですか。",
+"say": [
+{
+"en": "Medium, I think.",
+"jp": "Mだと思います。"
+}
+],
+"note": "",
+"id": "shopping-0001-003"
+},
+{
+"en": "The fitting rooms are in the back.",
+"jp": "試着室は奥です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-004"
+},
+{
+"en": "Would you like to try it on?",
+"jp": "試着してみますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-005"
+},
+{
+"en": "How does it fit?",
+"jp": "着心地はいかがですか。",
+"say": [
+{
+"en": "It's a little tight.",
+"jp": "少しきついです。"
+}
+],
+"note": "",
+"id": "shopping-0001-006"
+},
+{
+"en": "Would you like a bigger size?",
+"jp": "もう少し大きいサイズにしますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-007"
+},
+{
+"en": "I'll check if we have it in stock.",
+"jp": "在庫があるか確認します。",
+"say": [],
+"note": "",
+"id": "shopping-0001-008"
+},
+{
+"en": "We're out of that size, but we have it in black.",
+"jp": "そのサイズは売り切れですが、黒ならあります。",
+"say": [],
+"note": "",
+"id": "shopping-0001-009"
+},
+{
+"en": "It comes in three colors: navy, gray, and green.",
+"jp": "色はネイビー、グレー、グリーンの3色です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-010"
+},
+{
+"en": "That's on sale for thirty percent off.",
+"jp": "それはセールで3割引です。",
+"say": [],
+"note": "thirty percent off = 30%引き。",
+"id": "shopping-0001-011"
+},
+{
+"en": "This item is buy one, get one free.",
+"jp": "この商品は1つ買うともう1つ無料です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-012"
+},
+{
+"en": "It's two for twenty dollars.",
+"jp": "2つで20ドルです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-013"
+},
+{
+"en": "The sale ends this Sunday.",
+"jp": "セールは今度の日曜までです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-014"
+},
+{
+"en": "The total is sixty-three dollars and twenty cents with tax.",
+"jp": "税込みで63ドル20セントです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-015"
+},
+{
+"en": "Sales tax is not included in the price tag.",
+"jp": "値札には消費税が含まれていません。",
+"say": [],
+"note": "アメリカは表示価格に税が別。",
+"id": "shopping-0001-016"
+},
+{
+"en": "Will that be cash or credit?",
+"jp": "現金ですか、クレジットですか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-017"
+},
+{
+"en": "Do you have a rewards card?",
+"jp": "ポイントカードはお持ちですか。",
+"say": [
+{
+"en": "No, I don't.",
+"jp": "いいえ、持っていません。"
+}
+],
+"note": "",
+"id": "shopping-0001-018"
+},
+{
+"en": "Would you like to sign up for our rewards program? It'll save you ten percent today.",
+"jp": "会員になりますか。今日は10%お得になります。",
+"say": [
+{
+"en": "No, thank you.",
+"jp": "いいえ、大丈夫です。"
+}
+],
+"note": "",
+"id": "shopping-0001-019"
+},
+{
+"en": "Would you like a bag? It's ten cents.",
+"jp": "袋はいりますか。10セントです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-020"
+},
+{
+"en": "Do you need a gift receipt?",
+"jp": "ギフト用のレシートは必要ですか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-021"
+},
+{
+"en": "Would you like it gift-wrapped?",
+"jp": "ギフト包装にしますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-022"
+},
+{
+"en": "You can return it within thirty days with the receipt.",
+"jp": "レシートがあれば30日以内に返品できます。",
+"say": [],
+"note": "",
+"id": "shopping-0001-023"
+},
+{
+"en": "I'm afraid we can't give a refund, but we can offer store credit.",
+"jp": "返金はできませんが、ストアクレジットなら対応できます。",
+"say": [],
+"note": "",
+"id": "shopping-0001-024"
+},
+{
+"en": "Could I see some ID, please?",
+"jp": "身分証を見せてもらえますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-025"
+},
+{
+"en": "Please insert, tap, or swipe your card.",
+"jp": "カードを挿すか、かざすか、通してください。",
+"say": [],
+"note": "",
+"id": "shopping-0001-026"
+},
+{
+"en": "The card reader is not working. Do you have cash?",
+"jp": "カード端末が使えません。現金はありますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-027"
+},
+{
+"en": "Sign here, please.",
+"jp": "ここにサインをお願いします。",
+"say": [],
+"note": "",
+"id": "shopping-0001-028"
+},
+{
+"en": "Do you ship internationally?",
+"jp": "海外発送はしていますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-029"
+},
+{
+"en": "We can ship it to your hotel.",
+"jp": "ホテルへ発送できます。",
+"say": [],
+"note": "",
+"id": "shopping-0001-030"
+},
+{
+"en": "Is this duty-free?",
+"jp": "これは免税ですか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-031"
+},
+{
+"en": "Tourists can get a tax refund with a passport.",
+"jp": "観光客はパスポートで税金の還付を受けられます。",
+"say": [],
+"note": "",
+"id": "shopping-0001-032"
+},
+{
+"en": "This is the last one we have.",
+"jp": "これが最後の1点です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-033"
+},
+{
+"en": "It's handmade, so each one is slightly different.",
+"jp": "手作りなので、一つ一つ少しずつ違います。",
+"say": [],
+"note": "",
+"id": "shopping-0001-034"
+},
+{
+"en": "The warranty is one year from the date of purchase.",
+"jp": "保証は購入日から1年です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-035"
+},
+{
+"en": "It's not compatible with Japanese outlets. You'll need an adapter.",
+"jp": "日本のコンセントには対応していません。変換プラグが必要です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-036"
+},
+{
+"en": "Would you like to see something cheaper?",
+"jp": "もっと安いものをお見せしましょうか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-037"
+},
+{
+"en": "Is there anything else I can show you?",
+"jp": "他にお見せしましょうか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-038"
+},
+{
+"en": "What's your budget?",
+"jp": "ご予算はどのくらいですか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-039"
+},
+{
+"en": "Which aisle can I find the milk in?",
+"jp": "牛乳は何番通路ですか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-040"
+},
+{
+"en": "Aisle seven, on your left.",
+"jp": "7番通路の左側です。",
+"say": [],
+"note": "",
+"id": "shopping-0001-041"
+},
+{
+"en": "Paper or plastic?",
+"jp": "紙袋とビニール袋、どちらにしますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-042"
+},
+{
+"en": "Did you find everything you were looking for?",
+"jp": "お探しのものは全部見つかりましたか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-043"
+},
+{
+"en": "Self-checkout is over there.",
+"jp": "セルフレジはあちらです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-044"
+},
+{
+"en": "Please place your items in the bagging area.",
+"jp": "商品を袋詰めエリアに置いてください。",
+"say": [],
+"note": "",
+"id": "shopping-0001-045"
+},
+{
+"en": "Unexpected item in the bagging area.",
+"jp": "袋詰めエリアに予期しない商品があります。",
+"say": [],
+"note": "セルフレジの定番音声。",
+"id": "shopping-0001-046"
+},
+{
+"en": "An associate will be right with you.",
+"jp": "係員がすぐ参ります。",
+"say": [],
+"note": "",
+"id": "shopping-0001-047"
+},
+{
+"en": "Your total is twenty-nine ninety-nine.",
+"jp": "合計は29ドル99セントです。",
+"say": [],
+"note": "",
+"id": "shopping-0001-048"
+},
+{
+"en": "Do you want cash back?",
+"jp": "現金の引き出しはしますか。",
+"say": [],
+"note": "",
+"id": "shopping-0001-049"
+},
+{
+"en": "Thanks for shopping with us. Have a great day.",
+"jp": "ご来店ありがとうございました。良い一日を。",
+"say": [],
+"note": "",
+"id": "shopping-0001-050"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

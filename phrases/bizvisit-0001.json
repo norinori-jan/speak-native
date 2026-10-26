@@ -1,0 +1,342 @@
+{
+"id": "bizvisit-0001",
+"situation": "bizvisit",
+"sname": "ビジネス：出張・受け入れ",
+"icon": "🧳",
+"level": 3,
+"title": "来訪・案内・会食・精算・見送り",
+"items": [
+{
+"en": "Welcome to our office. I'm Kevin, your host for the week.",
+"jp": "ようこそ。今週のアテンドをするケビンです。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-001"
+},
+{
+"en": "Here's your visitor badge. Please wear it at all times.",
+"jp": "来訪者バッジです。常に着用してください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-002"
+},
+{
+"en": "I'll show you around the office.",
+"jp": "オフィスを案内します。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-003"
+},
+{
+"en": "The conference room is on the fifth floor.",
+"jp": "会議室は5階です。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-004"
+},
+{
+"en": "Would you like to start with a quick tour of the factory?",
+"jp": "まず工場の見学から始めますか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-005"
+},
+{
+"en": "Please wear a hard hat and safety glasses.",
+"jp": "ヘルメットと保護メガネを着用してください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-006"
+},
+{
+"en": "Please don't touch the equipment.",
+"jp": "機器には触れないでください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-007"
+},
+{
+"en": "No photos on the production floor, please.",
+"jp": "製造現場は撮影禁止です。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-008"
+},
+{
+"en": "We've booked you a hotel near the office.",
+"jp": "オフィス近くのホテルを予約しました。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-009"
+},
+{
+"en": "A car will pick you up at the hotel at eight thirty.",
+"jp": "8時半にホテルへ車が迎えに行きます。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-010"
+},
+{
+"en": "Dinner is at seven. We'll take you to a steakhouse.",
+"jp": "夕食は7時です。ステーキハウスにご案内します。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-011"
+},
+{
+"en": "Is there anything you don't eat?",
+"jp": "食べられないものはありますか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-012"
+},
+{
+"en": "Are you jet-lagged? Do you need some rest?",
+"jp": "時差ぼけですか。休みますか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-013"
+},
+{
+"en": "Let's get you settled in first.",
+"jp": "まず落ち着きましょう。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-014"
+},
+{
+"en": "Let me introduce you to the team.",
+"jp": "チームを紹介します。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-015"
+},
+{
+"en": "Everyone is looking forward to your presentation.",
+"jp": "皆さん、あなたの発表を楽しみにしています。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-016"
+},
+{
+"en": "You'll present at ten tomorrow. We'll set up the projector.",
+"jp": "明日10時に発表です。プロジェクターを準備します。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-017"
+},
+{
+"en": "Do you need an adapter for your laptop?",
+"jp": "パソコンの変換アダプターは必要ですか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-018"
+},
+{
+"en": "The guest Wi-Fi password is on the whiteboard.",
+"jp": "ゲストWi-Fiのパスワードはホワイトボードにあります。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-019"
+},
+{
+"en": "You can use that desk for the week.",
+"jp": "1週間、あの席を使ってください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-020"
+},
+{
+"en": "Please keep all receipts for your expense report.",
+"jp": "経費精算のため、領収書を全部保管してください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-021"
+},
+{
+"en": "Meals are covered up to fifty dollars per day.",
+"jp": "食事は1日50ドルまで精算できます。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-022"
+},
+{
+"en": "The client will join us for lunch.",
+"jp": "お客様が昼食に加わります。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-023"
+},
+{
+"en": "Let me give you a quick background on the client.",
+"jp": "お客様の背景を簡単に説明します。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-024"
+},
+{
+"en": "They've been with us for about eight years.",
+"jp": "彼らは約8年の取引先です。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-025"
+},
+{
+"en": "They're a bit price-sensitive, so let's be careful.",
+"jp": "価格に敏感な方なので、慎重にいきましょう。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-026"
+},
+{
+"en": "Let's go over the key points before we go in.",
+"jp": "入る前に要点を確認しましょう。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-027"
+},
+{
+"en": "Remember, it's important to listen first.",
+"jp": "まず聞くことが大切です。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-028"
+},
+{
+"en": "The meeting went well. They seem interested.",
+"jp": "会議はうまくいきました。関心がありそうです。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-029"
+},
+{
+"en": "We should send a thank-you email today.",
+"jp": "今日お礼のメールを送るべきです。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-030"
+},
+{
+"en": "Would you like to visit the city on the weekend?",
+"jp": "週末は街を見に行きますか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-031"
+},
+{
+"en": "There's a famous baseball stadium nearby.",
+"jp": "近くに有名な野球場があります。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-032"
+},
+{
+"en": "Let me take you to the airport.",
+"jp": "空港までお送りします。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-033"
+},
+{
+"en": "What time is your flight on Friday?",
+"jp": "金曜のフライトは何時ですか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-034"
+},
+{
+"en": "You should leave three hours before an international flight.",
+"jp": "国際線は3時間前に出るのがいいです。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-035"
+},
+{
+"en": "Have you checked in online yet?",
+"jp": "オンラインチェックインはしましたか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-036"
+},
+{
+"en": "Did you leave anything in the hotel room?",
+"jp": "ホテルの部屋に忘れ物はありませんか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-037"
+},
+{
+"en": "Thank you for visiting us. It was a pleasure.",
+"jp": "お越しいただきありがとうございました。光栄でした。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-038"
+},
+{
+"en": "Safe travels, and please say hello to your team in Japan.",
+"jp": "気をつけて。日本のチームによろしく。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-039"
+},
+{
+"en": "We hope to see you again next quarter.",
+"jp": "来四半期にまたお会いできるのを楽しみにしています。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-040"
+},
+{
+"en": "We'll follow up with the quote by Monday.",
+"jp": "月曜までに見積もりをお送りします。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-041"
+},
+{
+"en": "Please let us know when you arrive safely.",
+"jp": "無事に着いたら知らせてください。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-042"
+},
+{
+"en": "Could we set up a call next week to go over the details?",
+"jp": "来週、詳細を詰めるための電話を設定できますか。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-043"
+},
+{
+"en": "I'll send you the meeting notes by tomorrow.",
+"jp": "明日までに議事録を送ります。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-044"
+},
+{
+"en": "It's been a productive week.",
+"jp": "実りのある1週間でした。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-045"
+},
+{
+"en": "Let's keep the momentum going.",
+"jp": "この勢いを続けましょう。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-046"
+},
+{
+"en": "Looking forward to our next meeting.",
+"jp": "次回の会議を楽しみにしています。",
+"say": [],
+"note": "",
+"id": "bizvisit-0001-047"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

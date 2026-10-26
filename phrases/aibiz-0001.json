@@ -1,0 +1,349 @@
+{
+"id": "aibiz-0001",
+"situation": "aibiz",
+"sname": "AI：ビジネス・規制・安全",
+"icon": "🏛️",
+"level": 4,
+"title": "導入判断・個人情報・責任・安全・競争",
+"items": [
+{
+"en": "Where can AI create the most value for our business?",
+"jp": "当社で、AIが最も価値を生む場面はどこでしょうか。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-001"
+},
+{
+"en": "Let's start with a small pilot and measure the results.",
+"jp": "小さな試行から始めて、結果を測りましょう。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-002"
+},
+{
+"en": "What problem are we actually trying to solve?",
+"jp": "私たちは実際に何の問題を解こうとしているのですか。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-003"
+},
+{
+"en": "AI isn't always the right answer. Sometimes a simple rule works better.",
+"jp": "AIが常に正解とは限りません。単純なルールのほうがよいこともあります。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-004"
+},
+{
+"en": "We need clean data before we can build anything.",
+"jp": "何か作る前に、きれいなデータが必要です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-005"
+},
+{
+"en": "Our data is scattered across many systems.",
+"jp": "当社のデータは多くのシステムに散らばっています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-006"
+},
+{
+"en": "We have to protect customer data and follow privacy laws.",
+"jp": "顧客データを守り、個人情報保護の法令に従う必要があります。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-007"
+},
+{
+"en": "Is it safe to put confidential information into a public AI service?",
+"jp": "機密情報を公開のAIサービスに入れて安全ですか。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-008"
+},
+{
+"en": "Our policy is not to send sensitive data to external services.",
+"jp": "機微なデータを外部サービスに送らない方針です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-009"
+},
+{
+"en": "We can run the model on our own servers to keep data in-house.",
+"jp": "データを社内に留めるため、モデルを自社サーバーで動かせます。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-010"
+},
+{
+"en": "What's the return on investment of this project?",
+"jp": "このプロジェクトの投資対効果はどのくらいですか。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-011"
+},
+{
+"en": "It could save us about two hundred hours a month.",
+"jp": "月に約200時間を節約できる見込みです。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-012"
+},
+{
+"en": "The tool automates the repetitive parts of the job.",
+"jp": "このツールは、仕事の繰り返し部分を自動化します。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-013"
+},
+{
+"en": "It won't replace people, but it will change how we work.",
+"jp": "人に取って代わるのではなく、働き方を変えます。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-014"
+},
+{
+"en": "Employees need training on how to use these tools well.",
+"jp": "従業員には、これらを上手に使う研修が必要です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-015"
+},
+{
+"en": "Let's write guidelines for using generative AI at work.",
+"jp": "仕事で生成AIを使うためのガイドラインを作りましょう。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-016"
+},
+{
+"en": "Anything the AI writes must be reviewed by a person.",
+"jp": "AIが書いたものは、必ず人が確認します。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-017"
+},
+{
+"en": "Who is accountable if the AI makes a mistake?",
+"jp": "AIが間違えた場合、責任は誰にありますか。",
+"say": [],
+"note": "accountable = 結果に責任を持つ。",
+"id": "aibiz-0001-018"
+},
+{
+"en": "There are legal risks around copyright and training data.",
+"jp": "著作権や学習データをめぐる法的リスクがあります。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-019"
+},
+{
+"en": "Regulators are drafting new rules for AI.",
+"jp": "規制当局は、AIの新しい規則を検討しています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-020"
+},
+{
+"en": "The regulation requires transparency about how the system works.",
+"jp": "その規制は、システムの仕組みについての透明性を求めています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-021"
+},
+{
+"en": "We must be able to explain how the model reached its decision.",
+"jp": "モデルがどう結論に至ったか、説明できなければなりません。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-022"
+},
+{
+"en": "The model must not discriminate based on gender or race.",
+"jp": "モデルは、性別や人種で差別してはいけません。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-023"
+},
+{
+"en": "We audit the system for fairness every quarter.",
+"jp": "四半期ごとに、システムの公平性を監査します。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-024"
+},
+{
+"en": "Safety testing comes before the public release.",
+"jp": "一般公開の前に、安全性テストを行います。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-025"
+},
+{
+"en": "We red-team the model to find ways it can be misused.",
+"jp": "悪用される方法を見つけるため、モデルにレッドチーム試験を行います。",
+"say": [],
+"note": "red-team = 攻撃者役になって弱点を探すテスト。",
+"id": "aibiz-0001-026"
+},
+{
+"en": "The model refuses to answer harmful requests.",
+"jp": "モデルは有害な依頼には答えません。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-027"
+},
+{
+"en": "Alignment is about making AI systems behave as intended.",
+"jp": "アライメントは、AIが意図どおりに振る舞うようにすることです。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-028"
+},
+{
+"en": "There is an ongoing debate about the risks of advanced AI.",
+"jp": "高度なAIのリスクをめぐる議論が続いています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-029"
+},
+{
+"en": "Some experts are optimistic, while others are cautious.",
+"jp": "楽観的な専門家もいれば、慎重な専門家もいます。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-030"
+},
+{
+"en": "The cost of running these models is dropping fast.",
+"jp": "これらのモデルを動かす費用は、急速に下がっています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-031"
+},
+{
+"en": "Compute is the scarce resource.",
+"jp": "計算資源が希少な資源です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-032"
+},
+{
+"en": "The data center needs a lot of electricity and cooling.",
+"jp": "データセンターには大量の電力と冷却が必要です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-033"
+},
+{
+"en": "We signed a contract with a cloud provider for GPU capacity.",
+"jp": "クラウド事業者とGPU枠の契約を結びました。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-034"
+},
+{
+"en": "Should we build it ourselves or buy it from a vendor?",
+"jp": "自社で作りますか、ベンダーから買いますか。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-035"
+},
+{
+"en": "Vendor lock-in is a concern.",
+"jp": "ベンダーへの依存が懸念です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-036"
+},
+{
+"en": "We want to avoid depending on a single provider.",
+"jp": "1つの事業者に依存するのは避けたいです。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-037"
+},
+{
+"en": "The startup raised fifty million dollars in funding.",
+"jp": "そのスタートアップは5000万ドルを調達しました。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-038"
+},
+{
+"en": "The market for AI tools is getting crowded.",
+"jp": "AIツールの市場は混み合ってきています。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-039"
+},
+{
+"en": "Our competitive advantage is our proprietary data.",
+"jp": "当社の強みは、独自のデータです。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-040"
+},
+{
+"en": "We're going to demo the prototype to the board.",
+"jp": "取締役会にプロトタイプをデモします。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-041"
+},
+{
+"en": "The demo worked, but it's not production-ready yet.",
+"jp": "デモは動きましたが、本番に使える水準ではありません。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-042"
+},
+{
+"en": "We need a roadmap with clear milestones.",
+"jp": "明確なマイルストーンのあるロードマップが必要です。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-043"
+},
+{
+"en": "The first milestone is a working proof of concept by March.",
+"jp": "最初の節目は、3月までに動く概念実証を作ることです。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-044"
+},
+{
+"en": "We'll review the results at the end of the quarter.",
+"jp": "四半期末に結果を見直します。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-045"
+},
+{
+"en": "Customer feedback will drive our next iteration.",
+"jp": "顧客の声が次の改良を導きます。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-046"
+},
+{
+"en": "Let me explain this in plain language, without the jargon.",
+"jp": "専門用語を使わず、平易な言葉で説明します。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-047"
+},
+{
+"en": "In short, the AI helps us answer customers faster.",
+"jp": "要するに、AIでお客様への回答が速くなります。",
+"say": [],
+"note": "",
+"id": "aibiz-0001-048"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

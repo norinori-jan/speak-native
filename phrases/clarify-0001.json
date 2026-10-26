@@ -1,0 +1,349 @@
+{
+"id": "clarify-0001",
+"situation": "clarify",
+"sname": "聞き返し・言い換え・つなぎ",
+"icon": "🔁",
+"level": 2,
+"title": "相手が言い直す・確認する・話をつなぐ",
+"items": [
+{
+"en": "Sorry, what was that?",
+"jp": "すみません、何ですって？",
+"say": [],
+"note": "",
+"id": "clarify-0001-001"
+},
+{
+"en": "Pardon me?",
+"jp": "もう一度お願いします。",
+"say": [],
+"note": "",
+"id": "clarify-0001-002"
+},
+{
+"en": "Could you say that again?",
+"jp": "もう一度言ってもらえますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-003"
+},
+{
+"en": "I didn't catch your name.",
+"jp": "お名前が聞き取れませんでした。",
+"say": [],
+"note": "",
+"id": "clarify-0001-004"
+},
+{
+"en": "Say again?",
+"jp": "もう一度？",
+"say": [],
+"note": "くだけた聞き返し。",
+"id": "clarify-0001-005"
+},
+{
+"en": "Let me rephrase that.",
+"jp": "言い換えさせてください。",
+"say": [],
+"note": "",
+"id": "clarify-0001-006"
+},
+{
+"en": "What I meant to say was, we need more time.",
+"jp": "言いたかったのは、もっと時間が必要ということです。",
+"say": [],
+"note": "",
+"id": "clarify-0001-007"
+},
+{
+"en": "In other words, we can't do it by Friday.",
+"jp": "つまり、金曜までにはできません。",
+"say": [],
+"note": "",
+"id": "clarify-0001-008"
+},
+{
+"en": "To put it simply, it's too expensive.",
+"jp": "簡単に言うと、高すぎます。",
+"say": [],
+"note": "",
+"id": "clarify-0001-009"
+},
+{
+"en": "Does that make sense?",
+"jp": "意味は通じますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-010"
+},
+{
+"en": "Am I making sense?",
+"jp": "私の話、分かりますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-011"
+},
+{
+"en": "Do you follow me so far?",
+"jp": "ここまでついてきていますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-012"
+},
+{
+"en": "Are you with me?",
+"jp": "分かってる？",
+"say": [],
+"note": "",
+"id": "clarify-0001-013"
+},
+{
+"en": "You lost me there.",
+"jp": "そこで分からなくなりました。",
+"say": [],
+"note": "",
+"id": "clarify-0001-014"
+},
+{
+"en": "I'm not following.",
+"jp": "話についていけません。",
+"say": [],
+"note": "",
+"id": "clarify-0001-015"
+},
+{
+"en": "Could you spell that for me?",
+"jp": "そのスペルを教えてもらえますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-016"
+},
+{
+"en": "Could you write it down?",
+"jp": "書いてもらえますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-017"
+},
+{
+"en": "I'll text it to you.",
+"jp": "メッセージで送ります。",
+"say": [],
+"note": "",
+"id": "clarify-0001-018"
+},
+{
+"en": "Did you mean the first one or the second one?",
+"jp": "最初のことですか、2番目のことですか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-019"
+},
+{
+"en": "Sorry, I mixed that up.",
+"jp": "すみません、取り違えました。",
+"say": [],
+"note": "",
+"id": "clarify-0001-020"
+},
+{
+"en": "That's not what I meant.",
+"jp": "そういう意味ではありません。",
+"say": [],
+"note": "",
+"id": "clarify-0001-021"
+},
+{
+"en": "I think there's been a misunderstanding.",
+"jp": "誤解があったと思います。",
+"say": [],
+"note": "",
+"id": "clarify-0001-022"
+},
+{
+"en": "Let me make sure I understand correctly.",
+"jp": "正しく理解しているか確認させてください。",
+"say": [],
+"note": "",
+"id": "clarify-0001-023"
+},
+{
+"en": "So what you're saying is that the price will go up?",
+"jp": "つまり、価格が上がるということですか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-024"
+},
+{
+"en": "If I understand correctly, you want it by Monday.",
+"jp": "私の理解が正しければ、月曜までに欲しいということですね。",
+"say": [],
+"note": "",
+"id": "clarify-0001-025"
+},
+{
+"en": "Right. Exactly. That's what I mean.",
+"jp": "そう。その通り。そういう意味です。",
+"say": [],
+"note": "",
+"id": "clarify-0001-026"
+},
+{
+"en": "Not exactly. Let me explain.",
+"jp": "ちょっと違います。説明させてください。",
+"say": [],
+"note": "",
+"id": "clarify-0001-027"
+},
+{
+"en": "Close, but not quite.",
+"jp": "惜しいけれど、少し違います。",
+"say": [],
+"note": "",
+"id": "clarify-0001-028"
+},
+{
+"en": "I mean, it's up to you.",
+"jp": "つまり、あなた次第です。",
+"say": [],
+"note": "",
+"id": "clarify-0001-029"
+},
+{
+"en": "You know what I mean?",
+"jp": "言いたいこと分かる？",
+"say": [],
+"note": "",
+"id": "clarify-0001-030"
+},
+{
+"en": "How do you say that in English?",
+"jp": "それを英語で何と言いますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-031"
+},
+{
+"en": "What's the word for that in English?",
+"jp": "それは英語で何という単語ですか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-032"
+},
+{
+"en": "Take your time.",
+"jp": "ゆっくりで大丈夫ですよ。",
+"say": [],
+"note": "",
+"id": "clarify-0001-033"
+},
+{
+"en": "No rush. Think about it.",
+"jp": "急がなくていいよ。考えてみて。",
+"say": [],
+"note": "",
+"id": "clarify-0001-034"
+},
+{
+"en": "Your English is good. Don't worry.",
+"jp": "英語、上手ですよ。心配しないで。",
+"say": [],
+"note": "",
+"id": "clarify-0001-035"
+},
+{
+"en": "I can speak a little Japanese, but not much.",
+"jp": "日本語は少しだけ話せます。",
+"say": [],
+"note": "",
+"id": "clarify-0001-036"
+},
+{
+"en": "Let me put it another way.",
+"jp": "別の言い方をします。",
+"say": [],
+"note": "",
+"id": "clarify-0001-037"
+},
+{
+"en": "I'll speak more slowly.",
+"jp": "もっとゆっくり話しますね。",
+"say": [],
+"note": "",
+"id": "clarify-0001-038"
+},
+{
+"en": "Do you need me to repeat anything?",
+"jp": "繰り返しが必要なところはありますか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-039"
+},
+{
+"en": "Anyway, let's get back to the point.",
+"jp": "とにかく、本題に戻りましょう。",
+"say": [],
+"note": "",
+"id": "clarify-0001-040"
+},
+{
+"en": "By the way, did you get my email?",
+"jp": "ところで、私のメールは届きましたか。",
+"say": [],
+"note": "",
+"id": "clarify-0001-041"
+},
+{
+"en": "Speaking of which, I have something to tell you.",
+"jp": "そういえば、伝えたいことがあります。",
+"say": [],
+"note": "",
+"id": "clarify-0001-042"
+},
+{
+"en": "On the other hand, there are some risks.",
+"jp": "一方で、リスクもあります。",
+"say": [],
+"note": "",
+"id": "clarify-0001-043"
+},
+{
+"en": "As a matter of fact, I've been there before.",
+"jp": "実は、行ったことがあります。",
+"say": [],
+"note": "",
+"id": "clarify-0001-044"
+},
+{
+"en": "To be fair, it wasn't entirely his fault.",
+"jp": "公平に言うと、全部が彼のせいではありません。",
+"say": [],
+"note": "",
+"id": "clarify-0001-045"
+},
+{
+"en": "Come to think of it, I did see him yesterday.",
+"jp": "そういえば、昨日彼に会いました。",
+"say": [],
+"note": "",
+"id": "clarify-0001-046"
+},
+{
+"en": "It depends.",
+"jp": "場合によります。",
+"say": [],
+"note": "",
+"id": "clarify-0001-047"
+},
+{
+"en": "I'll think about it and get back to you.",
+"jp": "考えて、後で返事します。",
+"say": [],
+"note": "",
+"id": "clarify-0001-048"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}

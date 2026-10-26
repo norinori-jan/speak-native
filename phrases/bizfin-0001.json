@@ -1,0 +1,335 @@
+{
+"id": "bizfin-0001",
+"situation": "bizfin",
+"sname": "ビジネス：数字・請求・財務",
+"icon": "💹",
+"level": 3,
+"title": "売上・請求・支払い・数字の読み",
+"items": [
+{
+"en": "Our quarterly revenue reached three point two million dollars.",
+"jp": "四半期売上は320万ドルに達しました。",
+"say": [],
+"note": "three point two = 3.2。数字の読みを聞き取る。",
+"id": "bizfin-0001-001"
+},
+{
+"en": "That's a twelve percent increase year over year.",
+"jp": "前年比12%の増加です。",
+"say": [],
+"note": "year over year (YoY) = 前年比。",
+"id": "bizfin-0001-002"
+},
+{
+"en": "Gross margin improved to forty-two percent.",
+"jp": "粗利率は42%に改善しました。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-003"
+},
+{
+"en": "Operating costs went up by eight percent.",
+"jp": "営業費用は8%増えました。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-004"
+},
+{
+"en": "Net profit came in at four hundred thousand.",
+"jp": "純利益は40万ドルでした。",
+"say": [],
+"note": "four hundred thousand = 400,000。",
+"id": "bizfin-0001-005"
+},
+{
+"en": "We're projecting a loss for the next two quarters.",
+"jp": "今後2四半期は赤字の見込みです。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-006"
+},
+{
+"en": "Cash flow is tight at the moment.",
+"jp": "現在、資金繰りが厳しいです。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-007"
+},
+{
+"en": "The fiscal year ends in March.",
+"jp": "会計年度は3月に終わります。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-008"
+},
+{
+"en": "The budget for next year is still under review.",
+"jp": "来年の予算はまだ検討中です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-009"
+},
+{
+"en": "We're over budget by about fifteen thousand dollars.",
+"jp": "約1万5000ドル予算超過です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-010"
+},
+{
+"en": "Can you break that down by department?",
+"jp": "それを部門別に分けてもらえますか。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-011"
+},
+{
+"en": "Let me pull up the spreadsheet.",
+"jp": "スプレッドシートを開きます。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-012"
+},
+{
+"en": "Could you send me the raw data?",
+"jp": "生データを送ってもらえますか。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-013"
+},
+{
+"en": "The figures are rounded to the nearest thousand.",
+"jp": "数字は千の位に丸めています。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-014"
+},
+{
+"en": "That's roughly one point five million.",
+"jp": "およそ150万です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-015"
+},
+{
+"en": "It's about a third of our total revenue.",
+"jp": "総売上のおよそ3分の1です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-016"
+},
+{
+"en": "The exchange rate has moved against us.",
+"jp": "為替が不利に動きました。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-017"
+},
+{
+"en": "The invoice is due on the fifteenth.",
+"jp": "請求書の期限は15日です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-018"
+},
+{
+"en": "The payment is overdue by two weeks.",
+"jp": "支払いが2週間遅れています。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-019"
+},
+{
+"en": "We charge a late fee of two percent per month.",
+"jp": "遅延は月2%の手数料がかかります。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-020"
+},
+{
+"en": "Please wire the funds to the account listed below.",
+"jp": "下記の口座に送金してください。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-021"
+},
+{
+"en": "The invoice number is four-five-oh-two-one.",
+"jp": "請求書番号は4、5、0、2、1です。",
+"say": [],
+"note": "0は oh と読むことが多い。",
+"id": "bizfin-0001-022"
+},
+{
+"en": "The PO number is on the top right corner.",
+"jp": "発注書番号は右上にあります。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-023"
+},
+{
+"en": "Please include the PO number on the invoice.",
+"jp": "請求書に発注書番号を記載してください。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-024"
+},
+{
+"en": "We'll process the payment on the last business day of the month.",
+"jp": "月末の営業日に支払い処理をします。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-025"
+},
+{
+"en": "The tax rate is eight point five percent.",
+"jp": "税率は8.5%です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-026"
+},
+{
+"en": "This amount is tax-exclusive.",
+"jp": "この金額は税抜きです。",
+"say": [],
+"note": "tax-exclusive = 税抜、tax-inclusive = 税込。",
+"id": "bizfin-0001-027"
+},
+{
+"en": "Could you issue a revised invoice?",
+"jp": "修正した請求書を出してもらえますか。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-028"
+},
+{
+"en": "We need a receipt for our records.",
+"jp": "記録のため領収書が必要です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-029"
+},
+{
+"en": "The audit will take place next month.",
+"jp": "監査は来月です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-030"
+},
+{
+"en": "All expenses must be backed up by receipts.",
+"jp": "すべての経費に領収書が必要です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-031"
+},
+{
+"en": "The company will reimburse you within two weeks.",
+"jp": "会社が2週間以内に精算します。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-032"
+},
+{
+"en": "Please submit your quarterly report by the tenth.",
+"jp": "四半期報告書を10日までに提出してください。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-033"
+},
+{
+"en": "Our stock price rose five percent this morning.",
+"jp": "今朝、当社の株価は5%上がりました。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-034"
+},
+{
+"en": "The merger is expected to close by the end of the year.",
+"jp": "合併は年内に完了する見込みです。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-035"
+},
+{
+"en": "We're looking for investors to fund the expansion.",
+"jp": "拡大のための投資家を探しています。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-036"
+},
+{
+"en": "The loan has an interest rate of three percent.",
+"jp": "融資の金利は3%です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-037"
+},
+{
+"en": "The monthly payment is two thousand dollars.",
+"jp": "月々の支払いは2000ドルです。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-038"
+},
+{
+"en": "What's the break-even point?",
+"jp": "損益分岐点はどこですか。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-039"
+},
+{
+"en": "Let's take a look at the forecast for next quarter.",
+"jp": "来四半期の予測を見ましょう。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-040"
+},
+{
+"en": "We're expecting a slight dip in sales during the summer.",
+"jp": "夏は売上が少し落ちる見込みです。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-041"
+},
+{
+"en": "Inflation is putting pressure on our margins.",
+"jp": "インフレが利益率を圧迫しています。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-042"
+},
+{
+"en": "We need to renegotiate our contracts with suppliers.",
+"jp": "仕入先との契約を見直す必要があります。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-043"
+},
+{
+"en": "Costs have gone up across the board.",
+"jp": "コストはあらゆる面で上がっています。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-044"
+},
+{
+"en": "That's a ten-fold increase.",
+"jp": "それは10倍の増加です。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-045"
+},
+{
+"en": "The numbers don't add up.",
+"jp": "数字が合いません。",
+"say": [],
+"note": "",
+"id": "bizfin-0001-046"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}
