@@ -1,5 +1,5 @@
 {
-"updated": 1793002613619,
+"updated": 1793008981470,
 "packs": [
 {
 "id": "airport-0001",
@@ -328,6 +328,78 @@
 "count": 45,
 "situation": "aiprod",
 "sname": "AI：製品会議・運用"
+},
+{
+"id": "aisafety-0001",
+"file": "aisafety-0001.json",
+"ver": 1,
+"count": 45,
+"situation": "aisafety",
+"sname": "AI：安全性・倫理・社会"
+},
+{
+"id": "aihw-0001",
+"file": "aihw-0001.json",
+"ver": 1,
+"count": 42,
+"situation": "aihw",
+"sname": "AI：半導体・計算資源・インフラ"
+},
+{
+"id": "aiind-0001",
+"file": "aiind-0001.json",
+"ver": 1,
+"count": 43,
+"situation": "aiind",
+"sname": "AI：産業別の活用"
+},
+{
+"id": "ainews-0001",
+"file": "ainews-0001.json",
+"ver": 1,
+"count": 43,
+"situation": "ainews",
+"sname": "AI：ニュース・ポッドキャスト"
+},
+{
+"id": "finance-0001",
+"file": "finance-0001.json",
+"ver": 1,
+"count": 44,
+"situation": "finance",
+"sname": "経済・金融ニュース"
+},
+{
+"id": "energy-0001",
+"file": "energy-0001.json",
+"ver": 1,
+"count": 42,
+"situation": "energy",
+"sname": "エネルギー・気候・環境"
+},
+{
+"id": "auto-0001",
+"file": "auto-0001.json",
+"ver": 1,
+"count": 42,
+"situation": "auto",
+"sname": "自動車・EV・交通取り締まり"
+},
+{
+"id": "health-0001",
+"file": "health-0001.json",
+"ver": 1,
+"count": 42,
+"situation": "health",
+"sname": "医療・製薬・公衆衛生"
+},
+{
+"id": "construction-0001",
+"file": "construction-0001.json",
+"ver": 1,
+"count": 43,
+"situation": "construction",
+"sname": "建設・不動産開発"
 }
 ]
 }

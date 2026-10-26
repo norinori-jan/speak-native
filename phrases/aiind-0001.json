@@ -1,0 +1,314 @@
+{
+"id": "aiind-0001",
+"situation": "aiind",
+"sname": "AI：産業別の活用",
+"icon": "🏗️",
+"level": 4,
+"title": "医療・金融・教育・製造・小売・創作",
+"items": [
+{
+"en": "AI can help doctors read medical images faster.",
+"jp": "AIは、医師が医用画像を速く読むのを助けられます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-001"
+},
+{
+"en": "The system flags suspicious areas for the radiologist to review.",
+"jp": "システムが疑わしい箇所に印を付け、放射線科医が確認します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-002"
+},
+{
+"en": "It's an assistant, not a replacement for the doctor.",
+"jp": "医師の代わりではなく、補助です。",
+"say": [],
+"note": "",
+"id": "aiind-0001-003"
+},
+{
+"en": "Clinical trials are needed to prove it actually helps patients.",
+"jp": "本当に患者の役に立つと示すには、臨床試験が必要です。",
+"say": [],
+"note": "",
+"id": "aiind-0001-004"
+},
+{
+"en": "Patient data is protected by strict privacy laws.",
+"jp": "患者のデータは、厳しい個人情報の法律で守られています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-005"
+},
+{
+"en": "The drug discovery process can take over ten years.",
+"jp": "新薬の開発には、10年以上かかることがあります。",
+"say": [],
+"note": "",
+"id": "aiind-0001-006"
+},
+{
+"en": "AI can predict the structure of proteins.",
+"jp": "AIは、たんぱく質の構造を予測できます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-007"
+},
+{
+"en": "Banks use machine learning to detect fraud.",
+"jp": "銀行は、不正検知に機械学習を使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-008"
+},
+{
+"en": "The model scores each transaction for risk in milliseconds.",
+"jp": "モデルは、各取引のリスクをミリ秒で採点します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-009"
+},
+{
+"en": "Credit decisions must be explainable to the customer.",
+"jp": "与信の判断は、顧客に説明できなければなりません。",
+"say": [],
+"note": "",
+"id": "aiind-0001-010"
+},
+{
+"en": "Algorithmic trading executes orders at high speed.",
+"jp": "アルゴリズム取引は、高速で注文を出します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-011"
+},
+{
+"en": "Financial regulators are watching AI closely.",
+"jp": "金融の規制当局は、AIを注意深く見ています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-012"
+},
+{
+"en": "Insurance companies use models to estimate claims.",
+"jp": "保険会社は、保険金の見積もりにモデルを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-013"
+},
+{
+"en": "Teachers can use AI to create personalized lessons.",
+"jp": "教師は、AIで個別化した授業を作れます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-014"
+},
+{
+"en": "Students might rely on it too much and stop thinking for themselves.",
+"jp": "学生が頼りすぎて、自分で考えなくなるかもしれません。",
+"say": [],
+"note": "",
+"id": "aiind-0001-015"
+},
+{
+"en": "Schools are debating whether to allow AI tools.",
+"jp": "学校では、AIツールを認めるかどうか議論が続いています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-016"
+},
+{
+"en": "Cheating detection software isn't reliable.",
+"jp": "不正検出ソフトは、信頼できません。",
+"say": [],
+"note": "",
+"id": "aiind-0001-017"
+},
+{
+"en": "Lawyers use AI to review thousands of documents quickly.",
+"jp": "弁護士は、AIで何千もの文書を素早く確認します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-018"
+},
+{
+"en": "There have been cases where AI invented fake legal citations.",
+"jp": "AIが存在しない判例を作ってしまった例があります。",
+"say": [],
+"note": "",
+"id": "aiind-0001-019"
+},
+{
+"en": "Every output must be checked by a qualified professional.",
+"jp": "出力は、必ず有資格者が確認する必要があります。",
+"say": [],
+"note": "",
+"id": "aiind-0001-020"
+},
+{
+"en": "Factories use computer vision to spot defects on the line.",
+"jp": "工場は、ラインで不良を見つけるのに画像認識を使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-021"
+},
+{
+"en": "Predictive maintenance reduces unplanned downtime.",
+"jp": "予知保全は、予定外の停止を減らします。",
+"say": [],
+"note": "",
+"id": "aiind-0001-022"
+},
+{
+"en": "Robots handle repetitive tasks in the warehouse.",
+"jp": "ロボットが、倉庫で繰り返しの作業をします。",
+"say": [],
+"note": "",
+"id": "aiind-0001-023"
+},
+{
+"en": "Self-driving cars still struggle with unusual situations.",
+"jp": "自動運転車は、珍しい状況がまだ苦手です。",
+"say": [],
+"note": "",
+"id": "aiind-0001-024"
+},
+{
+"en": "Safety is the biggest barrier to widespread adoption.",
+"jp": "安全性が、普及への最大の壁です。",
+"say": [],
+"note": "",
+"id": "aiind-0001-025"
+},
+{
+"en": "Farmers use drones and sensors to monitor their crops.",
+"jp": "農家は、ドローンとセンサーで作物を監視します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-026"
+},
+{
+"en": "Models can predict yields based on weather and soil data.",
+"jp": "天気と土壌のデータから、収穫量を予測できます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-027"
+},
+{
+"en": "Retailers use AI to forecast demand and manage inventory.",
+"jp": "小売は、需要予測と在庫管理にAIを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-028"
+},
+{
+"en": "Recommendations are personalized based on your past purchases.",
+"jp": "おすすめは、過去の購入に基づいて個別化されます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-029"
+},
+{
+"en": "Customer service bots handle the simple questions.",
+"jp": "問い合わせのボットが、簡単な質問を処理します。",
+"say": [],
+"note": "",
+"id": "aiind-0001-030"
+},
+{
+"en": "Complex cases are passed to a human agent.",
+"jp": "複雑な案件は、人間の担当者に回されます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-031"
+},
+{
+"en": "Translation tools have improved dramatically.",
+"jp": "翻訳ツールは、大きく進歩しました。",
+"say": [],
+"note": "",
+"id": "aiind-0001-032"
+},
+{
+"en": "They still struggle with idioms and cultural context.",
+"jp": "慣用句や文化的な文脈は、まだ苦手です。",
+"say": [],
+"note": "",
+"id": "aiind-0001-033"
+},
+{
+"en": "Newsrooms use AI to transcribe interviews.",
+"jp": "報道の現場は、インタビューの文字起こしにAIを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-034"
+},
+{
+"en": "Artists are divided over AI-generated images.",
+"jp": "芸術家の間では、AI生成の画像をめぐって意見が分かれています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-035"
+},
+{
+"en": "Copyright law hasn't caught up with the technology.",
+"jp": "著作権法は、技術に追いついていません。",
+"say": [],
+"note": "",
+"id": "aiind-0001-036"
+},
+{
+"en": "Musicians are experimenting with AI as a creative tool.",
+"jp": "音楽家は、創作の道具としてAIを試しています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-037"
+},
+{
+"en": "Game studios use it to generate characters' dialogue.",
+"jp": "ゲーム会社は、登場人物の台詞づくりに使っています。",
+"say": [],
+"note": "",
+"id": "aiind-0001-038"
+},
+{
+"en": "Energy companies use AI to balance the power grid.",
+"jp": "エネルギー会社は、送電網の需給調整にAIを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-039"
+},
+{
+"en": "Climate scientists use models to improve forecasts.",
+"jp": "気候科学者は、予測を良くするためにモデルを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-040"
+},
+{
+"en": "The city uses data to reduce traffic congestion.",
+"jp": "市は、渋滞を減らすためにデータを使います。",
+"say": [],
+"note": "",
+"id": "aiind-0001-041"
+},
+{
+"en": "Accessibility tools help people with disabilities.",
+"jp": "アクセシビリティの道具が、障害のある人を助けます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-042"
+},
+{
+"en": "Voice assistants can read text aloud for people with low vision.",
+"jp": "音声アシスタントは、視力の弱い人のために文章を読み上げます。",
+"say": [],
+"note": "",
+"id": "aiind-0001-043"
+}
+],
+"app": "phrase-pack",
+"version": 1,
+"ver": 1
+}
