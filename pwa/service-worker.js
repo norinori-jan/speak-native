@@ -1,8 +1,15 @@
 // Speak Native Service Worker
-const CACHE_VERSION = 'dei-pwa-v1';
+const CACHE_VERSION = 'dei-pwa-v3';
 const ASSETS = [
   './',
   './index.html',
+  './phrases/index.json',
+  './phrases/honestwork-0101.json',
+  './conversations/honestwork-0101.json',
+  './phrases/familyfight-0201.json',
+  './conversations/familyfight-0201.json'
+];
+const OPTIONAL_ASSETS = [
   'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap'
 ];
 
@@ -13,7 +20,11 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_VERSION)
       .then(cache => {
         console.log('[Service Worker] Caching critical assets');
-        return cache.addAll(ASSETS).catch(err => {
+        return cache.addAll(ASSETS).then(() => Promise.all(
+          OPTIONAL_ASSETS.map(url => cache.add(url).catch(err => {
+            console.log('[Service Worker] Optional asset failed to cache:', url, err);
+          }))
+        )).catch(err => {
           console.log('[Service Worker] Some assets failed to cache:', err);
           // Don't fail installation if some assets can't be cached
           return Promise.resolve();
@@ -109,7 +120,7 @@ self.addEventListener('fetch', (event) => {
 
   // Cache-first strategy for other static assets (CSS, JS, fonts, images)
   event.respondWith(
-    caches.match(request)
+    caches.match(request, { ignoreSearch: url.pathname.includes('/phrases/') })
       .then(response => {
         if (response) {
           // Return from cache
@@ -131,7 +142,7 @@ self.addEventListener('fetch', (event) => {
           .catch(error => {
             console.log('[Service Worker] Fetch failed for:', request.url, error);
             // Return cached version or offline page
-            return caches.match(request)
+            return caches.match(request, { ignoreSearch: url.pathname.includes('/phrases/') })
               .then(response => response || new Response('Offline', { status: 503 }));
           });
       })

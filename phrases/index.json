@@ -400,6 +400,22 @@
 "count": 43,
 "situation": "construction",
 "sname": "建設・不動産開発"
+},
+{
+"id": "honestwork-0101",
+"file": "honestwork-0101.json",
+"ver": 1,
+"count": 50,
+"situation": "honestwork",
+"sname": "日常・職場の本音"
+},
+{
+"id": "familyfight-0201",
+"file": "familyfight-0201.json",
+"ver": 1,
+"count": 50,
+"situation": "familyfight",
+"sname": "家族・恋人・友人のけんか"
 }
 ]
 }

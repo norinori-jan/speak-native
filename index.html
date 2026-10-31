@@ -20,7 +20,7 @@
 <script>
   // --- PWA Service Worker ---
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./pwa/service-worker.js')
+    navigator.serviceWorker.register('./service-worker.js')
       .catch(err => console.log('SW registration failed:', err));
   }
 </script>
@@ -3006,7 +3006,7 @@ function pick(g){var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|
 return vs.find(function(v){return re.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return re.test(v.name)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
 function sayLine(text,sp,tok){return new Promise(function(res){
 try{var u=new SpeechSynthesisUtterance(makeSpeakText(text));u.lang='en-US';var g=(S.dlg&&S.dlg.genders&&S.dlg.genders[sp])||(sp?'m':'f');var v=pick(g);if(v){u.voice=v;u.lang=v.lang}
-u.rate=S.slow?0.7:0.90;u.pitch=g==='m'?0.85:1.12;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
+u.rate=S.slow?0.7:0.90;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
  var tm=setTimeout(fin,Math.max(3500,text.length*140/(S.slow?0.7:1))+2500);u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}catch(e){res()}})}
 function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
 async function playAll(){if(!S.dlg)return;var my=++S.token;try{speechSynthesis.cancel()}catch(e){}
@@ -3381,8 +3381,116 @@ var E=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){retu
 var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 var DATA=[{"id":"meet","ic":"💼","n":"会議・日程","hint":"two coworkers talking about changing or discussing a meeting","d":[{"t":"会議の時間を変える","l":[{"sp":0,"en":"Hi Ken, do you have a minute?","jp":"ケン、ちょっといい？"},{"sp":1,"en":"Sure. What's up?","jp":"もちろん。どうしたの？"},{"sp":0,"en":"Can we move tomorrow's meeting to the afternoon?","jp":"明日の会議を午後に変更できる？"},{"sp":1,"en":"Let me check my schedule. How about three o'clock?","jp":"予定を確認するね。3時はどう？"},{"sp":0,"en":"Three works for me. I'll send a new invite.","jp":"3時で大丈夫。新しい招待を送るよ。"},{"sp":1,"en":"Great. Thanks for letting me know.","jp":"いいね。教えてくれてありがとう。"}]},{"t":"会議で意見を言う","l":[{"sp":0,"en":"Does anyone have questions about the plan?","jp":"計画について質問はありますか？"},{"sp":1,"en":"I have one. Is the deadline fixed?","jp":"一つあります。締め切りは固定ですか？"},{"sp":0,"en":"Good question. We can move it by a week.","jp":"いい質問です。1週間ならずらせます。"},{"sp":1,"en":"Then I think we should start earlier.","jp":"それなら、早めに始めるべきだと思います。"},{"sp":0,"en":"I agree. Let's begin on Monday.","jp":"賛成です。月曜日から始めましょう。"},{"sp":1,"en":"Sounds good. I'll prepare the documents.","jp":"いいですね。資料は私が準備します。"}]}]},{"id":"phone","ic":"📞","n":"電話・予約","hint":"a phone call to book a table or reach someone","d":[{"t":"レストランを予約する","l":[{"sp":0,"en":"Hello, Sakura Restaurant. How can I help you?","jp":"はい、さくらレストランです。ご用件は？"},{"sp":1,"en":"I'd like to book a table for four tonight.","jp":"今夜4人で予約したいのですが。"},{"sp":0,"en":"What time would you like?","jp":"何時がよろしいですか？"},{"sp":1,"en":"Around seven, if possible.","jp":"できれば7時ごろ。"},{"sp":0,"en":"We have a table at seven thirty. Is that okay?","jp":"7時半なら空いています。よろしいですか？"},{"sp":1,"en":"Yes, that's fine. The name is Tanaka.","jp":"はい、大丈夫です。名前は田中です。"}]},{"t":"電話を取り次ぐ","l":[{"sp":0,"en":"Good morning, this is Green Company.","jp":"おはようございます、グリーン社です。"},{"sp":1,"en":"Hello, may I speak to Ms. Brown, please?","jp":"もしもし、ブラウンさんをお願いできますか？"},{"sp":0,"en":"I'm sorry, she's in a meeting right now.","jp":"申し訳ありません、ただいま会議中です。"},{"sp":1,"en":"Could you ask her to call me back?","jp":"折り返し電話をいただけるよう伝えてもらえますか？"},{"sp":0,"en":"Of course. May I have your name, please?","jp":"もちろんです。お名前をいただけますか？"},{"sp":1,"en":"It's Sato. She already has my number.","jp":"佐藤です。番号はすでにご存じです。"}]}]},{"id":"food","ic":"🍽","n":"レストラン","hint":"ordering food and paying at a restaurant","d":[{"t":"注文する","l":[{"sp":0,"en":"Are you ready to order?","jp":"ご注文はお決まりですか？"},{"sp":1,"en":"Yes. I'll have the grilled chicken, please.","jp":"はい。グリルチキンをお願いします。"},{"sp":0,"en":"Would you like anything to drink?","jp":"お飲み物はいかがですか？"},{"sp":1,"en":"Just water for now, thanks.","jp":"とりあえずお水だけで。"},{"sp":0,"en":"Certainly. It will be about ten minutes.","jp":"かしこまりました。10分ほどかかります。"},{"sp":1,"en":"That's fine. Take your time.","jp":"大丈夫です。ゆっくりで構いません。"}]},{"t":"お会計","l":[{"sp":0,"en":"Excuse me, could we have the check, please?","jp":"すみません、お会計をお願いできますか？"},{"sp":1,"en":"Of course. Together or separately?","jp":"かしこまりました。ご一緒ですか、別々ですか？"},{"sp":0,"en":"Together, please. Can I pay by card?","jp":"一緒でお願いします。カードで払えますか？"},{"sp":1,"en":"Yes, we take all major cards.","jp":"はい、主なカードは使えます。"},{"sp":0,"en":"Here you go. The food was delicious.","jp":"どうぞ。料理はとても美味しかったです。"},{"sp":1,"en":"Thank you very much. Please come again.","jp":"ありがとうございます。またお越しください。"}]}]},{"id":"shop","ic":"🛍","n":"買い物","hint":"a customer and a shop clerk","d":[{"t":"服を探す","l":[{"sp":0,"en":"Hi, can I help you find something?","jp":"いらっしゃいませ、お探しですか？"},{"sp":1,"en":"I'm looking for a jacket in medium.","jp":"Mサイズのジャケットを探しています。"},{"sp":0,"en":"This one just came in. Would you like to try it on?","jp":"これは新入荷です。試着されますか？"},{"sp":1,"en":"Yes, please. Where is the fitting room?","jp":"はい。試着室はどこですか？"},{"sp":0,"en":"Right over there, next to the mirror.","jp":"あそこ、鏡の横です。"},{"sp":1,"en":"Thanks. I'll take a look.","jp":"ありがとう。見てみます。"}]},{"t":"値段と返品","l":[{"sp":0,"en":"How much is this bag?","jp":"このバッグはいくらですか？"},{"sp":1,"en":"It's fifty dollars, tax included.","jp":"税込みで50ドルです。"},{"sp":0,"en":"Do you have it in black?","jp":"黒はありますか？"},{"sp":1,"en":"Let me check in the back. One moment, please.","jp":"奥で確認します。少々お待ちください。"},{"sp":0,"en":"Also, can I return it if I change my mind?","jp":"それと、気が変わったら返品できますか？"},{"sp":1,"en":"Yes, within seven days with the receipt.","jp":"はい、レシートがあれば7日以内なら可能です。"}]}]},{"id":"hotel","ic":"🏨","n":"ホテル","hint":"a guest and hotel front desk staff","d":[{"t":"チェックイン","l":[{"sp":0,"en":"Welcome. Do you have a reservation?","jp":"ようこそ。ご予約はありますか？"},{"sp":1,"en":"Yes, under the name Sanada.","jp":"はい、真田の名前でお願いします。"},{"sp":0,"en":"Thank you. Two nights, is that right?","jp":"ありがとうございます。2泊でよろしいですか？"},{"sp":1,"en":"That's right. What time is check-out?","jp":"そうです。チェックアウトは何時ですか？"},{"sp":0,"en":"Eleven a.m. Here is your room key.","jp":"午前11時です。こちらが部屋の鍵です。"},{"sp":1,"en":"Thank you. Is breakfast included?","jp":"ありがとう。朝食は付いていますか？"}]},{"t":"部屋の問題","l":[{"sp":0,"en":"Front desk. How can I help you?","jp":"フロントです。どうされましたか？"},{"sp":1,"en":"The air conditioner in my room isn't working.","jp":"部屋のエアコンが動きません。"},{"sp":0,"en":"I'm so sorry. I'll send someone right away.","jp":"申し訳ありません。すぐに担当者を向かわせます。"},{"sp":1,"en":"Thank you. How long will it take?","jp":"ありがとう。どのくらいかかりますか？"},{"sp":0,"en":"About ten minutes. Is that all right?","jp":"10分ほどです。よろしいですか？"},{"sp":1,"en":"Yes, that's fine. I'll wait here.","jp":"はい、大丈夫です。ここで待ちます。"}]}]},{"id":"go","ic":"🧭","n":"道案内・移動","hint":"asking for directions or buying a train ticket","d":[{"t":"道を聞く","l":[{"sp":0,"en":"Excuse me, how do I get to the station?","jp":"すみません、駅へはどう行けばいいですか？"},{"sp":1,"en":"Go straight and turn left at the second light.","jp":"まっすぐ行って、2つ目の信号を左です。"},{"sp":0,"en":"Is it far from here?","jp":"ここから遠いですか？"},{"sp":1,"en":"No, it's about a five-minute walk.","jp":"いいえ、歩いて5分ほどです。"},{"sp":0,"en":"Great. Thank you so much.","jp":"よかった。ありがとうございます。"},{"sp":1,"en":"You're welcome. Have a nice day.","jp":"どういたしまして。良い一日を。"}]},{"t":"電車の切符","l":[{"sp":0,"en":"One ticket to Central Station, please.","jp":"セントラル駅まで切符を1枚お願いします。"},{"sp":1,"en":"That's ten dollars. One way or round trip?","jp":"10ドルです。片道ですか、往復ですか？"},{"sp":0,"en":"Round trip, please. Which platform is it?","jp":"往復で。何番ホームですか？"},{"sp":1,"en":"Platform three. The next train leaves in ten minutes.","jp":"3番ホームです。次の電車は10分後です。"},{"sp":0,"en":"Thanks. Do I need to change trains?","jp":"ありがとう。乗り換えは必要ですか？"},{"sp":1,"en":"No, it's a direct train.","jp":"いいえ、直通です。"}]}]},{"id":"talk","ic":"☕","n":"雑談","hint":"casual small talk between friends or coworkers","d":[{"t":"週末の話","l":[{"sp":0,"en":"Hey, how was your weekend?","jp":"やあ、週末はどうだった？"},{"sp":1,"en":"It was great. I went hiking with my family.","jp":"最高だったよ。家族とハイキングに行ったんだ。"},{"sp":0,"en":"Nice! Where did you go?","jp":"いいね！どこへ行ったの？"},{"sp":1,"en":"Just a small mountain near my house.","jp":"家の近くの小さな山だよ。"},{"sp":0,"en":"I wish I could do that. I stayed home all weekend.","jp":"私もしたかった。週末ずっと家にいたの。"},{"sp":1,"en":"Maybe next time you can join us.","jp":"今度は一緒にどう？"}]},{"t":"最近どう","l":[{"sp":0,"en":"Long time no see! How have you been?","jp":"久しぶり！元気にしてた？"},{"sp":1,"en":"Pretty good, just busy with work. How about you?","jp":"まあまあ元気、仕事が忙しくてね。君は？"},{"sp":0,"en":"Same here. I've been trying to learn English.","jp":"私も同じ。英語を勉強してるの。"},{"sp":1,"en":"That's great. How is it going?","jp":"いいね。どう、進んでる？"},{"sp":0,"en":"Slowly, but I'm enjoying it.","jp":"ゆっくりだけど、楽しんでるよ。"},{"sp":1,"en":"Keep it up. Let's practice together sometime.","jp":"その調子。今度一緒に練習しよう。"}]}]},{"id":"plan","ic":"🎉","n":"友だちと予定","hint":"friends making or declining plans","d":[{"t":"ランチに誘う","l":[{"sp":0,"en":"Are you free for lunch on Friday?","jp":"金曜のお昼は空いてる？"},{"sp":1,"en":"I think so. What do you have in mind?","jp":"たぶん。どうしたい？"},{"sp":0,"en":"There's a new ramen place near the office.","jp":"会社の近くに新しいラーメン屋があるよ。"},{"sp":1,"en":"Sounds good. What time should we meet?","jp":"いいね。何時に会う？"},{"sp":0,"en":"How about twelve thirty in front of the building?","jp":"12時半にビルの前でどう？"},{"sp":1,"en":"Perfect. See you then.","jp":"完璧。じゃあそのときに。"}]},{"t":"予定を断る","l":[{"sp":0,"en":"Do you want to see a movie tonight?","jp":"今夜、映画を見に行かない？"},{"sp":1,"en":"I'd love to, but I have to work late.","jp":"行きたいけど、遅くまで仕事なんだ。"},{"sp":0,"en":"That's too bad. How about tomorrow?","jp":"残念。明日はどう？"},{"sp":1,"en":"Tomorrow works for me. Let's go after work.","jp":"明日なら大丈夫。仕事の後に行こう。"},{"sp":0,"en":"Great. I'll look up the showtimes.","jp":"よかった。上映時間を調べておくね。"},{"sp":1,"en":"Thanks. Text me the details.","jp":"ありがとう。詳細をメッセージして。"}]}]},{"id":"care","ic":"🏥","n":"病院・薬局","hint":"talking to a doctor or a pharmacist about a cold","d":[{"t":"体調が悪い","l":[{"sp":0,"en":"What seems to be the problem?","jp":"どうされましたか？"},{"sp":1,"en":"I have a headache and a slight fever.","jp":"頭痛と少し熱があります。"},{"sp":0,"en":"How long have you felt this way?","jp":"いつからですか？"},{"sp":1,"en":"Since yesterday morning.","jp":"昨日の朝からです。"},{"sp":0,"en":"Let me check your temperature. Please sit down.","jp":"熱を測ります。座ってください。"},{"sp":1,"en":"Okay. Do I need any medicine?","jp":"はい。薬は必要ですか？"}]},{"t":"薬局で","l":[{"sp":0,"en":"Hi, do you have anything for a cough?","jp":"こんにちは、咳に効くものはありますか？"},{"sp":1,"en":"Yes. Are you taking any other medicine?","jp":"はい。ほかに飲んでいる薬はありますか？"},{"sp":0,"en":"No, I'm not. How often should I take it?","jp":"いいえ。どのくらいの頻度で飲めばいいですか？"},{"sp":1,"en":"One tablet three times a day after meals.","jp":"1日3回、食後に1錠です。"},{"sp":0,"en":"Thank you. Is it okay to drive after taking it?","jp":"ありがとう。飲んだ後に運転しても大丈夫ですか？"},{"sp":1,"en":"It may make you sleepy, so please be careful.","jp":"眠くなることがあるので、気をつけてください。"}]}]},{"id":"intro","ic":"🤝","n":"自己紹介","hint":"meeting someone for the first time","d":[{"t":"初対面","l":[{"sp":0,"en":"Hi, I'm Yuki. Nice to meet you.","jp":"こんにちは、ユキです。はじめまして。"},{"sp":1,"en":"Nice to meet you, too. I'm Tom.","jp":"こちらこそ、はじめまして。トムです。"},{"sp":0,"en":"What do you do, Tom?","jp":"トムさんはお仕事は何をされていますか？"},{"sp":1,"en":"I'm a designer. How about you?","jp":"デザイナーです。あなたは？"},{"sp":0,"en":"I work in sales at a software company.","jp":"ソフトウェア会社で営業をしています。"},{"sp":1,"en":"That sounds interesting. How long have you been there?","jp":"おもしろそうですね。どのくらい働いていますか？"}]},{"t":"出身と趣味","l":[{"sp":0,"en":"Where are you from?","jp":"ご出身はどちらですか？"},{"sp":1,"en":"I'm from Osaka, but I live in Tokyo now.","jp":"大阪出身ですが、今は東京に住んでいます。"},{"sp":0,"en":"What do you like to do in your free time?","jp":"暇な時間は何をするのが好きですか？"},{"sp":1,"en":"I like cooking and playing the guitar.","jp":"料理とギターが好きです。"},{"sp":0,"en":"That's cool. I'd love to hear you play sometime.","jp":"すてきですね。いつか演奏を聞いてみたいです。"},{"sp":1,"en":"Sure! I'll play for you next time.","jp":"ぜひ！今度弾きますね。"}]}]},{"id":"ask","ic":"🙏","n":"お願い・断る","hint":"asking a coworker for a favor or politely saying no","d":[{"t":"お願いする","l":[{"sp":0,"en":"Could you do me a favor?","jp":"お願いがあるんだけど、いい？"},{"sp":1,"en":"Sure. What do you need?","jp":"もちろん。何が必要？"},{"sp":0,"en":"Could you look over my report before noon?","jp":"お昼までに私の報告書を見てもらえる？"},{"sp":1,"en":"I can do that. Please send it to me now.","jp":"いいよ。今送って。"},{"sp":0,"en":"Thank you so much. I really appreciate it.","jp":"本当にありがとう。助かるよ。"},{"sp":1,"en":"No problem. I'll send my comments by eleven.","jp":"問題ないよ。11時までにコメントを送るね。"}]},{"t":"丁寧に断る","l":[{"sp":0,"en":"Can you take over this project next week?","jp":"来週このプロジェクトを引き継げる？"},{"sp":1,"en":"I'm afraid I can't. I'm already full next week.","jp":"残念ですが無理です。来週はすでにいっぱいです。"},{"sp":0,"en":"I see. Is there anyone else who could help?","jp":"そうですか。ほかに手伝える人はいますか？"},{"sp":1,"en":"Maybe Emma. I can ask her for you.","jp":"エマならできるかも。私から聞いておきます。"},{"sp":0,"en":"That would be great. Thanks for your help.","jp":"それは助かる。ありがとう。"},{"sp":1,"en":"Sorry I couldn't do more.","jp":"お役に立てなくてすみません。"}]}]},{"id":"rep","ic":"📊","n":"進捗報告","hint":"reporting progress or a delay to a manager or teammate","d":[{"t":"進み具合","l":[{"sp":0,"en":"How is the project going?","jp":"プロジェクトの調子はどう？"},{"sp":1,"en":"We're on schedule. The design is almost done.","jp":"予定どおりです。デザインはほぼ完成です。"},{"sp":0,"en":"Good. Are there any problems?","jp":"よかった。何か問題はある？"},{"sp":1,"en":"One small thing. We're waiting for the client's reply.","jp":"小さなことが一つ。お客様の返事待ちです。"},{"sp":0,"en":"Please let me know as soon as you hear back.","jp":"返事が来たらすぐ教えて。"},{"sp":1,"en":"Will do. I'll update you tomorrow.","jp":"わかりました。明日、状況を報告します。"}]},{"t":"遅れを伝える","l":[{"sp":0,"en":"I need to tell you something about the schedule.","jp":"予定についてお伝えしたいことがあります。"},{"sp":1,"en":"What happened?","jp":"何があったの？"},{"sp":0,"en":"The test is taking longer than expected.","jp":"テストが思ったより時間がかかっています。"},{"sp":1,"en":"How much longer do you need?","jp":"あとどのくらい必要？"},{"sp":0,"en":"About two more days. I'm sorry for the delay.","jp":"あと2日ほどです。遅れてすみません。"},{"sp":1,"en":"Okay. Thanks for telling me early.","jp":"わかった。早く知らせてくれてありがとう。"}]}]}];
 var NAMES=['Mia','Ken'],GEN=['f','m'];
+var EXTRA_DATA=[
+ {id:'morning',ic:'🌅',n:'朝の挨拶',hint:'two people greeting each other in the morning',level:1,keywords:['morning routine','sleep','breakfast'],d:[{t:'出かける前の朝',l:[
+  {sp:0,en:'Morning! Did you sleep okay?',jp:'おはよう！よく眠れた？'},
+  {sp:1,en:'Pretty well, thanks. How about you?',jp:'まあまあよく眠れたよ、ありがとう。あなたは？'},
+  {sp:0,en:'I could use another hour, but I am up now.',jp:'あと1時間寝たいけど、もう起きたよ。'},
+  {sp:1,en:'Coffee is ready if you want some.',jp:'コーヒーができてるよ。飲むならどうぞ。'},
+  {sp:0,en:'Thanks. I will grab a cup before I leave.',jp:'ありがとう。出かける前に一杯もらうね。'},
+  {sp:1,en:'Have a good day. See you tonight!',jp:'よい一日を。じゃあまた今夜！'}
+ ]}]},
+ {id:'family',ic:'🏠',n:'家族との会話',hint:'a family making plans at home',level:1,keywords:['family','chores','plans'],d:[{t:'夕食の準備をする',l:[
+  {sp:0,en:'What should we make for dinner tonight?',jp:'今夜の夕食は何を作ろうか？'},
+  {sp:1,en:'How about pasta? We have tomatoes to use up.',jp:'パスタはどう？使い切りたいトマトがあるよ。'},
+  {sp:0,en:'That sounds good. Can you chop the vegetables?',jp:'いいね。野菜を切ってくれる？'},
+  {sp:1,en:'Sure. Could you boil some water?',jp:'もちろん。お湯を沸かしてくれる？'},
+  {sp:0,en:'No problem. Dinner should be ready in twenty minutes.',jp:'いいよ。夕食は20分でできそう。'},
+  {sp:1,en:'Great. I will set the table while I wait.',jp:'いいね。待っている間にテーブルを準備するね。'}
+ ]}]},
+ {id:'shoppingdaily',ic:'🛍️',n:'買い物',hint:'a customer asking for help in a shop',level:1,keywords:['shopping','size','trying on'],d:[{t:'サイズを探す',l:[
+  {sp:0,en:'Excuse me, do you have this in a smaller size?',jp:'すみません、これの小さいサイズはありますか？'},
+  {sp:1,en:'Let me check. We have a small in the back.',jp:'確認しますね。奥にSサイズがあります。'},
+  {sp:0,en:'Could I try it on before I decide?',jp:'決める前に試着してもいいですか？'},
+  {sp:1,en:'Of course. The fitting rooms are right over there.',jp:'もちろんです。試着室はすぐそちらです。'},
+  {sp:0,en:'It fits well. I will take it.',jp:'サイズがちょうどいいです。これにします。'},
+  {sp:1,en:'Great. You can pay at the register near the entrance.',jp:'よかったです。入口近くのレジでお支払いください。'}
+ ]}]},
+ {id:'restaurantdaily',ic:'🍽️',n:'レストラン',hint:'a diner asking a server about a meal',level:2,keywords:['restaurant','food allergy','ordering'],d:[{t:'料理について尋ねる',l:[
+  {sp:0,en:'Are you ready to order?',jp:'ご注文はお決まりですか？'},
+  {sp:1,en:'Almost. Does the soup contain any dairy?',jp:'もう少しです。スープに乳製品は入っていますか？'},
+  {sp:0,en:'Let me check with the kitchen for you.',jp:'厨房に確認いたします。'},
+  {sp:1,en:'Thank you. I have a dairy allergy.',jp:'ありがとうございます。乳製品のアレルギーがあります。'},
+  {sp:0,en:'It does contain cream, but the grilled chicken is dairy-free.',jp:'スープにはクリームが入っていますが、グリルチキンには乳製品は使われていません。'},
+  {sp:1,en:'I will have the chicken, please. Could I get a side salad?',jp:'ではチキンをお願いします。サラダも付けてもらえますか？'}
+ ]}]},
+ {id:'cafe',ic:'☕',n:'カフェ',hint:'ordering coffee at a cafe',level:1,keywords:['cafe','coffee','takeout'],d:[{t:'コーヒーを持ち帰る',l:[
+  {sp:0,en:'Hi! What can I get started for you?',jp:'こんにちは！ご注文はお決まりですか？'},
+  {sp:1,en:'Could I have a small oat milk latte, please?',jp:'小さいオーツミルクラテをお願いします。'},
+  {sp:0,en:'Sure. Is that for here or to go?',jp:'かしこまりました。店内でお召し上がりですか、お持ち帰りですか？'},
+  {sp:1,en:'To go, please. Could you make it decaf?',jp:'持ち帰りでお願いします。カフェイン抜きにできますか？'},
+  {sp:0,en:'Absolutely. Anything else today?',jp:'もちろんです。他にご注文はありますか？'},
+  {sp:1,en:'That is all, thanks. I will pay by card.',jp:'以上です、ありがとう。カードで払います。'}
+ ]}]},
+ {id:'travelhotel',ic:'🧳',n:'旅行・ホテル',hint:'a hotel guest asking to leave luggage before check-in',level:2,keywords:['hotel','luggage','check-in'],d:[{t:'チェックイン前に荷物を預ける',l:[
+  {sp:0,en:'Welcome to the Riverside Hotel. How can I help?',jp:'リバーサイドホテルへようこそ。ご用件をどうぞ。'},
+  {sp:1,en:'I am a little early. Could I leave my bags here?',jp:'少し早く着きました。ここに荷物を預けてもいいですか？'},
+  {sp:0,en:'Of course. Check-in starts at three this afternoon.',jp:'もちろんです。チェックインは今日の午後3時からです。'},
+  {sp:1,en:'That is perfect. Is there a good place to get lunch nearby?',jp:'ちょうどいいです。この近くで昼食を取れるおすすめのお店はありますか？'},
+  {sp:0,en:'There is a cafe across the street, and the market is two blocks away.',jp:'通りの向かいにカフェがあり、市場は2ブロック先です。'},
+  {sp:1,en:'Thanks for the tip. I will be back around three.',jp:'教えてくれてありがとう。3時ごろ戻ります。'}
+ ]}]},
+ {id:'directions',ic:'🗺️',n:'道案内',hint:'asking someone for directions in town',level:1,keywords:['directions','landmark','walking'],d:[{t:'美術館への行き方',l:[
+  {sp:0,en:'Excuse me, is the art museum within walking distance?',jp:'すみません、美術館は歩いて行ける距離ですか？'},
+  {sp:1,en:'Yes. It is about a ten-minute walk from here.',jp:'はい。ここから歩いて10分くらいです。'},
+  {sp:0,en:'Which way should I go?',jp:'どちらへ行けばいいですか？'},
+  {sp:1,en:'Go straight for two blocks, then turn left at the bank.',jp:'2ブロックまっすぐ進んで、銀行のところを左に曲がってください。'},
+  {sp:0,en:'Will I see it from there?',jp:'そこから見えますか？'},
+  {sp:1,en:'Yes, it is the large brick building next to the park.',jp:'はい、公園の隣にある大きなレンガ造りの建物です。'}
+ ]}]},
+ {id:'pharmacy',ic:'💊',n:'病院・薬局',hint:'a customer asking a pharmacist for help with a mild cold',level:2,keywords:['pharmacy','symptoms','medicine'],d:[{t:'風邪薬について相談する',l:[
+  {sp:0,en:'Hi, what can I help you with today?',jp:'こんにちは。今日はどうされましたか？'},
+  {sp:1,en:'I have a sore throat and a stuffy nose.',jp:'喉が痛くて、鼻が詰まっています。'},
+  {sp:0,en:'How long have you had those symptoms?',jp:'その症状はどのくらい続いていますか？'},
+  {sp:1,en:'Since yesterday. Do you have something that may help?',jp:'昨日からです。効きそうな薬はありますか？'},
+  {sp:0,en:'This medicine may help. Please read the label and follow the directions.',jp:'こちらの薬が役立つかもしれません。ラベルを読み、用法に従ってください。'},
+  {sp:1,en:'Thanks. I will check with a doctor if it gets worse.',jp:'ありがとう。悪化したら医師に相談します。'}
+ ]}]},
+ {id:'transit',ic:'🚆',n:'電車・バス',hint:'buying a train ticket and checking the platform',level:1,keywords:['train','ticket','platform'],d:[{t:'電車の乗り場を確認する',l:[
+  {sp:0,en:'Hi, does this train go to Central Station?',jp:'すみません、この電車はセントラル駅に行きますか？'},
+  {sp:1,en:'Yes, but you will need to change at Oak Street.',jp:'はい。ただしオーク・ストリート駅で乗り換えが必要です。'},
+  {sp:0,en:'Which platform should I use for the next train?',jp:'次の電車は何番ホームから乗ればいいですか？'},
+  {sp:1,en:'Platform four. The connection leaves in about eight minutes.',jp:'4番ホームです。乗り換えの電車は約8分後に出ます。'},
+  {sp:0,en:'Can I use the same ticket for the connection?',jp:'乗り換えにも同じ切符を使えますか？'},
+  {sp:1,en:'Yes, just keep it with you until you reach your stop.',jp:'はい、目的地に着くまで持っていてください。'}
+ ]}]},
+ {id:'friends',ic:'🧑‍🤝‍🧑',n:'友人との雑談',hint:'two friends chatting about weekend plans',level:1,keywords:['friends','weekend','making plans'],d:[{t:'週末の予定を決める',l:[
+  {sp:0,en:'Do you have any plans for this weekend?',jp:'今週末は何か予定ある？'},
+  {sp:1,en:'Not yet. I was thinking of checking out the new market.',jp:'まだないよ。新しいマーケットに行ってみようかなと思ってた。'},
+  {sp:0,en:'That sounds fun. Want to go together on Saturday?',jp:'楽しそう。土曜日に一緒に行かない？'},
+  {sp:1,en:'Sure! What time works for you?',jp:'いいね！何時が都合いい？'},
+  {sp:0,en:'How about meeting around eleven near the entrance?',jp:'入口の近くに11時ごろ集合するのはどう？'},
+  {sp:1,en:'Perfect. Text me if anything changes.',jp:'ちょうどいいね。何か変わったらメッセージして。'}
+ ]}]},
+ {id:'booking',ic:'📞',n:'電話・予約',hint:'calling to make and confirm an appointment',level:2,keywords:['phone call','appointment','reschedule'],d:[{t:'予約の時間を変更する',l:[
+  {sp:0,en:'Good afternoon, Green Street Dental. How can I help?',jp:'こんにちは、グリーンストリート歯科です。ご用件をどうぞ。'},
+  {sp:1,en:'I have an appointment on Thursday at two, but I need to reschedule.',jp:'木曜日の2時に予約していますが、変更が必要です。'},
+  {sp:0,en:'No problem. Would Friday morning work for you?',jp:'かしこまりました。金曜日の午前中はいかがですか？'},
+  {sp:1,en:'Do you have anything after ten?',jp:'10時以降で空いていますか？'},
+  {sp:0,en:'We have an opening at eleven thirty.',jp:'11時30分に空きがあります。'},
+  {sp:1,en:'That works. Please move my appointment to then.',jp:'その時間で大丈夫です。予約を変更してください。'}
+ ]}]},
+ {id:'workplace',ic:'💼',n:'仕事での会話',hint:'two coworkers coordinating a task and deadline',level:2,keywords:['work','deadline','follow-up'],d:[{t:'締め切りを確認する',l:[
+  {sp:0,en:'How is the client presentation coming along?',jp:'顧客向けのプレゼン資料はどんな感じですか？'},
+  {sp:1,en:'The slides are almost done. I am waiting on the latest numbers.',jp:'スライドはほぼ完成です。最新の数字を待っています。'},
+  {sp:0,en:'I can send them over before lunch.',jp:'昼食前に送れます。'},
+  {sp:1,en:'Thanks. Could you also check the final slide?',jp:'ありがとう。最後のスライドも確認してもらえますか？'},
+  {sp:0,en:'Sure. Let us review everything at two o’clock.',jp:'もちろんです。2時に全体を確認しましょう。'},
+  {sp:1,en:'Sounds good. I will send you a calendar invite.',jp:'いいですね。予定表の招待を送ります。'}
+ ]}]},
+ {id:'troublehelp',ic:'🆘',n:'困ったとき',hint:'asking for help after losing a wallet',level:1,keywords:['asking for help','lost item','contact details'],d:[{t:'財布をなくした',l:[
+  {sp:0,en:'Excuse me, I think I left my wallet on the bus.',jp:'すみません、バスに財布を置き忘れたようです。'},
+  {sp:1,en:'I am sorry to hear that. Which bus were you on?',jp:'それは大変ですね。何番のバスに乗っていましたか？'},
+  {sp:0,en:'Number twelve, about twenty minutes ago.',jp:'12番で、20分ほど前です。'},
+  {sp:1,en:'Please tell me what the wallet looks like.',jp:'財布の特徴を教えてください。'},
+  {sp:0,en:'It is a small brown wallet with my ID inside.',jp:'小さな茶色の財布で、中に身分証があります。'},
+  {sp:1,en:'I will contact the bus depot. Could I get your phone number?',jp:'バス営業所に連絡します。電話番号を教えていただけますか？'}
+ ]}]}
+];
+var CONV_DATA=DATA.concat(EXTRA_DATA);
+var packagedConversationPromise=null;
 var PK='dei_conv_prog',CK='dei_conv_custom';
-var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false};
+var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
 var root=$('#cvRoot'),body=$('#cvBody');
 if(LS.get('dei_conv_hen',false))root.classList.add('hen');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
@@ -3390,25 +3498,93 @@ function prog(){var p=LS.get(PK,{});return p&&typeof p==='object'?p:{}}
 function pget(id){return prog()[id]||{l:0,s:0,a:0,b:0}}
 function pset(id,f){var p=prog();var o=p[id]||{l:0,s:0,a:0,b:0};f(o);p[id]=o;LS.set(PK,p)}
 function custom(){var a=LS.get(CK,[]);return Array.isArray(a)?a:[]}
-function dlgs(sid){var out=[];DATA.forEach(function(s){if(s.id===sid)s.d.forEach(function(d,i){out.push({id:s.id+(i+1),title:d.t,lines:d.l,scene:sid,own:0})})});custom().forEach(function(c){if(c.scene===sid)out.push({id:c.id,title:c.title,lines:c.lines,scene:sid,own:1})});return out}
-function allD(){var o=[];DATA.forEach(function(s){o=o.concat(dlgs(s.id))});return o}
+function dlgs(sid){var out=[];CONV_DATA.forEach(function(s){if(s.id===sid)s.d.forEach(function(d,i){out.push({id:s.id+(i+1),title:d.t,lines:d.l,scene:sid,own:0})})});custom().forEach(function(c){if(c.scene===sid)out.push({id:c.id,title:c.title,lines:c.lines,scene:sid,own:1})});return out}
+function allD(){var o=[];CONV_DATA.forEach(function(s){o=o.concat(dlgs(s.id))});return o}
 function findD(id){return allD().filter(function(d){return d.id===id})[0]}
 function mastered(id){var p=pget(id);return p.a&&p.b}
-function scn(sid){return DATA.filter(function(s){return s.id===sid})[0]}
+function scn(sid){return CONV_DATA.filter(function(s){return s.id===sid})[0]}
+function loadPackagedConversation(){
+ var packs=[
+  {id:'honestwork',file:'honestwork-0101.json'},
+  {id:'familyfight',file:'familyfight-0201.json'}
+ ];
+ var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
+ if(!pending.length)return Promise.resolve();
+ if(packagedConversationPromise)return packagedConversationPromise;
+ packagedConversationPromise=Promise.all(pending.map(function(p){
+  return fetch('./conversations/'+p.file).then(function(r){
+   if(!r.ok)throw new Error(p.file+': HTTP '+r.status);
+   return r.json();
+  });
+ })).then(function(groups){
+  var data=[].concat.apply([],groups);
+  if(!data.length||!data.every(function(s){
+   return s&&typeof s.id==='string'&&typeof s.n==='string'&&Array.isArray(s.d)&&s.d.length>0&&
+    s.d.every(function(d){return d&&typeof d.t==='string'&&Array.isArray(d.l)&&d.l.length>=4&&
+     d.l.every(function(l){return l&&(l.sp===0||l.sp===1)&&typeof l.en==='string'&&l.en&&typeof l.jp==='string'})});
+  }))throw new Error('会話データの形式が正しくありません');
+  var ids=CONV_DATA.map(function(s){return s.id});
+  data.forEach(function(s){
+   if(ids.indexOf(s.id)>=0)throw new Error('会話カテゴリーIDが既存データと重複しています: '+s.id);
+   ids.push(s.id);
+  });
+  CONV_DATA=CONV_DATA.concat(data);
+ }).catch(function(e){packagedConversationPromise=null;throw e});
+ return packagedConversationPromise;
+}
 /* ---------- 声 ---------- */
 function vlist(){try{return(speechSynthesis.getVoices()||[]).filter(function(v){return/^en[-_]/i.test(v.lang)})}catch(e){return[]}}
 function pickV(g){var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i,M=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male/i;var re=g==='m'?M:F;
  return vs.find(function(v){return re.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return re.test(v.name)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
 function sayLine(text,sp,tok){return new Promise(function(res){
  try{var u=new SpeechSynthesisUtterance(makeSpeakText(text));u.lang='en-US';var g=GEN[sp]||'f';var v=pickV(g);if(v){u.voice=v;u.lang=v.lang}
- u.rate=S.slow?0.7:0.90;u.pitch=g==='m'?0.85:1.12;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
+ u.rate=S.slow?0.7:0.90;var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
  var tm=setTimeout(fin,Math.max(3500,text.length*140/(S.slow?0.7:1))+2500);u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}catch(e){res()}})}
-function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
-function stopAll(){S.tok++;try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}}
-async function playAll(){var d=findD(S.did);if(!d)return;var my=++S.tok;try{speechSynthesis.cancel()}catch(e){}
+function updatePlaybackButton(){var b=$('#cvPlayBtn');if(b)b.textContent=S.playing?(S.paused?'▶ 再開':'⏸ 一時停止'):'▶ 会話を聞く'}
+function stopAll(){S.tok++;S.playing=false;S.paused=false;try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}updatePlaybackButton()}
+function playAll(){
+ if(S.playing){
+  try{
+   if(S.paused){speechSynthesis.resume();S.paused=false}
+   else{speechSynthesis.pause();S.paused=true}
+   updatePlaybackButton();
+  }catch(e){var w=$('#cvWho');if(w)w.textContent='一時停止・再開に失敗しました: '+(e.message||e)}
+  return;
+ }
+ var d=findD(S.did);if(!d)return;
+ if(!('speechSynthesis' in window)){var w=$('#cvWho');if(w)w.textContent='この端末では音声再生を利用できません';return}
+ stopAll();var my=S.tok;
  pset(d.id,function(o){o.l=(o.l||0)+1});
- for(var i=0;i<d.lines.length;i++){if(my!==S.tok)return;mark(i);await sayLine(d.lines[i].speak||d.lines[i].en,d.lines[i].sp,my);await wait(S.slow?600:350)}
- if(my===S.tok){mark(-1);var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。'}}
+ S.playing=true;S.paused=false;updatePlaybackButton();
+ d.lines.forEach(function(line,i){
+  if(my!==S.tok)return;
+  var u=new SpeechSynthesisUtterance(makeSpeakText(line.speak||line.en));
+  u.lang='en-US';var g=GEN[line.sp]||'f';var v=pickV(g);if(v){u.voice=v;u.lang=v.lang}
+  u.rate=S.slow?0.7:0.90;
+  u.onstart=function(){if(my===S.tok)mark(i)};
+  u.onend=function(){
+   if(my!==S.tok||i!==d.lines.length-1)return;
+   S.playing=false;S.paused=false;mark(-1);updatePlaybackButton();
+   var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。';
+  };
+  u.onerror=function(event){
+   if(my!==S.tok)return;
+   S.tok++;S.playing=false;S.paused=false;
+   try{speechSynthesis.cancel()}catch(e){}
+   updatePlaybackButton();
+   var w=$('#cvWho');if(w)w.textContent='音声を再生できませんでした: '+(event.error||'unknown');
+  };
+  try{speechSynthesis.speak(u)}catch(e){
+   S.tok++;S.playing=false;S.paused=false;try{speechSynthesis.cancel()}catch(x){}
+   updatePlaybackButton();var w=$('#cvWho');if(w)w.textContent='音声を再生できませんでした: '+(e.message||e);
+  }
+ });
+}
+function nextDialogue(){
+ var list=dlgs(S.sid);if(!list.length)return;
+ var current=list.findIndex(function(x){return x.id===S.did});
+ stopAll();S.did=list[(current+1+list.length)%list.length].id;S.mode='listen';S.li=0;S.ri=-1;S.heard='';render();
+}
 function mark(i){document.querySelectorAll('#cvRoot .ln').forEach(function(e,k){e.classList.toggle('cur',k===i)});var w=$('#cvWho');if(i>=0&&w)w.textContent='🗣 '+(i+1)+' / '+findD(S.did).lines.length}
 /* ---------- マイク ---------- */
 function listen(cb){var R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){toast('この端末では音声入力が使えません。「言えた/まだ」で自己判定してください');cb('',1);return}
@@ -3448,8 +3624,9 @@ function render(){
  if(S.stage==='home'){
   var all=allD(),m=all.filter(function(d){return mastered(d.id)}).length;
   h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
+   h+='<div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
   h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
-  DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+  CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
  }else if(S.stage==='scene'){
   var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
   dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
@@ -3460,7 +3637,7 @@ function render(){
   var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
-   h+='<button class="pri big" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="stop">■ 止める</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
    h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div></div>'}).join('')+'</div>';
    h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';
   }else if(S.mode==='shadow'){
@@ -3495,6 +3672,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='md'){stopAll();S.mode=b.dataset.v;S.li=0;S.ri=-1;S.heard='';render()}
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll();mark(-1)}
+ else if(a==='next-dialog')nextDialogue();
  else if(a==='slow'){S.slow=!S.slow;b.classList.toggle('sel',S.slow)}
  else if(a==='hen'){root.classList.toggle('hen');LS.set('dei_conv_hen',root.classList.contains('hen'));b.classList.toggle('sel',root.classList.contains('hen'))}
  else if(a==='hjp'){root.classList.toggle('hjp');b.classList.toggle('sel',root.classList.contains('hjp'))}
@@ -3515,7 +3693,15 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
   var c=custom();var id='u'+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
   c.push({id:id,scene:S.sid,title:String(r.j.title||'AIの会話').slice(0,30),lines:r.j.lines.map(function(l,k){return{sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:k%2),en:String(l.en).trim(),jp:String(l.jp).trim()}})});
   LS.set(CK,c.slice(-40));S.stage='scene';S.msg='会話を追加して保存しました';render()}});
-function openCV(){S.stage='home';render();root.classList.add('on');try{speechSynthesis.getVoices()}catch(e){}}
+function openCV(){
+ S.stage='home';S.msg='';render();root.classList.add('on');
+ try{speechSynthesis.getVoices()}catch(e){}
+ loadPackagedConversation().then(function(){
+  if(root.classList.contains('on')){S.msg='';render()}
+ }).catch(function(e){
+  if(root.classList.contains('on')){S.msg='追加会話を読み込めませんでした: '+(e.message||e);render()}
+ });
+}
 window.__convOpen=openCV;
 function mount(){
  if($('#cvCardBtn'))return;

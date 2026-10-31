@@ -1,0 +1,132 @@
+[
+  {
+    "id": "honestwork",
+    "ic": "🎭",
+    "n": "日常・職場の本音",
+    "hint": "two coworkers talking honestly about credit, pressure, and office life",
+    "level": 3,
+    "keywords": ["workplace", "honest conversations", "office small talk"],
+    "d": [
+      {
+        "t": "手柄は誰のもの？",
+        "l": [
+          {"sp": 0, "en": "I spent most of the weekend fixing the report, and now the client thinks the numbers somehow corrected themselves overnight.", "jp": "週末の大半を使って報告書を直したのに、今じゃ顧客は数字が勝手に直ったと思ってる。"},
+          {"sp": 1, "en": "Wait, did Mark present it like it was his work?", "jp": "えっ、マークは自分の仕事みたいに発表したの？"},
+          {"sp": 0, "en": "Pretty much. He said the team did great, then left my name off the follow-up.", "jp": "ほぼそう。チームを褒めたけど、その後のメールには私の名前がなかった。"},
+          {"sp": 1, "en": "That's rough. You wanna say something to him?", "jp": "それはきついね。本人に何か言いたい？", "note": "元の形: want to／聞こえ方: ワナ／使う場面:意向"},
+          {"sp": 0, "en": "I kinda do, but I don't wanna sound like I'm keeping score.", "jp": "言いたい気持ちはあるけど、手柄を数えてるみたいには思われたくない。", "note": "元の形: kind of, want to／聞こえ方: カインダ, ワナ／使う場面:ためらい"},
+          {"sp": 1, "en": "You did the work, Jen. Saying so isn't exactly a crime.", "jp": "仕事をしたのはあなたでしょ、ジェン。そう言うくらい罪じゃないよ。"},
+          {"sp": 0, "en": "Maybe I'll just ask him to include me next time.", "jp": "次は私も入れてほしいって頼むだけにしようかな。"},
+          {"sp": 1, "en": "Sounds good. Keep it boring and factual.", "jp": "いいと思う。淡々と事実だけ伝えなよ。"},
+          {"sp": 0, "en": "Look, if he gets weird about it, I'm gonna let the project history speak for itself, because every revision and comment is already documented.", "jp": "もし変な反応をされたら、プロジェクトの記録に語ってもらうよ。修正もコメントも、すでに全部記録されてるから。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:強い意志"},
+          {"sp": 1, "en": "Fair. Just don't send that email while you're still mad.", "jp": "そうだね。まだ腹が立ってるうちはメールしないで。"}
+        ]
+      },
+      {
+        "t": "会議のあとで本音",
+        "l": [
+          {"sp": 0, "en": "You were awfully quiet in there. Everything okay?", "jp": "会議ですごく静かだったね。大丈夫？"},
+          {"sp": 1, "en": "I had a point, but the room was moving so fast I couldn't get a word in.", "jp": "言いたいことはあったけど、話が速すぎて一言も挟めなかった。"},
+          {"sp": 0, "en": "You could've jumped in. Nobody would've minded.", "jp": "話に入ってよかったのに。誰も気にしなかったと思うよ。"},
+          {"sp": 1, "en": "Mikey, you know how it goes. By the time I had the floor, the meeting had already moved on to something completely different.", "jp": "マイキー、いつものことだよ。発言できるころには、会議はもうまったく別の話に移ってた。"},
+          {"sp": 0, "en": "I had a point, but the room was moving so fast I could not get a word in, and then the topic changed before I could raise my hand.", "jp": "言いたいことはあったけど、話が速すぎて一言も挟めず、手を挙げる前に話題が変わってしまった。"},
+          {"sp": 1, "en": "That'd help. Or just say, \"Hey, Priya had a point.\"", "jp": "そうしてくれると助かるよ。「ちょっと待って、プリヤの意見があるよ」って。"},
+          {"sp": 0, "en": "Got it. I honestly thought you were fine letting the others lead.", "jp": "わかった。みんなに任せるのがいいと思ってるのかと、本気で思ってた。"},
+          {"sp": 1, "en": "Nah, I just need a second to get my thoughts together.", "jp": "いや、考えをまとめるのに少し時間が必要なだけ。"},
+          {"sp": 0, "en": "Okay. Next time, I'll hold the floor open for you.", "jp": "わかった。次は君が話せるように、話の流れを少し保つよ。"},
+          {"sp": 1, "en": "Thanks, boss. Don't make it a whole thing, though.", "jp": "ありがとう。でも大げさにはしないでね。"}
+        ]
+      },
+      {
+        "t": "また金曜の夕方に頼まれる",
+        "l": [
+          {"sp": 0, "en": "Hey, Liz, any chance you can take one more task before you head out?", "jp": "ねえ、リズ、帰る前にもう一つ作業をお願いできたりする？"},
+          {"sp": 1, "en": "It's Friday at five, Dan. What do you think?", "jp": "金曜の5時だよ、ダン。どう思う？"},
+          {"sp": 0, "en": "Right. That sounded bad as soon as I said it.", "jp": "そうだよね。言った瞬間、自分でもまずいと思った。"},
+          {"sp": 1, "en": "I gotta pick up my kid, and this can wait till Monday.", "jp": "子どもを迎えに行かなきゃ。これは月曜で間に合うよ。", "note": "元の形: have got to／聞こえ方: ガラ／使う場面:必要"},
+          {"sp": 0, "en": "You are right. I am sorry. I will tell the client we are picking it up Monday, and I will make sure nobody expects a weekend update.", "jp": "その通りだね。ごめん。月曜に対応すると顧客に伝えて、週末の報告を期待されないようにするよ。"},
+          {"sp": 1, "en": "Thanks. I don't mind helping when it's urgent; I mind when everything's urgent.", "jp": "ありがとう。急ぎのときに手伝うのはいいけど、何もかも急ぎ扱いなのは困る。"},
+          {"sp": 0, "en": "Fair point. I've been calling poor planning a fire drill.", "jp": "確かに。段取りの悪さを緊急事態って呼んでたね。"},
+          {"sp": 1, "en": "Yeah, and somehow I'm always holding the hose.", "jp": "そう、なぜかいつも私が火消し役なんだよね。"},
+          {"sp": 0, "en": "I will bring it up with the team on Monday, not as a complaint, but as a pattern that keeps affecting the same people.", "jp": "月曜にチームへ話してみる。不満としてじゃなく、いつも同じ人たちに影響している問題として。"},
+          {"sp": 1, "en": "Appreciate it. Have a good weekend, Dan.", "jp": "助かるよ。よい週末を、ダン。"}
+        ]
+      },
+      {
+        "t": "ランチで聞いた噂",
+        "l": [
+          {"sp": 0, "en": "You hear they're changing the team structure again?", "jp": "またチームの体制を変えるって聞いた？"},
+          {"sp": 1, "en": "I heard something, but I dunno what's real and what's just hallway noise, and I would rather not repeat a rumor as if it were confirmed.", "jp": "何かは聞いたけど、何が本当で何がただの噂か分からないし、噂を確定情報のように広めたくない。", "note": "元の形: do not know／聞こえ方: ダノウ／使う場面:知らない"},
+          {"sp": 0, "en": "Same. People keep saying our manager's moving to the other office.", "jp": "私も。上司が別のオフィスに移るって、みんな言ってるね。"},
+          {"sp": 1, "en": "Could be. Didja hear that from someone who'd actually know?", "jp": "そうかもね。事情を知ってる人から聞いたの？", "note": "元の形: did you／聞こえ方: ディジャ／使う場面:くだけた確認"},
+          {"sp": 0, "en": "Nope. Just a screenshot of a calendar invite with half the details missing.", "jp": "いや。詳細が半分も抜けた予定招待のスクリーンショットだけ。"},
+          {"sp": 1, "en": "Then we should not turn one blurry screenshot into a company-wide crisis before anyone has checked whether the meeting invite is even real.", "jp": "じゃあ、その会議招待が本物かどうか誰も確認していないのに、ぼやけた画像一枚で会社全体の危機みたいにするのはやめよう。"},
+          {"sp": 0, "en": "I wasn't gonna. I was just asking if you'd heard anything.", "jp": "そんなつもりじゃないよ。何か聞いてないか聞いただけ。", "note": "元の形: going to／聞こえ方: ワズンナ／使う場面:意図の否定"},
+          {"sp": 1, "en": "Sure. Long story short, nobody knows yet.", "jp": "そうだね。要するに、まだ誰も知らないってこと。"},
+          {"sp": 0, "en": "Fine by me. I have enough real problems before lunch.", "jp": "それでいいよ。昼までに本当の問題がもう十分あるから。"},
+          {"sp": 1, "en": "Dude, same. Let's eat before another rumor shows up.", "jp": "ほんとそれ。次の噂が出る前に食べよう。"}
+        ]
+      },
+      {
+        "t": "「急ぎ」の意味を確認する",
+        "l": [
+          {"sp": 0, "en": "Boss, when you say \"as soon as possible,\" do you mean today or sometime before the heat death of the universe?", "jp": "「できるだけ早く」って今日中ですか、それとも宇宙が終わるまでのどこかですか？"},
+          {"sp": 1, "en": "Okay, fair. Tomorrow morning would be ideal.", "jp": "わかった、確かに。明日の朝だと理想的だね。"},
+          {"sp": 0, "en": "I can do tomorrow morning if the design review stays where it is.", "jp": "デザインレビューの予定が変わらなければ、明日の朝までにできます。"},
+          {"sp": 1, "en": "It should. If it moves, I'll push the other deadline.", "jp": "そのままのはず。動いたら、もう一方の締め切りを延ばすよ。"},
+          {"sp": 0, "en": "Thanks. I just need to know which fire I'm supposed to put out first, because every message in my inbox seems to arrive marked urgent.", "jp": "ありがとう。どの火事から消せばいいのか知りたいだけです。受信箱のメッセージが全部「至急」で届くみたいなので。"},
+          {"sp": 1, "en": "The client deck. The internal notes can wait.", "jp": "顧客向け資料が先。社内メモは後でいい。"},
+          {"sp": 0, "en": "Got it. Gimme ten minutes to finish this call, then I'll start.", "jp": "わかりました。この電話を終えるので、10分ください。", "note": "元の形: give me／聞こえ方: ギミ／使う場面:時間を頼む"},
+          {"sp": 1, "en": "Take your time. I should've been clearer.", "jp": "急がなくていいよ。もっとはっきり言うべきだった。"},
+          {"sp": 0, "en": "You good? You look like you haven't slept.", "jp": "大丈夫？寝てないみたいな顔してるよ。"},
+          {"sp": 1, "en": "I'm good. Just running on coffee and consequences.", "jp": "大丈夫。コーヒーと自分のツケでなんとか動いてるだけ。"}
+        ]
+      },
+      {
+        "t": "「みんな」の正体",
+        "l": [
+          {"sp": 0, "en": "The director says everyone wants the new schedule, but nobody on our floor remembers being asked, and the change starts before the first bus arrives.", "jp": "部長は全員が新しい予定を望んでると言うけど、このフロアで聞かれた覚えのある人はいないし、変更後は始発より早く始業するんだ。"},
+          {"sp": 1, "en": "Maybe \"everyone\" means the three people who were in his office.", "jp": "「全員」って、部長室にいた3人のことかもね。"},
+          {"sp": 0, "en": "And one of them was the person who made the schedule.", "jp": "そのうち一人は、その予定を作った本人だったしね。"},
+          {"sp": 1, "en": "You wanna challenge it in the meeting?", "jp": "会議で異議を唱えたい？", "note": "元の形: want to／聞こえ方: ワナ／使う場面:意向"},
+          {"sp": 0, "en": "I kinda have to. The new hours mean the support desk opens before the buses do.", "jp": "言わざるを得ないよ。新しい時間だと、バスが走る前にサポート窓口が開くことになる。", "note": "元の形: kind of／聞こえ方: カインダ／使う場面:少し控えめな強調"},
+          {"sp": 1, "en": "Bring the transit schedule. Hard to argue with a bus that doesn't exist yet.", "jp": "バスの時刻表を持っていきなよ。まだ来ないバスには反論しにくいから。"},
+          {"sp": 0, "en": "I will ask who was consulted and what problem the change is supposed to solve, because \"everyone agreed\" is not much of an explanation.", "jp": "誰に相談したのか、変更で何を解決するのか聞いてみるよ。「全員が賛成した」だけでは、説明として足りないから。"},
+          {"sp": 1, "en": "Good. Ask it like a question, not a courtroom speech.", "jp": "いいね。法廷での演説じゃなく、質問として聞きなよ。"},
+          {"sp": 0, "en": "I can do polite. I can't promise warm.", "jp": "礼儀正しくはできる。温かい口調までは約束できないけど。"},
+          {"sp": 1, "en": "That's all the room can ask of you before coffee.", "jp": "コーヒーを飲む前なら、それで十分だよ。"}
+        ]
+      },
+      {
+        "t": "静かな退職宣言",
+        "l": [
+          {"sp": 0, "en": "You seem different lately, like you stopped trying to win every argument, even when the argument is about something that does not matter.", "jp": "最近少し変わったね。大事でもないことまで、何でも言い負かそうとするのをやめたみたい。"},
+          {"sp": 1, "en": "I did. The arguments kept winning, and I kept losing my evenings.", "jp": "やめたよ。議論はいつも勝つのに、私の夜の時間はなくなるから。"},
+          {"sp": 0, "en": "So you're not gonna fight the new process?", "jp": "じゃあ、新しい手順にも反対しないの？", "note": "元の形: going to／聞こえ方: ガナ／使う場面:予定の確認"},
+          {"sp": 1, "en": "I will do my part, flag the risks, and let the decision belong to whoever made it, because staying late will not make the plan smarter.", "jp": "自分の役割を果たしてリスクを伝えたら、決めた人に判断を任せるよ。残業したからといって計画が賢くなるわけじゃないから。"},
+          {"sp": 0, "en": "That sounds suspiciously healthy.", "jp": "妙に健全な考え方だね。"},
+          {"sp": 1, "en": "It's mostly exhaustion with better branding.", "jp": "大半は疲れ切っただけ。それを聞こえよく言ってるの。"},
+          {"sp": 0, "en": "You good, though? Like, actually good?", "jp": "でも本当に大丈夫？なんとなくじゃなくて、本当に。"},
+          {"sp": 1, "en": "Kinda. I finally booked a week off and deleted work from my phone.", "jp": "まあね。やっと1週間休みを取って、スマホから仕事のアプリを消した。", "note": "元の形: kind of／聞こえ方: カインダ／使う場面:控えめな返事"},
+          {"sp": 0, "en": "Look at you, setting boundaries like a person with a functioning nervous system.", "jp": "おお、ちゃんと自分を守ってるね。神経が正常に働いてる人みたい。"},
+          {"sp": 1, "en": "Don't tell anyone. I have a reputation to maintain.", "jp": "誰にも言わないで。保たなきゃいけない評判があるから。"}
+        ]
+      },
+      {
+        "t": "退職メールの下書き",
+        "l": [
+          {"sp": 0, "en": "Hey, Jen, can I read you the email I wrote to the whole department before I send it and accidentally turn a normal Tuesday into a workplace incident?", "jp": "ねえジェン、部署全体に送るメールを読んでもいい？送信して、何でもない火曜日を職場の騒動にしちゃう前に。"},
+          {"sp": 1, "en": "Is it the one with \"per my last email\" in the first sentence, the phrase that makes a simple reminder sound like a formal complaint?", "jp": "最初の一文に「先日のメールの通り」って書いてあるやつ？ただの確認が正式な苦情みたいに聞こえる表現の。"},
+          {"sp": 0, "en": "It was accurate. They'd ignored the last four emails.", "jp": "事実だからね。前の4通を無視されたんだ。"},
+          {"sp": 1, "en": "Accurate and useful aren't always the same thing, buddy.", "jp": "事実であることと、役に立つことは別だよ。"},
+          {"sp": 0, "en": "Fine. How about, \"Just circling back because we still need an owner for this\"?", "jp": "じゃあ、「担当者がまだ必要なので、念のため再度連絡します」はどう？"},
+          {"sp": 1, "en": "Better. Sounds almost like you want an answer.", "jp": "いいね。答えがほしい人みたいに聞こえる。"},
+          {"sp": 0, "en": "I do. I just don't wanna start a tiny office war before lunch.", "jp": "答えがほしいよ。昼前に小さな社内戦争を始めたくないだけ。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:意図"},
+          {"sp": 1, "en": "C'mon, read the subject line.", "jp": "ほら、件名を読んでみて。", "note": "元の形: come on／聞こえ方: カモン／使う場面:軽く促す"},
+          {"sp": 0, "en": "I called it \"A Friendly Reminder.\"", "jp": "「親切なリマインダー」って付けたよ。"},
+          {"sp": 1, "en": "That's not a subject line, that's a threat wearing a cardigan.", "jp": "それは件名じゃないよ。カーディガンを着た脅迫だね。"}
+        ]
+      }
+    ]
+  }
+]

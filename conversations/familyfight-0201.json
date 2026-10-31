@@ -1,0 +1,132 @@
+[
+  {
+    "id": "familyfight",
+    "ic": "💔",
+    "n": "家族・恋人・友人のけんか",
+    "hint": "two close people arguing about a missed promise and trying to repair the damage",
+    "level": 3,
+    "keywords": ["disagreements", "apologies", "setting boundaries"],
+    "d": [
+      {
+        "t": "また約束を忘れた",
+        "l": [
+          {"sp": 0, "en": "You said you'd be there at six, and I stood outside that restaurant watching every couple walk in without you.", "jp": "6時に来るって言ったよね。レストランの外で、カップルが次々入っていくのを一人で見てた。"},
+          {"sp": 1, "en": "I know. My phone died, and the train stopped twice.", "jp": "分かってる。スマホの充電が切れて、電車も2回止まった。"},
+          {"sp": 0, "en": "You could've borrowed someone's phone. You knew this mattered to me.", "jp": "誰かに電話を借りることもできたでしょ。大事な日だって分かってたよね。"},
+          {"sp": 1, "en": "I should've planned better instead of assuming everything would work out.", "jp": "何とかなると思い込まずに、ちゃんと段取りしておくべきだった。"},
+          {"sp": 0, "en": "This keeps happening, and somehow I always end up explaining why it hurt instead of seeing you take responsibility without being asked.", "jp": "こういうことが何度もあるのに、頼まれる前にあなたが責任を取る姿を見るより、傷ついた理由を説明するのはいつも私なんだよね。"},
+          {"sp": 1, "en": "You're right. I don't wanna make you do all the emotional work again.", "jp": "その通りだね。また気持ちの整理を全部君に任せたくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:気持ちを伝える"},
+          {"sp": 0, "en": "I need more than a sorry. I need to know what changes next time.", "jp": "謝るだけじゃ足りない。次は何を変えるのか知りたい。"},
+          {"sp": 1, "en": "I'll charge my phone, leave early, and text you if anything changes.", "jp": "スマホを充電して早めに出る。何かあったら連絡するよ。"},
+          {"sp": 0, "en": "Okay. I'm still mad, but I can work with an actual plan.", "jp": "分かった。まだ腹は立ってるけど、具体的な対策があるなら話せる。"},
+          {"sp": 1, "en": "Fair. You don't have to be over it tonight.", "jp": "そうだね。今夜のうちに許さなくてもいいよ。"}
+        ]
+      },
+      {
+        "t": "聞いてるふりをしないで",
+        "l": [
+          {"sp": 0, "en": "I told you about the interview three times, and you still asked me how it went after it was over.", "jp": "面接のことを3回も話したのに、終わってからどうだったか聞いたよね。"},
+          {"sp": 1, "en": "I was listening. I just mixed up the dates.", "jp": "聞いてたよ。ただ日付を勘違いしただけ。"},
+          {"sp": 0, "en": "No, you were scrolling while I talked, and you nodded at things I never said.", "jp": "違うよ。私が話してる間ずっと画面を見て、私が言ってもいないことにうなずいてた。"},
+          {"sp": 1, "en": "Okay, that sounds bad when you put it like that.", "jp": "そう言われると、確かにひどいね。"},
+          {"sp": 0, "en": "I don't need a perfect response. I need you to actually be here with me, especially when I'm talking about something important.", "jp": "完璧な返事がほしいんじゃない。特に大事な話をしているときは、ちゃんと向き合ってほしいの。"},
+          {"sp": 1, "en": "You're right, Sam. I keep treating every conversation like background noise.", "jp": "その通りだね、サム。どんな話も、聞き流していい音みたいに扱ってた。"},
+          {"sp": 0, "en": "So what are you gonna do differently, besides sounding sorry for thirty seconds?", "jp": "じゃあ、30秒謝る以外に何を変えるの？", "note": "元の形: going to／聞こえ方: ガナ／使う場面:相手に行動を尋ねる"},
+          {"sp": 1, "en": "I'll put the phone away and ask if now's a good time to listen.", "jp": "スマホをしまって、今ちゃんと聞けるタイミングか尋ねるよ。"},
+          {"sp": 0, "en": "That would help. And if it isn't, just tell me when you can talk.", "jp": "そうしてくれると助かる。無理なら、いつ話せるか教えて。"},
+          {"sp": 1, "en": "Got it. No fake nodding, no mystery dates.", "jp": "分かった。適当な相づちも、謎の日付もなし。"}
+        ]
+      },
+      {
+        "t": "その冗談、笑えなかった",
+        "l": [
+          {"sp": 0, "en": "You made that joke about my presentation in front of everyone, and they all laughed while I stood there trying to smile.", "jp": "みんなの前で私のプレゼンをネタにして、私が笑顔を作ろうとしている間、全員が笑ったよね。"},
+          {"sp": 1, "en": "I was teasing you. I didn't think you'd take it that way.", "jp": "からかっただけだよ。そんなふうに受け取ると思わなかった。"},
+          {"sp": 0, "en": "That's the problem. You decided it was harmless before checking how it landed, and then I had to explain why it hurt.", "jp": "そこが問題なの。傷つかないと決めつけて、どう感じたか聞きもしなかった。そのうえ、なぜ傷ついたか私が説明しなきゃいけなかった。"},
+          {"sp": 1, "en": "I get it now. You were already nervous about presenting.", "jp": "今は分かったよ。発表のことで、もともと緊張してたんだね。"},
+          {"sp": 0, "en": "And then my best friend turned the thing I was worried about into a punchline.", "jp": "なのに一番の親友が、私の不安を笑い話にしたんだよ。"},
+          {"sp": 1, "en": "I'm sorry, Nia. I was trying to get a laugh, not make you feel small.", "jp": "ごめん、ニア。笑いを取りたかっただけで、君を惨めな気持ちにしたかったわけじゃない。"},
+          {"sp": 0, "en": "I believe that. I still need you not to do it again.", "jp": "悪気がなかったのは信じる。でも、もう繰り返さないでほしい。"},
+          {"sp": 1, "en": "Yeah. I can make fun of myself for once.", "jp": "分かった。今度は自分をネタにするよ。"},
+          {"sp": 0, "en": "Just don't make me the setup when I'm already having a rough day.", "jp": "つらい日には、私を笑いの前振りにしないで。"},
+          {"sp": 1, "en": "Deal. And your presentation was better than my jokes, anyway.", "jp": "約束する。それに、君の発表は僕の冗談よりずっとよかったよ。"}
+        ]
+      },
+      {
+        "t": "勝手に予定を決めないで",
+        "l": [
+          {"sp": 0, "en": "Your sister's staying with us all week? You told her yes before you even asked me, like our home was yours to offer.", "jp": "お姉さんが一週間うちに泊まるの？まるで自分だけの家みたいに、私に聞く前にいいよって返事したんだね。"},
+          {"sp": 1, "en": "She was in a bind, and I figured we'd make it work.", "jp": "困ってたから、何とかなると思ったんだ。"},
+          {"sp": 0, "en": "Our apartment is tiny, and I have early shifts every morning.", "jp": "うちは狭いし、私は毎朝早番なの。"},
+          {"sp": 1, "en": "I know. I should've checked with you before offering our place.", "jp": "分かってる。うちを使っていいと言う前に、君に相談すべきだった。"},
+          {"sp": 0, "en": "It's not about your sister. It's about making a shared decision by yourself and expecting me to be fine with it.", "jp": "お姉さんのことが問題なんじゃない。二人で決めることを一人で決めて、私がそれで平気だと思っているのが問題なの。"},
+          {"sp": 1, "en": "You're right, and I don't wanna hide behind \"I was just helping.\"", "jp": "その通りだね。「助けてあげただけ」を言い訳にしたくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:言い訳を避ける"},
+          {"sp": 0, "en": "Can you call her back and ask if the weekend would work instead?", "jp": "電話して、週末だけなら大丈夫か聞いてくれる？"},
+          {"sp": 1, "en": "Yeah. I'll explain that I jumped the gun and we need to check our calendar.", "jp": "うん。先走ってしまったことと、予定を確認する必要があるって説明する。"},
+          {"sp": 0, "en": "Thanks. Next time, please ask before you volunteer both of us.", "jp": "ありがとう。次からは、二人分の返事をする前に相談してね。"},
+          {"sp": 1, "en": "I will. Shared home, shared decisions.", "jp": "そうするよ。家は二人のもの、決めることも二人で。"}
+        ]
+      },
+      {
+        "t": "話を最後まで聞いて",
+        "l": [
+          {"sp": 0, "en": "Can I finish one sentence before you tell me what I should've done, or are we skipping straight to your solution again?", "jp": "どうすればよかったか言われる前に、一文だけ最後まで話させてくれる？それともまたすぐ解決策の話？"},
+          {"sp": 1, "en": "I was only trying to help you fix it.", "jp": "解決できるように助けようとしてただけだよ。"},
+          {"sp": 0, "en": "I know, but I wanted you to hear why I was upset first.", "jp": "分かってる。でもまず、私がなぜ怒ってるのか聞いてほしかった。"},
+          {"sp": 1, "en": "Okay. Go ahead. I'll keep my solutions to myself for a minute.", "jp": "分かった。話して。しばらく解決策は口に出さないよ。"},
+          {"sp": 0, "en": "When you jumped in, it felt like you were correcting me instead of understanding me, and I shut down before I could explain.", "jp": "すぐ口を挟まれて、分かろうとするより私を正そうとしてるように感じた。それで説明する前に話す気がなくなった。"},
+          {"sp": 1, "en": "I can see that. I get impatient when I think I know the answer.", "jp": "そう感じるのも分かる。答えが分かったと思うと、つい急いじゃうんだ。"},
+          {"sp": 0, "en": "Sometimes I don't need a fix. I just need you to say, \"That sounds hard.\"", "jp": "解決してほしいわけじゃないときもあるの。ただ「それは大変だったね」って言ってほしい。"},
+          {"sp": 1, "en": "That sounds hard, and I'm sorry I made it harder.", "jp": "それは大変だったね。余計につらくさせてごめん。"},
+          {"sp": 0, "en": "Thanks. Now we can talk about what to do next.", "jp": "ありがとう。じゃあ、次にどうするか話せるよ。"},
+          {"sp": 1, "en": "Your turn first. I'll listen, then we can figure it out together.", "jp": "まず君の番だね。僕が聞いて、それから一緒に考えよう。"}
+        ]
+      },
+      {
+        "t": "グループチャットの沈黙",
+        "l": [
+          {"sp": 0, "en": "You read the group chat and left me hanging when I asked if you were coming, while everyone else got an answer right away.", "jp": "グループのメッセージを読んだのに、来るか聞いた私を放置して、ほかの人にはすぐ返事してたよね。"},
+          {"sp": 1, "en": "I was at work. I couldn't answer right then.", "jp": "仕事中だったんだ。すぐには返事できなかった。"},
+          {"sp": 0, "en": "A quick \"can't talk\" would've taken two seconds.", "jp": "「今は無理」って一言なら2秒で送れたでしょ。"},
+          {"sp": 1, "en": "I didn't know it felt like I was ignoring you.", "jp": "無視されたように感じるとは思わなかった。"},
+          {"sp": 0, "en": "Everyone else got an answer. I was the only one guessing whether you were coming or if I should make another plan.", "jp": "ほかの人には返事してたのに、あなたが来るのか、別の予定を立てたほうがいいのか、私だけ分からなかった。"},
+          {"sp": 1, "en": "You're right. I replied to the easy messages and put yours off.", "jp": "その通りだね。返しやすいメッセージだけ返して、君のを後回しにした。"},
+          {"sp": 0, "en": "So, like, was that on purpose, or did you just forget?", "jp": "つまり、わざとだったの？それとも単に忘れた？", "note": "元の形: so, like／聞こえ方: ソウ・ライク／使う場面:考えながら確認"},
+          {"sp": 1, "en": "I forgot, but I can see why it looked personal.", "jp": "忘れてた。でも個人的に無視されたように見えたのも分かる。"},
+          {"sp": 0, "en": "Next time, just say you're busy. Don't leave me to fill in the blanks.", "jp": "次は忙しいって言って。勝手に理由を想像させないで。"},
+          {"sp": 1, "en": "Fair. I can do that, and I'm sorry I made you wonder.", "jp": "分かった。そうするよ。不安にさせてごめん。"}
+        ]
+      },
+      {
+        "t": "家事の分担が偏ってる",
+        "l": [
+          {"sp": 0, "en": "The dishes are still here, the laundry's wet, and I am not your household manager who has to remind you every single time.", "jp": "食器はそのまま、洗濯物も濡れたまま。毎回あなたに催促する家事管理係じゃないよ。"},
+          {"sp": 1, "en": "I said I'd do it after the game.", "jp": "試合のあとにやるって言ったよ。"},
+          {"sp": 0, "en": "You say that every time, and then I either do it or remind you again.", "jp": "いつもそう言って、結局私がやるか、また催促することになる。"},
+          {"sp": 1, "en": "I honestly didn't realize you were keeping track of all of it.", "jp": "君がそこまで全部気にしてるって、本当に気づいてなかった。"},
+          {"sp": 0, "en": "I shouldn't have to keep a list just to get help in my own home, or manage your chores like another project.", "jp": "自分の家で手伝ってもらうために記録をつけたり、あなたの家事を別の仕事みたいに管理したりするのはおかしいよ。"},
+          {"sp": 1, "en": "You're right. I don't wanna turn this into another promise I forget.", "jp": "その通りだね。また忘れる約束を増やしたくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:反省を伝える"},
+          {"sp": 0, "en": "Then let's split the chores and put them on the calendar.", "jp": "じゃあ家事を分けて、予定表に入れよう。"},
+          {"sp": 1, "en": "I'll handle dishes and laundry on weekdays. You pick what feels fair.", "jp": "平日の食器洗いと洗濯は僕がやるよ。ほかは納得できる分担を決めよう。"},
+          {"sp": 0, "en": "That works if you do them without waiting for me to ask.", "jp": "私に言われるのを待たずにやってくれるなら、それでいいよ。"},
+          {"sp": 1, "en": "Deal. And I'll start with the dishes right now.", "jp": "約束する。まず今すぐ食器を洗うよ。"}
+        ]
+      },
+      {
+        "t": "境界線を越えないで",
+        "l": [
+          {"sp": 0, "en": "I told you that story in private, and now the whole table knows about it because you turned it into a funny little story.", "jp": "あの話は内緒で伝えたのに、あなたがちょっとした笑い話にしたせいで、今ではテーブルのみんなが知ってる。"},
+          {"sp": 1, "en": "I didn't think it was a secret. I thought it was funny.", "jp": "秘密だと思わなかったんだ。面白い話だと思って。"},
+          {"sp": 0, "en": "I said it quietly because I trusted you, not because I wanted an audience.", "jp": "信頼してたから小声で話したんだよ。みんなに聞かせたかったわけじゃない。"},
+          {"sp": 1, "en": "I messed up. I should've asked before sharing anything personal.", "jp": "やってしまったね。個人的なことを話す前に確認すべきだった。"},
+          {"sp": 0, "en": "You made me feel exposed, and now I have to act like it doesn't bother me just so everyone else can enjoy dinner.", "jp": "さらけ出された気分だよ。みんなが食事を楽しめるように、気にしてないふりまでしなきゃいけない。"},
+          {"sp": 1, "en": "You don't hafta pretend. I can tell them I shouldn't have brought it up.", "jp": "平気なふりをしなくていいよ。話題に出すべきじゃなかったって、みんなに伝える。", "note": "元の形: have to／聞こえ方: ハフタ／使う場面:必要を伝える"},
+          {"sp": 0, "en": "Please do, but don't repeat the details while you explain.", "jp": "そうして。でも説明するときに内容を繰り返さないでね。"},
+          {"sp": 1, "en": "I won't. And next time, I'll check whether something is okay to share.", "jp": "繰り返さないよ。次からは話していい内容か確認する。"},
+          {"sp": 0, "en": "That's what I needed to hear. I just want to feel safe telling you things.", "jp": "それが聞きたかった。安心してあなたに話せる関係でいたいだけ。"},
+          {"sp": 1, "en": "I get it. Your trust isn't mine to spend for a laugh.", "jp": "分かった。君の信頼を、笑いを取るために使う権利は僕にはない。"}
+        ]
+      }
+    ]
+  }
+]

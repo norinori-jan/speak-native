@@ -10,10 +10,11 @@
 ```
 speak-native/
 ├── index.html              # ✓ PWA メタタグ + SW登録追加
+├── service-worker.js       # ✓ GitHub Pages のルートでアプリ全体を制御
 ├── package.json            # ✓ スクリプト設定
 ├── pwa/
 │   ├── manifest.json       # ✓ 作成
-│   └── service-worker.js   # ✓ 作成
+│   └── service-worker.js   # ✓ キャッシュ処理本体
 ├── assets/
 │   └── images/
 │       ├── icon-192.png    # ⚠️ 生成必要
@@ -22,6 +23,8 @@ speak-native/
 └── docs/
     └── ROADMAP.md
 ```
+
+`service-worker.js` はルートスコープを確保する薄い入口で、キャッシュ処理本体は `pwa/service-worker.js` にあります。オフラインで使う追加会話・フレーズJSONは、サービスワーカーの `ASSETS` に登録してください。
 
 ### ⚠️ Step 2: アイコン生成（必須）
 
