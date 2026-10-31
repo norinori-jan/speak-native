@@ -1,0 +1,132 @@
+[
+  {
+    "id": "mishap",
+    "ic": "🧯",
+    "n": "トラブル・ハプニング",
+    "hint": "two strangers help each other after a late-night roadside breakdown",
+    "level": 3,
+    "keywords": ["unexpected problems", "asking for help", "staying calm"],
+    "d": [
+      {
+        "t": "雨の夜に車が止まった",
+        "l": [
+          {"sp": 0, "en": "The engine just died, and my phone's at two percent. I don't even know where we are or how I'm supposed to reach my kid.", "jp": "エンジンが急に止まって、スマホも残り2％。ここがどこなのかも、子どもにどう連絡すればいいのかも分からない。"},
+          {"sp": 1, "en": "You're on Oak Street. Pull over as far as you can, and put your hazard lights on.", "jp": "ここはオーク通りです。できるだけ端に寄せて、ハザードをつけてください。"},
+          {"sp": 0, "en": "I did. The dashboard went dark right after I turned them on.", "jp": "もうつけました。ハザードをつけた直後に、ダッシュボードが真っ暗になって。"},
+          {"sp": 1, "en": "Okay, don't try restarting it. Is anyone hurt?", "jp": "分かりました。エンジンをかけ直さないでください。けが人はいますか？"},
+          {"sp": 0, "en": "No, just scared. I was supposed to pick my kid up an hour ago.", "jp": "けがはありません。ただ怖くて。1時間前に子どもを迎えに行くはずだったんです。"},
+          {"sp": 1, "en": "I can call roadside assistance from my phone. Got the car's make and plate number, or should I check the dashboard?", "jp": "私の電話からロードサービスに連絡できます。車種とナンバーは分かりますか？それともダッシュボードを確認しましょうか？"},
+          {"sp": 0, "en": "It's a blue Civic. The plate's in my glove box, if the light still works.", "jp": "青いシビックです。ライトがつけば、ナンバーはグローブボックスにあります。"},
+          {"sp": 1, "en": "Lemme use my flashlight. You can call the school from my phone after that.", "jp": "ライトを使わせて。終わったら、私の電話で学校に連絡できます。", "note": "元の形: let me／聞こえ方: レミ／使う場面:手を貸すとき"},
+          {"sp": 0, "en": "Thanks. I thought I could handle everything myself, and now I can't even make a call.", "jp": "ありがとう。何でも一人で何とかできると思ってたのに、今は電話ひとつできない。"},
+          {"sp": 1, "en": "It happens. One thing at a time; we'll get you and your kid sorted out.", "jp": "誰にでもありますよ。一つずつ片付けましょう。あなたもお子さんも何とかします。"}
+        ]
+      },
+      {
+        "t": "鍵を部屋に置いたまま",
+        "l": [
+          {"sp": 0, "en": "Please tell me you have your key, because mine's sitting on the kitchen counter inside and it's starting to rain.", "jp": "鍵を持ってるって言って。私のは部屋の中のカウンターに置いたままだし、雨も降り始めてる。"},
+          {"sp": 1, "en": "I left mine at work. I was sure you had yours.", "jp": "僕のは職場に置いてきた。君が持ってると思い込んでた。"},
+          {"sp": 0, "en": "So we're both locked out, and it's starting to rain. Great planning, team.", "jp": "二人とも締め出されて、雨まで降ってきた。さすがの段取りだね、チームさん。"},
+          {"sp": 1, "en": "C'mon, the building manager gave us an emergency number when we moved in, and I'm pretty sure it's on the notice board.", "jp": "ほら、入居したときに管理人さんが緊急連絡先をくれたよ。確か掲示板にある。", "note": "元の形: come on／聞こえ方: カモン／使う場面:相手を促す"},
+          {"sp": 0, "en": "I can call, but my battery's almost gone. You got yours?", "jp": "電話するけど、充電がもうほとんどない。そっちは大丈夫？", "note": "元の形: have you got／聞こえ方: ユガラ／使う場面:持ち物を確認する"},
+          {"sp": 1, "en": "Yeah, but the number's smudged. Is that a six or an eight?", "jp": "うん。でも数字がにじんでる。これ、6かな、それとも8？"},
+          {"sp": 0, "en": "Try the six. If we call the wrong person, maybe they'll have a spare key too.", "jp": "6にかけてみて。間違い電話でも、予備の鍵を持ってるかもしれないし。"},
+          {"sp": 1, "en": "You're kidding. Wait, the label says \"after-hours locksmith,\" not the manager.", "jp": "冗談でしょ。あ、ラベルに「時間外の鍵業者」って書いてある。管理人じゃない。"},
+          {"sp": 0, "en": "Honestly, that's even better. Let's get out of the rain before we start blaming each other.", "jp": "むしろ助かったよ。お互いを責め始める前に、雨宿りしよう。"},
+          {"sp": 1, "en": "Fair. I'll pay for the call if you admit the kitchen counter was your idea.", "jp": "分かった。電話代は僕が払うから、カウンターに置いたのは君の案だって認めて。"}
+        ]
+      },
+      {
+        "t": "空港で荷物が見つからない",
+        "l": [
+          {"sp": 0, "en": "That's the last bag. Mine never came out, and the carousel's empty now, so I think the airline has lost it.", "jp": "これで最後の荷物みたい。私のは出てこなかったし、ベルトコンベアも空だから、航空会社がなくしたんだと思う。"},
+          {"sp": 1, "en": "Did you check the other carousel? They switched our flight's baggage claim.", "jp": "別のベルトコンベアは見た？私たちの便、荷物受取所が変更になったみたい。"},
+          {"sp": 0, "en": "I checked. My suitcase has my medication and the clothes for tomorrow's interview.", "jp": "見たよ。スーツケースには薬と、明日の面接で着る服が入ってるの。"},
+          {"sp": 1, "en": "Okay, let's find the airline desk before it closes.", "jp": "分かった。閉まる前に航空会社の窓口を探そう。"},
+          {"sp": 0, "en": "The line's huge. I dunno if we'll get to the counter in time.", "jp": "列がすごく長い。時間内に窓口まで行けるか分からない。", "note": "元の形: do not know／聞こえ方: ダノウ／使う場面:不安を伝える"},
+          {"sp": 1, "en": "I can call them while you ask the information desk where to report a missing bag, and we can compare answers before we leave.", "jp": "君が案内所で紛失届の場所を聞く間、僕が電話するよ。出発する前に案内が合ってるか確認しよう。"},
+          {"sp": 0, "en": "Here's the claim ticket. It has the bag tag number on the back.", "jp": "これが手荷物引換証。裏に荷物タグの番号がある。"},
+          {"sp": 1, "en": "Got it. Take a picture too, so we don't lose the number.", "jp": "分かった。番号をなくさないよう、写真も撮っておこう。"},
+          {"sp": 0, "en": "If they can't find it tonight, I need a plan for the interview.", "jp": "今夜見つからなかったら、面接の準備をどうするか考えないと。"},
+          {"sp": 1, "en": "We'll sort that out after we file the report. One problem at a time.", "jp": "まず紛失届を出してから考えよう。一つずつ片付ければいいよ。"}
+        ]
+      },
+      {
+        "t": "最終バスに乗り遅れた",
+        "l": [
+          {"sp": 0, "en": "Was that the last bus? Tell me there's another one coming, because my phone's dead and I don't know this area.", "jp": "あれが最終バス？次があるって言って。スマホの充電も切れたし、この辺りは分からないんだ。"},
+          {"sp": 1, "en": "The sign says service ended at eleven. It's eleven-oh-five.", "jp": "表示では11時で運行終了だよ。今は11時5分。"},
+          {"sp": 0, "en": "My phone's dead, and I don't know this neighborhood at all.", "jp": "スマホの充電が切れたし、この辺りはまったく知らない。"},
+          {"sp": 1, "en": "The station's a ten-minute walk, and there's a taxi stand by the pharmacy if we can figure out how to pay.", "jp": "駅までは歩いて10分。支払い方法が何とかできれば、薬局のそばにタクシー乗り場もあるよ。"},
+          {"sp": 0, "en": "I left my wallet at the café. I have one card in my pocket, that's it.", "jp": "財布をカフェに置いてきた。ポケットにカードが一枚あるだけ。"},
+          {"sp": 1, "en": "Okay, don't panic. Can you tap your phone to pay, or is that dead too?", "jp": "分かった、慌てないで。スマホ決済は使える？それも電池切れ？"},
+          {"sp": 0, "en": "Dead too. Any chance the café is still open?", "jp": "そっちも切れてる。カフェ、まだ開いてるかな？"},
+          {"sp": 1, "en": "Dunno, but it's two blocks back. I'll walk with you and we can ask.", "jp": "分からないけど、2ブロック戻ったところ。いっしょに行って聞いてみよう。", "note": "元の形: do not know／聞こえ方: ダノウ／使う場面:確信がない返事"},
+          {"sp": 0, "en": "You don't have to come with me. It's late, and I don't wanna drag you into this.", "jp": "付き合わなくていいよ。もう遅いし、巻き込みたくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:遠慮する"},
+          {"sp": 1, "en": "Relax, I've got time. Let's check the café first, then figure out your ride.", "jp": "大丈夫、時間はあるよ。まずカフェを確認して、それから帰り方を考えよう。"}
+        ]
+      },
+      {
+        "t": "部屋が予約と違う",
+        "l": [
+          {"sp": 0, "en": "We booked a room with two beds, but this one has one bed and a view of a brick wall, and we have two kids with us.", "jp": "ベッド2台の部屋を予約したのに、ここは1台で窓からはレンガの壁しか見えません。子どもも二人いるんです。"},
+          {"sp": 1, "en": "I'm sorry about that. The hotel is full tonight, but let me check the reservation.", "jp": "申し訳ありません。今夜は満室ですが、予約を確認します。"},
+          {"sp": 0, "en": "I have the confirmation right here. It says two beds, non-smoking, upper floor.", "jp": "確認メールがあります。「ベッド2台、禁煙、高層階」と書いてあります。"},
+          {"sp": 1, "en": "You're right. The room type got changed in our system.", "jp": "おっしゃる通りです。システム上で部屋のタイプが変更されていました。"},
+          {"sp": 0, "en": "We didn't change it. We have an early flight, so we need somewhere to sleep.", "jp": "こちらでは変更していません。朝早い便なので、眠れる場所が必要です。"},
+          {"sp": 1, "en": "I can move you to a sister hotel nearby and cover the ride.", "jp": "近くの系列ホテルにご案内して、移動費もこちらで負担できます。"},
+          {"sp": 0, "en": "How nearby? It's past midnight, and we have two kids with us.", "jp": "どのくらい近いですか？もう真夜中ですし、子どもが二人いるんです。"},
+          {"sp": 1, "en": "About five minutes by car. I'll call ahead and make sure the room is ready.", "jp": "車で5分ほどです。先に連絡して、部屋を用意してもらいます。"},
+          {"sp": 0, "en": "Okay, but could you put the new hotel address, room type, and ride details in writing before we leave this desk?", "jp": "分かりました。でも、次のホテルの住所と部屋の種類、移動手段を、ここを離れる前に書面にしてもらえますか？"},
+          {"sp": 1, "en": "Of course. I'll print the new reservation and arrange a taxi now.", "jp": "もちろんです。新しい予約を印刷して、今すぐタクシーを手配します。"}
+        ]
+      },
+      {
+        "t": "キッチンから水が漏れてる",
+        "l": [
+          {"sp": 0, "en": "There's water coming through the ceiling right above the kitchen light, and the drip is getting faster every minute while we're standing here.", "jp": "キッチンの照明の真上から水が漏れてきてる。ここにいる間にも、水滴がどんどん速くなってる。"},
+          {"sp": 1, "en": "Don't touch the switch. Move the table away and call the building manager.", "jp": "スイッチには触らないで。テーブルをどかして、管理会社に連絡して。"},
+          {"sp": 0, "en": "I already put a bowl underneath, but it's filling up faster than I expected.", "jp": "下にボウルを置いたけど、思ったより早く水がたまってる。"},
+          {"sp": 1, "en": "I'm calling the emergency number now. Is the water near any outlets, or only around the light fixture so far?", "jp": "今すぐ緊急連絡先に電話する。水はコンセントの近くにもある？それとも今のところ照明の周りだけ？"},
+          {"sp": 0, "en": "Not yet. The ceiling's starting to sag, though. Should we go downstairs?", "jp": "まだない。でも天井がたわんできた。下の階に避難したほうがいいかな？"},
+          {"sp": 1, "en": "Yeah. Grab your keys and wallet, but don't stand under that spot.", "jp": "そうしよう。鍵と財布だけ持って、あの場所の下には立たないで。"},
+          {"sp": 0, "en": "I gotta tell the neighbors below us before the water reaches their place.", "jp": "水が下の部屋まで届く前に、下の階の人に知らせないと。", "note": "元の形: have got to／聞こえ方: ガラ／使う場面:急ぐ必要を伝える"},
+          {"sp": 1, "en": "I'll knock while you stay by the stairs. The manager's on the way.", "jp": "僕が知らせに行くから、君は階段のそばにいて。管理人が向かってる。"},
+          {"sp": 0, "en": "I left the stove on. Wait, no, I turned it off before we sat down.", "jp": "コンロをつけっぱなしだ。あ、違う、食事の前に消した。"},
+          {"sp": 1, "en": "Good. Let's get downstairs and let the repair crew handle the rest.", "jp": "よかった。下に行って、あとは修理の人に任せよう。"}
+        ]
+      },
+      {
+        "t": "道に迷って助けを求める",
+        "l": [
+          {"sp": 0, "en": "Excuse me, I think I've taken the wrong trail. The signs stopped about half a mile back, and my map won't load.", "jp": "すみません、道を間違えたみたいです。半マイルほど前から標識がなくて、地図も読み込めません。"},
+          {"sp": 1, "en": "Where are you trying to get to? The lookout or the visitor center?", "jp": "どこへ向かっていますか？展望台、それともビジターセンター？"},
+          {"sp": 0, "en": "The visitor center. My friend is waiting there, and my map app won't load.", "jp": "ビジターセンターです。友人が待っていて、地図アプリも読み込めません。"},
+          {"sp": 1, "en": "You're on the ridge trail. It loops back to the visitor center, but it'll take at least an hour at this pace.", "jp": "ここは尾根道です。ビジターセンターに戻れますが、このペースだと少なくとも1時間かかります。"},
+          {"sp": 0, "en": "My ankle's starting to hurt, and we were supposed to meet before sunset.", "jp": "足首が痛くなってきたし、日が沈む前に会う予定だったんです。"},
+          {"sp": 1, "en": "There's a shorter path down the east side. I'll show you where it starts.", "jp": "東側に近道があります。入口まで案内します。"},
+          {"sp": 0, "en": "Are you sure it's safe? I don't wanna end up farther from the road.", "jp": "安全な道ですか？道路からもっと遠くには行きたくないです。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:心配を伝える"},
+          {"sp": 1, "en": "It's marked and well used. Stay with me until we reach the main path.", "jp": "標識があり、よく使われる道です。本道に着くまでいっしょに行きましょう。"},
+          {"sp": 0, "en": "Thanks. I should've downloaded the map before we lost service.", "jp": "ありがとう。電波がなくなる前に地図をダウンロードしておくべきでした。"},
+          {"sp": 1, "en": "Happens all the time. Tell your friend you're safe once we get a signal.", "jp": "よくあることです。電波が戻ったら、友人に無事だと伝えてください。"}
+        ]
+      },
+      {
+        "t": "停電でエレベーターが止まった",
+        "l": [
+          {"sp": 0, "en": "The lights went out, and the elevator stopped between floors. Is anybody else in here, or are we completely alone in the dark?", "jp": "電気が消えて、エレベーターが階の間で止まった。ほかに誰か乗ってる？それとも暗闇の中に二人だけ？"},
+          {"sp": 1, "en": "I'm here. Don't try to force the doors; the emergency button should still work, and we can call building security.", "jp": "います。ドアを無理に開けないで。非常ボタンは動くはずですし、ビルの警備にも連絡できます。"},
+          {"sp": 0, "en": "I pressed it. Nothing happened, and the signal on my phone's gone.", "jp": "押したけど何も起きない。スマホの電波もなくなった。"},
+          {"sp": 1, "en": "Try the alarm button. We can call building security from my phone.", "jp": "警報ボタンを試してみて。僕の電話からビルの警備に連絡できる。"},
+          {"sp": 0, "en": "Okay. I'm a little claustrophobic, so I'm gonna sit down and breathe slowly.", "jp": "分かった。少し閉所が苦手だから、座ってゆっくり呼吸するね。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの行動を伝える"},
+          {"sp": 1, "en": "Good idea. It's stuffy, but we're not out of air. Let's take turns calling.", "jp": "いい考えです。少し息苦しいけど、空気はあります。交代で電話しましょう。"},
+          {"sp": 0, "en": "The call went through. Security says a technician is on the way.", "jp": "電話がつながった。技術者が向かってるって警備の人が言ってた。"},
+          {"sp": 1, "en": "Great. Any idea how long it'll take?", "jp": "よかった。どのくらいかかるか分かる？"},
+          {"sp": 0, "en": "They said ten minutes, maybe fifteen. I've got water if you want some.", "jp": "10分、長くても15分だって。よかったら水があるよ。"},
+          {"sp": 1, "en": "Thanks. We'll be out before either of us runs out of small talk.", "jp": "ありがとう。雑談のネタが尽きる前には出られそうだね。"}
+        ]
+      }
+    ]
+  }
+]

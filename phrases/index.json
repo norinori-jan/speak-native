@@ -416,6 +416,14 @@
 "count": 50,
 "situation": "familyfight",
 "sname": "家族・恋人・友人のけんか"
+},
+{
+"id": "mishap-0301",
+"file": "mishap-0301.json",
+"ver": 1,
+"count": 50,
+"situation": "mishap",
+"sname": "トラブル・ハプニング"
 }
 ]
 }
