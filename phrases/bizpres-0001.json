@@ -1,342 +1,389 @@
 {
-"id": "bizpres-0001",
-"situation": "bizpres",
-"sname": "ビジネス：プレゼン・発表",
-"icon": "📊",
-"level": 3,
-"title": "発表の進行・図表の説明・質疑",
-"items": [
-{
-"en": "Good morning, everyone. Today I'd like to talk about our new product.",
-"jp": "皆さん、おはようございます。今日は新製品についてお話しします。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-001"
-},
-{
-"en": "I'll keep this brief. It should take about ten minutes.",
-"jp": "手短にいきます。10分ほどです。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-002"
-},
-{
-"en": "Let me start with the big picture.",
-"jp": "まず全体像から始めます。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-003"
-},
-{
-"en": "This slide shows our sales over the past three years.",
-"jp": "このスライドは過去3年の売上を示しています。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-004"
-},
-{
-"en": "As you can see, there's a clear upward trend.",
-"jp": "ご覧のとおり、明確な上昇傾向があります。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-005"
-},
-{
-"en": "The blue line represents last year, and the orange line represents this year.",
-"jp": "青線が昨年、オレンジ線が今年を表しています。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-006"
-},
-{
-"en": "Let me draw your attention to this number.",
-"jp": "この数字に注目してください。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-007"
-},
-{
-"en": "Moving on to the next slide.",
-"jp": "次のスライドに進みます。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-008"
-},
-{
-"en": "That brings me to my next point.",
-"jp": "それが次の論点につながります。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-009"
-},
-{
-"en": "To put this in perspective, that's roughly double what we had last year.",
-"jp": "分かりやすく言うと、昨年のほぼ2倍です。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-010"
-},
-{
-"en": "There are three key takeaways from this analysis.",
-"jp": "この分析から重要な点が3つあります。",
-"say": [],
-"note": "takeaway = 持ち帰ってほしい要点。",
-"id": "bizpres-0001-011"
-},
-{
-"en": "First, costs are rising. Second, demand is shifting. Third, we need to adapt.",
-"jp": "第一にコストが上がっています。第二に需要が変わっています。第三に適応が必要です。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-012"
-},
-{
-"en": "What this means for us is that we have to act now.",
-"jp": "私たちにとっての意味は、今すぐ動く必要があるということです。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-013"
-},
-{
-"en": "Our main competitor has just entered the market.",
-"jp": "主な競合が市場に参入しました。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-014"
-},
-{
-"en": "We have a significant advantage in terms of quality.",
-"jp": "品質の面で大きな強みがあります。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-015"
-},
-{
-"en": "The market is expected to grow by eight percent annually.",
-"jp": "市場は年8%の成長が見込まれています。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-016"
-},
-{
-"en": "We're targeting small and medium-sized businesses.",
-"jp": "中小企業を対象にしています。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-017"
-},
-{
-"en": "Our goal is to double our customer base within two years.",
-"jp": "2年で顧客基盤を倍にするのが目標です。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-018"
-},
-{
-"en": "The total investment required is about two million dollars.",
-"jp": "必要な総投資額は約200万ドルです。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-019"
-},
-{
-"en": "We expect to break even within eighteen months.",
-"jp": "18か月で損益分岐に達する見込みです。",
-"say": [],
-"note": "break even = 収支が合う点。",
-"id": "bizpres-0001-020"
-},
-{
-"en": "The return on investment is estimated at twenty-five percent.",
-"jp": "投資利益率は25%と見積もっています。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-021"
-},
-{
-"en": "There are some risks we need to consider.",
-"jp": "考慮すべきリスクがいくつかあります。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-022"
-},
-{
-"en": "The biggest risk is supply chain disruption.",
-"jp": "最大のリスクはサプライチェーンの混乱です。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-023"
-},
-{
-"en": "To mitigate that risk, we plan to work with multiple suppliers.",
-"jp": "そのリスクを軽減するため、複数の仕入先と組む計画です。",
-"say": [],
-"note": "mitigate = 軽減する。",
-"id": "bizpres-0001-024"
-},
-{
-"en": "In summary, we recommend moving forward with the project.",
-"jp": "まとめると、プロジェクトを進めることを推奨します。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-025"
-},
-{
-"en": "That's all I have. Thank you for your attention.",
-"jp": "以上です。ご清聴ありがとうございました。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-026"
-},
-{
-"en": "I'd be happy to take any questions.",
-"jp": "ご質問があれば喜んでお受けします。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-027"
-},
-{
-"en": "That's a great question.",
-"jp": "いい質問ですね。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-028"
-},
-{
-"en": "I don't have that number on hand, but I'll get back to you.",
-"jp": "その数字は今手元にありませんが、後で回答します。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-029"
-},
-{
-"en": "Could you clarify what you mean by that?",
-"jp": "どういう意味か、もう少し説明してもらえますか。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-030"
-},
-{
-"en": "Could you go back to the previous slide?",
-"jp": "前のスライドに戻ってもらえますか。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-031"
-},
-{
-"en": "The font is too small to read from the back.",
-"jp": "後ろからは字が小さくて読めません。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-032"
-},
-{
-"en": "We're running a few minutes over, so I'll skip ahead.",
-"jp": "少し時間を超えているので、先に進みます。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-033"
-},
-{
-"en": "Let me pass the floor to my colleague.",
-"jp": "同僚に引き継ぎます。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-034"
-},
-{
-"en": "Thank you, Nori. That was very informative.",
-"jp": "ノリさん、ありがとうございました。とても参考になりました。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-035"
-},
-{
-"en": "We'll share the slides after the meeting.",
-"jp": "スライドは会議の後で共有します。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-036"
-},
-{
-"en": "Could you email me a copy of the deck?",
-"jp": "資料のコピーをメールで送ってもらえますか。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-037"
-},
-{
-"en": "Please keep your questions until the end.",
-"jp": "質問は最後にお願いします。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-038"
-},
-{
-"en": "Does that answer your question?",
-"jp": "お答えになっていますか。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-039"
-},
-{
-"en": "If anyone is joining remotely, please use the chat.",
-"jp": "リモート参加の方はチャットをご利用ください。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-040"
-},
-{
-"en": "We'll take a ten-minute break and resume at eleven.",
-"jp": "10分休憩して、11時に再開します。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-041"
-},
-{
-"en": "Welcome back. Let's pick up where we left off.",
-"jp": "おかえりなさい。続きから始めましょう。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-042"
-},
-{
-"en": "I'd like to highlight a few key points from the report.",
-"jp": "報告書から重要な点をいくつか強調したいです。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-043"
-},
-{
-"en": "The results exceeded our expectations.",
-"jp": "結果は期待を上回りました。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-044"
-},
-{
-"en": "Unfortunately, the results fell short of our expectations.",
-"jp": "残念ながら、結果は期待に届きませんでした。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-045"
-},
-{
-"en": "The project is on hold until further notice.",
-"jp": "プロジェクトは追って通知があるまで保留です。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-046"
-},
-{
-"en": "We've decided to move in a different direction.",
-"jp": "別の方向に進むことにしました。",
-"say": [],
-"note": "",
-"id": "bizpres-0001-047"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "bizpres-0001",
+  "situation": "bizpres",
+  "sname": "ビジネス：プレゼン・発表",
+  "icon": "📊",
+  "level": 3,
+  "title": "発表の進行・図表の説明・質疑",
+  "items": [
+    {
+      "en": "Good morning, everyone. Today I'd like to talk about our new product.",
+      "jp": "皆さん、おはようございます。今日は新製品についてお話しします。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-001",
+      "audio": "bizpres-0001-001.mp3"
+    },
+    {
+      "en": "I'll keep this brief. It should take about ten minutes.",
+      "jp": "手短にいきます。10分ほどです。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-002",
+      "audio": "bizpres-0001-002.mp3"
+    },
+    {
+      "en": "Let me start with the big picture.",
+      "jp": "まず全体像から始めます。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-003",
+      "audio": "bizpres-0001-003.mp3"
+    },
+    {
+      "en": "This slide shows our sales over the past three years.",
+      "jp": "このスライドは過去3年の売上を示しています。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-004",
+      "audio": "bizpres-0001-004.mp3"
+    },
+    {
+      "en": "As you can see, there's a clear upward trend.",
+      "jp": "ご覧のとおり、明確な上昇傾向があります。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-005",
+      "audio": "bizpres-0001-005.mp3"
+    },
+    {
+      "en": "The blue line represents last year, and the orange line represents this year.",
+      "jp": "青線が昨年、オレンジ線が今年を表しています。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-006",
+      "audio": "bizpres-0001-006.mp3"
+    },
+    {
+      "en": "Let me draw your attention to this number.",
+      "jp": "この数字に注目してください。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-007",
+      "audio": "bizpres-0001-007.mp3"
+    },
+    {
+      "en": "Moving on to the next slide.",
+      "jp": "次のスライドに進みます。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-008",
+      "audio": "bizpres-0001-008.mp3"
+    },
+    {
+      "en": "That brings me to my next point.",
+      "jp": "それが次の論点につながります。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-009",
+      "audio": "bizpres-0001-009.mp3"
+    },
+    {
+      "en": "To put this in perspective, that's roughly double what we had last year.",
+      "jp": "分かりやすく言うと、昨年のほぼ2倍です。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-010",
+      "audio": "bizpres-0001-010.mp3"
+    },
+    {
+      "en": "There are three key takeaways from this analysis.",
+      "jp": "この分析から重要な点が3つあります。",
+      "say": [],
+      "note": "takeaway = 持ち帰ってほしい要点。",
+      "id": "bizpres-0001-011",
+      "audio": "bizpres-0001-011.mp3"
+    },
+    {
+      "en": "First, costs are rising. Second, demand is shifting. Third, we need to adapt.",
+      "jp": "第一にコストが上がっています。第二に需要が変わっています。第三に適応が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-012",
+      "audio": "bizpres-0001-012.mp3"
+    },
+    {
+      "en": "What this means for us is that we have to act now.",
+      "jp": "私たちにとっての意味は、今すぐ動く必要があるということです。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-013",
+      "audio": "bizpres-0001-013.mp3"
+    },
+    {
+      "en": "Our main competitor has just entered the market.",
+      "jp": "主な競合が市場に参入しました。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-014",
+      "audio": "bizpres-0001-014.mp3"
+    },
+    {
+      "en": "We have a significant advantage in terms of quality.",
+      "jp": "品質の面で大きな強みがあります。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-015",
+      "audio": "bizpres-0001-015.mp3"
+    },
+    {
+      "en": "The market is expected to grow by eight percent annually.",
+      "jp": "市場は年8%の成長が見込まれています。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-016",
+      "audio": "bizpres-0001-016.mp3"
+    },
+    {
+      "en": "We're targeting small and medium-sized businesses.",
+      "jp": "中小企業を対象にしています。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-017",
+      "audio": "bizpres-0001-017.mp3"
+    },
+    {
+      "en": "Our goal is to double our customer base within two years.",
+      "jp": "2年で顧客基盤を倍にするのが目標です。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-018",
+      "audio": "bizpres-0001-018.mp3"
+    },
+    {
+      "en": "The total investment required is about two million dollars.",
+      "jp": "必要な総投資額は約200万ドルです。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-019",
+      "audio": "bizpres-0001-019.mp3"
+    },
+    {
+      "en": "We expect to break even within eighteen months.",
+      "jp": "18か月で損益分岐に達する見込みです。",
+      "say": [],
+      "note": "break even = 収支が合う点。",
+      "id": "bizpres-0001-020",
+      "audio": "bizpres-0001-020.mp3"
+    },
+    {
+      "en": "The return on investment is estimated at twenty-five percent.",
+      "jp": "投資利益率は25%と見積もっています。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-021",
+      "audio": "bizpres-0001-021.mp3"
+    },
+    {
+      "en": "There are some risks we need to consider.",
+      "jp": "考慮すべきリスクがいくつかあります。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-022",
+      "audio": "bizpres-0001-022.mp3"
+    },
+    {
+      "en": "The biggest risk is supply chain disruption.",
+      "jp": "最大のリスクはサプライチェーンの混乱です。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-023",
+      "audio": "bizpres-0001-023.mp3"
+    },
+    {
+      "en": "To mitigate that risk, we plan to work with multiple suppliers.",
+      "jp": "そのリスクを軽減するため、複数の仕入先と組む計画です。",
+      "say": [],
+      "note": "mitigate = 軽減する。",
+      "id": "bizpres-0001-024",
+      "audio": "bizpres-0001-024.mp3"
+    },
+    {
+      "en": "In summary, we recommend moving forward with the project.",
+      "jp": "まとめると、プロジェクトを進めることを推奨します。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-025",
+      "audio": "bizpres-0001-025.mp3"
+    },
+    {
+      "en": "That's all I have. Thank you for your attention.",
+      "jp": "以上です。ご清聴ありがとうございました。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-026",
+      "audio": "bizpres-0001-026.mp3"
+    },
+    {
+      "en": "I'd be happy to take any questions.",
+      "jp": "ご質問があれば喜んでお受けします。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-027",
+      "audio": "bizpres-0001-027.mp3"
+    },
+    {
+      "en": "That's a great question.",
+      "jp": "いい質問ですね。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-028",
+      "audio": "bizpres-0001-028.mp3"
+    },
+    {
+      "en": "I don't have that number on hand, but I'll get back to you.",
+      "jp": "その数字は今手元にありませんが、後で回答します。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-029",
+      "audio": "bizpres-0001-029.mp3"
+    },
+    {
+      "en": "Could you clarify what you mean by that?",
+      "jp": "どういう意味か、もう少し説明してもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-030",
+      "audio": "bizpres-0001-030.mp3"
+    },
+    {
+      "en": "Could you go back to the previous slide?",
+      "jp": "前のスライドに戻ってもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-031",
+      "audio": "bizpres-0001-031.mp3"
+    },
+    {
+      "en": "The font is too small to read from the back.",
+      "jp": "後ろからは字が小さくて読めません。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-032",
+      "audio": "bizpres-0001-032.mp3"
+    },
+    {
+      "en": "We're running a few minutes over, so I'll skip ahead.",
+      "jp": "少し時間を超えているので、先に進みます。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-033",
+      "audio": "bizpres-0001-033.mp3"
+    },
+    {
+      "en": "Let me pass the floor to my colleague.",
+      "jp": "同僚に引き継ぎます。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-034",
+      "audio": "bizpres-0001-034.mp3"
+    },
+    {
+      "en": "Thank you, Nori. That was very informative.",
+      "jp": "ノリさん、ありがとうございました。とても参考になりました。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-035",
+      "audio": "bizpres-0001-035.mp3"
+    },
+    {
+      "en": "We'll share the slides after the meeting.",
+      "jp": "スライドは会議の後で共有します。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-036",
+      "audio": "bizpres-0001-036.mp3"
+    },
+    {
+      "en": "Could you email me a copy of the deck?",
+      "jp": "資料のコピーをメールで送ってもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-037",
+      "audio": "bizpres-0001-037.mp3"
+    },
+    {
+      "en": "Please keep your questions until the end.",
+      "jp": "質問は最後にお願いします。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-038",
+      "audio": "bizpres-0001-038.mp3"
+    },
+    {
+      "en": "Does that answer your question?",
+      "jp": "お答えになっていますか。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-039",
+      "audio": "bizpres-0001-039.mp3"
+    },
+    {
+      "en": "If anyone is joining remotely, please use the chat.",
+      "jp": "リモート参加の方はチャットをご利用ください。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-040",
+      "audio": "bizpres-0001-040.mp3"
+    },
+    {
+      "en": "We'll take a ten-minute break and resume at eleven.",
+      "jp": "10分休憩して、11時に再開します。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-041",
+      "audio": "bizpres-0001-041.mp3"
+    },
+    {
+      "en": "Welcome back. Let's pick up where we left off.",
+      "jp": "おかえりなさい。続きから始めましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-042",
+      "audio": "bizpres-0001-042.mp3"
+    },
+    {
+      "en": "I'd like to highlight a few key points from the report.",
+      "jp": "報告書から重要な点をいくつか強調したいです。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-043",
+      "audio": "bizpres-0001-043.mp3"
+    },
+    {
+      "en": "The results exceeded our expectations.",
+      "jp": "結果は期待を上回りました。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-044",
+      "audio": "bizpres-0001-044.mp3"
+    },
+    {
+      "en": "Unfortunately, the results fell short of our expectations.",
+      "jp": "残念ながら、結果は期待に届きませんでした。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-045",
+      "audio": "bizpres-0001-045.mp3"
+    },
+    {
+      "en": "The project is on hold until further notice.",
+      "jp": "プロジェクトは追って通知があるまで保留です。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-046",
+      "audio": "bizpres-0001-046.mp3"
+    },
+    {
+      "en": "We've decided to move in a different direction.",
+      "jp": "別の方向に進むことにしました。",
+      "say": [],
+      "note": "",
+      "id": "bizpres-0001-047",
+      "audio": "bizpres-0001-047.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

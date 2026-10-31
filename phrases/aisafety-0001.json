@@ -1,328 +1,373 @@
 {
-"id": "aisafety-0001",
-"situation": "aisafety",
-"sname": "AI：安全性・倫理・社会",
-"icon": "🛡️",
-"level": 4,
-"title": "リスク・規制・偏り・雇用・透明性",
-"items": [
-{
-"en": "Safety research aims to make sure powerful AI systems behave as intended.",
-"jp": "安全性の研究は、強力なAIが意図どおりに動くようにすることを目指します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-001"
-},
-{
-"en": "One concern is that a model might pursue goals we didn't intend.",
-"jp": "懸念の一つは、意図しない目標をモデルが追うことです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-002"
-},
-{
-"en": "Specification gaming happens when the model exploits a loophole in the reward.",
-"jp": "仕様のすり抜けは、報酬の抜け穴をモデルが突くときに起きます。",
-"say": [],
-"note": "specification gaming = 目的の文字どおりを満たして、本来の意図を外すこと。",
-"id": "aisafety-0001-003"
-},
-{
-"en": "We try to anticipate failure modes before they happen.",
-"jp": "起きる前に、失敗の型を予想しようとします。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-004"
-},
-{
-"en": "The model should be honest, helpful, and harmless.",
-"jp": "モデルは正直で、役に立ち、害を与えないべきです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-005"
-},
-{
-"en": "It's hard to define what harmless means in every context.",
-"jp": "あらゆる場面で害がないとは何かを定義するのは難しいです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-006"
-},
-{
-"en": "There's a tension between being helpful and being safe.",
-"jp": "役に立つことと安全であることの間には、緊張があります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-007"
-},
-{
-"en": "Over-refusal makes the model annoying and less useful.",
-"jp": "断りすぎると、モデルは煩わしく、役に立たなくなります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-008"
-},
-{
-"en": "Under-refusal means it might help with dangerous requests.",
-"jp": "断らなさすぎると、危険な依頼を手伝ってしまうかもしれません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-009"
-},
-{
-"en": "We evaluate the model for dangerous capabilities before release.",
-"jp": "公開前に、危険な能力がないかモデルを評価します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-010"
-},
-{
-"en": "The evaluation covers cyber, biological, and chemical risks.",
-"jp": "評価は、サイバー、生物、化学のリスクを対象にします。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-011"
-},
-{
-"en": "A model with a high risk level requires stronger safeguards.",
-"jp": "リスクが高いモデルには、より強い安全策が必要です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-012"
-},
-{
-"en": "We limit access for the most sensitive capabilities.",
-"jp": "最も慎重を要する能力は、利用を制限します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-013"
-},
-{
-"en": "Jailbreaks try to trick the model into ignoring its rules.",
-"jp": "脱獄は、モデルを騙してルールを無視させようとします。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-014"
-},
-{
-"en": "We continuously patch new jailbreak techniques.",
-"jp": "新しい脱獄の手口は、継続的に塞いでいます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-015"
-},
-{
-"en": "Monitoring helps us detect misuse in real time.",
-"jp": "監視で、悪用をリアルタイムに検知できます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-016"
-},
-{
-"en": "We publish a system card that describes the model's risks.",
-"jp": "モデルのリスクを記したシステムカードを公開します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-017"
-},
-{
-"en": "Transparency builds trust with the public.",
-"jp": "透明性が、社会からの信頼を築きます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-018"
-},
-{
-"en": "Independent audits are an important check.",
-"jp": "第三者の監査は、重要な確認手段です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-019"
-},
-{
-"en": "Some argue that open-sourcing powerful models is dangerous.",
-"jp": "強力なモデルの公開は危険だと主張する人もいます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-020"
-},
-{
-"en": "Others say that openness improves security through scrutiny.",
-"jp": "公開が、検証を通じて安全性を高めると言う人もいます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-021"
-},
-{
-"en": "There's no consensus among experts yet.",
-"jp": "専門家の間でまだ合意はありません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-022"
-},
-{
-"en": "Governments are starting to take an interest.",
-"jp": "政府も関心を持ち始めています。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-023"
-},
-{
-"en": "International coordination is difficult but necessary.",
-"jp": "国際的な調整は難しいが必要です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-024"
-},
-{
-"en": "Regulation should be proportionate to the risk.",
-"jp": "規制は、リスクに見合ったものであるべきです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-025"
-},
-{
-"en": "Too much regulation could stifle innovation.",
-"jp": "規制が多すぎると、革新が阻まれるかもしれません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-026"
-},
-{
-"en": "Too little could lead to serious harm.",
-"jp": "少なすぎると、深刻な被害につながるかもしれません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-027"
-},
-{
-"en": "Bias can creep in at every stage of the pipeline.",
-"jp": "偏りは、工程のあらゆる段階で入り込みます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-028"
-},
-{
-"en": "Representation in the data affects who the model serves well.",
-"jp": "データでの代表性が、モデルが誰にうまく働くかを左右します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-029"
-},
-{
-"en": "We test the model across different demographic groups.",
-"jp": "さまざまな属性の集団でモデルを試験します。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-030"
-},
-{
-"en": "Privacy is another major concern.",
-"jp": "プライバシーも大きな懸念です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-031"
-},
-{
-"en": "Models can memorize and leak training data.",
-"jp": "モデルは学習データを記憶して、漏らすことがあります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-032"
-},
-{
-"en": "Differential privacy adds noise to protect individuals.",
-"jp": "差分プライバシーは、個人を守るためにノイズを加えます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-033"
-},
-{
-"en": "Deepfakes make it harder to trust what we see.",
-"jp": "ディープフェイクのせいで、見たものを信じにくくなります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-034"
-},
-{
-"en": "Watermarking could help identify AI-generated content.",
-"jp": "電子透かしは、AI生成物の識別に役立つかもしれません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-035"
-},
-{
-"en": "Misinformation can spread much faster with these tools.",
-"jp": "これらの道具で、誤情報はずっと速く広がり得ます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-036"
-},
-{
-"en": "Education is key. People need to be skeptical and verify.",
-"jp": "教育が鍵です。人々は疑い、確かめる必要があります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-037"
-},
-{
-"en": "Jobs will change, and some will disappear.",
-"jp": "仕事は変わり、なくなるものもあります。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-038"
-},
-{
-"en": "New kinds of jobs will probably emerge.",
-"jp": "新しい種類の仕事も、おそらく生まれます。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-039"
-},
-{
-"en": "The transition may be painful for some workers.",
-"jp": "移行は、一部の労働者には苦しいかもしれません。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-040"
-},
-{
-"en": "We need policies to support people who are affected.",
-"jp": "影響を受ける人を支える政策が必要です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-041"
-},
-{
-"en": "Concentration of power in a few companies is a concern.",
-"jp": "少数の企業に力が集まることも懸念です。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-042"
-},
-{
-"en": "The long-term effects are hard to predict.",
-"jp": "長期的な影響は予測しにくいです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-043"
-},
-{
-"en": "I'm cautiously optimistic about the future.",
-"jp": "私は慎重ながら楽観しています。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-044"
-},
-{
-"en": "We should plan for both the best and the worst cases.",
-"jp": "最良と最悪の両方に備えるべきです。",
-"say": [],
-"note": "",
-"id": "aisafety-0001-045"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aisafety-0001",
+  "situation": "aisafety",
+  "sname": "AI：安全性・倫理・社会",
+  "icon": "🛡️",
+  "level": 4,
+  "title": "リスク・規制・偏り・雇用・透明性",
+  "items": [
+    {
+      "en": "Safety research aims to make sure powerful AI systems behave as intended.",
+      "jp": "安全性の研究は、強力なAIが意図どおりに動くようにすることを目指します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-001",
+      "audio": "aisafety-0001-001.mp3"
+    },
+    {
+      "en": "One concern is that a model might pursue goals we didn't intend.",
+      "jp": "懸念の一つは、意図しない目標をモデルが追うことです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-002",
+      "audio": "aisafety-0001-002.mp3"
+    },
+    {
+      "en": "Specification gaming happens when the model exploits a loophole in the reward.",
+      "jp": "仕様のすり抜けは、報酬の抜け穴をモデルが突くときに起きます。",
+      "say": [],
+      "note": "specification gaming = 目的の文字どおりを満たして、本来の意図を外すこと。",
+      "id": "aisafety-0001-003",
+      "audio": "aisafety-0001-003.mp3"
+    },
+    {
+      "en": "We try to anticipate failure modes before they happen.",
+      "jp": "起きる前に、失敗の型を予想しようとします。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-004",
+      "audio": "aisafety-0001-004.mp3"
+    },
+    {
+      "en": "The model should be honest, helpful, and harmless.",
+      "jp": "モデルは正直で、役に立ち、害を与えないべきです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-005",
+      "audio": "aisafety-0001-005.mp3"
+    },
+    {
+      "en": "It's hard to define what harmless means in every context.",
+      "jp": "あらゆる場面で害がないとは何かを定義するのは難しいです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-006",
+      "audio": "aisafety-0001-006.mp3"
+    },
+    {
+      "en": "There's a tension between being helpful and being safe.",
+      "jp": "役に立つことと安全であることの間には、緊張があります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-007",
+      "audio": "aisafety-0001-007.mp3"
+    },
+    {
+      "en": "Over-refusal makes the model annoying and less useful.",
+      "jp": "断りすぎると、モデルは煩わしく、役に立たなくなります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-008",
+      "audio": "aisafety-0001-008.mp3"
+    },
+    {
+      "en": "Under-refusal means it might help with dangerous requests.",
+      "jp": "断らなさすぎると、危険な依頼を手伝ってしまうかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-009",
+      "audio": "aisafety-0001-009.mp3"
+    },
+    {
+      "en": "We evaluate the model for dangerous capabilities before release.",
+      "jp": "公開前に、危険な能力がないかモデルを評価します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-010",
+      "audio": "aisafety-0001-010.mp3"
+    },
+    {
+      "en": "The evaluation covers cyber, biological, and chemical risks.",
+      "jp": "評価は、サイバー、生物、化学のリスクを対象にします。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-011",
+      "audio": "aisafety-0001-011.mp3"
+    },
+    {
+      "en": "A model with a high risk level requires stronger safeguards.",
+      "jp": "リスクが高いモデルには、より強い安全策が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-012",
+      "audio": "aisafety-0001-012.mp3"
+    },
+    {
+      "en": "We limit access for the most sensitive capabilities.",
+      "jp": "最も慎重を要する能力は、利用を制限します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-013",
+      "audio": "aisafety-0001-013.mp3"
+    },
+    {
+      "en": "Jailbreaks try to trick the model into ignoring its rules.",
+      "jp": "脱獄は、モデルを騙してルールを無視させようとします。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-014",
+      "audio": "aisafety-0001-014.mp3"
+    },
+    {
+      "en": "We continuously patch new jailbreak techniques.",
+      "jp": "新しい脱獄の手口は、継続的に塞いでいます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-015",
+      "audio": "aisafety-0001-015.mp3"
+    },
+    {
+      "en": "Monitoring helps us detect misuse in real time.",
+      "jp": "監視で、悪用をリアルタイムに検知できます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-016",
+      "audio": "aisafety-0001-016.mp3"
+    },
+    {
+      "en": "We publish a system card that describes the model's risks.",
+      "jp": "モデルのリスクを記したシステムカードを公開します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-017",
+      "audio": "aisafety-0001-017.mp3"
+    },
+    {
+      "en": "Transparency builds trust with the public.",
+      "jp": "透明性が、社会からの信頼を築きます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-018",
+      "audio": "aisafety-0001-018.mp3"
+    },
+    {
+      "en": "Independent audits are an important check.",
+      "jp": "第三者の監査は、重要な確認手段です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-019",
+      "audio": "aisafety-0001-019.mp3"
+    },
+    {
+      "en": "Some argue that open-sourcing powerful models is dangerous.",
+      "jp": "強力なモデルの公開は危険だと主張する人もいます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-020",
+      "audio": "aisafety-0001-020.mp3"
+    },
+    {
+      "en": "Others say that openness improves security through scrutiny.",
+      "jp": "公開が、検証を通じて安全性を高めると言う人もいます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-021",
+      "audio": "aisafety-0001-021.mp3"
+    },
+    {
+      "en": "There's no consensus among experts yet.",
+      "jp": "専門家の間でまだ合意はありません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-022",
+      "audio": "aisafety-0001-022.mp3"
+    },
+    {
+      "en": "Governments are starting to take an interest.",
+      "jp": "政府も関心を持ち始めています。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-023",
+      "audio": "aisafety-0001-023.mp3"
+    },
+    {
+      "en": "International coordination is difficult but necessary.",
+      "jp": "国際的な調整は難しいが必要です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-024",
+      "audio": "aisafety-0001-024.mp3"
+    },
+    {
+      "en": "Regulation should be proportionate to the risk.",
+      "jp": "規制は、リスクに見合ったものであるべきです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-025",
+      "audio": "aisafety-0001-025.mp3"
+    },
+    {
+      "en": "Too much regulation could stifle innovation.",
+      "jp": "規制が多すぎると、革新が阻まれるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-026",
+      "audio": "aisafety-0001-026.mp3"
+    },
+    {
+      "en": "Too little could lead to serious harm.",
+      "jp": "少なすぎると、深刻な被害につながるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-027",
+      "audio": "aisafety-0001-027.mp3"
+    },
+    {
+      "en": "Bias can creep in at every stage of the pipeline.",
+      "jp": "偏りは、工程のあらゆる段階で入り込みます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-028",
+      "audio": "aisafety-0001-028.mp3"
+    },
+    {
+      "en": "Representation in the data affects who the model serves well.",
+      "jp": "データでの代表性が、モデルが誰にうまく働くかを左右します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-029",
+      "audio": "aisafety-0001-029.mp3"
+    },
+    {
+      "en": "We test the model across different demographic groups.",
+      "jp": "さまざまな属性の集団でモデルを試験します。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-030",
+      "audio": "aisafety-0001-030.mp3"
+    },
+    {
+      "en": "Privacy is another major concern.",
+      "jp": "プライバシーも大きな懸念です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-031",
+      "audio": "aisafety-0001-031.mp3"
+    },
+    {
+      "en": "Models can memorize and leak training data.",
+      "jp": "モデルは学習データを記憶して、漏らすことがあります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-032",
+      "audio": "aisafety-0001-032.mp3"
+    },
+    {
+      "en": "Differential privacy adds noise to protect individuals.",
+      "jp": "差分プライバシーは、個人を守るためにノイズを加えます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-033",
+      "audio": "aisafety-0001-033.mp3"
+    },
+    {
+      "en": "Deepfakes make it harder to trust what we see.",
+      "jp": "ディープフェイクのせいで、見たものを信じにくくなります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-034",
+      "audio": "aisafety-0001-034.mp3"
+    },
+    {
+      "en": "Watermarking could help identify AI-generated content.",
+      "jp": "電子透かしは、AI生成物の識別に役立つかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-035",
+      "audio": "aisafety-0001-035.mp3"
+    },
+    {
+      "en": "Misinformation can spread much faster with these tools.",
+      "jp": "これらの道具で、誤情報はずっと速く広がり得ます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-036",
+      "audio": "aisafety-0001-036.mp3"
+    },
+    {
+      "en": "Education is key. People need to be skeptical and verify.",
+      "jp": "教育が鍵です。人々は疑い、確かめる必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-037",
+      "audio": "aisafety-0001-037.mp3"
+    },
+    {
+      "en": "Jobs will change, and some will disappear.",
+      "jp": "仕事は変わり、なくなるものもあります。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-038",
+      "audio": "aisafety-0001-038.mp3"
+    },
+    {
+      "en": "New kinds of jobs will probably emerge.",
+      "jp": "新しい種類の仕事も、おそらく生まれます。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-039",
+      "audio": "aisafety-0001-039.mp3"
+    },
+    {
+      "en": "The transition may be painful for some workers.",
+      "jp": "移行は、一部の労働者には苦しいかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-040",
+      "audio": "aisafety-0001-040.mp3"
+    },
+    {
+      "en": "We need policies to support people who are affected.",
+      "jp": "影響を受ける人を支える政策が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-041",
+      "audio": "aisafety-0001-041.mp3"
+    },
+    {
+      "en": "Concentration of power in a few companies is a concern.",
+      "jp": "少数の企業に力が集まることも懸念です。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-042",
+      "audio": "aisafety-0001-042.mp3"
+    },
+    {
+      "en": "The long-term effects are hard to predict.",
+      "jp": "長期的な影響は予測しにくいです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-043",
+      "audio": "aisafety-0001-043.mp3"
+    },
+    {
+      "en": "I'm cautiously optimistic about the future.",
+      "jp": "私は慎重ながら楽観しています。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-044",
+      "audio": "aisafety-0001-044.mp3"
+    },
+    {
+      "en": "We should plan for both the best and the worst cases.",
+      "jp": "最良と最悪の両方に備えるべきです。",
+      "say": [],
+      "note": "",
+      "id": "aisafety-0001-045",
+      "audio": "aisafety-0001-045.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

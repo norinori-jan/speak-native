@@ -1,328 +1,373 @@
 {
-"id": "housing-0001",
-"situation": "housing",
-"sname": "住まい・不動産",
-"icon": "🏠",
-"level": 2,
-"title": "賃貸・契約・修理・引っ越し・購入",
-"items": [
-{
-"en": "Are you looking to rent or to buy?",
-"jp": "賃貸ですか、購入ですか。",
-"say": [],
-"note": "",
-"id": "housing-0001-001"
-},
-{
-"en": "What's your budget for rent?",
-"jp": "家賃の予算はいくらですか。",
-"say": [],
-"note": "",
-"id": "housing-0001-002"
-},
-{
-"en": "How many bedrooms are you looking for?",
-"jp": "寝室はいくつ必要ですか。",
-"say": [],
-"note": "",
-"id": "housing-0001-003"
-},
-{
-"en": "The apartment is on the third floor, and there's no elevator.",
-"jp": "部屋は3階で、エレベーターはありません。",
-"say": [],
-"note": "",
-"id": "housing-0001-004"
-},
-{
-"en": "It comes fully furnished.",
-"jp": "家具付きです。",
-"say": [],
-"note": "",
-"id": "housing-0001-005"
-},
-{
-"en": "The rent is fourteen hundred a month, utilities not included.",
-"jp": "家賃は月1400ドルで、光熱費は別です。",
-"say": [],
-"note": "",
-"id": "housing-0001-006"
-},
-{
-"en": "A security deposit of one month's rent is required.",
-"jp": "敷金として家賃1か月分が必要です。",
-"say": [],
-"note": "",
-"id": "housing-0001-007"
-},
-{
-"en": "The deposit will be returned when you move out, if there's no damage.",
-"jp": "損傷がなければ、退去時に敷金は返金されます。",
-"say": [],
-"note": "",
-"id": "housing-0001-008"
-},
-{
-"en": "The lease is for twelve months.",
-"jp": "契約期間は12か月です。",
-"say": [],
-"note": "",
-"id": "housing-0001-009"
-},
-{
-"en": "Pets are not allowed in this building.",
-"jp": "この建物はペット禁止です。",
-"say": [],
-"note": "",
-"id": "housing-0001-010"
-},
-{
-"en": "Smoking is not permitted in the unit.",
-"jp": "室内は禁煙です。",
-"say": [],
-"note": "",
-"id": "housing-0001-011"
-},
-{
-"en": "Laundry is in the basement.",
-"jp": "洗濯機は地下にあります。",
-"say": [],
-"note": "",
-"id": "housing-0001-012"
-},
-{
-"en": "Parking is available for an extra fifty dollars a month.",
-"jp": "駐車場は月50ドルの追加で使えます。",
-"say": [],
-"note": "",
-"id": "housing-0001-013"
-},
-{
-"en": "Would you like to see the apartment this afternoon?",
-"jp": "今日の午後に部屋を見学しますか。",
-"say": [],
-"note": "",
-"id": "housing-0001-014"
-},
-{
-"en": "The landlord will do a background and credit check.",
-"jp": "大家が身元と信用の調査をします。",
-"say": [],
-"note": "",
-"id": "housing-0001-015"
-},
-{
-"en": "We'll need proof of income and two references.",
-"jp": "収入証明と推薦者2名が必要です。",
-"say": [],
-"note": "",
-"id": "housing-0001-016"
-},
-{
-"en": "When would you like to move in?",
-"jp": "いつから入居したいですか。",
-"say": [],
-"note": "",
-"id": "housing-0001-017"
-},
-{
-"en": "The apartment will be available on the first of next month.",
-"jp": "部屋は来月1日から入居できます。",
-"say": [],
-"note": "",
-"id": "housing-0001-018"
-},
-{
-"en": "Please sign the lease and pay the first month's rent.",
-"jp": "賃貸契約に署名し、初月の家賃を払ってください。",
-"say": [],
-"note": "",
-"id": "housing-0001-019"
-},
-{
-"en": "Here are the keys. Please don't make copies.",
-"jp": "鍵です。コピーしないでください。",
-"say": [],
-"note": "",
-"id": "housing-0001-020"
-},
-{
-"en": "If anything breaks, please call the maintenance office.",
-"jp": "壊れたものがあれば、管理事務所に連絡してください。",
-"say": [],
-"note": "",
-"id": "housing-0001-021"
-},
-{
-"en": "The garbage is collected on Tuesdays and Fridays.",
-"jp": "ごみ収集は火曜と金曜です。",
-"say": [],
-"note": "",
-"id": "housing-0001-022"
-},
-{
-"en": "Recycling goes in the blue bin.",
-"jp": "リサイクルは青い容器に入れてください。",
-"say": [],
-"note": "",
-"id": "housing-0001-023"
-},
-{
-"en": "Please keep the noise down after ten p.m.",
-"jp": "午後10時以降は静かにしてください。",
-"say": [],
-"note": "",
-"id": "housing-0001-024"
-},
-{
-"en": "The heating is included in the rent.",
-"jp": "暖房は家賃に含まれています。",
-"say": [],
-"note": "",
-"id": "housing-0001-025"
-},
-{
-"en": "The water heater isn't working. Can you send someone?",
-"jp": "給湯器が動きません。誰か来てもらえますか。",
-"say": [],
-"note": "",
-"id": "housing-0001-026"
-},
-{
-"en": "The plumber will come tomorrow between one and three.",
-"jp": "配管工が明日1時から3時の間に来ます。",
-"say": [],
-"note": "",
-"id": "housing-0001-027"
-},
-{
-"en": "There's a leak under the sink.",
-"jp": "流しの下から水が漏れています。",
-"say": [],
-"note": "",
-"id": "housing-0001-028"
-},
-{
-"en": "The landlord has agreed to repaint the walls.",
-"jp": "大家が壁を塗り直すことに同意しました。",
-"say": [],
-"note": "",
-"id": "housing-0001-029"
-},
-{
-"en": "I'm giving you thirty days' notice that I'll be moving out.",
-"jp": "30日前の通知として、退去することをお伝えします。",
-"say": [],
-"note": "",
-"id": "housing-0001-030"
-},
-{
-"en": "We'll do a move-out inspection on your last day.",
-"jp": "最終日に退去時の確認をします。",
-"say": [],
-"note": "",
-"id": "housing-0001-031"
-},
-{
-"en": "The mover will arrive between eight and ten.",
-"jp": "引っ越し業者は8時から10時の間に着きます。",
-"say": [],
-"note": "",
-"id": "housing-0001-032"
-},
-{
-"en": "Please label the boxes by room.",
-"jp": "箱は部屋ごとにラベルを貼ってください。",
-"say": [],
-"note": "",
-"id": "housing-0001-033"
-},
-{
-"en": "The electric company needs your new address.",
-"jp": "電力会社に新しい住所を伝える必要があります。",
-"say": [],
-"note": "",
-"id": "housing-0001-034"
-},
-{
-"en": "We'll set up your internet on Friday.",
-"jp": "金曜にインターネットを設定します。",
-"say": [],
-"note": "",
-"id": "housing-0001-035"
-},
-{
-"en": "Welcome to the neighborhood.",
-"jp": "この地域へようこそ。",
-"say": [],
-"note": "",
-"id": "housing-0001-036"
-},
-{
-"en": "The neighbors are very friendly.",
-"jp": "隣人はとても親切です。",
-"say": [],
-"note": "",
-"id": "housing-0001-037"
-},
-{
-"en": "There's a grocery store and a bus stop within walking distance.",
-"jp": "スーパーとバス停が歩ける範囲にあります。",
-"say": [],
-"note": "",
-"id": "housing-0001-038"
-},
-{
-"en": "The house is on a quiet street, close to the school.",
-"jp": "家は静かな通りにあり、学校に近いです。",
-"say": [],
-"note": "",
-"id": "housing-0001-039"
-},
-{
-"en": "The house has a two-car garage and a small backyard.",
-"jp": "家には2台分のガレージと小さな裏庭があります。",
-"say": [],
-"note": "",
-"id": "housing-0001-040"
-},
-{
-"en": "The asking price is four hundred and fifty thousand.",
-"jp": "希望価格は45万ドルです。",
-"say": [],
-"note": "",
-"id": "housing-0001-041"
-},
-{
-"en": "We'd like to make an offer.",
-"jp": "購入の申し込みをしたいです。",
-"say": [],
-"note": "",
-"id": "housing-0001-042"
-},
-{
-"en": "The seller accepted your offer.",
-"jp": "売主があなたの申し出を受け入れました。",
-"say": [],
-"note": "",
-"id": "housing-0001-043"
-},
-{
-"en": "Closing will take place on the thirtieth.",
-"jp": "引き渡しは30日です。",
-"say": [],
-"note": "",
-"id": "housing-0001-044"
-},
-{
-"en": "You'll need a home inspection before closing.",
-"jp": "引き渡しの前に住宅検査が必要です。",
-"say": [],
-"note": "",
-"id": "housing-0001-045"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "housing-0001",
+  "situation": "housing",
+  "sname": "住まい・不動産",
+  "icon": "🏠",
+  "level": 2,
+  "title": "賃貸・契約・修理・引っ越し・購入",
+  "items": [
+    {
+      "en": "Are you looking to rent or to buy?",
+      "jp": "賃貸ですか、購入ですか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-001",
+      "audio": "housing-0001-001.mp3"
+    },
+    {
+      "en": "What's your budget for rent?",
+      "jp": "家賃の予算はいくらですか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-002",
+      "audio": "housing-0001-002.mp3"
+    },
+    {
+      "en": "How many bedrooms are you looking for?",
+      "jp": "寝室はいくつ必要ですか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-003",
+      "audio": "housing-0001-003.mp3"
+    },
+    {
+      "en": "The apartment is on the third floor, and there's no elevator.",
+      "jp": "部屋は3階で、エレベーターはありません。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-004",
+      "audio": "housing-0001-004.mp3"
+    },
+    {
+      "en": "It comes fully furnished.",
+      "jp": "家具付きです。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-005",
+      "audio": "housing-0001-005.mp3"
+    },
+    {
+      "en": "The rent is fourteen hundred a month, utilities not included.",
+      "jp": "家賃は月1400ドルで、光熱費は別です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-006",
+      "audio": "housing-0001-006.mp3"
+    },
+    {
+      "en": "A security deposit of one month's rent is required.",
+      "jp": "敷金として家賃1か月分が必要です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-007",
+      "audio": "housing-0001-007.mp3"
+    },
+    {
+      "en": "The deposit will be returned when you move out, if there's no damage.",
+      "jp": "損傷がなければ、退去時に敷金は返金されます。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-008",
+      "audio": "housing-0001-008.mp3"
+    },
+    {
+      "en": "The lease is for twelve months.",
+      "jp": "契約期間は12か月です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-009",
+      "audio": "housing-0001-009.mp3"
+    },
+    {
+      "en": "Pets are not allowed in this building.",
+      "jp": "この建物はペット禁止です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-010",
+      "audio": "housing-0001-010.mp3"
+    },
+    {
+      "en": "Smoking is not permitted in the unit.",
+      "jp": "室内は禁煙です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-011",
+      "audio": "housing-0001-011.mp3"
+    },
+    {
+      "en": "Laundry is in the basement.",
+      "jp": "洗濯機は地下にあります。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-012",
+      "audio": "housing-0001-012.mp3"
+    },
+    {
+      "en": "Parking is available for an extra fifty dollars a month.",
+      "jp": "駐車場は月50ドルの追加で使えます。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-013",
+      "audio": "housing-0001-013.mp3"
+    },
+    {
+      "en": "Would you like to see the apartment this afternoon?",
+      "jp": "今日の午後に部屋を見学しますか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-014",
+      "audio": "housing-0001-014.mp3"
+    },
+    {
+      "en": "The landlord will do a background and credit check.",
+      "jp": "大家が身元と信用の調査をします。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-015",
+      "audio": "housing-0001-015.mp3"
+    },
+    {
+      "en": "We'll need proof of income and two references.",
+      "jp": "収入証明と推薦者2名が必要です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-016",
+      "audio": "housing-0001-016.mp3"
+    },
+    {
+      "en": "When would you like to move in?",
+      "jp": "いつから入居したいですか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-017",
+      "audio": "housing-0001-017.mp3"
+    },
+    {
+      "en": "The apartment will be available on the first of next month.",
+      "jp": "部屋は来月1日から入居できます。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-018",
+      "audio": "housing-0001-018.mp3"
+    },
+    {
+      "en": "Please sign the lease and pay the first month's rent.",
+      "jp": "賃貸契約に署名し、初月の家賃を払ってください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-019",
+      "audio": "housing-0001-019.mp3"
+    },
+    {
+      "en": "Here are the keys. Please don't make copies.",
+      "jp": "鍵です。コピーしないでください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-020",
+      "audio": "housing-0001-020.mp3"
+    },
+    {
+      "en": "If anything breaks, please call the maintenance office.",
+      "jp": "壊れたものがあれば、管理事務所に連絡してください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-021",
+      "audio": "housing-0001-021.mp3"
+    },
+    {
+      "en": "The garbage is collected on Tuesdays and Fridays.",
+      "jp": "ごみ収集は火曜と金曜です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-022",
+      "audio": "housing-0001-022.mp3"
+    },
+    {
+      "en": "Recycling goes in the blue bin.",
+      "jp": "リサイクルは青い容器に入れてください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-023",
+      "audio": "housing-0001-023.mp3"
+    },
+    {
+      "en": "Please keep the noise down after ten p.m.",
+      "jp": "午後10時以降は静かにしてください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-024",
+      "audio": "housing-0001-024.mp3"
+    },
+    {
+      "en": "The heating is included in the rent.",
+      "jp": "暖房は家賃に含まれています。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-025",
+      "audio": "housing-0001-025.mp3"
+    },
+    {
+      "en": "The water heater isn't working. Can you send someone?",
+      "jp": "給湯器が動きません。誰か来てもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-026",
+      "audio": "housing-0001-026.mp3"
+    },
+    {
+      "en": "The plumber will come tomorrow between one and three.",
+      "jp": "配管工が明日1時から3時の間に来ます。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-027",
+      "audio": "housing-0001-027.mp3"
+    },
+    {
+      "en": "There's a leak under the sink.",
+      "jp": "流しの下から水が漏れています。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-028",
+      "audio": "housing-0001-028.mp3"
+    },
+    {
+      "en": "The landlord has agreed to repaint the walls.",
+      "jp": "大家が壁を塗り直すことに同意しました。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-029",
+      "audio": "housing-0001-029.mp3"
+    },
+    {
+      "en": "I'm giving you thirty days' notice that I'll be moving out.",
+      "jp": "30日前の通知として、退去することをお伝えします。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-030",
+      "audio": "housing-0001-030.mp3"
+    },
+    {
+      "en": "We'll do a move-out inspection on your last day.",
+      "jp": "最終日に退去時の確認をします。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-031",
+      "audio": "housing-0001-031.mp3"
+    },
+    {
+      "en": "The mover will arrive between eight and ten.",
+      "jp": "引っ越し業者は8時から10時の間に着きます。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-032",
+      "audio": "housing-0001-032.mp3"
+    },
+    {
+      "en": "Please label the boxes by room.",
+      "jp": "箱は部屋ごとにラベルを貼ってください。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-033",
+      "audio": "housing-0001-033.mp3"
+    },
+    {
+      "en": "The electric company needs your new address.",
+      "jp": "電力会社に新しい住所を伝える必要があります。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-034",
+      "audio": "housing-0001-034.mp3"
+    },
+    {
+      "en": "We'll set up your internet on Friday.",
+      "jp": "金曜にインターネットを設定します。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-035",
+      "audio": "housing-0001-035.mp3"
+    },
+    {
+      "en": "Welcome to the neighborhood.",
+      "jp": "この地域へようこそ。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-036",
+      "audio": "housing-0001-036.mp3"
+    },
+    {
+      "en": "The neighbors are very friendly.",
+      "jp": "隣人はとても親切です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-037",
+      "audio": "housing-0001-037.mp3"
+    },
+    {
+      "en": "There's a grocery store and a bus stop within walking distance.",
+      "jp": "スーパーとバス停が歩ける範囲にあります。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-038",
+      "audio": "housing-0001-038.mp3"
+    },
+    {
+      "en": "The house is on a quiet street, close to the school.",
+      "jp": "家は静かな通りにあり、学校に近いです。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-039",
+      "audio": "housing-0001-039.mp3"
+    },
+    {
+      "en": "The house has a two-car garage and a small backyard.",
+      "jp": "家には2台分のガレージと小さな裏庭があります。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-040",
+      "audio": "housing-0001-040.mp3"
+    },
+    {
+      "en": "The asking price is four hundred and fifty thousand.",
+      "jp": "希望価格は45万ドルです。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-041",
+      "audio": "housing-0001-041.mp3"
+    },
+    {
+      "en": "We'd like to make an offer.",
+      "jp": "購入の申し込みをしたいです。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-042",
+      "audio": "housing-0001-042.mp3"
+    },
+    {
+      "en": "The seller accepted your offer.",
+      "jp": "売主があなたの申し出を受け入れました。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-043",
+      "audio": "housing-0001-043.mp3"
+    },
+    {
+      "en": "Closing will take place on the thirtieth.",
+      "jp": "引き渡しは30日です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-044",
+      "audio": "housing-0001-044.mp3"
+    },
+    {
+      "en": "You'll need a home inspection before closing.",
+      "jp": "引き渡しの前に住宅検査が必要です。",
+      "say": [],
+      "note": "",
+      "id": "housing-0001-045",
+      "audio": "housing-0001-045.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

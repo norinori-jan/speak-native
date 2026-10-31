@@ -1,328 +1,373 @@
 {
-"id": "school-0001",
-"situation": "school",
-"sname": "学校・留学",
-"icon": "🎓",
-"level": 2,
-"title": "授業・課題・試験・手続き",
-"items": [
-{
-"en": "Welcome to orientation. Please take a seat.",
-"jp": "オリエンテーションへようこそ。席についてください。",
-"say": [],
-"note": "",
-"id": "school-0001-001"
-},
-{
-"en": "Please make sure you've registered for your classes.",
-"jp": "授業の履修登録をしたか確認してください。",
-"say": [],
-"note": "",
-"id": "school-0001-002"
-},
-{
-"en": "The add and drop deadline is next Friday.",
-"jp": "履修の追加・取り消しの期限は来週金曜です。",
-"say": [],
-"note": "",
-"id": "school-0001-003"
-},
-{
-"en": "This course meets on Tuesdays and Thursdays at ten.",
-"jp": "この授業は火曜と木曜の10時です。",
-"say": [],
-"note": "",
-"id": "school-0001-004"
-},
-{
-"en": "The syllabus is available on the course website.",
-"jp": "シラバスは授業のサイトにあります。",
-"say": [],
-"note": "",
-"id": "school-0001-005"
-},
-{
-"en": "Attendance is mandatory.",
-"jp": "出席は必須です。",
-"say": [],
-"note": "",
-"id": "school-0001-006"
-},
-{
-"en": "Please turn off your phones during the lecture.",
-"jp": "講義中は携帯の電源を切ってください。",
-"say": [],
-"note": "",
-"id": "school-0001-007"
-},
-{
-"en": "Open your textbooks to page forty-two.",
-"jp": "教科書の42ページを開いてください。",
-"say": [],
-"note": "",
-"id": "school-0001-008"
-},
-{
-"en": "Today we'll be discussing the causes of the Industrial Revolution.",
-"jp": "今日は産業革命の原因について議論します。",
-"say": [],
-"note": "",
-"id": "school-0001-009"
-},
-{
-"en": "Can anyone tell me what this means?",
-"jp": "これの意味を言える人はいますか。",
-"say": [],
-"note": "",
-"id": "school-0001-010"
-},
-{
-"en": "Please work in pairs and discuss your answers.",
-"jp": "2人1組で答えを話し合ってください。",
-"say": [],
-"note": "",
-"id": "school-0001-011"
-},
-{
-"en": "Could you raise your hand if you have a question?",
-"jp": "質問がある人は手を挙げてください。",
-"say": [],
-"note": "",
-"id": "school-0001-012"
-},
-{
-"en": "Is that clear to everyone?",
-"jp": "皆さん、分かりましたか。",
-"say": [],
-"note": "",
-"id": "school-0001-013"
-},
-{
-"en": "Let me explain that in a different way.",
-"jp": "別の言い方で説明します。",
-"say": [],
-"note": "",
-"id": "school-0001-014"
-},
-{
-"en": "Your assignment is due next Monday.",
-"jp": "課題の提出期限は来週月曜です。",
-"say": [],
-"note": "",
-"id": "school-0001-015"
-},
-{
-"en": "Late submissions will lose ten percent per day.",
-"jp": "遅れた提出は1日10%減点されます。",
-"say": [],
-"note": "",
-"id": "school-0001-016"
-},
-{
-"en": "The essay should be at least fifteen hundred words.",
-"jp": "エッセイは1500語以上にしてください。",
-"say": [],
-"note": "",
-"id": "school-0001-017"
-},
-{
-"en": "Please cite your sources properly. Plagiarism is not tolerated.",
-"jp": "出典を正しく示してください。盗用は認められません。",
-"say": [],
-"note": "",
-"id": "school-0001-018"
-},
-{
-"en": "The midterm exam will cover chapters one through five.",
-"jp": "中間試験は1章から5章が範囲です。",
-"say": [],
-"note": "",
-"id": "school-0001-019"
-},
-{
-"en": "You may bring one page of notes to the exam.",
-"jp": "試験にはメモ1枚を持ち込めます。",
-"say": [],
-"note": "",
-"id": "school-0001-020"
-},
-{
-"en": "Please put your books under your seat and begin.",
-"jp": "本は席の下に置いて、始めてください。",
-"say": [],
-"note": "",
-"id": "school-0001-021"
-},
-{
-"en": "You have forty-five minutes. Time starts now.",
-"jp": "45分です。始めてください。",
-"say": [],
-"note": "",
-"id": "school-0001-022"
-},
-{
-"en": "Pencils down. Please pass your papers forward.",
-"jp": "鉛筆を置いてください。答案を前に回してください。",
-"say": [],
-"note": "",
-"id": "school-0001-023"
-},
-{
-"en": "The grades will be posted online by Friday.",
-"jp": "成績は金曜までにオンラインで公開されます。",
-"say": [],
-"note": "",
-"id": "school-0001-024"
-},
-{
-"en": "You passed with a B plus.",
-"jp": "B+で合格です。",
-"say": [],
-"note": "",
-"id": "school-0001-025"
-},
-{
-"en": "I'd like to discuss my grade during your office hours.",
-"jp": "成績について、オフィスアワーに相談したいです。",
-"say": [],
-"note": "",
-"id": "school-0001-026"
-},
-{
-"en": "My office hours are Wednesdays from two to four.",
-"jp": "私のオフィスアワーは水曜の2時から4時です。",
-"say": [],
-"note": "",
-"id": "school-0001-027"
-},
-{
-"en": "You can email me if you have any questions.",
-"jp": "質問があればメールしてください。",
-"say": [],
-"note": "",
-"id": "school-0001-028"
-},
-{
-"en": "Your student ID card will be ready on Monday.",
-"jp": "学生証は月曜に出来上がります。",
-"say": [],
-"note": "",
-"id": "school-0001-029"
-},
-{
-"en": "You can use the library until midnight.",
-"jp": "図書館は深夜0時まで使えます。",
-"say": [],
-"note": "",
-"id": "school-0001-030"
-},
-{
-"en": "Study rooms can be booked online.",
-"jp": "自習室はオンラインで予約できます。",
-"say": [],
-"note": "",
-"id": "school-0001-031"
-},
-{
-"en": "The tuition fee is due at the start of each semester.",
-"jp": "授業料は各学期の初めに支払います。",
-"say": [],
-"note": "",
-"id": "school-0001-032"
-},
-{
-"en": "You may be eligible for a scholarship.",
-"jp": "奨学金の対象になるかもしれません。",
-"say": [],
-"note": "",
-"id": "school-0001-033"
-},
-{
-"en": "International students need to renew their visa every year.",
-"jp": "留学生はビザを毎年更新する必要があります。",
-"say": [],
-"note": "",
-"id": "school-0001-034"
-},
-{
-"en": "Please see the international student office for help.",
-"jp": "国際学生課に相談してください。",
-"say": [],
-"note": "",
-"id": "school-0001-035"
-},
-{
-"en": "Would you like to join a study group?",
-"jp": "勉強会に参加しませんか。",
-"say": [],
-"note": "",
-"id": "school-0001-036"
-},
-{
-"en": "We have a club fair on Wednesday.",
-"jp": "水曜にサークル勧誘会があります。",
-"say": [],
-"note": "",
-"id": "school-0001-037"
-},
-{
-"en": "Are you looking for a roommate?",
-"jp": "ルームメイトを探していますか。",
-"say": [],
-"note": "",
-"id": "school-0001-038"
-},
-{
-"en": "The dorm has a curfew at midnight.",
-"jp": "寮の門限は深夜0時です。",
-"say": [],
-"note": "",
-"id": "school-0001-039"
-},
-{
-"en": "The cafeteria serves breakfast, lunch, and dinner.",
-"jp": "食堂は朝昼晩に営業しています。",
-"say": [],
-"note": "",
-"id": "school-0001-040"
-},
-{
-"en": "The graduation ceremony will be held in May.",
-"jp": "卒業式は5月です。",
-"say": [],
-"note": "",
-"id": "school-0001-041"
-},
-{
-"en": "Congratulations on your graduation.",
-"jp": "ご卒業おめでとうございます。",
-"say": [],
-"note": "",
-"id": "school-0001-042"
-},
-{
-"en": "Parent-teacher conferences are on Thursday evening.",
-"jp": "保護者面談は木曜の夕方です。",
-"say": [],
-"note": "",
-"id": "school-0001-043"
-},
-{
-"en": "Please sign the permission slip and return it by Friday.",
-"jp": "同意書に署名して金曜までに返してください。",
-"say": [],
-"note": "",
-"id": "school-0001-044"
-},
-{
-"en": "School is closed tomorrow due to snow.",
-"jp": "明日は雪のため休校です。",
-"say": [],
-"note": "",
-"id": "school-0001-045"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "school-0001",
+  "situation": "school",
+  "sname": "学校・留学",
+  "icon": "🎓",
+  "level": 2,
+  "title": "授業・課題・試験・手続き",
+  "items": [
+    {
+      "en": "Welcome to orientation. Please take a seat.",
+      "jp": "オリエンテーションへようこそ。席についてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-001",
+      "audio": "school-0001-001.mp3"
+    },
+    {
+      "en": "Please make sure you've registered for your classes.",
+      "jp": "授業の履修登録をしたか確認してください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-002",
+      "audio": "school-0001-002.mp3"
+    },
+    {
+      "en": "The add and drop deadline is next Friday.",
+      "jp": "履修の追加・取り消しの期限は来週金曜です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-003",
+      "audio": "school-0001-003.mp3"
+    },
+    {
+      "en": "This course meets on Tuesdays and Thursdays at ten.",
+      "jp": "この授業は火曜と木曜の10時です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-004",
+      "audio": "school-0001-004.mp3"
+    },
+    {
+      "en": "The syllabus is available on the course website.",
+      "jp": "シラバスは授業のサイトにあります。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-005",
+      "audio": "school-0001-005.mp3"
+    },
+    {
+      "en": "Attendance is mandatory.",
+      "jp": "出席は必須です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-006",
+      "audio": "school-0001-006.mp3"
+    },
+    {
+      "en": "Please turn off your phones during the lecture.",
+      "jp": "講義中は携帯の電源を切ってください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-007",
+      "audio": "school-0001-007.mp3"
+    },
+    {
+      "en": "Open your textbooks to page forty-two.",
+      "jp": "教科書の42ページを開いてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-008",
+      "audio": "school-0001-008.mp3"
+    },
+    {
+      "en": "Today we'll be discussing the causes of the Industrial Revolution.",
+      "jp": "今日は産業革命の原因について議論します。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-009",
+      "audio": "school-0001-009.mp3"
+    },
+    {
+      "en": "Can anyone tell me what this means?",
+      "jp": "これの意味を言える人はいますか。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-010",
+      "audio": "school-0001-010.mp3"
+    },
+    {
+      "en": "Please work in pairs and discuss your answers.",
+      "jp": "2人1組で答えを話し合ってください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-011",
+      "audio": "school-0001-011.mp3"
+    },
+    {
+      "en": "Could you raise your hand if you have a question?",
+      "jp": "質問がある人は手を挙げてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-012",
+      "audio": "school-0001-012.mp3"
+    },
+    {
+      "en": "Is that clear to everyone?",
+      "jp": "皆さん、分かりましたか。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-013",
+      "audio": "school-0001-013.mp3"
+    },
+    {
+      "en": "Let me explain that in a different way.",
+      "jp": "別の言い方で説明します。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-014",
+      "audio": "school-0001-014.mp3"
+    },
+    {
+      "en": "Your assignment is due next Monday.",
+      "jp": "課題の提出期限は来週月曜です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-015",
+      "audio": "school-0001-015.mp3"
+    },
+    {
+      "en": "Late submissions will lose ten percent per day.",
+      "jp": "遅れた提出は1日10%減点されます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-016",
+      "audio": "school-0001-016.mp3"
+    },
+    {
+      "en": "The essay should be at least fifteen hundred words.",
+      "jp": "エッセイは1500語以上にしてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-017",
+      "audio": "school-0001-017.mp3"
+    },
+    {
+      "en": "Please cite your sources properly. Plagiarism is not tolerated.",
+      "jp": "出典を正しく示してください。盗用は認められません。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-018",
+      "audio": "school-0001-018.mp3"
+    },
+    {
+      "en": "The midterm exam will cover chapters one through five.",
+      "jp": "中間試験は1章から5章が範囲です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-019",
+      "audio": "school-0001-019.mp3"
+    },
+    {
+      "en": "You may bring one page of notes to the exam.",
+      "jp": "試験にはメモ1枚を持ち込めます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-020",
+      "audio": "school-0001-020.mp3"
+    },
+    {
+      "en": "Please put your books under your seat and begin.",
+      "jp": "本は席の下に置いて、始めてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-021",
+      "audio": "school-0001-021.mp3"
+    },
+    {
+      "en": "You have forty-five minutes. Time starts now.",
+      "jp": "45分です。始めてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-022",
+      "audio": "school-0001-022.mp3"
+    },
+    {
+      "en": "Pencils down. Please pass your papers forward.",
+      "jp": "鉛筆を置いてください。答案を前に回してください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-023",
+      "audio": "school-0001-023.mp3"
+    },
+    {
+      "en": "The grades will be posted online by Friday.",
+      "jp": "成績は金曜までにオンラインで公開されます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-024",
+      "audio": "school-0001-024.mp3"
+    },
+    {
+      "en": "You passed with a B plus.",
+      "jp": "B+で合格です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-025",
+      "audio": "school-0001-025.mp3"
+    },
+    {
+      "en": "I'd like to discuss my grade during your office hours.",
+      "jp": "成績について、オフィスアワーに相談したいです。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-026",
+      "audio": "school-0001-026.mp3"
+    },
+    {
+      "en": "My office hours are Wednesdays from two to four.",
+      "jp": "私のオフィスアワーは水曜の2時から4時です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-027",
+      "audio": "school-0001-027.mp3"
+    },
+    {
+      "en": "You can email me if you have any questions.",
+      "jp": "質問があればメールしてください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-028",
+      "audio": "school-0001-028.mp3"
+    },
+    {
+      "en": "Your student ID card will be ready on Monday.",
+      "jp": "学生証は月曜に出来上がります。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-029",
+      "audio": "school-0001-029.mp3"
+    },
+    {
+      "en": "You can use the library until midnight.",
+      "jp": "図書館は深夜0時まで使えます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-030",
+      "audio": "school-0001-030.mp3"
+    },
+    {
+      "en": "Study rooms can be booked online.",
+      "jp": "自習室はオンラインで予約できます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-031",
+      "audio": "school-0001-031.mp3"
+    },
+    {
+      "en": "The tuition fee is due at the start of each semester.",
+      "jp": "授業料は各学期の初めに支払います。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-032",
+      "audio": "school-0001-032.mp3"
+    },
+    {
+      "en": "You may be eligible for a scholarship.",
+      "jp": "奨学金の対象になるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-033",
+      "audio": "school-0001-033.mp3"
+    },
+    {
+      "en": "International students need to renew their visa every year.",
+      "jp": "留学生はビザを毎年更新する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-034",
+      "audio": "school-0001-034.mp3"
+    },
+    {
+      "en": "Please see the international student office for help.",
+      "jp": "国際学生課に相談してください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-035",
+      "audio": "school-0001-035.mp3"
+    },
+    {
+      "en": "Would you like to join a study group?",
+      "jp": "勉強会に参加しませんか。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-036",
+      "audio": "school-0001-036.mp3"
+    },
+    {
+      "en": "We have a club fair on Wednesday.",
+      "jp": "水曜にサークル勧誘会があります。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-037",
+      "audio": "school-0001-037.mp3"
+    },
+    {
+      "en": "Are you looking for a roommate?",
+      "jp": "ルームメイトを探していますか。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-038",
+      "audio": "school-0001-038.mp3"
+    },
+    {
+      "en": "The dorm has a curfew at midnight.",
+      "jp": "寮の門限は深夜0時です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-039",
+      "audio": "school-0001-039.mp3"
+    },
+    {
+      "en": "The cafeteria serves breakfast, lunch, and dinner.",
+      "jp": "食堂は朝昼晩に営業しています。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-040",
+      "audio": "school-0001-040.mp3"
+    },
+    {
+      "en": "The graduation ceremony will be held in May.",
+      "jp": "卒業式は5月です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-041",
+      "audio": "school-0001-041.mp3"
+    },
+    {
+      "en": "Congratulations on your graduation.",
+      "jp": "ご卒業おめでとうございます。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-042",
+      "audio": "school-0001-042.mp3"
+    },
+    {
+      "en": "Parent-teacher conferences are on Thursday evening.",
+      "jp": "保護者面談は木曜の夕方です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-043",
+      "audio": "school-0001-043.mp3"
+    },
+    {
+      "en": "Please sign the permission slip and return it by Friday.",
+      "jp": "同意書に署名して金曜までに返してください。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-044",
+      "audio": "school-0001-044.mp3"
+    },
+    {
+      "en": "School is closed tomorrow due to snow.",
+      "jp": "明日は雪のため休校です。",
+      "say": [],
+      "note": "",
+      "id": "school-0001-045",
+      "audio": "school-0001-045.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

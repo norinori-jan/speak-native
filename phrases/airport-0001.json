@@ -1,501 +1,551 @@
 {
-"id": "airport-0001",
-"situation": "airport",
-"sname": "空港・入国・搭乗",
-"icon": "✈️",
-"level": 2,
-"title": "入国審査から搭乗・到着まで",
-"items": [
-{
-"en": "Next in line, please.",
-"jp": "次の方どうぞ。",
-"say": [
-{
-"en": "Hi, here you go.",
-"jp": "どうぞ（パスポートを出す）"
-}
-],
-"note": "",
-"id": "airport-0001-001"
-},
-{
-"en": "May I see your passport, please?",
-"jp": "パスポートを見せていただけますか。",
-"say": [
-{
-"en": "Sure, here it is.",
-"jp": "はい、これです。"
-}
-],
-"note": "",
-"id": "airport-0001-002"
-},
-{
-"en": "What's the purpose of your visit?",
-"jp": "訪問の目的は何ですか。",
-"say": [
-{
-"en": "Sightseeing.",
-"jp": "観光です。"
-},
-{
-"en": "Business.",
-"jp": "仕事です。"
-}
-],
-"note": "入国審査の定番。短く答えればOK。",
-"id": "airport-0001-003"
-},
-{
-"en": "How long will you be staying?",
-"jp": "何日滞在しますか。",
-"say": [
-{
-"en": "About a week.",
-"jp": "1週間ほどです。"
-},
-{
-"en": "Five days.",
-"jp": "5日間です。"
-}
-],
-"note": "",
-"id": "airport-0001-004"
-},
-{
-"en": "Where will you be staying?",
-"jp": "どこに滞在しますか。",
-"say": [
-{
-"en": "At the Hilton downtown.",
-"jp": "ダウンタウンのヒルトンです。"
-}
-],
-"note": "",
-"id": "airport-0001-005"
-},
-{
-"en": "Do you have a return ticket?",
-"jp": "帰りのチケットはありますか。",
-"say": [
-{
-"en": "Yes, I do.",
-"jp": "はい、あります。"
-}
-],
-"note": "",
-"id": "airport-0001-006"
-},
-{
-"en": "Is this your first time visiting?",
-"jp": "初めての訪問ですか。",
-"say": [
-{
-"en": "Yes, it's my first time.",
-"jp": "はい、初めてです。"
-}
-],
-"note": "",
-"id": "airport-0001-007"
-},
-{
-"en": "Are you traveling alone?",
-"jp": "お一人で旅行ですか。",
-"say": [
-{
-"en": "Yes, just me.",
-"jp": "はい、一人です。"
-}
-],
-"note": "",
-"id": "airport-0001-008"
-},
-{
-"en": "Look at the camera, please.",
-"jp": "カメラを見てください。",
-"say": [],
-"note": "",
-"id": "airport-0001-009"
-},
-{
-"en": "Place your fingers on the scanner.",
-"jp": "指をスキャナーに置いてください。",
-"say": [],
-"note": "指紋認証。左右4本ずつの順で指示されることが多い。",
-"id": "airport-0001-010"
-},
-{
-"en": "Do you have anything to declare?",
-"jp": "申告するものはありますか。",
-"say": [
-{
-"en": "No, nothing.",
-"jp": "いいえ、ありません。"
-}
-],
-"note": "",
-"id": "airport-0001-011"
-},
-{
-"en": "Are you bringing any food, plants, or animals?",
-"jp": "食べ物、植物、動物は持ち込んでいますか。",
-"say": [
-{
-"en": "No, I'm not.",
-"jp": "いいえ。"
-}
-],
-"note": "",
-"id": "airport-0001-012"
-},
-{
-"en": "Please open your bag.",
-"jp": "かばんを開けてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-013"
-},
-{
-"en": "Please step aside for a moment.",
-"jp": "少し脇へ移動してください。",
-"say": [],
-"note": "",
-"id": "airport-0001-014"
-},
-{
-"en": "Welcome to the United States.",
-"jp": "ようこそアメリカへ。",
-"say": [
-{
-"en": "Thank you.",
-"jp": "ありがとう。"
-}
-],
-"note": "審査が終わったときの決まり文句。",
-"id": "airport-0001-015"
-},
-{
-"en": "Can I see your boarding pass and ID?",
-"jp": "搭乗券と身分証を見せてもらえますか。",
-"say": [
-{
-"en": "Here you go.",
-"jp": "どうぞ。"
-}
-],
-"note": "",
-"id": "airport-0001-016"
-},
-{
-"en": "Would you like a window or an aisle seat?",
-"jp": "窓側と通路側、どちらがいいですか。",
-"say": [
-{
-"en": "An aisle seat, please.",
-"jp": "通路側でお願いします。"
-}
-],
-"note": "",
-"id": "airport-0001-017"
-},
-{
-"en": "Are you checking any bags today?",
-"jp": "今日は預ける荷物はありますか。",
-"say": [
-{
-"en": "Just this one.",
-"jp": "これ一つです。"
-}
-],
-"note": "",
-"id": "airport-0001-018"
-},
-{
-"en": "Please put your bag on the scale.",
-"jp": "荷物を秤に載せてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-019"
-},
-{
-"en": "Your bag is a little over the weight limit.",
-"jp": "荷物が少し重量制限を超えています。",
-"say": [
-{
-"en": "How much extra do I need to pay?",
-"jp": "追加でいくらですか。"
-}
-],
-"note": "超過料金の話になる合図。",
-"id": "airport-0001-020"
-},
-{
-"en": "Any liquids, lithium batteries, or sharp objects in your bag?",
-"jp": "かばんに液体、リチウム電池、鋭利なものは入っていますか。",
-"say": [
-{
-"en": "No, nothing like that.",
-"jp": "いいえ、ありません。"
-}
-],
-"note": "",
-"id": "airport-0001-021"
-},
-{
-"en": "Your flight departs from gate twenty-two.",
-"jp": "お客様の便は22番ゲートから出ます。",
-"say": [
-{
-"en": "Gate twenty-two. Thanks.",
-"jp": "22番ゲートですね。ありがとう。"
-}
-],
-"note": "数字は聞き違えやすい。thirteen/thirty に注意。",
-"id": "airport-0001-022"
-},
-{
-"en": "Boarding begins at ten forty.",
-"jp": "搭乗は10時40分に始まります。",
-"say": [],
-"note": "ten forty = 10:40。",
-"id": "airport-0001-023"
-},
-{
-"en": "Boarding will start in ten minutes.",
-"jp": "10分後に搭乗が始まります。",
-"say": [],
-"note": "",
-"id": "airport-0001-024"
-},
-{
-"en": "Please remove your laptop and any liquids from your bag.",
-"jp": "パソコンと液体類をかばんから出してください。",
-"say": [],
-"note": "",
-"id": "airport-0001-025"
-},
-{
-"en": "Take off your belt and shoes, and put them in the bin.",
-"jp": "ベルトと靴を脱いで、トレーに入れてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-026"
-},
-{
-"en": "Empty your pockets, please.",
-"jp": "ポケットの中身を出してください。",
-"say": [],
-"note": "",
-"id": "airport-0001-027"
-},
-{
-"en": "Step forward and raise your arms.",
-"jp": "前に進んで、腕を上げてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-028"
-},
-{
-"en": "I need to do an additional check on your bag.",
-"jp": "かばんを追加で検査する必要があります。",
-"say": [
-{
-"en": "No problem.",
-"jp": "大丈夫です。"
-}
-],
-"note": "",
-"id": "airport-0001-029"
-},
-{
-"en": "This flight has been delayed by about an hour.",
-"jp": "この便は1時間ほど遅れています。",
-"say": [
-{
-"en": "Do you know the new departure time?",
-"jp": "新しい出発時間は分かりますか。"
-}
-],
-"note": "",
-"id": "airport-0001-030"
-},
-{
-"en": "Your flight has been cancelled. We can rebook you on the next one.",
-"jp": "お客様の便は欠航です。次の便に振り替えできます。",
-"say": [
-{
-"en": "Yes, please rebook me.",
-"jp": "はい、振り替えてください。"
-}
-],
-"note": "",
-"id": "airport-0001-031"
-},
-{
-"en": "The gate has been changed to B fourteen.",
-"jp": "ゲートがB14に変更になりました。",
-"say": [],
-"note": "",
-"id": "airport-0001-032"
-},
-{
-"en": "Last call for flight one-eighty-two to Seattle.",
-"jp": "シアトル行き182便、最終案内です。",
-"say": [],
-"note": "アナウンスは早口。便名は数字を一つずつ読むことが多い。",
-"id": "airport-0001-033"
-},
-{
-"en": "Passengers in rows twenty to thirty may now board.",
-"jp": "20列から30列のお客様は搭乗できます。",
-"say": [],
-"note": "",
-"id": "airport-0001-034"
-},
-{
-"en": "Please keep your seat belt fastened while seated.",
-"jp": "着席中はシートベルトを締めたままにしてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-035"
-},
-{
-"en": "Please make sure your bag is stowed under the seat in front of you.",
-"jp": "手荷物は前の座席の下に入れてください。",
-"say": [],
-"note": "",
-"id": "airport-0001-036"
-},
-{
-"en": "Would you like chicken or pasta?",
-"jp": "チキンとパスタ、どちらにしますか。",
-"say": [
-{
-"en": "Chicken, please.",
-"jp": "チキンをお願いします。"
-}
-],
-"note": "",
-"id": "airport-0001-037"
-},
-{
-"en": "Can I get you something to drink?",
-"jp": "お飲み物はいかがですか。",
-"say": [
-{
-"en": "Just water, please.",
-"jp": "お水だけお願いします。"
-}
-],
-"note": "",
-"id": "airport-0001-038"
-},
-{
-"en": "Could you put your seat back up? We're about to land.",
-"jp": "座席を元に戻してください。まもなく着陸します。",
-"say": [],
-"note": "",
-"id": "airport-0001-039"
-},
-{
-"en": "Please fill out this customs form before landing.",
-"jp": "着陸前にこの税関申告書を記入してください。",
-"say": [],
-"note": "",
-"id": "airport-0001-040"
-},
-{
-"en": "Baggage from your flight is on carousel six.",
-"jp": "お客様の便の荷物は6番のターンテーブルです。",
-"say": [],
-"note": "",
-"id": "airport-0001-041"
-},
-{
-"en": "Can you describe your bag?",
-"jp": "かばんの特徴を教えてもらえますか。",
-"say": [
-{
-"en": "It's a black suitcase with a red tag.",
-"jp": "赤いタグの付いた黒いスーツケースです。"
-}
-],
-"note": "荷物が出てこないとき、カウンターで聞かれる。",
-"id": "airport-0001-042"
-},
-{
-"en": "We'll deliver your bag to your hotel by tomorrow morning.",
-"jp": "明日の朝までにホテルへ荷物をお届けします。",
-"say": [
-{
-"en": "Thank you. Here is my hotel address.",
-"jp": "ありがとう。ホテルの住所はこちらです。"
-}
-],
-"note": "",
-"id": "airport-0001-043"
-},
-{
-"en": "Do you have a connecting flight?",
-"jp": "乗り継ぎ便はありますか。",
-"say": [
-{
-"en": "Yes, to Denver.",
-"jp": "はい、デンバー行きです。"
-}
-],
-"note": "",
-"id": "airport-0001-044"
-},
-{
-"en": "You'll need to go through security again for your connection.",
-"jp": "乗り継ぎでもう一度保安検査を受ける必要があります。",
-"say": [],
-"note": "",
-"id": "airport-0001-045"
-},
-{
-"en": "The shuttle to the rental car center is outside, door four.",
-"jp": "レンタカーセンター行きのシャトルは4番出口の外です。",
-"say": [],
-"note": "",
-"id": "airport-0001-046"
-},
-{
-"en": "Taxis are on the lower level, outside baggage claim.",
-"jp": "タクシーは下の階、手荷物受取所の外です。",
-"say": [],
-"note": "",
-"id": "airport-0001-047"
-},
-{
-"en": "Do you need any help finding your way?",
-"jp": "行き方でお困りですか。",
-"say": [
-{
-"en": "Yes, where is the train to the city?",
-"jp": "はい、市内行きの電車はどこですか。"
-}
-],
-"note": "",
-"id": "airport-0001-048"
-},
-{
-"en": "The train runs every fifteen minutes.",
-"jp": "電車は15分おきに出ています。",
-"say": [],
-"note": "",
-"id": "airport-0001-049"
-},
-{
-"en": "You can buy a ticket from the machine over there.",
-"jp": "あそこの券売機で切符を買えます。",
-"say": [],
-"note": "",
-"id": "airport-0001-050"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "airport-0001",
+  "situation": "airport",
+  "sname": "空港・入国・搭乗",
+  "icon": "✈️",
+  "level": 2,
+  "title": "入国審査から搭乗・到着まで",
+  "items": [
+    {
+      "en": "Next in line, please.",
+      "jp": "次の方どうぞ。",
+      "say": [
+        {
+          "en": "Hi, here you go.",
+          "jp": "どうぞ（パスポートを出す）"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-001",
+      "audio": "airport-0001-001.mp3"
+    },
+    {
+      "en": "May I see your passport, please?",
+      "jp": "パスポートを見せていただけますか。",
+      "say": [
+        {
+          "en": "Sure, here it is.",
+          "jp": "はい、これです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-002",
+      "audio": "airport-0001-002.mp3"
+    },
+    {
+      "en": "What's the purpose of your visit?",
+      "jp": "訪問の目的は何ですか。",
+      "say": [
+        {
+          "en": "Sightseeing.",
+          "jp": "観光です。"
+        },
+        {
+          "en": "Business.",
+          "jp": "仕事です。"
+        }
+      ],
+      "note": "入国審査の定番。短く答えればOK。",
+      "id": "airport-0001-003",
+      "audio": "airport-0001-003.mp3"
+    },
+    {
+      "en": "How long will you be staying?",
+      "jp": "何日滞在しますか。",
+      "say": [
+        {
+          "en": "About a week.",
+          "jp": "1週間ほどです。"
+        },
+        {
+          "en": "Five days.",
+          "jp": "5日間です。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-004",
+      "audio": "airport-0001-004.mp3"
+    },
+    {
+      "en": "Where will you be staying?",
+      "jp": "どこに滞在しますか。",
+      "say": [
+        {
+          "en": "At the Hilton downtown.",
+          "jp": "ダウンタウンのヒルトンです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-005",
+      "audio": "airport-0001-005.mp3"
+    },
+    {
+      "en": "Do you have a return ticket?",
+      "jp": "帰りのチケットはありますか。",
+      "say": [
+        {
+          "en": "Yes, I do.",
+          "jp": "はい、あります。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-006",
+      "audio": "airport-0001-006.mp3"
+    },
+    {
+      "en": "Is this your first time visiting?",
+      "jp": "初めての訪問ですか。",
+      "say": [
+        {
+          "en": "Yes, it's my first time.",
+          "jp": "はい、初めてです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-007",
+      "audio": "airport-0001-007.mp3"
+    },
+    {
+      "en": "Are you traveling alone?",
+      "jp": "お一人で旅行ですか。",
+      "say": [
+        {
+          "en": "Yes, just me.",
+          "jp": "はい、一人です。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-008",
+      "audio": "airport-0001-008.mp3"
+    },
+    {
+      "en": "Look at the camera, please.",
+      "jp": "カメラを見てください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-009",
+      "audio": "airport-0001-009.mp3"
+    },
+    {
+      "en": "Place your fingers on the scanner.",
+      "jp": "指をスキャナーに置いてください。",
+      "say": [],
+      "note": "指紋認証。左右4本ずつの順で指示されることが多い。",
+      "id": "airport-0001-010",
+      "audio": "airport-0001-010.mp3"
+    },
+    {
+      "en": "Do you have anything to declare?",
+      "jp": "申告するものはありますか。",
+      "say": [
+        {
+          "en": "No, nothing.",
+          "jp": "いいえ、ありません。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-011",
+      "audio": "airport-0001-011.mp3"
+    },
+    {
+      "en": "Are you bringing any food, plants, or animals?",
+      "jp": "食べ物、植物、動物は持ち込んでいますか。",
+      "say": [
+        {
+          "en": "No, I'm not.",
+          "jp": "いいえ。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-012",
+      "audio": "airport-0001-012.mp3"
+    },
+    {
+      "en": "Please open your bag.",
+      "jp": "かばんを開けてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-013",
+      "audio": "airport-0001-013.mp3"
+    },
+    {
+      "en": "Please step aside for a moment.",
+      "jp": "少し脇へ移動してください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-014",
+      "audio": "airport-0001-014.mp3"
+    },
+    {
+      "en": "Welcome to the United States.",
+      "jp": "ようこそアメリカへ。",
+      "say": [
+        {
+          "en": "Thank you.",
+          "jp": "ありがとう。"
+        }
+      ],
+      "note": "審査が終わったときの決まり文句。",
+      "id": "airport-0001-015",
+      "audio": "airport-0001-015.mp3"
+    },
+    {
+      "en": "Can I see your boarding pass and ID?",
+      "jp": "搭乗券と身分証を見せてもらえますか。",
+      "say": [
+        {
+          "en": "Here you go.",
+          "jp": "どうぞ。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-016",
+      "audio": "airport-0001-016.mp3"
+    },
+    {
+      "en": "Would you like a window or an aisle seat?",
+      "jp": "窓側と通路側、どちらがいいですか。",
+      "say": [
+        {
+          "en": "An aisle seat, please.",
+          "jp": "通路側でお願いします。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-017",
+      "audio": "airport-0001-017.mp3"
+    },
+    {
+      "en": "Are you checking any bags today?",
+      "jp": "今日は預ける荷物はありますか。",
+      "say": [
+        {
+          "en": "Just this one.",
+          "jp": "これ一つです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-018",
+      "audio": "airport-0001-018.mp3"
+    },
+    {
+      "en": "Please put your bag on the scale.",
+      "jp": "荷物を秤に載せてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-019",
+      "audio": "airport-0001-019.mp3"
+    },
+    {
+      "en": "Your bag is a little over the weight limit.",
+      "jp": "荷物が少し重量制限を超えています。",
+      "say": [
+        {
+          "en": "How much extra do I need to pay?",
+          "jp": "追加でいくらですか。"
+        }
+      ],
+      "note": "超過料金の話になる合図。",
+      "id": "airport-0001-020",
+      "audio": "airport-0001-020.mp3"
+    },
+    {
+      "en": "Any liquids, lithium batteries, or sharp objects in your bag?",
+      "jp": "かばんに液体、リチウム電池、鋭利なものは入っていますか。",
+      "say": [
+        {
+          "en": "No, nothing like that.",
+          "jp": "いいえ、ありません。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-021",
+      "audio": "airport-0001-021.mp3"
+    },
+    {
+      "en": "Your flight departs from gate twenty-two.",
+      "jp": "お客様の便は22番ゲートから出ます。",
+      "say": [
+        {
+          "en": "Gate twenty-two. Thanks.",
+          "jp": "22番ゲートですね。ありがとう。"
+        }
+      ],
+      "note": "数字は聞き違えやすい。thirteen/thirty に注意。",
+      "id": "airport-0001-022",
+      "audio": "airport-0001-022.mp3"
+    },
+    {
+      "en": "Boarding begins at ten forty.",
+      "jp": "搭乗は10時40分に始まります。",
+      "say": [],
+      "note": "ten forty = 10:40。",
+      "id": "airport-0001-023",
+      "audio": "airport-0001-023.mp3"
+    },
+    {
+      "en": "Boarding will start in ten minutes.",
+      "jp": "10分後に搭乗が始まります。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-024",
+      "audio": "airport-0001-024.mp3"
+    },
+    {
+      "en": "Please remove your laptop and any liquids from your bag.",
+      "jp": "パソコンと液体類をかばんから出してください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-025",
+      "audio": "airport-0001-025.mp3"
+    },
+    {
+      "en": "Take off your belt and shoes, and put them in the bin.",
+      "jp": "ベルトと靴を脱いで、トレーに入れてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-026",
+      "audio": "airport-0001-026.mp3"
+    },
+    {
+      "en": "Empty your pockets, please.",
+      "jp": "ポケットの中身を出してください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-027",
+      "audio": "airport-0001-027.mp3"
+    },
+    {
+      "en": "Step forward and raise your arms.",
+      "jp": "前に進んで、腕を上げてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-028",
+      "audio": "airport-0001-028.mp3"
+    },
+    {
+      "en": "I need to do an additional check on your bag.",
+      "jp": "かばんを追加で検査する必要があります。",
+      "say": [
+        {
+          "en": "No problem.",
+          "jp": "大丈夫です。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-029",
+      "audio": "airport-0001-029.mp3"
+    },
+    {
+      "en": "This flight has been delayed by about an hour.",
+      "jp": "この便は1時間ほど遅れています。",
+      "say": [
+        {
+          "en": "Do you know the new departure time?",
+          "jp": "新しい出発時間は分かりますか。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-030",
+      "audio": "airport-0001-030.mp3"
+    },
+    {
+      "en": "Your flight has been cancelled. We can rebook you on the next one.",
+      "jp": "お客様の便は欠航です。次の便に振り替えできます。",
+      "say": [
+        {
+          "en": "Yes, please rebook me.",
+          "jp": "はい、振り替えてください。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-031",
+      "audio": "airport-0001-031.mp3"
+    },
+    {
+      "en": "The gate has been changed to B fourteen.",
+      "jp": "ゲートがB14に変更になりました。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-032",
+      "audio": "airport-0001-032.mp3"
+    },
+    {
+      "en": "Last call for flight one-eighty-two to Seattle.",
+      "jp": "シアトル行き182便、最終案内です。",
+      "say": [],
+      "note": "アナウンスは早口。便名は数字を一つずつ読むことが多い。",
+      "id": "airport-0001-033",
+      "audio": "airport-0001-033.mp3"
+    },
+    {
+      "en": "Passengers in rows twenty to thirty may now board.",
+      "jp": "20列から30列のお客様は搭乗できます。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-034",
+      "audio": "airport-0001-034.mp3"
+    },
+    {
+      "en": "Please keep your seat belt fastened while seated.",
+      "jp": "着席中はシートベルトを締めたままにしてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-035",
+      "audio": "airport-0001-035.mp3"
+    },
+    {
+      "en": "Please make sure your bag is stowed under the seat in front of you.",
+      "jp": "手荷物は前の座席の下に入れてください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-036",
+      "audio": "airport-0001-036.mp3"
+    },
+    {
+      "en": "Would you like chicken or pasta?",
+      "jp": "チキンとパスタ、どちらにしますか。",
+      "say": [
+        {
+          "en": "Chicken, please.",
+          "jp": "チキンをお願いします。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-037",
+      "audio": "airport-0001-037.mp3"
+    },
+    {
+      "en": "Can I get you something to drink?",
+      "jp": "お飲み物はいかがですか。",
+      "say": [
+        {
+          "en": "Just water, please.",
+          "jp": "お水だけお願いします。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-038",
+      "audio": "airport-0001-038.mp3"
+    },
+    {
+      "en": "Could you put your seat back up? We're about to land.",
+      "jp": "座席を元に戻してください。まもなく着陸します。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-039",
+      "audio": "airport-0001-039.mp3"
+    },
+    {
+      "en": "Please fill out this customs form before landing.",
+      "jp": "着陸前にこの税関申告書を記入してください。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-040",
+      "audio": "airport-0001-040.mp3"
+    },
+    {
+      "en": "Baggage from your flight is on carousel six.",
+      "jp": "お客様の便の荷物は6番のターンテーブルです。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-041",
+      "audio": "airport-0001-041.mp3"
+    },
+    {
+      "en": "Can you describe your bag?",
+      "jp": "かばんの特徴を教えてもらえますか。",
+      "say": [
+        {
+          "en": "It's a black suitcase with a red tag.",
+          "jp": "赤いタグの付いた黒いスーツケースです。"
+        }
+      ],
+      "note": "荷物が出てこないとき、カウンターで聞かれる。",
+      "id": "airport-0001-042",
+      "audio": "airport-0001-042.mp3"
+    },
+    {
+      "en": "We'll deliver your bag to your hotel by tomorrow morning.",
+      "jp": "明日の朝までにホテルへ荷物をお届けします。",
+      "say": [
+        {
+          "en": "Thank you. Here is my hotel address.",
+          "jp": "ありがとう。ホテルの住所はこちらです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-043",
+      "audio": "airport-0001-043.mp3"
+    },
+    {
+      "en": "Do you have a connecting flight?",
+      "jp": "乗り継ぎ便はありますか。",
+      "say": [
+        {
+          "en": "Yes, to Denver.",
+          "jp": "はい、デンバー行きです。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-044",
+      "audio": "airport-0001-044.mp3"
+    },
+    {
+      "en": "You'll need to go through security again for your connection.",
+      "jp": "乗り継ぎでもう一度保安検査を受ける必要があります。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-045",
+      "audio": "airport-0001-045.mp3"
+    },
+    {
+      "en": "The shuttle to the rental car center is outside, door four.",
+      "jp": "レンタカーセンター行きのシャトルは4番出口の外です。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-046",
+      "audio": "airport-0001-046.mp3"
+    },
+    {
+      "en": "Taxis are on the lower level, outside baggage claim.",
+      "jp": "タクシーは下の階、手荷物受取所の外です。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-047",
+      "audio": "airport-0001-047.mp3"
+    },
+    {
+      "en": "Do you need any help finding your way?",
+      "jp": "行き方でお困りですか。",
+      "say": [
+        {
+          "en": "Yes, where is the train to the city?",
+          "jp": "はい、市内行きの電車はどこですか。"
+        }
+      ],
+      "note": "",
+      "id": "airport-0001-048",
+      "audio": "airport-0001-048.mp3"
+    },
+    {
+      "en": "The train runs every fifteen minutes.",
+      "jp": "電車は15分おきに出ています。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-049",
+      "audio": "airport-0001-049.mp3"
+    },
+    {
+      "en": "You can buy a ticket from the machine over there.",
+      "jp": "あそこの券売機で切符を買えます。",
+      "say": [],
+      "note": "",
+      "id": "airport-0001-050",
+      "audio": "airport-0001-050.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

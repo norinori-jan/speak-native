@@ -1,349 +1,397 @@
 {
-"id": "aidev-0001",
-"situation": "aidev",
-"sname": "AI：開発・API・エージェント",
-"icon": "🧩",
-"level": 4,
-"title": "API・RAG・エージェント・評価・運用",
-"items": [
-{
-"en": "We call the model through an API.",
-"jp": "モデルはAPI経由で呼び出します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-001"
-},
-{
-"en": "You need an API key to authenticate your requests.",
-"jp": "リクエストの認証にはAPIキーが必要です。",
-"say": [],
-"note": "",
-"id": "aidev-0001-002"
-},
-{
-"en": "Never commit your API key to a public repository.",
-"jp": "APIキーを公開リポジトリにコミットしないでください。",
-"say": [],
-"note": "",
-"id": "aidev-0001-003"
-},
-{
-"en": "We're hitting the rate limit during peak hours.",
-"jp": "ピーク時にレート制限に達しています。",
-"say": [],
-"note": "",
-"id": "aidev-0001-004"
-},
-{
-"en": "The request timed out after thirty seconds.",
-"jp": "リクエストは30秒でタイムアウトしました。",
-"say": [],
-"note": "",
-"id": "aidev-0001-005"
-},
-{
-"en": "Use streaming to show the response as it's generated.",
-"jp": "生成されながら表示するには、ストリーミングを使います。",
-"say": [],
-"note": "",
-"id": "aidev-0001-006"
-},
-{
-"en": "The response comes back as JSON.",
-"jp": "レスポンスはJSONで返ります。",
-"say": [],
-"note": "",
-"id": "aidev-0001-007"
-},
-{
-"en": "We need structured output, so we define a schema.",
-"jp": "構造化出力が必要なので、スキーマを定義します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-008"
-},
-{
-"en": "Function calling lets the model use external tools.",
-"jp": "関数呼び出しで、モデルが外部ツールを使えます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-009"
-},
-{
-"en": "The model decides which tool to call and with what arguments.",
-"jp": "モデルが、どのツールをどの引数で呼ぶかを決めます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-010"
-},
-{
-"en": "An agent runs in a loop: think, act, observe.",
-"jp": "エージェントは、考える、実行する、観察する、をループで回します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-011"
-},
-{
-"en": "The agent can read files, run code, and search the web.",
-"jp": "エージェントは、ファイルを読み、コードを実行し、ウェブを検索できます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-012"
-},
-{
-"en": "We give the agent a sandbox so it can't break anything.",
-"jp": "壊さないように、エージェントにはサンドボックスを与えます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-013"
-},
-{
-"en": "Always keep a human in the loop for high-stakes decisions.",
-"jp": "重要な判断には、必ず人間を関与させてください。",
-"say": [],
-"note": "",
-"id": "aidev-0001-014"
-},
-{
-"en": "The agent got stuck in an infinite loop.",
-"jp": "エージェントが無限ループに入りました。",
-"say": [],
-"note": "",
-"id": "aidev-0001-015"
-},
-{
-"en": "Set a maximum number of steps to avoid runaway costs.",
-"jp": "費用が暴走しないよう、最大ステップ数を決めてください。",
-"say": [],
-"note": "",
-"id": "aidev-0001-016"
-},
-{
-"en": "Retrieval-augmented generation fetches relevant documents before answering.",
-"jp": "検索拡張生成は、回答の前に関連文書を取ってきます。",
-"say": [],
-"note": "RAG = 外部資料を検索して回答に使う方式。",
-"id": "aidev-0001-017"
-},
-{
-"en": "We store the documents in a vector database.",
-"jp": "文書はベクトルデータベースに保存します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-018"
-},
-{
-"en": "The documents are split into chunks of five hundred tokens.",
-"jp": "文書は500トークンずつのチャンクに分けます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-019"
-},
-{
-"en": "We retrieve the top five chunks by similarity.",
-"jp": "類似度の高い上位5チャンクを取り出します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-020"
-},
-{
-"en": "Retrieval quality limits the answer quality.",
-"jp": "検索の質が回答の質を左右します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-021"
-},
-{
-"en": "The model should cite its sources.",
-"jp": "モデルは出典を示すべきです。",
-"say": [],
-"note": "",
-"id": "aidev-0001-022"
-},
-{
-"en": "The model ignored the instruction in the middle of a long prompt.",
-"jp": "長いプロンプトの途中の指示を、モデルが無視しました。",
-"say": [],
-"note": "",
-"id": "aidev-0001-023"
-},
-{
-"en": "Put the most important instructions at the beginning or the end.",
-"jp": "重要な指示は最初か最後に置いてください。",
-"say": [],
-"note": "",
-"id": "aidev-0001-024"
-},
-{
-"en": "A prompt injection attack hides malicious instructions in the content.",
-"jp": "プロンプトインジェクションは、悪意ある指示を内容に隠します。",
-"say": [],
-"note": "injection = 外部の文章に命令を紛れ込ませる攻撃。",
-"id": "aidev-0001-025"
-},
-{
-"en": "Never trust the text that comes from the web.",
-"jp": "ウェブから来た文章を信用してはいけません。",
-"say": [],
-"note": "",
-"id": "aidev-0001-026"
-},
-{
-"en": "We validate the model's output before running it.",
-"jp": "実行する前に、モデルの出力を検証します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-027"
-},
-{
-"en": "We log every request and response for debugging.",
-"jp": "デバッグのため、すべての入出力を記録します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-028"
-},
-{
-"en": "The cost per request is about two cents.",
-"jp": "1リクエストのコストは約2セントです。",
-"say": [],
-"note": "",
-"id": "aidev-0001-029"
-},
-{
-"en": "We cache the results to avoid duplicate calls.",
-"jp": "重複呼び出しを避けるため、結果をキャッシュします。",
-"say": [],
-"note": "",
-"id": "aidev-0001-030"
-},
-{
-"en": "We route simple questions to a cheaper model.",
-"jp": "簡単な質問は安いモデルに回します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-031"
-},
-{
-"en": "The fallback model takes over when the main one fails.",
-"jp": "主なモデルが失敗したら、代替モデルが引き継ぎます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-032"
-},
-{
-"en": "We set up evaluations to catch regressions.",
-"jp": "性能の劣化を見つけるため、評価を用意します。",
-"say": [],
-"note": "regression = 前より悪くなること。",
-"id": "aidev-0001-033"
-},
-{
-"en": "Our eval suite has five hundred test cases.",
-"jp": "評価セットには500のテストケースがあります。",
-"say": [],
-"note": "",
-"id": "aidev-0001-034"
-},
-{
-"en": "We run the eval on every pull request.",
-"jp": "プルリクエストごとに評価を回します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-035"
-},
-{
-"en": "The prompt is version-controlled like code.",
-"jp": "プロンプトはコードと同じようにバージョン管理されています。",
-"say": [],
-"note": "",
-"id": "aidev-0001-036"
-},
-{
-"en": "We use an LLM as a judge to grade the answers.",
-"jp": "回答の採点にLLMを審査役として使います。",
-"say": [],
-"note": "",
-"id": "aidev-0001-037"
-},
-{
-"en": "Human review is still the gold standard.",
-"jp": "人間のレビューが、いまも最も確かな基準です。",
-"say": [],
-"note": "",
-"id": "aidev-0001-038"
-},
-{
-"en": "The assistant can write, run, and debug code.",
-"jp": "アシスタントはコードを書いて、実行し、デバッグできます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-039"
-},
-{
-"en": "It generated a working prototype in ten minutes.",
-"jp": "10分で動くプロトタイプを作りました。",
-"say": [],
-"note": "",
-"id": "aidev-0001-040"
-},
-{
-"en": "The generated code needs a careful review.",
-"jp": "生成されたコードは注意深いレビューが必要です。",
-"say": [],
-"note": "",
-"id": "aidev-0001-041"
-},
-{
-"en": "It introduced a subtle bug in the edge case.",
-"jp": "例外ケースに、見つけにくいバグを入れました。",
-"say": [],
-"note": "",
-"id": "aidev-0001-042"
-},
-{
-"en": "Write tests first, then let the model implement the function.",
-"jp": "先にテストを書き、モデルに関数を実装させてください。",
-"say": [],
-"note": "",
-"id": "aidev-0001-043"
-},
-{
-"en": "The model has access to the whole repository.",
-"jp": "モデルはリポジトリ全体にアクセスできます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-044"
-},
-{
-"en": "It needs permission before running any command.",
-"jp": "コマンドを実行する前に許可が必要です。",
-"say": [],
-"note": "",
-"id": "aidev-0001-045"
-},
-{
-"en": "We deploy the service behind a load balancer.",
-"jp": "サービスはロードバランサの背後に配置します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-046"
-},
-{
-"en": "The pipeline runs automatically on every commit.",
-"jp": "パイプラインはコミットごとに自動で動きます。",
-"say": [],
-"note": "",
-"id": "aidev-0001-047"
-},
-{
-"en": "Monitoring alerts us when the error rate goes up.",
-"jp": "エラー率が上がると、監視が通知します。",
-"say": [],
-"note": "",
-"id": "aidev-0001-048"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aidev-0001",
+  "situation": "aidev",
+  "sname": "AI：開発・API・エージェント",
+  "icon": "🧩",
+  "level": 4,
+  "title": "API・RAG・エージェント・評価・運用",
+  "items": [
+    {
+      "en": "We call the model through an API.",
+      "jp": "モデルはAPI経由で呼び出します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-001",
+      "audio": "aidev-0001-001.mp3"
+    },
+    {
+      "en": "You need an API key to authenticate your requests.",
+      "jp": "リクエストの認証にはAPIキーが必要です。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-002",
+      "audio": "aidev-0001-002.mp3"
+    },
+    {
+      "en": "Never commit your API key to a public repository.",
+      "jp": "APIキーを公開リポジトリにコミットしないでください。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-003",
+      "audio": "aidev-0001-003.mp3"
+    },
+    {
+      "en": "We're hitting the rate limit during peak hours.",
+      "jp": "ピーク時にレート制限に達しています。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-004",
+      "audio": "aidev-0001-004.mp3"
+    },
+    {
+      "en": "The request timed out after thirty seconds.",
+      "jp": "リクエストは30秒でタイムアウトしました。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-005",
+      "audio": "aidev-0001-005.mp3"
+    },
+    {
+      "en": "Use streaming to show the response as it's generated.",
+      "jp": "生成されながら表示するには、ストリーミングを使います。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-006",
+      "audio": "aidev-0001-006.mp3"
+    },
+    {
+      "en": "The response comes back as JSON.",
+      "jp": "レスポンスはJSONで返ります。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-007",
+      "audio": "aidev-0001-007.mp3"
+    },
+    {
+      "en": "We need structured output, so we define a schema.",
+      "jp": "構造化出力が必要なので、スキーマを定義します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-008",
+      "audio": "aidev-0001-008.mp3"
+    },
+    {
+      "en": "Function calling lets the model use external tools.",
+      "jp": "関数呼び出しで、モデルが外部ツールを使えます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-009",
+      "audio": "aidev-0001-009.mp3"
+    },
+    {
+      "en": "The model decides which tool to call and with what arguments.",
+      "jp": "モデルが、どのツールをどの引数で呼ぶかを決めます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-010",
+      "audio": "aidev-0001-010.mp3"
+    },
+    {
+      "en": "An agent runs in a loop: think, act, observe.",
+      "jp": "エージェントは、考える、実行する、観察する、をループで回します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-011",
+      "audio": "aidev-0001-011.mp3"
+    },
+    {
+      "en": "The agent can read files, run code, and search the web.",
+      "jp": "エージェントは、ファイルを読み、コードを実行し、ウェブを検索できます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-012",
+      "audio": "aidev-0001-012.mp3"
+    },
+    {
+      "en": "We give the agent a sandbox so it can't break anything.",
+      "jp": "壊さないように、エージェントにはサンドボックスを与えます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-013",
+      "audio": "aidev-0001-013.mp3"
+    },
+    {
+      "en": "Always keep a human in the loop for high-stakes decisions.",
+      "jp": "重要な判断には、必ず人間を関与させてください。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-014",
+      "audio": "aidev-0001-014.mp3"
+    },
+    {
+      "en": "The agent got stuck in an infinite loop.",
+      "jp": "エージェントが無限ループに入りました。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-015",
+      "audio": "aidev-0001-015.mp3"
+    },
+    {
+      "en": "Set a maximum number of steps to avoid runaway costs.",
+      "jp": "費用が暴走しないよう、最大ステップ数を決めてください。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-016",
+      "audio": "aidev-0001-016.mp3"
+    },
+    {
+      "en": "Retrieval-augmented generation fetches relevant documents before answering.",
+      "jp": "検索拡張生成は、回答の前に関連文書を取ってきます。",
+      "say": [],
+      "note": "RAG = 外部資料を検索して回答に使う方式。",
+      "id": "aidev-0001-017",
+      "audio": "aidev-0001-017.mp3"
+    },
+    {
+      "en": "We store the documents in a vector database.",
+      "jp": "文書はベクトルデータベースに保存します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-018",
+      "audio": "aidev-0001-018.mp3"
+    },
+    {
+      "en": "The documents are split into chunks of five hundred tokens.",
+      "jp": "文書は500トークンずつのチャンクに分けます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-019",
+      "audio": "aidev-0001-019.mp3"
+    },
+    {
+      "en": "We retrieve the top five chunks by similarity.",
+      "jp": "類似度の高い上位5チャンクを取り出します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-020",
+      "audio": "aidev-0001-020.mp3"
+    },
+    {
+      "en": "Retrieval quality limits the answer quality.",
+      "jp": "検索の質が回答の質を左右します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-021",
+      "audio": "aidev-0001-021.mp3"
+    },
+    {
+      "en": "The model should cite its sources.",
+      "jp": "モデルは出典を示すべきです。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-022",
+      "audio": "aidev-0001-022.mp3"
+    },
+    {
+      "en": "The model ignored the instruction in the middle of a long prompt.",
+      "jp": "長いプロンプトの途中の指示を、モデルが無視しました。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-023",
+      "audio": "aidev-0001-023.mp3"
+    },
+    {
+      "en": "Put the most important instructions at the beginning or the end.",
+      "jp": "重要な指示は最初か最後に置いてください。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-024",
+      "audio": "aidev-0001-024.mp3"
+    },
+    {
+      "en": "A prompt injection attack hides malicious instructions in the content.",
+      "jp": "プロンプトインジェクションは、悪意ある指示を内容に隠します。",
+      "say": [],
+      "note": "injection = 外部の文章に命令を紛れ込ませる攻撃。",
+      "id": "aidev-0001-025",
+      "audio": "aidev-0001-025.mp3"
+    },
+    {
+      "en": "Never trust the text that comes from the web.",
+      "jp": "ウェブから来た文章を信用してはいけません。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-026",
+      "audio": "aidev-0001-026.mp3"
+    },
+    {
+      "en": "We validate the model's output before running it.",
+      "jp": "実行する前に、モデルの出力を検証します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-027",
+      "audio": "aidev-0001-027.mp3"
+    },
+    {
+      "en": "We log every request and response for debugging.",
+      "jp": "デバッグのため、すべての入出力を記録します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-028",
+      "audio": "aidev-0001-028.mp3"
+    },
+    {
+      "en": "The cost per request is about two cents.",
+      "jp": "1リクエストのコストは約2セントです。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-029",
+      "audio": "aidev-0001-029.mp3"
+    },
+    {
+      "en": "We cache the results to avoid duplicate calls.",
+      "jp": "重複呼び出しを避けるため、結果をキャッシュします。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-030",
+      "audio": "aidev-0001-030.mp3"
+    },
+    {
+      "en": "We route simple questions to a cheaper model.",
+      "jp": "簡単な質問は安いモデルに回します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-031",
+      "audio": "aidev-0001-031.mp3"
+    },
+    {
+      "en": "The fallback model takes over when the main one fails.",
+      "jp": "主なモデルが失敗したら、代替モデルが引き継ぎます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-032",
+      "audio": "aidev-0001-032.mp3"
+    },
+    {
+      "en": "We set up evaluations to catch regressions.",
+      "jp": "性能の劣化を見つけるため、評価を用意します。",
+      "say": [],
+      "note": "regression = 前より悪くなること。",
+      "id": "aidev-0001-033",
+      "audio": "aidev-0001-033.mp3"
+    },
+    {
+      "en": "Our eval suite has five hundred test cases.",
+      "jp": "評価セットには500のテストケースがあります。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-034",
+      "audio": "aidev-0001-034.mp3"
+    },
+    {
+      "en": "We run the eval on every pull request.",
+      "jp": "プルリクエストごとに評価を回します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-035",
+      "audio": "aidev-0001-035.mp3"
+    },
+    {
+      "en": "The prompt is version-controlled like code.",
+      "jp": "プロンプトはコードと同じようにバージョン管理されています。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-036",
+      "audio": "aidev-0001-036.mp3"
+    },
+    {
+      "en": "We use an LLM as a judge to grade the answers.",
+      "jp": "回答の採点にLLMを審査役として使います。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-037",
+      "audio": "aidev-0001-037.mp3"
+    },
+    {
+      "en": "Human review is still the gold standard.",
+      "jp": "人間のレビューが、いまも最も確かな基準です。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-038",
+      "audio": "aidev-0001-038.mp3"
+    },
+    {
+      "en": "The assistant can write, run, and debug code.",
+      "jp": "アシスタントはコードを書いて、実行し、デバッグできます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-039",
+      "audio": "aidev-0001-039.mp3"
+    },
+    {
+      "en": "It generated a working prototype in ten minutes.",
+      "jp": "10分で動くプロトタイプを作りました。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-040",
+      "audio": "aidev-0001-040.mp3"
+    },
+    {
+      "en": "The generated code needs a careful review.",
+      "jp": "生成されたコードは注意深いレビューが必要です。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-041",
+      "audio": "aidev-0001-041.mp3"
+    },
+    {
+      "en": "It introduced a subtle bug in the edge case.",
+      "jp": "例外ケースに、見つけにくいバグを入れました。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-042",
+      "audio": "aidev-0001-042.mp3"
+    },
+    {
+      "en": "Write tests first, then let the model implement the function.",
+      "jp": "先にテストを書き、モデルに関数を実装させてください。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-043",
+      "audio": "aidev-0001-043.mp3"
+    },
+    {
+      "en": "The model has access to the whole repository.",
+      "jp": "モデルはリポジトリ全体にアクセスできます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-044",
+      "audio": "aidev-0001-044.mp3"
+    },
+    {
+      "en": "It needs permission before running any command.",
+      "jp": "コマンドを実行する前に許可が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-045",
+      "audio": "aidev-0001-045.mp3"
+    },
+    {
+      "en": "We deploy the service behind a load balancer.",
+      "jp": "サービスはロードバランサの背後に配置します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-046",
+      "audio": "aidev-0001-046.mp3"
+    },
+    {
+      "en": "The pipeline runs automatically on every commit.",
+      "jp": "パイプラインはコミットごとに自動で動きます。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-047",
+      "audio": "aidev-0001-047.mp3"
+    },
+    {
+      "en": "Monitoring alerts us when the error rate goes up.",
+      "jp": "エラー率が上がると、監視が通知します。",
+      "say": [],
+      "note": "",
+      "id": "aidev-0001-048",
+      "audio": "aidev-0001-048.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

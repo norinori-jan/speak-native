@@ -1,307 +1,349 @@
 {
-"id": "auto-0001",
-"situation": "auto",
-"sname": "自動車・EV・交通取り締まり",
-"icon": "🚗",
-"level": 2,
-"title": "購入・修理・EV・自動運転・警察",
-"items": [
-{
-"en": "The new model has a range of three hundred miles on a full charge.",
-"jp": "新型は、満充電で300マイル走れます。",
-"say": [],
-"note": "",
-"id": "auto-0001-001"
-},
-{
-"en": "It takes thirty minutes to charge from ten to eighty percent.",
-"jp": "10%から80%まで、30分で充電できます。",
-"say": [],
-"note": "",
-"id": "auto-0001-002"
-},
-{
-"en": "The battery comes with an eight-year warranty.",
-"jp": "電池には8年の保証が付きます。",
-"say": [],
-"note": "",
-"id": "auto-0001-003"
-},
-{
-"en": "The car has a heads-up display and adaptive cruise control.",
-"jp": "この車には、ヘッドアップディスプレイと追従走行機能があります。",
-"say": [],
-"note": "",
-"id": "auto-0001-004"
-},
-{
-"en": "Lane-keeping assist helps you stay in your lane.",
-"jp": "車線維持支援は、車線から外れないよう助けます。",
-"say": [],
-"note": "",
-"id": "auto-0001-005"
-},
-{
-"en": "The vehicle will brake automatically if it detects an obstacle.",
-"jp": "障害物を検知すると、車は自動でブレーキをかけます。",
-"say": [],
-"note": "",
-"id": "auto-0001-006"
-},
-{
-"en": "Over-the-air updates add new features after purchase.",
-"jp": "通信での更新で、購入後に新機能が加わります。",
-"say": [],
-"note": "",
-"id": "auto-0001-007"
-},
-{
-"en": "Would you like to take it for a test drive?",
-"jp": "試乗してみますか。",
-"say": [],
-"note": "",
-"id": "auto-0001-008"
-},
-{
-"en": "The monthly payment is four hundred and fifty dollars for sixty months.",
-"jp": "月々の支払いは450ドルで、60回です。",
-"say": [],
-"note": "",
-"id": "auto-0001-009"
-},
-{
-"en": "The down payment is three thousand dollars.",
-"jp": "頭金は3000ドルです。",
-"say": [],
-"note": "",
-"id": "auto-0001-010"
-},
-{
-"en": "What's your trade-in worth?",
-"jp": "下取りの価値はいくらですか。",
-"say": [],
-"note": "",
-"id": "auto-0001-011"
-},
-{
-"en": "The dealer fees are not included in the sticker price.",
-"jp": "販売店の手数料は、表示価格に含まれません。",
-"say": [],
-"note": "",
-"id": "auto-0001-012"
-},
-{
-"en": "You can get a tax credit for buying an electric vehicle.",
-"jp": "電気自動車の購入には、税額控除があります。",
-"say": [],
-"note": "",
-"id": "auto-0001-013"
-},
-{
-"en": "The lease is for three years with ten thousand miles per year.",
-"jp": "リースは3年で、年1万マイルです。",
-"say": [],
-"note": "",
-"id": "auto-0001-014"
-},
-{
-"en": "There's a charge for every extra mile over the limit.",
-"jp": "上限を超えた1マイルごとに、料金がかかります。",
-"say": [],
-"note": "",
-"id": "auto-0001-015"
-},
-{
-"en": "The engine light is on. You should have it checked.",
-"jp": "エンジンの警告灯がついています。点検を受けてください。",
-"say": [],
-"note": "",
-"id": "auto-0001-016"
-},
-{
-"en": "Your brake pads are worn out and need to be replaced.",
-"jp": "ブレーキパッドが摩耗しています。交換が必要です。",
-"say": [],
-"note": "",
-"id": "auto-0001-017"
-},
-{
-"en": "It's time for an oil change and a tire rotation.",
-"jp": "オイル交換とタイヤの入れ替えの時期です。",
-"say": [],
-"note": "",
-"id": "auto-0001-018"
-},
-{
-"en": "The estimate for the repair is eight hundred dollars.",
-"jp": "修理の見積もりは800ドルです。",
-"say": [],
-"note": "",
-"id": "auto-0001-019"
-},
-{
-"en": "The parts are on back order, so it'll take two weeks.",
-"jp": "部品が取り寄せ待ちで、2週間かかります。",
-"say": [],
-"note": "",
-"id": "auto-0001-020"
-},
-{
-"en": "Is it covered under warranty?",
-"jp": "保証の対象ですか。",
-"say": [],
-"note": "",
-"id": "auto-0001-021"
-},
-{
-"en": "We'll need to keep the car overnight.",
-"jp": "車を一晩預かる必要があります。",
-"say": [],
-"note": "",
-"id": "auto-0001-022"
-},
-{
-"en": "Your car is ready. You can pick it up anytime.",
-"jp": "お車の準備ができました。いつでもお引き取りできます。",
-"say": [],
-"note": "",
-"id": "auto-0001-023"
-},
-{
-"en": "There's a recall on this model for a faulty airbag.",
-"jp": "この車種には、エアバッグの不具合でリコールがあります。",
-"say": [],
-"note": "",
-"id": "auto-0001-024"
-},
-{
-"en": "The recall repair is free of charge.",
-"jp": "リコールの修理は、無料です。",
-"say": [],
-"note": "",
-"id": "auto-0001-025"
-},
-{
-"en": "The assembly line produces sixty cars per hour.",
-"jp": "組立ラインは、1時間に60台を作ります。",
-"say": [],
-"note": "",
-"id": "auto-0001-026"
-},
-{
-"en": "A chip shortage forced the factory to halt production.",
-"jp": "半導体不足で、工場は生産を止めざるを得ませんでした。",
-"say": [],
-"note": "",
-"id": "auto-0001-027"
-},
-{
-"en": "The company plans to build a new battery plant.",
-"jp": "会社は、新しい電池工場を建てる計画です。",
-"say": [],
-"note": "",
-"id": "auto-0001-028"
-},
-{
-"en": "Supply chain issues delayed deliveries by several months.",
-"jp": "供給網の問題で、納車が数か月遅れました。",
-"say": [],
-"note": "",
-"id": "auto-0001-029"
-},
-{
-"en": "Sales of electric vehicles grew by forty percent.",
-"jp": "電気自動車の販売は、40%伸びました。",
-"say": [],
-"note": "",
-"id": "auto-0001-030"
-},
-{
-"en": "The automaker is losing market share to its rivals.",
-"jp": "その自動車メーカーは、競合に市場シェアを奪われています。",
-"say": [],
-"note": "",
-"id": "auto-0001-031"
-},
-{
-"en": "Self-driving taxis are being tested in the city.",
-"jp": "自動運転タクシーが、市内で試験運行されています。",
-"say": [],
-"note": "",
-"id": "auto-0001-032"
-},
-{
-"en": "A safety driver is still required behind the wheel.",
-"jp": "安全のための運転手は、まだ運転席に必要です。",
-"say": [],
-"note": "",
-"id": "auto-0001-033"
-},
-{
-"en": "The accident is under investigation.",
-"jp": "事故は、調査中です。",
-"say": [],
-"note": "",
-"id": "auto-0001-034"
-},
-{
-"en": "Please show me your license and registration.",
-"jp": "免許証と車検証を見せてください。",
-"say": [],
-"note": "",
-"id": "auto-0001-035"
-},
-{
-"en": "You were going fifteen miles over the speed limit.",
-"jp": "制限速度を15マイル超えていました。",
-"say": [],
-"note": "",
-"id": "auto-0001-036"
-},
-{
-"en": "I'm going to give you a warning this time.",
-"jp": "今回は警告にします。",
-"say": [],
-"note": "",
-"id": "auto-0001-037"
-},
-{
-"en": "This is a ticket for running a red light.",
-"jp": "これは信号無視の違反切符です。",
-"say": [],
-"note": "",
-"id": "auto-0001-038"
-},
-{
-"en": "You can pay the fine online or by mail.",
-"jp": "罰金は、オンラインか郵送で払えます。",
-"say": [],
-"note": "",
-"id": "auto-0001-039"
-},
-{
-"en": "You need car insurance to drive legally.",
-"jp": "合法的に運転するには、自動車保険が必要です。",
-"say": [],
-"note": "",
-"id": "auto-0001-040"
-},
-{
-"en": "The deductible is five hundred dollars.",
-"jp": "免責額は500ドルです。",
-"say": [],
-"note": "",
-"id": "auto-0001-041"
-},
-{
-"en": "Please exchange insurance information with the other driver.",
-"jp": "相手の運転手と保険の情報を交換してください。",
-"say": [],
-"note": "",
-"id": "auto-0001-042"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "auto-0001",
+  "situation": "auto",
+  "sname": "自動車・EV・交通取り締まり",
+  "icon": "🚗",
+  "level": 2,
+  "title": "購入・修理・EV・自動運転・警察",
+  "items": [
+    {
+      "en": "The new model has a range of three hundred miles on a full charge.",
+      "jp": "新型は、満充電で300マイル走れます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-001",
+      "audio": "auto-0001-001.mp3"
+    },
+    {
+      "en": "It takes thirty minutes to charge from ten to eighty percent.",
+      "jp": "10%から80%まで、30分で充電できます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-002",
+      "audio": "auto-0001-002.mp3"
+    },
+    {
+      "en": "The battery comes with an eight-year warranty.",
+      "jp": "電池には8年の保証が付きます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-003",
+      "audio": "auto-0001-003.mp3"
+    },
+    {
+      "en": "The car has a heads-up display and adaptive cruise control.",
+      "jp": "この車には、ヘッドアップディスプレイと追従走行機能があります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-004",
+      "audio": "auto-0001-004.mp3"
+    },
+    {
+      "en": "Lane-keeping assist helps you stay in your lane.",
+      "jp": "車線維持支援は、車線から外れないよう助けます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-005",
+      "audio": "auto-0001-005.mp3"
+    },
+    {
+      "en": "The vehicle will brake automatically if it detects an obstacle.",
+      "jp": "障害物を検知すると、車は自動でブレーキをかけます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-006",
+      "audio": "auto-0001-006.mp3"
+    },
+    {
+      "en": "Over-the-air updates add new features after purchase.",
+      "jp": "通信での更新で、購入後に新機能が加わります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-007",
+      "audio": "auto-0001-007.mp3"
+    },
+    {
+      "en": "Would you like to take it for a test drive?",
+      "jp": "試乗してみますか。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-008",
+      "audio": "auto-0001-008.mp3"
+    },
+    {
+      "en": "The monthly payment is four hundred and fifty dollars for sixty months.",
+      "jp": "月々の支払いは450ドルで、60回です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-009",
+      "audio": "auto-0001-009.mp3"
+    },
+    {
+      "en": "The down payment is three thousand dollars.",
+      "jp": "頭金は3000ドルです。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-010",
+      "audio": "auto-0001-010.mp3"
+    },
+    {
+      "en": "What's your trade-in worth?",
+      "jp": "下取りの価値はいくらですか。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-011",
+      "audio": "auto-0001-011.mp3"
+    },
+    {
+      "en": "The dealer fees are not included in the sticker price.",
+      "jp": "販売店の手数料は、表示価格に含まれません。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-012",
+      "audio": "auto-0001-012.mp3"
+    },
+    {
+      "en": "You can get a tax credit for buying an electric vehicle.",
+      "jp": "電気自動車の購入には、税額控除があります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-013",
+      "audio": "auto-0001-013.mp3"
+    },
+    {
+      "en": "The lease is for three years with ten thousand miles per year.",
+      "jp": "リースは3年で、年1万マイルです。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-014",
+      "audio": "auto-0001-014.mp3"
+    },
+    {
+      "en": "There's a charge for every extra mile over the limit.",
+      "jp": "上限を超えた1マイルごとに、料金がかかります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-015",
+      "audio": "auto-0001-015.mp3"
+    },
+    {
+      "en": "The engine light is on. You should have it checked.",
+      "jp": "エンジンの警告灯がついています。点検を受けてください。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-016",
+      "audio": "auto-0001-016.mp3"
+    },
+    {
+      "en": "Your brake pads are worn out and need to be replaced.",
+      "jp": "ブレーキパッドが摩耗しています。交換が必要です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-017",
+      "audio": "auto-0001-017.mp3"
+    },
+    {
+      "en": "It's time for an oil change and a tire rotation.",
+      "jp": "オイル交換とタイヤの入れ替えの時期です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-018",
+      "audio": "auto-0001-018.mp3"
+    },
+    {
+      "en": "The estimate for the repair is eight hundred dollars.",
+      "jp": "修理の見積もりは800ドルです。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-019",
+      "audio": "auto-0001-019.mp3"
+    },
+    {
+      "en": "The parts are on back order, so it'll take two weeks.",
+      "jp": "部品が取り寄せ待ちで、2週間かかります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-020",
+      "audio": "auto-0001-020.mp3"
+    },
+    {
+      "en": "Is it covered under warranty?",
+      "jp": "保証の対象ですか。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-021",
+      "audio": "auto-0001-021.mp3"
+    },
+    {
+      "en": "We'll need to keep the car overnight.",
+      "jp": "車を一晩預かる必要があります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-022",
+      "audio": "auto-0001-022.mp3"
+    },
+    {
+      "en": "Your car is ready. You can pick it up anytime.",
+      "jp": "お車の準備ができました。いつでもお引き取りできます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-023",
+      "audio": "auto-0001-023.mp3"
+    },
+    {
+      "en": "There's a recall on this model for a faulty airbag.",
+      "jp": "この車種には、エアバッグの不具合でリコールがあります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-024",
+      "audio": "auto-0001-024.mp3"
+    },
+    {
+      "en": "The recall repair is free of charge.",
+      "jp": "リコールの修理は、無料です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-025",
+      "audio": "auto-0001-025.mp3"
+    },
+    {
+      "en": "The assembly line produces sixty cars per hour.",
+      "jp": "組立ラインは、1時間に60台を作ります。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-026",
+      "audio": "auto-0001-026.mp3"
+    },
+    {
+      "en": "A chip shortage forced the factory to halt production.",
+      "jp": "半導体不足で、工場は生産を止めざるを得ませんでした。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-027",
+      "audio": "auto-0001-027.mp3"
+    },
+    {
+      "en": "The company plans to build a new battery plant.",
+      "jp": "会社は、新しい電池工場を建てる計画です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-028",
+      "audio": "auto-0001-028.mp3"
+    },
+    {
+      "en": "Supply chain issues delayed deliveries by several months.",
+      "jp": "供給網の問題で、納車が数か月遅れました。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-029",
+      "audio": "auto-0001-029.mp3"
+    },
+    {
+      "en": "Sales of electric vehicles grew by forty percent.",
+      "jp": "電気自動車の販売は、40%伸びました。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-030",
+      "audio": "auto-0001-030.mp3"
+    },
+    {
+      "en": "The automaker is losing market share to its rivals.",
+      "jp": "その自動車メーカーは、競合に市場シェアを奪われています。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-031",
+      "audio": "auto-0001-031.mp3"
+    },
+    {
+      "en": "Self-driving taxis are being tested in the city.",
+      "jp": "自動運転タクシーが、市内で試験運行されています。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-032",
+      "audio": "auto-0001-032.mp3"
+    },
+    {
+      "en": "A safety driver is still required behind the wheel.",
+      "jp": "安全のための運転手は、まだ運転席に必要です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-033",
+      "audio": "auto-0001-033.mp3"
+    },
+    {
+      "en": "The accident is under investigation.",
+      "jp": "事故は、調査中です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-034",
+      "audio": "auto-0001-034.mp3"
+    },
+    {
+      "en": "Please show me your license and registration.",
+      "jp": "免許証と車検証を見せてください。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-035",
+      "audio": "auto-0001-035.mp3"
+    },
+    {
+      "en": "You were going fifteen miles over the speed limit.",
+      "jp": "制限速度を15マイル超えていました。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-036",
+      "audio": "auto-0001-036.mp3"
+    },
+    {
+      "en": "I'm going to give you a warning this time.",
+      "jp": "今回は警告にします。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-037",
+      "audio": "auto-0001-037.mp3"
+    },
+    {
+      "en": "This is a ticket for running a red light.",
+      "jp": "これは信号無視の違反切符です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-038",
+      "audio": "auto-0001-038.mp3"
+    },
+    {
+      "en": "You can pay the fine online or by mail.",
+      "jp": "罰金は、オンラインか郵送で払えます。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-039",
+      "audio": "auto-0001-039.mp3"
+    },
+    {
+      "en": "You need car insurance to drive legally.",
+      "jp": "合法的に運転するには、自動車保険が必要です。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-040",
+      "audio": "auto-0001-040.mp3"
+    },
+    {
+      "en": "The deductible is five hundred dollars.",
+      "jp": "免責額は500ドルです。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-041",
+      "audio": "auto-0001-041.mp3"
+    },
+    {
+      "en": "Please exchange insurance information with the other driver.",
+      "jp": "相手の運転手と保険の情報を交換してください。",
+      "say": [],
+      "note": "",
+      "id": "auto-0001-042",
+      "audio": "auto-0001-042.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

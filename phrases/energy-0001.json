@@ -1,307 +1,349 @@
 {
-"id": "energy-0001",
-"situation": "energy",
-"sname": "エネルギー・気候・環境",
-"icon": "🌍",
-"level": 3,
-"title": "電力・再エネ・気候・災害・政策",
-"items": [
-{
-"en": "Renewable energy now makes up thirty percent of our electricity.",
-"jp": "再生可能エネルギーは、いま電力の30%を占めます。",
-"say": [],
-"note": "",
-"id": "energy-0001-001"
-},
-{
-"en": "Solar panels have become much cheaper over the last decade.",
-"jp": "太陽光パネルは、この10年でずっと安くなりました。",
-"say": [],
-"note": "",
-"id": "energy-0001-002"
-},
-{
-"en": "Wind farms are being built offshore.",
-"jp": "風力発電所が、沖合に作られています。",
-"say": [],
-"note": "",
-"id": "energy-0001-003"
-},
-{
-"en": "The problem with solar and wind is intermittency.",
-"jp": "太陽光と風力の課題は、発電が安定しないことです。",
-"say": [],
-"note": "intermittency = 間欠性（天候で出力が変わること）。",
-"id": "energy-0001-004"
-},
-{
-"en": "Batteries can store energy for use at night.",
-"jp": "電池は、夜に使うためにエネルギーを貯められます。",
-"say": [],
-"note": "",
-"id": "energy-0001-005"
-},
-{
-"en": "The grid has to balance supply and demand in real time.",
-"jp": "送電網は、需要と供給をリアルタイムで合わせる必要があります。",
-"say": [],
-"note": "",
-"id": "energy-0001-006"
-},
-{
-"en": "Peak demand occurs in the early evening.",
-"jp": "需要のピークは、夕方の早い時間です。",
-"say": [],
-"note": "",
-"id": "energy-0001-007"
-},
-{
-"en": "A heat wave pushed electricity demand to a record high.",
-"jp": "熱波で、電力需要が過去最高になりました。",
-"say": [],
-"note": "",
-"id": "energy-0001-008"
-},
-{
-"en": "Rolling blackouts were announced for the afternoon.",
-"jp": "午後に、順番に停電する計画が発表されました。",
-"say": [],
-"note": "",
-"id": "energy-0001-009"
-},
-{
-"en": "The utility is investing in grid upgrades.",
-"jp": "電力会社は、送電網の更新に投資しています。",
-"say": [],
-"note": "",
-"id": "energy-0001-010"
-},
-{
-"en": "Natural gas is cleaner than coal, but it still emits carbon dioxide.",
-"jp": "天然ガスは石炭よりきれいですが、二酸化炭素を出します。",
-"say": [],
-"note": "",
-"id": "energy-0001-011"
-},
-{
-"en": "Nuclear power provides stable, low-carbon electricity.",
-"jp": "原子力は、安定した低炭素の電力を供給します。",
-"say": [],
-"note": "",
-"id": "energy-0001-012"
-},
-{
-"en": "Waste disposal is a long-term challenge.",
-"jp": "廃棄物の処理は、長期の課題です。",
-"say": [],
-"note": "",
-"id": "energy-0001-013"
-},
-{
-"en": "Public opinion on nuclear power is divided.",
-"jp": "原子力に対する世論は、分かれています。",
-"say": [],
-"note": "",
-"id": "energy-0001-014"
-},
-{
-"en": "Hydrogen can be used as a clean fuel.",
-"jp": "水素は、クリーンな燃料として使えます。",
-"say": [],
-"note": "",
-"id": "energy-0001-015"
-},
-{
-"en": "Most hydrogen today is made from natural gas.",
-"jp": "今の水素の大半は、天然ガスから作られます。",
-"say": [],
-"note": "",
-"id": "energy-0001-016"
-},
-{
-"en": "Carbon capture technology is still very expensive.",
-"jp": "二酸化炭素の回収技術は、まだとても高価です。",
-"say": [],
-"note": "",
-"id": "energy-0001-017"
-},
-{
-"en": "The country aims to reach net zero emissions by twenty fifty.",
-"jp": "その国は、2050年までに排出を実質ゼロにする目標です。",
-"say": [],
-"note": "",
-"id": "energy-0001-018"
-},
-{
-"en": "Emissions have fallen but not fast enough.",
-"jp": "排出は減りましたが、十分な速さではありません。",
-"say": [],
-"note": "",
-"id": "energy-0001-019"
-},
-{
-"en": "Global temperatures have risen by about one point two degrees.",
-"jp": "世界の気温は、約1.2度上がりました。",
-"say": [],
-"note": "",
-"id": "energy-0001-020"
-},
-{
-"en": "Sea levels are rising, and coastal cities are at risk.",
-"jp": "海面が上がり、沿岸の都市が危険にさらされています。",
-"say": [],
-"note": "",
-"id": "energy-0001-021"
-},
-{
-"en": "Extreme weather events are becoming more frequent.",
-"jp": "極端な気象現象が、より頻繁になっています。",
-"say": [],
-"note": "",
-"id": "energy-0001-022"
-},
-{
-"en": "The wildfire has burned more than ten thousand acres.",
-"jp": "山火事は、1万エーカー以上を焼きました。",
-"say": [],
-"note": "",
-"id": "energy-0001-023"
-},
-{
-"en": "The hurricane is expected to make landfall tonight.",
-"jp": "ハリケーンは、今夜上陸する見込みです。",
-"say": [],
-"note": "",
-"id": "energy-0001-024"
-},
-{
-"en": "Residents in the evacuation zone have been told to leave.",
-"jp": "避難区域の住民には、退去が指示されています。",
-"say": [],
-"note": "",
-"id": "energy-0001-025"
-},
-{
-"en": "Farmers are struggling with drought.",
-"jp": "農家は、干ばつに苦しんでいます。",
-"say": [],
-"note": "",
-"id": "energy-0001-026"
-},
-{
-"en": "Food prices are rising because of poor harvests.",
-"jp": "不作で、食料価格が上がっています。",
-"say": [],
-"note": "",
-"id": "energy-0001-027"
-},
-{
-"en": "Water scarcity is a growing concern.",
-"jp": "水不足への懸念が高まっています。",
-"say": [],
-"note": "",
-"id": "energy-0001-028"
-},
-{
-"en": "Electric vehicles are replacing gasoline cars.",
-"jp": "電気自動車が、ガソリン車に置き換わりつつあります。",
-"say": [],
-"note": "",
-"id": "energy-0001-029"
-},
-{
-"en": "Charging infrastructure is still lacking in rural areas.",
-"jp": "充電設備は、地方ではまだ足りません。",
-"say": [],
-"note": "",
-"id": "energy-0001-030"
-},
-{
-"en": "The government offers subsidies for heat pumps.",
-"jp": "政府は、ヒートポンプに補助金を出しています。",
-"say": [],
-"note": "",
-"id": "energy-0001-031"
-},
-{
-"en": "Energy efficiency is the cheapest way to cut emissions.",
-"jp": "省エネは、排出を減らす最も安い方法です。",
-"say": [],
-"note": "",
-"id": "energy-0001-032"
-},
-{
-"en": "Companies are setting science-based targets.",
-"jp": "企業は、科学に基づく目標を定めています。",
-"say": [],
-"note": "",
-"id": "energy-0001-033"
-},
-{
-"en": "Investors are paying more attention to sustainability.",
-"jp": "投資家は、持続可能性により注目しています。",
-"say": [],
-"note": "",
-"id": "energy-0001-034"
-},
-{
-"en": "Greenwashing is when a company exaggerates its environmental efforts.",
-"jp": "グリーンウォッシュは、会社が環境への取り組みを誇張することです。",
-"say": [],
-"note": "",
-"id": "energy-0001-035"
-},
-{
-"en": "Carbon credits are controversial.",
-"jp": "カーボンクレジットには、賛否があります。",
-"say": [],
-"note": "",
-"id": "energy-0001-036"
-},
-{
-"en": "The summit ended without a binding agreement.",
-"jp": "首脳会議は、拘束力のある合意なしに終わりました。",
-"say": [],
-"note": "",
-"id": "energy-0001-037"
-},
-{
-"en": "Developing countries want financial support to adapt.",
-"jp": "途上国は、適応のための資金支援を求めています。",
-"say": [],
-"note": "",
-"id": "energy-0001-038"
-},
-{
-"en": "The cost of inaction is much higher than the cost of acting.",
-"jp": "何もしない費用は、行動する費用よりずっと高いです。",
-"say": [],
-"note": "",
-"id": "energy-0001-039"
-},
-{
-"en": "Recycling rates are lower than most people think.",
-"jp": "リサイクル率は、多くの人が思うより低いです。",
-"say": [],
-"note": "",
-"id": "energy-0001-040"
-},
-{
-"en": "Plastic waste ends up in the ocean.",
-"jp": "プラスチックごみが、海に流れ込みます。",
-"say": [],
-"note": "",
-"id": "energy-0001-041"
-},
-{
-"en": "Biodiversity loss is accelerating.",
-"jp": "生物多様性の喪失が、加速しています。",
-"say": [],
-"note": "",
-"id": "energy-0001-042"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "energy-0001",
+  "situation": "energy",
+  "sname": "エネルギー・気候・環境",
+  "icon": "🌍",
+  "level": 3,
+  "title": "電力・再エネ・気候・災害・政策",
+  "items": [
+    {
+      "en": "Renewable energy now makes up thirty percent of our electricity.",
+      "jp": "再生可能エネルギーは、いま電力の30%を占めます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-001",
+      "audio": "energy-0001-001.mp3"
+    },
+    {
+      "en": "Solar panels have become much cheaper over the last decade.",
+      "jp": "太陽光パネルは、この10年でずっと安くなりました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-002",
+      "audio": "energy-0001-002.mp3"
+    },
+    {
+      "en": "Wind farms are being built offshore.",
+      "jp": "風力発電所が、沖合に作られています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-003",
+      "audio": "energy-0001-003.mp3"
+    },
+    {
+      "en": "The problem with solar and wind is intermittency.",
+      "jp": "太陽光と風力の課題は、発電が安定しないことです。",
+      "say": [],
+      "note": "intermittency = 間欠性（天候で出力が変わること）。",
+      "id": "energy-0001-004",
+      "audio": "energy-0001-004.mp3"
+    },
+    {
+      "en": "Batteries can store energy for use at night.",
+      "jp": "電池は、夜に使うためにエネルギーを貯められます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-005",
+      "audio": "energy-0001-005.mp3"
+    },
+    {
+      "en": "The grid has to balance supply and demand in real time.",
+      "jp": "送電網は、需要と供給をリアルタイムで合わせる必要があります。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-006",
+      "audio": "energy-0001-006.mp3"
+    },
+    {
+      "en": "Peak demand occurs in the early evening.",
+      "jp": "需要のピークは、夕方の早い時間です。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-007",
+      "audio": "energy-0001-007.mp3"
+    },
+    {
+      "en": "A heat wave pushed electricity demand to a record high.",
+      "jp": "熱波で、電力需要が過去最高になりました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-008",
+      "audio": "energy-0001-008.mp3"
+    },
+    {
+      "en": "Rolling blackouts were announced for the afternoon.",
+      "jp": "午後に、順番に停電する計画が発表されました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-009",
+      "audio": "energy-0001-009.mp3"
+    },
+    {
+      "en": "The utility is investing in grid upgrades.",
+      "jp": "電力会社は、送電網の更新に投資しています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-010",
+      "audio": "energy-0001-010.mp3"
+    },
+    {
+      "en": "Natural gas is cleaner than coal, but it still emits carbon dioxide.",
+      "jp": "天然ガスは石炭よりきれいですが、二酸化炭素を出します。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-011",
+      "audio": "energy-0001-011.mp3"
+    },
+    {
+      "en": "Nuclear power provides stable, low-carbon electricity.",
+      "jp": "原子力は、安定した低炭素の電力を供給します。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-012",
+      "audio": "energy-0001-012.mp3"
+    },
+    {
+      "en": "Waste disposal is a long-term challenge.",
+      "jp": "廃棄物の処理は、長期の課題です。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-013",
+      "audio": "energy-0001-013.mp3"
+    },
+    {
+      "en": "Public opinion on nuclear power is divided.",
+      "jp": "原子力に対する世論は、分かれています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-014",
+      "audio": "energy-0001-014.mp3"
+    },
+    {
+      "en": "Hydrogen can be used as a clean fuel.",
+      "jp": "水素は、クリーンな燃料として使えます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-015",
+      "audio": "energy-0001-015.mp3"
+    },
+    {
+      "en": "Most hydrogen today is made from natural gas.",
+      "jp": "今の水素の大半は、天然ガスから作られます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-016",
+      "audio": "energy-0001-016.mp3"
+    },
+    {
+      "en": "Carbon capture technology is still very expensive.",
+      "jp": "二酸化炭素の回収技術は、まだとても高価です。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-017",
+      "audio": "energy-0001-017.mp3"
+    },
+    {
+      "en": "The country aims to reach net zero emissions by twenty fifty.",
+      "jp": "その国は、2050年までに排出を実質ゼロにする目標です。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-018",
+      "audio": "energy-0001-018.mp3"
+    },
+    {
+      "en": "Emissions have fallen but not fast enough.",
+      "jp": "排出は減りましたが、十分な速さではありません。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-019",
+      "audio": "energy-0001-019.mp3"
+    },
+    {
+      "en": "Global temperatures have risen by about one point two degrees.",
+      "jp": "世界の気温は、約1.2度上がりました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-020",
+      "audio": "energy-0001-020.mp3"
+    },
+    {
+      "en": "Sea levels are rising, and coastal cities are at risk.",
+      "jp": "海面が上がり、沿岸の都市が危険にさらされています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-021",
+      "audio": "energy-0001-021.mp3"
+    },
+    {
+      "en": "Extreme weather events are becoming more frequent.",
+      "jp": "極端な気象現象が、より頻繁になっています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-022",
+      "audio": "energy-0001-022.mp3"
+    },
+    {
+      "en": "The wildfire has burned more than ten thousand acres.",
+      "jp": "山火事は、1万エーカー以上を焼きました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-023",
+      "audio": "energy-0001-023.mp3"
+    },
+    {
+      "en": "The hurricane is expected to make landfall tonight.",
+      "jp": "ハリケーンは、今夜上陸する見込みです。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-024",
+      "audio": "energy-0001-024.mp3"
+    },
+    {
+      "en": "Residents in the evacuation zone have been told to leave.",
+      "jp": "避難区域の住民には、退去が指示されています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-025",
+      "audio": "energy-0001-025.mp3"
+    },
+    {
+      "en": "Farmers are struggling with drought.",
+      "jp": "農家は、干ばつに苦しんでいます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-026",
+      "audio": "energy-0001-026.mp3"
+    },
+    {
+      "en": "Food prices are rising because of poor harvests.",
+      "jp": "不作で、食料価格が上がっています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-027",
+      "audio": "energy-0001-027.mp3"
+    },
+    {
+      "en": "Water scarcity is a growing concern.",
+      "jp": "水不足への懸念が高まっています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-028",
+      "audio": "energy-0001-028.mp3"
+    },
+    {
+      "en": "Electric vehicles are replacing gasoline cars.",
+      "jp": "電気自動車が、ガソリン車に置き換わりつつあります。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-029",
+      "audio": "energy-0001-029.mp3"
+    },
+    {
+      "en": "Charging infrastructure is still lacking in rural areas.",
+      "jp": "充電設備は、地方ではまだ足りません。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-030",
+      "audio": "energy-0001-030.mp3"
+    },
+    {
+      "en": "The government offers subsidies for heat pumps.",
+      "jp": "政府は、ヒートポンプに補助金を出しています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-031",
+      "audio": "energy-0001-031.mp3"
+    },
+    {
+      "en": "Energy efficiency is the cheapest way to cut emissions.",
+      "jp": "省エネは、排出を減らす最も安い方法です。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-032",
+      "audio": "energy-0001-032.mp3"
+    },
+    {
+      "en": "Companies are setting science-based targets.",
+      "jp": "企業は、科学に基づく目標を定めています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-033",
+      "audio": "energy-0001-033.mp3"
+    },
+    {
+      "en": "Investors are paying more attention to sustainability.",
+      "jp": "投資家は、持続可能性により注目しています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-034",
+      "audio": "energy-0001-034.mp3"
+    },
+    {
+      "en": "Greenwashing is when a company exaggerates its environmental efforts.",
+      "jp": "グリーンウォッシュは、会社が環境への取り組みを誇張することです。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-035",
+      "audio": "energy-0001-035.mp3"
+    },
+    {
+      "en": "Carbon credits are controversial.",
+      "jp": "カーボンクレジットには、賛否があります。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-036",
+      "audio": "energy-0001-036.mp3"
+    },
+    {
+      "en": "The summit ended without a binding agreement.",
+      "jp": "首脳会議は、拘束力のある合意なしに終わりました。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-037",
+      "audio": "energy-0001-037.mp3"
+    },
+    {
+      "en": "Developing countries want financial support to adapt.",
+      "jp": "途上国は、適応のための資金支援を求めています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-038",
+      "audio": "energy-0001-038.mp3"
+    },
+    {
+      "en": "The cost of inaction is much higher than the cost of acting.",
+      "jp": "何もしない費用は、行動する費用よりずっと高いです。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-039",
+      "audio": "energy-0001-039.mp3"
+    },
+    {
+      "en": "Recycling rates are lower than most people think.",
+      "jp": "リサイクル率は、多くの人が思うより低いです。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-040",
+      "audio": "energy-0001-040.mp3"
+    },
+    {
+      "en": "Plastic waste ends up in the ocean.",
+      "jp": "プラスチックごみが、海に流れ込みます。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-041",
+      "audio": "energy-0001-041.mp3"
+    },
+    {
+      "en": "Biodiversity loss is accelerating.",
+      "jp": "生物多様性の喪失が、加速しています。",
+      "say": [],
+      "note": "",
+      "id": "energy-0001-042",
+      "audio": "energy-0001-042.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

@@ -1,314 +1,357 @@
 {
-"id": "construction-0001",
-"situation": "construction",
-"sname": "建設・不動産開発",
-"icon": "🏗️",
-"level": 3,
-"title": "工事・許可・安全・費用・引き渡し",
-"items": [
-{
-"en": "The construction project is scheduled to finish in eighteen months.",
-"jp": "建設工事は、18か月で完成する予定です。",
-"say": [],
-"note": "",
-"id": "construction-0001-001"
-},
-{
-"en": "We're pouring the foundation next week.",
-"jp": "来週、基礎を打ちます。",
-"say": [],
-"note": "",
-"id": "construction-0001-002"
-},
-{
-"en": "The concrete needs seven days to cure.",
-"jp": "コンクリートは、固まるのに7日かかります。",
-"say": [],
-"note": "",
-"id": "construction-0001-003"
-},
-{
-"en": "The steel frame goes up first.",
-"jp": "鉄骨の骨組みを最初に建てます。",
-"say": [],
-"note": "",
-"id": "construction-0001-004"
-},
-{
-"en": "We need a permit before we start work.",
-"jp": "作業を始める前に、許可が必要です。",
-"say": [],
-"note": "",
-"id": "construction-0001-005"
-},
-{
-"en": "The building inspector will check the wiring on Thursday.",
-"jp": "建築検査官が、木曜に配線を確認します。",
-"say": [],
-"note": "",
-"id": "construction-0001-006"
-},
-{
-"en": "The plans have to comply with local building codes.",
-"jp": "設計は、地域の建築基準に適合する必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-007"
-},
-{
-"en": "The architect revised the drawings.",
-"jp": "建築家が、図面を改訂しました。",
-"say": [],
-"note": "",
-"id": "construction-0001-008"
-},
-{
-"en": "Please review the blueprints and sign off.",
-"jp": "設計図を確認して、承認してください。",
-"say": [],
-"note": "",
-"id": "construction-0001-009"
-},
-{
-"en": "The cost estimate came in over budget.",
-"jp": "費用の見積もりは、予算を超えました。",
-"say": [],
-"note": "",
-"id": "construction-0001-010"
-},
-{
-"en": "We need to reduce costs without sacrificing safety.",
-"jp": "安全を犠牲にせず、費用を減らす必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-011"
-},
-{
-"en": "A change order will add ten thousand dollars to the contract.",
-"jp": "変更指示で、契約に1万ドルが加わります。",
-"say": [],
-"note": "change order = 契約後の変更とその追加費用。",
-"id": "construction-0001-012"
-},
-{
-"en": "The subcontractor is behind schedule.",
-"jp": "下請け業者が、遅れています。",
-"say": [],
-"note": "",
-"id": "construction-0001-013"
-},
-{
-"en": "We're waiting for the materials to be delivered.",
-"jp": "資材の納品を待っています。",
-"say": [],
-"note": "",
-"id": "construction-0001-014"
-},
-{
-"en": "Lumber prices have gone up sharply.",
-"jp": "木材の価格が、急に上がりました。",
-"say": [],
-"note": "",
-"id": "construction-0001-015"
-},
-{
-"en": "The crane will arrive on Monday morning.",
-"jp": "クレーンは、月曜の朝に到着します。",
-"say": [],
-"note": "",
-"id": "construction-0001-016"
-},
-{
-"en": "Everyone on site must wear a hard hat and a safety vest.",
-"jp": "現場の全員が、ヘルメットと安全ベストを着ける必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-017"
-},
-{
-"en": "Keep clear of the heavy equipment.",
-"jp": "重機に近づかないでください。",
-"say": [],
-"note": "",
-"id": "construction-0001-018"
-},
-{
-"en": "A worker was injured, and the site was shut down for the day.",
-"jp": "作業員がけがをし、現場はその日止まりました。",
-"say": [],
-"note": "",
-"id": "construction-0001-019"
-},
-{
-"en": "The site foreman will brief everyone at seven a.m.",
-"jp": "現場監督が、午前7時に全員へ説明します。",
-"say": [],
-"note": "",
-"id": "construction-0001-020"
-},
-{
-"en": "Rain has delayed the work by three days.",
-"jp": "雨で、作業が3日遅れました。",
-"say": [],
-"note": "",
-"id": "construction-0001-021"
-},
-{
-"en": "We'll make up the time on the weekend.",
-"jp": "遅れは、週末に取り戻します。",
-"say": [],
-"note": "",
-"id": "construction-0001-022"
-},
-{
-"en": "The electrician and the plumber need access to the walls before drywall goes up.",
-"jp": "石膏ボードを張る前に、電気工と配管工が壁に入る必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-023"
-},
-{
-"en": "The roof has to be waterproofed.",
-"jp": "屋根は、防水する必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-024"
-},
-{
-"en": "The insulation must meet energy standards.",
-"jp": "断熱材は、省エネの基準を満たす必要があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-025"
-},
-{
-"en": "We're installing solar panels on the roof.",
-"jp": "屋根に太陽光パネルを付けます。",
-"say": [],
-"note": "",
-"id": "construction-0001-026"
-},
-{
-"en": "The elevator installation is the last major item.",
-"jp": "エレベーターの設置が、最後の大きな作業です。",
-"say": [],
-"note": "",
-"id": "construction-0001-027"
-},
-{
-"en": "The final inspection is next Friday.",
-"jp": "最終検査は、来週の金曜です。",
-"say": [],
-"note": "",
-"id": "construction-0001-028"
-},
-{
-"en": "We need a certificate of occupancy before anyone can move in.",
-"jp": "誰かが入居する前に、使用許可証が必要です。",
-"say": [],
-"note": "",
-"id": "construction-0001-029"
-},
-{
-"en": "The punch list has fifty items left.",
-"jp": "手直し項目が、あと50件残っています。",
-"say": [],
-"note": "punch list = 引き渡し前の直し箇所リスト。",
-"id": "construction-0001-030"
-},
-{
-"en": "The warranty covers defects for one year after completion.",
-"jp": "保証は、完成後1年間の欠陥を対象にします。",
-"say": [],
-"note": "",
-"id": "construction-0001-031"
-},
-{
-"en": "The bridge needs a structural assessment.",
-"jp": "その橋には、構造の評価が必要です。",
-"say": [],
-"note": "",
-"id": "construction-0001-032"
-},
-{
-"en": "The road will be closed for resurfacing.",
-"jp": "道路は、舗装し直しのため通行止めです。",
-"say": [],
-"note": "",
-"id": "construction-0001-033"
-},
-{
-"en": "There will be detours during the work.",
-"jp": "工事中は、迂回があります。",
-"say": [],
-"note": "",
-"id": "construction-0001-034"
-},
-{
-"en": "The tunnel project is ten years behind schedule.",
-"jp": "トンネルの事業は、10年遅れています。",
-"say": [],
-"note": "",
-"id": "construction-0001-035"
-},
-{
-"en": "Public funding for the project has been approved.",
-"jp": "事業への公的資金が、承認されました。",
-"say": [],
-"note": "",
-"id": "construction-0001-036"
-},
-{
-"en": "The environmental review takes about a year.",
-"jp": "環境審査には、約1年かかります。",
-"say": [],
-"note": "",
-"id": "construction-0001-037"
-},
-{
-"en": "Local residents are concerned about noise and dust.",
-"jp": "地元の住民は、騒音とほこりを心配しています。",
-"say": [],
-"note": "",
-"id": "construction-0001-038"
-},
-{
-"en": "Work hours are limited to between eight and five.",
-"jp": "作業時間は、8時から5時までに限られます。",
-"say": [],
-"note": "",
-"id": "construction-0001-039"
-},
-{
-"en": "The land was rezoned for mixed use.",
-"jp": "土地は、複合利用に用途変更されました。",
-"say": [],
-"note": "",
-"id": "construction-0001-040"
-},
-{
-"en": "The developer plans to build three hundred apartments.",
-"jp": "開発業者は、300戸の集合住宅を建てる計画です。",
-"say": [],
-"note": "",
-"id": "construction-0001-041"
-},
-{
-"en": "Rents in the area are expected to rise.",
-"jp": "この地域の家賃は、上がる見込みです。",
-"say": [],
-"note": "",
-"id": "construction-0001-042"
-},
-{
-"en": "The project will create about two hundred jobs.",
-"jp": "事業で、約200人分の仕事が生まれます。",
-"say": [],
-"note": "",
-"id": "construction-0001-043"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "construction-0001",
+  "situation": "construction",
+  "sname": "建設・不動産開発",
+  "icon": "🏗️",
+  "level": 3,
+  "title": "工事・許可・安全・費用・引き渡し",
+  "items": [
+    {
+      "en": "The construction project is scheduled to finish in eighteen months.",
+      "jp": "建設工事は、18か月で完成する予定です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-001",
+      "audio": "construction-0001-001.mp3"
+    },
+    {
+      "en": "We're pouring the foundation next week.",
+      "jp": "来週、基礎を打ちます。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-002",
+      "audio": "construction-0001-002.mp3"
+    },
+    {
+      "en": "The concrete needs seven days to cure.",
+      "jp": "コンクリートは、固まるのに7日かかります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-003",
+      "audio": "construction-0001-003.mp3"
+    },
+    {
+      "en": "The steel frame goes up first.",
+      "jp": "鉄骨の骨組みを最初に建てます。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-004",
+      "audio": "construction-0001-004.mp3"
+    },
+    {
+      "en": "We need a permit before we start work.",
+      "jp": "作業を始める前に、許可が必要です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-005",
+      "audio": "construction-0001-005.mp3"
+    },
+    {
+      "en": "The building inspector will check the wiring on Thursday.",
+      "jp": "建築検査官が、木曜に配線を確認します。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-006",
+      "audio": "construction-0001-006.mp3"
+    },
+    {
+      "en": "The plans have to comply with local building codes.",
+      "jp": "設計は、地域の建築基準に適合する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-007",
+      "audio": "construction-0001-007.mp3"
+    },
+    {
+      "en": "The architect revised the drawings.",
+      "jp": "建築家が、図面を改訂しました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-008",
+      "audio": "construction-0001-008.mp3"
+    },
+    {
+      "en": "Please review the blueprints and sign off.",
+      "jp": "設計図を確認して、承認してください。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-009",
+      "audio": "construction-0001-009.mp3"
+    },
+    {
+      "en": "The cost estimate came in over budget.",
+      "jp": "費用の見積もりは、予算を超えました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-010",
+      "audio": "construction-0001-010.mp3"
+    },
+    {
+      "en": "We need to reduce costs without sacrificing safety.",
+      "jp": "安全を犠牲にせず、費用を減らす必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-011",
+      "audio": "construction-0001-011.mp3"
+    },
+    {
+      "en": "A change order will add ten thousand dollars to the contract.",
+      "jp": "変更指示で、契約に1万ドルが加わります。",
+      "say": [],
+      "note": "change order = 契約後の変更とその追加費用。",
+      "id": "construction-0001-012",
+      "audio": "construction-0001-012.mp3"
+    },
+    {
+      "en": "The subcontractor is behind schedule.",
+      "jp": "下請け業者が、遅れています。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-013",
+      "audio": "construction-0001-013.mp3"
+    },
+    {
+      "en": "We're waiting for the materials to be delivered.",
+      "jp": "資材の納品を待っています。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-014",
+      "audio": "construction-0001-014.mp3"
+    },
+    {
+      "en": "Lumber prices have gone up sharply.",
+      "jp": "木材の価格が、急に上がりました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-015",
+      "audio": "construction-0001-015.mp3"
+    },
+    {
+      "en": "The crane will arrive on Monday morning.",
+      "jp": "クレーンは、月曜の朝に到着します。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-016",
+      "audio": "construction-0001-016.mp3"
+    },
+    {
+      "en": "Everyone on site must wear a hard hat and a safety vest.",
+      "jp": "現場の全員が、ヘルメットと安全ベストを着ける必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-017",
+      "audio": "construction-0001-017.mp3"
+    },
+    {
+      "en": "Keep clear of the heavy equipment.",
+      "jp": "重機に近づかないでください。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-018",
+      "audio": "construction-0001-018.mp3"
+    },
+    {
+      "en": "A worker was injured, and the site was shut down for the day.",
+      "jp": "作業員がけがをし、現場はその日止まりました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-019",
+      "audio": "construction-0001-019.mp3"
+    },
+    {
+      "en": "The site foreman will brief everyone at seven a.m.",
+      "jp": "現場監督が、午前7時に全員へ説明します。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-020",
+      "audio": "construction-0001-020.mp3"
+    },
+    {
+      "en": "Rain has delayed the work by three days.",
+      "jp": "雨で、作業が3日遅れました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-021",
+      "audio": "construction-0001-021.mp3"
+    },
+    {
+      "en": "We'll make up the time on the weekend.",
+      "jp": "遅れは、週末に取り戻します。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-022",
+      "audio": "construction-0001-022.mp3"
+    },
+    {
+      "en": "The electrician and the plumber need access to the walls before drywall goes up.",
+      "jp": "石膏ボードを張る前に、電気工と配管工が壁に入る必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-023",
+      "audio": "construction-0001-023.mp3"
+    },
+    {
+      "en": "The roof has to be waterproofed.",
+      "jp": "屋根は、防水する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-024",
+      "audio": "construction-0001-024.mp3"
+    },
+    {
+      "en": "The insulation must meet energy standards.",
+      "jp": "断熱材は、省エネの基準を満たす必要があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-025",
+      "audio": "construction-0001-025.mp3"
+    },
+    {
+      "en": "We're installing solar panels on the roof.",
+      "jp": "屋根に太陽光パネルを付けます。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-026",
+      "audio": "construction-0001-026.mp3"
+    },
+    {
+      "en": "The elevator installation is the last major item.",
+      "jp": "エレベーターの設置が、最後の大きな作業です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-027",
+      "audio": "construction-0001-027.mp3"
+    },
+    {
+      "en": "The final inspection is next Friday.",
+      "jp": "最終検査は、来週の金曜です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-028",
+      "audio": "construction-0001-028.mp3"
+    },
+    {
+      "en": "We need a certificate of occupancy before anyone can move in.",
+      "jp": "誰かが入居する前に、使用許可証が必要です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-029",
+      "audio": "construction-0001-029.mp3"
+    },
+    {
+      "en": "The punch list has fifty items left.",
+      "jp": "手直し項目が、あと50件残っています。",
+      "say": [],
+      "note": "punch list = 引き渡し前の直し箇所リスト。",
+      "id": "construction-0001-030",
+      "audio": "construction-0001-030.mp3"
+    },
+    {
+      "en": "The warranty covers defects for one year after completion.",
+      "jp": "保証は、完成後1年間の欠陥を対象にします。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-031",
+      "audio": "construction-0001-031.mp3"
+    },
+    {
+      "en": "The bridge needs a structural assessment.",
+      "jp": "その橋には、構造の評価が必要です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-032",
+      "audio": "construction-0001-032.mp3"
+    },
+    {
+      "en": "The road will be closed for resurfacing.",
+      "jp": "道路は、舗装し直しのため通行止めです。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-033",
+      "audio": "construction-0001-033.mp3"
+    },
+    {
+      "en": "There will be detours during the work.",
+      "jp": "工事中は、迂回があります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-034",
+      "audio": "construction-0001-034.mp3"
+    },
+    {
+      "en": "The tunnel project is ten years behind schedule.",
+      "jp": "トンネルの事業は、10年遅れています。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-035",
+      "audio": "construction-0001-035.mp3"
+    },
+    {
+      "en": "Public funding for the project has been approved.",
+      "jp": "事業への公的資金が、承認されました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-036",
+      "audio": "construction-0001-036.mp3"
+    },
+    {
+      "en": "The environmental review takes about a year.",
+      "jp": "環境審査には、約1年かかります。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-037",
+      "audio": "construction-0001-037.mp3"
+    },
+    {
+      "en": "Local residents are concerned about noise and dust.",
+      "jp": "地元の住民は、騒音とほこりを心配しています。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-038",
+      "audio": "construction-0001-038.mp3"
+    },
+    {
+      "en": "Work hours are limited to between eight and five.",
+      "jp": "作業時間は、8時から5時までに限られます。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-039",
+      "audio": "construction-0001-039.mp3"
+    },
+    {
+      "en": "The land was rezoned for mixed use.",
+      "jp": "土地は、複合利用に用途変更されました。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-040",
+      "audio": "construction-0001-040.mp3"
+    },
+    {
+      "en": "The developer plans to build three hundred apartments.",
+      "jp": "開発業者は、300戸の集合住宅を建てる計画です。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-041",
+      "audio": "construction-0001-041.mp3"
+    },
+    {
+      "en": "Rents in the area are expected to rise.",
+      "jp": "この地域の家賃は、上がる見込みです。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-042",
+      "audio": "construction-0001-042.mp3"
+    },
+    {
+      "en": "The project will create about two hundred jobs.",
+      "jp": "事業で、約200人分の仕事が生まれます。",
+      "say": [],
+      "note": "",
+      "id": "construction-0001-043",
+      "audio": "construction-0001-043.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

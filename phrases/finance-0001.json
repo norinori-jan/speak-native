@@ -1,321 +1,365 @@
 {
-"id": "finance-0001",
-"situation": "finance",
-"sname": "経済・金融ニュース",
-"icon": "📈",
-"level": 3,
-"title": "市場・金利・インフレ・投資・家計",
-"items": [
-{
-"en": "The market opened lower this morning.",
-"jp": "市場は今朝、安く始まりました。",
-"say": [],
-"note": "",
-"id": "finance-0001-001"
-},
-{
-"en": "Stocks rallied on strong earnings reports.",
-"jp": "好決算を受けて、株が上昇しました。",
-"say": [],
-"note": "rally = 上昇。",
-"id": "finance-0001-002"
-},
-{
-"en": "The index fell two percent in early trading.",
-"jp": "指数は寄り付きで2%下がりました。",
-"say": [],
-"note": "",
-"id": "finance-0001-003"
-},
-{
-"en": "Investors are worried about rising interest rates.",
-"jp": "投資家は、金利の上昇を心配しています。",
-"say": [],
-"note": "",
-"id": "finance-0001-004"
-},
-{
-"en": "The central bank decided to hold rates steady.",
-"jp": "中央銀行は、金利を据え置くと決めました。",
-"say": [],
-"note": "",
-"id": "finance-0001-005"
-},
-{
-"en": "The bank raised rates by twenty-five basis points.",
-"jp": "その銀行は、金利を25ベーシスポイント上げました。",
-"say": [],
-"note": "basis point = 0.01%。25bp = 0.25%。",
-"id": "finance-0001-006"
-},
-{
-"en": "Inflation came in higher than expected.",
-"jp": "インフレは、予想より高く出ました。",
-"say": [],
-"note": "",
-"id": "finance-0001-007"
-},
-{
-"en": "The unemployment rate dropped to three point eight percent.",
-"jp": "失業率は3.8%に下がりました。",
-"say": [],
-"note": "",
-"id": "finance-0001-008"
-},
-{
-"en": "Bond yields have risen sharply.",
-"jp": "債券の利回りが急上昇しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-009"
-},
-{
-"en": "The yield on the ten-year Treasury is four point two percent.",
-"jp": "10年物国債の利回りは4.2%です。",
-"say": [],
-"note": "",
-"id": "finance-0001-010"
-},
-{
-"en": "The dollar strengthened against the yen.",
-"jp": "ドルが円に対して強くなりました。",
-"say": [],
-"note": "",
-"id": "finance-0001-011"
-},
-{
-"en": "Oil prices are volatile because of tensions in the Middle East.",
-"jp": "中東の緊張で、原油価格は不安定です。",
-"say": [],
-"note": "",
-"id": "finance-0001-012"
-},
-{
-"en": "Gold is considered a safe haven.",
-"jp": "金は、安全資産と見られています。",
-"say": [],
-"note": "safe haven = 逃避先の資産。",
-"id": "finance-0001-013"
-},
-{
-"en": "Analysts upgraded the stock from hold to buy.",
-"jp": "アナリストは、その株を中立から買いに引き上げました。",
-"say": [],
-"note": "",
-"id": "finance-0001-014"
-},
-{
-"en": "The company beat earnings estimates but missed on revenue.",
-"jp": "その会社は利益の予想を上回りましたが、売上は下回りました。",
-"say": [],
-"note": "",
-"id": "finance-0001-015"
-},
-{
-"en": "Shares dropped after the company cut its forecast.",
-"jp": "会社が見通しを下げ、株が下落しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-016"
-},
-{
-"en": "The firm announced a stock buyback.",
-"jp": "その会社は、自社株買いを発表しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-017"
-},
-{
-"en": "The dividend yield is around three percent.",
-"jp": "配当利回りは約3%です。",
-"say": [],
-"note": "",
-"id": "finance-0001-018"
-},
-{
-"en": "The price-to-earnings ratio is twenty.",
-"jp": "株価収益率は20です。",
-"say": [],
-"note": "",
-"id": "finance-0001-019"
-},
-{
-"en": "The company's market cap is over a hundred billion dollars.",
-"jp": "その会社の時価総額は、1000億ドルを超えます。",
-"say": [],
-"note": "",
-"id": "finance-0001-020"
-},
-{
-"en": "The IPO was oversubscribed.",
-"jp": "新規上場は、申し込みが殺到しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-021"
-},
-{
-"en": "The stock priced at twenty dollars and jumped thirty percent on the first day.",
-"jp": "株は20ドルで値付けされ、初日に30%上がりました。",
-"say": [],
-"note": "",
-"id": "finance-0001-022"
-},
-{
-"en": "The merger needs regulatory approval.",
-"jp": "合併には、規制当局の承認が必要です。",
-"say": [],
-"note": "",
-"id": "finance-0001-023"
-},
-{
-"en": "The hedge fund took a short position.",
-"jp": "そのヘッジファンドは、空売りの持ち高を取りました。",
-"say": [],
-"note": "",
-"id": "finance-0001-024"
-},
-{
-"en": "Diversification reduces risk.",
-"jp": "分散投資はリスクを減らします。",
-"say": [],
-"note": "",
-"id": "finance-0001-025"
-},
-{
-"en": "Past performance is not a guarantee of future results.",
-"jp": "過去の運用成績は、将来の結果を保証しません。",
-"say": [],
-"note": "",
-"id": "finance-0001-026"
-},
-{
-"en": "Index funds charge much lower fees than active funds.",
-"jp": "インデックスファンドは、アクティブ型よりずっと手数料が安いです。",
-"say": [],
-"note": "",
-"id": "finance-0001-027"
-},
-{
-"en": "The expense ratio is zero point zero three percent.",
-"jp": "信託報酬は0.03%です。",
-"say": [],
-"note": "",
-"id": "finance-0001-028"
-},
-{
-"en": "Compound interest works in your favor over time.",
-"jp": "複利は、時間とともに味方になります。",
-"say": [],
-"note": "",
-"id": "finance-0001-029"
-},
-{
-"en": "You should have an emergency fund of six months of expenses.",
-"jp": "生活費6か月分の緊急資金を持つべきです。",
-"say": [],
-"note": "",
-"id": "finance-0001-030"
-},
-{
-"en": "A mortgage rate of six percent is high compared with a few years ago.",
-"jp": "住宅ローン金利の6%は、数年前に比べて高いです。",
-"say": [],
-"note": "",
-"id": "finance-0001-031"
-},
-{
-"en": "The housing market is cooling down.",
-"jp": "住宅市場は冷え込んでいます。",
-"say": [],
-"note": "",
-"id": "finance-0001-032"
-},
-{
-"en": "Credit card interest can be over twenty percent.",
-"jp": "クレジットカードの金利は、20%を超えることがあります。",
-"say": [],
-"note": "",
-"id": "finance-0001-033"
-},
-{
-"en": "Your credit score affects your loan terms.",
-"jp": "信用スコアは、融資の条件に影響します。",
-"say": [],
-"note": "",
-"id": "finance-0001-034"
-},
-{
-"en": "The recession fears have eased a little.",
-"jp": "景気後退の不安は、少し和らぎました。",
-"say": [],
-"note": "",
-"id": "finance-0001-035"
-},
-{
-"en": "GDP grew at an annual rate of two point five percent.",
-"jp": "GDPは、年率2.5%で成長しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-036"
-},
-{
-"en": "Consumer spending remains strong.",
-"jp": "個人消費は、堅調です。",
-"say": [],
-"note": "",
-"id": "finance-0001-037"
-},
-{
-"en": "The trade deficit widened last month.",
-"jp": "貿易赤字は、先月拡大しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-038"
-},
-{
-"en": "The government announced a new stimulus package.",
-"jp": "政府は、新しい景気対策を発表しました。",
-"say": [],
-"note": "",
-"id": "finance-0001-039"
-},
-{
-"en": "The tax cut takes effect next year.",
-"jp": "減税は、来年から始まります。",
-"say": [],
-"note": "",
-"id": "finance-0001-040"
-},
-{
-"en": "Crypto prices have been extremely volatile.",
-"jp": "暗号資産の価格は、非常に不安定です。",
-"say": [],
-"note": "",
-"id": "finance-0001-041"
-},
-{
-"en": "Regulators are cracking down on fraudulent schemes.",
-"jp": "規制当局は、詐欺的な仕組みを取り締まっています。",
-"say": [],
-"note": "",
-"id": "finance-0001-042"
-},
-{
-"en": "Be careful of investments that promise guaranteed returns.",
-"jp": "高い利益の保証をうたう投資に注意してください。",
-"say": [],
-"note": "",
-"id": "finance-0001-043"
-},
-{
-"en": "This is not financial advice.",
-"jp": "これは投資助言ではありません。",
-"say": [],
-"note": "",
-"id": "finance-0001-044"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "finance-0001",
+  "situation": "finance",
+  "sname": "経済・金融ニュース",
+  "icon": "📈",
+  "level": 3,
+  "title": "市場・金利・インフレ・投資・家計",
+  "items": [
+    {
+      "en": "The market opened lower this morning.",
+      "jp": "市場は今朝、安く始まりました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-001",
+      "audio": "finance-0001-001.mp3"
+    },
+    {
+      "en": "Stocks rallied on strong earnings reports.",
+      "jp": "好決算を受けて、株が上昇しました。",
+      "say": [],
+      "note": "rally = 上昇。",
+      "id": "finance-0001-002",
+      "audio": "finance-0001-002.mp3"
+    },
+    {
+      "en": "The index fell two percent in early trading.",
+      "jp": "指数は寄り付きで2%下がりました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-003",
+      "audio": "finance-0001-003.mp3"
+    },
+    {
+      "en": "Investors are worried about rising interest rates.",
+      "jp": "投資家は、金利の上昇を心配しています。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-004",
+      "audio": "finance-0001-004.mp3"
+    },
+    {
+      "en": "The central bank decided to hold rates steady.",
+      "jp": "中央銀行は、金利を据え置くと決めました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-005",
+      "audio": "finance-0001-005.mp3"
+    },
+    {
+      "en": "The bank raised rates by twenty-five basis points.",
+      "jp": "その銀行は、金利を25ベーシスポイント上げました。",
+      "say": [],
+      "note": "basis point = 0.01%。25bp = 0.25%。",
+      "id": "finance-0001-006",
+      "audio": "finance-0001-006.mp3"
+    },
+    {
+      "en": "Inflation came in higher than expected.",
+      "jp": "インフレは、予想より高く出ました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-007",
+      "audio": "finance-0001-007.mp3"
+    },
+    {
+      "en": "The unemployment rate dropped to three point eight percent.",
+      "jp": "失業率は3.8%に下がりました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-008",
+      "audio": "finance-0001-008.mp3"
+    },
+    {
+      "en": "Bond yields have risen sharply.",
+      "jp": "債券の利回りが急上昇しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-009",
+      "audio": "finance-0001-009.mp3"
+    },
+    {
+      "en": "The yield on the ten-year Treasury is four point two percent.",
+      "jp": "10年物国債の利回りは4.2%です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-010",
+      "audio": "finance-0001-010.mp3"
+    },
+    {
+      "en": "The dollar strengthened against the yen.",
+      "jp": "ドルが円に対して強くなりました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-011",
+      "audio": "finance-0001-011.mp3"
+    },
+    {
+      "en": "Oil prices are volatile because of tensions in the Middle East.",
+      "jp": "中東の緊張で、原油価格は不安定です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-012",
+      "audio": "finance-0001-012.mp3"
+    },
+    {
+      "en": "Gold is considered a safe haven.",
+      "jp": "金は、安全資産と見られています。",
+      "say": [],
+      "note": "safe haven = 逃避先の資産。",
+      "id": "finance-0001-013",
+      "audio": "finance-0001-013.mp3"
+    },
+    {
+      "en": "Analysts upgraded the stock from hold to buy.",
+      "jp": "アナリストは、その株を中立から買いに引き上げました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-014",
+      "audio": "finance-0001-014.mp3"
+    },
+    {
+      "en": "The company beat earnings estimates but missed on revenue.",
+      "jp": "その会社は利益の予想を上回りましたが、売上は下回りました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-015",
+      "audio": "finance-0001-015.mp3"
+    },
+    {
+      "en": "Shares dropped after the company cut its forecast.",
+      "jp": "会社が見通しを下げ、株が下落しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-016",
+      "audio": "finance-0001-016.mp3"
+    },
+    {
+      "en": "The firm announced a stock buyback.",
+      "jp": "その会社は、自社株買いを発表しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-017",
+      "audio": "finance-0001-017.mp3"
+    },
+    {
+      "en": "The dividend yield is around three percent.",
+      "jp": "配当利回りは約3%です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-018",
+      "audio": "finance-0001-018.mp3"
+    },
+    {
+      "en": "The price-to-earnings ratio is twenty.",
+      "jp": "株価収益率は20です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-019",
+      "audio": "finance-0001-019.mp3"
+    },
+    {
+      "en": "The company's market cap is over a hundred billion dollars.",
+      "jp": "その会社の時価総額は、1000億ドルを超えます。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-020",
+      "audio": "finance-0001-020.mp3"
+    },
+    {
+      "en": "The IPO was oversubscribed.",
+      "jp": "新規上場は、申し込みが殺到しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-021",
+      "audio": "finance-0001-021.mp3"
+    },
+    {
+      "en": "The stock priced at twenty dollars and jumped thirty percent on the first day.",
+      "jp": "株は20ドルで値付けされ、初日に30%上がりました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-022",
+      "audio": "finance-0001-022.mp3"
+    },
+    {
+      "en": "The merger needs regulatory approval.",
+      "jp": "合併には、規制当局の承認が必要です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-023",
+      "audio": "finance-0001-023.mp3"
+    },
+    {
+      "en": "The hedge fund took a short position.",
+      "jp": "そのヘッジファンドは、空売りの持ち高を取りました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-024",
+      "audio": "finance-0001-024.mp3"
+    },
+    {
+      "en": "Diversification reduces risk.",
+      "jp": "分散投資はリスクを減らします。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-025",
+      "audio": "finance-0001-025.mp3"
+    },
+    {
+      "en": "Past performance is not a guarantee of future results.",
+      "jp": "過去の運用成績は、将来の結果を保証しません。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-026",
+      "audio": "finance-0001-026.mp3"
+    },
+    {
+      "en": "Index funds charge much lower fees than active funds.",
+      "jp": "インデックスファンドは、アクティブ型よりずっと手数料が安いです。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-027",
+      "audio": "finance-0001-027.mp3"
+    },
+    {
+      "en": "The expense ratio is zero point zero three percent.",
+      "jp": "信託報酬は0.03%です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-028",
+      "audio": "finance-0001-028.mp3"
+    },
+    {
+      "en": "Compound interest works in your favor over time.",
+      "jp": "複利は、時間とともに味方になります。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-029",
+      "audio": "finance-0001-029.mp3"
+    },
+    {
+      "en": "You should have an emergency fund of six months of expenses.",
+      "jp": "生活費6か月分の緊急資金を持つべきです。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-030",
+      "audio": "finance-0001-030.mp3"
+    },
+    {
+      "en": "A mortgage rate of six percent is high compared with a few years ago.",
+      "jp": "住宅ローン金利の6%は、数年前に比べて高いです。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-031",
+      "audio": "finance-0001-031.mp3"
+    },
+    {
+      "en": "The housing market is cooling down.",
+      "jp": "住宅市場は冷え込んでいます。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-032",
+      "audio": "finance-0001-032.mp3"
+    },
+    {
+      "en": "Credit card interest can be over twenty percent.",
+      "jp": "クレジットカードの金利は、20%を超えることがあります。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-033",
+      "audio": "finance-0001-033.mp3"
+    },
+    {
+      "en": "Your credit score affects your loan terms.",
+      "jp": "信用スコアは、融資の条件に影響します。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-034",
+      "audio": "finance-0001-034.mp3"
+    },
+    {
+      "en": "The recession fears have eased a little.",
+      "jp": "景気後退の不安は、少し和らぎました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-035",
+      "audio": "finance-0001-035.mp3"
+    },
+    {
+      "en": "GDP grew at an annual rate of two point five percent.",
+      "jp": "GDPは、年率2.5%で成長しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-036",
+      "audio": "finance-0001-036.mp3"
+    },
+    {
+      "en": "Consumer spending remains strong.",
+      "jp": "個人消費は、堅調です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-037",
+      "audio": "finance-0001-037.mp3"
+    },
+    {
+      "en": "The trade deficit widened last month.",
+      "jp": "貿易赤字は、先月拡大しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-038",
+      "audio": "finance-0001-038.mp3"
+    },
+    {
+      "en": "The government announced a new stimulus package.",
+      "jp": "政府は、新しい景気対策を発表しました。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-039",
+      "audio": "finance-0001-039.mp3"
+    },
+    {
+      "en": "The tax cut takes effect next year.",
+      "jp": "減税は、来年から始まります。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-040",
+      "audio": "finance-0001-040.mp3"
+    },
+    {
+      "en": "Crypto prices have been extremely volatile.",
+      "jp": "暗号資産の価格は、非常に不安定です。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-041",
+      "audio": "finance-0001-041.mp3"
+    },
+    {
+      "en": "Regulators are cracking down on fraudulent schemes.",
+      "jp": "規制当局は、詐欺的な仕組みを取り締まっています。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-042",
+      "audio": "finance-0001-042.mp3"
+    },
+    {
+      "en": "Be careful of investments that promise guaranteed returns.",
+      "jp": "高い利益の保証をうたう投資に注意してください。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-043",
+      "audio": "finance-0001-043.mp3"
+    },
+    {
+      "en": "This is not financial advice.",
+      "jp": "これは投資助言ではありません。",
+      "say": [],
+      "note": "",
+      "id": "finance-0001-044",
+      "audio": "finance-0001-044.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

@@ -1,349 +1,397 @@
 {
-"id": "bizidiom-0001",
-"situation": "bizidiom",
-"sname": "ビジネス：決まり文句・慣用句",
-"icon": "🗣️",
-"level": 3,
-"title": "touch base / drop the ball など必須の言い回し",
-"items": [
-{
-"en": "Let's touch base next week.",
-"jp": "来週、連絡を取り合いましょう。",
-"say": [],
-"note": "touch base = 近況確認の連絡。",
-"id": "bizidiom-0001-001"
-},
-{
-"en": "Can we sync up after lunch?",
-"jp": "昼食後に認識合わせできますか。",
-"say": [],
-"note": "sync up = 状況を合わせる。",
-"id": "bizidiom-0001-002"
-},
-{
-"en": "I'll ping you when it's ready.",
-"jp": "準備できたら連絡します。",
-"say": [],
-"note": "ping = メッセージを送る。",
-"id": "bizidiom-0001-003"
-},
-{
-"en": "Let's not reinvent the wheel.",
-"jp": "一からやり直すのはやめましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-004"
-},
-{
-"en": "We need to hit the ground running.",
-"jp": "最初から全力で動く必要があります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-005"
-},
-{
-"en": "We're all on the same page.",
-"jp": "みんな認識が一致しています。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-006"
-},
-{
-"en": "That's a deal breaker for us.",
-"jp": "それは私たちには決裂の要因です。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-007"
-},
-{
-"en": "It's a win-win situation.",
-"jp": "お互いに得になります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-008"
-},
-{
-"en": "Let's think outside the box.",
-"jp": "型にはまらず考えましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-009"
-},
-{
-"en": "We're running out of runway.",
-"jp": "資金や時間の余裕が尽きかけています。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-010"
-},
-{
-"en": "That's a long shot, but worth a try.",
-"jp": "可能性は低いですが、試す価値はあります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-011"
-},
-{
-"en": "We dropped the ball on that one.",
-"jp": "その件では私たちがやり損ねました。",
-"say": [],
-"note": "drop the ball = しくじる。",
-"id": "bizidiom-0001-012"
-},
-{
-"en": "Let's cut to the chase.",
-"jp": "本題に入りましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-013"
-},
-{
-"en": "I'll run it by my boss first.",
-"jp": "まず上司に確認します。",
-"say": [],
-"note": "run it by = 相談して確認する。",
-"id": "bizidiom-0001-014"
-},
-{
-"en": "We're in the same boat.",
-"jp": "私たちは同じ立場です。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-015"
-},
-{
-"en": "It's not rocket science.",
-"jp": "難しいことではありません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-016"
-},
-{
-"en": "We'll need all hands on deck.",
-"jp": "全員の協力が必要です。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-017"
-},
-{
-"en": "I'm swamped this week.",
-"jp": "今週は仕事に埋もれています。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-018"
-},
-{
-"en": "I'm tied up until three.",
-"jp": "3時まで手が離せません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-019"
-},
-{
-"en": "Let me get back to you on that.",
-"jp": "それは後で返事します。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-020"
-},
-{
-"en": "Let's table this for now.",
-"jp": "これは一旦保留にしましょう。",
-"say": [],
-"note": "米国のtable = 保留（英国では議題に出す）。",
-"id": "bizidiom-0001-021"
-},
-{
-"en": "We need to bring this up with the board.",
-"jp": "これは取締役会に諮る必要があります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-022"
-},
-{
-"en": "Let's get the ball rolling.",
-"jp": "始めましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-023"
-},
-{
-"en": "That's on the back burner.",
-"jp": "それは後回しです。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-024"
-},
-{
-"en": "We're way behind schedule, so we need to step it up.",
-"jp": "予定よりかなり遅れているので、ペースを上げる必要があります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-025"
-},
-{
-"en": "I'll be out of the loop for a few days.",
-"jp": "数日間、情報から外れます。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-026"
-},
-{
-"en": "Keep me in the loop.",
-"jp": "状況を共有してください。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-027"
-},
-{
-"en": "We have to be careful. It's a gray area.",
-"jp": "注意が必要です。グレーゾーンです。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-028"
-},
-{
-"en": "It's a no-brainer.",
-"jp": "考えるまでもありません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-029"
-},
-{
-"en": "It's a ballpark figure.",
-"jp": "おおよその数字です。",
-"say": [],
-"note": "ballpark = 概算。",
-"id": "bizidiom-0001-030"
-},
-{
-"en": "Let's do a rough estimate.",
-"jp": "ざっくり見積もりましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-031"
-},
-{
-"en": "Just a heads-up: the schedule might change.",
-"jp": "ひとこと先に伝えておくと、予定が変わるかもしれません。",
-"say": [],
-"note": "heads-up = 事前の知らせ。",
-"id": "bizidiom-0001-032"
-},
-{
-"en": "I'm going to play devil's advocate here.",
-"jp": "あえて反対の立場で言わせてください。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-033"
-},
-{
-"en": "The bottom line is that we need more budget.",
-"jp": "要するに、予算がもっと必要です。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-034"
-},
-{
-"en": "The upside is lower cost, but the downside is longer lead time.",
-"jp": "利点は低コスト、欠点は納期が長いことです。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-035"
-},
-{
-"en": "We have a lot on our plate.",
-"jp": "やることが山ほどあります。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-036"
-},
-{
-"en": "It's out of my hands.",
-"jp": "私にはどうにもできません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-037"
-},
-{
-"en": "Let's call it a day.",
-"jp": "今日はここまでにしましょう。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-038"
-},
-{
-"en": "That went over well.",
-"jp": "それは好評でした。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-039"
-},
-{
-"en": "They're not on board with the plan.",
-"jp": "彼らはその計画に賛成していません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-040"
-},
-{
-"en": "We'll have to play it by ear.",
-"jp": "状況に応じて対応するしかありません。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-041"
-},
-{
-"en": "We're back to square one.",
-"jp": "振り出しに戻りました。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-042"
-},
-{
-"en": "I'd like to take a rain check.",
-"jp": "またの機会にさせてください。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-043"
-},
-{
-"en": "I owe you a favor.",
-"jp": "借りができました。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-044"
-},
-{
-"en": "Let me sleep on it.",
-"jp": "一晩考えさせてください。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-045"
-},
-{
-"en": "We're in good shape.",
-"jp": "順調です。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-046"
-},
-{
-"en": "Things are looking up.",
-"jp": "状況が上向いています。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-047"
-},
-{
-"en": "We're out of the woods now.",
-"jp": "もう危機は脱しました。",
-"say": [],
-"note": "",
-"id": "bizidiom-0001-048"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "bizidiom-0001",
+  "situation": "bizidiom",
+  "sname": "ビジネス：決まり文句・慣用句",
+  "icon": "🗣️",
+  "level": 3,
+  "title": "touch base / drop the ball など必須の言い回し",
+  "items": [
+    {
+      "en": "Let's touch base next week.",
+      "jp": "来週、連絡を取り合いましょう。",
+      "say": [],
+      "note": "touch base = 近況確認の連絡。",
+      "id": "bizidiom-0001-001",
+      "audio": "bizidiom-0001-001.mp3"
+    },
+    {
+      "en": "Can we sync up after lunch?",
+      "jp": "昼食後に認識合わせできますか。",
+      "say": [],
+      "note": "sync up = 状況を合わせる。",
+      "id": "bizidiom-0001-002",
+      "audio": "bizidiom-0001-002.mp3"
+    },
+    {
+      "en": "I'll ping you when it's ready.",
+      "jp": "準備できたら連絡します。",
+      "say": [],
+      "note": "ping = メッセージを送る。",
+      "id": "bizidiom-0001-003",
+      "audio": "bizidiom-0001-003.mp3"
+    },
+    {
+      "en": "Let's not reinvent the wheel.",
+      "jp": "一からやり直すのはやめましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-004",
+      "audio": "bizidiom-0001-004.mp3"
+    },
+    {
+      "en": "We need to hit the ground running.",
+      "jp": "最初から全力で動く必要があります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-005",
+      "audio": "bizidiom-0001-005.mp3"
+    },
+    {
+      "en": "We're all on the same page.",
+      "jp": "みんな認識が一致しています。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-006",
+      "audio": "bizidiom-0001-006.mp3"
+    },
+    {
+      "en": "That's a deal breaker for us.",
+      "jp": "それは私たちには決裂の要因です。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-007",
+      "audio": "bizidiom-0001-007.mp3"
+    },
+    {
+      "en": "It's a win-win situation.",
+      "jp": "お互いに得になります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-008",
+      "audio": "bizidiom-0001-008.mp3"
+    },
+    {
+      "en": "Let's think outside the box.",
+      "jp": "型にはまらず考えましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-009",
+      "audio": "bizidiom-0001-009.mp3"
+    },
+    {
+      "en": "We're running out of runway.",
+      "jp": "資金や時間の余裕が尽きかけています。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-010",
+      "audio": "bizidiom-0001-010.mp3"
+    },
+    {
+      "en": "That's a long shot, but worth a try.",
+      "jp": "可能性は低いですが、試す価値はあります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-011",
+      "audio": "bizidiom-0001-011.mp3"
+    },
+    {
+      "en": "We dropped the ball on that one.",
+      "jp": "その件では私たちがやり損ねました。",
+      "say": [],
+      "note": "drop the ball = しくじる。",
+      "id": "bizidiom-0001-012",
+      "audio": "bizidiom-0001-012.mp3"
+    },
+    {
+      "en": "Let's cut to the chase.",
+      "jp": "本題に入りましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-013",
+      "audio": "bizidiom-0001-013.mp3"
+    },
+    {
+      "en": "I'll run it by my boss first.",
+      "jp": "まず上司に確認します。",
+      "say": [],
+      "note": "run it by = 相談して確認する。",
+      "id": "bizidiom-0001-014",
+      "audio": "bizidiom-0001-014.mp3"
+    },
+    {
+      "en": "We're in the same boat.",
+      "jp": "私たちは同じ立場です。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-015",
+      "audio": "bizidiom-0001-015.mp3"
+    },
+    {
+      "en": "It's not rocket science.",
+      "jp": "難しいことではありません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-016",
+      "audio": "bizidiom-0001-016.mp3"
+    },
+    {
+      "en": "We'll need all hands on deck.",
+      "jp": "全員の協力が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-017",
+      "audio": "bizidiom-0001-017.mp3"
+    },
+    {
+      "en": "I'm swamped this week.",
+      "jp": "今週は仕事に埋もれています。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-018",
+      "audio": "bizidiom-0001-018.mp3"
+    },
+    {
+      "en": "I'm tied up until three.",
+      "jp": "3時まで手が離せません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-019",
+      "audio": "bizidiom-0001-019.mp3"
+    },
+    {
+      "en": "Let me get back to you on that.",
+      "jp": "それは後で返事します。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-020",
+      "audio": "bizidiom-0001-020.mp3"
+    },
+    {
+      "en": "Let's table this for now.",
+      "jp": "これは一旦保留にしましょう。",
+      "say": [],
+      "note": "米国のtable = 保留（英国では議題に出す）。",
+      "id": "bizidiom-0001-021",
+      "audio": "bizidiom-0001-021.mp3"
+    },
+    {
+      "en": "We need to bring this up with the board.",
+      "jp": "これは取締役会に諮る必要があります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-022",
+      "audio": "bizidiom-0001-022.mp3"
+    },
+    {
+      "en": "Let's get the ball rolling.",
+      "jp": "始めましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-023",
+      "audio": "bizidiom-0001-023.mp3"
+    },
+    {
+      "en": "That's on the back burner.",
+      "jp": "それは後回しです。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-024",
+      "audio": "bizidiom-0001-024.mp3"
+    },
+    {
+      "en": "We're way behind schedule, so we need to step it up.",
+      "jp": "予定よりかなり遅れているので、ペースを上げる必要があります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-025",
+      "audio": "bizidiom-0001-025.mp3"
+    },
+    {
+      "en": "I'll be out of the loop for a few days.",
+      "jp": "数日間、情報から外れます。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-026",
+      "audio": "bizidiom-0001-026.mp3"
+    },
+    {
+      "en": "Keep me in the loop.",
+      "jp": "状況を共有してください。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-027",
+      "audio": "bizidiom-0001-027.mp3"
+    },
+    {
+      "en": "We have to be careful. It's a gray area.",
+      "jp": "注意が必要です。グレーゾーンです。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-028",
+      "audio": "bizidiom-0001-028.mp3"
+    },
+    {
+      "en": "It's a no-brainer.",
+      "jp": "考えるまでもありません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-029",
+      "audio": "bizidiom-0001-029.mp3"
+    },
+    {
+      "en": "It's a ballpark figure.",
+      "jp": "おおよその数字です。",
+      "say": [],
+      "note": "ballpark = 概算。",
+      "id": "bizidiom-0001-030",
+      "audio": "bizidiom-0001-030.mp3"
+    },
+    {
+      "en": "Let's do a rough estimate.",
+      "jp": "ざっくり見積もりましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-031",
+      "audio": "bizidiom-0001-031.mp3"
+    },
+    {
+      "en": "Just a heads-up: the schedule might change.",
+      "jp": "ひとこと先に伝えておくと、予定が変わるかもしれません。",
+      "say": [],
+      "note": "heads-up = 事前の知らせ。",
+      "id": "bizidiom-0001-032",
+      "audio": "bizidiom-0001-032.mp3"
+    },
+    {
+      "en": "I'm going to play devil's advocate here.",
+      "jp": "あえて反対の立場で言わせてください。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-033",
+      "audio": "bizidiom-0001-033.mp3"
+    },
+    {
+      "en": "The bottom line is that we need more budget.",
+      "jp": "要するに、予算がもっと必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-034",
+      "audio": "bizidiom-0001-034.mp3"
+    },
+    {
+      "en": "The upside is lower cost, but the downside is longer lead time.",
+      "jp": "利点は低コスト、欠点は納期が長いことです。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-035",
+      "audio": "bizidiom-0001-035.mp3"
+    },
+    {
+      "en": "We have a lot on our plate.",
+      "jp": "やることが山ほどあります。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-036",
+      "audio": "bizidiom-0001-036.mp3"
+    },
+    {
+      "en": "It's out of my hands.",
+      "jp": "私にはどうにもできません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-037",
+      "audio": "bizidiom-0001-037.mp3"
+    },
+    {
+      "en": "Let's call it a day.",
+      "jp": "今日はここまでにしましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-038",
+      "audio": "bizidiom-0001-038.mp3"
+    },
+    {
+      "en": "That went over well.",
+      "jp": "それは好評でした。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-039",
+      "audio": "bizidiom-0001-039.mp3"
+    },
+    {
+      "en": "They're not on board with the plan.",
+      "jp": "彼らはその計画に賛成していません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-040",
+      "audio": "bizidiom-0001-040.mp3"
+    },
+    {
+      "en": "We'll have to play it by ear.",
+      "jp": "状況に応じて対応するしかありません。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-041",
+      "audio": "bizidiom-0001-041.mp3"
+    },
+    {
+      "en": "We're back to square one.",
+      "jp": "振り出しに戻りました。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-042",
+      "audio": "bizidiom-0001-042.mp3"
+    },
+    {
+      "en": "I'd like to take a rain check.",
+      "jp": "またの機会にさせてください。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-043",
+      "audio": "bizidiom-0001-043.mp3"
+    },
+    {
+      "en": "I owe you a favor.",
+      "jp": "借りができました。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-044",
+      "audio": "bizidiom-0001-044.mp3"
+    },
+    {
+      "en": "Let me sleep on it.",
+      "jp": "一晩考えさせてください。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-045",
+      "audio": "bizidiom-0001-045.mp3"
+    },
+    {
+      "en": "We're in good shape.",
+      "jp": "順調です。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-046",
+      "audio": "bizidiom-0001-046.mp3"
+    },
+    {
+      "en": "Things are looking up.",
+      "jp": "状況が上向いています。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-047",
+      "audio": "bizidiom-0001-047.mp3"
+    },
+    {
+      "en": "We're out of the woods now.",
+      "jp": "もう危機は脱しました。",
+      "say": [],
+      "note": "",
+      "id": "bizidiom-0001-048",
+      "audio": "bizidiom-0001-048.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

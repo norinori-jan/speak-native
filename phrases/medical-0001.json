@@ -1,374 +1,422 @@
 {
-"id": "medical-0001",
-"situation": "medical",
-"sname": "病院・薬局",
-"icon": "🏥",
-"level": 3,
-"title": "問診・診察・処方・服薬",
-"items": [
-{
-"en": "What brings you in today?",
-"jp": "今日はどうされましたか。",
-"say": [
-{
-"en": "I've had a fever since yesterday.",
-"jp": "昨日から熱があります。"
-}
-],
-"note": "",
-"id": "medical-0001-001"
-},
-{
-"en": "What seems to be the problem?",
-"jp": "どうされましたか。",
-"say": [],
-"note": "",
-"id": "medical-0001-002"
-},
-{
-"en": "How long have you had these symptoms?",
-"jp": "症状はいつからですか。",
-"say": [
-{
-"en": "About three days.",
-"jp": "3日ほどです。"
-}
-],
-"note": "",
-"id": "medical-0001-003"
-},
-{
-"en": "Where does it hurt?",
-"jp": "どこが痛みますか。",
-"say": [
-{
-"en": "It hurts here, in my stomach.",
-"jp": "ここ、お腹が痛いです。"
-}
-],
-"note": "",
-"id": "medical-0001-004"
-},
-{
-"en": "On a scale of one to ten, how bad is the pain?",
-"jp": "痛みは1から10でどのくらいですか。",
-"say": [],
-"note": "",
-"id": "medical-0001-005"
-},
-{
-"en": "Is the pain sharp or dull?",
-"jp": "痛みは鋭いですか、鈍いですか。",
-"say": [],
-"note": "",
-"id": "medical-0001-006"
-},
-{
-"en": "Does it hurt when I press here?",
-"jp": "ここを押すと痛みますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-007"
-},
-{
-"en": "Are you allergic to any medication?",
-"jp": "薬のアレルギーはありますか。",
-"say": [
-{
-"en": "I'm allergic to penicillin.",
-"jp": "ペニシリンにアレルギーがあります。"
-}
-],
-"note": "",
-"id": "medical-0001-008"
-},
-{
-"en": "Are you taking any medication right now?",
-"jp": "今、飲んでいる薬はありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-009"
-},
-{
-"en": "Do you have any medical conditions?",
-"jp": "持病はありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-010"
-},
-{
-"en": "Have you had a fever, cough, or sore throat?",
-"jp": "熱、咳、喉の痛みはありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-011"
-},
-{
-"en": "Any nausea or vomiting?",
-"jp": "吐き気や嘔吐はありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-012"
-},
-{
-"en": "Have you been feeling dizzy?",
-"jp": "めまいはありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-013"
-},
-{
-"en": "Take a deep breath in, and breathe out.",
-"jp": "深く息を吸って、吐いてください。",
-"say": [],
-"note": "",
-"id": "medical-0001-014"
-},
-{
-"en": "Open your mouth and say ah.",
-"jp": "口を開けて、あーと言ってください。",
-"say": [],
-"note": "",
-"id": "medical-0001-015"
-},
-{
-"en": "I'm going to take your temperature and blood pressure.",
-"jp": "体温と血圧を測ります。",
-"say": [],
-"note": "",
-"id": "medical-0001-016"
-},
-{
-"en": "Please roll up your sleeve.",
-"jp": "袖をまくってください。",
-"say": [],
-"note": "",
-"id": "medical-0001-017"
-},
-{
-"en": "We'll need to take a blood sample.",
-"jp": "採血が必要です。",
-"say": [],
-"note": "",
-"id": "medical-0001-018"
-},
-{
-"en": "We'll do an X-ray to be safe.",
-"jp": "念のためレントゲンを撮ります。",
-"say": [],
-"note": "",
-"id": "medical-0001-019"
-},
-{
-"en": "It looks like a mild infection.",
-"jp": "軽い感染症のようです。",
-"say": [],
-"note": "",
-"id": "medical-0001-020"
-},
-{
-"en": "It's not serious, but you need to rest.",
-"jp": "深刻ではありませんが、休養が必要です。",
-"say": [],
-"note": "",
-"id": "medical-0001-021"
-},
-{
-"en": "I'm going to prescribe an antibiotic.",
-"jp": "抗生物質を処方します。",
-"say": [],
-"note": "",
-"id": "medical-0001-022"
-},
-{
-"en": "Take this twice a day after meals for seven days.",
-"jp": "これを1日2回、食後に7日間飲んでください。",
-"say": [],
-"note": "twice a day = 1日2回。",
-"id": "medical-0001-023"
-},
-{
-"en": "Take one tablet every eight hours.",
-"jp": "8時間おきに1錠飲んでください。",
-"say": [],
-"note": "",
-"id": "medical-0001-024"
-},
-{
-"en": "Don't drink alcohol while you're on this medicine.",
-"jp": "この薬を飲む間はお酒を控えてください。",
-"say": [],
-"note": "",
-"id": "medical-0001-025"
-},
-{
-"en": "Finish the entire course, even if you feel better.",
-"jp": "良くなっても最後まで飲み切ってください。",
-"say": [],
-"note": "",
-"id": "medical-0001-026"
-},
-{
-"en": "This medicine may make you drowsy.",
-"jp": "この薬は眠気が出ることがあります。",
-"say": [],
-"note": "",
-"id": "medical-0001-027"
-},
-{
-"en": "Drink plenty of fluids and get plenty of rest.",
-"jp": "水分をたくさん取って、よく休んでください。",
-"say": [],
-"note": "",
-"id": "medical-0001-028"
-},
-{
-"en": "Come back if it doesn't improve in three days.",
-"jp": "3日たっても良くならなければ、また来てください。",
-"say": [],
-"note": "",
-"id": "medical-0001-029"
-},
-{
-"en": "You should see a specialist.",
-"jp": "専門医に診てもらったほうがいいです。",
-"say": [],
-"note": "",
-"id": "medical-0001-030"
-},
-{
-"en": "We'll refer you to a hospital.",
-"jp": "病院を紹介します。",
-"say": [],
-"note": "",
-"id": "medical-0001-031"
-},
-{
-"en": "Do you have travel insurance?",
-"jp": "旅行保険には入っていますか。",
-"say": [
-{
-"en": "Yes, here is my card.",
-"jp": "はい、これが保険証です。"
-}
-],
-"note": "",
-"id": "medical-0001-032"
-},
-{
-"en": "You'll need to pay now and file a claim with your insurance.",
-"jp": "今お支払いいただき、保険会社に請求してください。",
-"say": [],
-"note": "",
-"id": "medical-0001-033"
-},
-{
-"en": "Please fill out this form and wait in the waiting room.",
-"jp": "この用紙に記入して待合室でお待ちください。",
-"say": [],
-"note": "",
-"id": "medical-0001-034"
-},
-{
-"en": "The doctor will see you shortly.",
-"jp": "まもなく医師が診ます。",
-"say": [],
-"note": "",
-"id": "medical-0001-035"
-},
-{
-"en": "Can I get you a prescription at the pharmacy?",
-"jp": "薬局で処方箋の薬を受け取れます。",
-"say": [],
-"note": "",
-"id": "medical-0001-036"
-},
-{
-"en": "Do you have anything for a headache?",
-"jp": "頭痛に効くものはありますか。",
-"say": [],
-"note": "",
-"id": "medical-0001-037"
-},
-{
-"en": "This is over the counter. You don't need a prescription.",
-"jp": "これは市販薬です。処方箋は不要です。",
-"say": [],
-"note": "",
-"id": "medical-0001-038"
-},
-{
-"en": "It's not recommended for children under twelve.",
-"jp": "12歳未満には推奨されません。",
-"say": [],
-"note": "",
-"id": "medical-0001-039"
-},
-{
-"en": "It may cause stomach upset, so take it with food.",
-"jp": "胃が荒れることがあるので、食後に飲んでください。",
-"say": [],
-"note": "",
-"id": "medical-0001-040"
-},
-{
-"en": "Do you need anything for the pain?",
-"jp": "痛み止めは必要ですか。",
-"say": [],
-"note": "",
-"id": "medical-0001-041"
-},
-{
-"en": "Are you pregnant or breastfeeding?",
-"jp": "妊娠中か授乳中ですか。",
-"say": [],
-"note": "",
-"id": "medical-0001-042"
-},
-{
-"en": "Please tell us if you start to feel worse.",
-"jp": "悪化したらすぐ知らせてください。",
-"say": [],
-"note": "",
-"id": "medical-0001-043"
-},
-{
-"en": "Your test results are normal.",
-"jp": "検査結果は正常です。",
-"say": [],
-"note": "",
-"id": "medical-0001-044"
-},
-{
-"en": "We'll call you with the results in two days.",
-"jp": "結果は2日後にお電話します。",
-"say": [],
-"note": "",
-"id": "medical-0001-045"
-},
-{
-"en": "Does it hurt when you chew?",
-"jp": "噛むと痛みますか。",
-"say": [],
-"note": "歯医者。",
-"id": "medical-0001-046"
-},
-{
-"en": "You have a cavity. We'll need to fill it.",
-"jp": "虫歯があります。詰める必要があります。",
-"say": [],
-"note": "",
-"id": "medical-0001-047"
-},
-{
-"en": "I'll give you a local anesthetic.",
-"jp": "局所麻酔をします。",
-"say": [],
-"note": "",
-"id": "medical-0001-048"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "medical-0001",
+  "situation": "medical",
+  "sname": "病院・薬局",
+  "icon": "🏥",
+  "level": 3,
+  "title": "問診・診察・処方・服薬",
+  "items": [
+    {
+      "en": "What brings you in today?",
+      "jp": "今日はどうされましたか。",
+      "say": [
+        {
+          "en": "I've had a fever since yesterday.",
+          "jp": "昨日から熱があります。"
+        }
+      ],
+      "note": "",
+      "id": "medical-0001-001",
+      "audio": "medical-0001-001.mp3"
+    },
+    {
+      "en": "What seems to be the problem?",
+      "jp": "どうされましたか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-002",
+      "audio": "medical-0001-002.mp3"
+    },
+    {
+      "en": "How long have you had these symptoms?",
+      "jp": "症状はいつからですか。",
+      "say": [
+        {
+          "en": "About three days.",
+          "jp": "3日ほどです。"
+        }
+      ],
+      "note": "",
+      "id": "medical-0001-003",
+      "audio": "medical-0001-003.mp3"
+    },
+    {
+      "en": "Where does it hurt?",
+      "jp": "どこが痛みますか。",
+      "say": [
+        {
+          "en": "It hurts here, in my stomach.",
+          "jp": "ここ、お腹が痛いです。"
+        }
+      ],
+      "note": "",
+      "id": "medical-0001-004",
+      "audio": "medical-0001-004.mp3"
+    },
+    {
+      "en": "On a scale of one to ten, how bad is the pain?",
+      "jp": "痛みは1から10でどのくらいですか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-005",
+      "audio": "medical-0001-005.mp3"
+    },
+    {
+      "en": "Is the pain sharp or dull?",
+      "jp": "痛みは鋭いですか、鈍いですか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-006",
+      "audio": "medical-0001-006.mp3"
+    },
+    {
+      "en": "Does it hurt when I press here?",
+      "jp": "ここを押すと痛みますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-007",
+      "audio": "medical-0001-007.mp3"
+    },
+    {
+      "en": "Are you allergic to any medication?",
+      "jp": "薬のアレルギーはありますか。",
+      "say": [
+        {
+          "en": "I'm allergic to penicillin.",
+          "jp": "ペニシリンにアレルギーがあります。"
+        }
+      ],
+      "note": "",
+      "id": "medical-0001-008",
+      "audio": "medical-0001-008.mp3"
+    },
+    {
+      "en": "Are you taking any medication right now?",
+      "jp": "今、飲んでいる薬はありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-009",
+      "audio": "medical-0001-009.mp3"
+    },
+    {
+      "en": "Do you have any medical conditions?",
+      "jp": "持病はありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-010",
+      "audio": "medical-0001-010.mp3"
+    },
+    {
+      "en": "Have you had a fever, cough, or sore throat?",
+      "jp": "熱、咳、喉の痛みはありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-011",
+      "audio": "medical-0001-011.mp3"
+    },
+    {
+      "en": "Any nausea or vomiting?",
+      "jp": "吐き気や嘔吐はありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-012",
+      "audio": "medical-0001-012.mp3"
+    },
+    {
+      "en": "Have you been feeling dizzy?",
+      "jp": "めまいはありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-013",
+      "audio": "medical-0001-013.mp3"
+    },
+    {
+      "en": "Take a deep breath in, and breathe out.",
+      "jp": "深く息を吸って、吐いてください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-014",
+      "audio": "medical-0001-014.mp3"
+    },
+    {
+      "en": "Open your mouth and say ah.",
+      "jp": "口を開けて、あーと言ってください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-015",
+      "audio": "medical-0001-015.mp3"
+    },
+    {
+      "en": "I'm going to take your temperature and blood pressure.",
+      "jp": "体温と血圧を測ります。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-016",
+      "audio": "medical-0001-016.mp3"
+    },
+    {
+      "en": "Please roll up your sleeve.",
+      "jp": "袖をまくってください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-017",
+      "audio": "medical-0001-017.mp3"
+    },
+    {
+      "en": "We'll need to take a blood sample.",
+      "jp": "採血が必要です。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-018",
+      "audio": "medical-0001-018.mp3"
+    },
+    {
+      "en": "We'll do an X-ray to be safe.",
+      "jp": "念のためレントゲンを撮ります。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-019",
+      "audio": "medical-0001-019.mp3"
+    },
+    {
+      "en": "It looks like a mild infection.",
+      "jp": "軽い感染症のようです。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-020",
+      "audio": "medical-0001-020.mp3"
+    },
+    {
+      "en": "It's not serious, but you need to rest.",
+      "jp": "深刻ではありませんが、休養が必要です。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-021",
+      "audio": "medical-0001-021.mp3"
+    },
+    {
+      "en": "I'm going to prescribe an antibiotic.",
+      "jp": "抗生物質を処方します。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-022",
+      "audio": "medical-0001-022.mp3"
+    },
+    {
+      "en": "Take this twice a day after meals for seven days.",
+      "jp": "これを1日2回、食後に7日間飲んでください。",
+      "say": [],
+      "note": "twice a day = 1日2回。",
+      "id": "medical-0001-023",
+      "audio": "medical-0001-023.mp3"
+    },
+    {
+      "en": "Take one tablet every eight hours.",
+      "jp": "8時間おきに1錠飲んでください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-024",
+      "audio": "medical-0001-024.mp3"
+    },
+    {
+      "en": "Don't drink alcohol while you're on this medicine.",
+      "jp": "この薬を飲む間はお酒を控えてください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-025",
+      "audio": "medical-0001-025.mp3"
+    },
+    {
+      "en": "Finish the entire course, even if you feel better.",
+      "jp": "良くなっても最後まで飲み切ってください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-026",
+      "audio": "medical-0001-026.mp3"
+    },
+    {
+      "en": "This medicine may make you drowsy.",
+      "jp": "この薬は眠気が出ることがあります。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-027",
+      "audio": "medical-0001-027.mp3"
+    },
+    {
+      "en": "Drink plenty of fluids and get plenty of rest.",
+      "jp": "水分をたくさん取って、よく休んでください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-028",
+      "audio": "medical-0001-028.mp3"
+    },
+    {
+      "en": "Come back if it doesn't improve in three days.",
+      "jp": "3日たっても良くならなければ、また来てください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-029",
+      "audio": "medical-0001-029.mp3"
+    },
+    {
+      "en": "You should see a specialist.",
+      "jp": "専門医に診てもらったほうがいいです。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-030",
+      "audio": "medical-0001-030.mp3"
+    },
+    {
+      "en": "We'll refer you to a hospital.",
+      "jp": "病院を紹介します。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-031",
+      "audio": "medical-0001-031.mp3"
+    },
+    {
+      "en": "Do you have travel insurance?",
+      "jp": "旅行保険には入っていますか。",
+      "say": [
+        {
+          "en": "Yes, here is my card.",
+          "jp": "はい、これが保険証です。"
+        }
+      ],
+      "note": "",
+      "id": "medical-0001-032",
+      "audio": "medical-0001-032.mp3"
+    },
+    {
+      "en": "You'll need to pay now and file a claim with your insurance.",
+      "jp": "今お支払いいただき、保険会社に請求してください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-033",
+      "audio": "medical-0001-033.mp3"
+    },
+    {
+      "en": "Please fill out this form and wait in the waiting room.",
+      "jp": "この用紙に記入して待合室でお待ちください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-034",
+      "audio": "medical-0001-034.mp3"
+    },
+    {
+      "en": "The doctor will see you shortly.",
+      "jp": "まもなく医師が診ます。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-035",
+      "audio": "medical-0001-035.mp3"
+    },
+    {
+      "en": "Can I get you a prescription at the pharmacy?",
+      "jp": "薬局で処方箋の薬を受け取れます。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-036",
+      "audio": "medical-0001-036.mp3"
+    },
+    {
+      "en": "Do you have anything for a headache?",
+      "jp": "頭痛に効くものはありますか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-037",
+      "audio": "medical-0001-037.mp3"
+    },
+    {
+      "en": "This is over the counter. You don't need a prescription.",
+      "jp": "これは市販薬です。処方箋は不要です。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-038",
+      "audio": "medical-0001-038.mp3"
+    },
+    {
+      "en": "It's not recommended for children under twelve.",
+      "jp": "12歳未満には推奨されません。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-039",
+      "audio": "medical-0001-039.mp3"
+    },
+    {
+      "en": "It may cause stomach upset, so take it with food.",
+      "jp": "胃が荒れることがあるので、食後に飲んでください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-040",
+      "audio": "medical-0001-040.mp3"
+    },
+    {
+      "en": "Do you need anything for the pain?",
+      "jp": "痛み止めは必要ですか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-041",
+      "audio": "medical-0001-041.mp3"
+    },
+    {
+      "en": "Are you pregnant or breastfeeding?",
+      "jp": "妊娠中か授乳中ですか。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-042",
+      "audio": "medical-0001-042.mp3"
+    },
+    {
+      "en": "Please tell us if you start to feel worse.",
+      "jp": "悪化したらすぐ知らせてください。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-043",
+      "audio": "medical-0001-043.mp3"
+    },
+    {
+      "en": "Your test results are normal.",
+      "jp": "検査結果は正常です。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-044",
+      "audio": "medical-0001-044.mp3"
+    },
+    {
+      "en": "We'll call you with the results in two days.",
+      "jp": "結果は2日後にお電話します。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-045",
+      "audio": "medical-0001-045.mp3"
+    },
+    {
+      "en": "Does it hurt when you chew?",
+      "jp": "噛むと痛みますか。",
+      "say": [],
+      "note": "歯医者。",
+      "id": "medical-0001-046",
+      "audio": "medical-0001-046.mp3"
+    },
+    {
+      "en": "You have a cavity. We'll need to fill it.",
+      "jp": "虫歯があります。詰める必要があります。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-047",
+      "audio": "medical-0001-047.mp3"
+    },
+    {
+      "en": "I'll give you a local anesthetic.",
+      "jp": "局所麻酔をします。",
+      "say": [],
+      "note": "",
+      "id": "medical-0001-048",
+      "audio": "medical-0001-048.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

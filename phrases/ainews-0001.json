@@ -1,314 +1,357 @@
 {
-"id": "ainews-0001",
-"situation": "ainews",
-"sname": "AI：ニュース・ポッドキャスト",
-"icon": "🎙️",
-"level": 4,
-"title": "対談・討論の速い話し方と言い回し",
-"items": [
-{
-"en": "Welcome back to the show. Today we're talking about the latest in artificial intelligence.",
-"jp": "番組へようこそ。今日は人工知能の最新の話題です。",
-"say": [],
-"note": "",
-"id": "ainews-0001-001"
-},
-{
-"en": "Our guest is a researcher who has been working on language models for a decade.",
-"jp": "ゲストは、10年間言語モデルを研究してきた研究者です。",
-"say": [],
-"note": "",
-"id": "ainews-0001-002"
-},
-{
-"en": "Thanks for having me. It's great to be here.",
-"jp": "お招きありがとうございます。ここに来られてうれしいです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-003"
-},
-{
-"en": "So, let's start with the big news this week.",
-"jp": "では、今週の大きなニュースから始めましょう。",
-"say": [],
-"note": "",
-"id": "ainews-0001-004"
-},
-{
-"en": "A major lab just announced a new model.",
-"jp": "大手の研究所が、新しいモデルを発表したばかりです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-005"
-},
-{
-"en": "The company says it's the most capable system they've built.",
-"jp": "会社は、これまでで最も高性能なシステムだと言っています。",
-"say": [],
-"note": "",
-"id": "ainews-0001-006"
-},
-{
-"en": "What do you make of that announcement?",
-"jp": "その発表をどう見ますか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-007"
-},
-{
-"en": "Honestly, I think we should be careful not to overhype it.",
-"jp": "正直、過大に持ち上げないよう気をつけるべきです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-008"
-},
-{
-"en": "The demos look impressive, but we need independent testing.",
-"jp": "デモは印象的ですが、第三者の検証が必要です。",
-"say": [],
-"note": "",
-"id": "ainews-0001-009"
-},
-{
-"en": "Marketing claims and real-world performance are two different things.",
-"jp": "宣伝の主張と実際の性能は、別物です。",
-"say": [],
-"note": "",
-"id": "ainews-0001-010"
-},
-{
-"en": "Let me play devil's advocate for a second.",
-"jp": "少しだけ、あえて反対の立場で言わせてください。",
-"say": [],
-"note": "",
-"id": "ainews-0001-011"
-},
-{
-"en": "A lot of this boils down to the data.",
-"jp": "これの多くは、結局データの話になります。",
-"say": [],
-"note": "",
-"id": "ainews-0001-012"
-},
-{
-"en": "It's a bit more nuanced than that.",
-"jp": "もう少し複雑です。",
-"say": [],
-"note": "",
-"id": "ainews-0001-013"
-},
-{
-"en": "I think the truth lies somewhere in between.",
-"jp": "真実は、その中間にあると思います。",
-"say": [],
-"note": "",
-"id": "ainews-0001-014"
-},
-{
-"en": "That's a fair point, and I'd add one more thing.",
-"jp": "もっともな指摘で、もう一つ付け加えたいです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-015"
-},
-{
-"en": "For listeners who aren't familiar, could you explain what that means?",
-"jp": "詳しくない聴き手のために、それが何か説明してもらえますか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-016"
-},
-{
-"en": "In plain English, it's like a very advanced autocomplete.",
-"jp": "簡単な言葉で言うと、とても高度な入力補完のようなものです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-017"
-},
-{
-"en": "That's an oversimplification, but it gets the idea across.",
-"jp": "単純化しすぎですが、考え方は伝わります。",
-"say": [],
-"note": "",
-"id": "ainews-0001-018"
-},
-{
-"en": "The pace of progress has surprised even the experts.",
-"jp": "進歩の速さは、専門家さえ驚かせました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-019"
-},
-{
-"en": "Five years ago, none of this seemed possible.",
-"jp": "5年前は、どれも不可能に見えました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-020"
-},
-{
-"en": "What worries you the most about where this is heading?",
-"jp": "この先の展開で、一番心配なことは何ですか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-021"
-},
-{
-"en": "What excites you the most?",
-"jp": "一番わくわくすることは何ですか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-022"
-},
-{
-"en": "I think the biggest impact will be on how we work.",
-"jp": "一番の影響は、働き方に出ると思います。",
-"say": [],
-"note": "",
-"id": "ainews-0001-023"
-},
-{
-"en": "People will spend less time on routine tasks.",
-"jp": "人々は、日常的な作業に費やす時間が減ります。",
-"say": [],
-"note": "",
-"id": "ainews-0001-024"
-},
-{
-"en": "But it also changes what skills are valuable.",
-"jp": "しかし、価値のある技能も変わります。",
-"say": [],
-"note": "",
-"id": "ainews-0001-025"
-},
-{
-"en": "If you're a student, what would you advise?",
-"jp": "学生なら、何を勧めますか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-026"
-},
-{
-"en": "Learn the fundamentals, and stay curious.",
-"jp": "基本を学んで、好奇心を持ち続けてください。",
-"say": [],
-"note": "",
-"id": "ainews-0001-027"
-},
-{
-"en": "Don't just use the tools. Understand how they work.",
-"jp": "道具を使うだけでなく、仕組みを理解してください。",
-"say": [],
-"note": "",
-"id": "ainews-0001-028"
-},
-{
-"en": "Let's take a quick break and be right back.",
-"jp": "少し休憩して、すぐ戻ります。",
-"say": [],
-"note": "",
-"id": "ainews-0001-029"
-},
-{
-"en": "And we're back. Let's talk about regulation.",
-"jp": "戻ってきました。規制について話しましょう。",
-"say": [],
-"note": "",
-"id": "ainews-0001-030"
-},
-{
-"en": "Lawmakers are debating a new bill on AI.",
-"jp": "議員たちは、AIの新しい法案を議論しています。",
-"say": [],
-"note": "",
-"id": "ainews-0001-031"
-},
-{
-"en": "Critics say it doesn't go far enough.",
-"jp": "十分ではないと批判する人もいます。",
-"say": [],
-"note": "",
-"id": "ainews-0001-032"
-},
-{
-"en": "Supporters say it's a reasonable first step.",
-"jp": "合理的な第一歩だと支持する人もいます。",
-"say": [],
-"note": "",
-"id": "ainews-0001-033"
-},
-{
-"en": "The vote is expected next month.",
-"jp": "採決は来月の見込みです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-034"
-},
-{
-"en": "Meanwhile, the stock market reacted strongly to the news.",
-"jp": "一方、株式市場はこのニュースに強く反応しました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-035"
-},
-{
-"en": "Shares of the company jumped eight percent.",
-"jp": "その会社の株は8%上昇しました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-036"
-},
-{
-"en": "Analysts expect more investment in the sector.",
-"jp": "アナリストは、この分野にさらに投資が集まると見ています。",
-"say": [],
-"note": "",
-"id": "ainews-0001-037"
-},
-{
-"en": "Before we go, any final thoughts?",
-"jp": "終わる前に、最後に一言ありますか。",
-"say": [],
-"note": "",
-"id": "ainews-0001-038"
-},
-{
-"en": "I'd just say: stay informed, but don't panic.",
-"jp": "情報は追い続けて、でも慌てないでください、と言いたいです。",
-"say": [],
-"note": "",
-"id": "ainews-0001-039"
-},
-{
-"en": "Thank you so much for joining us.",
-"jp": "ご出演ありがとうございました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-040"
-},
-{
-"en": "That's all the time we have. Thanks for listening.",
-"jp": "お時間が来ました。お聞きいただきありがとうございました。",
-"say": [],
-"note": "",
-"id": "ainews-0001-041"
-},
-{
-"en": "Subscribe to the show and leave us a review.",
-"jp": "番組の登録と、評価をお願いします。",
-"say": [],
-"note": "",
-"id": "ainews-0001-042"
-},
-{
-"en": "See you next week.",
-"jp": "また来週。",
-"say": [],
-"note": "",
-"id": "ainews-0001-043"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "ainews-0001",
+  "situation": "ainews",
+  "sname": "AI：ニュース・ポッドキャスト",
+  "icon": "🎙️",
+  "level": 4,
+  "title": "対談・討論の速い話し方と言い回し",
+  "items": [
+    {
+      "en": "Welcome back to the show. Today we're talking about the latest in artificial intelligence.",
+      "jp": "番組へようこそ。今日は人工知能の最新の話題です。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-001",
+      "audio": "ainews-0001-001.mp3"
+    },
+    {
+      "en": "Our guest is a researcher who has been working on language models for a decade.",
+      "jp": "ゲストは、10年間言語モデルを研究してきた研究者です。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-002",
+      "audio": "ainews-0001-002.mp3"
+    },
+    {
+      "en": "Thanks for having me. It's great to be here.",
+      "jp": "お招きありがとうございます。ここに来られてうれしいです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-003",
+      "audio": "ainews-0001-003.mp3"
+    },
+    {
+      "en": "So, let's start with the big news this week.",
+      "jp": "では、今週の大きなニュースから始めましょう。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-004",
+      "audio": "ainews-0001-004.mp3"
+    },
+    {
+      "en": "A major lab just announced a new model.",
+      "jp": "大手の研究所が、新しいモデルを発表したばかりです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-005",
+      "audio": "ainews-0001-005.mp3"
+    },
+    {
+      "en": "The company says it's the most capable system they've built.",
+      "jp": "会社は、これまでで最も高性能なシステムだと言っています。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-006",
+      "audio": "ainews-0001-006.mp3"
+    },
+    {
+      "en": "What do you make of that announcement?",
+      "jp": "その発表をどう見ますか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-007",
+      "audio": "ainews-0001-007.mp3"
+    },
+    {
+      "en": "Honestly, I think we should be careful not to overhype it.",
+      "jp": "正直、過大に持ち上げないよう気をつけるべきです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-008",
+      "audio": "ainews-0001-008.mp3"
+    },
+    {
+      "en": "The demos look impressive, but we need independent testing.",
+      "jp": "デモは印象的ですが、第三者の検証が必要です。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-009",
+      "audio": "ainews-0001-009.mp3"
+    },
+    {
+      "en": "Marketing claims and real-world performance are two different things.",
+      "jp": "宣伝の主張と実際の性能は、別物です。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-010",
+      "audio": "ainews-0001-010.mp3"
+    },
+    {
+      "en": "Let me play devil's advocate for a second.",
+      "jp": "少しだけ、あえて反対の立場で言わせてください。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-011",
+      "audio": "ainews-0001-011.mp3"
+    },
+    {
+      "en": "A lot of this boils down to the data.",
+      "jp": "これの多くは、結局データの話になります。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-012",
+      "audio": "ainews-0001-012.mp3"
+    },
+    {
+      "en": "It's a bit more nuanced than that.",
+      "jp": "もう少し複雑です。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-013",
+      "audio": "ainews-0001-013.mp3"
+    },
+    {
+      "en": "I think the truth lies somewhere in between.",
+      "jp": "真実は、その中間にあると思います。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-014",
+      "audio": "ainews-0001-014.mp3"
+    },
+    {
+      "en": "That's a fair point, and I'd add one more thing.",
+      "jp": "もっともな指摘で、もう一つ付け加えたいです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-015",
+      "audio": "ainews-0001-015.mp3"
+    },
+    {
+      "en": "For listeners who aren't familiar, could you explain what that means?",
+      "jp": "詳しくない聴き手のために、それが何か説明してもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-016",
+      "audio": "ainews-0001-016.mp3"
+    },
+    {
+      "en": "In plain English, it's like a very advanced autocomplete.",
+      "jp": "簡単な言葉で言うと、とても高度な入力補完のようなものです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-017",
+      "audio": "ainews-0001-017.mp3"
+    },
+    {
+      "en": "That's an oversimplification, but it gets the idea across.",
+      "jp": "単純化しすぎですが、考え方は伝わります。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-018",
+      "audio": "ainews-0001-018.mp3"
+    },
+    {
+      "en": "The pace of progress has surprised even the experts.",
+      "jp": "進歩の速さは、専門家さえ驚かせました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-019",
+      "audio": "ainews-0001-019.mp3"
+    },
+    {
+      "en": "Five years ago, none of this seemed possible.",
+      "jp": "5年前は、どれも不可能に見えました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-020",
+      "audio": "ainews-0001-020.mp3"
+    },
+    {
+      "en": "What worries you the most about where this is heading?",
+      "jp": "この先の展開で、一番心配なことは何ですか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-021",
+      "audio": "ainews-0001-021.mp3"
+    },
+    {
+      "en": "What excites you the most?",
+      "jp": "一番わくわくすることは何ですか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-022",
+      "audio": "ainews-0001-022.mp3"
+    },
+    {
+      "en": "I think the biggest impact will be on how we work.",
+      "jp": "一番の影響は、働き方に出ると思います。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-023",
+      "audio": "ainews-0001-023.mp3"
+    },
+    {
+      "en": "People will spend less time on routine tasks.",
+      "jp": "人々は、日常的な作業に費やす時間が減ります。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-024",
+      "audio": "ainews-0001-024.mp3"
+    },
+    {
+      "en": "But it also changes what skills are valuable.",
+      "jp": "しかし、価値のある技能も変わります。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-025",
+      "audio": "ainews-0001-025.mp3"
+    },
+    {
+      "en": "If you're a student, what would you advise?",
+      "jp": "学生なら、何を勧めますか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-026",
+      "audio": "ainews-0001-026.mp3"
+    },
+    {
+      "en": "Learn the fundamentals, and stay curious.",
+      "jp": "基本を学んで、好奇心を持ち続けてください。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-027",
+      "audio": "ainews-0001-027.mp3"
+    },
+    {
+      "en": "Don't just use the tools. Understand how they work.",
+      "jp": "道具を使うだけでなく、仕組みを理解してください。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-028",
+      "audio": "ainews-0001-028.mp3"
+    },
+    {
+      "en": "Let's take a quick break and be right back.",
+      "jp": "少し休憩して、すぐ戻ります。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-029",
+      "audio": "ainews-0001-029.mp3"
+    },
+    {
+      "en": "And we're back. Let's talk about regulation.",
+      "jp": "戻ってきました。規制について話しましょう。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-030",
+      "audio": "ainews-0001-030.mp3"
+    },
+    {
+      "en": "Lawmakers are debating a new bill on AI.",
+      "jp": "議員たちは、AIの新しい法案を議論しています。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-031",
+      "audio": "ainews-0001-031.mp3"
+    },
+    {
+      "en": "Critics say it doesn't go far enough.",
+      "jp": "十分ではないと批判する人もいます。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-032",
+      "audio": "ainews-0001-032.mp3"
+    },
+    {
+      "en": "Supporters say it's a reasonable first step.",
+      "jp": "合理的な第一歩だと支持する人もいます。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-033",
+      "audio": "ainews-0001-033.mp3"
+    },
+    {
+      "en": "The vote is expected next month.",
+      "jp": "採決は来月の見込みです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-034",
+      "audio": "ainews-0001-034.mp3"
+    },
+    {
+      "en": "Meanwhile, the stock market reacted strongly to the news.",
+      "jp": "一方、株式市場はこのニュースに強く反応しました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-035",
+      "audio": "ainews-0001-035.mp3"
+    },
+    {
+      "en": "Shares of the company jumped eight percent.",
+      "jp": "その会社の株は8%上昇しました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-036",
+      "audio": "ainews-0001-036.mp3"
+    },
+    {
+      "en": "Analysts expect more investment in the sector.",
+      "jp": "アナリストは、この分野にさらに投資が集まると見ています。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-037",
+      "audio": "ainews-0001-037.mp3"
+    },
+    {
+      "en": "Before we go, any final thoughts?",
+      "jp": "終わる前に、最後に一言ありますか。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-038",
+      "audio": "ainews-0001-038.mp3"
+    },
+    {
+      "en": "I'd just say: stay informed, but don't panic.",
+      "jp": "情報は追い続けて、でも慌てないでください、と言いたいです。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-039",
+      "audio": "ainews-0001-039.mp3"
+    },
+    {
+      "en": "Thank you so much for joining us.",
+      "jp": "ご出演ありがとうございました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-040",
+      "audio": "ainews-0001-040.mp3"
+    },
+    {
+      "en": "That's all the time we have. Thanks for listening.",
+      "jp": "お時間が来ました。お聞きいただきありがとうございました。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-041",
+      "audio": "ainews-0001-041.mp3"
+    },
+    {
+      "en": "Subscribe to the show and leave us a review.",
+      "jp": "番組の登録と、評価をお願いします。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-042",
+      "audio": "ainews-0001-042.mp3"
+    },
+    {
+      "en": "See you next week.",
+      "jp": "また来週。",
+      "say": [],
+      "note": "",
+      "id": "ainews-0001-043",
+      "audio": "ainews-0001-043.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

@@ -1,335 +1,381 @@
 {
-"id": "bizhr-0001",
-"situation": "bizhr",
-"sname": "ビジネス：人事・規則・評価",
-"icon": "📋",
-"level": 3,
-"title": "勤務規則・休暇・評価・昇進・退職",
-"items": [
-{
-"en": "Welcome aboard. Today we'll go over the company policies.",
-"jp": "ようこそ。今日は会社の規則を説明します。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-001"
-},
-{
-"en": "Please read and sign these documents.",
-"jp": "これらの書類を読んで署名してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-002"
-},
-{
-"en": "Here is your employee handbook.",
-"jp": "これが従業員ハンドブックです。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-003"
-},
-{
-"en": "Work hours are nine to six, with an hour for lunch.",
-"jp": "勤務時間は9時から6時、昼休みは1時間です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-004"
-},
-{
-"en": "We have flexible hours. You can start between eight and ten.",
-"jp": "フレックス勤務で、8時から10時の間に始業できます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-005"
-},
-{
-"en": "Remote work needs approval from your manager.",
-"jp": "リモート勤務は上司の承認が必要です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-006"
-},
-{
-"en": "You'll get paid on the twenty-fifth of every month.",
-"jp": "給与は毎月25日に支払われます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-007"
-},
-{
-"en": "Your annual leave is twenty days per year.",
-"jp": "年次有給休暇は年20日です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-008"
-},
-{
-"en": "You can carry over up to five days to the next year.",
-"jp": "最大5日を翌年に繰り越せます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-009"
-},
-{
-"en": "Sick leave requires a doctor's note after three days.",
-"jp": "病気休暇は3日を超えると診断書が必要です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-010"
-},
-{
-"en": "Please notify your manager as early as possible if you're sick.",
-"jp": "病気の時はできるだけ早く上司に連絡してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-011"
-},
-{
-"en": "Overtime must be approved in advance.",
-"jp": "残業は事前承認が必要です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-012"
-},
-{
-"en": "Overtime is paid at one and a half times the regular rate.",
-"jp": "残業は通常の1.5倍で支払われます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-013"
-},
-{
-"en": "The company offers health, dental, and vision insurance.",
-"jp": "会社は医療、歯科、視力の保険を提供します。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-014"
-},
-{
-"en": "Open enrollment for benefits starts next week.",
-"jp": "福利厚生の加入受付は来週始まります。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-015"
-},
-{
-"en": "We match your retirement contribution up to four percent.",
-"jp": "退職積立の拠出は4%まで会社が上乗せします。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-016"
-},
-{
-"en": "Performance reviews are held twice a year.",
-"jp": "人事評価は年2回です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-017"
-},
-{
-"en": "You'll set goals with your manager at the start of the year.",
-"jp": "年初に上司と目標を設定します。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-018"
-},
-{
-"en": "Your review is scheduled for next Thursday.",
-"jp": "評価面談は来週木曜です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-019"
-},
-{
-"en": "You've exceeded expectations this year.",
-"jp": "今年は期待以上でした。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-020"
-},
-{
-"en": "There are some areas where you need to improve.",
-"jp": "改善が必要な点がいくつかあります。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-021"
-},
-{
-"en": "We'd like to put you on a performance improvement plan.",
-"jp": "業績改善計画を適用したいと考えています。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-022"
-},
-{
-"en": "You're eligible for a promotion.",
-"jp": "昇進の対象です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-023"
-},
-{
-"en": "We're pleased to announce that you've been promoted to team lead.",
-"jp": "チームリーダーへの昇進をお知らせします。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-024"
-},
-{
-"en": "Your raise will take effect next month.",
-"jp": "昇給は来月から適用されます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-025"
-},
-{
-"en": "The company is going through a restructuring.",
-"jp": "会社は組織再編を進めています。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-026"
-},
-{
-"en": "Unfortunately, your position has been eliminated.",
-"jp": "残念ながら、あなたのポジションは廃止されました。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-027"
-},
-{
-"en": "We're offering a severance package.",
-"jp": "退職金の一時金を用意しています。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-028"
-},
-{
-"en": "Your last day will be the thirty-first.",
-"jp": "最終日は31日です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-029"
-},
-{
-"en": "Please return your laptop and badge on your last day.",
-"jp": "最終日にパソコンと社員証を返却してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-030"
-},
-{
-"en": "I'm writing to give my two weeks' notice.",
-"jp": "2週間前の退職通知をお伝えします。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-031"
-},
-{
-"en": "We'll miss you. Let's keep in touch.",
-"jp": "寂しくなります。連絡を取り合いましょう。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-032"
-},
-{
-"en": "Please keep this conversation confidential.",
-"jp": "この話は内密にお願いします。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-033"
-},
-{
-"en": "If you witness any harassment, please report it to HR.",
-"jp": "ハラスメントを見かけたら、人事に報告してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-034"
-},
-{
-"en": "We have zero tolerance for discrimination.",
-"jp": "差別は一切容認しません。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-035"
-},
-{
-"en": "Complete the compliance training by the end of the month.",
-"jp": "月末までにコンプライアンス研修を修了してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-036"
-},
-{
-"en": "Please change your password every ninety days.",
-"jp": "パスワードは90日ごとに変更してください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-037"
-},
-{
-"en": "Don't share sensitive information over personal email.",
-"jp": "機密情報を私用メールで共有しないでください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-038"
-},
-{
-"en": "Visitors must sign in at the front desk.",
-"jp": "来訪者は受付で記帳が必要です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-039"
-},
-{
-"en": "The fire drill is scheduled for ten a.m.",
-"jp": "避難訓練は午前10時です。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-040"
-},
-{
-"en": "Parking permits are available from the office manager.",
-"jp": "駐車許可証は総務で受け取れます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-041"
-},
-{
-"en": "Lunch is not provided, but there's a cafeteria on the first floor.",
-"jp": "昼食は支給されませんが、1階に食堂があります。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-042"
-},
-{
-"en": "We're hosting a company picnic next month.",
-"jp": "来月、社内ピクニックを開きます。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-043"
-},
-{
-"en": "Your visa sponsorship will be handled by our legal team.",
-"jp": "ビザのスポンサーは当社の法務が対応します。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-044"
-},
-{
-"en": "We'll arrange your relocation and temporary housing.",
-"jp": "転居と一時的な住居を手配します。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-045"
-},
-{
-"en": "Please let HR know if your contact details change.",
-"jp": "連絡先が変わったら人事に知らせてください。",
-"say": [],
-"note": "",
-"id": "bizhr-0001-046"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "bizhr-0001",
+  "situation": "bizhr",
+  "sname": "ビジネス：人事・規則・評価",
+  "icon": "📋",
+  "level": 3,
+  "title": "勤務規則・休暇・評価・昇進・退職",
+  "items": [
+    {
+      "en": "Welcome aboard. Today we'll go over the company policies.",
+      "jp": "ようこそ。今日は会社の規則を説明します。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-001",
+      "audio": "bizhr-0001-001.mp3"
+    },
+    {
+      "en": "Please read and sign these documents.",
+      "jp": "これらの書類を読んで署名してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-002",
+      "audio": "bizhr-0001-002.mp3"
+    },
+    {
+      "en": "Here is your employee handbook.",
+      "jp": "これが従業員ハンドブックです。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-003",
+      "audio": "bizhr-0001-003.mp3"
+    },
+    {
+      "en": "Work hours are nine to six, with an hour for lunch.",
+      "jp": "勤務時間は9時から6時、昼休みは1時間です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-004",
+      "audio": "bizhr-0001-004.mp3"
+    },
+    {
+      "en": "We have flexible hours. You can start between eight and ten.",
+      "jp": "フレックス勤務で、8時から10時の間に始業できます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-005",
+      "audio": "bizhr-0001-005.mp3"
+    },
+    {
+      "en": "Remote work needs approval from your manager.",
+      "jp": "リモート勤務は上司の承認が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-006",
+      "audio": "bizhr-0001-006.mp3"
+    },
+    {
+      "en": "You'll get paid on the twenty-fifth of every month.",
+      "jp": "給与は毎月25日に支払われます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-007",
+      "audio": "bizhr-0001-007.mp3"
+    },
+    {
+      "en": "Your annual leave is twenty days per year.",
+      "jp": "年次有給休暇は年20日です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-008",
+      "audio": "bizhr-0001-008.mp3"
+    },
+    {
+      "en": "You can carry over up to five days to the next year.",
+      "jp": "最大5日を翌年に繰り越せます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-009",
+      "audio": "bizhr-0001-009.mp3"
+    },
+    {
+      "en": "Sick leave requires a doctor's note after three days.",
+      "jp": "病気休暇は3日を超えると診断書が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-010",
+      "audio": "bizhr-0001-010.mp3"
+    },
+    {
+      "en": "Please notify your manager as early as possible if you're sick.",
+      "jp": "病気の時はできるだけ早く上司に連絡してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-011",
+      "audio": "bizhr-0001-011.mp3"
+    },
+    {
+      "en": "Overtime must be approved in advance.",
+      "jp": "残業は事前承認が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-012",
+      "audio": "bizhr-0001-012.mp3"
+    },
+    {
+      "en": "Overtime is paid at one and a half times the regular rate.",
+      "jp": "残業は通常の1.5倍で支払われます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-013",
+      "audio": "bizhr-0001-013.mp3"
+    },
+    {
+      "en": "The company offers health, dental, and vision insurance.",
+      "jp": "会社は医療、歯科、視力の保険を提供します。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-014",
+      "audio": "bizhr-0001-014.mp3"
+    },
+    {
+      "en": "Open enrollment for benefits starts next week.",
+      "jp": "福利厚生の加入受付は来週始まります。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-015",
+      "audio": "bizhr-0001-015.mp3"
+    },
+    {
+      "en": "We match your retirement contribution up to four percent.",
+      "jp": "退職積立の拠出は4%まで会社が上乗せします。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-016",
+      "audio": "bizhr-0001-016.mp3"
+    },
+    {
+      "en": "Performance reviews are held twice a year.",
+      "jp": "人事評価は年2回です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-017",
+      "audio": "bizhr-0001-017.mp3"
+    },
+    {
+      "en": "You'll set goals with your manager at the start of the year.",
+      "jp": "年初に上司と目標を設定します。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-018",
+      "audio": "bizhr-0001-018.mp3"
+    },
+    {
+      "en": "Your review is scheduled for next Thursday.",
+      "jp": "評価面談は来週木曜です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-019",
+      "audio": "bizhr-0001-019.mp3"
+    },
+    {
+      "en": "You've exceeded expectations this year.",
+      "jp": "今年は期待以上でした。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-020",
+      "audio": "bizhr-0001-020.mp3"
+    },
+    {
+      "en": "There are some areas where you need to improve.",
+      "jp": "改善が必要な点がいくつかあります。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-021",
+      "audio": "bizhr-0001-021.mp3"
+    },
+    {
+      "en": "We'd like to put you on a performance improvement plan.",
+      "jp": "業績改善計画を適用したいと考えています。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-022",
+      "audio": "bizhr-0001-022.mp3"
+    },
+    {
+      "en": "You're eligible for a promotion.",
+      "jp": "昇進の対象です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-023",
+      "audio": "bizhr-0001-023.mp3"
+    },
+    {
+      "en": "We're pleased to announce that you've been promoted to team lead.",
+      "jp": "チームリーダーへの昇進をお知らせします。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-024",
+      "audio": "bizhr-0001-024.mp3"
+    },
+    {
+      "en": "Your raise will take effect next month.",
+      "jp": "昇給は来月から適用されます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-025",
+      "audio": "bizhr-0001-025.mp3"
+    },
+    {
+      "en": "The company is going through a restructuring.",
+      "jp": "会社は組織再編を進めています。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-026",
+      "audio": "bizhr-0001-026.mp3"
+    },
+    {
+      "en": "Unfortunately, your position has been eliminated.",
+      "jp": "残念ながら、あなたのポジションは廃止されました。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-027",
+      "audio": "bizhr-0001-027.mp3"
+    },
+    {
+      "en": "We're offering a severance package.",
+      "jp": "退職金の一時金を用意しています。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-028",
+      "audio": "bizhr-0001-028.mp3"
+    },
+    {
+      "en": "Your last day will be the thirty-first.",
+      "jp": "最終日は31日です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-029",
+      "audio": "bizhr-0001-029.mp3"
+    },
+    {
+      "en": "Please return your laptop and badge on your last day.",
+      "jp": "最終日にパソコンと社員証を返却してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-030",
+      "audio": "bizhr-0001-030.mp3"
+    },
+    {
+      "en": "I'm writing to give my two weeks' notice.",
+      "jp": "2週間前の退職通知をお伝えします。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-031",
+      "audio": "bizhr-0001-031.mp3"
+    },
+    {
+      "en": "We'll miss you. Let's keep in touch.",
+      "jp": "寂しくなります。連絡を取り合いましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-032",
+      "audio": "bizhr-0001-032.mp3"
+    },
+    {
+      "en": "Please keep this conversation confidential.",
+      "jp": "この話は内密にお願いします。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-033",
+      "audio": "bizhr-0001-033.mp3"
+    },
+    {
+      "en": "If you witness any harassment, please report it to HR.",
+      "jp": "ハラスメントを見かけたら、人事に報告してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-034",
+      "audio": "bizhr-0001-034.mp3"
+    },
+    {
+      "en": "We have zero tolerance for discrimination.",
+      "jp": "差別は一切容認しません。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-035",
+      "audio": "bizhr-0001-035.mp3"
+    },
+    {
+      "en": "Complete the compliance training by the end of the month.",
+      "jp": "月末までにコンプライアンス研修を修了してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-036",
+      "audio": "bizhr-0001-036.mp3"
+    },
+    {
+      "en": "Please change your password every ninety days.",
+      "jp": "パスワードは90日ごとに変更してください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-037",
+      "audio": "bizhr-0001-037.mp3"
+    },
+    {
+      "en": "Don't share sensitive information over personal email.",
+      "jp": "機密情報を私用メールで共有しないでください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-038",
+      "audio": "bizhr-0001-038.mp3"
+    },
+    {
+      "en": "Visitors must sign in at the front desk.",
+      "jp": "来訪者は受付で記帳が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-039",
+      "audio": "bizhr-0001-039.mp3"
+    },
+    {
+      "en": "The fire drill is scheduled for ten a.m.",
+      "jp": "避難訓練は午前10時です。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-040",
+      "audio": "bizhr-0001-040.mp3"
+    },
+    {
+      "en": "Parking permits are available from the office manager.",
+      "jp": "駐車許可証は総務で受け取れます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-041",
+      "audio": "bizhr-0001-041.mp3"
+    },
+    {
+      "en": "Lunch is not provided, but there's a cafeteria on the first floor.",
+      "jp": "昼食は支給されませんが、1階に食堂があります。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-042",
+      "audio": "bizhr-0001-042.mp3"
+    },
+    {
+      "en": "We're hosting a company picnic next month.",
+      "jp": "来月、社内ピクニックを開きます。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-043",
+      "audio": "bizhr-0001-043.mp3"
+    },
+    {
+      "en": "Your visa sponsorship will be handled by our legal team.",
+      "jp": "ビザのスポンサーは当社の法務が対応します。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-044",
+      "audio": "bizhr-0001-044.mp3"
+    },
+    {
+      "en": "We'll arrange your relocation and temporary housing.",
+      "jp": "転居と一時的な住居を手配します。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-045",
+      "audio": "bizhr-0001-045.mp3"
+    },
+    {
+      "en": "Please let HR know if your contact details change.",
+      "jp": "連絡先が変わったら人事に知らせてください。",
+      "say": [],
+      "note": "",
+      "id": "bizhr-0001-046",
+      "audio": "bizhr-0001-046.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

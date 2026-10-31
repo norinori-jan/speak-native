@@ -1,349 +1,397 @@
 {
-"id": "aitalk-0001",
-"situation": "aitalk",
-"sname": "AI：学会・発表・質疑",
-"icon": "🎤",
-"level": 4,
-"title": "発表の話し方・質問・反論・会場アナウンス",
-"items": [
-{
-"en": "Thanks for having me. Today I'll talk about how we evaluate language models.",
-"jp": "お招きありがとうございます。今日は言語モデルの評価方法についてお話しします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-001"
-},
-{
-"en": "I'll start with the motivation, then the method, and finally the results.",
-"jp": "まず動機、次に手法、最後に結果の順で話します。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-002"
-},
-{
-"en": "The key question is: how do we know the model is actually getting better?",
-"jp": "重要な問いは、モデルが本当に良くなっているとどう分かるか、です。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-003"
-},
-{
-"en": "Existing benchmarks are saturated. Top models score above ninety-five percent.",
-"jp": "既存のベンチマークは飽和しています。上位モデルは95%を超えます。",
-"say": [],
-"note": "saturated = 上限に近く、差が測れない。",
-"id": "aitalk-0001-004"
-},
-{
-"en": "So we built a harder evaluation from scratch.",
-"jp": "そこで、より難しい評価をゼロから作りました。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-005"
-},
-{
-"en": "This slide shows the overall pipeline.",
-"jp": "このスライドは全体の流れを示します。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-006"
-},
-{
-"en": "On the left is the input, and on the right is the output.",
-"jp": "左が入力、右が出力です。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-007"
-},
-{
-"en": "We compare against three baselines.",
-"jp": "3つのベースラインと比較します。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-008"
-},
-{
-"en": "Our approach reduces errors by thirty percent.",
-"jp": "私たちの手法は、誤りを30%減らします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-009"
-},
-{
-"en": "Notice that the gap widens as the task gets harder.",
-"jp": "課題が難しくなるほど差が広がることに注目してください。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-010"
-},
-{
-"en": "Error bars show one standard deviation.",
-"jp": "エラーバーは標準偏差1つ分を示しています。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-011"
-},
-{
-"en": "We ran each experiment with five random seeds.",
-"jp": "各実験を5つの乱数シードで実行しました。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-012"
-},
-{
-"en": "The improvement holds across all model sizes.",
-"jp": "改善は、すべてのモデルサイズで続きます。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-013"
-},
-{
-"en": "There are some limitations I want to be upfront about.",
-"jp": "正直にお伝えしたい限界がいくつかあります。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-014"
-},
-{
-"en": "Our test set is small and only covers English.",
-"jp": "テストセットは小さく、英語しか扱っていません。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-015"
-},
-{
-"en": "We don't claim that this generalizes to other languages.",
-"jp": "他の言語に一般化できるとは主張しません。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-016"
-},
-{
-"en": "This is a work in progress.",
-"jp": "これは進行中の研究です。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-017"
-},
-{
-"en": "Let me show a failure case.",
-"jp": "失敗例をお見せします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-018"
-},
-{
-"en": "The model is confident, but wrong.",
-"jp": "モデルは自信満々ですが、間違っています。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-019"
-},
-{
-"en": "This raises an important question about calibration.",
-"jp": "これは、確信度の較正という重要な問いにつながります。",
-"say": [],
-"note": "calibration = 自信の度合いが実際の正解率と合うこと。",
-"id": "aitalk-0001-020"
-},
-{
-"en": "To summarize, we have three main contributions.",
-"jp": "まとめると、主な貢献は3つです。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-021"
-},
-{
-"en": "The code and data are available on GitHub.",
-"jp": "コードとデータはGitHubで公開しています。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-022"
-},
-{
-"en": "I'd like to thank my collaborators.",
-"jp": "共同研究者に感謝します。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-023"
-},
-{
-"en": "I'm happy to take questions.",
-"jp": "質問をお受けします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-024"
-},
-{
-"en": "Thank you for the talk. I have a question about the evaluation.",
-"jp": "発表ありがとうございます。評価について質問があります。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-025"
-},
-{
-"en": "How did you choose the baselines?",
-"jp": "ベースラインはどう選んだのですか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-026"
-},
-{
-"en": "Did you control for the prompt format?",
-"jp": "プロンプトの形式は揃えましたか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-027"
-},
-{
-"en": "Have you considered the possibility of data contamination?",
-"jp": "データの混入の可能性は検討しましたか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-028"
-},
-{
-"en": "What would happen if you scaled this up by ten times?",
-"jp": "これを10倍に拡大したらどうなりますか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-029"
-},
-{
-"en": "That's a great question, and honestly, we don't know yet.",
-"jp": "とてもいい質問ですが、正直、まだ分かりません。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-030"
-},
-{
-"en": "We tried that, but it didn't make a significant difference.",
-"jp": "試しましたが、大きな差はありませんでした。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-031"
-},
-{
-"en": "I'd be curious to hear your thoughts on that.",
-"jp": "それについてのご意見を聞いてみたいです。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-032"
-},
-{
-"en": "Could you go back to the slide with the results table?",
-"jp": "結果の表のスライドに戻ってもらえますか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-033"
-},
-{
-"en": "I'm not sure I understand how the metric is computed.",
-"jp": "その指標がどう計算されるのか、よく分かりません。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-034"
-},
-{
-"en": "Can you clarify what you mean by robustness?",
-"jp": "ロバスト性とは何を指すのか、説明してもらえますか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-035"
-},
-{
-"en": "I think there may be a confound in your setup.",
-"jp": "実験設定に交絡があるかもしれません。",
-"say": [],
-"note": "confound = 結果に影響する別の要因。",
-"id": "aitalk-0001-036"
-},
-{
-"en": "I'd push back a little on that claim.",
-"jp": "その主張には少し異論があります。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-037"
-},
-{
-"en": "I see your point, but I'd argue the opposite.",
-"jp": "お考えは分かりますが、私は逆だと思います。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-038"
-},
-{
-"en": "Let's take that offline. We're running out of time.",
-"jp": "それは後で話しましょう。時間がなくなってきました。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-039"
-},
-{
-"en": "We have time for one more question.",
-"jp": "もう1問だけ受けられます。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-040"
-},
-{
-"en": "Let's give our speaker a round of applause.",
-"jp": "発表者に拍手をお願いします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-041"
-},
-{
-"en": "The poster session starts at four in the main hall.",
-"jp": "ポスターセッションは4時から大ホールで始まります。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-042"
-},
-{
-"en": "Please find your badge at the registration desk.",
-"jp": "参加証は受付で受け取ってください。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-043"
-},
-{
-"en": "Coffee is available in the lobby.",
-"jp": "ロビーでコーヒーを用意しています。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-044"
-},
-{
-"en": "The workshop is fully booked.",
-"jp": "そのワークショップは満席です。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-045"
-},
-{
-"en": "The next session is in room B, starting in ten minutes.",
-"jp": "次のセッションはB室で、10分後に始まります。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-046"
-},
-{
-"en": "Are you presenting anything at this conference?",
-"jp": "この会議で何か発表しますか。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-047"
-},
-{
-"en": "We're showing a demo at booth twenty.",
-"jp": "20番ブースでデモをします。",
-"say": [],
-"note": "",
-"id": "aitalk-0001-048"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aitalk-0001",
+  "situation": "aitalk",
+  "sname": "AI：学会・発表・質疑",
+  "icon": "🎤",
+  "level": 4,
+  "title": "発表の話し方・質問・反論・会場アナウンス",
+  "items": [
+    {
+      "en": "Thanks for having me. Today I'll talk about how we evaluate language models.",
+      "jp": "お招きありがとうございます。今日は言語モデルの評価方法についてお話しします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-001",
+      "audio": "aitalk-0001-001.mp3"
+    },
+    {
+      "en": "I'll start with the motivation, then the method, and finally the results.",
+      "jp": "まず動機、次に手法、最後に結果の順で話します。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-002",
+      "audio": "aitalk-0001-002.mp3"
+    },
+    {
+      "en": "The key question is: how do we know the model is actually getting better?",
+      "jp": "重要な問いは、モデルが本当に良くなっているとどう分かるか、です。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-003",
+      "audio": "aitalk-0001-003.mp3"
+    },
+    {
+      "en": "Existing benchmarks are saturated. Top models score above ninety-five percent.",
+      "jp": "既存のベンチマークは飽和しています。上位モデルは95%を超えます。",
+      "say": [],
+      "note": "saturated = 上限に近く、差が測れない。",
+      "id": "aitalk-0001-004",
+      "audio": "aitalk-0001-004.mp3"
+    },
+    {
+      "en": "So we built a harder evaluation from scratch.",
+      "jp": "そこで、より難しい評価をゼロから作りました。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-005",
+      "audio": "aitalk-0001-005.mp3"
+    },
+    {
+      "en": "This slide shows the overall pipeline.",
+      "jp": "このスライドは全体の流れを示します。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-006",
+      "audio": "aitalk-0001-006.mp3"
+    },
+    {
+      "en": "On the left is the input, and on the right is the output.",
+      "jp": "左が入力、右が出力です。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-007",
+      "audio": "aitalk-0001-007.mp3"
+    },
+    {
+      "en": "We compare against three baselines.",
+      "jp": "3つのベースラインと比較します。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-008",
+      "audio": "aitalk-0001-008.mp3"
+    },
+    {
+      "en": "Our approach reduces errors by thirty percent.",
+      "jp": "私たちの手法は、誤りを30%減らします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-009",
+      "audio": "aitalk-0001-009.mp3"
+    },
+    {
+      "en": "Notice that the gap widens as the task gets harder.",
+      "jp": "課題が難しくなるほど差が広がることに注目してください。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-010",
+      "audio": "aitalk-0001-010.mp3"
+    },
+    {
+      "en": "Error bars show one standard deviation.",
+      "jp": "エラーバーは標準偏差1つ分を示しています。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-011",
+      "audio": "aitalk-0001-011.mp3"
+    },
+    {
+      "en": "We ran each experiment with five random seeds.",
+      "jp": "各実験を5つの乱数シードで実行しました。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-012",
+      "audio": "aitalk-0001-012.mp3"
+    },
+    {
+      "en": "The improvement holds across all model sizes.",
+      "jp": "改善は、すべてのモデルサイズで続きます。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-013",
+      "audio": "aitalk-0001-013.mp3"
+    },
+    {
+      "en": "There are some limitations I want to be upfront about.",
+      "jp": "正直にお伝えしたい限界がいくつかあります。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-014",
+      "audio": "aitalk-0001-014.mp3"
+    },
+    {
+      "en": "Our test set is small and only covers English.",
+      "jp": "テストセットは小さく、英語しか扱っていません。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-015",
+      "audio": "aitalk-0001-015.mp3"
+    },
+    {
+      "en": "We don't claim that this generalizes to other languages.",
+      "jp": "他の言語に一般化できるとは主張しません。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-016",
+      "audio": "aitalk-0001-016.mp3"
+    },
+    {
+      "en": "This is a work in progress.",
+      "jp": "これは進行中の研究です。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-017",
+      "audio": "aitalk-0001-017.mp3"
+    },
+    {
+      "en": "Let me show a failure case.",
+      "jp": "失敗例をお見せします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-018",
+      "audio": "aitalk-0001-018.mp3"
+    },
+    {
+      "en": "The model is confident, but wrong.",
+      "jp": "モデルは自信満々ですが、間違っています。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-019",
+      "audio": "aitalk-0001-019.mp3"
+    },
+    {
+      "en": "This raises an important question about calibration.",
+      "jp": "これは、確信度の較正という重要な問いにつながります。",
+      "say": [],
+      "note": "calibration = 自信の度合いが実際の正解率と合うこと。",
+      "id": "aitalk-0001-020",
+      "audio": "aitalk-0001-020.mp3"
+    },
+    {
+      "en": "To summarize, we have three main contributions.",
+      "jp": "まとめると、主な貢献は3つです。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-021",
+      "audio": "aitalk-0001-021.mp3"
+    },
+    {
+      "en": "The code and data are available on GitHub.",
+      "jp": "コードとデータはGitHubで公開しています。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-022",
+      "audio": "aitalk-0001-022.mp3"
+    },
+    {
+      "en": "I'd like to thank my collaborators.",
+      "jp": "共同研究者に感謝します。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-023",
+      "audio": "aitalk-0001-023.mp3"
+    },
+    {
+      "en": "I'm happy to take questions.",
+      "jp": "質問をお受けします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-024",
+      "audio": "aitalk-0001-024.mp3"
+    },
+    {
+      "en": "Thank you for the talk. I have a question about the evaluation.",
+      "jp": "発表ありがとうございます。評価について質問があります。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-025",
+      "audio": "aitalk-0001-025.mp3"
+    },
+    {
+      "en": "How did you choose the baselines?",
+      "jp": "ベースラインはどう選んだのですか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-026",
+      "audio": "aitalk-0001-026.mp3"
+    },
+    {
+      "en": "Did you control for the prompt format?",
+      "jp": "プロンプトの形式は揃えましたか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-027",
+      "audio": "aitalk-0001-027.mp3"
+    },
+    {
+      "en": "Have you considered the possibility of data contamination?",
+      "jp": "データの混入の可能性は検討しましたか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-028",
+      "audio": "aitalk-0001-028.mp3"
+    },
+    {
+      "en": "What would happen if you scaled this up by ten times?",
+      "jp": "これを10倍に拡大したらどうなりますか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-029",
+      "audio": "aitalk-0001-029.mp3"
+    },
+    {
+      "en": "That's a great question, and honestly, we don't know yet.",
+      "jp": "とてもいい質問ですが、正直、まだ分かりません。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-030",
+      "audio": "aitalk-0001-030.mp3"
+    },
+    {
+      "en": "We tried that, but it didn't make a significant difference.",
+      "jp": "試しましたが、大きな差はありませんでした。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-031",
+      "audio": "aitalk-0001-031.mp3"
+    },
+    {
+      "en": "I'd be curious to hear your thoughts on that.",
+      "jp": "それについてのご意見を聞いてみたいです。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-032",
+      "audio": "aitalk-0001-032.mp3"
+    },
+    {
+      "en": "Could you go back to the slide with the results table?",
+      "jp": "結果の表のスライドに戻ってもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-033",
+      "audio": "aitalk-0001-033.mp3"
+    },
+    {
+      "en": "I'm not sure I understand how the metric is computed.",
+      "jp": "その指標がどう計算されるのか、よく分かりません。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-034",
+      "audio": "aitalk-0001-034.mp3"
+    },
+    {
+      "en": "Can you clarify what you mean by robustness?",
+      "jp": "ロバスト性とは何を指すのか、説明してもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-035",
+      "audio": "aitalk-0001-035.mp3"
+    },
+    {
+      "en": "I think there may be a confound in your setup.",
+      "jp": "実験設定に交絡があるかもしれません。",
+      "say": [],
+      "note": "confound = 結果に影響する別の要因。",
+      "id": "aitalk-0001-036",
+      "audio": "aitalk-0001-036.mp3"
+    },
+    {
+      "en": "I'd push back a little on that claim.",
+      "jp": "その主張には少し異論があります。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-037",
+      "audio": "aitalk-0001-037.mp3"
+    },
+    {
+      "en": "I see your point, but I'd argue the opposite.",
+      "jp": "お考えは分かりますが、私は逆だと思います。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-038",
+      "audio": "aitalk-0001-038.mp3"
+    },
+    {
+      "en": "Let's take that offline. We're running out of time.",
+      "jp": "それは後で話しましょう。時間がなくなってきました。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-039",
+      "audio": "aitalk-0001-039.mp3"
+    },
+    {
+      "en": "We have time for one more question.",
+      "jp": "もう1問だけ受けられます。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-040",
+      "audio": "aitalk-0001-040.mp3"
+    },
+    {
+      "en": "Let's give our speaker a round of applause.",
+      "jp": "発表者に拍手をお願いします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-041",
+      "audio": "aitalk-0001-041.mp3"
+    },
+    {
+      "en": "The poster session starts at four in the main hall.",
+      "jp": "ポスターセッションは4時から大ホールで始まります。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-042",
+      "audio": "aitalk-0001-042.mp3"
+    },
+    {
+      "en": "Please find your badge at the registration desk.",
+      "jp": "参加証は受付で受け取ってください。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-043",
+      "audio": "aitalk-0001-043.mp3"
+    },
+    {
+      "en": "Coffee is available in the lobby.",
+      "jp": "ロビーでコーヒーを用意しています。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-044",
+      "audio": "aitalk-0001-044.mp3"
+    },
+    {
+      "en": "The workshop is fully booked.",
+      "jp": "そのワークショップは満席です。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-045",
+      "audio": "aitalk-0001-045.mp3"
+    },
+    {
+      "en": "The next session is in room B, starting in ten minutes.",
+      "jp": "次のセッションはB室で、10分後に始まります。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-046",
+      "audio": "aitalk-0001-046.mp3"
+    },
+    {
+      "en": "Are you presenting anything at this conference?",
+      "jp": "この会議で何か発表しますか。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-047",
+      "audio": "aitalk-0001-047.mp3"
+    },
+    {
+      "en": "We're showing a demo at booth twenty.",
+      "jp": "20番ブースでデモをします。",
+      "say": [],
+      "note": "",
+      "id": "aitalk-0001-048",
+      "audio": "aitalk-0001-048.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

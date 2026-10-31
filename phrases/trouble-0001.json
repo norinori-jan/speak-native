@@ -1,383 +1,433 @@
 {
-"id": "trouble-0001",
-"situation": "trouble",
-"sname": "トラブル・緊急",
-"icon": "🚨",
-"level": 3,
-"title": "盗難・事故・請求ミス・クレーム・災害",
-"items": [
-{
-"en": "What happened?",
-"jp": "何がありましたか。",
-"say": [
-{
-"en": "My wallet was stolen.",
-"jp": "財布を盗まれました。"
-}
-],
-"note": "",
-"id": "trouble-0001-001"
-},
-{
-"en": "When and where did it happen?",
-"jp": "いつ、どこでですか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-002"
-},
-{
-"en": "Can you describe the person?",
-"jp": "その人の特徴を教えてもらえますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-003"
-},
-{
-"en": "Do you need an ambulance?",
-"jp": "救急車は必要ですか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-004"
-},
-{
-"en": "Is anyone hurt?",
-"jp": "けが人はいますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-005"
-},
-{
-"en": "Stay calm. Help is on the way.",
-"jp": "落ち着いてください。助けが向かっています。",
-"say": [],
-"note": "",
-"id": "trouble-0001-006"
-},
-{
-"en": "Please don't move.",
-"jp": "動かないでください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-007"
-},
-{
-"en": "911, what's your emergency?",
-"jp": "911です。どうしました？",
-"say": [
-{
-"en": "There's been an accident.",
-"jp": "事故がありました。"
-}
-],
-"note": "アメリカの緊急番号。",
-"id": "trouble-0001-008"
-},
-{
-"en": "What's the address of the emergency?",
-"jp": "緊急の場所の住所は？",
-"say": [],
-"note": "",
-"id": "trouble-0001-009"
-},
-{
-"en": "Stay on the line.",
-"jp": "電話を切らずにお待ちください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-010"
-},
-{
-"en": "Please evacuate the building immediately.",
-"jp": "直ちに建物から避難してください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-011"
-},
-{
-"en": "Use the stairs, not the elevator.",
-"jp": "エレベーターでなく階段を使ってください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-012"
-},
-{
-"en": "This is a fire alarm. Please leave calmly.",
-"jp": "火災警報です。落ち着いて退出してください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-013"
-},
-{
-"en": "Please file a police report.",
-"jp": "警察に被害届を出してください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-014"
-},
-{
-"en": "Could I see your ID and passport?",
-"jp": "身分証とパスポートを見せてもらえますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-015"
-},
-{
-"en": "We'll issue a temporary passport at the embassy.",
-"jp": "大使館で仮パスポートを発行します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-016"
-},
-{
-"en": "You lost your credit card? I'll block it right away.",
-"jp": "クレジットカードを紛失ですか。すぐ停止します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-017"
-},
-{
-"en": "We'll send you a new card in five to seven business days.",
-"jp": "新しいカードを5〜7営業日でお送りします。",
-"say": [],
-"note": "",
-"id": "trouble-0001-018"
-},
-{
-"en": "I'm sorry, we can't find your reservation.",
-"jp": "申し訳ありません、ご予約が見つかりません。",
-"say": [
-{
-"en": "I have a confirmation email.",
-"jp": "確認メールがあります。"
-}
-],
-"note": "",
-"id": "trouble-0001-019"
-},
-{
-"en": "Our system is down at the moment.",
-"jp": "今、システムが止まっています。",
-"say": [],
-"note": "",
-"id": "trouble-0001-020"
-},
-{
-"en": "Could you wait a moment while we fix it?",
-"jp": "直す間、少しお待ちください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-021"
-},
-{
-"en": "I think there's been a mistake with the bill.",
-"jp": "請求に間違いがあると思います。",
-"say": [],
-"note": "",
-"id": "trouble-0001-022"
-},
-{
-"en": "Let me check that for you.",
-"jp": "確認します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-023"
-},
-{
-"en": "You were charged twice. I'll refund one.",
-"jp": "二重に請求されていました。一方を返金します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-024"
-},
-{
-"en": "We'll credit it back to your card.",
-"jp": "カードに返金します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-025"
-},
-{
-"en": "The item you received was damaged. We'll send a replacement.",
-"jp": "届いた商品が破損していました。代替品をお送りします。",
-"say": [],
-"note": "",
-"id": "trouble-0001-026"
-},
-{
-"en": "May I speak to the manager?",
-"jp": "責任者と話せますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-027"
-},
-{
-"en": "The manager will be with you in a moment.",
-"jp": "責任者がすぐ参ります。",
-"say": [],
-"note": "",
-"id": "trouble-0001-028"
-},
-{
-"en": "I understand your frustration.",
-"jp": "ご不満はよく分かります。",
-"say": [],
-"note": "",
-"id": "trouble-0001-029"
-},
-{
-"en": "I'm really sorry for the trouble.",
-"jp": "ご迷惑をおかけして本当に申し訳ありません。",
-"say": [],
-"note": "",
-"id": "trouble-0001-030"
-},
-{
-"en": "We'll compensate you with a discount on your next stay.",
-"jp": "次回のご宿泊の割引でお詫びします。",
-"say": [],
-"note": "",
-"id": "trouble-0001-031"
-},
-{
-"en": "You'll need to move your car. You're blocking the driveway.",
-"jp": "車を動かしてください。入口を塞いでいます。",
-"say": [],
-"note": "",
-"id": "trouble-0001-032"
-},
-{
-"en": "That's my seat, I think.",
-"jp": "そこは私の席だと思います。",
-"say": [],
-"note": "",
-"id": "trouble-0001-033"
-},
-{
-"en": "Would you mind keeping it down? It's very late.",
-"jp": "静かにしてもらえませんか。夜遅いので。",
-"say": [],
-"note": "",
-"id": "trouble-0001-034"
-},
-{
-"en": "Excuse me, you dropped something.",
-"jp": "すみません、何か落としましたよ。",
-"say": [
-{
-"en": "Oh, thank you so much.",
-"jp": "あ、ありがとうございます。"
-}
-],
-"note": "",
-"id": "trouble-0001-035"
-},
-{
-"en": "Watch out!",
-"jp": "危ない！",
-"say": [],
-"note": "",
-"id": "trouble-0001-036"
-},
-{
-"en": "Be careful, the floor is wet.",
-"jp": "床が濡れているので気をつけてください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-037"
-},
-{
-"en": "Are you all right?",
-"jp": "大丈夫ですか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-038"
-},
-{
-"en": "I'm okay. Just a little shaken.",
-"jp": "大丈夫です。少し驚いただけです。",
-"say": [],
-"note": "",
-"id": "trouble-0001-039"
-},
-{
-"en": "We've found your bag. It was at the lost and found.",
-"jp": "かばんが見つかりました。遺失物取扱所にありました。",
-"say": [],
-"note": "",
-"id": "trouble-0001-040"
-},
-{
-"en": "Could you fill out a lost property form?",
-"jp": "遺失物の用紙に記入してもらえますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-041"
-},
-{
-"en": "Your phone battery is low. Do you want to use my charger?",
-"jp": "スマホの電池が少ないですね。私の充電器を使いますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-042"
-},
-{
-"en": "The power is out in the whole area.",
-"jp": "地域全体が停電しています。",
-"say": [],
-"note": "",
-"id": "trouble-0001-043"
-},
-{
-"en": "There's been an earthquake warning. Please stay away from windows.",
-"jp": "地震の警報が出ています。窓から離れてください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-044"
-},
-{
-"en": "The flight to Tokyo has been canceled due to bad weather.",
-"jp": "東京行きは悪天候で欠航になりました。",
-"say": [],
-"note": "",
-"id": "trouble-0001-045"
-},
-{
-"en": "A storm is coming. Stay indoors if possible.",
-"jp": "嵐が来ます。できるだけ屋内にいてください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-046"
-},
-{
-"en": "Please keep your belongings with you at all times.",
-"jp": "持ち物は常に身につけてください。",
-"say": [],
-"note": "",
-"id": "trouble-0001-047"
-},
-{
-"en": "I need help. Could you call the police?",
-"jp": "助けが必要です。警察を呼んでもらえますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-048"
-},
-{
-"en": "Do you speak Japanese?",
-"jp": "日本語を話せる人はいますか。",
-"say": [],
-"note": "",
-"id": "trouble-0001-049"
-},
-{
-"en": "We'll find an interpreter for you.",
-"jp": "通訳を手配します。",
-"say": [],
-"note": "",
-"id": "trouble-0001-050"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "trouble-0001",
+  "situation": "trouble",
+  "sname": "トラブル・緊急",
+  "icon": "🚨",
+  "level": 3,
+  "title": "盗難・事故・請求ミス・クレーム・災害",
+  "items": [
+    {
+      "en": "What happened?",
+      "jp": "何がありましたか。",
+      "say": [
+        {
+          "en": "My wallet was stolen.",
+          "jp": "財布を盗まれました。"
+        }
+      ],
+      "note": "",
+      "id": "trouble-0001-001",
+      "audio": "trouble-0001-001.mp3"
+    },
+    {
+      "en": "When and where did it happen?",
+      "jp": "いつ、どこでですか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-002",
+      "audio": "trouble-0001-002.mp3"
+    },
+    {
+      "en": "Can you describe the person?",
+      "jp": "その人の特徴を教えてもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-003",
+      "audio": "trouble-0001-003.mp3"
+    },
+    {
+      "en": "Do you need an ambulance?",
+      "jp": "救急車は必要ですか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-004",
+      "audio": "trouble-0001-004.mp3"
+    },
+    {
+      "en": "Is anyone hurt?",
+      "jp": "けが人はいますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-005",
+      "audio": "trouble-0001-005.mp3"
+    },
+    {
+      "en": "Stay calm. Help is on the way.",
+      "jp": "落ち着いてください。助けが向かっています。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-006",
+      "audio": "trouble-0001-006.mp3"
+    },
+    {
+      "en": "Please don't move.",
+      "jp": "動かないでください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-007",
+      "audio": "trouble-0001-007.mp3"
+    },
+    {
+      "en": "911, what's your emergency?",
+      "jp": "911です。どうしました？",
+      "say": [
+        {
+          "en": "There's been an accident.",
+          "jp": "事故がありました。"
+        }
+      ],
+      "note": "アメリカの緊急番号。",
+      "id": "trouble-0001-008",
+      "audio": "trouble-0001-008.mp3"
+    },
+    {
+      "en": "What's the address of the emergency?",
+      "jp": "緊急の場所の住所は？",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-009",
+      "audio": "trouble-0001-009.mp3"
+    },
+    {
+      "en": "Stay on the line.",
+      "jp": "電話を切らずにお待ちください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-010",
+      "audio": "trouble-0001-010.mp3"
+    },
+    {
+      "en": "Please evacuate the building immediately.",
+      "jp": "直ちに建物から避難してください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-011",
+      "audio": "trouble-0001-011.mp3"
+    },
+    {
+      "en": "Use the stairs, not the elevator.",
+      "jp": "エレベーターでなく階段を使ってください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-012",
+      "audio": "trouble-0001-012.mp3"
+    },
+    {
+      "en": "This is a fire alarm. Please leave calmly.",
+      "jp": "火災警報です。落ち着いて退出してください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-013",
+      "audio": "trouble-0001-013.mp3"
+    },
+    {
+      "en": "Please file a police report.",
+      "jp": "警察に被害届を出してください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-014",
+      "audio": "trouble-0001-014.mp3"
+    },
+    {
+      "en": "Could I see your ID and passport?",
+      "jp": "身分証とパスポートを見せてもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-015",
+      "audio": "trouble-0001-015.mp3"
+    },
+    {
+      "en": "We'll issue a temporary passport at the embassy.",
+      "jp": "大使館で仮パスポートを発行します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-016",
+      "audio": "trouble-0001-016.mp3"
+    },
+    {
+      "en": "You lost your credit card? I'll block it right away.",
+      "jp": "クレジットカードを紛失ですか。すぐ停止します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-017",
+      "audio": "trouble-0001-017.mp3"
+    },
+    {
+      "en": "We'll send you a new card in five to seven business days.",
+      "jp": "新しいカードを5〜7営業日でお送りします。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-018",
+      "audio": "trouble-0001-018.mp3"
+    },
+    {
+      "en": "I'm sorry, we can't find your reservation.",
+      "jp": "申し訳ありません、ご予約が見つかりません。",
+      "say": [
+        {
+          "en": "I have a confirmation email.",
+          "jp": "確認メールがあります。"
+        }
+      ],
+      "note": "",
+      "id": "trouble-0001-019",
+      "audio": "trouble-0001-019.mp3"
+    },
+    {
+      "en": "Our system is down at the moment.",
+      "jp": "今、システムが止まっています。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-020",
+      "audio": "trouble-0001-020.mp3"
+    },
+    {
+      "en": "Could you wait a moment while we fix it?",
+      "jp": "直す間、少しお待ちください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-021",
+      "audio": "trouble-0001-021.mp3"
+    },
+    {
+      "en": "I think there's been a mistake with the bill.",
+      "jp": "請求に間違いがあると思います。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-022",
+      "audio": "trouble-0001-022.mp3"
+    },
+    {
+      "en": "Let me check that for you.",
+      "jp": "確認します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-023",
+      "audio": "trouble-0001-023.mp3"
+    },
+    {
+      "en": "You were charged twice. I'll refund one.",
+      "jp": "二重に請求されていました。一方を返金します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-024",
+      "audio": "trouble-0001-024.mp3"
+    },
+    {
+      "en": "We'll credit it back to your card.",
+      "jp": "カードに返金します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-025",
+      "audio": "trouble-0001-025.mp3"
+    },
+    {
+      "en": "The item you received was damaged. We'll send a replacement.",
+      "jp": "届いた商品が破損していました。代替品をお送りします。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-026",
+      "audio": "trouble-0001-026.mp3"
+    },
+    {
+      "en": "May I speak to the manager?",
+      "jp": "責任者と話せますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-027",
+      "audio": "trouble-0001-027.mp3"
+    },
+    {
+      "en": "The manager will be with you in a moment.",
+      "jp": "責任者がすぐ参ります。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-028",
+      "audio": "trouble-0001-028.mp3"
+    },
+    {
+      "en": "I understand your frustration.",
+      "jp": "ご不満はよく分かります。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-029",
+      "audio": "trouble-0001-029.mp3"
+    },
+    {
+      "en": "I'm really sorry for the trouble.",
+      "jp": "ご迷惑をおかけして本当に申し訳ありません。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-030",
+      "audio": "trouble-0001-030.mp3"
+    },
+    {
+      "en": "We'll compensate you with a discount on your next stay.",
+      "jp": "次回のご宿泊の割引でお詫びします。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-031",
+      "audio": "trouble-0001-031.mp3"
+    },
+    {
+      "en": "You'll need to move your car. You're blocking the driveway.",
+      "jp": "車を動かしてください。入口を塞いでいます。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-032",
+      "audio": "trouble-0001-032.mp3"
+    },
+    {
+      "en": "That's my seat, I think.",
+      "jp": "そこは私の席だと思います。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-033",
+      "audio": "trouble-0001-033.mp3"
+    },
+    {
+      "en": "Would you mind keeping it down? It's very late.",
+      "jp": "静かにしてもらえませんか。夜遅いので。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-034",
+      "audio": "trouble-0001-034.mp3"
+    },
+    {
+      "en": "Excuse me, you dropped something.",
+      "jp": "すみません、何か落としましたよ。",
+      "say": [
+        {
+          "en": "Oh, thank you so much.",
+          "jp": "あ、ありがとうございます。"
+        }
+      ],
+      "note": "",
+      "id": "trouble-0001-035",
+      "audio": "trouble-0001-035.mp3"
+    },
+    {
+      "en": "Watch out!",
+      "jp": "危ない！",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-036",
+      "audio": "trouble-0001-036.mp3"
+    },
+    {
+      "en": "Be careful, the floor is wet.",
+      "jp": "床が濡れているので気をつけてください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-037",
+      "audio": "trouble-0001-037.mp3"
+    },
+    {
+      "en": "Are you all right?",
+      "jp": "大丈夫ですか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-038",
+      "audio": "trouble-0001-038.mp3"
+    },
+    {
+      "en": "I'm okay. Just a little shaken.",
+      "jp": "大丈夫です。少し驚いただけです。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-039",
+      "audio": "trouble-0001-039.mp3"
+    },
+    {
+      "en": "We've found your bag. It was at the lost and found.",
+      "jp": "かばんが見つかりました。遺失物取扱所にありました。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-040",
+      "audio": "trouble-0001-040.mp3"
+    },
+    {
+      "en": "Could you fill out a lost property form?",
+      "jp": "遺失物の用紙に記入してもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-041",
+      "audio": "trouble-0001-041.mp3"
+    },
+    {
+      "en": "Your phone battery is low. Do you want to use my charger?",
+      "jp": "スマホの電池が少ないですね。私の充電器を使いますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-042",
+      "audio": "trouble-0001-042.mp3"
+    },
+    {
+      "en": "The power is out in the whole area.",
+      "jp": "地域全体が停電しています。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-043",
+      "audio": "trouble-0001-043.mp3"
+    },
+    {
+      "en": "There's been an earthquake warning. Please stay away from windows.",
+      "jp": "地震の警報が出ています。窓から離れてください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-044",
+      "audio": "trouble-0001-044.mp3"
+    },
+    {
+      "en": "The flight to Tokyo has been canceled due to bad weather.",
+      "jp": "東京行きは悪天候で欠航になりました。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-045",
+      "audio": "trouble-0001-045.mp3"
+    },
+    {
+      "en": "A storm is coming. Stay indoors if possible.",
+      "jp": "嵐が来ます。できるだけ屋内にいてください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-046",
+      "audio": "trouble-0001-046.mp3"
+    },
+    {
+      "en": "Please keep your belongings with you at all times.",
+      "jp": "持ち物は常に身につけてください。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-047",
+      "audio": "trouble-0001-047.mp3"
+    },
+    {
+      "en": "I need help. Could you call the police?",
+      "jp": "助けが必要です。警察を呼んでもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-048",
+      "audio": "trouble-0001-048.mp3"
+    },
+    {
+      "en": "Do you speak Japanese?",
+      "jp": "日本語を話せる人はいますか。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-049",
+      "audio": "trouble-0001-049.mp3"
+    },
+    {
+      "en": "We'll find an interpreter for you.",
+      "jp": "通訳を手配します。",
+      "say": [],
+      "note": "",
+      "id": "trouble-0001-050",
+      "audio": "trouble-0001-050.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

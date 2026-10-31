@@ -1,321 +1,365 @@
 {
-"id": "fastspeech-0001",
-"situation": "fastspeech",
-"sname": "早口・口語・縮約",
-"icon": "⚡",
-"level": 3,
-"title": "wanna / gonna / didja など実際の聞こえ方",
-"items": [
-{
-"en": "What do you wanna do?",
-"jp": "何したい？",
-"say": [],
-"note": "wanna = want to。",
-"id": "fastspeech-0001-001"
-},
-{
-"en": "I'm gonna send it tomorrow.",
-"jp": "明日送るつもり。",
-"say": [],
-"note": "gonna = going to。",
-"id": "fastspeech-0001-002"
-},
-{
-"en": "I gotta go. I've got a meeting.",
-"jp": "行かなきゃ。会議があるんだ。",
-"say": [],
-"note": "gotta = have got to。",
-"id": "fastspeech-0001-003"
-},
-{
-"en": "Did you eat yet?",
-"jp": "もう食べた？",
-"say": [],
-"note": "didja / jeet などと聞こえる。",
-"id": "fastspeech-0001-004"
-},
-{
-"en": "Whaddya think?",
-"jp": "どう思う？",
-"say": [],
-"note": "What do you think? の縮約。",
-"id": "fastspeech-0001-005"
-},
-{
-"en": "I dunno. Maybe.",
-"jp": "知らない。たぶんね。",
-"say": [],
-"note": "dunno = I don't know。",
-"id": "fastspeech-0001-006"
-},
-{
-"en": "Lemme check.",
-"jp": "確認させて。",
-"say": [],
-"note": "lemme = let me。",
-"id": "fastspeech-0001-007"
-},
-{
-"en": "Gimme a second.",
-"jp": "ちょっと待って。",
-"say": [],
-"note": "gimme = give me。",
-"id": "fastspeech-0001-008"
-},
-{
-"en": "Kinda tired, but I'm okay.",
-"jp": "ちょっと疲れてるけど大丈夫。",
-"say": [],
-"note": "kinda = kind of。",
-"id": "fastspeech-0001-009"
-},
-{
-"en": "I coulda done it earlier.",
-"jp": "もっと早くできたのに。",
-"say": [],
-"note": "coulda = could have。",
-"id": "fastspeech-0001-010"
-},
-{
-"en": "You shoulda told me.",
-"jp": "言ってくれればよかったのに。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-011"
-},
-{
-"en": "I wouldn't've known.",
-"jp": "知らなかったと思う。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-012"
-},
-{
-"en": "D'you have a pen?",
-"jp": "ペン持ってる？",
-"say": [],
-"note": "D'you = Do you。",
-"id": "fastspeech-0001-013"
-},
-{
-"en": "Howdja get here?",
-"jp": "どうやって来たの？",
-"say": [],
-"note": "How did you の縮約。",
-"id": "fastspeech-0001-014"
-},
-{
-"en": "Whaddaya want for lunch?",
-"jp": "昼は何がいい？",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-015"
-},
-{
-"en": "I'll call ya later.",
-"jp": "あとで電話するね。",
-"say": [],
-"note": "ya = you。",
-"id": "fastspeech-0001-016"
-},
-{
-"en": "Got a minute?",
-"jp": "ちょっといい？",
-"say": [],
-"note": "Do you have が省略される。",
-"id": "fastspeech-0001-017"
-},
-{
-"en": "Wanna grab a coffee?",
-"jp": "コーヒーでもどう？",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-018"
-},
-{
-"en": "Where're you from?",
-"jp": "どこの出身？",
-"say": [],
-"note": "Where're = Where are。",
-"id": "fastspeech-0001-019"
-},
-{
-"en": "What's he doin'?",
-"jp": "彼は何してるの？",
-"say": [],
-"note": "-ing の g が消える。",
-"id": "fastspeech-0001-020"
-},
-{
-"en": "It's a lot of work, innit?",
-"jp": "大変な仕事だよね？",
-"say": [],
-"note": "innit = isn't it（英国の口語）。",
-"id": "fastspeech-0001-021"
-},
-{
-"en": "I'm tryna finish this by five.",
-"jp": "5時までに終わらせようとしてるんだ。",
-"say": [],
-"note": "tryna = trying to。",
-"id": "fastspeech-0001-022"
-},
-{
-"en": "Y'all are welcome to join.",
-"jp": "皆さん、ぜひ参加してください。",
-"say": [],
-"note": "y'all = you all（南部）。",
-"id": "fastspeech-0001-023"
-},
-{
-"en": "That's a good one, eh?",
-"jp": "いいね、でしょ？",
-"say": [],
-"note": "eh? はカナダで多い。",
-"id": "fastspeech-0001-024"
-},
-{
-"en": "I can't make it. I've got a thing.",
-"jp": "行けない。用事があって。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-025"
-},
-{
-"en": "I can't hear you. It's a bad line.",
-"jp": "聞こえません。電波が悪いです。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-026"
-},
-{
-"en": "Okay, I'll text ya the address.",
-"jp": "了解、住所を送るね。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-027"
-},
-{
-"en": "What'd he say?",
-"jp": "彼は何て言った？",
-"say": [],
-"note": "What'd = What did。",
-"id": "fastspeech-0001-028"
-},
-{
-"en": "Where'd you put it?",
-"jp": "どこに置いた？",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-029"
-},
-{
-"en": "Why'd you do that?",
-"jp": "なぜそうしたの？",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-030"
-},
-{
-"en": "Could you've told me?",
-"jp": "言えたんじゃない？",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-031"
-},
-{
-"en": "Right, so basically, what happened was, the guy didn't show up.",
-"jp": "つまり、要するに、その人が来なかったんだ。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-032"
-},
-{
-"en": "Yeah, no, I totally get it.",
-"jp": "うん、いや、本当に分かるよ。",
-"say": [],
-"note": "Yeah, no は「いや大丈夫」の意味にもなる。",
-"id": "fastspeech-0001-033"
-},
-{
-"en": "I mean, like, it's not that bad, you know?",
-"jp": "いや、つまり、そこまで悪くないよ、ね？",
-"say": [],
-"note": "like / you know は間をつなぐ言葉。",
-"id": "fastspeech-0001-034"
-},
-{
-"en": "Um, so, I was thinking maybe we could, like, move it to Friday?",
-"jp": "えっと、金曜に動かせないかなって。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-035"
-},
-{
-"en": "Honestly, I kinda wanna skip it.",
-"jp": "正直、ちょっと行くのをやめたい。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-036"
-},
-{
-"en": "It's not like I don't want to, it's just that I'm busy.",
-"jp": "したくないわけじゃなく、忙しいだけ。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-037"
-},
-{
-"en": "Anyway, long story short, we're not going.",
-"jp": "とにかく、要するに行かないことにした。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-038"
-},
-{
-"en": "Fair enough.",
-"jp": "なるほど、それはもっともだ。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-039"
-},
-{
-"en": "Sounds good. Talk soon.",
-"jp": "いいね。またすぐ話そう。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-040"
-},
-{
-"en": "Cool, cool. Appreciate it.",
-"jp": "オーケー。ありがとう。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-041"
-},
-{
-"en": "Totally. No worries.",
-"jp": "もちろん。気にしないで。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-042"
-},
-{
-"en": "Oh, for sure.",
-"jp": "ああ、もちろん。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-043"
-},
-{
-"en": "Bye now. Take care.",
-"jp": "じゃあね。気をつけて。",
-"say": [],
-"note": "",
-"id": "fastspeech-0001-044"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "fastspeech-0001",
+  "situation": "fastspeech",
+  "sname": "早口・口語・縮約",
+  "icon": "⚡",
+  "level": 3,
+  "title": "wanna / gonna / didja など実際の聞こえ方",
+  "items": [
+    {
+      "en": "What do you wanna do?",
+      "jp": "何したい？",
+      "say": [],
+      "note": "wanna = want to。",
+      "id": "fastspeech-0001-001",
+      "audio": "fastspeech-0001-001.mp3"
+    },
+    {
+      "en": "I'm gonna send it tomorrow.",
+      "jp": "明日送るつもり。",
+      "say": [],
+      "note": "gonna = going to。",
+      "id": "fastspeech-0001-002",
+      "audio": "fastspeech-0001-002.mp3"
+    },
+    {
+      "en": "I gotta go. I've got a meeting.",
+      "jp": "行かなきゃ。会議があるんだ。",
+      "say": [],
+      "note": "gotta = have got to。",
+      "id": "fastspeech-0001-003",
+      "audio": "fastspeech-0001-003.mp3"
+    },
+    {
+      "en": "Did you eat yet?",
+      "jp": "もう食べた？",
+      "say": [],
+      "note": "didja / jeet などと聞こえる。",
+      "id": "fastspeech-0001-004",
+      "audio": "fastspeech-0001-004.mp3"
+    },
+    {
+      "en": "Whaddya think?",
+      "jp": "どう思う？",
+      "say": [],
+      "note": "What do you think? の縮約。",
+      "id": "fastspeech-0001-005",
+      "audio": "fastspeech-0001-005.mp3"
+    },
+    {
+      "en": "I dunno. Maybe.",
+      "jp": "知らない。たぶんね。",
+      "say": [],
+      "note": "dunno = I don't know。",
+      "id": "fastspeech-0001-006",
+      "audio": "fastspeech-0001-006.mp3"
+    },
+    {
+      "en": "Lemme check.",
+      "jp": "確認させて。",
+      "say": [],
+      "note": "lemme = let me。",
+      "id": "fastspeech-0001-007",
+      "audio": "fastspeech-0001-007.mp3"
+    },
+    {
+      "en": "Gimme a second.",
+      "jp": "ちょっと待って。",
+      "say": [],
+      "note": "gimme = give me。",
+      "id": "fastspeech-0001-008",
+      "audio": "fastspeech-0001-008.mp3"
+    },
+    {
+      "en": "Kinda tired, but I'm okay.",
+      "jp": "ちょっと疲れてるけど大丈夫。",
+      "say": [],
+      "note": "kinda = kind of。",
+      "id": "fastspeech-0001-009",
+      "audio": "fastspeech-0001-009.mp3"
+    },
+    {
+      "en": "I coulda done it earlier.",
+      "jp": "もっと早くできたのに。",
+      "say": [],
+      "note": "coulda = could have。",
+      "id": "fastspeech-0001-010",
+      "audio": "fastspeech-0001-010.mp3"
+    },
+    {
+      "en": "You shoulda told me.",
+      "jp": "言ってくれればよかったのに。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-011",
+      "audio": "fastspeech-0001-011.mp3"
+    },
+    {
+      "en": "I wouldn't've known.",
+      "jp": "知らなかったと思う。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-012",
+      "audio": "fastspeech-0001-012.mp3"
+    },
+    {
+      "en": "D'you have a pen?",
+      "jp": "ペン持ってる？",
+      "say": [],
+      "note": "D'you = Do you。",
+      "id": "fastspeech-0001-013",
+      "audio": "fastspeech-0001-013.mp3"
+    },
+    {
+      "en": "Howdja get here?",
+      "jp": "どうやって来たの？",
+      "say": [],
+      "note": "How did you の縮約。",
+      "id": "fastspeech-0001-014",
+      "audio": "fastspeech-0001-014.mp3"
+    },
+    {
+      "en": "Whaddaya want for lunch?",
+      "jp": "昼は何がいい？",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-015",
+      "audio": "fastspeech-0001-015.mp3"
+    },
+    {
+      "en": "I'll call ya later.",
+      "jp": "あとで電話するね。",
+      "say": [],
+      "note": "ya = you。",
+      "id": "fastspeech-0001-016",
+      "audio": "fastspeech-0001-016.mp3"
+    },
+    {
+      "en": "Got a minute?",
+      "jp": "ちょっといい？",
+      "say": [],
+      "note": "Do you have が省略される。",
+      "id": "fastspeech-0001-017",
+      "audio": "fastspeech-0001-017.mp3"
+    },
+    {
+      "en": "Wanna grab a coffee?",
+      "jp": "コーヒーでもどう？",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-018",
+      "audio": "fastspeech-0001-018.mp3"
+    },
+    {
+      "en": "Where're you from?",
+      "jp": "どこの出身？",
+      "say": [],
+      "note": "Where're = Where are。",
+      "id": "fastspeech-0001-019",
+      "audio": "fastspeech-0001-019.mp3"
+    },
+    {
+      "en": "What's he doin'?",
+      "jp": "彼は何してるの？",
+      "say": [],
+      "note": "-ing の g が消える。",
+      "id": "fastspeech-0001-020",
+      "audio": "fastspeech-0001-020.mp3"
+    },
+    {
+      "en": "It's a lot of work, innit?",
+      "jp": "大変な仕事だよね？",
+      "say": [],
+      "note": "innit = isn't it（英国の口語）。",
+      "id": "fastspeech-0001-021",
+      "audio": "fastspeech-0001-021.mp3"
+    },
+    {
+      "en": "I'm tryna finish this by five.",
+      "jp": "5時までに終わらせようとしてるんだ。",
+      "say": [],
+      "note": "tryna = trying to。",
+      "id": "fastspeech-0001-022",
+      "audio": "fastspeech-0001-022.mp3"
+    },
+    {
+      "en": "Y'all are welcome to join.",
+      "jp": "皆さん、ぜひ参加してください。",
+      "say": [],
+      "note": "y'all = you all（南部）。",
+      "id": "fastspeech-0001-023",
+      "audio": "fastspeech-0001-023.mp3"
+    },
+    {
+      "en": "That's a good one, eh?",
+      "jp": "いいね、でしょ？",
+      "say": [],
+      "note": "eh? はカナダで多い。",
+      "id": "fastspeech-0001-024",
+      "audio": "fastspeech-0001-024.mp3"
+    },
+    {
+      "en": "I can't make it. I've got a thing.",
+      "jp": "行けない。用事があって。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-025",
+      "audio": "fastspeech-0001-025.mp3"
+    },
+    {
+      "en": "I can't hear you. It's a bad line.",
+      "jp": "聞こえません。電波が悪いです。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-026",
+      "audio": "fastspeech-0001-026.mp3"
+    },
+    {
+      "en": "Okay, I'll text ya the address.",
+      "jp": "了解、住所を送るね。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-027",
+      "audio": "fastspeech-0001-027.mp3"
+    },
+    {
+      "en": "What'd he say?",
+      "jp": "彼は何て言った？",
+      "say": [],
+      "note": "What'd = What did。",
+      "id": "fastspeech-0001-028",
+      "audio": "fastspeech-0001-028.mp3"
+    },
+    {
+      "en": "Where'd you put it?",
+      "jp": "どこに置いた？",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-029",
+      "audio": "fastspeech-0001-029.mp3"
+    },
+    {
+      "en": "Why'd you do that?",
+      "jp": "なぜそうしたの？",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-030",
+      "audio": "fastspeech-0001-030.mp3"
+    },
+    {
+      "en": "Could you've told me?",
+      "jp": "言えたんじゃない？",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-031",
+      "audio": "fastspeech-0001-031.mp3"
+    },
+    {
+      "en": "Right, so basically, what happened was, the guy didn't show up.",
+      "jp": "つまり、要するに、その人が来なかったんだ。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-032",
+      "audio": "fastspeech-0001-032.mp3"
+    },
+    {
+      "en": "Yeah, no, I totally get it.",
+      "jp": "うん、いや、本当に分かるよ。",
+      "say": [],
+      "note": "Yeah, no は「いや大丈夫」の意味にもなる。",
+      "id": "fastspeech-0001-033",
+      "audio": "fastspeech-0001-033.mp3"
+    },
+    {
+      "en": "I mean, like, it's not that bad, you know?",
+      "jp": "いや、つまり、そこまで悪くないよ、ね？",
+      "say": [],
+      "note": "like / you know は間をつなぐ言葉。",
+      "id": "fastspeech-0001-034",
+      "audio": "fastspeech-0001-034.mp3"
+    },
+    {
+      "en": "Um, so, I was thinking maybe we could, like, move it to Friday?",
+      "jp": "えっと、金曜に動かせないかなって。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-035",
+      "audio": "fastspeech-0001-035.mp3"
+    },
+    {
+      "en": "Honestly, I kinda wanna skip it.",
+      "jp": "正直、ちょっと行くのをやめたい。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-036",
+      "audio": "fastspeech-0001-036.mp3"
+    },
+    {
+      "en": "It's not like I don't want to, it's just that I'm busy.",
+      "jp": "したくないわけじゃなく、忙しいだけ。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-037",
+      "audio": "fastspeech-0001-037.mp3"
+    },
+    {
+      "en": "Anyway, long story short, we're not going.",
+      "jp": "とにかく、要するに行かないことにした。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-038",
+      "audio": "fastspeech-0001-038.mp3"
+    },
+    {
+      "en": "Fair enough.",
+      "jp": "なるほど、それはもっともだ。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-039",
+      "audio": "fastspeech-0001-039.mp3"
+    },
+    {
+      "en": "Sounds good. Talk soon.",
+      "jp": "いいね。またすぐ話そう。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-040",
+      "audio": "fastspeech-0001-040.mp3"
+    },
+    {
+      "en": "Cool, cool. Appreciate it.",
+      "jp": "オーケー。ありがとう。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-041",
+      "audio": "fastspeech-0001-041.mp3"
+    },
+    {
+      "en": "Totally. No worries.",
+      "jp": "もちろん。気にしないで。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-042",
+      "audio": "fastspeech-0001-042.mp3"
+    },
+    {
+      "en": "Oh, for sure.",
+      "jp": "ああ、もちろん。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-043",
+      "audio": "fastspeech-0001-043.mp3"
+    },
+    {
+      "en": "Bye now. Take care.",
+      "jp": "じゃあね。気をつけて。",
+      "say": [],
+      "note": "",
+      "id": "fastspeech-0001-044",
+      "audio": "fastspeech-0001-044.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

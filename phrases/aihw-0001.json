@@ -1,307 +1,349 @@
 {
-"id": "aihw-0001",
-"situation": "aihw",
-"sname": "AI：半導体・計算資源・インフラ",
-"icon": "🔌",
-"level": 4,
-"title": "GPU・電力・遅延・コスト・サプライチェーン",
-"items": [
-{
-"en": "Training large models requires thousands of GPUs working together.",
-"jp": "大規模モデルの学習には、数千のGPUの連携が必要です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-001"
-},
-{
-"en": "The chips are in very short supply.",
-"jp": "チップは深刻な供給不足です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-002"
-},
-{
-"en": "Lead times for the latest accelerators are over a year.",
-"jp": "最新のアクセラレータの納期は1年を超えます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-003"
-},
-{
-"en": "Each GPU has eighty gigabytes of high-bandwidth memory.",
-"jp": "各GPUには80GBの広帯域メモリがあります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-004"
-},
-{
-"en": "Memory is often the limiting factor, not compute.",
-"jp": "限界になるのは計算でなく、メモリのことが多いです。",
-"say": [],
-"note": "",
-"id": "aihw-0001-005"
-},
-{
-"en": "The interconnect between GPUs determines how well we can scale.",
-"jp": "GPU間の接続が、どこまで拡張できるかを決めます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-006"
-},
-{
-"en": "We use a cluster of eight servers with eight GPUs each.",
-"jp": "各8GPUのサーバー8台でクラスターを組んでいます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-007"
-},
-{
-"en": "Power consumption is becoming a major issue.",
-"jp": "消費電力が大きな問題になってきています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-008"
-},
-{
-"en": "The data center needs liquid cooling.",
-"jp": "データセンターには液冷が必要です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-009"
-},
-{
-"en": "We're building a new facility that draws one hundred megawatts.",
-"jp": "100メガワットを使う新施設を建設しています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-010"
-},
-{
-"en": "Energy costs make up a large part of the budget.",
-"jp": "エネルギー費が、予算の大きな部分を占めます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-011"
-},
-{
-"en": "Some companies are signing deals for nuclear power.",
-"jp": "原子力の電力契約を結ぶ企業もあります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-012"
-},
-{
-"en": "Efficiency improvements matter as much as raw speed.",
-"jp": "効率の改善は、純粋な速度と同じくらい重要です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-013"
-},
-{
-"en": "A custom chip can be much cheaper per token.",
-"jp": "専用チップなら、トークンあたりをずっと安くできます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-014"
-},
-{
-"en": "We're experimenting with chips designed for inference only.",
-"jp": "推論専用に設計したチップを試しています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-015"
-},
-{
-"en": "Edge devices can now run small models locally.",
-"jp": "エッジ機器でも、小さなモデルをローカルで動かせるようになりました。",
-"say": [],
-"note": "",
-"id": "aihw-0001-016"
-},
-{
-"en": "The phone has a neural engine for on-device AI.",
-"jp": "スマホには、端末内AI用のニューラルエンジンがあります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-017"
-},
-{
-"en": "On-device processing improves privacy and reduces latency.",
-"jp": "端末内処理は、プライバシーを高め、遅延を減らします。",
-"say": [],
-"note": "",
-"id": "aihw-0001-018"
-},
-{
-"en": "Battery life is the main constraint.",
-"jp": "バッテリー持ちが主な制約です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-019"
-},
-{
-"en": "We compress the model to fit in four gigabytes of memory.",
-"jp": "モデルを圧縮して、4GBのメモリに収めます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-020"
-},
-{
-"en": "Quantization to four bits works surprisingly well.",
-"jp": "4ビットへの量子化は、意外とうまくいきます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-021"
-},
-{
-"en": "Throughput is the number of tokens we can process per second.",
-"jp": "スループットは、1秒に処理できるトークン数です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-022"
-},
-{
-"en": "Batching requests improves GPU utilization.",
-"jp": "リクエストをまとめると、GPUの使用効率が上がります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-023"
-},
-{
-"en": "The first token takes longer to appear than the rest.",
-"jp": "最初のトークンは、残りより出るのが遅いです。",
-"say": [],
-"note": "",
-"id": "aihw-0001-024"
-},
-{
-"en": "Time to first token matters for user experience.",
-"jp": "最初のトークンまでの時間は、使い心地に影響します。",
-"say": [],
-"note": "",
-"id": "aihw-0001-025"
-},
-{
-"en": "We serve the model across multiple regions to reduce latency.",
-"jp": "遅延を減らすため、複数の地域でモデルを提供します。",
-"say": [],
-"note": "",
-"id": "aihw-0001-026"
-},
-{
-"en": "There was an outage in one region last night.",
-"jp": "昨夜、ある地域で障害がありました。",
-"say": [],
-"note": "",
-"id": "aihw-0001-027"
-},
-{
-"en": "Capacity planning is a constant challenge.",
-"jp": "必要な容量の見積もりは、常に難題です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-028"
-},
-{
-"en": "We reserve capacity months in advance.",
-"jp": "数か月前から容量を確保します。",
-"say": [],
-"note": "",
-"id": "aihw-0001-029"
-},
-{
-"en": "Spot instances are cheaper but can be interrupted.",
-"jp": "スポットインスタンスは安いですが、中断されることがあります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-030"
-},
-{
-"en": "The cloud bill doubled last month.",
-"jp": "先月、クラウドの請求額が倍になりました。",
-"say": [],
-"note": "",
-"id": "aihw-0001-031"
-},
-{
-"en": "We're looking at ways to optimize our spending.",
-"jp": "費用を最適化する方法を探しています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-032"
-},
-{
-"en": "The supply chain for chips is concentrated in a few countries.",
-"jp": "チップの供給網は、少数の国に集中しています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-033"
-},
-{
-"en": "Export controls affect who can buy advanced chips.",
-"jp": "輸出規制が、最先端チップを買える相手に影響します。",
-"say": [],
-"note": "",
-"id": "aihw-0001-034"
-},
-{
-"en": "Trade tensions add uncertainty to our planning.",
-"jp": "貿易の緊張が、計画に不確実性を加えます。",
-"say": [],
-"note": "",
-"id": "aihw-0001-035"
-},
-{
-"en": "The foundry can only produce so many wafers per month.",
-"jp": "工場が月に作れるウエハーの数には限りがあります。",
-"say": [],
-"note": "",
-"id": "aihw-0001-036"
-},
-{
-"en": "Yield problems delayed the new chip by six months.",
-"jp": "歩留まりの問題で、新チップは6か月遅れました。",
-"say": [],
-"note": "",
-"id": "aihw-0001-037"
-},
-{
-"en": "Open standards could reduce vendor lock-in.",
-"jp": "オープンな規格は、ベンダー依存を減らせるかもしれません。",
-"say": [],
-"note": "",
-"id": "aihw-0001-038"
-},
-{
-"en": "Software support is as important as the hardware.",
-"jp": "ソフトウェアの対応は、ハードウェアと同じくらい重要です。",
-"say": [],
-"note": "",
-"id": "aihw-0001-039"
-},
-{
-"en": "Our compiler optimizes the model for each chip.",
-"jp": "当社のコンパイラが、チップごとにモデルを最適化します。",
-"say": [],
-"note": "",
-"id": "aihw-0001-040"
-},
-{
-"en": "Benchmarks for hardware don't always match real workloads.",
-"jp": "ハードの性能比較は、実際の負荷と一致するとは限りません。",
-"say": [],
-"note": "",
-"id": "aihw-0001-041"
-},
-{
-"en": "We expect costs to keep falling over the next few years.",
-"jp": "今後数年は、コストが下がり続けると見ています。",
-"say": [],
-"note": "",
-"id": "aihw-0001-042"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aihw-0001",
+  "situation": "aihw",
+  "sname": "AI：半導体・計算資源・インフラ",
+  "icon": "🔌",
+  "level": 4,
+  "title": "GPU・電力・遅延・コスト・サプライチェーン",
+  "items": [
+    {
+      "en": "Training large models requires thousands of GPUs working together.",
+      "jp": "大規模モデルの学習には、数千のGPUの連携が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-001",
+      "audio": "aihw-0001-001.mp3"
+    },
+    {
+      "en": "The chips are in very short supply.",
+      "jp": "チップは深刻な供給不足です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-002",
+      "audio": "aihw-0001-002.mp3"
+    },
+    {
+      "en": "Lead times for the latest accelerators are over a year.",
+      "jp": "最新のアクセラレータの納期は1年を超えます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-003",
+      "audio": "aihw-0001-003.mp3"
+    },
+    {
+      "en": "Each GPU has eighty gigabytes of high-bandwidth memory.",
+      "jp": "各GPUには80GBの広帯域メモリがあります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-004",
+      "audio": "aihw-0001-004.mp3"
+    },
+    {
+      "en": "Memory is often the limiting factor, not compute.",
+      "jp": "限界になるのは計算でなく、メモリのことが多いです。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-005",
+      "audio": "aihw-0001-005.mp3"
+    },
+    {
+      "en": "The interconnect between GPUs determines how well we can scale.",
+      "jp": "GPU間の接続が、どこまで拡張できるかを決めます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-006",
+      "audio": "aihw-0001-006.mp3"
+    },
+    {
+      "en": "We use a cluster of eight servers with eight GPUs each.",
+      "jp": "各8GPUのサーバー8台でクラスターを組んでいます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-007",
+      "audio": "aihw-0001-007.mp3"
+    },
+    {
+      "en": "Power consumption is becoming a major issue.",
+      "jp": "消費電力が大きな問題になってきています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-008",
+      "audio": "aihw-0001-008.mp3"
+    },
+    {
+      "en": "The data center needs liquid cooling.",
+      "jp": "データセンターには液冷が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-009",
+      "audio": "aihw-0001-009.mp3"
+    },
+    {
+      "en": "We're building a new facility that draws one hundred megawatts.",
+      "jp": "100メガワットを使う新施設を建設しています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-010",
+      "audio": "aihw-0001-010.mp3"
+    },
+    {
+      "en": "Energy costs make up a large part of the budget.",
+      "jp": "エネルギー費が、予算の大きな部分を占めます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-011",
+      "audio": "aihw-0001-011.mp3"
+    },
+    {
+      "en": "Some companies are signing deals for nuclear power.",
+      "jp": "原子力の電力契約を結ぶ企業もあります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-012",
+      "audio": "aihw-0001-012.mp3"
+    },
+    {
+      "en": "Efficiency improvements matter as much as raw speed.",
+      "jp": "効率の改善は、純粋な速度と同じくらい重要です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-013",
+      "audio": "aihw-0001-013.mp3"
+    },
+    {
+      "en": "A custom chip can be much cheaper per token.",
+      "jp": "専用チップなら、トークンあたりをずっと安くできます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-014",
+      "audio": "aihw-0001-014.mp3"
+    },
+    {
+      "en": "We're experimenting with chips designed for inference only.",
+      "jp": "推論専用に設計したチップを試しています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-015",
+      "audio": "aihw-0001-015.mp3"
+    },
+    {
+      "en": "Edge devices can now run small models locally.",
+      "jp": "エッジ機器でも、小さなモデルをローカルで動かせるようになりました。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-016",
+      "audio": "aihw-0001-016.mp3"
+    },
+    {
+      "en": "The phone has a neural engine for on-device AI.",
+      "jp": "スマホには、端末内AI用のニューラルエンジンがあります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-017",
+      "audio": "aihw-0001-017.mp3"
+    },
+    {
+      "en": "On-device processing improves privacy and reduces latency.",
+      "jp": "端末内処理は、プライバシーを高め、遅延を減らします。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-018",
+      "audio": "aihw-0001-018.mp3"
+    },
+    {
+      "en": "Battery life is the main constraint.",
+      "jp": "バッテリー持ちが主な制約です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-019",
+      "audio": "aihw-0001-019.mp3"
+    },
+    {
+      "en": "We compress the model to fit in four gigabytes of memory.",
+      "jp": "モデルを圧縮して、4GBのメモリに収めます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-020",
+      "audio": "aihw-0001-020.mp3"
+    },
+    {
+      "en": "Quantization to four bits works surprisingly well.",
+      "jp": "4ビットへの量子化は、意外とうまくいきます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-021",
+      "audio": "aihw-0001-021.mp3"
+    },
+    {
+      "en": "Throughput is the number of tokens we can process per second.",
+      "jp": "スループットは、1秒に処理できるトークン数です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-022",
+      "audio": "aihw-0001-022.mp3"
+    },
+    {
+      "en": "Batching requests improves GPU utilization.",
+      "jp": "リクエストをまとめると、GPUの使用効率が上がります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-023",
+      "audio": "aihw-0001-023.mp3"
+    },
+    {
+      "en": "The first token takes longer to appear than the rest.",
+      "jp": "最初のトークンは、残りより出るのが遅いです。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-024",
+      "audio": "aihw-0001-024.mp3"
+    },
+    {
+      "en": "Time to first token matters for user experience.",
+      "jp": "最初のトークンまでの時間は、使い心地に影響します。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-025",
+      "audio": "aihw-0001-025.mp3"
+    },
+    {
+      "en": "We serve the model across multiple regions to reduce latency.",
+      "jp": "遅延を減らすため、複数の地域でモデルを提供します。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-026",
+      "audio": "aihw-0001-026.mp3"
+    },
+    {
+      "en": "There was an outage in one region last night.",
+      "jp": "昨夜、ある地域で障害がありました。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-027",
+      "audio": "aihw-0001-027.mp3"
+    },
+    {
+      "en": "Capacity planning is a constant challenge.",
+      "jp": "必要な容量の見積もりは、常に難題です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-028",
+      "audio": "aihw-0001-028.mp3"
+    },
+    {
+      "en": "We reserve capacity months in advance.",
+      "jp": "数か月前から容量を確保します。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-029",
+      "audio": "aihw-0001-029.mp3"
+    },
+    {
+      "en": "Spot instances are cheaper but can be interrupted.",
+      "jp": "スポットインスタンスは安いですが、中断されることがあります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-030",
+      "audio": "aihw-0001-030.mp3"
+    },
+    {
+      "en": "The cloud bill doubled last month.",
+      "jp": "先月、クラウドの請求額が倍になりました。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-031",
+      "audio": "aihw-0001-031.mp3"
+    },
+    {
+      "en": "We're looking at ways to optimize our spending.",
+      "jp": "費用を最適化する方法を探しています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-032",
+      "audio": "aihw-0001-032.mp3"
+    },
+    {
+      "en": "The supply chain for chips is concentrated in a few countries.",
+      "jp": "チップの供給網は、少数の国に集中しています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-033",
+      "audio": "aihw-0001-033.mp3"
+    },
+    {
+      "en": "Export controls affect who can buy advanced chips.",
+      "jp": "輸出規制が、最先端チップを買える相手に影響します。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-034",
+      "audio": "aihw-0001-034.mp3"
+    },
+    {
+      "en": "Trade tensions add uncertainty to our planning.",
+      "jp": "貿易の緊張が、計画に不確実性を加えます。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-035",
+      "audio": "aihw-0001-035.mp3"
+    },
+    {
+      "en": "The foundry can only produce so many wafers per month.",
+      "jp": "工場が月に作れるウエハーの数には限りがあります。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-036",
+      "audio": "aihw-0001-036.mp3"
+    },
+    {
+      "en": "Yield problems delayed the new chip by six months.",
+      "jp": "歩留まりの問題で、新チップは6か月遅れました。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-037",
+      "audio": "aihw-0001-037.mp3"
+    },
+    {
+      "en": "Open standards could reduce vendor lock-in.",
+      "jp": "オープンな規格は、ベンダー依存を減らせるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-038",
+      "audio": "aihw-0001-038.mp3"
+    },
+    {
+      "en": "Software support is as important as the hardware.",
+      "jp": "ソフトウェアの対応は、ハードウェアと同じくらい重要です。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-039",
+      "audio": "aihw-0001-039.mp3"
+    },
+    {
+      "en": "Our compiler optimizes the model for each chip.",
+      "jp": "当社のコンパイラが、チップごとにモデルを最適化します。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-040",
+      "audio": "aihw-0001-040.mp3"
+    },
+    {
+      "en": "Benchmarks for hardware don't always match real workloads.",
+      "jp": "ハードの性能比較は、実際の負荷と一致するとは限りません。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-041",
+      "audio": "aihw-0001-041.mp3"
+    },
+    {
+      "en": "We expect costs to keep falling over the next few years.",
+      "jp": "今後数年は、コストが下がり続けると見ています。",
+      "say": [],
+      "note": "",
+      "id": "aihw-0001-042",
+      "audio": "aihw-0001-042.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

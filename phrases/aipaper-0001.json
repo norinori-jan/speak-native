@@ -1,335 +1,381 @@
 {
-"id": "aipaper-0001",
-"situation": "aipaper",
-"sname": "AI：論文の読書会",
-"icon": "📄",
-"level": 4,
-"title": "論文の要約・批評・再現性・査読",
-"items": [
-{
-"en": "Today we're discussing a paper on scaling language models.",
-"jp": "今日はモデルの大規模化についての論文を議論します。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-001"
-},
-{
-"en": "Who has read the paper? Let's start with a quick summary.",
-"jp": "論文を読んだ人はいますか。まず簡単な要約からお願いします。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-002"
-},
-{
-"en": "The paper claims that performance improves predictably with scale.",
-"jp": "論文は、規模に応じて性能が予測どおり向上すると主張しています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-003"
-},
-{
-"en": "They train models of different sizes and fit a power law.",
-"jp": "異なるサイズのモデルを学習し、べき乗則を当てはめています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-004"
-},
-{
-"en": "The main contribution is a new training objective.",
-"jp": "主な貢献は、新しい学習目的関数です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-005"
-},
-{
-"en": "They introduce a variant of attention that is more efficient.",
-"jp": "より効率的なアテンションの変種を提案しています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-006"
-},
-{
-"en": "The abstract is clear, but the experiments section is dense.",
-"jp": "要旨は明快ですが、実験の章は読みにくいです。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-007"
-},
-{
-"en": "Section three describes the architecture in detail.",
-"jp": "第3節で、構造を詳しく説明しています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-008"
-},
-{
-"en": "Table two summarizes the main results.",
-"jp": "表2が主な結果をまとめています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-009"
-},
-{
-"en": "Figure four shows the training curves.",
-"jp": "図4は学習曲線です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-010"
-},
-{
-"en": "The appendix has extra details on hyperparameters.",
-"jp": "付録に、ハイパーパラメータの詳細があります。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-011"
-},
-{
-"en": "They compare against several strong baselines.",
-"jp": "いくつかの強いベースラインと比べています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-012"
-},
-{
-"en": "The improvement is small but consistent.",
-"jp": "改善は小さいですが、一貫しています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-013"
-},
-{
-"en": "The gains are within the margin of error.",
-"jp": "向上は誤差の範囲内です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-014"
-},
-{
-"en": "They don't report confidence intervals.",
-"jp": "信頼区間は報告されていません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-015"
-},
-{
-"en": "It's not clear how many runs they averaged over.",
-"jp": "何回分を平均したのか、はっきりしません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-016"
-},
-{
-"en": "Their ablation shows that the new component matters most.",
-"jp": "アブレーションでは、新しい部品が最も重要だと示されています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-017"
-},
-{
-"en": "I'm skeptical about the evaluation setup.",
-"jp": "評価の設定には懐疑的です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-018"
-},
-{
-"en": "It looks like they tuned the hyperparameters on the test set.",
-"jp": "テストセットでハイパーパラメータを調整したように見えます。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-019"
-},
-{
-"en": "That would be a serious methodological flaw.",
-"jp": "それは重大な方法上の欠陥になります。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-020"
-},
-{
-"en": "The authors acknowledge this limitation in the discussion.",
-"jp": "著者らは考察でこの限界を認めています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-021"
-},
-{
-"en": "This builds on earlier work by the same group.",
-"jp": "これは同じグループの以前の研究に基づいています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-022"
-},
-{
-"en": "They cite about eighty references.",
-"jp": "約80件の文献を引用しています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-023"
-},
-{
-"en": "The related work section is quite thorough.",
-"jp": "関連研究の節はかなり丁寧です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-024"
-},
-{
-"en": "The idea is simple, which is a good thing.",
-"jp": "考え方は単純で、それは良い点です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-025"
-},
-{
-"en": "It's incremental rather than groundbreaking.",
-"jp": "画期的というより、少しずつの前進です。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-026"
-},
-{
-"en": "I found the theoretical analysis hard to follow.",
-"jp": "理論的な分析は理解しづらかったです。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-027"
-},
-{
-"en": "The proof relies on a strong assumption.",
-"jp": "証明は強い仮定に頼っています。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-028"
-},
-{
-"en": "The assumption doesn't hold in practice.",
-"jp": "その仮定は、実際には成り立ちません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-029"
-},
-{
-"en": "It would be interesting to try this on a larger dataset.",
-"jp": "もっと大きなデータセットで試すと面白そうです。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-030"
-},
-{
-"en": "Has anyone tried to replicate these results?",
-"jp": "これらの結果を再現しようとした人はいますか。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-031"
-},
-{
-"en": "I tried running their code, but it crashed.",
-"jp": "彼らのコードを動かそうとしましたが、落ちました。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-032"
-},
-{
-"en": "They released the model weights but not the training data.",
-"jp": "モデルの重みは公開されましたが、学習データは公開されていません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-033"
-},
-{
-"en": "The paper was accepted at a top conference.",
-"jp": "この論文は一流の会議に採択されました。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-034"
-},
-{
-"en": "It was rejected from the first venue and revised.",
-"jp": "最初の会議では不採択となり、改訂されました。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-035"
-},
-{
-"en": "The reviewers raised concerns about novelty.",
-"jp": "査読者は、新規性への懸念を挙げました。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-036"
-},
-{
-"en": "It's currently a preprint, so it hasn't been peer reviewed.",
-"jp": "現在はプレプリントで、査読を受けていません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-037"
-},
-{
-"en": "Let's see how this fits into the bigger picture.",
-"jp": "これが全体像の中でどう位置づけられるか見てみましょう。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-038"
-},
-{
-"en": "What are the practical implications of this result?",
-"jp": "この結果の実用面での意味は何でしょうか。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-039"
-},
-{
-"en": "It could reduce the cost of training by half.",
-"jp": "学習コストを半分にできるかもしれません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-040"
-},
-{
-"en": "But it might not work for multimodal models.",
-"jp": "しかし、マルチモーダルのモデルでは通用しないかもしれません。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-041"
-},
-{
-"en": "Let's assign the next paper. Who wants to present?",
-"jp": "次の論文を割り当てましょう。発表したい人は？",
-"say": [],
-"note": "",
-"id": "aipaper-0001-042"
-},
-{
-"en": "I'll send out the link to the paper after the meeting.",
-"jp": "会議の後で論文のリンクを送ります。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-043"
-},
-{
-"en": "Please read sections one through four before next week.",
-"jp": "来週までに1節から4節を読んでおいてください。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-044"
-},
-{
-"en": "Let's keep the discussion focused on the main claims.",
-"jp": "議論は主な主張に絞りましょう。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-045"
-},
-{
-"en": "That's all for today. Great discussion, everyone.",
-"jp": "今日は以上です。皆さん、良い議論でした。",
-"say": [],
-"note": "",
-"id": "aipaper-0001-046"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aipaper-0001",
+  "situation": "aipaper",
+  "sname": "AI：論文の読書会",
+  "icon": "📄",
+  "level": 4,
+  "title": "論文の要約・批評・再現性・査読",
+  "items": [
+    {
+      "en": "Today we're discussing a paper on scaling language models.",
+      "jp": "今日はモデルの大規模化についての論文を議論します。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-001",
+      "audio": "aipaper-0001-001.mp3"
+    },
+    {
+      "en": "Who has read the paper? Let's start with a quick summary.",
+      "jp": "論文を読んだ人はいますか。まず簡単な要約からお願いします。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-002",
+      "audio": "aipaper-0001-002.mp3"
+    },
+    {
+      "en": "The paper claims that performance improves predictably with scale.",
+      "jp": "論文は、規模に応じて性能が予測どおり向上すると主張しています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-003",
+      "audio": "aipaper-0001-003.mp3"
+    },
+    {
+      "en": "They train models of different sizes and fit a power law.",
+      "jp": "異なるサイズのモデルを学習し、べき乗則を当てはめています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-004",
+      "audio": "aipaper-0001-004.mp3"
+    },
+    {
+      "en": "The main contribution is a new training objective.",
+      "jp": "主な貢献は、新しい学習目的関数です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-005",
+      "audio": "aipaper-0001-005.mp3"
+    },
+    {
+      "en": "They introduce a variant of attention that is more efficient.",
+      "jp": "より効率的なアテンションの変種を提案しています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-006",
+      "audio": "aipaper-0001-006.mp3"
+    },
+    {
+      "en": "The abstract is clear, but the experiments section is dense.",
+      "jp": "要旨は明快ですが、実験の章は読みにくいです。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-007",
+      "audio": "aipaper-0001-007.mp3"
+    },
+    {
+      "en": "Section three describes the architecture in detail.",
+      "jp": "第3節で、構造を詳しく説明しています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-008",
+      "audio": "aipaper-0001-008.mp3"
+    },
+    {
+      "en": "Table two summarizes the main results.",
+      "jp": "表2が主な結果をまとめています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-009",
+      "audio": "aipaper-0001-009.mp3"
+    },
+    {
+      "en": "Figure four shows the training curves.",
+      "jp": "図4は学習曲線です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-010",
+      "audio": "aipaper-0001-010.mp3"
+    },
+    {
+      "en": "The appendix has extra details on hyperparameters.",
+      "jp": "付録に、ハイパーパラメータの詳細があります。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-011",
+      "audio": "aipaper-0001-011.mp3"
+    },
+    {
+      "en": "They compare against several strong baselines.",
+      "jp": "いくつかの強いベースラインと比べています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-012",
+      "audio": "aipaper-0001-012.mp3"
+    },
+    {
+      "en": "The improvement is small but consistent.",
+      "jp": "改善は小さいですが、一貫しています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-013",
+      "audio": "aipaper-0001-013.mp3"
+    },
+    {
+      "en": "The gains are within the margin of error.",
+      "jp": "向上は誤差の範囲内です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-014",
+      "audio": "aipaper-0001-014.mp3"
+    },
+    {
+      "en": "They don't report confidence intervals.",
+      "jp": "信頼区間は報告されていません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-015",
+      "audio": "aipaper-0001-015.mp3"
+    },
+    {
+      "en": "It's not clear how many runs they averaged over.",
+      "jp": "何回分を平均したのか、はっきりしません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-016",
+      "audio": "aipaper-0001-016.mp3"
+    },
+    {
+      "en": "Their ablation shows that the new component matters most.",
+      "jp": "アブレーションでは、新しい部品が最も重要だと示されています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-017",
+      "audio": "aipaper-0001-017.mp3"
+    },
+    {
+      "en": "I'm skeptical about the evaluation setup.",
+      "jp": "評価の設定には懐疑的です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-018",
+      "audio": "aipaper-0001-018.mp3"
+    },
+    {
+      "en": "It looks like they tuned the hyperparameters on the test set.",
+      "jp": "テストセットでハイパーパラメータを調整したように見えます。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-019",
+      "audio": "aipaper-0001-019.mp3"
+    },
+    {
+      "en": "That would be a serious methodological flaw.",
+      "jp": "それは重大な方法上の欠陥になります。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-020",
+      "audio": "aipaper-0001-020.mp3"
+    },
+    {
+      "en": "The authors acknowledge this limitation in the discussion.",
+      "jp": "著者らは考察でこの限界を認めています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-021",
+      "audio": "aipaper-0001-021.mp3"
+    },
+    {
+      "en": "This builds on earlier work by the same group.",
+      "jp": "これは同じグループの以前の研究に基づいています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-022",
+      "audio": "aipaper-0001-022.mp3"
+    },
+    {
+      "en": "They cite about eighty references.",
+      "jp": "約80件の文献を引用しています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-023",
+      "audio": "aipaper-0001-023.mp3"
+    },
+    {
+      "en": "The related work section is quite thorough.",
+      "jp": "関連研究の節はかなり丁寧です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-024",
+      "audio": "aipaper-0001-024.mp3"
+    },
+    {
+      "en": "The idea is simple, which is a good thing.",
+      "jp": "考え方は単純で、それは良い点です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-025",
+      "audio": "aipaper-0001-025.mp3"
+    },
+    {
+      "en": "It's incremental rather than groundbreaking.",
+      "jp": "画期的というより、少しずつの前進です。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-026",
+      "audio": "aipaper-0001-026.mp3"
+    },
+    {
+      "en": "I found the theoretical analysis hard to follow.",
+      "jp": "理論的な分析は理解しづらかったです。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-027",
+      "audio": "aipaper-0001-027.mp3"
+    },
+    {
+      "en": "The proof relies on a strong assumption.",
+      "jp": "証明は強い仮定に頼っています。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-028",
+      "audio": "aipaper-0001-028.mp3"
+    },
+    {
+      "en": "The assumption doesn't hold in practice.",
+      "jp": "その仮定は、実際には成り立ちません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-029",
+      "audio": "aipaper-0001-029.mp3"
+    },
+    {
+      "en": "It would be interesting to try this on a larger dataset.",
+      "jp": "もっと大きなデータセットで試すと面白そうです。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-030",
+      "audio": "aipaper-0001-030.mp3"
+    },
+    {
+      "en": "Has anyone tried to replicate these results?",
+      "jp": "これらの結果を再現しようとした人はいますか。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-031",
+      "audio": "aipaper-0001-031.mp3"
+    },
+    {
+      "en": "I tried running their code, but it crashed.",
+      "jp": "彼らのコードを動かそうとしましたが、落ちました。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-032",
+      "audio": "aipaper-0001-032.mp3"
+    },
+    {
+      "en": "They released the model weights but not the training data.",
+      "jp": "モデルの重みは公開されましたが、学習データは公開されていません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-033",
+      "audio": "aipaper-0001-033.mp3"
+    },
+    {
+      "en": "The paper was accepted at a top conference.",
+      "jp": "この論文は一流の会議に採択されました。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-034",
+      "audio": "aipaper-0001-034.mp3"
+    },
+    {
+      "en": "It was rejected from the first venue and revised.",
+      "jp": "最初の会議では不採択となり、改訂されました。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-035",
+      "audio": "aipaper-0001-035.mp3"
+    },
+    {
+      "en": "The reviewers raised concerns about novelty.",
+      "jp": "査読者は、新規性への懸念を挙げました。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-036",
+      "audio": "aipaper-0001-036.mp3"
+    },
+    {
+      "en": "It's currently a preprint, so it hasn't been peer reviewed.",
+      "jp": "現在はプレプリントで、査読を受けていません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-037",
+      "audio": "aipaper-0001-037.mp3"
+    },
+    {
+      "en": "Let's see how this fits into the bigger picture.",
+      "jp": "これが全体像の中でどう位置づけられるか見てみましょう。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-038",
+      "audio": "aipaper-0001-038.mp3"
+    },
+    {
+      "en": "What are the practical implications of this result?",
+      "jp": "この結果の実用面での意味は何でしょうか。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-039",
+      "audio": "aipaper-0001-039.mp3"
+    },
+    {
+      "en": "It could reduce the cost of training by half.",
+      "jp": "学習コストを半分にできるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-040",
+      "audio": "aipaper-0001-040.mp3"
+    },
+    {
+      "en": "But it might not work for multimodal models.",
+      "jp": "しかし、マルチモーダルのモデルでは通用しないかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-041",
+      "audio": "aipaper-0001-041.mp3"
+    },
+    {
+      "en": "Let's assign the next paper. Who wants to present?",
+      "jp": "次の論文を割り当てましょう。発表したい人は？",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-042",
+      "audio": "aipaper-0001-042.mp3"
+    },
+    {
+      "en": "I'll send out the link to the paper after the meeting.",
+      "jp": "会議の後で論文のリンクを送ります。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-043",
+      "audio": "aipaper-0001-043.mp3"
+    },
+    {
+      "en": "Please read sections one through four before next week.",
+      "jp": "来週までに1節から4節を読んでおいてください。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-044",
+      "audio": "aipaper-0001-044.mp3"
+    },
+    {
+      "en": "Let's keep the discussion focused on the main claims.",
+      "jp": "議論は主な主張に絞りましょう。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-045",
+      "audio": "aipaper-0001-045.mp3"
+    },
+    {
+      "en": "That's all for today. Great discussion, everyone.",
+      "jp": "今日は以上です。皆さん、良い議論でした。",
+      "say": [],
+      "note": "",
+      "id": "aipaper-0001-046",
+      "audio": "aipaper-0001-046.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

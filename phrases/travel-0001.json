@@ -1,374 +1,422 @@
 {
-"id": "travel-0001",
-"situation": "travel",
-"sname": "道案内・交通・観光",
-"icon": "🚇",
-"level": 2,
-"title": "道順・電車・タクシー・レンタカー・施設",
-"items": [
-{
-"en": "Excuse me, can I help you? You look lost.",
-"jp": "すみません、お困りですか。迷っているようですね。",
-"say": [
-{
-"en": "Yes, how do I get to the station?",
-"jp": "はい、駅へはどう行けばいいですか。"
-}
-],
-"note": "",
-"id": "travel-0001-001"
-},
-{
-"en": "Go straight for two blocks, then turn left.",
-"jp": "2ブロックまっすぐ行って、左に曲がってください。",
-"say": [],
-"note": "",
-"id": "travel-0001-002"
-},
-{
-"en": "Turn right at the traffic light.",
-"jp": "信号を右に曲がってください。",
-"say": [],
-"note": "",
-"id": "travel-0001-003"
-},
-{
-"en": "It's on the corner, next to the bank.",
-"jp": "角の、銀行の隣です。",
-"say": [],
-"note": "",
-"id": "travel-0001-004"
-},
-{
-"en": "It's across from the post office.",
-"jp": "郵便局の向かいです。",
-"say": [],
-"note": "",
-"id": "travel-0001-005"
-},
-{
-"en": "It's about a five-minute walk from here.",
-"jp": "ここから歩いて5分ほどです。",
-"say": [],
-"note": "",
-"id": "travel-0001-006"
-},
-{
-"en": "It's too far to walk. You should take the bus.",
-"jp": "歩くには遠いです。バスに乗ったほうがいいです。",
-"say": [],
-"note": "",
-"id": "travel-0001-007"
-},
-{
-"en": "You can't miss it.",
-"jp": "すぐ分かりますよ。",
-"say": [],
-"note": "",
-"id": "travel-0001-008"
-},
-{
-"en": "Go past the supermarket, and it'll be on your right.",
-"jp": "スーパーを過ぎると、右手にあります。",
-"say": [],
-"note": "",
-"id": "travel-0001-009"
-},
-{
-"en": "Take the second exit at the roundabout.",
-"jp": "ロータリーで2つ目の出口に出てください。",
-"say": [],
-"note": "",
-"id": "travel-0001-010"
-},
-{
-"en": "Cross the street and walk down the hill.",
-"jp": "道を渡って、坂を下ってください。",
-"say": [],
-"note": "",
-"id": "travel-0001-011"
-},
-{
-"en": "Go through the tunnel and take the stairs up to the platform.",
-"jp": "トンネルを抜けて階段でホームへ上がってください。",
-"say": [],
-"note": "",
-"id": "travel-0001-012"
-},
-{
-"en": "You're going in the wrong direction.",
-"jp": "反対方向に向かっています。",
-"say": [],
-"note": "",
-"id": "travel-0001-013"
-},
-{
-"en": "Take the red line to Central Station and transfer to the blue line.",
-"jp": "赤線でセントラル駅へ行き、青線に乗り換えてください。",
-"say": [],
-"note": "",
-"id": "travel-0001-014"
-},
-{
-"en": "Get off at the third stop.",
-"jp": "3つ目の停留所で降りてください。",
-"say": [],
-"note": "",
-"id": "travel-0001-015"
-},
-{
-"en": "This train is bound for Boston.",
-"jp": "この電車はボストン行きです。",
-"say": [],
-"note": "",
-"id": "travel-0001-016"
-},
-{
-"en": "This is an express train. It doesn't stop at Elm Street.",
-"jp": "これは急行です。エルム通りには止まりません。",
-"say": [],
-"note": "",
-"id": "travel-0001-017"
-},
-{
-"en": "The next train will arrive in four minutes.",
-"jp": "次の電車は4分後に来ます。",
-"say": [],
-"note": "",
-"id": "travel-0001-018"
-},
-{
-"en": "Mind the gap.",
-"jp": "足元にご注意ください。",
-"say": [],
-"note": "ロンドンの地下鉄でおなじみ。",
-"id": "travel-0001-019"
-},
-{
-"en": "Stand clear of the closing doors.",
-"jp": "閉まるドアにご注意ください。",
-"say": [],
-"note": "",
-"id": "travel-0001-020"
-},
-{
-"en": "Please offer your seat to those in need.",
-"jp": "お困りの方に席をお譲りください。",
-"say": [],
-"note": "",
-"id": "travel-0001-021"
-},
-{
-"en": "This stop is closed. Please use the next one.",
-"jp": "この停留所は閉鎖中です。次をご利用ください。",
-"say": [],
-"note": "",
-"id": "travel-0001-022"
-},
-{
-"en": "The service is suspended due to a signal problem.",
-"jp": "信号の不具合で運転を見合わせています。",
-"say": [],
-"note": "",
-"id": "travel-0001-023"
-},
-{
-"en": "You'll need to buy a ticket before boarding.",
-"jp": "乗車前に切符を買う必要があります。",
-"say": [],
-"note": "",
-"id": "travel-0001-024"
-},
-{
-"en": "A day pass costs eight dollars.",
-"jp": "1日乗車券は8ドルです。",
-"say": [],
-"note": "",
-"id": "travel-0001-025"
-},
-{
-"en": "Tap your card on the reader when you get on and off.",
-"jp": "乗り降りの時にカードを読み取り機にかざしてください。",
-"say": [],
-"note": "",
-"id": "travel-0001-026"
-},
-{
-"en": "Exact change only.",
-"jp": "おつりが出ませんので、ちょうどの金額でお願いします。",
-"say": [],
-"note": "バスで頻出。",
-"id": "travel-0001-027"
-},
-{
-"en": "Where to?",
-"jp": "どちらまで？",
-"say": [
-{
-"en": "To the airport, please.",
-"jp": "空港までお願いします。"
-}
-],
-"note": "タクシーの第一声。",
-"id": "travel-0001-028"
-},
-{
-"en": "Do you have a preferred route?",
-"jp": "希望のルートはありますか。",
-"say": [],
-"note": "",
-"id": "travel-0001-029"
-},
-{
-"en": "There's a lot of traffic. It'll take about forty minutes.",
-"jp": "渋滞しています。40分ほどかかります。",
-"say": [],
-"note": "",
-"id": "travel-0001-030"
-},
-{
-"en": "Would you like me to take the highway?",
-"jp": "高速を使いますか。",
-"say": [
-{
-"en": "Yes, please.",
-"jp": "はい、お願いします。"
-}
-],
-"note": "",
-"id": "travel-0001-031"
-},
-{
-"en": "We're here. That'll be thirty-two dollars.",
-"jp": "着きました。32ドルです。",
-"say": [],
-"note": "",
-"id": "travel-0001-032"
-},
-{
-"en": "Keep the change.",
-"jp": "おつりは取っておいてください。",
-"say": [],
-"note": "",
-"id": "travel-0001-033"
-},
-{
-"en": "Your driver is arriving in three minutes in a white Toyota.",
-"jp": "ドライバーは3分後に白いトヨタで到着します。",
-"say": [],
-"note": "配車アプリの案内。",
-"id": "travel-0001-034"
-},
-{
-"en": "Can you confirm your destination?",
-"jp": "行き先を確認してもらえますか。",
-"say": [],
-"note": "",
-"id": "travel-0001-035"
-},
-{
-"en": "Do you want to rent a car?",
-"jp": "車を借りますか。",
-"say": [],
-"note": "",
-"id": "travel-0001-036"
-},
-{
-"en": "Do you have a valid driver's license?",
-"jp": "有効な運転免許証はお持ちですか。",
-"say": [
-{
-"en": "I have an international driving permit.",
-"jp": "国際免許証があります。"
-}
-],
-"note": "",
-"id": "travel-0001-037"
-},
-{
-"en": "Would you like to add full insurance?",
-"jp": "フルカバーの保険を付けますか。",
-"say": [],
-"note": "",
-"id": "travel-0001-038"
-},
-{
-"en": "Please return the car with a full tank.",
-"jp": "満タンで返却してください。",
-"say": [],
-"note": "",
-"id": "travel-0001-039"
-},
-{
-"en": "The speed limit here is thirty-five miles per hour.",
-"jp": "ここの制限速度は時速35マイルです。",
-"say": [],
-"note": "",
-"id": "travel-0001-040"
-},
-{
-"en": "You can't park here. It's a tow-away zone.",
-"jp": "ここには停められません。レッカー移動区域です。",
-"say": [],
-"note": "",
-"id": "travel-0001-041"
-},
-{
-"en": "Parking is free after six p.m.",
-"jp": "午後6時以降は駐車無料です。",
-"say": [],
-"note": "",
-"id": "travel-0001-042"
-},
-{
-"en": "The museum opens at nine and closes at five.",
-"jp": "美術館は9時開館、5時閉館です。",
-"say": [],
-"note": "",
-"id": "travel-0001-043"
-},
-{
-"en": "Tickets are sold at the entrance.",
-"jp": "チケットは入口で販売しています。",
-"say": [],
-"note": "",
-"id": "travel-0001-044"
-},
-{
-"en": "The last tour starts at four.",
-"jp": "最終ツアーは4時開始です。",
-"say": [],
-"note": "",
-"id": "travel-0001-045"
-},
-{
-"en": "Photos are not allowed inside.",
-"jp": "館内は撮影禁止です。",
-"say": [],
-"note": "",
-"id": "travel-0001-046"
-},
-{
-"en": "Restrooms are down the hall on the left.",
-"jp": "お手洗いは廊下の左奥です。",
-"say": [],
-"note": "",
-"id": "travel-0001-047"
-},
-{
-"en": "Is this seat taken?",
-"jp": "この席は空いていますか。",
-"say": [
-{
-"en": "No, go ahead.",
-"jp": "どうぞ。"
-}
-],
-"note": "",
-"id": "travel-0001-048"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "travel-0001",
+  "situation": "travel",
+  "sname": "道案内・交通・観光",
+  "icon": "🚇",
+  "level": 2,
+  "title": "道順・電車・タクシー・レンタカー・施設",
+  "items": [
+    {
+      "en": "Excuse me, can I help you? You look lost.",
+      "jp": "すみません、お困りですか。迷っているようですね。",
+      "say": [
+        {
+          "en": "Yes, how do I get to the station?",
+          "jp": "はい、駅へはどう行けばいいですか。"
+        }
+      ],
+      "note": "",
+      "id": "travel-0001-001",
+      "audio": "travel-0001-001.mp3"
+    },
+    {
+      "en": "Go straight for two blocks, then turn left.",
+      "jp": "2ブロックまっすぐ行って、左に曲がってください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-002",
+      "audio": "travel-0001-002.mp3"
+    },
+    {
+      "en": "Turn right at the traffic light.",
+      "jp": "信号を右に曲がってください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-003",
+      "audio": "travel-0001-003.mp3"
+    },
+    {
+      "en": "It's on the corner, next to the bank.",
+      "jp": "角の、銀行の隣です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-004",
+      "audio": "travel-0001-004.mp3"
+    },
+    {
+      "en": "It's across from the post office.",
+      "jp": "郵便局の向かいです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-005",
+      "audio": "travel-0001-005.mp3"
+    },
+    {
+      "en": "It's about a five-minute walk from here.",
+      "jp": "ここから歩いて5分ほどです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-006",
+      "audio": "travel-0001-006.mp3"
+    },
+    {
+      "en": "It's too far to walk. You should take the bus.",
+      "jp": "歩くには遠いです。バスに乗ったほうがいいです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-007",
+      "audio": "travel-0001-007.mp3"
+    },
+    {
+      "en": "You can't miss it.",
+      "jp": "すぐ分かりますよ。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-008",
+      "audio": "travel-0001-008.mp3"
+    },
+    {
+      "en": "Go past the supermarket, and it'll be on your right.",
+      "jp": "スーパーを過ぎると、右手にあります。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-009",
+      "audio": "travel-0001-009.mp3"
+    },
+    {
+      "en": "Take the second exit at the roundabout.",
+      "jp": "ロータリーで2つ目の出口に出てください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-010",
+      "audio": "travel-0001-010.mp3"
+    },
+    {
+      "en": "Cross the street and walk down the hill.",
+      "jp": "道を渡って、坂を下ってください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-011",
+      "audio": "travel-0001-011.mp3"
+    },
+    {
+      "en": "Go through the tunnel and take the stairs up to the platform.",
+      "jp": "トンネルを抜けて階段でホームへ上がってください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-012",
+      "audio": "travel-0001-012.mp3"
+    },
+    {
+      "en": "You're going in the wrong direction.",
+      "jp": "反対方向に向かっています。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-013",
+      "audio": "travel-0001-013.mp3"
+    },
+    {
+      "en": "Take the red line to Central Station and transfer to the blue line.",
+      "jp": "赤線でセントラル駅へ行き、青線に乗り換えてください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-014",
+      "audio": "travel-0001-014.mp3"
+    },
+    {
+      "en": "Get off at the third stop.",
+      "jp": "3つ目の停留所で降りてください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-015",
+      "audio": "travel-0001-015.mp3"
+    },
+    {
+      "en": "This train is bound for Boston.",
+      "jp": "この電車はボストン行きです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-016",
+      "audio": "travel-0001-016.mp3"
+    },
+    {
+      "en": "This is an express train. It doesn't stop at Elm Street.",
+      "jp": "これは急行です。エルム通りには止まりません。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-017",
+      "audio": "travel-0001-017.mp3"
+    },
+    {
+      "en": "The next train will arrive in four minutes.",
+      "jp": "次の電車は4分後に来ます。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-018",
+      "audio": "travel-0001-018.mp3"
+    },
+    {
+      "en": "Mind the gap.",
+      "jp": "足元にご注意ください。",
+      "say": [],
+      "note": "ロンドンの地下鉄でおなじみ。",
+      "id": "travel-0001-019",
+      "audio": "travel-0001-019.mp3"
+    },
+    {
+      "en": "Stand clear of the closing doors.",
+      "jp": "閉まるドアにご注意ください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-020",
+      "audio": "travel-0001-020.mp3"
+    },
+    {
+      "en": "Please offer your seat to those in need.",
+      "jp": "お困りの方に席をお譲りください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-021",
+      "audio": "travel-0001-021.mp3"
+    },
+    {
+      "en": "This stop is closed. Please use the next one.",
+      "jp": "この停留所は閉鎖中です。次をご利用ください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-022",
+      "audio": "travel-0001-022.mp3"
+    },
+    {
+      "en": "The service is suspended due to a signal problem.",
+      "jp": "信号の不具合で運転を見合わせています。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-023",
+      "audio": "travel-0001-023.mp3"
+    },
+    {
+      "en": "You'll need to buy a ticket before boarding.",
+      "jp": "乗車前に切符を買う必要があります。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-024",
+      "audio": "travel-0001-024.mp3"
+    },
+    {
+      "en": "A day pass costs eight dollars.",
+      "jp": "1日乗車券は8ドルです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-025",
+      "audio": "travel-0001-025.mp3"
+    },
+    {
+      "en": "Tap your card on the reader when you get on and off.",
+      "jp": "乗り降りの時にカードを読み取り機にかざしてください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-026",
+      "audio": "travel-0001-026.mp3"
+    },
+    {
+      "en": "Exact change only.",
+      "jp": "おつりが出ませんので、ちょうどの金額でお願いします。",
+      "say": [],
+      "note": "バスで頻出。",
+      "id": "travel-0001-027",
+      "audio": "travel-0001-027.mp3"
+    },
+    {
+      "en": "Where to?",
+      "jp": "どちらまで？",
+      "say": [
+        {
+          "en": "To the airport, please.",
+          "jp": "空港までお願いします。"
+        }
+      ],
+      "note": "タクシーの第一声。",
+      "id": "travel-0001-028",
+      "audio": "travel-0001-028.mp3"
+    },
+    {
+      "en": "Do you have a preferred route?",
+      "jp": "希望のルートはありますか。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-029",
+      "audio": "travel-0001-029.mp3"
+    },
+    {
+      "en": "There's a lot of traffic. It'll take about forty minutes.",
+      "jp": "渋滞しています。40分ほどかかります。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-030",
+      "audio": "travel-0001-030.mp3"
+    },
+    {
+      "en": "Would you like me to take the highway?",
+      "jp": "高速を使いますか。",
+      "say": [
+        {
+          "en": "Yes, please.",
+          "jp": "はい、お願いします。"
+        }
+      ],
+      "note": "",
+      "id": "travel-0001-031",
+      "audio": "travel-0001-031.mp3"
+    },
+    {
+      "en": "We're here. That'll be thirty-two dollars.",
+      "jp": "着きました。32ドルです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-032",
+      "audio": "travel-0001-032.mp3"
+    },
+    {
+      "en": "Keep the change.",
+      "jp": "おつりは取っておいてください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-033",
+      "audio": "travel-0001-033.mp3"
+    },
+    {
+      "en": "Your driver is arriving in three minutes in a white Toyota.",
+      "jp": "ドライバーは3分後に白いトヨタで到着します。",
+      "say": [],
+      "note": "配車アプリの案内。",
+      "id": "travel-0001-034",
+      "audio": "travel-0001-034.mp3"
+    },
+    {
+      "en": "Can you confirm your destination?",
+      "jp": "行き先を確認してもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-035",
+      "audio": "travel-0001-035.mp3"
+    },
+    {
+      "en": "Do you want to rent a car?",
+      "jp": "車を借りますか。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-036",
+      "audio": "travel-0001-036.mp3"
+    },
+    {
+      "en": "Do you have a valid driver's license?",
+      "jp": "有効な運転免許証はお持ちですか。",
+      "say": [
+        {
+          "en": "I have an international driving permit.",
+          "jp": "国際免許証があります。"
+        }
+      ],
+      "note": "",
+      "id": "travel-0001-037",
+      "audio": "travel-0001-037.mp3"
+    },
+    {
+      "en": "Would you like to add full insurance?",
+      "jp": "フルカバーの保険を付けますか。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-038",
+      "audio": "travel-0001-038.mp3"
+    },
+    {
+      "en": "Please return the car with a full tank.",
+      "jp": "満タンで返却してください。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-039",
+      "audio": "travel-0001-039.mp3"
+    },
+    {
+      "en": "The speed limit here is thirty-five miles per hour.",
+      "jp": "ここの制限速度は時速35マイルです。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-040",
+      "audio": "travel-0001-040.mp3"
+    },
+    {
+      "en": "You can't park here. It's a tow-away zone.",
+      "jp": "ここには停められません。レッカー移動区域です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-041",
+      "audio": "travel-0001-041.mp3"
+    },
+    {
+      "en": "Parking is free after six p.m.",
+      "jp": "午後6時以降は駐車無料です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-042",
+      "audio": "travel-0001-042.mp3"
+    },
+    {
+      "en": "The museum opens at nine and closes at five.",
+      "jp": "美術館は9時開館、5時閉館です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-043",
+      "audio": "travel-0001-043.mp3"
+    },
+    {
+      "en": "Tickets are sold at the entrance.",
+      "jp": "チケットは入口で販売しています。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-044",
+      "audio": "travel-0001-044.mp3"
+    },
+    {
+      "en": "The last tour starts at four.",
+      "jp": "最終ツアーは4時開始です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-045",
+      "audio": "travel-0001-045.mp3"
+    },
+    {
+      "en": "Photos are not allowed inside.",
+      "jp": "館内は撮影禁止です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-046",
+      "audio": "travel-0001-046.mp3"
+    },
+    {
+      "en": "Restrooms are down the hall on the left.",
+      "jp": "お手洗いは廊下の左奥です。",
+      "say": [],
+      "note": "",
+      "id": "travel-0001-047",
+      "audio": "travel-0001-047.mp3"
+    },
+    {
+      "en": "Is this seat taken?",
+      "jp": "この席は空いていますか。",
+      "say": [
+        {
+          "en": "No, go ahead.",
+          "jp": "どうぞ。"
+        }
+      ],
+      "note": "",
+      "id": "travel-0001-048",
+      "audio": "travel-0001-048.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

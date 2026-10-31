@@ -1,335 +1,381 @@
 {
-"id": "bizmfg-0001",
-"situation": "bizmfg",
-"sname": "ビジネス：製造・物流・貿易",
-"icon": "🏭",
-"level": 3,
-"title": "生産・品質・輸送・通関・安全",
-"items": [
-{
-"en": "The shipment is scheduled to leave the factory on Monday.",
-"jp": "出荷は月曜に工場を出る予定です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-001"
-},
-{
-"en": "Production is running at full capacity.",
-"jp": "生産はフル稼働です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-002"
-},
-{
-"en": "We had a machine breakdown. It will take two days to repair.",
-"jp": "機械が故障しました。修理に2日かかります。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-003"
-},
-{
-"en": "The defect rate is below one percent.",
-"jp": "不良率は1%未満です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-004"
-},
-{
-"en": "We found a defect in this batch.",
-"jp": "このロットに不良が見つかりました。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-005"
-},
-{
-"en": "Quality control rejected the whole lot.",
-"jp": "品質管理がロット全体を不合格にしました。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-006"
-},
-{
-"en": "We need to recall the affected products.",
-"jp": "影響のある製品を回収する必要があります。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-007"
-},
-{
-"en": "Every item goes through three inspections.",
-"jp": "全製品が3回の検査を通ります。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-008"
-},
-{
-"en": "Please send us the inspection report.",
-"jp": "検査報告書を送ってください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-009"
-},
-{
-"en": "The raw materials are running low.",
-"jp": "原材料が少なくなっています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-010"
-},
-{
-"en": "The supplier has raised the price by five percent.",
-"jp": "仕入先が価格を5%上げました。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-011"
-},
-{
-"en": "We're short on parts, so production will be delayed.",
-"jp": "部品が足りず、生産が遅れます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-012"
-},
-{
-"en": "The delivery will be late because of a truck strike.",
-"jp": "トラックのストで納品が遅れます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-013"
-},
-{
-"en": "The container is stuck at the port.",
-"jp": "コンテナが港で止まっています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-014"
-},
-{
-"en": "The goods are held up in customs.",
-"jp": "荷物が税関で止まっています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-015"
-},
-{
-"en": "We need the commercial invoice and the packing list.",
-"jp": "商業インボイスと梱包明細が必要です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-016"
-},
-{
-"en": "What's the HS code for this product?",
-"jp": "この製品のHSコードは何ですか。",
-"say": [],
-"note": "HS code = 関税分類コード。",
-"id": "bizmfg-0001-017"
-},
-{
-"en": "The shipping terms are FOB Yokohama.",
-"jp": "貿易条件はFOB横浜です。",
-"say": [],
-"note": "FOB = 積み地で費用・責任が切り替わる条件。",
-"id": "bizmfg-0001-018"
-},
-{
-"en": "The freight cost is not included in the price.",
-"jp": "運賃は価格に含まれていません。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-019"
-},
-{
-"en": "It'll go by sea freight and take about three weeks.",
-"jp": "船便で、約3週間かかります。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-020"
-},
-{
-"en": "If you need it faster, we can send it by air.",
-"jp": "早く必要なら、航空便で送れます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-021"
-},
-{
-"en": "Please provide the tracking number once it ships.",
-"jp": "出荷したら追跡番号を教えてください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-022"
-},
-{
-"en": "The pallet weighs about eight hundred kilograms.",
-"jp": "パレットの重さは約800キロです。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-023"
-},
-{
-"en": "Each carton contains twenty-four units.",
-"jp": "1ケースに24個入っています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-024"
-},
-{
-"en": "Please label each box with the order number.",
-"jp": "各箱に注文番号を貼ってください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-025"
-},
-{
-"en": "This side up. Handle with care.",
-"jp": "天地無用。取り扱い注意。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-026"
-},
-{
-"en": "Fragile. Do not stack.",
-"jp": "割れ物。積み重ね禁止。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-027"
-},
-{
-"en": "Please keep it away from moisture.",
-"jp": "湿気を避けてください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-028"
-},
-{
-"en": "The warehouse is open from seven to four.",
-"jp": "倉庫は7時から4時まで開いています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-029"
-},
-{
-"en": "The truck arrives at dock number three.",
-"jp": "トラックは3番ドックに着きます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-030"
-},
-{
-"en": "Please sign for the delivery here.",
-"jp": "受領のサインをここにお願いします。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-031"
-},
-{
-"en": "We'll need a forklift to unload this.",
-"jp": "降ろすにはフォークリフトが必要です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-032"
-},
-{
-"en": "Wear a helmet and safety shoes in this area.",
-"jp": "このエリアではヘルメットと安全靴を着用してください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-033"
-},
-{
-"en": "Safety comes first.",
-"jp": "安全第一です。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-034"
-},
-{
-"en": "Please report any accident immediately.",
-"jp": "事故はすぐに報告してください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-035"
-},
-{
-"en": "The line will be shut down for inspection tomorrow.",
-"jp": "明日、点検のためラインを止めます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-036"
-},
-{
-"en": "We're switching to a new production method next month.",
-"jp": "来月から新しい生産方式に切り替えます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-037"
-},
-{
-"en": "We aim to reduce waste by ten percent.",
-"jp": "廃棄を10%減らすことを目指しています。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-038"
-},
-{
-"en": "We're certified under ISO nine thousand one.",
-"jp": "ISO9001の認証を受けています。",
-"say": [],
-"note": "ISO 9001 は nine thousand one と読む。",
-"id": "bizmfg-0001-039"
-},
-{
-"en": "Could you send us a sample for approval?",
-"jp": "承認用のサンプルを送ってもらえますか。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-040"
-},
-{
-"en": "The sample doesn't match the specification.",
-"jp": "サンプルが仕様に合っていません。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-041"
-},
-{
-"en": "The tolerance is plus or minus point one millimeter.",
-"jp": "公差はプラスマイナス0.1ミリです。",
-"say": [],
-"note": "point one = 0.1。",
-"id": "bizmfg-0001-042"
-},
-{
-"en": "The drawing has been revised. Please use the latest version.",
-"jp": "図面が改訂されました。最新版を使ってください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-043"
-},
-{
-"en": "Could you quote us for ten thousand units?",
-"jp": "1万個の見積もりをもらえますか。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-044"
-},
-{
-"en": "We can offer a volume discount for annual contracts.",
-"jp": "年間契約なら数量割引ができます。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-045"
-},
-{
-"en": "Please confirm the order by the end of this week.",
-"jp": "今週末までに注文を確定してください。",
-"say": [],
-"note": "",
-"id": "bizmfg-0001-046"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "bizmfg-0001",
+  "situation": "bizmfg",
+  "sname": "ビジネス：製造・物流・貿易",
+  "icon": "🏭",
+  "level": 3,
+  "title": "生産・品質・輸送・通関・安全",
+  "items": [
+    {
+      "en": "The shipment is scheduled to leave the factory on Monday.",
+      "jp": "出荷は月曜に工場を出る予定です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-001",
+      "audio": "bizmfg-0001-001.mp3"
+    },
+    {
+      "en": "Production is running at full capacity.",
+      "jp": "生産はフル稼働です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-002",
+      "audio": "bizmfg-0001-002.mp3"
+    },
+    {
+      "en": "We had a machine breakdown. It will take two days to repair.",
+      "jp": "機械が故障しました。修理に2日かかります。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-003",
+      "audio": "bizmfg-0001-003.mp3"
+    },
+    {
+      "en": "The defect rate is below one percent.",
+      "jp": "不良率は1%未満です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-004",
+      "audio": "bizmfg-0001-004.mp3"
+    },
+    {
+      "en": "We found a defect in this batch.",
+      "jp": "このロットに不良が見つかりました。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-005",
+      "audio": "bizmfg-0001-005.mp3"
+    },
+    {
+      "en": "Quality control rejected the whole lot.",
+      "jp": "品質管理がロット全体を不合格にしました。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-006",
+      "audio": "bizmfg-0001-006.mp3"
+    },
+    {
+      "en": "We need to recall the affected products.",
+      "jp": "影響のある製品を回収する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-007",
+      "audio": "bizmfg-0001-007.mp3"
+    },
+    {
+      "en": "Every item goes through three inspections.",
+      "jp": "全製品が3回の検査を通ります。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-008",
+      "audio": "bizmfg-0001-008.mp3"
+    },
+    {
+      "en": "Please send us the inspection report.",
+      "jp": "検査報告書を送ってください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-009",
+      "audio": "bizmfg-0001-009.mp3"
+    },
+    {
+      "en": "The raw materials are running low.",
+      "jp": "原材料が少なくなっています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-010",
+      "audio": "bizmfg-0001-010.mp3"
+    },
+    {
+      "en": "The supplier has raised the price by five percent.",
+      "jp": "仕入先が価格を5%上げました。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-011",
+      "audio": "bizmfg-0001-011.mp3"
+    },
+    {
+      "en": "We're short on parts, so production will be delayed.",
+      "jp": "部品が足りず、生産が遅れます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-012",
+      "audio": "bizmfg-0001-012.mp3"
+    },
+    {
+      "en": "The delivery will be late because of a truck strike.",
+      "jp": "トラックのストで納品が遅れます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-013",
+      "audio": "bizmfg-0001-013.mp3"
+    },
+    {
+      "en": "The container is stuck at the port.",
+      "jp": "コンテナが港で止まっています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-014",
+      "audio": "bizmfg-0001-014.mp3"
+    },
+    {
+      "en": "The goods are held up in customs.",
+      "jp": "荷物が税関で止まっています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-015",
+      "audio": "bizmfg-0001-015.mp3"
+    },
+    {
+      "en": "We need the commercial invoice and the packing list.",
+      "jp": "商業インボイスと梱包明細が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-016",
+      "audio": "bizmfg-0001-016.mp3"
+    },
+    {
+      "en": "What's the HS code for this product?",
+      "jp": "この製品のHSコードは何ですか。",
+      "say": [],
+      "note": "HS code = 関税分類コード。",
+      "id": "bizmfg-0001-017",
+      "audio": "bizmfg-0001-017.mp3"
+    },
+    {
+      "en": "The shipping terms are FOB Yokohama.",
+      "jp": "貿易条件はFOB横浜です。",
+      "say": [],
+      "note": "FOB = 積み地で費用・責任が切り替わる条件。",
+      "id": "bizmfg-0001-018",
+      "audio": "bizmfg-0001-018.mp3"
+    },
+    {
+      "en": "The freight cost is not included in the price.",
+      "jp": "運賃は価格に含まれていません。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-019",
+      "audio": "bizmfg-0001-019.mp3"
+    },
+    {
+      "en": "It'll go by sea freight and take about three weeks.",
+      "jp": "船便で、約3週間かかります。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-020",
+      "audio": "bizmfg-0001-020.mp3"
+    },
+    {
+      "en": "If you need it faster, we can send it by air.",
+      "jp": "早く必要なら、航空便で送れます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-021",
+      "audio": "bizmfg-0001-021.mp3"
+    },
+    {
+      "en": "Please provide the tracking number once it ships.",
+      "jp": "出荷したら追跡番号を教えてください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-022",
+      "audio": "bizmfg-0001-022.mp3"
+    },
+    {
+      "en": "The pallet weighs about eight hundred kilograms.",
+      "jp": "パレットの重さは約800キロです。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-023",
+      "audio": "bizmfg-0001-023.mp3"
+    },
+    {
+      "en": "Each carton contains twenty-four units.",
+      "jp": "1ケースに24個入っています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-024",
+      "audio": "bizmfg-0001-024.mp3"
+    },
+    {
+      "en": "Please label each box with the order number.",
+      "jp": "各箱に注文番号を貼ってください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-025",
+      "audio": "bizmfg-0001-025.mp3"
+    },
+    {
+      "en": "This side up. Handle with care.",
+      "jp": "天地無用。取り扱い注意。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-026",
+      "audio": "bizmfg-0001-026.mp3"
+    },
+    {
+      "en": "Fragile. Do not stack.",
+      "jp": "割れ物。積み重ね禁止。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-027",
+      "audio": "bizmfg-0001-027.mp3"
+    },
+    {
+      "en": "Please keep it away from moisture.",
+      "jp": "湿気を避けてください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-028",
+      "audio": "bizmfg-0001-028.mp3"
+    },
+    {
+      "en": "The warehouse is open from seven to four.",
+      "jp": "倉庫は7時から4時まで開いています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-029",
+      "audio": "bizmfg-0001-029.mp3"
+    },
+    {
+      "en": "The truck arrives at dock number three.",
+      "jp": "トラックは3番ドックに着きます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-030",
+      "audio": "bizmfg-0001-030.mp3"
+    },
+    {
+      "en": "Please sign for the delivery here.",
+      "jp": "受領のサインをここにお願いします。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-031",
+      "audio": "bizmfg-0001-031.mp3"
+    },
+    {
+      "en": "We'll need a forklift to unload this.",
+      "jp": "降ろすにはフォークリフトが必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-032",
+      "audio": "bizmfg-0001-032.mp3"
+    },
+    {
+      "en": "Wear a helmet and safety shoes in this area.",
+      "jp": "このエリアではヘルメットと安全靴を着用してください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-033",
+      "audio": "bizmfg-0001-033.mp3"
+    },
+    {
+      "en": "Safety comes first.",
+      "jp": "安全第一です。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-034",
+      "audio": "bizmfg-0001-034.mp3"
+    },
+    {
+      "en": "Please report any accident immediately.",
+      "jp": "事故はすぐに報告してください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-035",
+      "audio": "bizmfg-0001-035.mp3"
+    },
+    {
+      "en": "The line will be shut down for inspection tomorrow.",
+      "jp": "明日、点検のためラインを止めます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-036",
+      "audio": "bizmfg-0001-036.mp3"
+    },
+    {
+      "en": "We're switching to a new production method next month.",
+      "jp": "来月から新しい生産方式に切り替えます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-037",
+      "audio": "bizmfg-0001-037.mp3"
+    },
+    {
+      "en": "We aim to reduce waste by ten percent.",
+      "jp": "廃棄を10%減らすことを目指しています。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-038",
+      "audio": "bizmfg-0001-038.mp3"
+    },
+    {
+      "en": "We're certified under ISO nine thousand one.",
+      "jp": "ISO9001の認証を受けています。",
+      "say": [],
+      "note": "ISO 9001 は nine thousand one と読む。",
+      "id": "bizmfg-0001-039",
+      "audio": "bizmfg-0001-039.mp3"
+    },
+    {
+      "en": "Could you send us a sample for approval?",
+      "jp": "承認用のサンプルを送ってもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-040",
+      "audio": "bizmfg-0001-040.mp3"
+    },
+    {
+      "en": "The sample doesn't match the specification.",
+      "jp": "サンプルが仕様に合っていません。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-041",
+      "audio": "bizmfg-0001-041.mp3"
+    },
+    {
+      "en": "The tolerance is plus or minus point one millimeter.",
+      "jp": "公差はプラスマイナス0.1ミリです。",
+      "say": [],
+      "note": "point one = 0.1。",
+      "id": "bizmfg-0001-042",
+      "audio": "bizmfg-0001-042.mp3"
+    },
+    {
+      "en": "The drawing has been revised. Please use the latest version.",
+      "jp": "図面が改訂されました。最新版を使ってください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-043",
+      "audio": "bizmfg-0001-043.mp3"
+    },
+    {
+      "en": "Could you quote us for ten thousand units?",
+      "jp": "1万個の見積もりをもらえますか。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-044",
+      "audio": "bizmfg-0001-044.mp3"
+    },
+    {
+      "en": "We can offer a volume discount for annual contracts.",
+      "jp": "年間契約なら数量割引ができます。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-045",
+      "audio": "bizmfg-0001-045.mp3"
+    },
+    {
+      "en": "Please confirm the order by the end of this week.",
+      "jp": "今週末までに注文を確定してください。",
+      "say": [],
+      "note": "",
+      "id": "bizmfg-0001-046",
+      "audio": "bizmfg-0001-046.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

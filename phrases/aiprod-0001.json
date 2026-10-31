@@ -1,328 +1,373 @@
 {
-"id": "aiprod-0001",
-"situation": "aiprod",
-"sname": "AI：製品会議・運用",
-"icon": "🛠️",
-"level": 4,
-"title": "ロードマップ・安全性・コスト・展開",
-"items": [
-{
-"en": "Let's talk about the product roadmap for the next quarter.",
-"jp": "次の四半期の製品ロードマップについて話しましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-001"
-},
-{
-"en": "Our main goal is to improve answer quality for long documents.",
-"jp": "主な目標は、長い文書での回答の質を上げることです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-002"
-},
-{
-"en": "Users are complaining that the assistant forgets earlier instructions.",
-"jp": "アシスタントが前の指示を忘れるという不満が出ています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-003"
-},
-{
-"en": "We see a lot of drop-off after the first message.",
-"jp": "最初のメッセージの後で、離脱がとても多いです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-004"
-},
-{
-"en": "Retention is up ten percent since the last release.",
-"jp": "前回のリリース以降、継続率が10%上がりました。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-005"
-},
-{
-"en": "The new feature is behind a flag, so we can roll it out gradually.",
-"jp": "新機能はフラグの裏にあり、段階的に展開できます。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-006"
-},
-{
-"en": "Let's start with five percent of users.",
-"jp": "まず利用者の5%から始めましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-007"
-},
-{
-"en": "We'll run an A/B test for two weeks.",
-"jp": "2週間、A/Bテストを行います。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-008"
-},
-{
-"en": "The results are not conclusive yet.",
-"jp": "結果はまだ決定的ではありません。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-009"
-},
-{
-"en": "Let's look at qualitative feedback as well as the numbers.",
-"jp": "数字だけでなく、定性的な声も見ましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-010"
-},
-{
-"en": "Latency went from two seconds to five seconds, and users noticed.",
-"jp": "遅延が2秒から5秒になり、ユーザーが気づきました。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-011"
-},
-{
-"en": "The cost per user is higher than the revenue per user.",
-"jp": "1人あたりの費用が、1人あたりの売上を上回っています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-012"
-},
-{
-"en": "We need to improve our unit economics.",
-"jp": "単位あたりの収益構造を改善する必要があります。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-013"
-},
-{
-"en": "We could use a smaller model for easy requests.",
-"jp": "簡単な依頼には、小さなモデルを使えます。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-014"
-},
-{
-"en": "Let's add a feedback button so users can flag bad answers.",
-"jp": "悪い回答を知らせられるよう、フィードバックのボタンを付けましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-015"
-},
-{
-"en": "We'll review the flagged conversations every week.",
-"jp": "毎週、報告された会話を確認します。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-016"
-},
-{
-"en": "The model sometimes makes up citations.",
-"jp": "モデルは時々、出典をでっち上げます。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-017"
-},
-{
-"en": "We should show sources next to every claim.",
-"jp": "主張ごとに出典を並べて示すべきです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-018"
-},
-{
-"en": "Add a disclaimer that the answers may be inaccurate.",
-"jp": "回答が不正確かもしれないという注意書きを入れてください。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-019"
-},
-{
-"en": "For medical and legal questions, we must be extra careful.",
-"jp": "医療や法律の質問は、特に慎重にする必要があります。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-020"
-},
-{
-"en": "The assistant should refuse unsafe requests politely.",
-"jp": "アシスタントは、危険な依頼を丁寧に断るべきです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-021"
-},
-{
-"en": "Let's review the safety evaluation before launch.",
-"jp": "発売前に、安全性評価を確認しましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-022"
-},
-{
-"en": "The red team found three serious issues.",
-"jp": "レッドチームが、深刻な問題を3件見つけました。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-023"
-},
-{
-"en": "We fixed two, and the third needs more time.",
-"jp": "2件は直しましたが、3件目はもっと時間が必要です。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-024"
-},
-{
-"en": "We can't launch until all critical issues are resolved.",
-"jp": "重大な問題がすべて解決するまで、発売できません。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-025"
-},
-{
-"en": "The launch is scheduled for the fifteenth, but it might slip.",
-"jp": "発売は15日の予定ですが、遅れるかもしれません。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-026"
-},
-{
-"en": "Let's prepare a plan in case something goes wrong.",
-"jp": "何か起きた場合の計画を用意しましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-027"
-},
-{
-"en": "We need a rollback plan.",
-"jp": "元に戻す手順が必要です。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-028"
-},
-{
-"en": "Support will need training on the new features.",
-"jp": "サポートは、新機能の研修が必要です。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-029"
-},
-{
-"en": "The documentation is out of date.",
-"jp": "ドキュメントが古くなっています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-030"
-},
-{
-"en": "Let's write the release notes together.",
-"jp": "リリースノートを一緒に書きましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-031"
-},
-{
-"en": "Our enterprise customers care about security and compliance.",
-"jp": "企業のお客様は、セキュリティと法令順守を重視します。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-032"
-},
-{
-"en": "They want to know where their data is stored.",
-"jp": "データの保存場所を知りたがっています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-033"
-},
-{
-"en": "We don't train on customer data by default.",
-"jp": "顧客データは、標準では学習に使いません。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-034"
-},
-{
-"en": "We offer a zero data retention option.",
-"jp": "データを残さない選択肢も用意しています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-035"
-},
-{
-"en": "Single sign-on is a must-have for large companies.",
-"jp": "大企業にはシングルサインオンが必須です。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-036"
-},
-{
-"en": "The admin console lets them manage users and permissions.",
-"jp": "管理画面で、ユーザーと権限を管理できます。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-037"
-},
-{
-"en": "We're hiring two more engineers and a designer.",
-"jp": "エンジニアをあと2人とデザイナーを1人採用します。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-038"
-},
-{
-"en": "Our competitors just released a similar feature.",
-"jp": "競合が似た機能を発表したばかりです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-039"
-},
-{
-"en": "We shouldn't just copy them. Let's focus on our strengths.",
-"jp": "ただ真似するのではなく、自分たちの強みに集中しましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-040"
-},
-{
-"en": "What do users actually use the product for?",
-"jp": "ユーザーは実際に何のために製品を使っていますか。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-041"
-},
-{
-"en": "Most people use it for writing and summarizing.",
-"jp": "多くの人は、文章作成と要約に使っています。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-042"
-},
-{
-"en": "Coding is the fastest-growing use case.",
-"jp": "コーディングが最も伸びている用途です。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-043"
-},
-{
-"en": "We should make the interface simpler.",
-"jp": "画面をもっと単純にすべきです。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-044"
-},
-{
-"en": "Great work, team. Let's ship it.",
-"jp": "皆さん、お疲れさまでした。出しましょう。",
-"say": [],
-"note": "",
-"id": "aiprod-0001-045"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aiprod-0001",
+  "situation": "aiprod",
+  "sname": "AI：製品会議・運用",
+  "icon": "🛠️",
+  "level": 4,
+  "title": "ロードマップ・安全性・コスト・展開",
+  "items": [
+    {
+      "en": "Let's talk about the product roadmap for the next quarter.",
+      "jp": "次の四半期の製品ロードマップについて話しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-001",
+      "audio": "aiprod-0001-001.mp3"
+    },
+    {
+      "en": "Our main goal is to improve answer quality for long documents.",
+      "jp": "主な目標は、長い文書での回答の質を上げることです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-002",
+      "audio": "aiprod-0001-002.mp3"
+    },
+    {
+      "en": "Users are complaining that the assistant forgets earlier instructions.",
+      "jp": "アシスタントが前の指示を忘れるという不満が出ています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-003",
+      "audio": "aiprod-0001-003.mp3"
+    },
+    {
+      "en": "We see a lot of drop-off after the first message.",
+      "jp": "最初のメッセージの後で、離脱がとても多いです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-004",
+      "audio": "aiprod-0001-004.mp3"
+    },
+    {
+      "en": "Retention is up ten percent since the last release.",
+      "jp": "前回のリリース以降、継続率が10%上がりました。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-005",
+      "audio": "aiprod-0001-005.mp3"
+    },
+    {
+      "en": "The new feature is behind a flag, so we can roll it out gradually.",
+      "jp": "新機能はフラグの裏にあり、段階的に展開できます。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-006",
+      "audio": "aiprod-0001-006.mp3"
+    },
+    {
+      "en": "Let's start with five percent of users.",
+      "jp": "まず利用者の5%から始めましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-007",
+      "audio": "aiprod-0001-007.mp3"
+    },
+    {
+      "en": "We'll run an A/B test for two weeks.",
+      "jp": "2週間、A/Bテストを行います。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-008",
+      "audio": "aiprod-0001-008.mp3"
+    },
+    {
+      "en": "The results are not conclusive yet.",
+      "jp": "結果はまだ決定的ではありません。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-009",
+      "audio": "aiprod-0001-009.mp3"
+    },
+    {
+      "en": "Let's look at qualitative feedback as well as the numbers.",
+      "jp": "数字だけでなく、定性的な声も見ましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-010",
+      "audio": "aiprod-0001-010.mp3"
+    },
+    {
+      "en": "Latency went from two seconds to five seconds, and users noticed.",
+      "jp": "遅延が2秒から5秒になり、ユーザーが気づきました。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-011",
+      "audio": "aiprod-0001-011.mp3"
+    },
+    {
+      "en": "The cost per user is higher than the revenue per user.",
+      "jp": "1人あたりの費用が、1人あたりの売上を上回っています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-012",
+      "audio": "aiprod-0001-012.mp3"
+    },
+    {
+      "en": "We need to improve our unit economics.",
+      "jp": "単位あたりの収益構造を改善する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-013",
+      "audio": "aiprod-0001-013.mp3"
+    },
+    {
+      "en": "We could use a smaller model for easy requests.",
+      "jp": "簡単な依頼には、小さなモデルを使えます。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-014",
+      "audio": "aiprod-0001-014.mp3"
+    },
+    {
+      "en": "Let's add a feedback button so users can flag bad answers.",
+      "jp": "悪い回答を知らせられるよう、フィードバックのボタンを付けましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-015",
+      "audio": "aiprod-0001-015.mp3"
+    },
+    {
+      "en": "We'll review the flagged conversations every week.",
+      "jp": "毎週、報告された会話を確認します。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-016",
+      "audio": "aiprod-0001-016.mp3"
+    },
+    {
+      "en": "The model sometimes makes up citations.",
+      "jp": "モデルは時々、出典をでっち上げます。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-017",
+      "audio": "aiprod-0001-017.mp3"
+    },
+    {
+      "en": "We should show sources next to every claim.",
+      "jp": "主張ごとに出典を並べて示すべきです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-018",
+      "audio": "aiprod-0001-018.mp3"
+    },
+    {
+      "en": "Add a disclaimer that the answers may be inaccurate.",
+      "jp": "回答が不正確かもしれないという注意書きを入れてください。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-019",
+      "audio": "aiprod-0001-019.mp3"
+    },
+    {
+      "en": "For medical and legal questions, we must be extra careful.",
+      "jp": "医療や法律の質問は、特に慎重にする必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-020",
+      "audio": "aiprod-0001-020.mp3"
+    },
+    {
+      "en": "The assistant should refuse unsafe requests politely.",
+      "jp": "アシスタントは、危険な依頼を丁寧に断るべきです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-021",
+      "audio": "aiprod-0001-021.mp3"
+    },
+    {
+      "en": "Let's review the safety evaluation before launch.",
+      "jp": "発売前に、安全性評価を確認しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-022",
+      "audio": "aiprod-0001-022.mp3"
+    },
+    {
+      "en": "The red team found three serious issues.",
+      "jp": "レッドチームが、深刻な問題を3件見つけました。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-023",
+      "audio": "aiprod-0001-023.mp3"
+    },
+    {
+      "en": "We fixed two, and the third needs more time.",
+      "jp": "2件は直しましたが、3件目はもっと時間が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-024",
+      "audio": "aiprod-0001-024.mp3"
+    },
+    {
+      "en": "We can't launch until all critical issues are resolved.",
+      "jp": "重大な問題がすべて解決するまで、発売できません。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-025",
+      "audio": "aiprod-0001-025.mp3"
+    },
+    {
+      "en": "The launch is scheduled for the fifteenth, but it might slip.",
+      "jp": "発売は15日の予定ですが、遅れるかもしれません。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-026",
+      "audio": "aiprod-0001-026.mp3"
+    },
+    {
+      "en": "Let's prepare a plan in case something goes wrong.",
+      "jp": "何か起きた場合の計画を用意しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-027",
+      "audio": "aiprod-0001-027.mp3"
+    },
+    {
+      "en": "We need a rollback plan.",
+      "jp": "元に戻す手順が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-028",
+      "audio": "aiprod-0001-028.mp3"
+    },
+    {
+      "en": "Support will need training on the new features.",
+      "jp": "サポートは、新機能の研修が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-029",
+      "audio": "aiprod-0001-029.mp3"
+    },
+    {
+      "en": "The documentation is out of date.",
+      "jp": "ドキュメントが古くなっています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-030",
+      "audio": "aiprod-0001-030.mp3"
+    },
+    {
+      "en": "Let's write the release notes together.",
+      "jp": "リリースノートを一緒に書きましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-031",
+      "audio": "aiprod-0001-031.mp3"
+    },
+    {
+      "en": "Our enterprise customers care about security and compliance.",
+      "jp": "企業のお客様は、セキュリティと法令順守を重視します。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-032",
+      "audio": "aiprod-0001-032.mp3"
+    },
+    {
+      "en": "They want to know where their data is stored.",
+      "jp": "データの保存場所を知りたがっています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-033",
+      "audio": "aiprod-0001-033.mp3"
+    },
+    {
+      "en": "We don't train on customer data by default.",
+      "jp": "顧客データは、標準では学習に使いません。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-034",
+      "audio": "aiprod-0001-034.mp3"
+    },
+    {
+      "en": "We offer a zero data retention option.",
+      "jp": "データを残さない選択肢も用意しています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-035",
+      "audio": "aiprod-0001-035.mp3"
+    },
+    {
+      "en": "Single sign-on is a must-have for large companies.",
+      "jp": "大企業にはシングルサインオンが必須です。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-036",
+      "audio": "aiprod-0001-036.mp3"
+    },
+    {
+      "en": "The admin console lets them manage users and permissions.",
+      "jp": "管理画面で、ユーザーと権限を管理できます。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-037",
+      "audio": "aiprod-0001-037.mp3"
+    },
+    {
+      "en": "We're hiring two more engineers and a designer.",
+      "jp": "エンジニアをあと2人とデザイナーを1人採用します。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-038",
+      "audio": "aiprod-0001-038.mp3"
+    },
+    {
+      "en": "Our competitors just released a similar feature.",
+      "jp": "競合が似た機能を発表したばかりです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-039",
+      "audio": "aiprod-0001-039.mp3"
+    },
+    {
+      "en": "We shouldn't just copy them. Let's focus on our strengths.",
+      "jp": "ただ真似するのではなく、自分たちの強みに集中しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-040",
+      "audio": "aiprod-0001-040.mp3"
+    },
+    {
+      "en": "What do users actually use the product for?",
+      "jp": "ユーザーは実際に何のために製品を使っていますか。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-041",
+      "audio": "aiprod-0001-041.mp3"
+    },
+    {
+      "en": "Most people use it for writing and summarizing.",
+      "jp": "多くの人は、文章作成と要約に使っています。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-042",
+      "audio": "aiprod-0001-042.mp3"
+    },
+    {
+      "en": "Coding is the fastest-growing use case.",
+      "jp": "コーディングが最も伸びている用途です。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-043",
+      "audio": "aiprod-0001-043.mp3"
+    },
+    {
+      "en": "We should make the interface simpler.",
+      "jp": "画面をもっと単純にすべきです。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-044",
+      "audio": "aiprod-0001-044.mp3"
+    },
+    {
+      "en": "Great work, team. Let's ship it.",
+      "jp": "皆さん、お疲れさまでした。出しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiprod-0001-045",
+      "audio": "aiprod-0001-045.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

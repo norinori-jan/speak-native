@@ -1,342 +1,389 @@
 {
-"id": "bizsales-0001",
-"situation": "bizsales",
-"sname": "ビジネス：営業・マーケ",
-"icon": "📈",
-"level": 3,
-"title": "提案・価格・施策・展示会",
-"items": [
-{
-"en": "Thanks for your interest in our product. What brought you to us?",
-"jp": "当社製品にご関心をいただきありがとうございます。どこでお知りになりましたか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-001"
-},
-{
-"en": "We've been working with companies like yours for over ten years.",
-"jp": "御社のような企業と10年以上取引しています。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-002"
-},
-{
-"en": "What's your timeline for making a decision?",
-"jp": "決定の時期はいつ頃ですか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-003"
-},
-{
-"en": "Who else is involved in the decision?",
-"jp": "他に決定に関わる方はいますか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-004"
-},
-{
-"en": "What would an ideal solution look like for you?",
-"jp": "理想的な解決策はどんなものですか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-005"
-},
-{
-"en": "Our customers typically see results within the first month.",
-"jp": "お客様は通常、最初の1か月で成果が出ます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-006"
-},
-{
-"en": "Let me show you a case study from a similar company.",
-"jp": "似た会社の事例をお見せします。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-007"
-},
-{
-"en": "We offer a thirty-day free trial.",
-"jp": "30日間の無料トライアルがあります。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-008"
-},
-{
-"en": "There's no obligation. You can cancel any time.",
-"jp": "義務はありません。いつでも解約できます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-009"
-},
-{
-"en": "The basic plan is forty-nine dollars per user per month.",
-"jp": "基本プランは1ユーザー月49ドルです。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-010"
-},
-{
-"en": "If you pay annually, you get two months free.",
-"jp": "年払いなら2か月分が無料です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-011"
-},
-{
-"en": "The enterprise plan includes dedicated support.",
-"jp": "エンタープライズプランには専任サポートが含まれます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-012"
-},
-{
-"en": "We can customize it to fit your workflow.",
-"jp": "御社の業務に合わせてカスタマイズできます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-013"
-},
-{
-"en": "It integrates with the tools you're already using.",
-"jp": "すでに使っているツールと連携できます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-014"
-},
-{
-"en": "How many users would you need?",
-"jp": "何ユーザー必要ですか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-015"
-},
-{
-"en": "Let me put together a proposal for you.",
-"jp": "提案書を作成します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-016"
-},
-{
-"en": "I'll send it over by tomorrow morning.",
-"jp": "明日の朝までに送ります。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-017"
-},
-{
-"en": "Could we schedule a follow-up call next week?",
-"jp": "来週、フォローの電話を入れられますか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-018"
-},
-{
-"en": "I understand your concern about the price.",
-"jp": "価格についての懸念は分かります。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-019"
-},
-{
-"en": "Let me explain the value you'd get for the price.",
-"jp": "価格に見合う価値を説明します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-020"
-},
-{
-"en": "We're not the cheapest, but we're the most reliable.",
-"jp": "一番安くはありませんが、一番信頼できます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-021"
-},
-{
-"en": "Your competitors are already using this.",
-"jp": "競合他社はすでにこれを使っています。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-022"
-},
-{
-"en": "This offer is only valid until the end of the month.",
-"jp": "この条件は月末まで有効です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-023"
-},
-{
-"en": "We can lock in this price for two years.",
-"jp": "この価格を2年間固定できます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-024"
-},
-{
-"en": "Would you like to move forward with a pilot project?",
-"jp": "パイロットプロジェクトを進めますか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-025"
-},
-{
-"en": "Let's start small and expand if it works.",
-"jp": "小さく始めて、うまくいけば広げましょう。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-026"
-},
-{
-"en": "Our click-through rate improved by thirty percent.",
-"jp": "クリック率が30%向上しました。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-027"
-},
-{
-"en": "The conversion rate is around three percent.",
-"jp": "コンバージョン率は約3%です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-028"
-},
-{
-"en": "We're running an email campaign next week.",
-"jp": "来週メールのキャンペーンを行います。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-029"
-},
-{
-"en": "Our target audience is women in their thirties.",
-"jp": "ターゲットは30代の女性です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-030"
-},
-{
-"en": "The brand needs a fresh look.",
-"jp": "ブランドには新鮮な見せ方が必要です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-031"
-},
-{
-"en": "We'll launch the ad on social media on the first.",
-"jp": "1日にSNSで広告を開始します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-032"
-},
-{
-"en": "The advertising budget is fifty thousand dollars.",
-"jp": "広告予算は5万ドルです。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-033"
-},
-{
-"en": "Let's A/B test two versions of the landing page.",
-"jp": "ランディングページの2案をA/Bテストしましょう。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-034"
-},
-{
-"en": "Customer feedback has been very positive.",
-"jp": "顧客の反応はとても良好です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-035"
-},
-{
-"en": "We've received a lot of complaints about the delivery.",
-"jp": "配送への苦情がたくさん来ています。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-036"
-},
-{
-"en": "Our churn rate has gone up.",
-"jp": "解約率が上がっています。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-037"
-},
-{
-"en": "We need to improve customer retention.",
-"jp": "顧客維持を改善する必要があります。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-038"
-},
-{
-"en": "We'll offer a loyalty discount to existing customers.",
-"jp": "既存のお客様に継続割引を出します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-039"
-},
-{
-"en": "The product launch is scheduled for the spring.",
-"jp": "新製品の発売は春の予定です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-040"
-},
-{
-"en": "We'll present at the trade show in Las Vegas.",
-"jp": "ラスベガスの展示会で発表します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-041"
-},
-{
-"en": "Please visit our booth, number two-twelve.",
-"jp": "212番のブースにお越しください。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-042"
-},
-{
-"en": "Here's a brochure and my business card.",
-"jp": "パンフレットと名刺です。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-043"
-},
-{
-"en": "May I scan your badge?",
-"jp": "バッジを読み取ってもいいですか。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-044"
-},
-{
-"en": "We'll follow up with you after the show.",
-"jp": "展示会の後でご連絡します。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-045"
-},
-{
-"en": "Thank you for your business.",
-"jp": "お取引ありがとうございます。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-046"
-},
-{
-"en": "We truly value our partnership.",
-"jp": "このパートナーシップを心から大切にしています。",
-"say": [],
-"note": "",
-"id": "bizsales-0001-047"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "bizsales-0001",
+  "situation": "bizsales",
+  "sname": "ビジネス：営業・マーケ",
+  "icon": "📈",
+  "level": 3,
+  "title": "提案・価格・施策・展示会",
+  "items": [
+    {
+      "en": "Thanks for your interest in our product. What brought you to us?",
+      "jp": "当社製品にご関心をいただきありがとうございます。どこでお知りになりましたか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-001",
+      "audio": "bizsales-0001-001.mp3"
+    },
+    {
+      "en": "We've been working with companies like yours for over ten years.",
+      "jp": "御社のような企業と10年以上取引しています。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-002",
+      "audio": "bizsales-0001-002.mp3"
+    },
+    {
+      "en": "What's your timeline for making a decision?",
+      "jp": "決定の時期はいつ頃ですか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-003",
+      "audio": "bizsales-0001-003.mp3"
+    },
+    {
+      "en": "Who else is involved in the decision?",
+      "jp": "他に決定に関わる方はいますか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-004",
+      "audio": "bizsales-0001-004.mp3"
+    },
+    {
+      "en": "What would an ideal solution look like for you?",
+      "jp": "理想的な解決策はどんなものですか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-005",
+      "audio": "bizsales-0001-005.mp3"
+    },
+    {
+      "en": "Our customers typically see results within the first month.",
+      "jp": "お客様は通常、最初の1か月で成果が出ます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-006",
+      "audio": "bizsales-0001-006.mp3"
+    },
+    {
+      "en": "Let me show you a case study from a similar company.",
+      "jp": "似た会社の事例をお見せします。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-007",
+      "audio": "bizsales-0001-007.mp3"
+    },
+    {
+      "en": "We offer a thirty-day free trial.",
+      "jp": "30日間の無料トライアルがあります。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-008",
+      "audio": "bizsales-0001-008.mp3"
+    },
+    {
+      "en": "There's no obligation. You can cancel any time.",
+      "jp": "義務はありません。いつでも解約できます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-009",
+      "audio": "bizsales-0001-009.mp3"
+    },
+    {
+      "en": "The basic plan is forty-nine dollars per user per month.",
+      "jp": "基本プランは1ユーザー月49ドルです。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-010",
+      "audio": "bizsales-0001-010.mp3"
+    },
+    {
+      "en": "If you pay annually, you get two months free.",
+      "jp": "年払いなら2か月分が無料です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-011",
+      "audio": "bizsales-0001-011.mp3"
+    },
+    {
+      "en": "The enterprise plan includes dedicated support.",
+      "jp": "エンタープライズプランには専任サポートが含まれます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-012",
+      "audio": "bizsales-0001-012.mp3"
+    },
+    {
+      "en": "We can customize it to fit your workflow.",
+      "jp": "御社の業務に合わせてカスタマイズできます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-013",
+      "audio": "bizsales-0001-013.mp3"
+    },
+    {
+      "en": "It integrates with the tools you're already using.",
+      "jp": "すでに使っているツールと連携できます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-014",
+      "audio": "bizsales-0001-014.mp3"
+    },
+    {
+      "en": "How many users would you need?",
+      "jp": "何ユーザー必要ですか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-015",
+      "audio": "bizsales-0001-015.mp3"
+    },
+    {
+      "en": "Let me put together a proposal for you.",
+      "jp": "提案書を作成します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-016",
+      "audio": "bizsales-0001-016.mp3"
+    },
+    {
+      "en": "I'll send it over by tomorrow morning.",
+      "jp": "明日の朝までに送ります。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-017",
+      "audio": "bizsales-0001-017.mp3"
+    },
+    {
+      "en": "Could we schedule a follow-up call next week?",
+      "jp": "来週、フォローの電話を入れられますか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-018",
+      "audio": "bizsales-0001-018.mp3"
+    },
+    {
+      "en": "I understand your concern about the price.",
+      "jp": "価格についての懸念は分かります。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-019",
+      "audio": "bizsales-0001-019.mp3"
+    },
+    {
+      "en": "Let me explain the value you'd get for the price.",
+      "jp": "価格に見合う価値を説明します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-020",
+      "audio": "bizsales-0001-020.mp3"
+    },
+    {
+      "en": "We're not the cheapest, but we're the most reliable.",
+      "jp": "一番安くはありませんが、一番信頼できます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-021",
+      "audio": "bizsales-0001-021.mp3"
+    },
+    {
+      "en": "Your competitors are already using this.",
+      "jp": "競合他社はすでにこれを使っています。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-022",
+      "audio": "bizsales-0001-022.mp3"
+    },
+    {
+      "en": "This offer is only valid until the end of the month.",
+      "jp": "この条件は月末まで有効です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-023",
+      "audio": "bizsales-0001-023.mp3"
+    },
+    {
+      "en": "We can lock in this price for two years.",
+      "jp": "この価格を2年間固定できます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-024",
+      "audio": "bizsales-0001-024.mp3"
+    },
+    {
+      "en": "Would you like to move forward with a pilot project?",
+      "jp": "パイロットプロジェクトを進めますか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-025",
+      "audio": "bizsales-0001-025.mp3"
+    },
+    {
+      "en": "Let's start small and expand if it works.",
+      "jp": "小さく始めて、うまくいけば広げましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-026",
+      "audio": "bizsales-0001-026.mp3"
+    },
+    {
+      "en": "Our click-through rate improved by thirty percent.",
+      "jp": "クリック率が30%向上しました。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-027",
+      "audio": "bizsales-0001-027.mp3"
+    },
+    {
+      "en": "The conversion rate is around three percent.",
+      "jp": "コンバージョン率は約3%です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-028",
+      "audio": "bizsales-0001-028.mp3"
+    },
+    {
+      "en": "We're running an email campaign next week.",
+      "jp": "来週メールのキャンペーンを行います。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-029",
+      "audio": "bizsales-0001-029.mp3"
+    },
+    {
+      "en": "Our target audience is women in their thirties.",
+      "jp": "ターゲットは30代の女性です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-030",
+      "audio": "bizsales-0001-030.mp3"
+    },
+    {
+      "en": "The brand needs a fresh look.",
+      "jp": "ブランドには新鮮な見せ方が必要です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-031",
+      "audio": "bizsales-0001-031.mp3"
+    },
+    {
+      "en": "We'll launch the ad on social media on the first.",
+      "jp": "1日にSNSで広告を開始します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-032",
+      "audio": "bizsales-0001-032.mp3"
+    },
+    {
+      "en": "The advertising budget is fifty thousand dollars.",
+      "jp": "広告予算は5万ドルです。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-033",
+      "audio": "bizsales-0001-033.mp3"
+    },
+    {
+      "en": "Let's A/B test two versions of the landing page.",
+      "jp": "ランディングページの2案をA/Bテストしましょう。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-034",
+      "audio": "bizsales-0001-034.mp3"
+    },
+    {
+      "en": "Customer feedback has been very positive.",
+      "jp": "顧客の反応はとても良好です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-035",
+      "audio": "bizsales-0001-035.mp3"
+    },
+    {
+      "en": "We've received a lot of complaints about the delivery.",
+      "jp": "配送への苦情がたくさん来ています。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-036",
+      "audio": "bizsales-0001-036.mp3"
+    },
+    {
+      "en": "Our churn rate has gone up.",
+      "jp": "解約率が上がっています。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-037",
+      "audio": "bizsales-0001-037.mp3"
+    },
+    {
+      "en": "We need to improve customer retention.",
+      "jp": "顧客維持を改善する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-038",
+      "audio": "bizsales-0001-038.mp3"
+    },
+    {
+      "en": "We'll offer a loyalty discount to existing customers.",
+      "jp": "既存のお客様に継続割引を出します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-039",
+      "audio": "bizsales-0001-039.mp3"
+    },
+    {
+      "en": "The product launch is scheduled for the spring.",
+      "jp": "新製品の発売は春の予定です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-040",
+      "audio": "bizsales-0001-040.mp3"
+    },
+    {
+      "en": "We'll present at the trade show in Las Vegas.",
+      "jp": "ラスベガスの展示会で発表します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-041",
+      "audio": "bizsales-0001-041.mp3"
+    },
+    {
+      "en": "Please visit our booth, number two-twelve.",
+      "jp": "212番のブースにお越しください。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-042",
+      "audio": "bizsales-0001-042.mp3"
+    },
+    {
+      "en": "Here's a brochure and my business card.",
+      "jp": "パンフレットと名刺です。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-043",
+      "audio": "bizsales-0001-043.mp3"
+    },
+    {
+      "en": "May I scan your badge?",
+      "jp": "バッジを読み取ってもいいですか。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-044",
+      "audio": "bizsales-0001-044.mp3"
+    },
+    {
+      "en": "We'll follow up with you after the show.",
+      "jp": "展示会の後でご連絡します。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-045",
+      "audio": "bizsales-0001-045.mp3"
+    },
+    {
+      "en": "Thank you for your business.",
+      "jp": "お取引ありがとうございます。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-046",
+      "audio": "bizsales-0001-046.mp3"
+    },
+    {
+      "en": "We truly value our partnership.",
+      "jp": "このパートナーシップを心から大切にしています。",
+      "say": [],
+      "note": "",
+      "id": "bizsales-0001-047",
+      "audio": "bizsales-0001-047.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

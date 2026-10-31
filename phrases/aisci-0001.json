@@ -1,356 +1,405 @@
 {
-"id": "aisci-0001",
-"situation": "aisci",
-"sname": "AI：研究・仕組み（上級）",
-"icon": "🧠",
-"level": 4,
-"title": "ニューラルネット・Transformer・拡散・解釈",
-"items": [
-{
-"en": "A neural network is made of layers of connected nodes.",
-"jp": "ニューラルネットワークは、つながったノードの層でできています。",
-"say": [],
-"note": "",
-"id": "aisci-0001-001"
-},
-{
-"en": "Each connection has a weight that is learned during training.",
-"jp": "各結合には、学習で決まる重みがあります。",
-"say": [],
-"note": "",
-"id": "aisci-0001-002"
-},
-{
-"en": "The activation function adds non-linearity.",
-"jp": "活性化関数が非線形性を加えます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-003"
-},
-{
-"en": "Backpropagation computes the gradients efficiently.",
-"jp": "誤差逆伝播法は、勾配を効率よく計算します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-004"
-},
-{
-"en": "The gradient tells us which direction reduces the loss.",
-"jp": "勾配は、損失を減らす方向を教えてくれます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-005"
-},
-{
-"en": "Vanishing gradients make deep networks hard to train.",
-"jp": "勾配消失のせいで、深いネットワークは学習しにくくなります。",
-"say": [],
-"note": "",
-"id": "aisci-0001-006"
-},
-{
-"en": "Normalization stabilizes the training.",
-"jp": "正規化は学習を安定させます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-007"
-},
-{
-"en": "The convolutional network is good at images.",
-"jp": "畳み込みネットワークは画像が得意です。",
-"say": [],
-"note": "",
-"id": "aisci-0001-008"
-},
-{
-"en": "A recurrent network processes sequences step by step.",
-"jp": "再帰型ネットワークは、系列を1歩ずつ処理します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-009"
-},
-{
-"en": "The transformer processes all the tokens in parallel.",
-"jp": "トランスフォーマーは、すべてのトークンを並列に処理します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-010"
-},
-{
-"en": "Self-attention compares every token with every other token.",
-"jp": "自己注意は、すべてのトークンを互いに比べます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-011"
-},
-{
-"en": "The cost grows quadratically with the sequence length.",
-"jp": "コストは、系列の長さの2乗で増えます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-012"
-},
-{
-"en": "Positional encoding tells the model the order of the tokens.",
-"jp": "位置エンコーディングは、トークンの順序をモデルに伝えます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-013"
-},
-{
-"en": "The model outputs a probability distribution over the vocabulary.",
-"jp": "モデルは、語彙に対する確率分布を出力します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-014"
-},
-{
-"en": "Sampling picks the next token from that distribution.",
-"jp": "サンプリングで、その分布から次のトークンを選びます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-015"
-},
-{
-"en": "Top-p sampling cuts off the unlikely tokens.",
-"jp": "top-pサンプリングは、可能性の低いトークンを切り捨てます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-016"
-},
-{
-"en": "Greedy decoding always picks the most likely token.",
-"jp": "貪欲法は、常に最も確率の高いトークンを選びます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-017"
-},
-{
-"en": "Beam search keeps several candidate sequences.",
-"jp": "ビームサーチは、複数の候補列を保持します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-018"
-},
-{
-"en": "Perplexity measures how well the model predicts the text.",
-"jp": "パープレキシティは、モデルが文章をどれだけよく予測できるかを測ります。",
-"say": [],
-"note": "",
-"id": "aisci-0001-019"
-},
-{
-"en": "The cross-entropy loss is used for classification.",
-"jp": "分類にはクロスエントロピー損失を使います。",
-"say": [],
-"note": "",
-"id": "aisci-0001-020"
-},
-{
-"en": "Diffusion models generate images by removing noise step by step.",
-"jp": "拡散モデルは、ノイズを少しずつ取り除いて画像を生成します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-021"
-},
-{
-"en": "The latent space captures the structure of the data.",
-"jp": "潜在空間は、データの構造を捉えます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-022"
-},
-{
-"en": "The autoencoder compresses the input into a smaller representation.",
-"jp": "オートエンコーダは、入力をより小さな表現に圧縮します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-023"
-},
-{
-"en": "GANs train a generator and a discriminator against each other.",
-"jp": "GANは、生成器と識別器を競わせて学習します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-024"
-},
-{
-"en": "Mixture of experts activates only a few parts of the model per token.",
-"jp": "専門家混合モデルは、トークンごとにモデルの一部だけを使います。",
-"say": [],
-"note": "",
-"id": "aisci-0001-025"
-},
-{
-"en": "The key-value cache speeds up generation.",
-"jp": "キー・バリューのキャッシュが、生成を速くします。",
-"say": [],
-"note": "",
-"id": "aisci-0001-026"
-},
-{
-"en": "Speculative decoding uses a small model to draft tokens.",
-"jp": "投機的デコーディングは、小さなモデルでトークンの下書きをします。",
-"say": [],
-"note": "",
-"id": "aisci-0001-027"
-},
-{
-"en": "The model is deterministic when the temperature is zero.",
-"jp": "temperatureが0のとき、モデルの出力は決まった結果になります。",
-"say": [],
-"note": "",
-"id": "aisci-0001-028"
-},
-{
-"en": "Emergent abilities appear when the model gets large enough.",
-"jp": "モデルが十分大きくなると、創発的な能力が現れます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-029"
-},
-{
-"en": "In-context learning means learning from examples in the prompt.",
-"jp": "文脈内学習とは、プロンプト内の例から学ぶことです。",
-"say": [],
-"note": "",
-"id": "aisci-0001-030"
-},
-{
-"en": "The model doesn't update its weights during in-context learning.",
-"jp": "文脈内学習では、モデルの重みは更新されません。",
-"say": [],
-"note": "",
-"id": "aisci-0001-031"
-},
-{
-"en": "Mechanistic interpretability tries to reverse-engineer what the network computes.",
-"jp": "機構的解釈可能性は、ネットワークの計算内容を解読しようとします。",
-"say": [],
-"note": "",
-"id": "aisci-0001-032"
-},
-{
-"en": "We can visualize the attention patterns.",
-"jp": "アテンションのパターンを可視化できます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-033"
-},
-{
-"en": "A feature can correspond to a concept inside the model.",
-"jp": "特徴が、モデル内の概念に対応することがあります。",
-"say": [],
-"note": "",
-"id": "aisci-0001-034"
-},
-{
-"en": "The loss landscape is highly non-convex.",
-"jp": "損失の地形は、強い非凸です。",
-"say": [],
-"note": "",
-"id": "aisci-0001-035"
-},
-{
-"en": "The optimizer is Adam with weight decay.",
-"jp": "最適化手法は、重み減衰つきのAdamです。",
-"say": [],
-"note": "",
-"id": "aisci-0001-036"
-},
-{
-"en": "We use a learning rate schedule with warmup.",
-"jp": "ウォームアップ付きの学習率スケジュールを使います。",
-"say": [],
-"note": "",
-"id": "aisci-0001-037"
-},
-{
-"en": "Gradient clipping prevents the updates from exploding.",
-"jp": "勾配クリッピングは、更新が爆発するのを防ぎます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-038"
-},
-{
-"en": "The parameters are stored in sixteen-bit floating point.",
-"jp": "パラメータは16ビット浮動小数点で保存されています。",
-"say": [],
-"note": "",
-"id": "aisci-0001-039"
-},
-{
-"en": "Matrix multiplication dominates the computation.",
-"jp": "計算の大部分は行列の積です。",
-"say": [],
-"note": "",
-"id": "aisci-0001-040"
-},
-{
-"en": "The memory bandwidth is the real limit.",
-"jp": "本当の限界はメモリ帯域です。",
-"say": [],
-"note": "",
-"id": "aisci-0001-041"
-},
-{
-"en": "The dataset contains one trillion tokens.",
-"jp": "データセットには1兆トークンが含まれます。",
-"say": [],
-"note": "",
-"id": "aisci-0001-042"
-},
-{
-"en": "We deduplicate and filter the data before training.",
-"jp": "学習前にデータの重複除去とフィルタリングをします。",
-"say": [],
-"note": "",
-"id": "aisci-0001-043"
-},
-{
-"en": "The benchmark may have leaked into the training data.",
-"jp": "ベンチマークが学習データに混入した可能性があります。",
-"say": [],
-"note": "contamination = テスト問題が学習データに混ざること。",
-"id": "aisci-0001-044"
-},
-{
-"en": "Let me walk you through the main idea of the paper.",
-"jp": "論文の主な考え方を説明します。",
-"say": [],
-"note": "",
-"id": "aisci-0001-045"
-},
-{
-"en": "The authors propose a simple but effective change.",
-"jp": "著者らは、単純だが効果的な変更を提案しています。",
-"say": [],
-"note": "",
-"id": "aisci-0001-046"
-},
-{
-"en": "The experiments are limited to small models.",
-"jp": "実験は小さなモデルに限られています。",
-"say": [],
-"note": "",
-"id": "aisci-0001-047"
-},
-{
-"en": "It remains to be seen whether this scales.",
-"jp": "これが大規模でも通用するかは、まだ分かりません。",
-"say": [],
-"note": "",
-"id": "aisci-0001-048"
-},
-{
-"en": "Further research is needed.",
-"jp": "さらなる研究が必要です。",
-"say": [],
-"note": "",
-"id": "aisci-0001-049"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aisci-0001",
+  "situation": "aisci",
+  "sname": "AI：研究・仕組み（上級）",
+  "icon": "🧠",
+  "level": 4,
+  "title": "ニューラルネット・Transformer・拡散・解釈",
+  "items": [
+    {
+      "en": "A neural network is made of layers of connected nodes.",
+      "jp": "ニューラルネットワークは、つながったノードの層でできています。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-001",
+      "audio": "aisci-0001-001.mp3"
+    },
+    {
+      "en": "Each connection has a weight that is learned during training.",
+      "jp": "各結合には、学習で決まる重みがあります。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-002",
+      "audio": "aisci-0001-002.mp3"
+    },
+    {
+      "en": "The activation function adds non-linearity.",
+      "jp": "活性化関数が非線形性を加えます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-003",
+      "audio": "aisci-0001-003.mp3"
+    },
+    {
+      "en": "Backpropagation computes the gradients efficiently.",
+      "jp": "誤差逆伝播法は、勾配を効率よく計算します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-004",
+      "audio": "aisci-0001-004.mp3"
+    },
+    {
+      "en": "The gradient tells us which direction reduces the loss.",
+      "jp": "勾配は、損失を減らす方向を教えてくれます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-005",
+      "audio": "aisci-0001-005.mp3"
+    },
+    {
+      "en": "Vanishing gradients make deep networks hard to train.",
+      "jp": "勾配消失のせいで、深いネットワークは学習しにくくなります。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-006",
+      "audio": "aisci-0001-006.mp3"
+    },
+    {
+      "en": "Normalization stabilizes the training.",
+      "jp": "正規化は学習を安定させます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-007",
+      "audio": "aisci-0001-007.mp3"
+    },
+    {
+      "en": "The convolutional network is good at images.",
+      "jp": "畳み込みネットワークは画像が得意です。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-008",
+      "audio": "aisci-0001-008.mp3"
+    },
+    {
+      "en": "A recurrent network processes sequences step by step.",
+      "jp": "再帰型ネットワークは、系列を1歩ずつ処理します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-009",
+      "audio": "aisci-0001-009.mp3"
+    },
+    {
+      "en": "The transformer processes all the tokens in parallel.",
+      "jp": "トランスフォーマーは、すべてのトークンを並列に処理します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-010",
+      "audio": "aisci-0001-010.mp3"
+    },
+    {
+      "en": "Self-attention compares every token with every other token.",
+      "jp": "自己注意は、すべてのトークンを互いに比べます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-011",
+      "audio": "aisci-0001-011.mp3"
+    },
+    {
+      "en": "The cost grows quadratically with the sequence length.",
+      "jp": "コストは、系列の長さの2乗で増えます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-012",
+      "audio": "aisci-0001-012.mp3"
+    },
+    {
+      "en": "Positional encoding tells the model the order of the tokens.",
+      "jp": "位置エンコーディングは、トークンの順序をモデルに伝えます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-013",
+      "audio": "aisci-0001-013.mp3"
+    },
+    {
+      "en": "The model outputs a probability distribution over the vocabulary.",
+      "jp": "モデルは、語彙に対する確率分布を出力します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-014",
+      "audio": "aisci-0001-014.mp3"
+    },
+    {
+      "en": "Sampling picks the next token from that distribution.",
+      "jp": "サンプリングで、その分布から次のトークンを選びます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-015",
+      "audio": "aisci-0001-015.mp3"
+    },
+    {
+      "en": "Top-p sampling cuts off the unlikely tokens.",
+      "jp": "top-pサンプリングは、可能性の低いトークンを切り捨てます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-016",
+      "audio": "aisci-0001-016.mp3"
+    },
+    {
+      "en": "Greedy decoding always picks the most likely token.",
+      "jp": "貪欲法は、常に最も確率の高いトークンを選びます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-017",
+      "audio": "aisci-0001-017.mp3"
+    },
+    {
+      "en": "Beam search keeps several candidate sequences.",
+      "jp": "ビームサーチは、複数の候補列を保持します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-018",
+      "audio": "aisci-0001-018.mp3"
+    },
+    {
+      "en": "Perplexity measures how well the model predicts the text.",
+      "jp": "パープレキシティは、モデルが文章をどれだけよく予測できるかを測ります。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-019",
+      "audio": "aisci-0001-019.mp3"
+    },
+    {
+      "en": "The cross-entropy loss is used for classification.",
+      "jp": "分類にはクロスエントロピー損失を使います。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-020",
+      "audio": "aisci-0001-020.mp3"
+    },
+    {
+      "en": "Diffusion models generate images by removing noise step by step.",
+      "jp": "拡散モデルは、ノイズを少しずつ取り除いて画像を生成します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-021",
+      "audio": "aisci-0001-021.mp3"
+    },
+    {
+      "en": "The latent space captures the structure of the data.",
+      "jp": "潜在空間は、データの構造を捉えます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-022",
+      "audio": "aisci-0001-022.mp3"
+    },
+    {
+      "en": "The autoencoder compresses the input into a smaller representation.",
+      "jp": "オートエンコーダは、入力をより小さな表現に圧縮します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-023",
+      "audio": "aisci-0001-023.mp3"
+    },
+    {
+      "en": "GANs train a generator and a discriminator against each other.",
+      "jp": "GANは、生成器と識別器を競わせて学習します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-024",
+      "audio": "aisci-0001-024.mp3"
+    },
+    {
+      "en": "Mixture of experts activates only a few parts of the model per token.",
+      "jp": "専門家混合モデルは、トークンごとにモデルの一部だけを使います。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-025",
+      "audio": "aisci-0001-025.mp3"
+    },
+    {
+      "en": "The key-value cache speeds up generation.",
+      "jp": "キー・バリューのキャッシュが、生成を速くします。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-026",
+      "audio": "aisci-0001-026.mp3"
+    },
+    {
+      "en": "Speculative decoding uses a small model to draft tokens.",
+      "jp": "投機的デコーディングは、小さなモデルでトークンの下書きをします。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-027",
+      "audio": "aisci-0001-027.mp3"
+    },
+    {
+      "en": "The model is deterministic when the temperature is zero.",
+      "jp": "temperatureが0のとき、モデルの出力は決まった結果になります。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-028",
+      "audio": "aisci-0001-028.mp3"
+    },
+    {
+      "en": "Emergent abilities appear when the model gets large enough.",
+      "jp": "モデルが十分大きくなると、創発的な能力が現れます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-029",
+      "audio": "aisci-0001-029.mp3"
+    },
+    {
+      "en": "In-context learning means learning from examples in the prompt.",
+      "jp": "文脈内学習とは、プロンプト内の例から学ぶことです。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-030",
+      "audio": "aisci-0001-030.mp3"
+    },
+    {
+      "en": "The model doesn't update its weights during in-context learning.",
+      "jp": "文脈内学習では、モデルの重みは更新されません。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-031",
+      "audio": "aisci-0001-031.mp3"
+    },
+    {
+      "en": "Mechanistic interpretability tries to reverse-engineer what the network computes.",
+      "jp": "機構的解釈可能性は、ネットワークの計算内容を解読しようとします。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-032",
+      "audio": "aisci-0001-032.mp3"
+    },
+    {
+      "en": "We can visualize the attention patterns.",
+      "jp": "アテンションのパターンを可視化できます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-033",
+      "audio": "aisci-0001-033.mp3"
+    },
+    {
+      "en": "A feature can correspond to a concept inside the model.",
+      "jp": "特徴が、モデル内の概念に対応することがあります。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-034",
+      "audio": "aisci-0001-034.mp3"
+    },
+    {
+      "en": "The loss landscape is highly non-convex.",
+      "jp": "損失の地形は、強い非凸です。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-035",
+      "audio": "aisci-0001-035.mp3"
+    },
+    {
+      "en": "The optimizer is Adam with weight decay.",
+      "jp": "最適化手法は、重み減衰つきのAdamです。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-036",
+      "audio": "aisci-0001-036.mp3"
+    },
+    {
+      "en": "We use a learning rate schedule with warmup.",
+      "jp": "ウォームアップ付きの学習率スケジュールを使います。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-037",
+      "audio": "aisci-0001-037.mp3"
+    },
+    {
+      "en": "Gradient clipping prevents the updates from exploding.",
+      "jp": "勾配クリッピングは、更新が爆発するのを防ぎます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-038",
+      "audio": "aisci-0001-038.mp3"
+    },
+    {
+      "en": "The parameters are stored in sixteen-bit floating point.",
+      "jp": "パラメータは16ビット浮動小数点で保存されています。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-039",
+      "audio": "aisci-0001-039.mp3"
+    },
+    {
+      "en": "Matrix multiplication dominates the computation.",
+      "jp": "計算の大部分は行列の積です。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-040",
+      "audio": "aisci-0001-040.mp3"
+    },
+    {
+      "en": "The memory bandwidth is the real limit.",
+      "jp": "本当の限界はメモリ帯域です。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-041",
+      "audio": "aisci-0001-041.mp3"
+    },
+    {
+      "en": "The dataset contains one trillion tokens.",
+      "jp": "データセットには1兆トークンが含まれます。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-042",
+      "audio": "aisci-0001-042.mp3"
+    },
+    {
+      "en": "We deduplicate and filter the data before training.",
+      "jp": "学習前にデータの重複除去とフィルタリングをします。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-043",
+      "audio": "aisci-0001-043.mp3"
+    },
+    {
+      "en": "The benchmark may have leaked into the training data.",
+      "jp": "ベンチマークが学習データに混入した可能性があります。",
+      "say": [],
+      "note": "contamination = テスト問題が学習データに混ざること。",
+      "id": "aisci-0001-044",
+      "audio": "aisci-0001-044.mp3"
+    },
+    {
+      "en": "Let me walk you through the main idea of the paper.",
+      "jp": "論文の主な考え方を説明します。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-045",
+      "audio": "aisci-0001-045.mp3"
+    },
+    {
+      "en": "The authors propose a simple but effective change.",
+      "jp": "著者らは、単純だが効果的な変更を提案しています。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-046",
+      "audio": "aisci-0001-046.mp3"
+    },
+    {
+      "en": "The experiments are limited to small models.",
+      "jp": "実験は小さなモデルに限られています。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-047",
+      "audio": "aisci-0001-047.mp3"
+    },
+    {
+      "en": "It remains to be seen whether this scales.",
+      "jp": "これが大規模でも通用するかは、まだ分かりません。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-048",
+      "audio": "aisci-0001-048.mp3"
+    },
+    {
+      "en": "Further research is needed.",
+      "jp": "さらなる研究が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aisci-0001-049",
+      "audio": "aisci-0001-049.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }

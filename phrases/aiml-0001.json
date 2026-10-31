@@ -1,342 +1,389 @@
 {
-"id": "aiml-0001",
-"situation": "aiml",
-"sname": "AI：機械学習・学習と評価",
-"icon": "📉",
-"level": 4,
-"title": "損失・過学習・微調整・評価指標",
-"items": [
-{
-"en": "Training a model means adjusting its parameters to reduce the loss.",
-"jp": "モデルを学習するとは、損失が減るようにパラメータを調整することです。",
-"say": [],
-"note": "loss = 予測の悪さを表す数値。",
-"id": "aiml-0001-001"
-},
-{
-"en": "Gradient descent updates the weights step by step.",
-"jp": "勾配降下法は重みを少しずつ更新します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-002"
-},
-{
-"en": "The learning rate is too high, so the training is unstable.",
-"jp": "学習率が高すぎて、学習が不安定です。",
-"say": [],
-"note": "",
-"id": "aiml-0001-003"
-},
-{
-"en": "We train for ten epochs.",
-"jp": "10エポック学習します。",
-"say": [],
-"note": "epoch = 全データを1周すること。",
-"id": "aiml-0001-004"
-},
-{
-"en": "The batch size is thirty-two.",
-"jp": "バッチサイズは32です。",
-"say": [],
-"note": "",
-"id": "aiml-0001-005"
-},
-{
-"en": "The loss curve flattened after two thousand steps.",
-"jp": "損失の曲線は2000ステップ後に平らになりました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-006"
-},
-{
-"en": "The model is overfitting to the training data.",
-"jp": "モデルは学習データに過剰適合しています。",
-"say": [],
-"note": "overfitting = 学習データを覚えすぎて新しいデータに弱い。",
-"id": "aiml-0001-007"
-},
-{
-"en": "The validation loss started going up.",
-"jp": "検証データの損失が上がり始めました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-008"
-},
-{
-"en": "We need to split the data into train, validation, and test sets.",
-"jp": "データを学習・検証・テストに分ける必要があります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-009"
-},
-{
-"en": "Make sure there's no data leakage between the sets.",
-"jp": "データ間で漏れがないようにしてください。",
-"say": [],
-"note": "data leakage = テスト情報が学習に混ざること。",
-"id": "aiml-0001-010"
-},
-{
-"en": "Regularization helps prevent overfitting.",
-"jp": "正則化は過剰適合を防ぎます。",
-"say": [],
-"note": "",
-"id": "aiml-0001-011"
-},
-{
-"en": "We use dropout to reduce overfitting.",
-"jp": "ドロップアウトで過剰適合を減らします。",
-"say": [],
-"note": "",
-"id": "aiml-0001-012"
-},
-{
-"en": "Underfitting means the model is too simple.",
-"jp": "アンダーフィッティングは、モデルが単純すぎるということです。",
-"say": [],
-"note": "",
-"id": "aiml-0001-013"
-},
-{
-"en": "The dataset is imbalanced. Ninety percent of the examples are one class.",
-"jp": "データに偏りがあります。90%が1つのクラスです。",
-"say": [],
-"note": "",
-"id": "aiml-0001-014"
-},
-{
-"en": "Labeling the data takes a lot of time and money.",
-"jp": "データのラベル付けには時間と費用がかかります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-015"
-},
-{
-"en": "Garbage in, garbage out.",
-"jp": "ごみを入れればごみが出る。（入力が悪いと結果も悪い）",
-"say": [],
-"note": "",
-"id": "aiml-0001-016"
-},
-{
-"en": "Data quality matters more than data quantity.",
-"jp": "データの量より質が重要です。",
-"say": [],
-"note": "",
-"id": "aiml-0001-017"
-},
-{
-"en": "We should remove duplicates from the dataset.",
-"jp": "データセットから重複を除くべきです。",
-"say": [],
-"note": "",
-"id": "aiml-0001-018"
-},
-{
-"en": "Supervised learning needs labeled examples.",
-"jp": "教師あり学習には、ラベル付きの例が必要です。",
-"say": [],
-"note": "",
-"id": "aiml-0001-019"
-},
-{
-"en": "Unsupervised learning finds patterns without labels.",
-"jp": "教師なし学習は、ラベルなしでパターンを見つけます。",
-"say": [],
-"note": "",
-"id": "aiml-0001-020"
-},
-{
-"en": "Reinforcement learning trains an agent using rewards.",
-"jp": "強化学習は、報酬を使ってエージェントを学習させます。",
-"say": [],
-"note": "",
-"id": "aiml-0001-021"
-},
-{
-"en": "Reinforcement learning from human feedback aligns the model with human preferences.",
-"jp": "人間のフィードバックによる強化学習が、モデルを人の好みに合わせます。",
-"say": [],
-"note": "RLHF = 人間の評価で学習を調整する方法。",
-"id": "aiml-0001-022"
-},
-{
-"en": "Pre-training is expensive. Fine-tuning is relatively cheap.",
-"jp": "事前学習は高額で、ファインチューニングは比較的安いです。",
-"say": [],
-"note": "",
-"id": "aiml-0001-023"
-},
-{
-"en": "We fine-tuned the model on our internal documents.",
-"jp": "社内文書でモデルをファインチューニングしました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-024"
-},
-{
-"en": "Fine-tuning changes the weights. Prompting does not.",
-"jp": "ファインチューニングは重みを変えますが、プロンプトは変えません。",
-"say": [],
-"note": "",
-"id": "aiml-0001-025"
-},
-{
-"en": "LoRA lets us fine-tune with far fewer trainable parameters.",
-"jp": "LoRAを使えば、学習するパラメータをずっと少なくして調整できます。",
-"say": [],
-"note": "",
-"id": "aiml-0001-026"
-},
-{
-"en": "Distillation transfers knowledge from a large model to a small one.",
-"jp": "蒸留は、大きなモデルの知識を小さなモデルに移します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-027"
-},
-{
-"en": "The training run took two weeks on a thousand GPUs.",
-"jp": "学習は1000個のGPUで2週間かかりました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-028"
-},
-{
-"en": "A training run failed because of an out-of-memory error.",
-"jp": "メモリ不足のエラーで学習が失敗しました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-029"
-},
-{
-"en": "We save a checkpoint every thousand steps.",
-"jp": "1000ステップごとにチェックポイントを保存します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-030"
-},
-{
-"en": "Let's resume from the last checkpoint.",
-"jp": "最後のチェックポイントから再開しましょう。",
-"say": [],
-"note": "",
-"id": "aiml-0001-031"
-},
-{
-"en": "Mixed precision training saves memory and time.",
-"jp": "混合精度学習は、メモリと時間を節約します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-032"
-},
-{
-"en": "We use distributed training across multiple nodes.",
-"jp": "複数のノードで分散学習を行います。",
-"say": [],
-"note": "",
-"id": "aiml-0001-033"
-},
-{
-"en": "The accuracy is ninety-two percent, but the recall is low.",
-"jp": "精度は92%ですが、再現率が低いです。",
-"say": [],
-"note": "accuracy = 正解率、recall = 見逃しの少なさ。",
-"id": "aiml-0001-034"
-},
-{
-"en": "Precision and recall are trade-offs.",
-"jp": "適合率と再現率はトレードオフです。",
-"say": [],
-"note": "",
-"id": "aiml-0001-035"
-},
-{
-"en": "The confusion matrix shows where the model makes mistakes.",
-"jp": "混同行列で、モデルがどこで間違えるか分かります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-036"
-},
-{
-"en": "We evaluate the model on a held-out test set.",
-"jp": "取り置いたテストデータでモデルを評価します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-037"
-},
-{
-"en": "The metric doesn't capture what users actually care about.",
-"jp": "その指標は、ユーザーが本当に気にする点を捉えていません。",
-"say": [],
-"note": "",
-"id": "aiml-0001-038"
-},
-{
-"en": "Let's run an ablation study to see which component matters.",
-"jp": "どの部品が重要か、アブレーション実験をしましょう。",
-"say": [],
-"note": "",
-"id": "aiml-0001-039"
-},
-{
-"en": "The results are not statistically significant.",
-"jp": "結果は統計的に有意ではありません。",
-"say": [],
-"note": "",
-"id": "aiml-0001-040"
-},
-{
-"en": "We need to reproduce the results with a different random seed.",
-"jp": "別の乱数シードで結果を再現する必要があります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-041"
-},
-{
-"en": "Bias in the training data leads to biased predictions.",
-"jp": "学習データの偏りは、予測の偏りにつながります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-042"
-},
-{
-"en": "The model fails on edge cases.",
-"jp": "モデルは例外的なケースで失敗します。",
-"say": [],
-"note": "",
-"id": "aiml-0001-043"
-},
-{
-"en": "We found a distribution shift between training and production.",
-"jp": "学習時と本番で、データの分布のずれが見つかりました。",
-"say": [],
-"note": "",
-"id": "aiml-0001-044"
-},
-{
-"en": "The model needs to be retrained regularly.",
-"jp": "モデルは定期的に再学習する必要があります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-045"
-},
-{
-"en": "Synthetic data can help fill the gaps.",
-"jp": "合成データで不足を補えることがあります。",
-"say": [],
-"note": "",
-"id": "aiml-0001-046"
-},
-{
-"en": "Interpretability is still an open problem.",
-"jp": "解釈可能性は、まだ未解決の問題です。",
-"say": [],
-"note": "",
-"id": "aiml-0001-047"
-}
-],
-"app": "phrase-pack",
-"version": 1,
-"ver": 1
+  "id": "aiml-0001",
+  "situation": "aiml",
+  "sname": "AI：機械学習・学習と評価",
+  "icon": "📉",
+  "level": 4,
+  "title": "損失・過学習・微調整・評価指標",
+  "items": [
+    {
+      "en": "Training a model means adjusting its parameters to reduce the loss.",
+      "jp": "モデルを学習するとは、損失が減るようにパラメータを調整することです。",
+      "say": [],
+      "note": "loss = 予測の悪さを表す数値。",
+      "id": "aiml-0001-001",
+      "audio": "aiml-0001-001.mp3"
+    },
+    {
+      "en": "Gradient descent updates the weights step by step.",
+      "jp": "勾配降下法は重みを少しずつ更新します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-002",
+      "audio": "aiml-0001-002.mp3"
+    },
+    {
+      "en": "The learning rate is too high, so the training is unstable.",
+      "jp": "学習率が高すぎて、学習が不安定です。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-003",
+      "audio": "aiml-0001-003.mp3"
+    },
+    {
+      "en": "We train for ten epochs.",
+      "jp": "10エポック学習します。",
+      "say": [],
+      "note": "epoch = 全データを1周すること。",
+      "id": "aiml-0001-004",
+      "audio": "aiml-0001-004.mp3"
+    },
+    {
+      "en": "The batch size is thirty-two.",
+      "jp": "バッチサイズは32です。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-005",
+      "audio": "aiml-0001-005.mp3"
+    },
+    {
+      "en": "The loss curve flattened after two thousand steps.",
+      "jp": "損失の曲線は2000ステップ後に平らになりました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-006",
+      "audio": "aiml-0001-006.mp3"
+    },
+    {
+      "en": "The model is overfitting to the training data.",
+      "jp": "モデルは学習データに過剰適合しています。",
+      "say": [],
+      "note": "overfitting = 学習データを覚えすぎて新しいデータに弱い。",
+      "id": "aiml-0001-007",
+      "audio": "aiml-0001-007.mp3"
+    },
+    {
+      "en": "The validation loss started going up.",
+      "jp": "検証データの損失が上がり始めました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-008",
+      "audio": "aiml-0001-008.mp3"
+    },
+    {
+      "en": "We need to split the data into train, validation, and test sets.",
+      "jp": "データを学習・検証・テストに分ける必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-009",
+      "audio": "aiml-0001-009.mp3"
+    },
+    {
+      "en": "Make sure there's no data leakage between the sets.",
+      "jp": "データ間で漏れがないようにしてください。",
+      "say": [],
+      "note": "data leakage = テスト情報が学習に混ざること。",
+      "id": "aiml-0001-010",
+      "audio": "aiml-0001-010.mp3"
+    },
+    {
+      "en": "Regularization helps prevent overfitting.",
+      "jp": "正則化は過剰適合を防ぎます。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-011",
+      "audio": "aiml-0001-011.mp3"
+    },
+    {
+      "en": "We use dropout to reduce overfitting.",
+      "jp": "ドロップアウトで過剰適合を減らします。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-012",
+      "audio": "aiml-0001-012.mp3"
+    },
+    {
+      "en": "Underfitting means the model is too simple.",
+      "jp": "アンダーフィッティングは、モデルが単純すぎるということです。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-013",
+      "audio": "aiml-0001-013.mp3"
+    },
+    {
+      "en": "The dataset is imbalanced. Ninety percent of the examples are one class.",
+      "jp": "データに偏りがあります。90%が1つのクラスです。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-014",
+      "audio": "aiml-0001-014.mp3"
+    },
+    {
+      "en": "Labeling the data takes a lot of time and money.",
+      "jp": "データのラベル付けには時間と費用がかかります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-015",
+      "audio": "aiml-0001-015.mp3"
+    },
+    {
+      "en": "Garbage in, garbage out.",
+      "jp": "ごみを入れればごみが出る。（入力が悪いと結果も悪い）",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-016",
+      "audio": "aiml-0001-016.mp3"
+    },
+    {
+      "en": "Data quality matters more than data quantity.",
+      "jp": "データの量より質が重要です。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-017",
+      "audio": "aiml-0001-017.mp3"
+    },
+    {
+      "en": "We should remove duplicates from the dataset.",
+      "jp": "データセットから重複を除くべきです。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-018",
+      "audio": "aiml-0001-018.mp3"
+    },
+    {
+      "en": "Supervised learning needs labeled examples.",
+      "jp": "教師あり学習には、ラベル付きの例が必要です。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-019",
+      "audio": "aiml-0001-019.mp3"
+    },
+    {
+      "en": "Unsupervised learning finds patterns without labels.",
+      "jp": "教師なし学習は、ラベルなしでパターンを見つけます。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-020",
+      "audio": "aiml-0001-020.mp3"
+    },
+    {
+      "en": "Reinforcement learning trains an agent using rewards.",
+      "jp": "強化学習は、報酬を使ってエージェントを学習させます。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-021",
+      "audio": "aiml-0001-021.mp3"
+    },
+    {
+      "en": "Reinforcement learning from human feedback aligns the model with human preferences.",
+      "jp": "人間のフィードバックによる強化学習が、モデルを人の好みに合わせます。",
+      "say": [],
+      "note": "RLHF = 人間の評価で学習を調整する方法。",
+      "id": "aiml-0001-022",
+      "audio": "aiml-0001-022.mp3"
+    },
+    {
+      "en": "Pre-training is expensive. Fine-tuning is relatively cheap.",
+      "jp": "事前学習は高額で、ファインチューニングは比較的安いです。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-023",
+      "audio": "aiml-0001-023.mp3"
+    },
+    {
+      "en": "We fine-tuned the model on our internal documents.",
+      "jp": "社内文書でモデルをファインチューニングしました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-024",
+      "audio": "aiml-0001-024.mp3"
+    },
+    {
+      "en": "Fine-tuning changes the weights. Prompting does not.",
+      "jp": "ファインチューニングは重みを変えますが、プロンプトは変えません。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-025",
+      "audio": "aiml-0001-025.mp3"
+    },
+    {
+      "en": "LoRA lets us fine-tune with far fewer trainable parameters.",
+      "jp": "LoRAを使えば、学習するパラメータをずっと少なくして調整できます。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-026",
+      "audio": "aiml-0001-026.mp3"
+    },
+    {
+      "en": "Distillation transfers knowledge from a large model to a small one.",
+      "jp": "蒸留は、大きなモデルの知識を小さなモデルに移します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-027",
+      "audio": "aiml-0001-027.mp3"
+    },
+    {
+      "en": "The training run took two weeks on a thousand GPUs.",
+      "jp": "学習は1000個のGPUで2週間かかりました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-028",
+      "audio": "aiml-0001-028.mp3"
+    },
+    {
+      "en": "A training run failed because of an out-of-memory error.",
+      "jp": "メモリ不足のエラーで学習が失敗しました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-029",
+      "audio": "aiml-0001-029.mp3"
+    },
+    {
+      "en": "We save a checkpoint every thousand steps.",
+      "jp": "1000ステップごとにチェックポイントを保存します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-030",
+      "audio": "aiml-0001-030.mp3"
+    },
+    {
+      "en": "Let's resume from the last checkpoint.",
+      "jp": "最後のチェックポイントから再開しましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-031",
+      "audio": "aiml-0001-031.mp3"
+    },
+    {
+      "en": "Mixed precision training saves memory and time.",
+      "jp": "混合精度学習は、メモリと時間を節約します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-032",
+      "audio": "aiml-0001-032.mp3"
+    },
+    {
+      "en": "We use distributed training across multiple nodes.",
+      "jp": "複数のノードで分散学習を行います。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-033",
+      "audio": "aiml-0001-033.mp3"
+    },
+    {
+      "en": "The accuracy is ninety-two percent, but the recall is low.",
+      "jp": "精度は92%ですが、再現率が低いです。",
+      "say": [],
+      "note": "accuracy = 正解率、recall = 見逃しの少なさ。",
+      "id": "aiml-0001-034",
+      "audio": "aiml-0001-034.mp3"
+    },
+    {
+      "en": "Precision and recall are trade-offs.",
+      "jp": "適合率と再現率はトレードオフです。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-035",
+      "audio": "aiml-0001-035.mp3"
+    },
+    {
+      "en": "The confusion matrix shows where the model makes mistakes.",
+      "jp": "混同行列で、モデルがどこで間違えるか分かります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-036",
+      "audio": "aiml-0001-036.mp3"
+    },
+    {
+      "en": "We evaluate the model on a held-out test set.",
+      "jp": "取り置いたテストデータでモデルを評価します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-037",
+      "audio": "aiml-0001-037.mp3"
+    },
+    {
+      "en": "The metric doesn't capture what users actually care about.",
+      "jp": "その指標は、ユーザーが本当に気にする点を捉えていません。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-038",
+      "audio": "aiml-0001-038.mp3"
+    },
+    {
+      "en": "Let's run an ablation study to see which component matters.",
+      "jp": "どの部品が重要か、アブレーション実験をしましょう。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-039",
+      "audio": "aiml-0001-039.mp3"
+    },
+    {
+      "en": "The results are not statistically significant.",
+      "jp": "結果は統計的に有意ではありません。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-040",
+      "audio": "aiml-0001-040.mp3"
+    },
+    {
+      "en": "We need to reproduce the results with a different random seed.",
+      "jp": "別の乱数シードで結果を再現する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-041",
+      "audio": "aiml-0001-041.mp3"
+    },
+    {
+      "en": "Bias in the training data leads to biased predictions.",
+      "jp": "学習データの偏りは、予測の偏りにつながります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-042",
+      "audio": "aiml-0001-042.mp3"
+    },
+    {
+      "en": "The model fails on edge cases.",
+      "jp": "モデルは例外的なケースで失敗します。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-043",
+      "audio": "aiml-0001-043.mp3"
+    },
+    {
+      "en": "We found a distribution shift between training and production.",
+      "jp": "学習時と本番で、データの分布のずれが見つかりました。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-044",
+      "audio": "aiml-0001-044.mp3"
+    },
+    {
+      "en": "The model needs to be retrained regularly.",
+      "jp": "モデルは定期的に再学習する必要があります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-045",
+      "audio": "aiml-0001-045.mp3"
+    },
+    {
+      "en": "Synthetic data can help fill the gaps.",
+      "jp": "合成データで不足を補えることがあります。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-046",
+      "audio": "aiml-0001-046.mp3"
+    },
+    {
+      "en": "Interpretability is still an open problem.",
+      "jp": "解釈可能性は、まだ未解決の問題です。",
+      "say": [],
+      "note": "",
+      "id": "aiml-0001-047",
+      "audio": "aiml-0001-047.mp3"
+    }
+  ],
+  "app": "phrase-pack",
+  "version": 1,
+  "ver": 1
 }
