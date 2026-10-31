@@ -1,5 +1,5 @@
 {
-"updated": 1793447770311,
+"updated": 1793449392506,
 "packs": [
 {
 "id": "airport-0001",
@@ -448,6 +448,14 @@
 "count": 50,
 "situation": "wellness",
 "sname": "病院・体調不良"
+},
+{
+"id": "hobbyfit-0701",
+"file": "hobbyfit-0701.json",
+"ver": 1,
+"count": 50,
+"situation": "hobbyfit",
+"sname": "趣味・スポーツ・ジム"
 }
 ]
 }

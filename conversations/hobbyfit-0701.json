@@ -1,0 +1,147 @@
+[
+  {
+    "id": "hobbyfit",
+    "ic": "🏋️",
+    "n": "趣味・スポーツ・ジム",
+    "hint": "two friends navigate a new gym, a weekend game, and the awkward joy of being a beginner",
+    "level": 3,
+    "keywords": ["gym", "sports", "hobbies"],
+    "d": [
+      {
+        "t": "ジム初日の迷子",
+        "l": [
+          {"sp": 0, "en": "Hey, Jordan, I've been walking around for ten minutes, and I still can't find the locker room or the check-in desk.", "jp": "ねえジョーダン、10分歩き回ってるのに、更衣室も受付もまだ見つからない。"},
+          {"sp": 1, "en": "You passed the desk twice.", "jp": "受付なら2回通り過ぎたよ。"},
+          {"sp": 0, "en": "Seriously? I was trying to look like I knew where I was going.", "jp": "本当に？分かってるふりをしようとしてたんだけど。"},
+          {"sp": 1, "en": "Just talk normally. Nobody's grading your gym entrance.", "jp": "普通に話して。ジムの入り方を採点されるわけじゃないよ。"},
+          {"sp": 0, "en": "I know, but everyone else seems to have a routine, and I'm standing here holding a water bottle like it's a map.", "jp": "分かってるけど、みんな自分の習慣があるみたいで、私は水筒を地図みたいに持って立ってる。"},
+          {"sp": 1, "en": "That's how everybody starts. I'll show you where to scan in.", "jp": "みんな最初はそんな感じだよ。入館の読み取り場所を教えるね。"},
+          {"sp": 0, "en": "Thanks. After that, can you show me how to adjust one machine without making it look like I'm wrestling it?", "jp": "ありがとう。そのあと、マシンと格闘してるみたいにならずに調整する方法も教えてくれる？"},
+          {"sp": 1, "en": "Deal. We'll start light and ask a trainer if anything feels off.", "jp": "いいよ。軽めから始めて、変な感じがしたらトレーナーに聞こう。"},
+          {"sp": 0, "en": "Sounds good. I came here to get stronger, not to become a dramatic story in the lobby.", "jp": "いいね。強くなりに来たのであって、ロビーで大騒ぎする話になりたいわけじゃない。"},
+          {"sp": 1, "en": "Relax, it's me. If you get lost again, I'll pretend it was part of your warm-up.", "jp": "落ち着いて、私だよ。また迷ったら準備運動の一部だったことにしてあげる。"}
+        ]
+      },
+      {
+        "t": "筋トレの重さを選ぶ",
+        "l": [
+          {"sp": 0, "en": "I picked the weight you used, but halfway through the first set, my arms started shaking like they were filing a complaint.", "jp": "あなたと同じ重さにしたけど、最初のセットの途中で腕が苦情を申し立てるみたいに震え始めた。"},
+          {"sp": 1, "en": "Drop it down before your arms quit completely. You don't have to match me or lift the same weight I do.", "jp": "腕が完全に限界になる前に重さを下げて。私に合わせたり同じ重さを持ったりしなくていいよ。"},
+          {"sp": 0, "en": "I know, I just thought I'd look ridiculous using the tiny plates.", "jp": "分かってる。ただ小さいプレートを使うと、変に見えると思ってた。"},
+          {"sp": 1, "en": "Nobody's watching your plates, and if they are, that's their weird hobby.", "jp": "誰もあなたのプレートなんて見てないよ。見てるとしたら、それがその人の変な趣味だね。"},
+          {"sp": 0, "en": "Okay, I'm gonna lower it and focus on moving properly instead of trying to impress strangers.", "jp": "分かった。重さを下げて、知らない人に見せようとせず、正しい動きに集中する。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:決意を話す"},
+          {"sp": 1, "en": "Perfect. Want me to watch your form?", "jp": "いいね。フォームを見ようか？"},
+          {"sp": 0, "en": "Yeah, please. If my back starts rounding, say something before I convince myself it's fine.", "jp": "うん、お願い。背中が丸まり始めたら、大丈夫だと思い込む前に教えて。"},
+          {"sp": 1, "en": "Got it. Keep your feet planted and take your time.", "jp": "分かった。足をしっかりつけて、ゆっくりやって。"},
+          {"sp": 0, "en": "That already feels better. Turns out lifting less and doing it well is not a personal failure.", "jp": "もう楽になった。軽くして正しくやるのは、別に失敗じゃないんだね。"},
+          {"sp": 1, "en": "Exactly. The goal is to come back next week, not win a staring contest with the dumbbells.", "jp": "その通り。目標は来週も来ること。ダンベルとにらめっこで勝つことじゃないよ。"}
+        ]
+      },
+      {
+        "t": "週末の試合に誘われる",
+        "l": [
+          {"sp": 0, "en": "A few of us are playing pickup basketball Saturday morning, and we're short one person; you wanna come try it?", "jp": "土曜の朝に何人かでバスケをするんだけど、一人足りないんだ。来てみない？", "note": "元の形: want to／聞こえ方: ワナ／使う場面:気軽に誘う"},
+          {"sp": 1, "en": "I haven't played since high school.", "jp": "高校以来やってないよ。"},
+          {"sp": 0, "en": "That's fine. We're there to play, not to audition for a professional team.", "jp": "大丈夫。プロチームの選考じゃなくて、楽しむためにやるんだから。"},
+          {"sp": 1, "en": "You're kidding. Last time I touched a basketball, it bounced off my foot and hit a trash can across the gym.", "jp": "冗談でしょ。前にボールを触った時は、足に当たって体育館の向こうのゴミ箱にぶつかったんだよ。"},
+          {"sp": 0, "en": "Honestly, that sounds more entertaining than half the highlight reels people post online.", "jp": "正直、ネットに投稿されてるハイライトの半分より面白そうだよ。"},
+          {"sp": 1, "en": "All right, but don't put me on the team that keeps score.", "jp": "分かった。でも点数をつけるチームには入れないで。"},
+          {"sp": 0, "en": "No pressure. We can grab coffee afterward, and you can tell me how badly I missed my shots.", "jp": "気楽にね。終わったらコーヒーでも飲んで、私がどれだけシュートを外したか教えてよ。"},
+          {"sp": 1, "en": "Deal. What time should I be there?", "jp": "いいよ。何時に行けばいい？"},
+          {"sp": 0, "en": "Around nine. Bring water, shoes you can move in, and absolutely no expectations of athletic greatness.", "jp": "9時ごろ。水と動きやすい靴を持ってきて。運動神経の良さは全く期待しないでね。"},
+          {"sp": 1, "en": "I can manage two out of three.", "jp": "3つのうち2つなら何とかなるよ。"}
+        ]
+      },
+      {
+        "t": "ヨガで体が硬い",
+        "l": [
+          {"sp": 0, "en": "The instructor said to relax into the stretch, but my legs are shaking, and I'm pretty sure relaxing isn't happening.", "jp": "インストラクターは力を抜いて伸ばしてと言ったけど、足が震えていて、とても力を抜けそうにない。"},
+          {"sp": 1, "en": "Bend your knees a little. You don't need to copy the person next to you.", "jp": "膝を少し曲げて。隣の人の真似をしなくていいよ。"},
+          {"sp": 0, "en": "They look like a folded lawn chair, and I look like a question mark.", "jp": "あの人は折りたたみ椅子みたいで、私はクエスチョンマークみたい。"},
+          {"sp": 1, "en": "That's not the same pose, but I appreciate the confidence.", "jp": "同じポーズではないけど、その自信は評価するよ。"},
+          {"sp": 0, "en": "I can barely touch my shins, and I'm trying not to turn this into a competition with someone I just met.", "jp": "すねに触るのがやっとなのに、会ったばかりの人と競争にしないようにしてる。"},
+          {"sp": 1, "en": "Then don't. Breathe, stay where it feels manageable, and let the pose come over time.", "jp": "競争しなくていいよ。呼吸して、無理のないところで保って、少しずつできるようになろう。"},
+          {"sp": 0, "en": "Okay. I'm gonna stop trying to look flexible and just pay attention to what my body is telling me.", "jp": "分かった。柔らかく見せようとするのはやめて、体の声に集中する。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの行動"},
+          {"sp": 1, "en": "That is the whole idea.", "jp": "それがまさに大事なことだよ。"},
+          {"sp": 0, "en": "You could've mentioned that before I tried to fold myself into furniture.", "jp": "家具みたいに体を折りたたむ前に言ってよ。"},
+          {"sp": 1, "en": "I thought the dramatic sigh was part of your practice.", "jp": "あの大きなため息も練習の一部かと思ってた。"}
+        ]
+      },
+      {
+        "t": "ランニングのペース",
+        "l": [
+          {"sp": 0, "en": "You took off so fast that I spent the first block wondering whether we were running together or whether you were escaping.", "jp": "あなたがすごい勢いで走り出すから、最初の一区画ずっと、一緒に走ってるのか逃げられてるのか考えてた。"},
+          {"sp": 1, "en": "Sorry. I got carried away when the music started.", "jp": "ごめん。音楽が始まって、つい夢中になった。"},
+          {"sp": 0, "en": "I can keep going, but I can't hold that pace and still talk without sounding like a broken leaf blower.", "jp": "走り続けられるけど、その速さだと話せない。壊れたブロワーみたいな音になっちゃう。"},
+          {"sp": 1, "en": "Fair. Let's slow down and use the next lamp post as our turnaround.", "jp": "そうだね。ペースを落として、次の街灯を折り返し地点にしよう。"},
+          {"sp": 0, "en": "Thanks. I thought I had to keep up just because you looked comfortable.", "jp": "ありがとう。あなたが平気そうだから、ついていかなきゃと思ってた。"},
+          {"sp": 1, "en": "Nah, I just run early enough that nobody sees me struggle.", "jp": "いや、苦しんでるところを誰にも見られないくらい早朝に走ってるだけ。"},
+          {"sp": 0, "en": "That is strangely reassuring. Wanna stop at the fountain and get some water?", "jp": "妙に安心するね。噴水のところで止まって水を飲まない？", "note": "元の形: want to／聞こえ方: ワナ／使う場面:気軽に提案する"},
+          {"sp": 1, "en": "Absolutely. Running is supposed to be challenging, not a surprise job interview.", "jp": "もちろん。ランニングは大変でもいいけど、抜き打ち面接じゃないからね。"},
+          {"sp": 0, "en": "Next time, let's agree on a pace before we leave the driveway.", "jp": "次は玄関を出る前にペースを決めよう。"},
+          {"sp": 1, "en": "Deal. And I'll leave the dramatic soundtrack at home.", "jp": "そうしよう。大げさなサウンドトラックは家に置いてくるよ。"}
+        ]
+      },
+      {
+        "t": "チームに入るか迷う",
+        "l": [
+          {"sp": 0, "en": "They need one more person for the volleyball league, but everyone already knows each other, and I don't wanna be the awkward new one.", "jp": "バレーボールのリーグであと一人必要らしいけど、みんな知り合い同士で、新入りとして気まずくなるのは嫌だ。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:不安を話す"},
+          {"sp": 1, "en": "You won't be. They're nice, and half of them joined without knowing anyone.", "jp": "そんなことないよ。みんないい人だし、半分は知り合いなしで参加したんだよ。"},
+          {"sp": 0, "en": "What if I'm terrible and they regret asking me, and then I have to see them at the gym every week?", "jp": "すごく下手で誘ったことを後悔されたら？そのあと毎週ジムで顔を合わせることになるのに。"},
+          {"sp": 1, "en": "Then we laugh about the missed serves and keep playing.", "jp": "その時はサーブをミスしたことを笑って、続ければいいよ。"},
+          {"sp": 0, "en": "You're making it sound simple, but I haven't played since college, and I barely remember the rules.", "jp": "簡単そうに言うけど、大学以来やってないし、ルールもほとんど覚えてないよ。"},
+          {"sp": 1, "en": "We can go early, warm up, and I'll explain anything you forgot before the game starts.", "jp": "早めに行って準備運動しよう。始まる前に忘れたことは説明するよ。"},
+          {"sp": 0, "en": "All right. If I serve the ball into the parking lot, I'm blaming the wind.", "jp": "分かった。ボールを駐車場まで飛ばしたら、風のせいにする。"},
+          {"sp": 1, "en": "C'mon, we'll blame the ball. It knows what it did.", "jp": "ほら、ボールのせいにしよう。自分が何をしたか分かってるよ。", "note": "元の形: come on／聞こえ方: カモン／使う場面:冗談で促す"},
+          {"sp": 0, "en": "Fine. Send me the details, and I'll show up before I can invent another excuse.", "jp": "分かった。別の言い訳を考えつく前に行くから、詳細を送って。"},
+          {"sp": 1, "en": "That's the spirit. I'll save you a spot.", "jp": "その調子。場所を取っておくね。"}
+        ]
+      },
+      {
+        "t": "キャンプの持ち物",
+        "l": [
+          {"sp": 0, "en": "I packed a jacket, a flashlight, and enough snacks for a small expedition, but I forgot the tent poles before we drove two hours to get here.", "jp": "上着と懐中電灯、それに小さな探検隊分のおやつは詰めたのに、ここまで2時間運転してきてテントのポールを忘れたことに気づいた。"},
+          {"sp": 1, "en": "You packed the tent but not the poles? We can ask the campground office if they rent gear before it gets dark.", "jp": "テントは持ったのに、ポールは忘れたの？暗くなる前にキャンプ場の受付で道具を借りられるか聞いてみよう。"},
+          {"sp": 0, "en": "I know how it sounds. I was trying to pack while answering work messages.", "jp": "どう聞こえるかは分かってる。仕事のメッセージに返事しながら荷造りしてたんだ。"},
+          {"sp": 1, "en": "No worries. I brought a spare tarp, and there's a store ten minutes away.", "jp": "大丈夫。予備のタープを持ってきたし、10分のところに店もある。"},
+          {"sp": 0, "en": "I don't wanna make you drive back because of my impressive packing skills.", "jp": "私の見事な荷造りのせいで、戻ってもらいたくないよ。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:申し訳なさを伝える"},
+          {"sp": 1, "en": "It's fine. We can grab the poles, then decide whether your snack supply is enough for the night.", "jp": "大丈夫。ポールを買って、そのあとおやつが夜まで足りるか考えよう。"},
+          {"sp": 0, "en": "It's enough for two nights, maybe three if we ration the chocolate and don't tell anyone where it is.", "jp": "2晩分、チョコを節約して隠し場所を誰にも言わなければ3晩分あるよ。"},
+          {"sp": 1, "en": "I heard that. The chocolate location is now a matter of public interest.", "jp": "聞こえたよ。チョコの場所は今やみんなの関心事だね。"},
+          {"sp": 0, "en": "Fine, but you carry the poles. My arms are already committed to the snacks.", "jp": "分かった。でもポールは持ってね。私の腕はもうおやつ担当だから。"},
+          {"sp": 1, "en": "Deal. Next trip, we use a checklist before we leave.", "jp": "いいよ。次の旅行では出発前にチェックリストを使おう。"}
+        ]
+      },
+      {
+        "t": "水泳教室の息継ぎ",
+        "l": [
+          {"sp": 0, "en": "The coach says my stroke is fine, but I keep lifting my whole head to breathe and swallowing half the pool.", "jp": "コーチは泳ぎ方は大丈夫と言うけど、息継ぎのたびに頭を全部上げて、プールの水を半分飲んでる。"},
+          {"sp": 1, "en": "Try turning your head to the side instead of lifting it.", "jp": "頭を上げずに、横に向けてみて。"},
+          {"sp": 0, "en": "I tried, and somehow I still got water in my nose and lost the lane rope.", "jp": "試したけど、なぜか鼻に水が入ってコースロープも見失った。"},
+          {"sp": 1, "en": "That's why the coach is there. Ask them to watch one lap.", "jp": "だからコーチがいるんだよ。一往復見てもらえば。"},
+          {"sp": 0, "en": "I feel like I should've learned this as a kid, but I'm trying not to turn a swim lesson into a biography.", "jp": "子どもの頃に習っておくべきだったと思うけど、水泳教室で人生を振り返るのはやめようとしてる。"},
+          {"sp": 1, "en": "Nobody cares when you learned. You're here now, and you're getting better.", "jp": "いつ習ったかなんて誰も気にしないよ。今ここにいて、上達してるんだから。"},
+          {"sp": 0, "en": "Okay. I'm gonna ask for one thing to focus on instead of trying to fix everything at once.", "jp": "分かった。一度に全部直そうとせず、一つだけ意識することを聞いてみる。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:次の行動を伝える"},
+          {"sp": 1, "en": "Good call. Small adjustments are easier to remember.", "jp": "いい考え。一つずつ直すほうが覚えやすいよ。"},
+          {"sp": 0, "en": "If I make it across without drinking the pool, I'm counting that as a win.", "jp": "プールの水を飲まずに端まで行けたら、成功ってことにする。"},
+          {"sp": 1, "en": "Absolutely. I'll be your official witness.", "jp": "もちろん。私が正式な目撃者になるよ。"}
+        ]
+      },
+      {
+        "t": "試合で負けた後",
+        "l": [
+          {"sp": 0, "en": "We were up by six points, and then I missed two easy shots; I know it's just a game, but I'm still annoyed with myself.", "jp": "6点リードしてたのに、簡単なシュートを2本外した。遊びだと分かってるけど、自分に腹が立つ。"},
+          {"sp": 1, "en": "You also made the pass that got us those points.", "jp": "その点につながったパスを出したのもあなたでしょ。"},
+          {"sp": 0, "en": "That doesn't change the last two minutes, though, or the fact that I had a clear shot and still managed to miss the whole thing.", "jp": "でも最後の2分も、フリーで打てたのにリングにかすりもしなかったことも、変わらないよ。"},
+          {"sp": 1, "en": "No, but one bad stretch doesn't erase the rest of the game.", "jp": "そうだけど、最後にうまくいかなかったからといって、試合全体が消えるわけじゃないよ。"},
+          {"sp": 0, "en": "I keep replaying those shots in my head, like the right amount of self-criticism will magically change the score.", "jp": "正しく反省すれば点数が変わるみたいに、あのシュートを頭の中で何度も繰り返してる。"},
+          {"sp": 1, "en": "It won't. Get some water, take a breath, and let yourself be disappointed for a minute.", "jp": "変わらないよ。水を飲んで一息ついて、少しだけ悔しがっていいよ。"},
+          {"sp": 0, "en": "Thanks. I don't wanna turn a fun night into a lecture about everything I did wrong.", "jp": "ありがとう。楽しい夜を、自分の失敗を全部並べる説教にしたくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:避けたいことを話す"},
+          {"sp": 1, "en": "Then don't. We can get tacos and talk about literally anything else.", "jp": "そうしなよ。タコスを食べて、他の話をしよう。"},
+          {"sp": 0, "en": "Deal. Next game, I'm aiming for the backboard and lowering my expectations.", "jp": "そうしよう。次の試合ではバックボードを狙って、期待値を下げるよ。"},
+          {"sp": 1, "en": "Aim for the basket. Let's not get carried away.", "jp": "リングを狙ってよ。そこまで控えめにならなくていい。"}
+        ]
+      }
+    ]
+  }
+]
