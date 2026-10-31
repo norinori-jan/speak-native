@@ -1,0 +1,147 @@
+[
+  {
+    "id": "wellness2",
+    "ic": "🏥",
+    "n": "病院・体調不良（追加）",
+    "hint": "two roommates handle a confusing test result, a late-night call, and a long recovery week",
+    "level": 3,
+    "keywords": ["follow-up care", "pharmacy", "recovery"],
+    "d": [
+      {
+        "t": "検査の説明が分からない",
+        "l": [
+          {"sp": 0, "en": "The doctor said the result was borderline, but I froze up and forgot to ask what that actually means for me.", "jp": "検査結果は境界域だと医師に言われたけど、頭が真っ白になって、自分にとってどういう意味なのか聞き忘れた。"},
+          {"sp": 1, "en": "Did they say when you should follow up?", "jp": "いつ再診すべきかは言われた？"},
+          {"sp": 0, "en": "Not really. I heard the words, but I couldn't make them stick.", "jp": "はっきりとは。言葉は聞いたけど、頭に入らなかった。"},
+          {"sp": 1, "en": "That happens. Let's call the office and ask them to explain it in plain language.", "jp": "そういうこともあるよ。診療所に電話して、分かりやすく説明してもらおう。"},
+          {"sp": 0, "en": "I don't want them to think I'm challenging the doctor; I just need to understand what I'm supposed to do next.", "jp": "医師に異議を唱えていると思われたくない。ただ次に何をすればいいか理解したいだけ。"},
+          {"sp": 1, "en": "You can say exactly that. Asking for clarification is normal.", "jp": "そのまま伝えればいいよ。確認するのは普通のことだから。"},
+          {"sp": 0, "en": "Could you sit with me while I call? I might lose my nerve once someone picks up.", "jp": "電話する間そばにいてくれる？相手が出たら、聞く勇気がなくなるかもしれない。"},
+          {"sp": 1, "en": "Sure. I'll help you keep track of the questions.", "jp": "いいよ。質問を忘れないよう一緒に確認するね。"},
+          {"sp": 0, "en": "Thanks. I wrote down the date, the result, and the part I didn't understand.", "jp": "ありがとう。日付と結果、それに分からなかったところを書いておいた。"},
+          {"sp": 1, "en": "Perfect. Let's call before the office closes.", "jp": "ばっちり。診療所が閉まる前に電話しよう。"}
+        ]
+      },
+      {
+        "t": "夜に咳が止まらない",
+        "l": [
+          {"sp": 0, "en": "I keep waking up coughing, and now I'm worried I'll be too exhausted to get through tomorrow's shift without making mistakes.", "jp": "咳で何度も目が覚める。明日の勤務をミスせず乗り切れないほど疲れてしまいそうで心配だ。"},
+          {"sp": 1, "en": "Want me to bring you some water?", "jp": "水を持ってこようか？"},
+          {"sp": 0, "en": "Please. I tried the tea, but it didn't do much.", "jp": "お願い。お茶も試したけど、あまり変わらなかった。"},
+          {"sp": 1, "en": "Did the clinic give you an after-hours number?", "jp": "クリニックから時間外の連絡先をもらった？"},
+          {"sp": 0, "en": "It's on the discharge sheet. I can't tell whether this is bad enough to call, though.", "jp": "退院時の書類にある。でも電話するほどなのか判断がつかない。"},
+          {"sp": 1, "en": "Let's read their instructions instead of guessing. If you're concerned, calling is okay.", "jp": "決めつけず、指示を読もう。不安があるなら電話していいんだよ。"},
+          {"sp": 0, "en": "I don't wanna wake everyone up over nothing, but I also don't want to ignore something important or make things worse.", "jp": "大したことないのにみんなを起こしたくないけど、大事なことを見過ごしたり悪化させたりするのも嫌だ。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:ためらいを話す"},
+          {"sp": 1, "en": "You don't have to figure it out alone. Let's call and describe what's happening.", "jp": "一人で判断しなくていいよ。電話して、今の状態を説明しよう。"},
+          {"sp": 0, "en": "Okay. Can you find the paper while I get my phone?", "jp": "分かった。私が電話を取る間に書類を探してくれる？"},
+          {"sp": 1, "en": "Already got it. Take your time.", "jp": "もう見つけたよ。落ち着いてね。"}
+        ]
+      },
+      {
+        "t": "薬局で在庫切れ",
+        "l": [
+          {"sp": 0, "en": "They said the prescription is ready, but one item is out of stock, and nobody knows when it'll come in.", "jp": "処方薬は用意できているけど、一つ在庫切れで、いつ入荷するか分からないと言われた。"},
+          {"sp": 1, "en": "Did they offer to check another location?", "jp": "別の店舗の在庫を調べると言ってた？"},
+          {"sp": 0, "en": "Not yet. I thought I should ask before calling the doctor's office.", "jp": "まだ。診療所に電話する前に聞こうと思って。"},
+          {"sp": 1, "en": "Good idea. Ask what options they can verify with your prescriber.", "jp": "いい考えだね。処方医に確認できる選択肢があるか聞こう。"},
+          {"sp": 0, "en": "I don't want to switch anything on my own; I just need to know what the proper next step is.", "jp": "自分の判断で何かを変えたいわけじゃない。適切な次の手順を知りたいだけ。"},
+          {"sp": 1, "en": "Exactly. Gimme the store number, and I'll write down the answer.", "jp": "その通り。店舗の番号を教えて。返事をメモするよ。", "note": "元の形: give me／聞こえ方: ギミ／使う場面:物や情報を頼む"},
+          {"sp": 0, "en": "Here. Could you ask whether they can transfer the prescription if another branch has it?", "jp": "はい。別の支店に在庫があれば、処方を移せるか聞いてくれる？"},
+          {"sp": 1, "en": "Sure. I'll make it clear we're asking, not requesting a change without approval.", "jp": "もちろん。承認なしで変更を求めているのではなく、確認だと伝えるね。"},
+          {"sp": 0, "en": "Thanks. I was kinda spiraling, and a simple plan helps me think straight.", "jp": "ありがとう。少し不安が膨らんでたけど、手順が分かると落ち着いて考えられる。", "note": "元の形: kind of／聞こえ方: カインダ／使う場面:少し控えめに言う"},
+          {"sp": 1, "en": "One call at a time. We'll get clear information.", "jp": "一度に一つずつ電話しよう。必要な情報を確認できるよ。"}
+        ]
+      },
+      {
+        "t": "診察で話す順番を忘れる",
+        "l": [
+          {"sp": 0, "en": "I made a list of symptoms, but when the doctor asks what brings me in, my mind goes completely blank.", "jp": "症状をリストにしたのに、医師に今日はどうしたのか聞かれると、頭が真っ白になる。"},
+          {"sp": 1, "en": "You can hand them the list first.", "jp": "最初にリストを渡せばいいよ。"},
+          {"sp": 0, "en": "I know, but I feel awkward reading from a page like I'm giving a presentation.", "jp": "そうなんだけど、発表みたいに紙を読むのは気まずく感じる。"},
+          {"sp": 1, "en": "It's your appointment. You don't have to perform.", "jp": "あなたの診察なんだから、うまく話そうとしなくていいよ。"},
+          {"sp": 0, "en": "Could you remind me to mention when it started and what makes it worse before the appointment gets too far along?", "jp": "診察が進みすぎる前に、いつ始まったか、何をすると悪化するか話すよう思い出させてくれる？"},
+          {"sp": 1, "en": "Absolutely. I'll ask if you've covered the main things.", "jp": "もちろん。大事なことを話せたか確認するね。"},
+          {"sp": 0, "en": "And if I forget something, can I call the office afterward instead of trying to squeeze it in?", "jp": "何か忘れたら、無理に診察中に詰め込まず、あとで診療所に電話してもいいかな？"},
+          {"sp": 1, "en": "Sure. You can ask them how they prefer follow-up questions.", "jp": "もちろん。追加の質問はどうするのがよいか聞いてみよう。"},
+          {"sp": 0, "en": "Okay, I'm gonna keep this in my hand so I don't leave it in the car.", "jp": "分かった。車に置き忘れないよう、これを手に持っておく。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:予定を話す"},
+          {"sp": 1, "en": "Good. We can go in when they call your name.", "jp": "いいね。名前を呼ばれたら入ろう。"}
+        ]
+      },
+      {
+        "t": "退院後の生活が不安",
+        "l": [
+          {"sp": 0, "en": "They said I can go home, but I still feel shaky, and I don't know how much I'm supposed to do by myself.", "jp": "帰宅してよいと言われたけど、まだふらつくし、どこまで自分でしていいのか分からない。"},
+          {"sp": 1, "en": "Let's ask the nurse before we leave.", "jp": "帰る前に看護師さんに聞こう。"},
+          {"sp": 0, "en": "I don't want to sound ungrateful; they've been kind, and I know they're busy.", "jp": "感謝していないように聞こえたくない。親切にしてくれたし、忙しいのも分かってる。"},
+          {"sp": 1, "en": "Asking what to watch for is part of going home safely.", "jp": "何に注意すべきか聞くのも、安全に帰宅するための一部だよ。"},
+          {"sp": 0, "en": "Could we ask what means I should call them, and what means I should come back?", "jp": "どんな場合に電話すべきで、どんな場合に戻ってくるべきか聞いてもいい？"},
+          {"sp": 1, "en": "Yep. I'll write the instructions down.", "jp": "もちろん。説明をメモするね。"},
+          {"sp": 0, "en": "Also, I live alone, so I need to know whether I should arrange for someone to check in tonight after I get home.", "jp": "それに一人暮らしだから、帰宅後の今夜、誰かに様子を見に来てもらうべきか知りたい。"},
+          {"sp": 1, "en": "That's useful for them to know. I'll stay with you tonight either way.", "jp": "それは伝えておくといいね。どちらにしても今夜は一緒にいるよ。"},
+          {"sp": 0, "en": "Thanks. I thought getting discharged meant I should be totally fine, which sounds silly now.", "jp": "ありがとう。退院できるなら完全に大丈夫なはずと思ってた。今考えると変だね。"},
+          {"sp": 1, "en": "Not silly. You're allowed to ask for a clear plan.", "jp": "変じゃないよ。具体的な手順を聞いていいんだから。"}
+        ]
+      },
+      {
+        "t": "体調不良を職場に伝える",
+        "l": [
+          {"sp": 0, "en": "I still have a fever this morning, and I can't tell whether I should try working from home or take the day off.", "jp": "今朝も熱がある。在宅勤務を試すべきか、一日休むべきか判断できない。"},
+          {"sp": 1, "en": "You sound exhausted. Did you get any sleep?", "jp": "かなり疲れてる声だね。眠れた？"},
+          {"sp": 0, "en": "Not much. I keep thinking everyone will have to cover for me.", "jp": "あまり。みんなに仕事を代わってもらうことばかり考えてる。"},
+          {"sp": 1, "en": "They'd rather know early than find out you're struggling all day.", "jp": "一日中無理をしたと後で分かるより、早めに知らせてもらう方がいいよ。"},
+          {"sp": 0, "en": "I can send a short message and say I'll update them after I speak with the clinic about what to do next.", "jp": "短いメッセージを送り、次にどうすべきかクリニックに相談してからまた知らせると伝えるよ。"},
+          {"sp": 1, "en": "That sounds clear. Want me to read it before you send it?", "jp": "分かりやすいと思う。送る前に読もうか？"},
+          {"sp": 0, "en": "Please. I don't wanna overexplain or promise I'll be back tomorrow when I don't know yet.", "jp": "お願い。説明しすぎたくないし、まだ分からないのに明日戻ると約束したくない。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:避けたいことを伝える"},
+          {"sp": 1, "en": "Just say what you know right now and leave the rest open.", "jp": "今分かっていることだけ伝えて、あとは未定にすればいいよ。"},
+          {"sp": 0, "en": "Okay, sent. Now I'm gonna call the clinic and ask what they recommend.", "jp": "よし、送った。これからクリニックに電話して、どうすればいいか聞く。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:次の行動を伝える"},
+          {"sp": 1, "en": "Good. I'll bring you some water while you wait.", "jp": "いいね。待っている間に水を持ってくるよ。"}
+        ]
+      },
+      {
+        "t": "予約を変更したい",
+        "l": [
+          {"sp": 0, "en": "My symptoms got worse overnight, and the appointment I booked is three days away; I need to ask whether anything opened up.", "jp": "夜の間に症状が悪化した。予約は3日後だから、空きが出ていないか聞きたい。"},
+          {"sp": 1, "en": "Call the office and explain what's changed.", "jp": "診療所に電話して、何が変わったか説明しよう。"},
+          {"sp": 0, "en": "I don't want to exaggerate just to get seen sooner.", "jp": "早く診てもらうために、大げさに言いたくない。"},
+          {"sp": 1, "en": "You don't have to. Just be specific about what you're experiencing.", "jp": "その必要はないよ。今の状態を具体的に伝えればいい。"},
+          {"sp": 0, "en": "Could you stay nearby while I'm on the phone? They talk fast, and I might miss a question while I'm trying to take notes.", "jp": "電話中、近くにいてくれる？話すのが速いし、メモを取りながらだと質問を聞き逃すかもしれない。"},
+          {"sp": 1, "en": "Sure. Ask them to repeat anything you didn't catch.", "jp": "いいよ。聞き取れなかったら、もう一度言ってもらえばいい。"},
+          {"sp": 0, "en": "If there's no earlier slot, I'll ask whether they have a cancellation list.", "jp": "早い時間が空いていなければ、キャンセル待ちがあるか聞いてみる。"},
+          {"sp": 1, "en": "And write down the name of whoever you speak with.", "jp": "話した相手の名前も書いておこう。"},
+          {"sp": 0, "en": "Good call. I kinda forget details when I'm stressed, even if they seem obvious at the time, and then I have to call back.", "jp": "いい考え。緊張すると、その時は明らかに思えても細かいことを忘れて、あとでかけ直すことになるんだ。", "note": "元の形: kind of／聞こえ方: カインダ／使う場面:少し控えめに言う"},
+          {"sp": 1, "en": "I'll get a pen. You're not doing this by yourself.", "jp": "ペンを持ってくるね。一人で対応しなくていいよ。"}
+        ]
+      },
+      {
+        "t": "医療費の請求に驚く",
+        "l": [
+          {"sp": 0, "en": "This bill is much higher than the estimate they gave me, and I don't understand which part my insurance didn't cover.", "jp": "請求額が見積もりよりかなり高い。保険の対象外になったのがどの項目か分からない。"},
+          {"sp": 1, "en": "Don't pay it until you've checked the itemized statement.", "jp": "明細を確認するまでは支払わないでおこう。"},
+          {"sp": 0, "en": "I wasn't going to argue; I just need to know what I'm looking at.", "jp": "言い争うつもりはないよ。何を見ているのか知りたいだけ。"},
+          {"sp": 1, "en": "Right. Call billing and ask them to walk you through each charge.", "jp": "そうだね。請求窓口に電話して、項目ごとに説明してもらおう。"},
+          {"sp": 0, "en": "Should I call the insurer too, or wait until the clinic explains their side?", "jp": "保険会社にも電話すべきかな、それとも診療所の説明を先に聞くべき？"},
+          {"sp": 1, "en": "Ask the billing office which details you'll need for the insurer.", "jp": "保険会社に確認するにはどんな情報が必要か、請求窓口に聞こう。"},
+          {"sp": 0, "en": "Okay. I gotta set aside some time for this instead of trying to solve it between meetings.", "jp": "分かった。会議の合間に何とかしようとせず、時間を取らなきゃ。", "note": "元の形: have got to／聞こえ方: アイガラ／使う場面:必要を伝える"},
+          {"sp": 1, "en": "Good plan. Keep the bill, the estimate, and your insurance card together.", "jp": "いいね。請求書、見積もり、保険証をまとめておこう。"},
+          {"sp": 0, "en": "Thanks. I was ready to panic, but I can at least start by asking for the breakdown while we sort out the bill.", "jp": "ありがとう。慌てそうだったけど、請求について整理しながら、まず内訳を求めることはできるね。"},
+          {"sp": 1, "en": "Exactly. One clear question at a time.", "jp": "その通り。一度に一つずつ、はっきり聞こう。"}
+        ]
+      },
+      {
+        "t": "通院の付き添いを頼む",
+        "l": [
+          {"sp": 0, "en": "The specialist appointment is across town, and I'm nervous about driving back if the visit leaves me feeling wiped out.", "jp": "専門医の診察は町の反対側だし、受診後に疲れ切った状態で運転して帰るのが心配。"},
+          {"sp": 1, "en": "I can take you. What time do we need to leave?", "jp": "送っていくよ。何時に出ればいい？"},
+          {"sp": 0, "en": "Are you sure? I know it's a long drive, and I hate asking people to rearrange their day.", "jp": "本当にいいの？遠いのは分かってるし、人の予定を変えてもらうのは申し訳ない。"},
+          {"sp": 1, "en": "It's okay. Just send me the address and the appointment time.", "jp": "大丈夫。住所と予約時間を送って。"},
+          {"sp": 0, "en": "Could you also help me remember the questions? They said I might have a lot to take in once we get there.", "jp": "質問を忘れないよう手伝ってくれる？着いたら説明が多くなるかもしれないと言われたんだ。"},
+          {"sp": 1, "en": "Of course. We can write them down before we go.", "jp": "もちろん。出発前に書き出しておこう。"},
+          {"sp": 0, "en": "Thanks, Sam. I keep telling myself I should handle everything alone, and it's getting exhausting.", "jp": "ありがとう、サム。何でも一人でやるべきだと言い聞かせてるけど、疲れてきた。"},
+          {"sp": 1, "en": "You don't get extra points for making this harder on yourself.", "jp": "自分で大変にしても、特別な得点がもらえるわけじゃないよ。"},
+          {"sp": 0, "en": "Fair enough. I'll text you the details tonight.", "jp": "そうだね。今夜、詳しいことをメッセージするよ。"},
+          {"sp": 1, "en": "Deal. I'll bring snacks for the waiting room.", "jp": "決まり。待合室用に軽食を持っていくね。"}
+        ]
+      }
+    ]
+  }
+]

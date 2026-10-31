@@ -3509,7 +3509,8 @@ function loadPackagedConversation(){
   {id:'familyfight',file:'familyfight-0201.json'},
   {id:'mishap',file:'mishap-0301.json'},
   {id:'biztravel',file:'biztravel-0401.json'},
-  {id:'wellness',file:'wellness-0601.json'}
+  {id:'wellness',file:'wellness-0601.json'},
+  {id:'wellness2',file:'wellness-0602.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
