@@ -1,0 +1,147 @@
+[
+  {
+    "id": "biztravel",
+    "ic": "🧳",
+    "n": "空港・出張・ホテル",
+    "hint": "two coworkers navigate a delayed flight and a tight connection during a work trip",
+    "level": 3,
+    "keywords": ["airport", "business travel", "hotel"],
+    "d": [
+      {
+        "t": "搭乗口が変わっていた",
+        "l": [
+          {"sp": 0, "en": "Hey, Nina, the gate changed while we were in line, and boarding starts in twenty minutes on the other side of the terminal.", "jp": "ねえニナ、列に並んでる間に搭乗口が変わってた。ターミナルの反対側で、あと20分で搭乗開始だよ。"},
+          {"sp": 1, "en": "Wait, what? The app still says B twelve.", "jp": "え、何だって？アプリにはまだB12って出てるよ。"},
+          {"sp": 0, "en": "The screen says C six now. That's on the other side of the terminal.", "jp": "表示板だと今はC6。ターミナルの反対側だよ。"},
+          {"sp": 1, "en": "You're kidding. We just came from there.", "jp": "冗談でしょ。さっきそこから来たばかりなのに。"},
+          {"sp": 0, "en": "I know, but let's move before they close the door and leave us here.", "jp": "分かってる。でもドアが閉まって取り残される前に行こう。"},
+          {"sp": 1, "en": "Grab the folder, and I'll carry the coffee. Didja check the departure board?", "jp": "書類を持って。コーヒーは私が持つね。出発案内は見た？", "note": "元の形: did you／聞こえ方: ディジャ／使う場面:くだけた確認"},
+          {"sp": 0, "en": "Yeah, it changed five minutes ago. I'll call the office once we're on board.", "jp": "うん、5分前に変わった。乗ったら会社に連絡するよ。"},
+          {"sp": 1, "en": "Good. No calls while we're sprinting through the airport.", "jp": "そうして。空港を走ってる間は電話なしね。"},
+          {"sp": 0, "en": "Fair. If we miss it, the client meeting's gonna become a very expensive video call from an airport hotel with terrible Wi-Fi.", "jp": "分かった。乗り遅れたら、顧客との会議は空港ホテルからの高くつくビデオ通話になるね。Wi-Fiもひどいだろうし。", "note": "元の形: going to／聞こえ方: ガナ／使う場面:くだけた予測"},
+          {"sp": 1, "en": "Then let's save the jokes for the gate. Move!", "jp": "じゃあ冗談は搭乗口に着いてから。急いで！"}
+        ]
+      },
+      {
+        "t": "乗り継ぎに間に合う？",
+        "l": [
+          {"sp": 0, "en": "Our first flight landed late, and the connection boards in fifteen minutes at a gate across the terminal, before the doors close.", "jp": "最初の便が遅れて着いて、乗り継ぎ便はターミナルの反対側で15分後に搭乗開始、ドアも閉まってしまう。"},
+          {"sp": 1, "en": "The airline app says the next gate is across the terminal.", "jp": "航空会社のアプリだと、次の搭乗口はターミナルの反対側。"},
+          {"sp": 0, "en": "I can make it if I run, but my bag's still in the overhead bin.", "jp": "走れば間に合うけど、荷物がまだ頭上の棚にある。"},
+          {"sp": 1, "en": "I'll get it. You go ask the crew if they can hold the door.", "jp": "荷物は私が取る。あなたは乗務員にドアを待ってもらえるか聞いて。"},
+          {"sp": 0, "en": "I hate splitting up when the plan's already falling apart.", "jp": "計画が崩れてるときに別行動するのは嫌だな。"},
+          {"sp": 1, "en": "I know, but one of us has to reach the gate before they stop boarding, or we'll both be stuck here overnight.", "jp": "分かる。でも搭乗が終わる前にどちらかが搭乗口に着かないと、二人ともここで一晩過ごすことになる。"},
+          {"sp": 0, "en": "Text me the gate number again, and keep your phone where you can hear it.", "jp": "搭乗口の番号をもう一度送って。電話の音が聞こえるところに持っててね。"},
+          {"sp": 1, "en": "Got it. If we get separated, meet by the airline desk.", "jp": "分かった。はぐれたら航空会社のカウンターで会おう。"},
+          {"sp": 0, "en": "And if we miss the connection, we need them to rebook both of us together.", "jp": "乗り継ぎに失敗したら、二人一緒の便に振り替えてもらわないと。"},
+          {"sp": 1, "en": "Deal. Let's move now and worry about the client after we land.", "jp": "そうしよう。今は急いで、顧客のことは到着してから考えよう。"}
+        ]
+      },
+      {
+        "t": "預けた荷物が出てこない",
+        "l": [
+          {"sp": 0, "en": "That's the last suitcase, and mine still hasn't shown up, even though we were among the first off the plane.", "jp": "あれで最後のスーツケースみたい。私のはまだ出てこない。飛行機は早めに降りたのに。"},
+          {"sp": 1, "en": "Are you sure this is our carousel? The screen switched while we were waiting.", "jp": "ここ、本当に私たちの荷物受取所？待ってる間に表示が変わったよ。"},
+          {"sp": 0, "en": "I checked twice. I need the presentation samples in that case for tomorrow morning, and the client arrives before breakfast.", "jp": "2回確認したよ。あのケースには明朝のプレゼン用サンプルが入ってる。顧客は朝食前に来るんだ。"},
+          {"sp": 1, "en": "Okay, let's go to the baggage desk before the staff disappears.", "jp": "分かった。係の人がいなくなる前に手荷物カウンターへ行こう。"},
+          {"sp": 0, "en": "I've got the claim tag and a photo of the suitcase.", "jp": "手荷物タグもスーツケースの写真もあるよ。"},
+          {"sp": 1, "en": "Good. Gimme the tag number, and I'll write it down too.", "jp": "よし、タグの番号を教えて。私も書き留めておく。", "note": "元の形: give me／聞こえ方: ギミ／使う場面:情報を頼む"},
+          {"sp": 0, "en": "If they deliver it to the hotel, can the front desk hold it overnight until we finish the client presentation tomorrow?", "jp": "ホテルに届けてもらえたら、明日の顧客向けプレゼンが終わるまでフロントで預かってもらえるかな？"},
+          {"sp": 1, "en": "They can. I'll call ahead once we have a case number.", "jp": "預かってもらえるよ。受付番号が出たら先にホテルへ電話する。"},
+          {"sp": 0, "en": "Thanks. I was kinda counting on having those samples before the client arrives.", "jp": "ありがとう。顧客が来る前にサンプルが届くと思ってたんだけどね。", "note": "元の形: kind of／聞こえ方: カインダ／使う場面:少し控えめな言い方"},
+          {"sp": 1, "en": "We'll sort it out. First, let's get the report filed.", "jp": "何とかなるよ。まず紛失届を出そう。"}
+        ]
+      },
+      {
+        "t": "保安検査で呼び止められる",
+        "l": [
+          {"sp": 0, "en": "They pulled my carry-on aside, and I don't know what they saw on the scanner while the line keeps moving behind me.", "jp": "機内持ち込みの荷物を別に回された。後ろの列が進む中、スキャナーに何が映ったのか分からない。"},
+          {"sp": 1, "en": "Did you leave the power bank in the side pocket?", "jp": "モバイルバッテリーを横のポケットに入れたまま？"},
+          {"sp": 0, "en": "Maybe. I packed in a hurry after the client moved the meeting up.", "jp": "そうかも。顧客に会議を前倒しされて、急いで荷造りしたんだ。"},
+          {"sp": 1, "en": "Just answer their questions and let them check it. We have time.", "jp": "聞かれたことに答えて、確認してもらおう。まだ時間はあるよ。"},
+          {"sp": 0, "en": "I know. I just don't wanna miss the flight over something I could've packed better.", "jp": "分かってる。もっとちゃんと荷造りすればよかったことで、飛行機に乗り遅れたくないだけ。", "note": "元の形: want to／聞こえ方: ワナ／使う場面:心配を伝える"},
+          {"sp": 1, "en": "Hey, breathe. The agent's asking about the charger, not canceling our trip or sending us back home to repack everything.", "jp": "ねえ、深呼吸して。係員は充電器について聞いてるだけで、出張を中止にして荷造りをやり直させるわけじゃない。"},
+          {"sp": 0, "en": "Right. It's a spare battery for my laptop, and here's the label.", "jp": "そうだね。ノートパソコン用の予備バッテリーです。表示はここにあります。"},
+          {"sp": 1, "en": "See? You're good. Put the liquids in the tray while I repack the cables.", "jp": "ほら、大丈夫。液体物をトレーに出して。ケーブルは私が詰め直すね。"},
+          {"sp": 0, "en": "Thanks. Next time, I'm packing the night before, even if the schedule changes.", "jp": "ありがとう。次は予定が変わっても、前の晩に荷造りしておく。"},
+          {"sp": 1, "en": "Sure you are. I'll believe it when I see a packed suitcase.", "jp": "本当に？荷造り済みのスーツケースを見るまでは信じないよ。"}
+        ]
+      },
+      {
+        "t": "ホテルの予約が見つからない",
+        "l": [
+          {"sp": 0, "en": "The desk says they can't find our reservation, even though I booked it last month and have the confirmation email.", "jp": "先月予約して確認メールもあるのに、フロントでは予約が見つからないと言われた。"},
+          {"sp": 1, "en": "Did you use the company card or your own?", "jp": "会社のカードを使った？それとも自分のカード？"},
+          {"sp": 0, "en": "The company card. I've got the confirmation email and the booking number.", "jp": "会社のカードだよ。確認メールも予約番号もある。"},
+          {"sp": 1, "en": "Show them the email. Sometimes the booking's under the travel agency's name.", "jp": "メールを見せよう。旅行代理店名義で予約されてることもあるから。"},
+          {"sp": 0, "en": "Here. It says check-in today, two nights, one room.", "jp": "これ。今日チェックインで、1部屋を2泊って書いてある。"},
+          {"sp": 1, "en": "The dates look right. Maybe they searched your name with the wrong spelling.", "jp": "日付は合ってるね。名前のスペルを間違えて検索したのかも。"},
+          {"sp": 0, "en": "Could you check under the agency name? We're both running out of patience.", "jp": "代理店名でも確認していただけますか？二人ともそろそろ限界です。"},
+          {"sp": 1, "en": "There it is. They found it under the agency name, but the room isn't ready for another hour after our long flight.", "jp": "あった。代理店名義で見つかったけど、長いフライトのあとに、部屋の準備にはさらに1時間かかるって。"},
+          {"sp": 0, "en": "That's fine. Can we leave our bags here and grab dinner nearby?", "jp": "それなら大丈夫です。荷物を預けて、近くで夕食を取ってもいいですか？"},
+          {"sp": 1, "en": "Absolutely. They'll text us when it's ready.", "jp": "もちろんです。準備ができたらメッセージを送ってくれます。"}
+        ]
+      },
+      {
+        "t": "出張先で部屋を変更したい",
+        "l": [
+          {"sp": 0, "en": "The air conditioner rattles all night, and I've got a call with the West Coast at six, so I really need some sleep.", "jp": "エアコンが一晩中ガタガタ鳴るんです。西海岸との電話会議が6時にあるので、どうしても眠りたいんです。"},
+          {"sp": 1, "en": "I'm sorry about that. Would you like us to send maintenance up?", "jp": "申し訳ありません。修理担当をお部屋に向かわせましょうか？"},
+          {"sp": 0, "en": "Could I move rooms instead? I need to sleep, not listen to a tiny helicopter.", "jp": "部屋を替えていただけませんか？小さなヘリコプターみたいな音を聞くのではなく、眠りたいんです。"},
+          {"sp": 1, "en": "Let me check. We have a quiet room on the fifth floor.", "jp": "確認いたします。5階に静かなお部屋がございます。"},
+          {"sp": 0, "en": "That'd be great. Is it still close to the elevator? I've got two sample cases.", "jp": "助かります。エレベーターの近くですか？サンプルケースが2つあるので。"},
+          {"sp": 1, "en": "It is. I can have someone bring your bags up while you finish dinner.", "jp": "近くです。夕食を済まされている間に、お荷物を運ぶ者を手配できます。"},
+          {"sp": 0, "en": "Thanks. I should've called earlier, but I thought the noise would stop.", "jp": "ありがとう。もっと早く連絡すべきでしたが、音が止むと思っていました。"},
+          {"sp": 1, "en": "No problem. I'll update your key card and have the new room ready in ten minutes, with a clear note on the invoice.", "jp": "問題ございません。カードキーを更新し、請求書にも明記して、10分ほどで新しいお部屋をご用意します。"},
+          {"sp": 0, "en": "Perfect. Can you also make sure the invoice stays on the company account?", "jp": "助かります。請求は会社払いのままになっているかも確認してもらえますか？"},
+          {"sp": 1, "en": "Of course. I'll note the room change on the bill.", "jp": "もちろんです。請求書に部屋の変更を記載しておきます。"}
+        ]
+      },
+      {
+        "t": "空港までの車が来ない",
+        "l": [
+          {"sp": 0, "en": "The car was supposed to be here ten minutes ago, and the driver isn't answering either of my calls in this rain.", "jp": "車は10分前に来るはずだったのに、この雨の中、運転手は私からの電話に2回とも出ない。"},
+          {"sp": 1, "en": "Our flight boards in an hour. Should I call the car service, or switch us to the train before traffic gets worse?", "jp": "搭乗開始まであと1時間。送迎会社に電話する？それとも渋滞がひどくなる前に電車に切り替える？"},
+          {"sp": 0, "en": "Yeah, and check if there's a train we can catch from the next street.", "jp": "お願い。一本先の通りから乗れる電車がないかも確認して。"},
+          {"sp": 1, "en": "The train's running, but we'd have to change at Central and carry both cases down another platform.", "jp": "電車は動いてるけど、セントラル駅で乗り換えて、ケースを2つ持って別のホームまで行かないと。"},
+          {"sp": 0, "en": "That's still faster than waiting here and hoping the driver shows up.", "jp": "ここで運転手が来るのを待つよりは速そうだね。"},
+          {"sp": 1, "en": "I found the driver. He went to the hotel entrance around the corner.", "jp": "運転手と連絡が取れた。角を曲がったホテルの入口にいるって。"},
+          {"sp": 0, "en": "Of course he did. Grab your bag; let's meet him there.", "jp": "やっぱりそうか。荷物を持って、そっちで合流しよう。"},
+          {"sp": 1, "en": "The conference case is yours. I'll take the carry-ons.", "jp": "会議用のケースはあなたね。機内持ち込みは私が持つ。"},
+          {"sp": 0, "en": "Thanks. If we get there in time, I'm putting that ride on the expense report.", "jp": "ありがとう。間に合ったら、この送迎代は経費で申請するよ。"},
+          {"sp": 1, "en": "Do it. Put \"unexpected walking tour\" in the comments.", "jp": "そうして。備考欄には「予期せぬ徒歩観光」って書いて。"}
+        ]
+      },
+      {
+        "t": "会議室の予約が重なった",
+        "l": [
+          {"sp": 0, "en": "Our meeting room's occupied, and the client team is already waiting in the lobby.", "jp": "会議室を別の人が使っていて、顧客チームはもうロビーで待ってる。"},
+          {"sp": 1, "en": "The booking system shows we have it until noon.", "jp": "予約システムでは、正午まで私たちが使うことになってるよ。"},
+          {"sp": 0, "en": "They're saying their invite has the same room and the same time.", "jp": "向こうも同じ部屋、同じ時間の招待を持ってると言ってる。"},
+          {"sp": 1, "en": "I'll ask reception if there's another room with video equipment.", "jp": "受付に、ビデオ設備のある別の部屋がないか聞いてくる。"},
+          {"sp": 0, "en": "Please do. We can't run the demo from the café because the connection drops every few minutes and the screen is too small.", "jp": "お願い。カフェは接続が数分おきに切れるし画面も小さすぎて、デモはできないよ。"},
+          {"sp": 1, "en": "They found one upstairs, but it only seats six.", "jp": "上の階に部屋が見つかったけど、6人しか座れないって。"},
+          {"sp": 0, "en": "That's enough if we keep our team on the video call.", "jp": "うちのチームはビデオ通話で参加すれば、それで足りるよ。"},
+          {"sp": 1, "en": "Got it. I'll move the equipment and tell the client we're starting five minutes late, not canceling the demo, with no notice.", "jp": "分かった。機材を移して、予告なしにデモを中止するのではなく、5分遅れで始めると顧客に伝えるね。"},
+          {"sp": 0, "en": "Thanks. I'll check the room calendar before I invite anyone next time.", "jp": "ありがとう。次から招待を送る前に、会議室の予定を確認するよ。"},
+          {"sp": 1, "en": "Good plan. Maybe the calendar needs its own calendar.", "jp": "いい考え。予定表自体の予定表が必要かもね。"}
+        ]
+      },
+      {
+        "t": "出張精算のレシートがない",
+        "l": [
+          {"sp": 0, "en": "I can't find the dinner receipt, and finance won't reimburse the client meal without it, even with the card statement.", "jp": "夕食のレシートが見つからない。カード明細があっても、経理はそれなしでは顧客との食事代を精算してくれない。"},
+          {"sp": 1, "en": "Did you take a picture before we left?", "jp": "店を出る前に写真を撮らなかった？"},
+          {"sp": 0, "en": "I thought you had it. You paid while I was answering the client.", "jp": "あなたが持ってると思ってた。私が顧客に返事してる間に払ってくれたから。"},
+          {"sp": 1, "en": "I put it in the folder with the boarding passes. Check the front pocket before we accuse the hotel again.", "jp": "搭乗券と一緒にフォルダーへ入れたよ。ホテルをまた疑う前に、前のポケットを見て。"},
+          {"sp": 0, "en": "It's here. The ink's faded, but the total and date are still readable.", "jp": "あった。印字は薄いけど、合計と日付はまだ読める。"},
+          {"sp": 1, "en": "Take a photo now. We don't need another airport mystery.", "jp": "今のうちに写真を撮って。空港でまた謎解きするのはごめんだよ。"},
+          {"sp": 0, "en": "I'll submit it with the client names and the project code.", "jp": "顧客名とプロジェクトコードを添えて申請するね。"},
+          {"sp": 1, "en": "And mark it as a business meal, not personal. Finance is picky about that.", "jp": "個人の食事ではなく業務上の会食として申請して。経理はそこに細かいから。"},
+          {"sp": 0, "en": "I know. Last time they sent it back because the hotel receipt was upside down.", "jp": "分かってる。前回はホテルのレシートが逆さまだって差し戻された。"},
+          {"sp": 1, "en": "Long story short, rotate the picture before you upload it.", "jp": "要するに、アップロードする前に写真の向きを直してね。"}
+        ]
+      }
+    ]
+  }
+]

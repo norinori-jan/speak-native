@@ -424,6 +424,14 @@
 "count": 50,
 "situation": "mishap",
 "sname": "トラブル・ハプニング"
+},
+{
+"id": "biztravel-0401",
+"file": "biztravel-0401.json",
+"ver": 1,
+"count": 50,
+"situation": "biztravel",
+"sname": "空港・出張・ホテル"
 }
 ]
 }
