@@ -1,5 +1,5 @@
 {
-"updated": 1793449392506,
+"updated": 1793612523981,
 "packs": [
 {
 "id": "airport-0001",
@@ -456,6 +456,14 @@
 "count": 50,
 "situation": "hobbyfit",
 "sname": "趣味・スポーツ・ジム"
+},
+{
+"id": "campus-1201",
+"file": "campus-1201.json",
+"ver": 1,
+"count": 50,
+"situation": "campus",
+"sname": "学校・留学・面接"
 }
 ]
 }

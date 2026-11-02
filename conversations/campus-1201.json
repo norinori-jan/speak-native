@@ -1,0 +1,392 @@
+[
+  {
+    "id": "campus",
+    "ic": "🎓",
+    "n": "学校・留学・面接",
+    "hint": "two students and applicants handle classes, dorm life, paperwork, and a job interview",
+    "level": 3,
+    "keywords": [
+      "school",
+      "study abroad",
+      "interview"
+    ],
+    "d": [
+      {
+        "t": "履修登録の席が埋まってた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Maya, did you get into Professor Reed's seminar? I refreshed the page all night, and it still says the class is full.",
+            "jp": "マヤ、リード教授のゼミに入れた？一晩中ページを更新したのに、まだ満席って出る。"
+          },
+          {
+            "sp": 1,
+            "en": "Nope. Full by the time I logged in.",
+            "jp": "だめ。ログインした時にはもう満席だった。"
+          },
+          {
+            "sp": 0,
+            "en": "You're kidding. I set an alarm and everything.",
+            "jp": "うそでしょ。アラームまでかけたのに。"
+          },
+          {
+            "sp": 1,
+            "en": "Lemme check the waitlist. Thirteen people ahead of me.",
+            "jp": "キャンセル待ちを見てみる。私の前に13人。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Thirteen? Then forget the waitlist, man. Email him directly, because professors sometimes make room if you explain why you need the class.",
+            "jp": "13人？なら待つのはやめなよ。直接メールして。理由を説明すれば、教授が席を作ってくれることもあるから。"
+          },
+          {
+            "sp": 1,
+            "en": "Ya think that works? I don't wanna sound pushy.",
+            "jp": "そんなのでうまくいくと思う？図々しく聞こえたくないな。",
+            "note": "元の形: do you think／want to／聞こえ方: ヤ／ワナ／使う場面:遠慮がちに迷う時"
+          },
+          {
+            "sp": 0,
+            "en": "Pushy is fine. Silent gets you nothing. Just say you're a transfer student and this class is the only one that fits your plan.",
+            "jp": "図々しくていいよ。黙ってたら何も得られない。編入生で、この授業しか自分の計画に合わないって言えばいい。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. Gonna write it right now, before I lose my nerve.",
+            "jp": "よし。勇気がなくなる前に、今すぐ書く。",
+            "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:今すぐやると決める時"
+          }
+        ]
+      },
+      {
+        "t": "教授のオフィスアワー",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Come in, Sam. Mind if I finish this email first? Two minutes, tops.",
+            "jp": "入って、サム。先にこのメールを終わらせてもいい？長くても2分。",
+            "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+          },
+          {
+            "sp": 1,
+            "en": "Sure thing. I'm early anyway.",
+            "jp": "もちろん。どうせ早く来たので。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, done. So, what's on your mind?",
+            "jp": "よし、終わった。それで、何を考えてるの？"
+          },
+          {
+            "sp": 1,
+            "en": "It's about the paper, Professor. I've been working on it for weeks, but I got sick last Friday and I'm way behind now.",
+            "jp": "論文のことです、教授。何週間も取り組んでいたのですが、先週の金曜に体調を崩して、今はだいぶ遅れています。"
+          },
+          {
+            "sp": 0,
+            "en": "Sorry to hear that. How far behind are we talking?",
+            "jp": "それは気の毒に。どれくらい遅れているの？"
+          },
+          {
+            "sp": 1,
+            "en": "Maybe three days? Is there any chance of an extension?",
+            "jp": "3日くらいでしょうか。期限を延ばしてもらえる可能性はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Give me a reason that isn't just 'I ran out of time,' and I'll consider it. Do you have a doctor's note, or at least an honest plan for finishing?",
+            "jp": "『時間が足りなかった』だけではない理由をくれたら考えます。診断書か、せめて仕上げるための正直な計画はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "I've got a plan. Outline's done, and I can send you the full draft by Wednesday night.",
+            "jp": "計画はあります。構成はできていて、水曜の夜までに全文の草稿を送れます。"
+          },
+          {
+            "sp": 0,
+            "en": "Fine. Wednesday, midnight. No more excuses after that.",
+            "jp": "いいでしょう。水曜の夜12時。それ以降は言い訳なしです。"
+          }
+        ]
+      },
+      {
+        "t": "グループ課題でサボる人",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dude, where's Chris? It's ten past, and we're presenting at nine tomorrow.",
+            "jp": "なあ、クリスはどこ？10分過ぎたし、明日の9時が発表なのに。"
+          },
+          {
+            "sp": 1,
+            "en": "Beats me. He said he'd bring the slides.",
+            "jp": "さあね。スライドを持ってくるって言ってたけど。",
+            "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+          },
+          {
+            "sp": 0,
+            "en": "Of course he did. That's the third meeting he's skipped, and every time he says, 'I'll catch up later.'",
+            "jp": "でしょうね。3回目の欠席で、毎回『あとで追いつく』って言うんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "You want me to text him?",
+            "jp": "私が連絡する？",
+            "note": "元の形: Do you want／聞こえ方: ユー ワン／使う場面:軽く申し出る時"
+          },
+          {
+            "sp": 0,
+            "en": "Please. And tell him that if the slides aren't in the shared folder by tonight, we're gonna tell the professor.",
+            "jp": "お願い。今夜までにスライドがフォルダに入ってなければ、教授に言うって伝えて。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:最後通告をする時"
+          },
+          {
+            "sp": 1,
+            "en": "Whoa, that's harsh. Maybe give him one more chance?",
+            "jp": "うわ、きついな。もう1回チャンスをあげたら？"
+          },
+          {
+            "sp": 0,
+            "en": "I gave him three. I'm not doing his part and mine again, and I'm not losing my grade over someone who doesn't even show up.",
+            "jp": "3回あげた。彼の分と自分の分をまたやるのはごめんだし、顔も出さない人のせいで成績を落としたくない。"
+          },
+          {
+            "sp": 1,
+            "en": "Fair enough. Sending it now.",
+            "jp": "もっともだね。今送る。"
+          }
+        ]
+      },
+      {
+        "t": "寮のルームメイトとルール決め",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Liz, you got a sec? Wanna talk about the quiet hours thing?",
+            "jp": "ねえリズ、ちょっといい？静かにする時間のこと、話したいんだけど。",
+            "note": "元の形: have you got／want to／聞こえ方: ガタ／ワナ／使う場面:話を切り出す時"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Is it the music?",
+            "jp": "いいよ。音楽のこと？"
+          },
+          {
+            "sp": 0,
+            "en": "Kinda. I'm not mad, I swear. It's just that I've got an exam at eight, and your playlist is, like, really good, so I keep listening instead of sleeping.",
+            "jp": "まあね。怒ってないよ、本当に。8時に試験があって、君のプレイリストがすごく良くて、寝ないで聴き続けちゃうんだ。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり認める時"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! Okay, that's the nicest complaint I've ever gotten.",
+            "jp": "はは！いいよ、今までで一番優しい苦情だね。"
+          },
+          {
+            "sp": 0,
+            "en": "So, headphones after eleven?",
+            "jp": "じゃあ、11時以降はヘッドホンでどう？"
+          },
+          {
+            "sp": 1,
+            "en": "Deal. And can you do something about the dishes? They've been in the sink since Sunday.",
+            "jp": "了解。それと、お皿もなんとかしてくれる？日曜からずっとシンクにあるんだけど。"
+          },
+          {
+            "sp": 0,
+            "en": "Oh, no. Yeah, that's on me. I'll clean up tonight, and let's put a chore chart on the fridge so nobody has to nag anybody.",
+            "jp": "ああ、まずい。うん、それは私の責任。今夜片づけるし、冷蔵庫に当番表を貼って、誰も小言を言わなくていいようにしよう。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. You're a good roommate, Liz.",
+            "jp": "完璧。いいルームメイトだよ、リズ。"
+          }
+        ]
+      },
+      {
+        "t": "学生課の窓口で書類",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Next, please. Hi there, how can I help?",
+            "jp": "次の方どうぞ。こんにちは、どうされましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "Hi. I need to get my enrollment certificate, and I was told to bring a form, but nobody said which one.",
+            "jp": "こんにちは。在籍証明書が必要で、書類を持ってくるよう言われたのですが、どれか誰も教えてくれなくて。"
+          },
+          {
+            "sp": 0,
+            "en": "Hmm. Which office sent you here?",
+            "jp": "うーん。どの窓口からここに来るよう言われました？"
+          },
+          {
+            "sp": 1,
+            "en": "The housing office, ma'am. They said it's for my lease.",
+            "jp": "住宅課です。賃貸契約のためだと言われました。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, got it. You'll need the blue form, and it takes about three business days. Rush service is available for a small fee.",
+            "jp": "分かりました。青い用紙が必要で、3営業日ほどかかります。少額で急ぎ対応もできます。",
+            "note": "元の形: I have／聞こえ方: ガット／使う場面:理解したと伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Three days is cutting it close. How much for rush?",
+            "jp": "3日はぎりぎりですね。急ぎはいくらですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Ten dollars, cash or card. You can pick it up tomorrow afternoon.",
+            "jp": "10ドル、現金かカードで。明日の午後に受け取れます。"
+          },
+          {
+            "sp": 1,
+            "en": "Great, I'll do the rush. Thanks a lot.",
+            "jp": "よかった、急ぎでお願いします。ありがとうございます。"
+          }
+        ]
+      },
+      {
+        "t": "面接前の待合室",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, you're here for the ten o'clock too? I'm Dana.",
+            "jp": "やあ、君も10時の面接？ダナです。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah. Alex. Nice to meet you. Sorry, my hands are freezing.",
+            "jp": "うん。アレックス。よろしく。ごめん、手が冷たくて。"
+          },
+          {
+            "sp": 0,
+            "en": "No worries, mine are sweating. Y'know, I've rehearsed my answers in the shower for three days, and my mind's gone totally blank.",
+            "jp": "大丈夫、私は汗ばんでる。ほら、3日間シャワーで答えの練習をしたのに、頭が真っ白になっちゃった。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:つなぎ言葉として"
+          },
+          {
+            "sp": 1,
+            "en": "Same here. Take a breath. They're just people.",
+            "jp": "同じだよ。深呼吸して。向こうも人間なんだから。"
+          },
+          {
+            "sp": 0,
+            "en": "Easy for you to say. You look calm.",
+            "jp": "君は言いやすいよね。落ち着いて見えるし。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm faking it. Honestly, the trick is to slow down when you talk, and it's fine to say, 'Let me think about that for a second.'",
+            "jp": "ふりをしてるだけ。本当は、話す時にゆっくりすることがコツで、『ちょっと考えさせてください』と言っても大丈夫だよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Huh. That's actually useful. Thanks, man.",
+            "jp": "へえ、それ本当に役立つ。ありがとう。"
+          },
+          {
+            "sp": 1,
+            "en": "Anytime. Good luck in there.",
+            "jp": "いつでも。頑張ってね。"
+          }
+        ]
+      },
+      {
+        "t": "面接で弱みを聞かれる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for coming in. Let's start easy: tell me about yourself.",
+            "jp": "お越しいただきありがとうございます。簡単なことから。自己紹介をお願いします。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. I study education, and last year I spent six months abroad, teaching English to middle school students.",
+            "jp": "はい。教育学を学んでいて、昨年は半年間海外で中学生に英語を教えました。"
+          },
+          {
+            "sp": 0,
+            "en": "Interesting. What would you say is your biggest weakness?",
+            "jp": "興味深いですね。あなたの最大の弱みは何だと思いますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Well, I tend to say yes to everything, so I end up overloaded. I've been learning to ask, 'What's the priority?' before I agree.",
+            "jp": "そうですね、何でも引き受けてしまい、負担が大きくなりがちです。引き受ける前に『優先順位は何ですか』と聞くよう学んでいます。"
+          },
+          {
+            "sp": 0,
+            "en": "Good answer. Give me an example of a time that went wrong.",
+            "jp": "いい答えです。うまくいかなかった時の例を教えてください。"
+          },
+          {
+            "sp": 1,
+            "en": "Last spring I took on two projects at once, and one was late. I told my supervisor right away, we adjusted the deadline, and I haven't repeated that mistake.",
+            "jp": "去年の春に2つの案件を同時に引き受けて、1つが遅れました。すぐ上司に伝えて期限を調整し、同じ失敗は繰り返していません。"
+          },
+          {
+            "sp": 0,
+            "en": "I appreciate your honesty. Do you have any questions for us?",
+            "jp": "正直に話してくれてありがとう。こちらに質問はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, just one. What does success look like in the first three months?",
+            "jp": "はい、一つだけ。最初の3か月で成功とはどういう状態ですか？"
+          }
+        ]
+      },
+      {
+        "t": "面接後の結果の電話",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hello, is this Alex? It's Maria from the hiring team.",
+            "jp": "もしもし、アレックスさんですか？採用チームのマリアです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh! Hi, yes, speaking. Is now a good time?",
+            "jp": "あ！こんにちは、はい私です。今お話しして大丈夫ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Perfect. Well, I won't keep you in suspense. We'd like to offer you the position.",
+            "jp": "大丈夫です。ではじらさずにお伝えします。あなたに採用のオファーを出したいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Seriously? Wow. Thank you so much, I really didn't expect that.",
+            "jp": "本当ですか？わあ。ありがとうございます、全く予想していませんでした。"
+          },
+          {
+            "sp": 0,
+            "en": "You earned it. The team loved how honest and calm you were. I'll email the details, including the start date and the salary.",
+            "jp": "あなたの実力です。チームは、あなたの正直さと落ち着きを気に入りました。開始日や給与などの詳細をメールで送ります。"
+          },
+          {
+            "sp": 1,
+            "en": "That sounds great. When do you need my answer?",
+            "jp": "ありがとうございます。いつまでにお返事すればいいですか？"
+          },
+          {
+            "sp": 0,
+            "en": "By Friday, if you can. Take your time, talk it over with your family, and just call me if you have any questions at all.",
+            "jp": "できれば金曜までに。ゆっくり、ご家族と相談して、質問が少しでもあれば電話してください。"
+          },
+          {
+            "sp": 1,
+            "en": "Will do. Thanks again, Maria. Have a great day!",
+            "jp": "そうします。重ねてありがとう、マリアさん。良い一日を！"
+          }
+        ]
+      }
+    ]
+  }
+]

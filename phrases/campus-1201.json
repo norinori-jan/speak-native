@@ -1,0 +1,386 @@
+{
+  "app": "phrase-pack",
+  "id": "campus-1201",
+  "ver": 1,
+  "situation": "campus",
+  "sname": "学校・留学・面接",
+  "icon": "🎓",
+  "level": 3,
+  "title": "学校・留学・面接の口語表現",
+  "items": [
+    {
+      "id": "campus-1201-001",
+      "en": "Hey, Maya, the seminar's full, but I'm on the waitlist.",
+      "jp": "ねえマヤ、ゼミは満席だけど、キャンセル待ちには入ってる。",
+      "speak": "Hey, Maya, the seminar's full, but I'm on the waitlist.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-002",
+      "en": "Lemme check if there's still a seat open.",
+      "jp": "まだ席が空いてるか見てみる。",
+      "speak": "Lemme check if there's still a seat open.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+    },
+    {
+      "id": "campus-1201-003",
+      "en": "Gonna email the professor right now.",
+      "jp": "今すぐ教授にメールするよ。",
+      "speak": "Gonna email the professor right now.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:今すぐやると言う時"
+    },
+    {
+      "id": "campus-1201-004",
+      "en": "Dude, did you finish the reading?",
+      "jp": "なあ、課題の読み物終わった？",
+      "speak": "Dude, did you finish the reading?",
+      "say": []
+    },
+    {
+      "id": "campus-1201-005",
+      "en": "Wanna study together tonight?",
+      "jp": "今夜一緒に勉強する？",
+      "speak": "Wanna study together tonight?",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:気軽に誘う時"
+    },
+    {
+      "id": "campus-1201-006",
+      "en": "Sam, you got a sec?",
+      "jp": "サム、ちょっといい？",
+      "speak": "Sam, you got a sec?",
+      "say": [],
+      "note": "元の形: have you got a／聞こえ方: ガタ／使う場面:呼び止める時"
+    },
+    {
+      "id": "campus-1201-007",
+      "en": "Hey, Liz, mind if I borrow your charger?",
+      "jp": "ねえリズ、充電器を借りてもいい？",
+      "speak": "Hey, Liz, mind if I borrow your charger?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:軽く許可をとる時"
+    },
+    {
+      "id": "campus-1201-008",
+      "en": "Man, I totally blanked on that question.",
+      "jp": "うわ、その問題で頭が真っ白になった。",
+      "speak": "Man, I totally blanked on that question.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-009",
+      "en": "Beats me. I wasn't in class.",
+      "jp": "さあね。授業にいなかったから。",
+      "speak": "Beats me. I wasn't in class.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+    },
+    {
+      "id": "campus-1201-010",
+      "en": "No idea. Ask the TA.",
+      "jp": "分からない。TAに聞いて。",
+      "speak": "No idea. Ask the TA.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-011",
+      "en": "Dunno. Ask Professor Reed.",
+      "jp": "知らない。リード教授に聞いて。",
+      "speak": "Dunno. Ask Professor Reed.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと軽く言う時"
+    },
+    {
+      "id": "campus-1201-012",
+      "en": "Couldn't tell you. I just got here.",
+      "jp": "分からないな。今来たところだから。",
+      "speak": "Couldn't tell you. I just got here.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-013",
+      "en": "Y'know, the deadline's Friday, not Monday.",
+      "jp": "ほら、締め切りは月曜じゃなくて金曜だよ。",
+      "speak": "Y'know, the deadline's Friday, not Monday.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:注意をひく時"
+    },
+    {
+      "id": "campus-1201-014",
+      "en": "Boss, can we push the meeting to three?",
+      "jp": "ボス、会議を3時にずらせませんか？",
+      "speak": "Boss, can we push the meeting to three?",
+      "say": []
+    },
+    {
+      "id": "campus-1201-015",
+      "en": "Sir? You dropped your student ID.",
+      "jp": "すみません、学生証を落としましたよ。",
+      "speak": "Sir? You dropped your student ID.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-016",
+      "en": "Buddy, you're gonna miss the bus.",
+      "jp": "おい、バスに乗り遅れるよ。",
+      "speak": "Buddy, you're gonna miss the bus.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:急がせる時"
+    },
+    {
+      "id": "campus-1201-017",
+      "en": "Babe, don't forget the interview's at ten.",
+      "jp": "ねえ、面接が10時なのを忘れないでね。",
+      "speak": "Babe, don't forget the interview's at ten.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-018",
+      "en": "Chris, c'mon, we're running late.",
+      "jp": "クリス、ほら、遅れてるよ。",
+      "speak": "Chris, c'mon, we're running late.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:急かす時"
+    },
+    {
+      "id": "campus-1201-019",
+      "en": "C'mon, give it a shot.",
+      "jp": "ほら、やってみなよ。",
+      "speak": "C'mon, give it a shot.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:背中を押す時"
+    },
+    {
+      "id": "campus-1201-020",
+      "en": "Say again? The line's breaking up.",
+      "jp": "もう一度言って？電波が途切れてる。",
+      "speak": "Say again? The line's breaking up.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-021",
+      "en": "Wait, what? They moved the exam?",
+      "jp": "待って、何？試験が動いたの？",
+      "speak": "Wait, what? They moved the exam?",
+      "say": []
+    },
+    {
+      "id": "campus-1201-022",
+      "en": "Long story short, I'm transferring.",
+      "jp": "要するに、編入するんだ。",
+      "speak": "Long story short, I'm transferring.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-023",
+      "en": "I mean, it's not a bad plan.",
+      "jp": "つまり、悪い計画じゃないってこと。",
+      "speak": "I mean, it's not a bad plan.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-024",
+      "en": "Look, I'm not saying you're wrong.",
+      "jp": "いいかい、君が間違ってると言ってるんじゃない。",
+      "speak": "Look, I'm not saying you're wrong.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-025",
+      "en": "Running late. Start without me.",
+      "jp": "遅れてる。先に始めてて。",
+      "speak": "Running late. Start without me.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-026",
+      "en": "Need a hand with those boxes?",
+      "jp": "その箱、手伝おうか？",
+      "speak": "Need a hand with those boxes?",
+      "say": []
+    },
+    {
+      "id": "campus-1201-027",
+      "en": "Got it. I'll send the form today.",
+      "jp": "了解。今日その書類を送るよ。",
+      "speak": "Got it. I'll send the form today.",
+      "say": [],
+      "note": "元の形: I have it／聞こえ方: ガット／使う場面:理解したと伝える時"
+    },
+    {
+      "id": "campus-1201-028",
+      "en": "Sounds good. See you at nine.",
+      "jp": "いいね。9時に会おう。",
+      "speak": "Sounds good. See you at nine.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-029",
+      "en": "You good? You look kinda pale.",
+      "jp": "大丈夫？ちょっと顔色が悪いよ。",
+      "speak": "You good? You look kinda pale.",
+      "say": [],
+      "note": "元の形: are you good／kind of／聞こえ方: ユー グッド／カインダ／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "campus-1201-030",
+      "en": "Just talk normally. It's only me.",
+      "jp": "普通に話して。私だけだよ。",
+      "speak": "Just talk normally. It's only me.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-031",
+      "en": "Chill. It's just a quiz.",
+      "jp": "落ち着いて。ただの小テストだよ。",
+      "speak": "Chill. It's just a quiz.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-032",
+      "en": "Relax, it's me. You don't have to 'sir' me.",
+      "jp": "気楽にして、私だよ。『サー』なんて付けなくていい。",
+      "speak": "Relax, it's me. You don't have to 'sir' me.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-033",
+      "en": "Say it like a human, not a textbook.",
+      "jp": "教科書じゃなくて、人間らしく言ってよ。",
+      "speak": "Say it like a human, not a textbook.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-034",
+      "en": "Whatcha working on?",
+      "jp": "何やってるの？",
+      "speak": "Whatcha working on?",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "campus-1201-035",
+      "en": "Didja hear? The test got canceled.",
+      "jp": "聞いた？テストが中止になったよ。",
+      "speak": "Didja hear? The test got canceled.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:うわさを伝える時"
+    },
+    {
+      "id": "campus-1201-036",
+      "en": "I hafta turn this in by noon.",
+      "jp": "お昼までにこれを提出しなきゃ。",
+      "speak": "I hafta turn this in by noon.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "campus-1201-037",
+      "en": "I gotta run. My bus leaves at ten.",
+      "jp": "もう行かなきゃ。バスが10時に出る。",
+      "speak": "I gotta run. My bus leaves at ten.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:急いで切り上げる時"
+    },
+    {
+      "id": "campus-1201-038",
+      "en": "Gimme a minute. I'm almost done.",
+      "jp": "ちょっと待って。もうすぐ終わる。",
+      "speak": "Gimme a minute. I'm almost done.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+    },
+    {
+      "id": "campus-1201-039",
+      "en": "It's kinda hard to explain.",
+      "jp": "ちょっと説明しにくいな。",
+      "speak": "It's kinda hard to explain.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "campus-1201-040",
+      "en": "Ain't nobody got time for that.",
+      "jp": "そんな暇、誰にもないよ。",
+      "speak": "Ain't nobody got time for that.",
+      "say": [],
+      "note": "元の形: there is no one／聞こえ方: エイント／使う場面:くだけて否定する時"
+    },
+    {
+      "id": "campus-1201-041",
+      "en": "I'd say yes, 'cause it's free.",
+      "jp": "無料だから、受けると思う。",
+      "speak": "I'd say yes, 'cause it's free.",
+      "say": [],
+      "note": "元の形: because／聞こえ方: コーズ／使う場面:理由を軽く添える時"
+    },
+    {
+      "id": "campus-1201-042",
+      "en": "Is that a yes? Or a no? Ya think?",
+      "jp": "それはイエス？それともノー？どう思う？",
+      "speak": "Is that a yes? Or a no? Ya think?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:返事をうながす時"
+    },
+    {
+      "id": "campus-1201-043",
+      "en": "Beats me, but let's find out.",
+      "jp": "さあね、でも調べてみよう。",
+      "speak": "Beats me, but let's find out.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-044",
+      "en": "Hey, Dana, nice to meet you.",
+      "jp": "やあ、ダナ、よろしく。",
+      "speak": "Hey, Dana, nice to meet you.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-045",
+      "en": "Alex, take a breath. You've got this.",
+      "jp": "アレックス、深呼吸して。君ならできる。",
+      "speak": "Alex, take a breath. You've got this.",
+      "say": [],
+      "note": "元の形: you have got／聞こえ方: ユーヴ ガット／使う場面:励ます時"
+    },
+    {
+      "id": "campus-1201-046",
+      "en": "Let me think about that for a second.",
+      "jp": "それをちょっと考えさせてください。",
+      "speak": "Let me think about that for a second.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-047",
+      "en": "Hey, Jen, don't sweat it. Everybody bombs one quiz.",
+      "jp": "ねえジェン、気にしないで。誰でも小テストは1回は失敗するよ。",
+      "speak": "Hey, Jen, don't sweat it. Everybody bombs one quiz.",
+      "say": []
+    },
+    {
+      "id": "campus-1201-048",
+      "en": "Mind if I ask you something?",
+      "jp": "ちょっと聞いてもいい？",
+      "speak": "Mind if I ask you something?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:質問を切り出す時"
+    },
+    {
+      "id": "campus-1201-049",
+      "en": "Any luck with the waitlist?",
+      "jp": "キャンセル待ちはどうだった？",
+      "speak": "Any luck with the waitlist?",
+      "say": []
+    },
+    {
+      "id": "campus-1201-050",
+      "en": "No can do. The form's due today.",
+      "jp": "それは無理だね。書類は今日が締め切りだよ。",
+      "speak": "No can do. The form's due today.",
+      "say": []
+    }
+  ]
+}
