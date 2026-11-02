@@ -1,0 +1,386 @@
+[
+  {
+    "id": "newstalk",
+    "ic": "📰",
+    "n": "ニュース・雑談・SNS",
+    "hint": "friends chat about the news, social media, weather, sports, and what everyone is talking about",
+    "level": 3,
+    "keywords": [
+      "news",
+      "social media",
+      "small talk"
+    ],
+    "d": [
+      {
+        "t": "ニュースを見た？",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Dana, did you see the news this morning? They're saying the whole downtown might lose power tonight. Everyone at work is freaking out.",
+            "jp": "ねえダナ、今朝のニュース見た？今夜、中心部全体が停電するかもしれないって。職場のみんなが大騒ぎしてる。"
+          },
+          {
+            "sp": 1,
+            "en": "Wait, what? Where'd you hear that?",
+            "jp": "待って、何？どこで聞いたの？",
+            "note": "元の形: where did／聞こえ方: ウェアド／使う場面:出どころを聞く時"
+          },
+          {
+            "sp": 0,
+            "en": "It was all over the local channel. Some kind of storm is heading this way.",
+            "jp": "地元チャンネルでずっとやってたよ。嵐みたいなものがこっちに向かってるって。"
+          },
+          {
+            "sp": 1,
+            "en": "Ugh, and I've got a presentation tomorrow. I'm gonna charge everything before dinner.",
+            "jp": "うわ、明日はプレゼンがあるのに。夕食前に全部充電しておくよ。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:対策をすると言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Smart. Also, fill the bathtub, just in case the water goes out too. Sounds silly, but it saved us last year.",
+            "jp": "賢いね。念のため浴槽に水をためておいて。おかしく聞こえるけど、去年はそれで助かったんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Huh. Never thought of that.",
+            "jp": "へえ。思いつかなかった。"
+          },
+          {
+            "sp": 0,
+            "en": "Check the city's website for updates, though. Half of what's on social media is rumors anyway.",
+            "jp": "でも更新は市のサイトで確認してね。SNSの半分はどうせうわさだから。"
+          },
+          {
+            "sp": 1,
+            "en": "Will do. Thanks for the heads-up.",
+            "jp": "そうする。教えてくれてありがとう。"
+          }
+        ]
+      },
+      {
+        "t": "SNSのデマに気づく",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dude, check this out. Some post says the cafe on Main Street is closing for good. Eight thousand shares! I almost believed it, honestly.",
+            "jp": "なあ、これ見て。メインストリートのカフェが閉店するって投稿がある。8千回もシェアされてる！正直、信じかけたよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Hold on. Who posted it?",
+            "jp": "ちょっと待って。誰が投稿したの？"
+          },
+          {
+            "sp": 0,
+            "en": "Some account with a cat photo. No name, no link, nothing.",
+            "jp": "猫の写真のアカウント。名前もリンクもなし、何もない。"
+          },
+          {
+            "sp": 1,
+            "en": "Then I wouldn't trust it. Anyone can post anything, and fake stories spread way faster than the corrections ever do, so be careful.",
+            "jp": "なら信用しないな。誰でも何でも投稿できるし、デマは訂正よりずっと速く広まるから、気をつけてね。"
+          },
+          {
+            "sp": 0,
+            "en": "But what if it's true? I love that place.",
+            "jp": "でももし本当だったら？あの店、大好きなんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Then call them, or look at their official page, y'know, the one they actually run themselves.",
+            "jp": "なら電話するか、公式ページを見よう。ほら、店が自分で運営してるやつ。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:補足を足す時"
+          },
+          {
+            "sp": 0,
+            "en": "Good call. Their page says 'Open as usual.' Wow, I almost freaked out for nothing.",
+            "jp": "いい判断だね。公式ページには『通常営業』って。うわ、意味なく取り乱すところだった。"
+          },
+          {
+            "sp": 1,
+            "en": "Yep. Always check before you share.",
+            "jp": "うん。シェアする前に必ず確認だよ。"
+          }
+        ]
+      },
+      {
+        "t": "推しの話で盛り上がる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, so, did you watch the finale last night? I'm still not over it.",
+            "jp": "それで、昨夜の最終回見た？まだ引きずってる。"
+          },
+          {
+            "sp": 1,
+            "en": "Girl, I cried twice. When the older brother showed up in the rain, I completely lost it.",
+            "jp": "もう、2回泣いたよ。お兄さんが雨の中に現れた時、完全にやられた。"
+          },
+          {
+            "sp": 0,
+            "en": "Right? And the way the camera stayed on her face for, like, ten full seconds without any music. It was brilliant.",
+            "jp": "でしょ？音楽なしで10秒もカメラが彼女の顔から離れなかったのもすごかった。見事だったよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, I didn't see that ending coming. I thought for sure they'd get back together.",
+            "jp": "正直、あの結末は予想してなかった。絶対よりを戻すと思ってたのに。"
+          },
+          {
+            "sp": 0,
+            "en": "Same! The comments are on fire, though. Half the internet's furious, and the other half's writing essays about it. It's exhausting.",
+            "jp": "同じ！でもコメント欄は大荒れだよ。ネットの半分は激怒で、残り半分はそれについて長文を書いてる。疲れるよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! Lemme read a few before I say anything.",
+            "jp": "はは！何か言う前に、いくつか読ませて。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:先に確認する時"
+          },
+          {
+            "sp": 0,
+            "en": "Don't. Spoilers everywhere, and some of them are, like, super rude.",
+            "jp": "やめときな。ネタバレだらけだし、すごく失礼なのもあるから。"
+          },
+          {
+            "sp": 1,
+            "en": "Fair. Let's just talk about it over lunch.",
+            "jp": "そうだね。ランチで話そう。"
+          }
+        ]
+      },
+      {
+        "t": "天気と週末の予定",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Sam, you see the forecast? Rain all weekend, apparently.",
+            "jp": "ねえサム、天気予報見た？週末はずっと雨みたいだよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Ugh. That kills the picnic. Was really looking forward to it.",
+            "jp": "うわ。ピクニックは中止だね。すごく楽しみにしてたのに。"
+          },
+          {
+            "sp": 0,
+            "en": "We could do something indoors. There's a new escape room downtown, and I've heard it's super hard. People say only one team in ten escapes.",
+            "jp": "屋内で何かしようよ。中心部に新しい脱出ゲームができて、すごく難しいって聞いたよ。10チームに1つしか脱出できないらしい。"
+          },
+          {
+            "sp": 1,
+            "en": "Hmm, I'm not much of a puzzle person, but I'm in if you are.",
+            "jp": "うーん、パズルは得意じゃないけど、君が行くなら行く。"
+          },
+          {
+            "sp": 0,
+            "en": "Great. I'll book for Saturday afternoon, around two, and we can grab ramen after, if the line's not crazy. It's my treat this time.",
+            "jp": "よかった。土曜の午後2時ごろで予約して、行列がすごくなければ、そのあとラーメンを食べよう。今回は私のおごり。"
+          },
+          {
+            "sp": 1,
+            "en": "Wanna invite Maya and Chris, too?",
+            "jp": "マヤとクリスも誘う？",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+          },
+          {
+            "sp": 0,
+            "en": "Sure, the more the merrier. Four's the max for that room, anyway.",
+            "jp": "もちろん、多いほど楽しい。どのみち、あの部屋は最大4人だから。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. I'll text them tonight.",
+            "jp": "完璧。今夜メッセージする。"
+          }
+        ]
+      },
+      {
+        "t": "スポーツのニュースで雑談",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Did you catch the game last night? That last-minute goal was unreal!",
+            "jp": "昨夜の試合見た？終了間際のゴール、信じられなかった！"
+          },
+          {
+            "sp": 1,
+            "en": "Dude, I almost spilled my drink. The crowd went totally nuts.",
+            "jp": "なあ、飲み物をこぼすところだったよ。観客が完全に大騒ぎだった。"
+          },
+          {
+            "sp": 0,
+            "en": "And the coach, standing there all calm like he knew it was coming, y'know?",
+            "jp": "それに監督、来るのが分かってたみたいに落ち着いて立ってたよね。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:同意を求める時"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! He's been doing that for years. Honestly, I think he's secretly terrified. He probably practices that face in the mirror every morning.",
+            "jp": "はは！何年もああだよ。正直、内心は怖くてたまらないと思う。毎朝鏡の前であの顔を練習してるはず。"
+          },
+          {
+            "sp": 0,
+            "en": "Anyway, they play again on Sunday. You wanna watch it at my place? I've got a big screen and a lot of snacks.",
+            "jp": "とにかく、日曜にまた試合だよ。うちで見ない？大画面とお菓子がたくさんあるよ。",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:誘う時"
+          },
+          {
+            "sp": 1,
+            "en": "Sure thing. I'll bring drinks.",
+            "jp": "もちろん。飲み物を持っていく。"
+          },
+          {
+            "sp": 0,
+            "en": "Just no spoilers if you watch it before me, okay?",
+            "jp": "私より先に見ても、ネタバレはなしだよ、いい？"
+          },
+          {
+            "sp": 1,
+            "en": "Deal. Scout's honor.",
+            "jp": "約束。誓うよ。"
+          }
+        ]
+      },
+      {
+        "t": "ニュースの見出しを疑う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Look at this headline: 'Coffee Causes Cancer, Experts Warn.' Should I stop drinking it?",
+            "jp": "この見出しを見て。『コーヒーは癌の原因、専門家が警告』。飲むのをやめるべき？"
+          },
+          {
+            "sp": 1,
+            "en": "Whoa, whoa, read the actual article first. Headlines are written to get clicks, not to tell the whole story. Trust me on this.",
+            "jp": "ちょっと待って、まず実際の記事を読んで。見出しはクリックを集めるために書かれてて、全体を伝えるためじゃないよ。これは信じて。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, hold on. It says 'very hot drinks may be a risk,' not coffee itself. That's a huge difference from what the headline claimed.",
+            "jp": "分かった、待って。『とても熱い飲み物がリスクかも』で、コーヒー自体じゃないって書いてある。見出しの主張とは大違いだ。"
+          },
+          {
+            "sp": 1,
+            "en": "See? Totally different. Who wrote the study?",
+            "jp": "ほらね？全然違う。その研究は誰がやったの？"
+          },
+          {
+            "sp": 0,
+            "en": "A university team, and they only looked at people who drink it scalding hot.",
+            "jp": "大学のチームで、やけどするほど熱くして飲む人だけを調べてる。"
+          },
+          {
+            "sp": 1,
+            "en": "So, in short, let it cool down a bit.",
+            "jp": "つまり、要するに、少し冷ましてから飲めばいいってこと。"
+          },
+          {
+            "sp": 0,
+            "en": "Yep. Man, I can't believe I almost panicked.",
+            "jp": "うん。いやあ、パニックになりかけたなんて信じられない。"
+          },
+          {
+            "sp": 1,
+            "en": "It happens. That's why they write those headlines.",
+            "jp": "よくあることだよ。だからあんな見出しを書くんだ。"
+          }
+        ]
+      },
+      {
+        "t": "バズった投稿に戸惑う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Liz, you're not gonna believe this. My dumb lunch photo just got ten thousand likes.",
+            "jp": "リズ、信じられないと思うけど。私のくだらないランチの写真が、1万いいねもついた。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:驚きを伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Get out! The sandwich one?",
+            "jp": "うそでしょ！サンドイッチのやつ？"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah! I just posted it, and then I went to a meeting, and when I came back, my phone was, like, melting.",
+            "jp": "うん！投稿して会議に行って、戻ったらスマホが、なんて言うか、溶けそうだった。"
+          },
+          {
+            "sp": 1,
+            "en": "That's wild. Are people being nice, at least?",
+            "jp": "すごいね。せめて、みんな優しい？"
+          },
+          {
+            "sp": 0,
+            "en": "Mostly, but some are leaving weird comments, and one guy wants to know where I bought the plate. I feel kind of dizzy.",
+            "jp": "ほとんどはね。でも変なコメントもあるし、お皿をどこで買ったか知りたい人もいる。ちょっとめまいがするよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! Welcome to the internet. Don't read the comments, babe.",
+            "jp": "はは！ネットへようこそ。コメントは読まない方がいいよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Too late. I'm turning off notifications for the night.",
+            "jp": "もう遅いよ。今夜は通知を切る。"
+          },
+          {
+            "sp": 1,
+            "en": "Good plan. Enjoy your fifteen minutes.",
+            "jp": "いい作戦。15分の有名人を楽しんで。"
+          }
+        ]
+      },
+      {
+        "t": "天気予報とニュースの聞き返し",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hello? Sorry, can you say that again? The line's cutting out.",
+            "jp": "もしもし？ごめん、もう一度言って？電話が途切れてる。"
+          },
+          {
+            "sp": 1,
+            "en": "I said, did you see the news? They closed the bridge because of the flooding.",
+            "jp": "ニュース見た？洪水のせいで橋が閉鎖されたって言ったんだよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Wait, which bridge? The one by the stadium?",
+            "jp": "待って、どの橋？スタジアムのそば？"
+          },
+          {
+            "sp": 1,
+            "en": "No, no. The old one on Fifth Street, y'know, the one we always take to your mom's place. It's the only one that crosses the river there.",
+            "jp": "いやいや。5番通りの古い橋だよ。ほら、いつもお母さんの家に行くのに使うやつ。あそこで川を渡れる唯一の橋だよ。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:補足を足す時"
+          },
+          {
+            "sp": 0,
+            "en": "Oh no. So we gotta go around through the highway, and that adds, what, forty minutes? That's going to ruin my whole afternoon.",
+            "jp": "そんな。じゃあ高速を回っていかなきゃいけなくて、それで、40分くらい余計にかかる？午後が台無しだよ。",
+            "note": "元の形: have got to／聞こえ方: ガタ／使う場面:やるべきことを言う時"
+          },
+          {
+            "sp": 1,
+            "en": "About that. I'd leave early on Saturday if I were you.",
+            "jp": "そのくらい。私なら土曜は早めに出るよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Good call. Thanks for telling me.",
+            "jp": "いい助言だね。教えてくれてありがとう。"
+          },
+          {
+            "sp": 1,
+            "en": "Anytime. Drive safe, okay?",
+            "jp": "いつでも。気をつけて運転してね。"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,385 @@
+{
+  "app": "phrase-pack",
+  "id": "newstalk-0901",
+  "ver": 1,
+  "situation": "newstalk",
+  "sname": "ニュース・雑談・SNS",
+  "icon": "📰",
+  "level": 3,
+  "title": "ニュース・雑談・SNSの口語表現",
+  "items": [
+    {
+      "id": "newstalk-0901-001",
+      "en": "Hey, Dana, did you see the news this morning?",
+      "jp": "ねえダナ、今朝のニュース見た？",
+      "speak": "Hey, Dana, did you see the news this morning?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-002",
+      "en": "Boss, did you catch the game last night?",
+      "jp": "ボス、昨夜の試合見ました？",
+      "speak": "Boss, did you catch the game last night?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-003",
+      "en": "Dude, that post is totally fake.",
+      "jp": "なあ、その投稿は完全にデマだよ。",
+      "speak": "Dude, that post is totally fake.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-004",
+      "en": "Man, the comments are on fire.",
+      "jp": "うわ、コメント欄が大荒れだ。",
+      "speak": "Man, the comments are on fire.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-005",
+      "en": "Sam, gimme the short version.",
+      "jp": "サム、短くまとめて教えて。",
+      "speak": "Sam, gimme the short version.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:要点を聞く時"
+    },
+    {
+      "id": "newstalk-0901-006",
+      "en": "Liz, c'mon, don't read the comments.",
+      "jp": "リズ、ほら、コメントは読まないで。",
+      "speak": "Liz, c'mon, don't read the comments.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:止める時"
+    },
+    {
+      "id": "newstalk-0901-007",
+      "en": "Maya, lemme show you this clip.",
+      "jp": "マヤ、この動画を見せるよ。",
+      "speak": "Maya, lemme show you this clip.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:見せると言う時"
+    },
+    {
+      "id": "newstalk-0901-008",
+      "en": "Buddy, check the source before you share.",
+      "jp": "おい、シェアする前に出典を確認して。",
+      "speak": "Buddy, check the source before you share.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-009",
+      "en": "Hey, Chris, you good? You look shocked.",
+      "jp": "ねえクリス、大丈夫？驚いた顔してるよ。",
+      "speak": "Hey, Chris, you good? You look shocked.",
+      "say": [],
+      "note": "元の形: are you good／聞こえ方: ユー グッド／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "newstalk-0901-010",
+      "en": "Babe, turn it up. The weather's on.",
+      "jp": "ねえ、音を上げて。天気予報が始まる。",
+      "speak": "Babe, turn it up. The weather's on.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-011",
+      "en": "Gonna check the forecast real quick.",
+      "jp": "ちょっと天気予報を確認するよ。",
+      "speak": "Gonna check the forecast real quick.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "newstalk-0901-012",
+      "en": "Wanna watch the replay tonight?",
+      "jp": "今夜、再放送を見る？",
+      "speak": "Wanna watch the replay tonight?",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+    },
+    {
+      "id": "newstalk-0901-013",
+      "en": "I gotta put my phone down for a bit.",
+      "jp": "ちょっとスマホを置かなきゃ。",
+      "speak": "I gotta put my phone down for a bit.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "newstalk-0901-014",
+      "en": "We hafta leave early. The bridge is closed.",
+      "jp": "早く出なきゃ。橋が閉鎖されてる。",
+      "speak": "We hafta leave early. The bridge is closed.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "newstalk-0901-015",
+      "en": "I dunno. It could be a rumor.",
+      "jp": "分からない。うわさかもしれない。",
+      "speak": "I dunno. It could be a rumor.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "newstalk-0901-016",
+      "en": "Beats me. I just saw the headline.",
+      "jp": "さあね。見出しを見ただけだよ。",
+      "speak": "Beats me. I just saw the headline.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+    },
+    {
+      "id": "newstalk-0901-017",
+      "en": "No idea. Who posted it?",
+      "jp": "分からない。誰が投稿したの？",
+      "speak": "No idea. Who posted it?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-018",
+      "en": "Couldn't tell you. I stopped following that account.",
+      "jp": "何とも言えないな。そのアカウントはフォローをやめたから。",
+      "speak": "Couldn't tell you. I stopped following that account.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-019",
+      "en": "Y'know, half of it is just clickbait.",
+      "jp": "ほら、半分はただの釣りだよ。",
+      "speak": "Y'know, half of it is just clickbait.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:注意をひく時"
+    },
+    {
+      "id": "newstalk-0901-020",
+      "en": "It's kinda crazy how fast news spreads.",
+      "jp": "ニュースの広まる速さが、ちょっとおかしいくらいだよ。",
+      "speak": "It's kinda crazy how fast news spreads.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "newstalk-0901-021",
+      "en": "Didja hear? The finale got moved.",
+      "jp": "聞いた？最終回が延期になったよ。",
+      "speak": "Didja hear? The finale got moved.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:うわさを伝える時"
+    },
+    {
+      "id": "newstalk-0901-022",
+      "en": "Whatcha reading? Looks intense.",
+      "jp": "何読んでるの？深刻そうだね。",
+      "speak": "Whatcha reading? Looks intense.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "newstalk-0901-023",
+      "en": "Ya think it's true?",
+      "jp": "本当だと思う？",
+      "speak": "Ya think it's true?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "newstalk-0901-024",
+      "en": "Got it. I'll look it up myself.",
+      "jp": "分かった。自分で調べるよ。",
+      "speak": "Got it. I'll look it up myself.",
+      "say": [],
+      "note": "元の形: I've got it／聞こえ方: ガット／使う場面:了解の時"
+    },
+    {
+      "id": "newstalk-0901-025",
+      "en": "Mind if I read that over your shoulder?",
+      "jp": "肩越しにそれを読んでもいい？",
+      "speak": "Mind if I read that over your shoulder?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+    },
+    {
+      "id": "newstalk-0901-026",
+      "en": "Any luck finding the original story?",
+      "jp": "元の記事は見つかった？",
+      "speak": "Any luck finding the original story?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-027",
+      "en": "Need a hand with the fact-checking?",
+      "jp": "事実確認を手伝おうか？",
+      "speak": "Need a hand with the fact-checking?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-028",
+      "en": "Running behind on the news today.",
+      "jp": "今日はニュースを追えてないんだ。",
+      "speak": "Running behind on the news today.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-029",
+      "en": "Sounds good. Let's watch it together.",
+      "jp": "いいね。一緒に見よう。",
+      "speak": "Sounds good. Let's watch it together.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-030",
+      "en": "No can do. My phone's dead.",
+      "jp": "それは無理だね。スマホの充電が切れてる。",
+      "speak": "No can do. My phone's dead.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-031",
+      "en": "Long story short, it was a hoax.",
+      "jp": "要するに、ただのデマだったんだ。",
+      "speak": "Long story short, it was a hoax.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-032",
+      "en": "Look, I'm not saying it's fake.",
+      "jp": "いいかい、偽物だと言ってるんじゃない。",
+      "speak": "Look, I'm not saying it's fake.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-033",
+      "en": "I mean, the headline's pretty wild.",
+      "jp": "つまり、見出しがかなり過激だってこと。",
+      "speak": "I mean, the headline's pretty wild.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-034",
+      "en": "Wait, what? They canceled the show?",
+      "jp": "待って、何？番組が打ち切りになったの？",
+      "speak": "Wait, what? They canceled the show?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-035",
+      "en": "Say again? The TV's too loud.",
+      "jp": "もう一度言って？テレビの音が大きくて。",
+      "speak": "Say again? The TV's too loud.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-036",
+      "en": "Just talk normally. Skip the hot takes.",
+      "jp": "普通に話して。過激な意見は抜きで。",
+      "speak": "Just talk normally. Skip the hot takes.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-037",
+      "en": "Chill. It's just a rumor.",
+      "jp": "落ち着いて。ただのうわさだよ。",
+      "speak": "Chill. It's just a rumor.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-038",
+      "en": "Relax, it's me. Tell me what you really think.",
+      "jp": "気楽にして、私だよ。本音を聞かせて。",
+      "speak": "Relax, it's me. Tell me what you really think.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-039",
+      "en": "Say it like a human, not a headline.",
+      "jp": "見出しじゃなくて、人間らしく言ってよ。",
+      "speak": "Say it like a human, not a headline.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-040",
+      "en": "Ain't no way that's real.",
+      "jp": "そんなの本物なわけがない。",
+      "speak": "Ain't no way that's real.",
+      "say": [],
+      "note": "元の形: there is no／聞こえ方: エイント／使う場面:くだけて否定する時"
+    },
+    {
+      "id": "newstalk-0901-041",
+      "en": "I'd wait, 'cause the story's still changing.",
+      "jp": "話がまだ変わっているから、待つよ。",
+      "speak": "I'd wait, 'cause the story's still changing.",
+      "say": [],
+      "note": "元の形: because／聞こえ方: コーズ／使う場面:理由を軽く添える時"
+    },
+    {
+      "id": "newstalk-0901-042",
+      "en": "Hey, Jen, don't sweat it. It'll blow over.",
+      "jp": "ねえジェン、気にしないで。すぐ収まるよ。",
+      "speak": "Hey, Jen, don't sweat it. It'll blow over.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-043",
+      "en": "C'mon, it's just a post.",
+      "jp": "ほら、ただの投稿だよ。",
+      "speak": "C'mon, it's just a post.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:なだめる時"
+    },
+    {
+      "id": "newstalk-0901-044",
+      "en": "Where'd you read that?",
+      "jp": "それ、どこで読んだの？",
+      "speak": "Where'd you read that?",
+      "say": [],
+      "note": "元の形: where did／聞こえ方: ウェアド／使う場面:場所を聞く時"
+    },
+    {
+      "id": "newstalk-0901-045",
+      "en": "What'd the news say about the storm?",
+      "jp": "嵐についてニュースは何て言ってた？",
+      "speak": "What'd the news say about the storm?",
+      "say": [],
+      "note": "元の形: what did／聞こえ方: ワラド／使う場面:内容を聞く時"
+    },
+    {
+      "id": "newstalk-0901-046",
+      "en": "How'd you find that account?",
+      "jp": "そのアカウントはどうやって見つけたの？",
+      "speak": "How'd you find that account?",
+      "say": [],
+      "note": "元の形: how did／聞こえ方: ハウド／使う場面:方法を聞く時"
+    },
+    {
+      "id": "newstalk-0901-047",
+      "en": "Where's the link? I can't find it.",
+      "jp": "リンクはどこ？見つからない。",
+      "speak": "Where's the link? I can't find it.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-048",
+      "en": "Hey, Alex, can you send me that article?",
+      "jp": "ねえアレックス、その記事を送ってくれる？",
+      "speak": "Hey, Alex, can you send me that article?",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-049",
+      "en": "Sir, the weather alert just came in.",
+      "jp": "部長、気象警報が入りました。",
+      "speak": "Sir, the weather alert just came in.",
+      "say": []
+    },
+    {
+      "id": "newstalk-0901-050",
+      "en": "Hey, Sam, nice catch on that fake story.",
+      "jp": "ねえサム、そのデマに気づいたのはお手柄だよ。",
+      "speak": "Hey, Sam, nice catch on that fake story.",
+      "say": []
+    }
+  ]
+}

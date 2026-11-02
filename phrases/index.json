@@ -1,5 +1,5 @@
 {
-"updated": 1793612749024,
+"updated": 1793612900015,
 "packs": [
 {
 "id": "airport-0001",
@@ -480,6 +480,14 @@
 "count": 50,
 "situation": "aiwork",
 "sname": "AI・仕事の変化"
+},
+{
+"id": "newstalk-0901",
+"file": "newstalk-0901.json",
+"ver": 1,
+"count": 50,
+"situation": "newstalk",
+"sname": "ニュース・雑談・SNS"
 }
 ]
 }
