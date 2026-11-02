@@ -3513,7 +3513,8 @@ function loadPackagedConversation(){
   {id:'wellness2',file:'wellness-0602.json'},
   {id:'hobbyfit',file:'hobbyfit-0701.json'},
   {id:'campus',file:'campus-1201.json'},
-  {id:'traffic',file:'traffic-1101.json'}
+  {id:'traffic',file:'traffic-1101.json'},
+  {id:'aiwork',file:'aiwork-1001.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

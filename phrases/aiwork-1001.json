@@ -1,0 +1,385 @@
+{
+  "app": "phrase-pack",
+  "id": "aiwork-1001",
+  "ver": 1,
+  "situation": "aiwork",
+  "sname": "AI・仕事の変化",
+  "icon": "🤖",
+  "level": 3,
+  "title": "AI・仕事の変化の口語表現",
+  "items": [
+    {
+      "id": "aiwork-1001-001",
+      "en": "Hey, Jen, did you try the new AI tool yet?",
+      "jp": "ねえジェン、新しいAIツールはもう試した？",
+      "speak": "Hey, Jen, did you try the new AI tool yet?",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-002",
+      "en": "Boss, the draft's ready for your review.",
+      "jp": "ボス、下書きができたのでご確認ください。",
+      "speak": "Boss, the draft's ready for your review.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-003",
+      "en": "Dude, don't paste client data into it.",
+      "jp": "なあ、顧客データをそこに貼っちゃだめだよ。",
+      "speak": "Dude, don't paste client data into it.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-004",
+      "en": "Man, that answer was totally made up.",
+      "jp": "うわ、その答えは完全に作り話だったよ。",
+      "speak": "Man, that answer was totally made up.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-005",
+      "en": "Sam, gimme the short version.",
+      "jp": "サム、短くまとめて教えて。",
+      "speak": "Sam, gimme the short version.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:要点を聞く時"
+    },
+    {
+      "id": "aiwork-1001-006",
+      "en": "Liz, c'mon, give it a try.",
+      "jp": "リズ、ほら、試してみなよ。",
+      "speak": "Liz, c'mon, give it a try.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:背中を押す時"
+    },
+    {
+      "id": "aiwork-1001-007",
+      "en": "Alex, lemme show you a trick.",
+      "jp": "アレックス、コツを見せるよ。",
+      "speak": "Alex, lemme show you a trick.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:見せると言う時"
+    },
+    {
+      "id": "aiwork-1001-008",
+      "en": "Buddy, double-check before you send it.",
+      "jp": "おい、送る前にもう一度確認して。",
+      "speak": "Buddy, double-check before you send it.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-009",
+      "en": "Hey, Maya, you good? You look stressed.",
+      "jp": "ねえマヤ、大丈夫？ストレスが顔に出てるよ。",
+      "speak": "Hey, Maya, you good? You look stressed.",
+      "say": [],
+      "note": "元の形: are you good／聞こえ方: ユー グッド／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "aiwork-1001-010",
+      "en": "Babe, I'll be late. The meeting's running long.",
+      "jp": "ねえ、遅くなる。会議が長引いてて。",
+      "speak": "Babe, I'll be late. The meeting's running long.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-011",
+      "en": "Gonna ask the AI to summarize this.",
+      "jp": "これをAIに要約してもらうよ。",
+      "speak": "Gonna ask the AI to summarize this.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "aiwork-1001-012",
+      "en": "Wanna see how I write my prompts?",
+      "jp": "私のプロンプトの書き方、見たい？",
+      "speak": "Wanna see how I write my prompts?",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+    },
+    {
+      "id": "aiwork-1001-013",
+      "en": "I gotta double-check the numbers.",
+      "jp": "数字を再確認しなきゃ。",
+      "speak": "I gotta double-check the numbers.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "aiwork-1001-014",
+      "en": "We hafta update the policy by Friday.",
+      "jp": "金曜までに方針を更新しなきゃ。",
+      "speak": "We hafta update the policy by Friday.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "aiwork-1001-015",
+      "en": "I dunno. It sounds too good to be true.",
+      "jp": "分からない。話がうますぎる気がする。",
+      "speak": "I dunno. It sounds too good to be true.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "aiwork-1001-016",
+      "en": "Beats me. The tool just stopped working.",
+      "jp": "さあね。ツールが急に動かなくなった。",
+      "speak": "Beats me. The tool just stopped working.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+    },
+    {
+      "id": "aiwork-1001-017",
+      "en": "No idea. Ask the IT team.",
+      "jp": "分からない。IT部門に聞いて。",
+      "speak": "No idea. Ask the IT team.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-018",
+      "en": "Couldn't tell you. I'm still learning it.",
+      "jp": "何とも言えないな。まだ勉強中だから。",
+      "speak": "Couldn't tell you. I'm still learning it.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-019",
+      "en": "Y'know, it's only a draft, not the final.",
+      "jp": "ほら、これは下書きで、最終版じゃないよ。",
+      "speak": "Y'know, it's only a draft, not the final.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:注意をひく時"
+    },
+    {
+      "id": "aiwork-1001-020",
+      "en": "It's kinda scary how fast it's improving.",
+      "jp": "上達の速さが、ちょっと怖いくらいだよ。",
+      "speak": "It's kinda scary how fast it's improving.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "aiwork-1001-021",
+      "en": "Didja hear? They're automating invoices.",
+      "jp": "聞いた？請求書を自動化するんだって。",
+      "speak": "Didja hear? They're automating invoices.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:うわさを伝える時"
+    },
+    {
+      "id": "aiwork-1001-022",
+      "en": "Whatcha using for the summary?",
+      "jp": "要約には何を使ってるの？",
+      "speak": "Whatcha using for the summary?",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "aiwork-1001-023",
+      "en": "Ya think it'll replace us?",
+      "jp": "私たちの仕事を奪うと思う？",
+      "speak": "Ya think it'll replace us?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "aiwork-1001-024",
+      "en": "Got it. I'll fact-check everything.",
+      "jp": "分かった。全部事実確認するよ。",
+      "speak": "Got it. I'll fact-check everything.",
+      "say": [],
+      "note": "元の形: I've got it／聞こえ方: ガット／使う場面:了解の時"
+    },
+    {
+      "id": "aiwork-1001-025",
+      "en": "Mind if I borrow your prompt?",
+      "jp": "君のプロンプトを借りてもいい？",
+      "speak": "Mind if I borrow your prompt?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+    },
+    {
+      "id": "aiwork-1001-026",
+      "en": "Any luck with the new workflow?",
+      "jp": "新しい作業の流れはうまくいってる？",
+      "speak": "Any luck with the new workflow?",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-027",
+      "en": "Need a hand with the setup?",
+      "jp": "設定を手伝おうか？",
+      "speak": "Need a hand with the setup?",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-028",
+      "en": "Running behind. The tool's been slow.",
+      "jp": "遅れてる。ツールが重くて。",
+      "speak": "Running behind. The tool's been slow.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-029",
+      "en": "Sounds good. Let's try it next week.",
+      "jp": "いいね。来週試してみよう。",
+      "speak": "Sounds good. Let's try it next week.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-030",
+      "en": "No can do. It's against company policy.",
+      "jp": "それは無理だね。会社の方針に反するから。",
+      "speak": "No can do. It's against company policy.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-031",
+      "en": "Long story short, I'm learning to code.",
+      "jp": "要するに、プログラミングを勉強中なんだ。",
+      "speak": "Long story short, I'm learning to code.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-032",
+      "en": "Look, I'm not against the tech.",
+      "jp": "いいかい、僕はその技術に反対じゃないんだ。",
+      "speak": "Look, I'm not against the tech.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-033",
+      "en": "I mean, it's fine for first drafts.",
+      "jp": "つまり、最初の下書きにはいいってこと。",
+      "speak": "I mean, it's fine for first drafts.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-034",
+      "en": "Wait, what? It deleted my file?",
+      "jp": "待って、何？ファイルを消したの？",
+      "speak": "Wait, what? It deleted my file?",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-035",
+      "en": "Say again? The audio's breaking up.",
+      "jp": "もう一度言って？音声が途切れてる。",
+      "speak": "Say again? The audio's breaking up.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-036",
+      "en": "Just talk normally. Skip the jargon.",
+      "jp": "普通に話して。専門用語は抜きで。",
+      "speak": "Just talk normally. Skip the jargon.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-037",
+      "en": "Chill. It's just a pilot program.",
+      "jp": "落ち着いて。ただの試験導入だよ。",
+      "speak": "Chill. It's just a pilot program.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-038",
+      "en": "Relax, it's me. You can be honest.",
+      "jp": "気楽にして、私だよ。正直に言っていいよ。",
+      "speak": "Relax, it's me. You can be honest.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-039",
+      "en": "Say it like a human, not a press release.",
+      "jp": "プレスリリースじゃなくて、人間らしく言ってよ。",
+      "speak": "Say it like a human, not a press release.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-040",
+      "en": "Ain't no way a bot writes this well.",
+      "jp": "ボットがこんなにうまく書くなんてあり得ない。",
+      "speak": "Ain't no way a bot writes this well.",
+      "say": [],
+      "note": "元の形: there is no／聞こえ方: エイント／使う場面:くだけて否定する時"
+    },
+    {
+      "id": "aiwork-1001-041",
+      "en": "I'd check it twice, 'cause it can bluff.",
+      "jp": "ごまかすことがあるから、2回確認するよ。",
+      "speak": "I'd check it twice, 'cause it can bluff.",
+      "say": [],
+      "note": "元の形: because／聞こえ方: コーズ／使う場面:理由を軽く添える時"
+    },
+    {
+      "id": "aiwork-1001-042",
+      "en": "Hey, Dana, don't sweat it. We're all learning.",
+      "jp": "ねえダナ、気にしないで。みんな学んでるところだよ。",
+      "speak": "Hey, Dana, don't sweat it. We're all learning.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-043",
+      "en": "C'mon, it's not that hard.",
+      "jp": "ほら、そんなに難しくないよ。",
+      "speak": "C'mon, it's not that hard.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:励ます時"
+    },
+    {
+      "id": "aiwork-1001-044",
+      "en": "Where'd you learn all this?",
+      "jp": "こういうのは、どこで覚えたの？",
+      "speak": "Where'd you learn all this?",
+      "say": [],
+      "note": "元の形: where did／聞こえ方: ウェアド／使う場面:場所を聞く時"
+    },
+    {
+      "id": "aiwork-1001-045",
+      "en": "What'd the manager say about it?",
+      "jp": "部長はそれについて何て言ってた？",
+      "speak": "What'd the manager say about it?",
+      "say": [],
+      "note": "元の形: what did／聞こえ方: ワラド／使う場面:内容を聞く時"
+    },
+    {
+      "id": "aiwork-1001-046",
+      "en": "How'd you get it to write like that?",
+      "jp": "どうやってそんなふうに書かせたの？",
+      "speak": "How'd you get it to write like that?",
+      "say": [],
+      "note": "元の形: how did／聞こえ方: ハウド／使う場面:方法を聞く時"
+    },
+    {
+      "id": "aiwork-1001-047",
+      "en": "Where's the policy doc? I can't find it.",
+      "jp": "方針の資料はどこ？見つからない。",
+      "speak": "Where's the policy doc? I can't find it.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-048",
+      "en": "Hey, Chris, can you proofread this for me?",
+      "jp": "ねえクリス、これを校正してくれる？",
+      "speak": "Hey, Chris, can you proofread this for me?",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-049",
+      "en": "Sir, the system's back up and running.",
+      "jp": "部長、システムが復旧しました。",
+      "speak": "Sir, the system's back up and running.",
+      "say": []
+    },
+    {
+      "id": "aiwork-1001-050",
+      "en": "Hey, Liz, nice work on the demo.",
+      "jp": "ねえリズ、デモ、お疲れさま。",
+      "speak": "Hey, Liz, nice work on the demo.",
+      "say": []
+    }
+  ]
+}

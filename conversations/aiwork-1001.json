@@ -1,0 +1,388 @@
+[
+  {
+    "id": "aiwork",
+    "ic": "🤖",
+    "n": "AI・仕事の変化",
+    "hint": "coworkers talk about AI tools, job worries, new skills, and how work is changing",
+    "level": 3,
+    "keywords": [
+      "AI",
+      "work",
+      "skills"
+    ],
+    "d": [
+      {
+        "t": "AIに仕事を奪われる不安",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Jen, you got a minute? I've been reading about layoffs, and honestly, I can't stop thinking about it.",
+            "jp": "ねえジェン、ちょっといい？人員削減の記事を読んで、正直そのことが頭から離れないんだ。",
+            "note": "元の形: have you got a／聞こえ方: ガタ／使う場面:話を切り出す時"
+          },
+          {
+            "sp": 1,
+            "en": "Ugh, same. Everybody's talking about AI taking over half our jobs.",
+            "jp": "うわ、私も。みんな、AIが仕事の半分を奪うって話してるよね。"
+          },
+          {
+            "sp": 0,
+            "en": "Do you think it's true, or is it just hype?",
+            "jp": "本当だと思う？それとも、ただの騒ぎすぎ？"
+          },
+          {
+            "sp": 1,
+            "en": "I think it's a bit of both. Some tasks will disappear, but new jobs will show up, and the people who learn the tools early will be fine.",
+            "jp": "両方だと思う。なくなる作業もあるけど、新しい仕事も出てくるし、早めにツールを覚えた人は大丈夫だよ。"
+          },
+          {
+            "sp": 0,
+            "en": "That's easy to say when you're already using it every day.",
+            "jp": "毎日もう使ってる人が言うと簡単だよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Fair. But I wasn't born knowing it either. I just started with one boring task, like summarizing meeting notes, and went from there.",
+            "jp": "もっともだね。でも私も最初から知ってたわけじゃない。会議メモの要約みたいな退屈な作業一つから始めただけ。"
+          },
+          {
+            "sp": 0,
+            "en": "Huh. Maybe I should try that.",
+            "jp": "へえ。やってみようかな。"
+          },
+          {
+            "sp": 1,
+            "en": "Do it this week. Seriously, don't wait.",
+            "jp": "今週やってみて。本当に、待たないで。"
+          }
+        ]
+      },
+      {
+        "t": "上司がAI導入を発表",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, everyone, quick announcement. Starting next month, the whole team will be using an AI assistant for reports and scheduling.",
+            "jp": "はい皆さん、簡単な発表です。来月から、チーム全員が報告書とスケジュールにAIアシスタントを使います。"
+          },
+          {
+            "sp": 1,
+            "en": "Wait, what? Are we gonna be replaced?",
+            "jp": "待って、何？私たち、置き換えられるの？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:不安を口にする時"
+          },
+          {
+            "sp": 0,
+            "en": "No, no. Nobody's losing their job over this. It's meant to take the boring stuff off your plate so you can focus on the real work.",
+            "jp": "いやいや。これで誰も仕事を失いません。つまらない作業を減らして、本来の仕事に集中できるようにするためのものです。"
+          },
+          {
+            "sp": 1,
+            "en": "What about the data? Is it safe to paste client info into it?",
+            "jp": "データはどうですか？顧客情報を貼り付けても安全ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Good question. Absolutely not, unless it's the company version. I'll send out a short guide with the rules by Friday.",
+            "jp": "いい質問です。会社版でない限り、絶対だめです。金曜までにルールの短いガイドを送ります。"
+          },
+          {
+            "sp": 1,
+            "en": "And who's responsible if the AI gets something wrong?",
+            "jp": "AIが間違えた時は誰の責任ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "You are. It's a draft, not a verdict, so always double-check before sending anything out.",
+            "jp": "あなたです。下書きであって判決ではないので、何か出す前に必ず再確認してください。"
+          },
+          {
+            "sp": 1,
+            "en": "Got it. Better than I feared, honestly.",
+            "jp": "分かりました。正直、思ったよりましです。",
+            "note": "元の形: I've got it／聞こえ方: ガット／使う場面:理解を伝える時"
+          }
+        ]
+      },
+      {
+        "t": "AIの回答を信じていいか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dude, look at this. The AI said the report was due Friday, but the client says Monday.",
+            "jp": "なあ、これ見て。AIは報告書の締め切りが金曜だって言ったのに、お客さんは月曜だって言うんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Where'd it get Friday from?",
+            "jp": "金曜はどこから出たの？",
+            "note": "元の形: where did／聞こえ方: ウェアド／使う場面:出どころを聞く時"
+          },
+          {
+            "sp": 0,
+            "en": "No idea. It just sounded sure of itself, like it always does.",
+            "jp": "分からない。いつもみたいに、ただ自信ありげだったんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the problem. It can sound confident and still be totally wrong, so you've gotta check the source every single time.",
+            "jp": "それが問題だよ。自信ありげでも完全に間違っていることがあるから、毎回出典を確認しないと。",
+            "note": "元の形: you have got to／聞こえ方: ガタ／使う場面:やるべきことを言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, but then what's the point? If I have to double-check everything, I might as well do it myself.",
+            "jp": "でもそれなら意味はある？全部再確認するなら、自分でやった方が早い。"
+          },
+          {
+            "sp": 1,
+            "en": "It's still faster for first drafts, brainstorming, and rewording. Just don't use it as a calculator or a search engine.",
+            "jp": "最初の下書きやアイデア出し、言い換えなら今でも速いよ。計算機や検索エンジンとしては使わないで。"
+          },
+          {
+            "sp": 0,
+            "en": "Alright. Lesson learned.",
+            "jp": "分かった。いい勉強になった。"
+          },
+          {
+            "sp": 1,
+            "en": "Hey, it happens to everybody. Just don't send it before you check.",
+            "jp": "まあ、誰にでもあるよ。確認する前に送らなければいいだけ。"
+          }
+        ]
+      },
+      {
+        "t": "プロンプトの書き方を教える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "So, how do you get such good answers? Mine always come out, like, kinda vague.",
+            "jp": "ところで、どうやってそんなにいい答えを引き出すの？私のはいつも、なんだか曖昧になる。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Be specific. Don't just say 'write an email.' Say who it's for, what you want, and the tone, because the AI can't read your mind.",
+            "jp": "具体的に。ただ『メールを書いて』と言わない。誰宛てで、何がほしくて、どんな口調かを言うの。AIは心を読めないから。"
+          },
+          {
+            "sp": 0,
+            "en": "Like, 'write a polite email to a client asking for a deadline extension'?",
+            "jp": "たとえば、『お客さんに期限延長をお願いする丁寧なメールを書いて』みたいな？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And if the first try isn't right, don't start over. Just tell it, 'Make it shorter and a bit warmer.'",
+            "jp": "その通り。最初が違っても、やり直さないで。『もっと短く、少し温かく』と言うだけでいい。"
+          },
+          {
+            "sp": 0,
+            "en": "Oh, so it's more of a conversation.",
+            "jp": "ああ、会話みたいなものなんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Give it examples, too. Wanna see my favorite prompt?",
+            "jp": "そう。例も渡して。私のお気に入りのプロンプト、見たい？",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+          },
+          {
+            "sp": 0,
+            "en": "Please. Lemme copy it down.",
+            "jp": "お願い。書き写させて。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:先にやると言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. I'll send it over after lunch.",
+            "jp": "もちろん。お昼の後に送るね。"
+          }
+        ]
+      },
+      {
+        "t": "AI時代の面接",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for coming in. Before we start, I'd like to ask how you use AI in your daily work.",
+            "jp": "お越しいただきありがとうございます。始める前に、普段の仕事でAIをどう使っているか伺いたいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. I use it for first drafts, for summarizing long documents, and for brainstorming, but I always review the output myself.",
+            "jp": "はい。最初の下書き、長い資料の要約、アイデア出しに使いますが、出力は必ず自分で確認します。"
+          },
+          {
+            "sp": 0,
+            "en": "Have you ever caught it making a serious mistake?",
+            "jp": "重大な間違いを見つけたことはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Once, yeah. It invented a statistic in a report, and I only caught it because I checked the original source.",
+            "jp": "一度あります。報告書で統計を作り出していて、元の出典を確認したから気づけました。"
+          },
+          {
+            "sp": 0,
+            "en": "Good. That's exactly what we want to hear.",
+            "jp": "いいですね。まさに聞きたかったことです。"
+          },
+          {
+            "sp": 1,
+            "en": "Can I ask a question? How does the team handle AI tools, rules and training-wise?",
+            "jp": "質問してもいいですか？チームではAIツールを、ルールや研修の面でどう扱っていますか？"
+          },
+          {
+            "sp": 0,
+            "en": "We have a short policy, plus a monthly workshop where people share tips, and nobody's expected to be an expert on day one.",
+            "jp": "短い方針があり、人が工夫を共有する月1回のワークショップもあって、初日から専門家であることは求められません。"
+          },
+          {
+            "sp": 1,
+            "en": "That sounds great. I'd love to be part of that.",
+            "jp": "素晴らしいですね。ぜひ参加したいです。"
+          }
+        ]
+      },
+      {
+        "t": "リモートと自動化の相談",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Sam, did you see the memo? They're automating the invoice process.",
+            "jp": "ねえサム、メモ見た？請求書の処理を自動化するんだって。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, I saw. That's literally half of my job, man.",
+            "jp": "うん、見たよ。それ、文字通り僕の仕事の半分だよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Don't panic yet. Read the second page. They said people will move to checking exceptions and talking to clients, so it's not a layoff, it's a reshuffle.",
+            "jp": "まだ慌てないで。2ページ目を読んで。例外の確認とお客さんとの対応に回るって書いてあるよ。解雇じゃなくて配置換えだよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, but 'checking exceptions' sounds like a fancy way to say 'cleaning up the robot's mess,' and I didn't sign up for that when I took this job.",
+            "jp": "でも『例外の確認』って、『ロボットの後始末』をおしゃれに言ってるだけに聞こえる。この仕事に就いた時に、そんなことは約束してないよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! Maybe. But that part needs judgment, and judgment is the part that isn't going away.",
+            "jp": "はは！そうかも。でもそこは判断が必要で、判断こそなくならない部分だよ。"
+          },
+          {
+            "sp": 1,
+            "en": "So I should get better at the judgment part.",
+            "jp": "じゃあ、判断の部分を磨くべきだね。"
+          },
+          {
+            "sp": 0,
+            "en": "Exactly. And ask for training now, while they're still handing it out.",
+            "jp": "その通り。研修は、今まだ配ってるうちに頼もう。"
+          },
+          {
+            "sp": 1,
+            "en": "Gonna email my manager today.",
+            "jp": "今日、上司にメールする。",
+            "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:今日やると決める時"
+          }
+        ]
+      },
+      {
+        "t": "AIで作った作品の線引き",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Maya, did you write this poem yourself, or did the AI help?",
+            "jp": "ねえマヤ、この詩は自分で書いたの？それともAIが手伝った？"
+          },
+          {
+            "sp": 1,
+            "en": "Both, kinda. I wrote the idea, the AI gave me three versions, and I picked the best lines and rewrote the rest.",
+            "jp": "両方、かな。アイデアは私で、AIが3パターン出して、いい行を選んで残りを書き直した。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ぼかして言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Is that okay for the contest? The rules say 'original work.'",
+            "jp": "それってコンテストで大丈夫？規則には『オリジナル作品』って書いてあるよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm not sure. Honestly, I'd rather tell them than get disqualified later for hiding it.",
+            "jp": "分からない。正直、あとで隠していたと失格になるより、先に伝えたい。"
+          },
+          {
+            "sp": 0,
+            "en": "Smart. Ask the organizers, and keep your drafts, so you can show how much of it is yours, if anyone ever asks.",
+            "jp": "賢いね。主催者に聞いて、下書きも残して、誰かに聞かれた時にどれだけ自分のものか示せるようにしておこう。"
+          },
+          {
+            "sp": 1,
+            "en": "Good idea. I never thought of that.",
+            "jp": "いい考え。思いつかなかった。"
+          },
+          {
+            "sp": 0,
+            "en": "Look, I'm not saying it's cheating. I'm saying people deserve to know what they're reading.",
+            "jp": "いいかい、ズルだと言ってるんじゃない。読む人は、何を読んでいるか知る権利があるって言ってるんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah. That's fair. I'll add a note.",
+            "jp": "うん、そうだね。注記を入れるよ。"
+          }
+        ]
+      },
+      {
+        "t": "新しいスキルを学ぶ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Alex, you look tired. Late night?",
+            "jp": "アレックス、疲れてるね。夜更かし？"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, I've been taking an online course on data analysis, 'cause everybody says you need it now.",
+            "jp": "うん、データ分析のオンライン講座を受けてたんだ。今はみんな必要だって言うから。",
+            "note": "元の形: because／聞こえ方: コーズ／使う場面:理由を軽く添える時"
+          },
+          {
+            "sp": 0,
+            "en": "That's great! How's it going?",
+            "jp": "いいね！どう、進んでる？"
+          },
+          {
+            "sp": 1,
+            "en": "Slowly. Some nights I wanna quit, but then I remember how fast things are changing, and I tell myself, 'Just one more lesson.'",
+            "jp": "ゆっくりだよ。やめたい夜もあるけど、変化の速さを思い出して、『あと1レッスンだけ』と自分に言い聞かせてる。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたくなる気持ちを言う時"
+          },
+          {
+            "sp": 0,
+            "en": "I like that. Small steps beat big promises.",
+            "jp": "いいね。小さな一歩は大きな約束に勝つよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, the hardest part isn't the math. It's finding the time after work.",
+            "jp": "正直、一番大変なのは数学じゃなくて、仕事の後に時間を作ることなんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "Then protect twenty minutes every morning. That's what worked for me, and you don't need a perfect schedule, just a regular one.",
+            "jp": "なら毎朝20分を確保して。私にはそれが効いたよ。完璧なスケジュールは要らない、決まったものがあればいい。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. Starting tomorrow. Thanks, man.",
+            "jp": "分かった。明日から始める。ありがとう。"
+          }
+        ]
+      }
+    ]
+  }
+]
