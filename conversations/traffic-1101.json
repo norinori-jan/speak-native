@@ -1,0 +1,387 @@
+[
+  {
+    "id": "traffic",
+    "ic": "🚓",
+    "n": "警察・車・交通",
+    "hint": "drivers, officers, and passengers deal with tickets, accidents, rentals, and getting around",
+    "level": 3,
+    "keywords": [
+      "police",
+      "driving",
+      "traffic"
+    ],
+    "d": [
+      {
+        "t": "速度違反で止められた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Evening, sir. License and registration, please. Do you know why I pulled you over tonight?",
+            "jp": "こんばんは。免許証と車検証をお願いします。なぜ止められたか分かりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "No, officer. I mean, I don't think I was doing anything wrong.",
+            "jp": "いいえ、お巡りさん。何も悪いことはしていないと思うのですが。"
+          },
+          {
+            "sp": 0,
+            "en": "You were doing fifty-five in a thirty-five zone. That's twenty over the limit.",
+            "jp": "制限35のところを55で走っていました。20オーバーです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh, man. I honestly didn't see the sign. I'm so sorry, I'm just trying to get home before my kid's bedtime.",
+            "jp": "うわ、まいった。本当に標識が見えませんでした。すみません、子どもの寝る時間までに家に帰ろうとしていたんです。"
+          },
+          {
+            "sp": 0,
+            "en": "I understand, but a school zone is no place to rush. Wait here a minute while I run your license.",
+            "jp": "分かりますが、スクールゾーンで急ぐのはいけません。免許を確認するので、ここで少し待っていてください。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure thing. Take your time.",
+            "jp": "分かりました。ごゆっくり。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, you're clean. I'm gonna write you a warning this time, but slow down, all right?",
+            "jp": "問題ありませんね。今回は警告だけにしますが、速度を落としてくださいね。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからすると伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you so much, officer. I will, I promise.",
+            "jp": "本当にありがとうございます、お巡りさん。守ります、約束します。"
+          }
+        ]
+      },
+      {
+        "t": "駐車違反の切符",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, excuse me, ma'am! That's my car you're writing a ticket for!",
+            "jp": "あの、すみません！今切符を切っているのは私の車です！"
+          },
+          {
+            "sp": 1,
+            "en": "Then you should've read the sign. No parking from eight to ten, Monday through Friday.",
+            "jp": "なら標識を読むべきでしたね。月曜から金曜の8時から10時は駐車禁止です。"
+          },
+          {
+            "sp": 0,
+            "en": "I was only gone for five minutes, I swear. I just ran inside the shop to grab a quick coffee for my boss.",
+            "jp": "本当に5分しかいませんでした。上司のコーヒーをさっと買いに店へ走っただけです。"
+          },
+          {
+            "sp": 1,
+            "en": "Five minutes or fifty, the rule's the same. The fine is sixty dollars.",
+            "jp": "5分でも50分でも規則は同じです。罰金は60ドルです。"
+          },
+          {
+            "sp": 0,
+            "en": "Sixty? Come on, can't you let it slide just this once?",
+            "jp": "60ドル？お願いです、今回だけ見逃してもらえませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "I can't, sir. But you can appeal online within thirty days, and if you have a good reason, a judge might reduce it.",
+            "jp": "できません。ただ30日以内にオンラインで異議を申し立てられますし、正当な理由があれば判事が減額するかもしれません。"
+          },
+          {
+            "sp": 0,
+            "en": "Fine. I'll appeal. Lemme take a picture of that sign first.",
+            "jp": "分かりました。異議を出します。まずその標識の写真を撮らせてください。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:先にやると言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Go ahead. Have a good day.",
+            "jp": "どうぞ。良い一日を。"
+          }
+        ]
+      },
+      {
+        "t": "軽い接触事故のあと",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Whoa! Are you okay? I didn't even see you coming!",
+            "jp": "うわ！大丈夫ですか？来るのが全然見えませんでした！"
+          },
+          {
+            "sp": 1,
+            "en": "I'm fine, I think, just a little shaken up. But you hit my bumper pretty hard, y'know, and I never even saw you slow down.",
+            "jp": "大丈夫だと思います、少し動揺してるだけ。でもバンパーにかなり強く当たったし、減速も全然見えませんでしたよ。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:相手に念を押す時"
+          },
+          {
+            "sp": 0,
+            "en": "I know, I'm so sorry. Let's pull over, and we can swap insurance info.",
+            "jp": "分かってます、本当にすみません。路肩に寄って、保険の情報を交換しましょう。"
+          },
+          {
+            "sp": 1,
+            "en": "Good idea. Take a picture of the damage, and I'll take one of my plate and yours, just to be safe.",
+            "jp": "いい考えです。傷の写真を撮ってください。念のため私は自分と相手のナンバーを撮ります。"
+          },
+          {
+            "sp": 0,
+            "en": "Sure. Do you want me to call the police, or is this a, like, exchange-numbers-and-go situation?",
+            "jp": "はい。警察を呼びますか、それとも連絡先を交換して終わりにしますか？",
+            "note": "元の形: do you want／聞こえ方: ユー ワン／使う場面:相手の意向を聞く時"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, it's minor, but I'd rather have a report, because insurance companies get weird when there's no paperwork.",
+            "jp": "正直、軽い事故ですが、報告書はほしいです。書類がないと保険会社が面倒なので。"
+          },
+          {
+            "sp": 0,
+            "en": "Makes sense. I'll call it in right now.",
+            "jp": "もっともです。今すぐ通報します。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. And hey, no hard feelings. Everyone's had a bad day behind the wheel.",
+            "jp": "ありがとう。それと、恨みっこなしで。運転で最悪の日は誰にでもあるから。"
+          }
+        ]
+      },
+      {
+        "t": "レンタカーの返却",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Welcome back. How was the drive? Any issues I should know about?",
+            "jp": "おかえりなさい。運転はどうでしたか？お伝えいただくことはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It was great, but I might've scraped the side mirror in a parking garage. Sorry.",
+            "jp": "楽しかったですが、駐車場で、サイドミラーをこすったかもしれません。すみません。"
+          },
+          {
+            "sp": 0,
+            "en": "Let me take a look. Hmm, there's a small scratch, but nothing major.",
+            "jp": "見てみます。うーん、小さなキズがありますが、大したことはありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Is that gonna cost me extra?",
+            "jp": "それは追加料金になりますか？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの見込みを聞く時"
+          },
+          {
+            "sp": 0,
+            "en": "Since you took the full coverage plan, no. Otherwise it'd be around two hundred dollars.",
+            "jp": "フルカバーのプランなので、かかりません。そうでなければ200ドルほどでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Whew, good call on the insurance, then. Before I go, do I need to refill the tank, or does the rental company take care of that?",
+            "jp": "ふう、保険に入っておいて正解でした。行く前に、ガソリンは満タンにする必要がありますか、それとも会社がやってくれますか？"
+          },
+          {
+            "sp": 0,
+            "en": "It was full when you picked it up, and it's three-quarters now, so I'll add the refill charge, plus the fee for the extra day, just so you know.",
+            "jp": "借りた時は満タンで今は4分の3なので、給油料金を足します。それと、念のため、延長した1日分の料金もかかります。"
+          },
+          {
+            "sp": 1,
+            "en": "That's fair. Can I get a receipt by email?",
+            "jp": "妥当ですね。領収書をメールでもらえますか？"
+          }
+        ]
+      },
+      {
+        "t": "ガソリンスタンドで",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, buddy, is this pump working? The screen says 'See cashier.'",
+            "jp": "ねえ、このポンプ動いてる？画面に『レジへ』って出てるんだけど。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, it's a prepay pump. You gotta pay inside first, and then it unlocks.",
+            "jp": "うん、前払い式なんだ。先に中で払うと、ロックが外れるよ。",
+            "note": "元の形: you have got to／聞こえ方: ガタ／使う場面:やるべきことを教える時"
+          },
+          {
+            "sp": 0,
+            "en": "Seriously? In this day and age? Okay, how much should I put on it?",
+            "jp": "本当に？今どきそんなの？分かった、いくら入れればいい？"
+          },
+          {
+            "sp": 1,
+            "en": "Depends on your tank. If you wanna fill up, tell the cashier fifty bucks, and you'll get change back if it takes less.",
+            "jp": "タンク次第だよ。満タンにしたいなら、レジで50ドルと言えば、少なく済んだ時はお釣りがもらえる。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたいことを言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. Which one's regular?",
+            "jp": "分かった。レギュラーはどれ？",
+            "note": "元の形: I've got it／聞こえ方: ガット／使う場面:分かったと伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "The green handle's regular. Don't use the black one unless you've got a diesel, because that'll wreck your engine and cost a fortune.",
+            "jp": "緑のハンドルがレギュラー。ディーゼルじゃなければ黒は使わないで、エンジンが壊れて大金がかかるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks, man. You saved me from making a really expensive mistake.",
+            "jp": "ありがとう。すごく高くつく失敗をしないで済んだよ。"
+          },
+          {
+            "sp": 1,
+            "en": "No worries. Happens to everybody.",
+            "jp": "気にしないで。誰でもあることだよ。"
+          }
+        ]
+      },
+      {
+        "t": "道に迷ってナビが壊れた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, the GPS says turn left, but there's a river there. Do you see a river?",
+            "jp": "えっと、ナビは左折って言うけど、そこに川があるんだ。川、見える？"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, no. That's not a road. That's a lake, Alex.",
+            "jp": "うん、違うね。あれは道じゃなくて、湖だよ、アレックス。"
+          },
+          {
+            "sp": 0,
+            "en": "Great. Now it's rerouting. 'Recalculating.' Again. It's been recalculating for ten minutes.",
+            "jp": "最高。また再検索中。『ルートを再計算中』。もう10分も再計算してる。"
+          },
+          {
+            "sp": 1,
+            "en": "Gimme the phone. I'll just use the map app and zoom in, because the signal keeps dropping, and honestly I don't trust this thing anymore.",
+            "jp": "スマホ貸して。地図アプリを拡大して見るよ、電波が途切れ続けてるし、正直もうこのナビは信用できない。",
+            "note": "元の形: give me／聞こえ方: ギミ／使う場面:ものを渡してもらう時"
+          },
+          {
+            "sp": 0,
+            "en": "There's a gas station a half mile back. Wanna ask for directions?",
+            "jp": "半マイル戻ったところにガソリンスタンドがある。道を聞く？",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+          },
+          {
+            "sp": 1,
+            "en": "Dude, nobody asks for directions anymore.",
+            "jp": "なあ、今どき誰も道なんて聞かないよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Nobody who's lost for forty-five minutes has any pride left. Turn around, and I'll do the talking, okay? I'll be nice about it, I promise.",
+            "jp": "45分も迷ってたら、誰にもプライドなんて残ってないよ。引き返して。私が話すから、ね？優しく聞くって約束する。"
+          },
+          {
+            "sp": 1,
+            "en": "Fine. You win.",
+            "jp": "分かったよ。君の勝ち。"
+          }
+        ]
+      },
+      {
+        "t": "バスの乗り間違い",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, does this bus go to Union Station? I think I got on the wrong one.",
+            "jp": "すみません、このバスはユニオン駅に行きますか？乗り間違えたと思うんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Nope, this is the number nine. You want the twelve, and it stops across the street.",
+            "jp": "いいえ、これは9番です。12番に乗らないと。道の向こう側に止まります。"
+          },
+          {
+            "sp": 0,
+            "en": "Ugh, okay. Can I get off here, or do I need to wait until the next stop, because I'm already running pretty late for work?",
+            "jp": "うわあ、分かりました。ここで降りられますか、次の停留所まで待つ必要がありますか？もう仕事にかなり遅れそうなんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Next stop's two blocks up, so you might as well stay on, and then just walk back the other way once you get off.",
+            "jp": "次の停留所は2ブロック先なので、乗ったままの方がいいですよ。降りたら反対方向へ歩いて戻ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "Do I have to pay again for the other bus?",
+            "jp": "別のバスにまた払わないといけませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "If you swipe your card within two hours, it counts as a transfer, so it's free.",
+            "jp": "2時間以内にカードをタッチすれば乗り換え扱いになるので、無料です。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a relief. Thanks, ma'am.",
+            "jp": "ほっとしました。ありがとうございます。"
+          },
+          {
+            "sp": 1,
+            "en": "No problem. Happens all the time, hon.",
+            "jp": "いいのよ。しょっちゅうあることだから。"
+          }
+        ]
+      },
+      {
+        "t": "警察署で盗難届",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Good afternoon. I'd like to report a stolen bike.",
+            "jp": "こんにちは。自転車の盗難を届けたいのですが。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Have a seat. When and where did it happen?",
+            "jp": "どうぞ座ってください。いつ、どこで起きましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "Last night, outside the library. I locked it to the rack at six, and when I came out at nine, the lock was cut and the bike was gone.",
+            "jp": "昨夜、図書館の外です。6時にラックに鍵をかけて、9時に出たら鍵が切られて、自転車がなくなっていました。"
+          },
+          {
+            "sp": 1,
+            "en": "Do you have the serial number, or a photo of the bike?",
+            "jp": "シリアル番号か、自転車の写真はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "I've got a photo, but not the serial number. It's a blue road bike, kinda scratched up on the left side.",
+            "jp": "写真はありますが、シリアル番号はありません。青いロードバイクで、左側にちょっとキズがあります。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ぼかして言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. I'll file the report, but honestly, the chances of recovery aren't great without a serial number, so check online marketplaces too.",
+            "jp": "分かりました。届出は受理しますが、正直、シリアル番号がないと見つかる可能性は高くないので、ネットのフリマも見てみてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Understood. Will I get a copy of the report for my insurance?",
+            "jp": "分かりました。保険用に、報告書の写しはもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, ma'am. You'll get a case number now, and the full copy by email soon.",
+            "jp": "はい。今受付番号をお渡しして、全文の写しは後ほどメールします。"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 {
-"updated": 1793612523981,
+"updated": 1793612602967,
 "packs": [
 {
 "id": "airport-0001",
@@ -464,6 +464,14 @@
 "count": 50,
 "situation": "campus",
 "sname": "学校・留学・面接"
+},
+{
+"id": "traffic-1101",
+"file": "traffic-1101.json",
+"ver": 1,
+"count": 50,
+"situation": "traffic",
+"sname": "警察・車・交通"
 }
 ]
 }

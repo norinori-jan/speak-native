@@ -3512,7 +3512,8 @@ function loadPackagedConversation(){
   {id:'wellness',file:'wellness-0601.json'},
   {id:'wellness2',file:'wellness-0602.json'},
   {id:'hobbyfit',file:'hobbyfit-0701.json'},
-  {id:'campus',file:'campus-1201.json'}
+  {id:'campus',file:'campus-1201.json'},
+  {id:'traffic',file:'traffic-1101.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

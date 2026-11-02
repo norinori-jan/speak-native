@@ -1,0 +1,386 @@
+{
+  "app": "phrase-pack",
+  "id": "traffic-1101",
+  "ver": 1,
+  "situation": "traffic",
+  "sname": "警察・車・交通",
+  "icon": "🚓",
+  "level": 3,
+  "title": "警察・車・交通の口語表現",
+  "items": [
+    {
+      "id": "traffic-1101-001",
+      "en": "Hey, officer, was I really going that fast?",
+      "jp": "ねえお巡りさん、そんなに速かったですか？",
+      "speak": "Hey, officer, was I really going that fast?",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-002",
+      "en": "Sir, license and registration, please.",
+      "jp": "お客様、免許証と車検証をお願いします。",
+      "speak": "Sir, license and registration, please.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-003",
+      "en": "Ma'am, step out of the car, please.",
+      "jp": "お客様、車から降りてください。",
+      "speak": "Ma'am, step out of the car, please.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-004",
+      "en": "Buddy, you're blocking the driveway.",
+      "jp": "おい、車庫の前をふさいでるよ。",
+      "speak": "Buddy, you're blocking the driveway.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-005",
+      "en": "Dude, you're gonna get a ticket parking there.",
+      "jp": "なあ、そこに駐めたら切符を切られるよ。",
+      "speak": "Dude, you're gonna get a ticket parking there.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:忠告する時"
+    },
+    {
+      "id": "traffic-1101-006",
+      "en": "Man, I didn't even see the sign.",
+      "jp": "うわ、標識なんか全然見えなかった。",
+      "speak": "Man, I didn't even see the sign.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-007",
+      "en": "Hey, Alex, you good? That was a close one.",
+      "jp": "ねえアレックス、大丈夫？危なかったね。",
+      "speak": "Hey, Alex, you good? That was a close one.",
+      "say": [],
+      "note": "元の形: are you good／聞こえ方: ユー グッド／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "traffic-1101-008",
+      "en": "Boss, the rental's due back by noon.",
+      "jp": "ボス、レンタカーは正午までに返却です。",
+      "speak": "Boss, the rental's due back by noon.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-009",
+      "en": "Babe, watch out for that truck!",
+      "jp": "ねえ、あのトラックに気をつけて！",
+      "speak": "Babe, watch out for that truck!",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-010",
+      "en": "Liz, c'mon, the light's about to change.",
+      "jp": "リズ、ほら、信号が変わるよ。",
+      "speak": "Liz, c'mon, the light's about to change.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:急かす時"
+    },
+    {
+      "id": "traffic-1101-011",
+      "en": "Sam, gimme a sec to check the map.",
+      "jp": "サム、地図を確認するからちょっと待って。",
+      "speak": "Sam, gimme a sec to check the map.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+    },
+    {
+      "id": "traffic-1101-012",
+      "en": "Lemme see your insurance card.",
+      "jp": "保険証を見せて。",
+      "speak": "Lemme see your insurance card.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:見せてと頼む時"
+    },
+    {
+      "id": "traffic-1101-013",
+      "en": "Gonna pull over right here.",
+      "jp": "ここで車を寄せるよ。",
+      "speak": "Gonna pull over right here.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからの行動を言う時"
+    },
+    {
+      "id": "traffic-1101-014",
+      "en": "Wanna swap numbers? Just in case.",
+      "jp": "連絡先を交換する？念のため。",
+      "speak": "Wanna swap numbers? Just in case.",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+    },
+    {
+      "id": "traffic-1101-015",
+      "en": "I gotta get gas before we leave.",
+      "jp": "出発前にガソリンを入れなきゃ。",
+      "speak": "I gotta get gas before we leave.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "traffic-1101-016",
+      "en": "We hafta turn left at the light.",
+      "jp": "信号で左折しなきゃ。",
+      "speak": "We hafta turn left at the light.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "traffic-1101-017",
+      "en": "I dunno. Did you see the sign?",
+      "jp": "分からないな。標識見た？",
+      "speak": "I dunno. Did you see the sign?",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "traffic-1101-018",
+      "en": "Beats me. The GPS is acting up.",
+      "jp": "さあね。ナビの調子が悪いんだ。",
+      "speak": "Beats me. The GPS is acting up.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+    },
+    {
+      "id": "traffic-1101-019",
+      "en": "No idea. I'm lost too.",
+      "jp": "分からない。僕も迷ってる。",
+      "speak": "No idea. I'm lost too.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-020",
+      "en": "Couldn't tell you. I'm not from around here.",
+      "jp": "分かりません。この辺りの者じゃないので。",
+      "speak": "Couldn't tell you. I'm not from around here.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-021",
+      "en": "Y'know, that exit's closed at night.",
+      "jp": "ほら、あの出口は夜は閉まってるんだ。",
+      "speak": "Y'know, that exit's closed at night.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:注意をひく時"
+    },
+    {
+      "id": "traffic-1101-022",
+      "en": "Kinda tricky parking here, huh?",
+      "jp": "ここの駐車はちょっと難しいね？",
+      "speak": "Kinda tricky parking here, huh?",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "traffic-1101-023",
+      "en": "Didja see that? He cut me off!",
+      "jp": "見た？あいつ割り込んできた！",
+      "speak": "Didja see that? He cut me off!",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:出来事を伝える時"
+    },
+    {
+      "id": "traffic-1101-024",
+      "en": "Whatcha doing out here so late?",
+      "jp": "こんな遅くに何をしてるの？",
+      "speak": "Whatcha doing out here so late?",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:軽く聞く時"
+    },
+    {
+      "id": "traffic-1101-025",
+      "en": "Ya think they'll tow it?",
+      "jp": "レッカー移動されると思う？",
+      "speak": "Ya think they'll tow it?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:予想を聞く時"
+    },
+    {
+      "id": "traffic-1101-026",
+      "en": "Got it. I'll move it right away.",
+      "jp": "分かりました。すぐ動かします。",
+      "speak": "Got it. I'll move it right away.",
+      "say": [],
+      "note": "元の形: I've got it／聞こえ方: ガット／使う場面:了解の時"
+    },
+    {
+      "id": "traffic-1101-027",
+      "en": "Mind if I park here for a sec?",
+      "jp": "ここにちょっと駐めてもいい？",
+      "speak": "Mind if I park here for a sec?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+    },
+    {
+      "id": "traffic-1101-028",
+      "en": "Any luck finding a spot?",
+      "jp": "駐車スペースは見つかった？",
+      "speak": "Any luck finding a spot?",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-029",
+      "en": "Need a lift? I'm heading that way.",
+      "jp": "送ろうか？そっちに行くところだから。",
+      "speak": "Need a lift? I'm heading that way.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-030",
+      "en": "Running late. Traffic's a mess.",
+      "jp": "遅れてる。渋滞がひどくて。",
+      "speak": "Running late. Traffic's a mess.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-031",
+      "en": "Sounds good. I'll meet you at the garage.",
+      "jp": "いいね。駐車場で会おう。",
+      "speak": "Sounds good. I'll meet you at the garage.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-032",
+      "en": "No can do. The road's closed.",
+      "jp": "それは無理だね。道が通行止めだ。",
+      "speak": "No can do. The road's closed.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-033",
+      "en": "Long story short, I missed the bus.",
+      "jp": "要するに、バスに乗り遅れたんだ。",
+      "speak": "Long story short, I missed the bus.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-034",
+      "en": "Look, I'm just trying to get home.",
+      "jp": "いいかい、僕は家に帰りたいだけなんだ。",
+      "speak": "Look, I'm just trying to get home.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-035",
+      "en": "I mean, it's only a small dent.",
+      "jp": "つまり、小さなへこみだけだよ。",
+      "speak": "I mean, it's only a small dent.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-036",
+      "en": "Wait, what? They towed my car?",
+      "jp": "待って、何？車をレッカーされたの？",
+      "speak": "Wait, what? They towed my car?",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-037",
+      "en": "Say again? The engine's too loud.",
+      "jp": "もう一度言って？エンジンの音がうるさくて。",
+      "speak": "Say again? The engine's too loud.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-038",
+      "en": "Just talk normally. I'm not the police.",
+      "jp": "普通に話して。私は警察じゃないよ。",
+      "speak": "Just talk normally. I'm not the police.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-039",
+      "en": "Chill. It's just a parking ticket.",
+      "jp": "落ち着いて。ただの駐車違反の切符だよ。",
+      "speak": "Chill. It's just a parking ticket.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-040",
+      "en": "Relax, it's me. Don't 'officer' me.",
+      "jp": "気楽にして、私だよ。『お巡りさん』なんて呼ばなくていい。",
+      "speak": "Relax, it's me. Don't 'officer' me.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-041",
+      "en": "Say it like a human, not a manual.",
+      "jp": "説明書じゃなくて、人間らしく言ってよ。",
+      "speak": "Say it like a human, not a manual.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-042",
+      "en": "Ain't no way I'm paying that fine.",
+      "jp": "その罰金を払うなんてあり得ないよ。",
+      "speak": "Ain't no way I'm paying that fine.",
+      "say": [],
+      "note": "元の形: there is no／聞こえ方: エイント／使う場面:くだけて否定する時"
+    },
+    {
+      "id": "traffic-1101-043",
+      "en": "I'd appeal, 'cause the sign was hidden.",
+      "jp": "標識が隠れてたから、異議を申し立てるよ。",
+      "speak": "I'd appeal, 'cause the sign was hidden.",
+      "say": [],
+      "note": "元の形: because／聞こえ方: コーズ／使う場面:理由を軽く添える時"
+    },
+    {
+      "id": "traffic-1101-044",
+      "en": "Hey, Dana, don't sweat it. It happens.",
+      "jp": "ねえダナ、気にしないで。よくあることだよ。",
+      "speak": "Hey, Dana, don't sweat it. It happens.",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-045",
+      "en": "C'mon, just give it a shot.",
+      "jp": "ほら、やってみなよ。",
+      "speak": "C'mon, just give it a shot.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:背中を押す時"
+    },
+    {
+      "id": "traffic-1101-046",
+      "en": "Where'd you park? I can't find the car.",
+      "jp": "どこに駐めたの？車が見つからない。",
+      "speak": "Where'd you park? I can't find the car.",
+      "say": [],
+      "note": "元の形: where did／聞こえ方: ウェアド／使う場面:場所を聞く時"
+    },
+    {
+      "id": "traffic-1101-047",
+      "en": "What'd the officer say?",
+      "jp": "お巡りさんは何て言ってた？",
+      "speak": "What'd the officer say?",
+      "say": [],
+      "note": "元の形: what did／聞こえ方: ワラド／使う場面:内容を聞く時"
+    },
+    {
+      "id": "traffic-1101-048",
+      "en": "How'd you get home so fast?",
+      "jp": "どうやってそんなに早く帰ったの？",
+      "speak": "How'd you get home so fast?",
+      "say": [],
+      "note": "元の形: how did／聞こえ方: ハウド／使う場面:方法を聞く時"
+    },
+    {
+      "id": "traffic-1101-049",
+      "en": "Where's the nearest gas station?",
+      "jp": "一番近いガソリンスタンドはどこ？",
+      "speak": "Where's the nearest gas station?",
+      "say": []
+    },
+    {
+      "id": "traffic-1101-050",
+      "en": "Hey, Maya, can you drive? I'm beat.",
+      "jp": "ねえマヤ、運転できる？くたくたなんだ。",
+      "speak": "Hey, Maya, can you drive? I'm beat.",
+      "say": []
+    }
+  ]
+}
