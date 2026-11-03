@@ -1,5 +1,5 @@
 {
-"updated": 1793700931186,
+"updated": 1793701004573,
 "packs": [
 {
 "id": "airport-0001",
@@ -520,6 +520,14 @@
 "count": 50,
 "situation": "traveladv",
 "sname": "旅行先トラブル・応用編"
+},
+{
+"id": "aidevtalk-1701",
+"file": "aidevtalk-1701.json",
+"ver": 1,
+"count": 50,
+"situation": "aidevtalk",
+"sname": "AI開発の現場・専門用語"
 }
 ]
 }

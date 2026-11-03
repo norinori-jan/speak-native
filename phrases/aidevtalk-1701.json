@@ -1,0 +1,377 @@
+{
+  "app": "phrase-pack",
+  "id": "aidevtalk-1701",
+  "ver": 1,
+  "situation": "aidevtalk",
+  "sname": "AI開発の現場・専門用語",
+  "icon": "🧪",
+  "level": 4,
+  "title": "AI開発の現場の会話（専門用語・口語）",
+  "items": [
+    {
+      "id": "aidevtalk-1701-001",
+      "en": "The fine-tuning run crashed overnight, and I'm still digging into why.",
+      "jp": "ファインチューニングが夜中に落ちて、まだ原因を調べています。",
+      "speak": "The fine-tuning run crashed overnight, and I'm still digging into why.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-002",
+      "en": "The loss spiked to NaN, and then everything just died.",
+      "jp": "損失がNaNに跳ね上がって、そのまま全部止まった。",
+      "speak": "The loss spiked to NaN, and then everything just died.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-003",
+      "en": "That smells like a learning rate problem. Roll it back.",
+      "jp": "それは学習率の問題の臭いがする。元に戻して。",
+      "speak": "That smells like a learning rate problem. Roll it back.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-004",
+      "en": "We can resume from the checkpoint, so we only lose a couple of hours.",
+      "jp": "チェックポイントから再開できるから、数時間しか失わない。",
+      "speak": "We can resume from the checkpoint, so we only lose a couple of hours.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-005",
+      "en": "The new model beat the baseline by four points on the benchmark.",
+      "jp": "新しいモデルはベンチマークでベースラインを4ポイント上回った。",
+      "speak": "The new model beat the baseline by four points on the benchmark.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-006",
+      "en": "Headline accuracy looks better, but the hallucination rate went up.",
+      "jp": "見かけの精度は良いが、ハルシネーション率は上がった。",
+      "speak": "Headline accuracy looks better, but the hallucination rate went up.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-007",
+      "en": "Is it possible the test set leaked into the training data?",
+      "jp": "テストセットが学習データに漏れた可能性はある？",
+      "speak": "Is it possible the test set leaked into the training data?",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-008",
+      "en": "Dedupe the data first, and rerun the eval on the clean split.",
+      "jp": "まずデータの重複を取り除いて、きれいな分割で評価をやり直そう。",
+      "speak": "Dedupe the data first, and rerun the eval on the clean split.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-009",
+      "en": "Let's add a held-out set that nobody's allowed to touch.",
+      "jp": "誰も触れないホールドアウトセットを足そう。",
+      "speak": "Let's add a held-out set that nobody's allowed to touch.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-010",
+      "en": "Log every eval run with the exact data version, so we can reproduce it.",
+      "jp": "再現できるように、評価の実行ごとに正確なデータのバージョンを記録しよう。",
+      "speak": "Log every eval run with the exact data version, so we can reproduce it.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-011",
+      "en": "I haven't tuned the chunk size yet. It was just the first thing that worked.",
+      "jp": "チャンクサイズはまだ調整してない。最初にうまくいったのがそれだっただけ。",
+      "speak": "I haven't tuned the chunk size yet. It was just the first thing that worked.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-012",
+      "en": "Try fifty tokens of overlap, so a sentence doesn't get cut in half.",
+      "jp": "50トークンの重なりを試して。文が半分に切られないように。",
+      "speak": "Try fifty tokens of overlap, so a sentence doesn't get cut in half.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-013",
+      "en": "Once we pass a million documents, you're gonna want an approximate nearest neighbor index.",
+      "jp": "100万件を超えたら、近似最近傍のインデックスがほしくなるよ。",
+      "speak": "Once we pass a million documents, you're gonna want an approximate nearest neighbor index.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:予想を言う時"
+    },
+    {
+      "id": "aidevtalk-1701-014",
+      "en": "A reranker cuts irrelevant context and reduces hallucinations.",
+      "jp": "リランカーは無関係なコンテキストを削って、ハルシネーションを減らす。",
+      "speak": "A reranker cuts irrelevant context and reduces hallucinations.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-015",
+      "en": "Put it behind a flag, so we can A/B it.",
+      "jp": "フラグの後ろに置いて、A/Bテストできるようにして。",
+      "speak": "Put it behind a flag, so we can A/B it.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-016",
+      "en": "Flip the order. The model pays more attention to the start of the prompt.",
+      "jp": "順序を逆にして。モデルはプロンプトの冒頭により注意を払う。",
+      "speak": "Flip the order. The model pays more attention to the start of the prompt.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-017",
+      "en": "P95 latency went from eight hundred milliseconds to six seconds.",
+      "jp": "P95レイテンシが800ミリ秒から6秒に跳ね上がった。",
+      "speak": "P95 latency went from eight hundred milliseconds to six seconds.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-018",
+      "en": "Roll back first and investigate second. Don't make customers wait.",
+      "jp": "まずロールバック、調査は後。お客さんを待たせないで。",
+      "speak": "Roll back first and investigate second. Don't make customers wait.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-019",
+      "en": "Use the canary pipeline, so we only flip ten percent at a time.",
+      "jp": "カナリアのパイプラインを使って、一度に10%だけ切り替えて。",
+      "speak": "Use the canary pipeline, so we only flip ten percent at a time.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-020",
+      "en": "The batch size is still set for the old model, so we're getting OOM retries.",
+      "jp": "バッチサイズがまだ古いモデル向けで、OOMのリトライが起きてる。",
+      "speak": "The batch size is still set for the old model, so we're getting OOM retries.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-021",
+      "en": "Fix the config in staging before we try again.",
+      "jp": "もう一度試す前に、ステージングで設定を直そう。",
+      "speak": "Fix the config in staging before we try again.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-022",
+      "en": "We need a postmortem on Friday. No blame, just what we change.",
+      "jp": "金曜にポストモーテムが必要だ。責任追及なしで、何を変えるかだけ。",
+      "speak": "We need a postmortem on Friday. No blame, just what we change.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-023",
+      "en": "They broke the system prompt in under ten minutes.",
+      "jp": "10分足らずでシステムプロンプトを破られた。",
+      "speak": "They broke the system prompt in under ten minutes.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-024",
+      "en": "A blocklist alone isn't gonna cut it. We need layered defenses.",
+      "jp": "ブロックリストだけでは足りない。多層の防御が必要だ。",
+      "speak": "A blocklist alone isn't gonna cut it. We need layered defenses.",
+      "say": [],
+      "note": "元の形: is not going to／聞こえ方: ゴナ／使う場面:対策が足りないと言う時"
+    },
+    {
+      "id": "aidevtalk-1701-025",
+      "en": "Separate the user's text from the instructions, so it's treated as data.",
+      "jp": "ユーザーの文章を指示と分けて、データとして扱わせる。",
+      "speak": "Separate the user's text from the instructions, so it's treated as data.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-026",
+      "en": "Limit which tools the assistant can call, so the damage stays small.",
+      "jp": "アシスタントが呼べるツールを制限して、被害を小さくする。",
+      "speak": "Limit which tools the assistant can call, so the damage stays small.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-027",
+      "en": "Run a classifier on the output to catch leaked secrets.",
+      "jp": "出力に分類器をかけて、機密の漏えいを捕まえる。",
+      "speak": "Run a classifier on the output to catch leaked secrets.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-028",
+      "en": "Shall we pause the public beta until the fix is in?",
+      "jp": "修正が入るまで、公開ベータを止めませんか？",
+      "speak": "Shall we pause the public beta until the fix is in?",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-029",
+      "en": "Lemme check the logs. Something's off with the token count.",
+      "jp": "ログを確認させて。トークン数がどこかおかしい。",
+      "speak": "Lemme check the logs. Something's off with the token count.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+    },
+    {
+      "id": "aidevtalk-1701-030",
+      "en": "Gimme a minute. I'm rerunning the eval on the new split.",
+      "jp": "ちょっと待って。新しい分割で評価をやり直してる。",
+      "speak": "Gimme a minute. I'm rerunning the eval on the new split.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+    },
+    {
+      "id": "aidevtalk-1701-031",
+      "en": "Gonna kick off the training job tonight, after the cluster's back up.",
+      "jp": "クラスターが復旧したら、今夜、学習ジョブを始めるよ。",
+      "speak": "Gonna kick off the training job tonight, after the cluster's back up.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "aidevtalk-1701-032",
+      "en": "Wanna pair on this after stand-up? It's kinda tricky.",
+      "jp": "スタンドアップの後、一緒にやる？ちょっと厄介なんだ。",
+      "speak": "Wanna pair on this after stand-up? It's kinda tricky.",
+      "say": [],
+      "note": "元の形: do you want to／kind of／聞こえ方: ワナ／カインダ／使う場面:手を貸す申し出をする時"
+    },
+    {
+      "id": "aidevtalk-1701-033",
+      "en": "I gotta double-check the data split before I trust these numbers.",
+      "jp": "この数字を信じる前に、データの分割を再確認しなきゃ。",
+      "speak": "I gotta double-check the data split before I trust these numbers.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "aidevtalk-1701-034",
+      "en": "We hafta freeze the dataset by Friday, or the run won't finish.",
+      "jp": "金曜までにデータセットを凍結しなきゃ、実行が終わらない。",
+      "speak": "We hafta freeze the dataset by Friday, or the run won't finish.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:期限を言う時"
+    },
+    {
+      "id": "aidevtalk-1701-035",
+      "en": "Dunno. It worked fine on my machine, but fails in staging.",
+      "jp": "さあ。自分のマシンでは動いたのに、ステージングでは失敗する。",
+      "speak": "Dunno. It worked fine on my machine, but fails in staging.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "aidevtalk-1701-036",
+      "en": "Beats me why the loss plateaus. The data looks clean.",
+      "jp": "なぜ損失が横ばいになるのか分からない。データはきれいなのに。",
+      "speak": "Beats me why the loss plateaus. The data looks clean.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "aidevtalk-1701-037",
+      "en": "Ya think it's overfitting? The val loss keeps climbing.",
+      "jp": "過学習だと思う？検証損失が上がり続けてる。",
+      "speak": "Ya think it's overfitting? The val loss keeps climbing.",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "aidevtalk-1701-038",
+      "en": "Didja see the new paper on quantization? It's wild.",
+      "jp": "量子化の新しい論文見た？すごいよ。",
+      "speak": "Didja see the new paper on quantization? It's wild.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:出来事を伝える時"
+    },
+    {
+      "id": "aidevtalk-1701-039",
+      "en": "Whatcha using for the vector DB? We're hitting latency walls.",
+      "jp": "ベクトルDBは何を使ってるの？レイテンシの壁にぶつかってて。",
+      "speak": "Whatcha using for the vector DB? We're hitting latency walls.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "aidevtalk-1701-040",
+      "en": "Y'know, the model's only as good as the labels.",
+      "jp": "ほら、モデルはラベルの質以上にはならないんだ。",
+      "speak": "Y'know, the model's only as good as the labels.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:念を押す時"
+    },
+    {
+      "id": "aidevtalk-1701-041",
+      "en": "Long story short, the bug was in the tokenizer, not the model.",
+      "jp": "要するに、バグはモデルじゃなくてトークナイザにあった。",
+      "speak": "Long story short, the bug was in the tokenizer, not the model.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-042",
+      "en": "Look, I'm not saying the model's bad. I'm saying the eval is flawed.",
+      "jp": "いいかい、モデルが悪いと言ってるんじゃない。評価に欠陥があると言ってるんだ。",
+      "speak": "Look, I'm not saying the model's bad. I'm saying the eval is flawed.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-043",
+      "en": "I mean, four points is good, but is it statistically significant?",
+      "jp": "つまり、4ポイントはいいけど、統計的に有意なの？",
+      "speak": "I mean, four points is good, but is it statistically significant?",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-044",
+      "en": "Wait, what? The checkpoint's corrupted?",
+      "jp": "待って、何？チェックポイントが壊れてるの？",
+      "speak": "Wait, what? The checkpoint's corrupted?",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-045",
+      "en": "Just talk normally. Skip the buzzwords, please.",
+      "jp": "普通に話して。流行り言葉は抜きでお願い。",
+      "speak": "Just talk normally. Skip the buzzwords, please.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-046",
+      "en": "No can do. The cluster's down for maintenance until four.",
+      "jp": "それは無理だね。クラスターは4時までメンテナンスで止まってる。",
+      "speak": "No can do. The cluster's down for maintenance until four.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-047",
+      "en": "Sounds good. Let's ship it behind a flag and watch the metrics.",
+      "jp": "いいね。フラグの後ろで出して、指標を見よう。",
+      "speak": "Sounds good. Let's ship it behind a flag and watch the metrics.",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-048",
+      "en": "C'mon, let's just rerun it and see.",
+      "jp": "ほら、とにかくもう一度走らせて見てみよう。",
+      "speak": "C'mon, let's just rerun it and see.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す時"
+    },
+    {
+      "id": "aidevtalk-1701-049",
+      "en": "Hey, Dana, can you kick off the canary deploy?",
+      "jp": "ねえダナ、カナリアデプロイを始めてくれる？",
+      "speak": "Hey, Dana, can you kick off the canary deploy?",
+      "say": []
+    },
+    {
+      "id": "aidevtalk-1701-050",
+      "en": "Boss, the red team found a prompt injection hole.",
+      "jp": "ボス、レッドチームがプロンプトインジェクションの穴を見つけました。",
+      "speak": "Boss, the red team found a prompt injection hole.",
+      "say": []
+    }
+  ]
+}

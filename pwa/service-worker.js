@@ -1,5 +1,5 @@
 // Speak Native Service Worker
-const CACHE_VERSION = 'dei-pwa-v16';
+const CACHE_VERSION = 'dei-pwa-v17';
 const ASSETS = [
   './',
   './index.html',
@@ -33,7 +33,9 @@ const ASSETS = [
   './phrases/negoadv-1501.json',
   './conversations/negoadv-1501.json',
   './phrases/traveladv-1601.json',
-  './conversations/traveladv-1601.json'
+  './conversations/traveladv-1601.json',
+  './phrases/aidevtalk-1701.json',
+  './conversations/aidevtalk-1701.json'
 ];
 const OPTIONAL_ASSETS = [
   'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap'

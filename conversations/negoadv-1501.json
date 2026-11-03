@@ -51,13 +51,15 @@
           },
           {
             "sp": 1,
-            "en": "Hmm. If I can get that guarantee, I could absorb half of the overtime cost myself, so, four percent.",
-            "jp": "うーん。その保証をいただけるなら、残業費の半分は自社で吸収できるので、4%です。"
+            "en": "Hmm. If I can get that guarantee, I'm gonna absorb half of the overtime cost myself, so, four percent.",
+            "jp": "うーん。その保証をいただけるなら、残業費の半分は自社で吸収するので、4%です。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:引き受けると決める時"
           },
           {
             "sp": 0,
-            "en": "Four percent, and you ship by the twelfth, giving us a little buffer?",
-            "jp": "4%で、12日までに出荷して、少し余裕をもらえますか？"
+            "en": "Four percent, and you ship by the twelfth? Gimme a little buffer.",
+            "jp": "4%で、12日までに出荷。少し余裕をください。",
+            "note": "元の形: give me／聞こえ方: ギミ／使う場面:条件を求める時"
           },
           {
             "sp": 1,
@@ -102,8 +104,9 @@
           },
           {
             "sp": 0,
-            "en": "I'm listening.",
-            "jp": "聞いています。"
+            "en": "Whatcha got? I'm listening.",
+            "jp": "何かありますか？聞いています。",
+            "note": "元の形: what have you／聞こえ方: ワッチャ／使う場面:相手の提案を促す時"
           },
           {
             "sp": 1,
@@ -122,8 +125,9 @@
           },
           {
             "sp": 0,
-            "en": "Okay, I'll be honest, that's a point. Two days did worry me.",
-            "jp": "分かりました、正直、それは一理あります。2日は心配でした。"
+            "en": "Okay, I'll be honest, that kinda got me. Two days did worry me.",
+            "jp": "分かりました、正直、それは効きました。2日は心配でした。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり認める時"
           },
           {
             "sp": 1,
@@ -137,8 +141,9 @@
           },
           {
             "sp": 1,
-            "en": "I can do nine. That's as far as I can go.",
-            "jp": "9か月ならできます。それが限界です。"
+            "en": "I can do nine. That's as far as I'm gonna go.",
+            "jp": "9か月ならできます。それ以上は譲りません。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:限界を示す時"
           },
           {
             "sp": 0,
@@ -157,8 +162,9 @@
           },
           {
             "sp": 1,
-            "en": "Good catch. That was left out on purpose, since our fees are non-refundable once the work has started.",
-            "jp": "いい指摘です。わざと入れていません。作業が始まったら、弊社の料金は返金不可なので。"
+            "en": "Good catch. We left that out on purpose, y'know, since fees are non-refundable once the work's started.",
+            "jp": "いい指摘です。わざと入れていません。ほら、作業が始まったら料金は返金不可なので。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:補足を足す時"
           },
           {
             "sp": 0,
@@ -187,8 +193,9 @@
           },
           {
             "sp": 1,
-            "en": "Hmm. That could slow us down. Would a notification work instead of an approval?",
-            "jp": "うーん。それだと遅くなるかもしれません。承認の代わりに通知ではだめですか？"
+            "en": "Hmm, lemme think. A notification instead of an approval, would that work?",
+            "jp": "うーん、ちょっと考えさせて。承認の代わりに通知ではどうでしょう？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:考える時間をとる時"
           },
           {
             "sp": 0,
@@ -197,8 +204,9 @@
           },
           {
             "sp": 1,
-            "en": "Agreed. I'll mark up both changes and send you a clean copy by tonight.",
-            "jp": "合意です。両方の変更を反映して、今夜までにきれいな版を送ります。"
+            "en": "Agreed. Gonna mark up both changes and send you a clean copy by tonight.",
+            "jp": "合意です。両方の変更を反映して、今夜までにきれいな版を送ります。",
+            "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
           },
           {
             "sp": 0,
@@ -242,8 +250,9 @@
           },
           {
             "sp": 0,
-            "en": "Agreed. But I need more than an apology. I need something that tells my team you take this seriously.",
-            "jp": "同意します。ただ、謝罪以上のものが必要です。誠意を示すものがチームに必要なんです。"
+            "en": "Agreed. But I gotta have more than an apology. I need something that tells my team you take this seriously.",
+            "jp": "同意します。ただ、謝罪以上のものが必要です。誠意を示すものがチームに必要なんです。",
+            "note": "元の形: have got to／聞こえ方: ガラ／使う場面:必要条件を言う時"
           },
           {
             "sp": 1,
@@ -257,8 +266,9 @@
           },
           {
             "sp": 1,
-            "en": "A year is a lot, but I can see why. Give me an hour to check with my boss.",
-            "jp": "1年は大きいですが、理由は分かります。上司に確認するので1時間ください。"
+            "en": "A year is a lot, but I get it. Lemme check with my boss. Give me an hour.",
+            "jp": "1年は大きいですが、分かります。上司に確認させてください。1時間ください。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認すると言う時"
           },
           {
             "sp": 0,
@@ -302,8 +312,9 @@
           },
           {
             "sp": 1,
-            "en": "Sure. I'll leave a blank for the number and fill it in as soon as she starts.",
-            "jp": "もちろん。番号は空欄にして、彼女が着任したらすぐ埋めます。"
+            "en": "Sure. Gonna leave the number blank and fill it in as soon as she starts.",
+            "jp": "もちろん。番号は空欄にして、彼女が着任したらすぐ埋めます。",
+            "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
           },
           {
             "sp": 0,
@@ -322,8 +333,9 @@
           },
           {
             "sp": 1,
-            "en": "Agreed. Shall we shake on it?",
-            "jp": "同感です。握手しましょうか？"
+            "en": "Agreed. Wanna shake on it?",
+            "jp": "同感です。握手する？",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:軽く提案する時"
           },
           {
             "sp": 0,
