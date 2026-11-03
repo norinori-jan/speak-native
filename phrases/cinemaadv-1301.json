@@ -1,0 +1,381 @@
+{
+  "app": "phrase-pack",
+  "id": "cinemaadv-1301",
+  "ver": 1,
+  "situation": "cinemaadv",
+  "sname": "映画のワンシーン・応用編",
+  "icon": "🎬",
+  "level": 4,
+  "title": "映画のワンシーン・応用編",
+  "items": [
+    {
+      "id": "cinemaadv-1301-001",
+      "en": "Hey, I figured you'd be asleep by now, with the movers coming at seven.",
+      "jp": "ねえ、引っ越し業者が7時に来るから、もう寝てると思ってたよ。",
+      "speak": "Hey, I figured you'd be asleep by now, with the movers coming at seven.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-002",
+      "en": "Gimme a break. I've been doing this alone for two weeks.",
+      "jp": "勘弁してよ。2週間、一人でやってきたんだから。",
+      "speak": "Gimme a break. I've been doing this alone for two weeks.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:勘弁してと頼む時"
+    },
+    {
+      "id": "cinemaadv-1301-003",
+      "en": "Don't make it weird. I'm just saying it's okay to be scared.",
+      "jp": "変な空気にしないで。怖がっていいって言ってるだけだよ。",
+      "speak": "Don't make it weird. I'm just saying it's okay to be scared.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-004",
+      "en": "You're really gonna walk through those doors and leave me standing here?",
+      "jp": "本当にあのドアを通って、私をここに立たせたままにするの？",
+      "speak": "You're really gonna walk through those doors and leave me standing here?",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:驚きと不満を伝える時"
+    },
+    {
+      "id": "cinemaadv-1301-005",
+      "en": "It's not forever, y'know. It's two years, and we'll talk every single day.",
+      "jp": "永遠じゃないんだよ、ほら。2年だけだし、毎日話すよ。",
+      "speak": "It's not forever, y'know. It's two years, and we'll talk every single day.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:念を押す時"
+    },
+    {
+      "id": "cinemaadv-1301-006",
+      "en": "Probably. Now go, before I change my mind and chain myself to your suitcase.",
+      "jp": "たぶんね。さあ行って、気が変わってスーツケースに自分をつなぎとめる前に。",
+      "speak": "Probably. Now go, before I change my mind and chain myself to your suitcase.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-007",
+      "en": "Let's cut to the chase. Your quote's fifteen percent higher than the other bids.",
+      "jp": "単刀直入にいこう。御社の見積もりは、他の入札より15%高い。",
+      "speak": "Let's cut to the chase. Your quote's fifteen percent higher than the other bids.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-008",
+      "en": "Five isn't gonna cut it. Ten, and we shake hands right now.",
+      "jp": "5%では足りない。10%なら、今すぐ握手する。",
+      "speak": "Five isn't gonna cut it. Ten, and we shake hands right now.",
+      "say": [],
+      "note": "元の形: is not going to／聞こえ方: ゴナ／使う場面:断りを伝える時"
+    },
+    {
+      "id": "cinemaadv-1301-009",
+      "en": "Lemme step out and make a call. Give me five minutes.",
+      "jp": "席を外して電話させて。5分ください。",
+      "speak": "Lemme step out and make a call. Give me five minutes.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:席を外す前に"
+    },
+    {
+      "id": "cinemaadv-1301-010",
+      "en": "That's the absolute final offer, and I can't do any better without my boss.",
+      "jp": "それが本当に最終提案で、上司なしにはこれ以上できません。",
+      "speak": "That's the absolute final offer, and I can't do any better without my boss.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-011",
+      "en": "Can you put that in writing, including the warranty and the delivery date?",
+      "jp": "それを、保証と納期も含めて、書面にしてもらえますか？",
+      "speak": "Can you put that in writing, including the warranty and the delivery date?",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-012",
+      "en": "Mind if I sit here? Everywhere else is taken, and I've been on my feet all night.",
+      "jp": "ここに座ってもいい？ほかは全部埋まってて、夜通し立ちっぱなしなんだ。",
+      "speak": "Mind if I sit here? Everywhere else is taken, and I've been on my feet all night.",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+    },
+    {
+      "id": "cinemaadv-1301-013",
+      "en": "We'll let you know when we know. I swear I've heard that line a hundred times.",
+      "jp": "分かり次第お知らせします。その言葉は百回は聞いたよ。",
+      "speak": "We'll let you know when we know. I swear I've heard that line a hundred times.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-014",
+      "en": "I got two coffees, and I really only needed one. Here, take it.",
+      "jp": "コーヒーを2つ買ったけど、本当は1つで足りるんだ。どうぞ、受け取って。",
+      "speak": "I got two coffees, and I really only needed one. Here, take it.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-015",
+      "en": "Don't worry, they'll call you soon. They always do.",
+      "jp": "心配しないで、すぐ呼ばれるよ。いつもそうだから。",
+      "speak": "Don't worry, they'll call you soon. They always do.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-016",
+      "en": "Sorry to bother you this late. I'm from 4B, right below you.",
+      "jp": "遅くにすみません。真下の4Bの者です。",
+      "speak": "Sorry to bother you this late. I'm from 4B, right below you.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-017",
+      "en": "I'm not trying to start a fight, but there's a loud thumping every night around eleven.",
+      "jp": "けんかしたいわけじゃないんですが、毎晩11時ごろにドンドンと大きな音がするんです。",
+      "speak": "I'm not trying to start a fight, but there's a loud thumping every night around eleven.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-018",
+      "en": "Better to say something than stew about it for months, right?",
+      "jp": "何か月も悶々とするより、言った方がいいよね？",
+      "speak": "Better to say something than stew about it for months, right?",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-019",
+      "en": "Hey, if it's still loud, just knock, and we'll figure it out together.",
+      "jp": "もしまだうるさかったら、ノックして。一緒に考えよう。",
+      "speak": "Hey, if it's still loud, just knock, and we'll figure it out together.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-020",
+      "en": "Is that really you? Wow, it's been what, six years?",
+      "jp": "本当に君？わあ、もう何年ぶり、6年？",
+      "speak": "Is that really you? Wow, it's been what, six years?",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-021",
+      "en": "You look exactly the same. Liar, I've got twice as much gray hair.",
+      "jp": "全然変わってないですね。嘘つき、白髪は倍になったよ。",
+      "speak": "You look exactly the same. Liar, I've got twice as much gray hair.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-022",
+      "en": "I always said you were wasted in that cubicle, and honestly, I meant it.",
+      "jp": "君はあの小部屋にいるには惜しいといつも言ってたし、本気だったよ。",
+      "speak": "I always said you were wasted in that cubicle, and honestly, I meant it.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-023",
+      "en": "Let me buy you a coffee tomorrow. I'd love to hear the whole story.",
+      "jp": "明日コーヒーをおごらせて。一部始終を聞きたいんだ。",
+      "speak": "Let me buy you a coffee tomorrow. I'd love to hear the whole story.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:申し出る時"
+    },
+    {
+      "id": "cinemaadv-1301-024",
+      "en": "I'd hire you tomorrow, no questions asked.",
+      "jp": "明日にでも雇いますよ、質問なしで。",
+      "speak": "I'd hire you tomorrow, no questions asked.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-025",
+      "en": "Honestly, I didn't see that coming, and I'm still kinda in shock.",
+      "jp": "正直、それは予想してなくて、まだちょっとショックなんだ。",
+      "speak": "Honestly, I didn't see that coming, and I'm still kinda in shock.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "cinemaadv-1301-026",
+      "en": "Whatcha gonna do about it? You can't just ignore it.",
+      "jp": "それをどうするつもり？無視はできないよ。",
+      "speak": "Whatcha gonna do about it? You can't just ignore it.",
+      "say": [],
+      "note": "元の形: what are you going to／聞こえ方: ワッチャ ガナ／使う場面:行動を聞く時"
+    },
+    {
+      "id": "cinemaadv-1301-027",
+      "en": "Didja really think nobody would notice? Come on.",
+      "jp": "本当に誰も気づかないと思った？まさか。",
+      "speak": "Didja really think nobody would notice? Come on.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:問いただす時"
+    },
+    {
+      "id": "cinemaadv-1301-028",
+      "en": "I'm not gonna lie, I was kinda hoping you'd say no.",
+      "jp": "正直に言うと、断ってくれないかなって少し思ってたんだ。",
+      "speak": "I'm not gonna lie, I was kinda hoping you'd say no.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-029",
+      "en": "We hafta talk about what happened last night, and I mean right now.",
+      "jp": "昨夜のことを話さなきゃ。今すぐ。",
+      "speak": "We hafta talk about what happened last night, and I mean right now.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:話をうながす時"
+    },
+    {
+      "id": "cinemaadv-1301-030",
+      "en": "I gotta be honest with you. I don't think this is working.",
+      "jp": "正直に言わなきゃ。これはうまくいってないと思う。",
+      "speak": "I gotta be honest with you. I don't think this is working.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:本音を言う時"
+    },
+    {
+      "id": "cinemaadv-1301-031",
+      "en": "Y'know what? Forget it. I'm done arguing about this.",
+      "jp": "いいよもう。忘れて。この件で言い合うのは終わりにする。",
+      "speak": "Y'know what? Forget it. I'm done arguing about this.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:話を打ち切る時"
+    },
+    {
+      "id": "cinemaadv-1301-032",
+      "en": "Say what you want, but I'm not changing my mind.",
+      "jp": "好きに言えばいいけど、気は変わらないよ。",
+      "speak": "Say what you want, but I'm not changing my mind.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-033",
+      "en": "Ya think I wanted this? I had no choice, man.",
+      "jp": "僕がこれを望んだと思う？選択肢がなかったんだよ。",
+      "speak": "Ya think I wanted this? I had no choice, man.",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:反論する時"
+    },
+    {
+      "id": "cinemaadv-1301-034",
+      "en": "Long story short, we lost the deal, and now everybody's panicking.",
+      "jp": "要するに、契約を落として、みんなパニックになってる。",
+      "speak": "Long story short, we lost the deal, and now everybody's panicking.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-035",
+      "en": "It's not that I don't care. It's that I don't know what to say.",
+      "jp": "気にしてないわけじゃない。何を言えばいいか分からないだけ。",
+      "speak": "It's not that I don't care. It's that I don't know what to say.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-036",
+      "en": "Wait a second. You're telling me they knew all along?",
+      "jp": "ちょっと待って。みんな最初から知ってたって言うの？",
+      "speak": "Wait a second. You're telling me they knew all along?",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-037",
+      "en": "Look, I'm not the bad guy here. I'm just trying to help.",
+      "jp": "いいかい、僕は悪者じゃない。ただ助けようとしてるだけだ。",
+      "speak": "Look, I'm not the bad guy here. I'm just trying to help.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-038",
+      "en": "Beats me why he'd say that. He's never been like this.",
+      "jp": "なんで彼があんなことを言うのか分からない。今までこんなことなかったのに。",
+      "speak": "Beats me why he'd say that. He's never been like this.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "cinemaadv-1301-039",
+      "en": "Couldn't tell you. I stopped asking questions a long time ago.",
+      "jp": "何とも言えないな。質問するのはとっくにやめたよ。",
+      "speak": "Couldn't tell you. I stopped asking questions a long time ago.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-040",
+      "en": "Not gonna happen. I've said no three times already.",
+      "jp": "それはない。もう3回断ってるんだ。",
+      "speak": "Not gonna happen. I've said no three times already.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ノット ガナ／使う場面:きっぱり断る時"
+    },
+    {
+      "id": "cinemaadv-1301-041",
+      "en": "C'mon, give me a chance to explain before you hang up.",
+      "jp": "ほら、電話を切る前に説明させてよ。",
+      "speak": "C'mon, give me a chance to explain before you hang up.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:食い下がる時"
+    },
+    {
+      "id": "cinemaadv-1301-042",
+      "en": "Hey, Maya, take a breath. Whatever it is, we'll sort it out.",
+      "jp": "ねえマヤ、深呼吸して。何があっても、一緒に片づけよう。",
+      "speak": "Hey, Maya, take a breath. Whatever it is, we'll sort it out.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-043",
+      "en": "Sir, with all due respect, I think there's been a misunderstanding.",
+      "jp": "お言葉ですが、誤解があったと思います。",
+      "speak": "Sir, with all due respect, I think there's been a misunderstanding.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-044",
+      "en": "Boss, you're gonna want to see this before the meeting starts.",
+      "jp": "ボス、会議が始まる前にこれを見てほしいです。",
+      "speak": "Boss, you're gonna want to see this before the meeting starts.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:見るよう促す時"
+    },
+    {
+      "id": "cinemaadv-1301-045",
+      "en": "Dude, I can't believe you actually pulled it off.",
+      "jp": "なあ、本当にやり遂げたなんて信じられないよ。",
+      "speak": "Dude, I can't believe you actually pulled it off.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-046",
+      "en": "Babe, we've talked about this. I'm not going anywhere.",
+      "jp": "ねえ、この話はしたでしょ。私はどこにも行かないよ。",
+      "speak": "Babe, we've talked about this. I'm not going anywhere.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-047",
+      "en": "Man, I wish I'd said something sooner. It's too late now.",
+      "jp": "うわ、もっと早く言っておけばよかった。もう遅いけど。",
+      "speak": "Man, I wish I'd said something sooner. It's too late now.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-048",
+      "en": "Buddy, I'm only gonna say this once, so listen carefully.",
+      "jp": "おい、一度しか言わないから、よく聞いて。",
+      "speak": "Buddy, I'm only gonna say this once, so listen carefully.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:念を押す時"
+    },
+    {
+      "id": "cinemaadv-1301-049",
+      "en": "Say again? I think I missed the part about the deadline.",
+      "jp": "もう一度言って？締め切りの部分を聞き逃したみたい。",
+      "speak": "Say again? I think I missed the part about the deadline.",
+      "say": []
+    },
+    {
+      "id": "cinemaadv-1301-050",
+      "en": "Just talk normally. You don't have to sound like a lawyer.",
+      "jp": "普通に話して。弁護士みたいに話さなくていいよ。",
+      "speak": "Just talk normally. You don't have to sound like a lawyer.",
+      "say": []
+    }
+  ]
+}

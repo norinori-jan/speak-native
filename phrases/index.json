@@ -1,5 +1,5 @@
 {
-"updated": 1793612900015,
+"updated": 1793700822997,
 "packs": [
 {
 "id": "airport-0001",
@@ -488,6 +488,14 @@
 "count": 50,
 "situation": "newstalk",
 "sname": "ニュース・雑談・SNS"
+},
+{
+"id": "cinemaadv-1301",
+"file": "cinemaadv-1301.json",
+"ver": 1,
+"count": 50,
+"situation": "cinemaadv",
+"sname": "映画のワンシーン・応用編"
 }
 ]
 }

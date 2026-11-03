@@ -1,0 +1,465 @@
+[
+  {
+    "id": "cinemaadv",
+    "ic": "🎬",
+    "n": "映画のワンシーン・応用編",
+    "hint": "long, emotional movie-style scenes with fast reduced speech, idioms, and real turning points",
+    "level": 4,
+    "keywords": [
+      "drama",
+      "advanced",
+      "long dialogue"
+    ],
+    "d": [
+      {
+        "t": "引っ越し前夜の兄と妹",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, you're still up? I figured you'd be asleep by now, with the movers coming at seven.",
+            "jp": "まだ起きてたの？引っ越し業者が7時に来るから、もう寝てると思ってた。"
+          },
+          {
+            "sp": 1,
+            "en": "Can't sleep. Every time I close my eyes, I start counting the boxes I forgot to label.",
+            "jp": "眠れない。目を閉じるたびに、ラベルを貼り忘れた箱を数え始めちゃうんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! That's what you get for packing the kitchen in one afternoon.",
+            "jp": "はは！台所を午後だけで詰めた報いだね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, yeah. Gimme a break. I've been doing this alone for two weeks.",
+            "jp": "はいはい。勘弁してよ。2週間、一人でやってきたんだから。",
+            "note": "元の形: give me／聞こえ方: ギミ／使う場面:勘弁してと頼む時"
+          },
+          {
+            "sp": 0,
+            "en": "You didn't have to. I told you I'd help, and you kept saying, 'I've got it, I've got it.'",
+            "jp": "そんな必要なかったのに。手伝うって言ったら、『大丈夫、大丈夫』って言い続けてたよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Because if I let you help, then it becomes real, y'know? Like, I'm actually leaving this house, and nothing's gonna be the same after tomorrow.",
+            "jp": "手伝ってもらったら、それが現実になるから。ほら、本当にこの家を出て、明日からは何も同じじゃなくなるんだって。",
+            "note": "元の形: you know／going to／聞こえ方: ヤノウ／ガナ／使う場面:本音を打ち明ける時"
+          },
+          {
+            "sp": 0,
+            "en": "Oh. So that's what this is about.",
+            "jp": "ああ。そういうことだったんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Don't make it weird.",
+            "jp": "変な空気にしないでよ。"
+          },
+          {
+            "sp": 0,
+            "en": "I'm not. I'm just saying, it's okay to be scared. I was a wreck when I moved out, and I pretended I wasn't, which only made it worse.",
+            "jp": "違うよ。怖がっていいって言ってるだけ。私も家を出た時はボロボロで、平気なふりをしたら余計にひどくなった。"
+          },
+          {
+            "sp": 1,
+            "en": "You? Mrs. Always-Has-A-Plan?",
+            "jp": "あなたが？いつも計画ありきの人が？"
+          },
+          {
+            "sp": 0,
+            "en": "Me. I cried in the parking lot of a grocery store because I couldn't find the cereal I liked. That was the real breakdown, not the move itself.",
+            "jp": "私よ。好きなシリアルが見つからなくて、スーパーの駐車場で泣いたの。本当に崩れたのは、引っ越し自体じゃなくてそれだった。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, that's actually kinda funny.",
+            "jp": "それ、ちょっと笑えるな。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり認める時"
+          },
+          {
+            "sp": 0,
+            "en": "Right? Look, call me whenever it gets too quiet. Day or night. I mean it.",
+            "jp": "でしょ？静かすぎて辛くなったらいつでも電話して。昼でも夜でも。本気だよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks, sis. Now go to bed. Some of us have heavy lifting to do.",
+            "jp": "ありがとう、姉さん。もう寝なよ。重い物を運ぶ人もいるんだから。"
+          }
+        ]
+      },
+      {
+        "t": "空港での別れ際",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Is that really it? You're really gonna walk through those doors and leave me standing here like an idiot?",
+            "jp": "本当にこれで終わり？あのドアを通って、私をばかみたいに立たせたままにするの？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:驚きと不満を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Come on, don't do this. We said no big goodbyes.",
+            "jp": "やめてよ。大げさな別れはなしって決めたでしょ。"
+          },
+          {
+            "sp": 0,
+            "en": "I know. But then you went and bought me that stupid keychain, and now I'm a mess.",
+            "jp": "分かってる。でも、あなたがあのばかみたいなキーホルダーを買ってくれて、もう私はぐちゃぐちゃ。"
+          },
+          {
+            "sp": 1,
+            "en": "It's not stupid. It's a tiny plane. Get it? Because I'm... flying away.",
+            "jp": "ばかみたいじゃないよ。小さな飛行機でしょ。分かる？だって私は…飛んでいくから。"
+          },
+          {
+            "sp": 0,
+            "en": "Oh my God, that's terrible. That's the worst joke you've ever made, and you've made a lot of bad ones.",
+            "jp": "もう、ひどすぎる。今までで最悪の冗談だよ、悪い冗談はたくさん言ってきたけど。"
+          },
+          {
+            "sp": 1,
+            "en": "But you're smiling.",
+            "jp": "でも笑ってるじゃない。"
+          },
+          {
+            "sp": 0,
+            "en": "Maybe a little.",
+            "jp": "ちょっとだけね。"
+          },
+          {
+            "sp": 1,
+            "en": "Listen, this isn't forever. It's two years. And with video calls, texts, and all that, it's gonna feel like I never left.",
+            "jp": "聞いて、これは永遠じゃない。2年だけ。ビデオ通話もメッセージもあるし、離れたことなんてないみたいに感じるはず。"
+          },
+          {
+            "sp": 0,
+            "en": "It won't, though. Texts aren't the same as sitting on your couch, arguing about which movie to watch.",
+            "jp": "そうはならないよ。メッセージは、あなたのソファでどの映画を観るかで言い合うのと同じじゃない。"
+          },
+          {
+            "sp": 1,
+            "en": "No, they're not. I'll miss that, too. But I'd always wonder what would've happened if I hadn't gone, and I can't live with that.",
+            "jp": "違うね。それも寂しくなる。でも、行かなかったらどうなってたかをずっと考えるだろうし、それには耐えられない。"
+          },
+          {
+            "sp": 0,
+            "en": "I get it. I really do. I'd do the same thing.",
+            "jp": "分かってるよ。本当に。私も同じことをすると思う。"
+          },
+          {
+            "sp": 1,
+            "en": "Would you?",
+            "jp": "本当に？"
+          },
+          {
+            "sp": 0,
+            "en": "Probably. Now, go. Before I change my mind and chain myself to your suitcase.",
+            "jp": "たぶんね。さあ、行って。気が変わってスーツケースに自分をつなぎとめる前に。"
+          },
+          {
+            "sp": 1,
+            "en": "Love you. Text me when I land.",
+            "jp": "大好きだよ。着いたらメッセージするね。"
+          }
+        ]
+      },
+      {
+        "t": "ぎりぎりの取引交渉",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Let's cut to the chase, shall we? Your quote's fifteen percent higher than the other bids we've received, and I need a reason to justify that to my board.",
+            "jp": "単刀直入にいきましょう。御社の見積もりは、他の入札より15%高い。取締役会に説明する理由が必要です。"
+          },
+          {
+            "sp": 1,
+            "en": "Fair enough. The difference is the warranty. Ours covers five years, parts and labor. Theirs covers two, and parts only.",
+            "jp": "もっともです。違いは保証です。弊社は5年間、部品も作業も対象。他社は2年で、部品のみです。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a nice selling point, but warranties only matter if the company's still around in five years.",
+            "jp": "いい売りですが、保証は会社が5年後も残っていてこそ意味があります。"
+          },
+          {
+            "sp": 1,
+            "en": "Ouch. Okay, I'll give you that. But we've been in business for thirty years, and we've never missed a payout.",
+            "jp": "痛いところですね。認めます。でも弊社は30年営業していて、支払いを滞らせたことはありません。"
+          },
+          {
+            "sp": 0,
+            "en": "Impressive. So, what can you do on price? Not for me, you understand, just for the board.",
+            "jp": "立派です。では価格では何ができますか？私のためではなく、あくまで取締役会のために。"
+          },
+          {
+            "sp": 1,
+            "en": "I could shave five percent if you sign by Friday, but that's the best I can do without calling my boss.",
+            "jp": "金曜までに契約していただければ5%下げられます。上司に電話しなければ、それが限界です。"
+          },
+          {
+            "sp": 0,
+            "en": "Five isn't going to cut it. Ten, and we shake hands right now.",
+            "jp": "5%では足りません。10%なら、今すぐ握手します。",
+            "note": "元の形: is not going to／聞こえ方: ゴイナ／使う場面:断りを伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Ten? You're killing me. Look, lemme step out and make a call. Give me five minutes.",
+            "jp": "10%？勘弁してください。ちょっと席を外して電話させてください。5分ください。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:席を外す前に"
+          },
+          {
+            "sp": 0,
+            "en": "Take your time. I'm not going anywhere.",
+            "jp": "ごゆっくり。どこにも行きませんから。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, I'm back. My boss says seven percent, plus free installation, and that's the absolute final offer.",
+            "jp": "戻りました。上司は7%引きと無料の設置工事、これが本当に最終提案だと言っています。"
+          },
+          {
+            "sp": 0,
+            "en": "Seven and free installation. Hmm. Can you put that in writing, including the five-year warranty and the delivery date?",
+            "jp": "7%と無料の設置。うーん。それを、5年保証と納期も含めて、書面にしてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. I'll have the contract drafted within the hour.",
+            "jp": "もちろんです。1時間以内に契約書を作成します。"
+          },
+          {
+            "sp": 0,
+            "en": "Then I think we have a deal.",
+            "jp": "では、成立だと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Pleasure doing business with you.",
+            "jp": "お取引できて光栄です。"
+          }
+        ]
+      },
+      {
+        "t": "深夜の病院の待合室",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, do you mind if I sit here? Everywhere else is taken.",
+            "jp": "すみません、ここに座ってもいいですか？ほかはみんな埋まっていて。",
+            "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+          },
+          {
+            "sp": 1,
+            "en": "Go ahead. I'm not going anywhere. Been here since midnight.",
+            "jp": "どうぞ。どこにも行かないので。夜中からずっといます。"
+          },
+          {
+            "sp": 0,
+            "en": "Rough night?",
+            "jp": "つらい夜ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "My dad. They think it's his heart, but nobody's telling me anything. Every time I ask, I get 'We'll let you know when we know.'",
+            "jp": "父です。心臓だと思われているんですが、誰も何も教えてくれなくて。聞くたびに『分かり次第お知らせします』と言われます。"
+          },
+          {
+            "sp": 0,
+            "en": "Ugh, I hate that line. I've heard it so many times that I could say it in my sleep.",
+            "jp": "うわ、その言葉は大嫌い。何度も聞いたから、寝ながらでも言えますよ。"
+          },
+          {
+            "sp": 1,
+            "en": "You've been through this before?",
+            "jp": "前にも経験が？"
+          },
+          {
+            "sp": 0,
+            "en": "My wife, two years ago. It turned out fine, but those hours felt longer than the whole year.",
+            "jp": "二年前に妻が。結果は大丈夫でしたが、あの数時間は一年よりも長く感じました。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm glad. That helps, honestly.",
+            "jp": "よかった。正直、それに救われます。"
+          },
+          {
+            "sp": 0,
+            "en": "Here, I got two coffees from the machine, and I really only needed one. Take it.",
+            "jp": "どうぞ、自販機でコーヒーを2つ買ったけど、本当は1つで足りるんです。受け取って。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. It's terrible, isn't it?",
+            "jp": "ありがとう。ひどい味ですよね？"
+          },
+          {
+            "sp": 0,
+            "en": "Awful. But it's hot, and it keeps you awake.",
+            "jp": "最悪です。でも熱いし、目が覚めます。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah. Funny, I didn't even know your name, and you're the first person who's made me feel less alone tonight.",
+            "jp": "ええ。変ですね、お名前も知らないのに、今夜はじめて、一人じゃないと思えたのはあなたです。"
+          },
+          {
+            "sp": 0,
+            "en": "It's Tom. And don't worry, they'll call you soon. They always do.",
+            "jp": "トムです。心配しないで、すぐ呼ばれますよ。いつもそうですから。"
+          },
+          {
+            "sp": 1,
+            "en": "Maya. Thanks, Tom.",
+            "jp": "マヤです。ありがとう、トム。"
+          }
+        ]
+      },
+      {
+        "t": "隣人との騒音トラブル",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi. Sorry to bother you this late. I'm Ken, from 4B, right below you.",
+            "jp": "こんばんは。遅くにすみません。真下の4Bのケンです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh! Hi. Is something wrong?",
+            "jp": "あ！こんにちは。何かありましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "Well, kinda. It's about the noise. I get that you've just moved in, and I'm not trying to start a fight, but there's, like, a loud thumping every night around eleven.",
+            "jp": "まあ、ちょっと。音のことです。引っ越してきたばかりなのは分かるし、けんかしたいわけじゃないんですが、毎晩11時ごろにドンドンと大きな音がして。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり切り出す時"
+          },
+          {
+            "sp": 1,
+            "en": "The thumping? Oh no. That's my exercise bike. I had no idea it was that loud.",
+            "jp": "ドンドン？まずい。それはエクササイズバイクです。そんなにうるさいとは思いませんでした。"
+          },
+          {
+            "sp": 0,
+            "en": "It's not just the bike. It sounds like something's rattling underneath, too.",
+            "jp": "バイクだけじゃなくて、下で何かがガタガタ鳴ってる感じもします。"
+          },
+          {
+            "sp": 1,
+            "en": "Probably the floor mat slipping. Look, I'm so sorry. Lemme move it to the other wall and put a thick mat under it tonight.",
+            "jp": "たぶん床のマットがずれてるんです。本当にすみません。今夜、壁の反対側に動かして、厚いマットを敷きます。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:すぐ対応すると言う時"
+          },
+          {
+            "sp": 0,
+            "en": "That would be great. And honestly, thanks for taking it so well. Last neighbor slammed the door on me.",
+            "jp": "助かります。それに正直、こんなふうに受け止めてくれて感謝します。前の隣人にはドアを閉められたので。"
+          },
+          {
+            "sp": 1,
+            "en": "No, no, you were right to say something. Better than stewing about it for months.",
+            "jp": "いえいえ、言ってくれてよかったです。何か月も悶々とされるよりずっといいです。"
+          },
+          {
+            "sp": 0,
+            "en": "Exactly. Hey, if it's still loud, just knock, and we'll figure it out.",
+            "jp": "その通り。もしまだうるさかったら、ノックしてください。一緒に考えましょう。"
+          },
+          {
+            "sp": 1,
+            "en": "Deal. And hey, if I ever play my music too loud, you tell me, too.",
+            "jp": "了解。それと、私が音楽を大きくかけすぎたら、あなたも教えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Will do. Have a good night.",
+            "jp": "そうします。おやすみなさい。"
+          },
+          {
+            "sp": 1,
+            "en": "You too. Sorry again.",
+            "jp": "おやすみなさい。重ねてすみません。"
+          }
+        ]
+      },
+      {
+        "t": "昔の上司と偶然の再会",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Maya? Maya Carter? Is that really you? Wow, it's been what, six years?",
+            "jp": "マヤ？マヤ・カーター？本当に君？わあ、もう何年ぶり、6年？"
+          },
+          {
+            "sp": 1,
+            "en": "Mr. Hale! Oh my gosh. Six and a half, actually. You look exactly the same.",
+            "jp": "ヘイルさん！まあ。正確には6年半ですよ。全然変わってないですね。"
+          },
+          {
+            "sp": 0,
+            "en": "Liar. I've got twice as much gray hair. So, what are you doing these days? Still in marketing?",
+            "jp": "嘘つき。白髪は倍になったよ。それで、今は何を？まだマーケティング？"
+          },
+          {
+            "sp": 1,
+            "en": "Actually, I switched. I run a small design studio now, with three employees and a very needy cat.",
+            "jp": "実は転職しました。今は小さなデザインスタジオを経営していて、従業員3人と、手のかかる猫が1匹います。"
+          },
+          {
+            "sp": 0,
+            "en": "A studio! That's fantastic. I always said you were wasted in that cubicle.",
+            "jp": "スタジオか！すばらしい。君はあの小部屋にいるには惜しいといつも言っていたよ。"
+          },
+          {
+            "sp": 1,
+            "en": "You did. I remember. You were the only one who said it out loud, and honestly, it stuck with me.",
+            "jp": "言ってくれましたね。覚えてます。声に出して言ってくれたのはあなただけで、正直、ずっと心に残ってました。"
+          },
+          {
+            "sp": 0,
+            "en": "Well, I'm glad. I wasn't sure I'd said the right thing back then. You'd just turned down that promotion.",
+            "jp": "それならよかった。あの時、正しいことを言えたか自信がなかった。君は昇進を断ったばかりだったから。"
+          },
+          {
+            "sp": 1,
+            "en": "It was the right call. I would've been miserable.",
+            "jp": "正しい判断でした。きっとみじめだったと思います。"
+          },
+          {
+            "sp": 0,
+            "en": "Listen, I'm in town for a conference, but let me buy you a coffee tomorrow. I'd love to hear the whole story.",
+            "jp": "聞いて、会議でこの町に来ているんだけど、明日コーヒーをおごらせてほしい。一部始終を聞きたいんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "I'd like that. But I'm buying. You've bought me enough coffee to fund a small country.",
+            "jp": "いいですね。でも私がおごります。ヘイルさんには国が買えるくらいコーヒーをおごってもらいましたから。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! Deal. Ten o'clock, the place by the station?",
+            "jp": "はは！決まりだ。10時、駅のそばの店でどう？"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. See you then.",
+            "jp": "完璧です。ではその時に。"
+          },
+          {
+            "sp": 0,
+            "en": "Wait, one more thing. Would you ever consider hiring a retired guy as a consultant?",
+            "jp": "待って、もう一つ。引退した人をコンサルタントとして雇うことを考えたことはある？"
+          },
+          {
+            "sp": 1,
+            "en": "Mr. Hale, are you kidding? I'd hire you tomorrow.",
+            "jp": "ヘイルさん、冗談でしょう？明日にでも雇いますよ。"
+          }
+        ]
+      }
+    ]
+  }
+]
