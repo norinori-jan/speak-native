@@ -1,0 +1,376 @@
+{
+  "app": "phrase-pack",
+  "id": "aistages-1801",
+  "ver": 1,
+  "situation": "aistages",
+  "sname": "AI開発の別の段階（データ・運用・研究）",
+  "icon": "🧬",
+  "level": 4,
+  "title": "AI開発：データ・公開・運用・研究発表",
+  "items": [
+    {
+      "id": "aistages-1801-001",
+      "en": "The agreement between annotators is way lower than I expected.",
+      "jp": "アノテーター間の一致率が、予想よりずっと低い。",
+      "speak": "The agreement between annotators is way lower than I expected.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-002",
+      "en": "Cohen's kappa is point four-two. That's barely moderate.",
+      "jp": "コーエンのカッパは0.42。ぎりぎり中程度だ。",
+      "speak": "Cohen's kappa is point four-two. That's barely moderate.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-003",
+      "en": "The examples in the guidelines were too vague, so everybody interpreted them differently.",
+      "jp": "ガイドラインの例が曖昧すぎて、みんな解釈が違った。",
+      "speak": "The examples in the guidelines were too vague, so everybody interpreted them differently.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-004",
+      "en": "Let's do double-labeling just for the hard cases.",
+      "jp": "難しい例だけダブルラベリングにしよう。",
+      "speak": "Let's do double-labeling just for the hard cases.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-005",
+      "en": "Label the uncertain examples first. They teach the model the most.",
+      "jp": "不確かな例を先にラベル付けしよう。モデルが一番学べる。",
+      "speak": "Label the uncertain examples first. They teach the model the most.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-006",
+      "en": "Gimme the disagreement list, and we'll write ten clear examples per class.",
+      "jp": "不一致のリストをちょうだい。各クラスに明確な例を10個書こう。",
+      "speak": "Gimme the disagreement list, and we'll write ten clear examples per class.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:資料を求める時"
+    },
+    {
+      "id": "aistages-1801-007",
+      "en": "Eighty percent of the dataset comes from just three websites.",
+      "jp": "データセットの8割が、たった3つのサイトから来ている。",
+      "speak": "Eighty percent of the dataset comes from just three websites.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-008",
+      "en": "The model's gonna sound like those three sites.",
+      "jp": "モデルはその3つのサイトのような話し方になる。",
+      "speak": "The model's gonna sound like those three sites.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:予想を言う時"
+    },
+    {
+      "id": "aistages-1801-009",
+      "en": "A few thousand rows still have emails and phone numbers in them.",
+      "jp": "メールや電話番号が残った行が数千行ある。",
+      "speak": "A few thousand rows still have emails and phone numbers in them.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-010",
+      "en": "The regex only catches standard formats. Anything odd slips through.",
+      "jp": "正規表現は標準形式しか拾えない。変なものはすり抜ける。",
+      "speak": "The regex only catches standard formats. Anything odd slips through.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-011",
+      "en": "The model could memorize and repeat someone's phone number.",
+      "jp": "モデルが誰かの電話番号を覚えて繰り返すかもしれない。",
+      "speak": "The model could memorize and repeat someone's phone number.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-012",
+      "en": "Let's document the data sources, so legal can sign off.",
+      "jp": "法務が承認できるように、データの出どころを文書化しよう。",
+      "speak": "Let's document the data sources, so legal can sign off.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-013",
+      "en": "I don't wanna delay the training by a month.",
+      "jp": "学習を1か月遅らせたくないんだ。",
+      "speak": "I don't wanna delay the training by a month.",
+      "say": [],
+      "note": "元の形: do not want to／聞こえ方: ドンワナ／使う場面:避けたいと言う時"
+    },
+    {
+      "id": "aistages-1801-014",
+      "en": "Is the new model version tagged in the registry?",
+      "jp": "新しいモデルのバージョンは、レジストリにタグ付けされてる？",
+      "speak": "Is the new model version tagged in the registry?",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-015",
+      "en": "Start the canary at five percent, and watch it for twenty-four hours.",
+      "jp": "カナリアを5%で始めて、24時間観察しよう。",
+      "speak": "Start the canary at five percent, and watch it for twenty-four hours.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-016",
+      "en": "Either one flips it back automatically.",
+      "jp": "どちらでも、自動で元に戻る。",
+      "speak": "Either one flips it back automatically.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-017",
+      "en": "Did we update the model card? Legal asked about the known limitations.",
+      "jp": "モデルカードは更新した？法務が既知の制限について聞いてた。",
+      "speak": "Did we update the model card? Legal asked about the known limitations.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-018",
+      "en": "Lemme check. It still says v2.2. I'll fix it before the flag flips.",
+      "jp": "確認する。まだv2.2だ。フラグを切り替える前に直すよ。",
+      "speak": "Lemme check. It still says v2.2. I'll fix it before the flag flips.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+    },
+    {
+      "id": "aistages-1801-019",
+      "en": "The API response has a new field, so we need to notify the customers.",
+      "jp": "APIのレスポンスに新しいフィールドが付いたので、顧客に知らせる必要がある。",
+      "speak": "The API response has a new field, so we need to notify the customers.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-020",
+      "en": "The cloud bill is forty percent over budget this month.",
+      "jp": "今月のクラウド請求は、予算を4割超えている。",
+      "speak": "The cloud bill is forty percent over budget this month.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-021",
+      "en": "Do we need the biggest GPUs for every single request?",
+      "jp": "全リクエストに最大のGPUが必要？",
+      "speak": "Do we need the biggest GPUs for every single request?",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-022",
+      "en": "Route the easy queries to a smaller distilled model.",
+      "jp": "簡単な質問は、小さい蒸留モデルに回そう。",
+      "speak": "Route the easy queries to a smaller distilled model.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-023",
+      "en": "Semantic caching could save us maybe fifteen percent.",
+      "jp": "セマンティックキャッシュで15%くらい節約できるかも。",
+      "speak": "Semantic caching could save us maybe fifteen percent.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-024",
+      "en": "We hafta set a short expiry on anything time-sensitive.",
+      "jp": "時間に敏感なものには、短い有効期限を設定しなきゃ。",
+      "speak": "We hafta set a short expiry on anything time-sensitive.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "aistages-1801-025",
+      "en": "We keep ten replicas warm all night, and nobody's using them.",
+      "jp": "夜通し10台を温めてるのに、誰も使ってない。",
+      "speak": "We keep ten replicas warm all night, and nobody's using them.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-026",
+      "en": "Give me a plan with numbers by Friday.",
+      "jp": "金曜までに、数字つきの計画をちょうだい。",
+      "speak": "Give me a plan with numbers by Friday.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-027",
+      "en": "That concludes my talk. I'm happy to take questions.",
+      "jp": "発表は以上です。ご質問をお受けします。",
+      "speak": "That concludes my talk. I'm happy to take questions.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-028",
+      "en": "How does your method scale when the document set is ten times larger?",
+      "jp": "文書セットが10倍になったとき、この手法はどうスケールしますか？",
+      "speak": "How does your method scale when the document set is ten times larger?",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-029",
+      "en": "Accuracy plateaus, so there's a sweet spot around two million documents.",
+      "jp": "精度は頭打ちになるので、200万件あたりが最適点です。",
+      "speak": "Accuracy plateaus, so there's a sweet spot around two million documents.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-030",
+      "en": "Did you compare against a fine-tuned baseline?",
+      "jp": "ファインチューニングしたベースラインとも比較しましたか？",
+      "speak": "Did you compare against a fine-tuned baseline?",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-031",
+      "en": "Is five hundred questions enough to claim significance?",
+      "jp": "500問で有意だと主張するのに十分ですか？",
+      "speak": "Is five hundred questions enough to claim significance?",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-032",
+      "en": "Fair challenge. We ran bootstrap confidence intervals.",
+      "jp": "もっともな指摘です。ブートストラップの信頼区間を計算しました。",
+      "speak": "Fair challenge. We ran bootstrap confidence intervals.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-033",
+      "en": "We'll release the code next month, plus the evaluation scripts.",
+      "jp": "コードは来月、評価スクリプトと一緒に公開します。",
+      "speak": "We'll release the code next month, plus the evaluation scripts.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-034",
+      "en": "What failed? Every project has dead ends.",
+      "jp": "何が失敗しましたか？どのプロジェクトにも行き詰まりはあります。",
+      "speak": "What failed? Every project has dead ends.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-035",
+      "en": "Appreciate the honesty. That's refreshing.",
+      "jp": "正直に話してくれて感謝します。新鮮です。",
+      "speak": "Appreciate the honesty. That's refreshing.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-036",
+      "en": "Dunno. We never tested it on longer inputs.",
+      "jp": "さあ。もっと長い入力では試してないんだ。",
+      "speak": "Dunno. We never tested it on longer inputs.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "aistages-1801-037",
+      "en": "Beats me why the metric dropped after the update.",
+      "jp": "更新後に指標が下がった理由は分からない。",
+      "speak": "Beats me why the metric dropped after the update.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "aistages-1801-038",
+      "en": "Ya think the labels are the problem, or the model?",
+      "jp": "問題はラベルだと思う？それともモデル？",
+      "speak": "Ya think the labels are the problem, or the model?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "aistages-1801-039",
+      "en": "Whatcha using to scrub the PII? The regex missed a bunch.",
+      "jp": "個人情報の除去には何を使ってるの？正規表現はかなり漏らしたよ。",
+      "speak": "Whatcha using to scrub the PII? The regex missed a bunch.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "aistages-1801-040",
+      "en": "Gonna set up the pipeline this afternoon.",
+      "jp": "今日の午後にパイプラインを組むよ。",
+      "speak": "Gonna set up the pipeline this afternoon.",
+      "say": [],
+      "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "aistages-1801-041",
+      "en": "Wanna sync on the eval plan after lunch?",
+      "jp": "お昼の後に、評価計画をすり合わせる？",
+      "speak": "Wanna sync on the eval plan after lunch?",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:提案する時"
+    },
+    {
+      "id": "aistages-1801-042",
+      "en": "I gotta double-check the data split before I trust these numbers.",
+      "jp": "この数字を信じる前に、データの分割を再確認しなきゃ。",
+      "speak": "I gotta double-check the data split before I trust these numbers.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "aistages-1801-043",
+      "en": "Y'know, a model's only as good as its data.",
+      "jp": "ほら、モデルはデータの質以上にはならないんだ。",
+      "speak": "Y'know, a model's only as good as its data.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:念を押す時"
+    },
+    {
+      "id": "aistages-1801-044",
+      "en": "Long story short, the bug was in the labeling tool, not the model.",
+      "jp": "要するに、バグはモデルじゃなくてラベリングツールにあった。",
+      "speak": "Long story short, the bug was in the labeling tool, not the model.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-045",
+      "en": "Look, I'm not saying the model's bad. I'm saying the data's skewed.",
+      "jp": "いいかい、モデルが悪いんじゃない。データが偏ってると言ってるんだ。",
+      "speak": "Look, I'm not saying the model's bad. I'm saying the data's skewed.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-046",
+      "en": "I mean, the gain is real, but it's small.",
+      "jp": "つまり、向上は本物だけど、小さいってこと。",
+      "speak": "I mean, the gain is real, but it's small.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-047",
+      "en": "No can do. The cluster's booked until Friday.",
+      "jp": "それは無理だね。クラスターは金曜まで埋まってる。",
+      "speak": "No can do. The cluster's booked until Friday.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-048",
+      "en": "Sounds good. Let's try it on a thousand samples first.",
+      "jp": "いいね。まず1000サンプルで試そう。",
+      "speak": "Sounds good. Let's try it on a thousand samples first.",
+      "say": []
+    },
+    {
+      "id": "aistages-1801-049",
+      "en": "C'mon, let's just run the ablation and see.",
+      "jp": "ほら、とにかくアブレーションを走らせて見てみよう。",
+      "speak": "C'mon, let's just run the ablation and see.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す時"
+    },
+    {
+      "id": "aistages-1801-050",
+      "en": "Hey, Dana, can you review the labeling guidelines?",
+      "jp": "ねえダナ、ラベリングのガイドラインをレビューしてくれる？",
+      "speak": "Hey, Dana, can you review the labeling guidelines?",
+      "say": []
+    }
+  ]
+}

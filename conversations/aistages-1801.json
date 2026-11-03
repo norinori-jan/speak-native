@@ -1,0 +1,350 @@
+[
+  {
+    "id": "aistages",
+    "ic": "🧬",
+    "n": "AI開発の別の段階（データ・運用・研究）",
+    "hint": "engineers and researchers talk about labeling, data bias, model releases, cloud costs, and a research Q&A",
+    "level": 4,
+    "keywords": [
+      "AI",
+      "data",
+      "MLOps",
+      "research"
+    ],
+    "d": [
+      {
+        "t": "ラベリングの基準がバラバラ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, I just finished spot-checking the labels from last week, and honestly, the agreement between annotators is way lower than I expected.",
+            "jp": "先週のラベルを抜き取り確認しましたが、正直、アノテーター間の一致率が予想よりずっと低いです。"
+          },
+          {
+            "sp": 1,
+            "en": "How low are we talking? Cohen's kappa?",
+            "jp": "どのくらい低い？コーエンのカッパで？"
+          },
+          {
+            "sp": 0,
+            "en": "Point four-two. That's barely moderate. For a task like toxicity detection, we need at least point seven.",
+            "jp": "0.42です。ぎりぎり中程度。毒性検出のようなタスクでは、最低でも0.7は必要です。"
+          },
+          {
+            "sp": 1,
+            "en": "Ouch. Did we change the guidelines recently?",
+            "jp": "きついな。最近ガイドラインを変えた？"
+          },
+          {
+            "sp": 0,
+            "en": "We added a 'borderline' category last Tuesday, but I think the examples were too vague, so everybody interpreted it differently.",
+            "jp": "先週火曜に『境界線』カテゴリーを足しましたが、例が曖昧すぎて、みんな解釈が違ったんだと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "That tracks. Gimme the disagreement list, and we'll sit down and write ten clear examples for each class.",
+            "jp": "納得だ。不一致のリストをちょうだい。座って、各クラスに明確な例を10個ずつ書こう。",
+            "note": "元の形: give me／聞こえ方: ギミ／使う場面:資料を求める時"
+          },
+          {
+            "sp": 0,
+            "en": "Also, should we move to double-labeling? One person labels, a second one reviews, and a third breaks ties.",
+            "jp": "それと、ダブルラベリングに移るべきでは？1人がラベルを付け、2人目が確認し、3人目が同点を決める。"
+          },
+          {
+            "sp": 1,
+            "en": "It'd double the cost, though. Can we do it just for the hard cases, like anything the model's unsure about?",
+            "jp": "でもコストが倍になる。難しい例だけ、たとえばモデルが自信のないものだけにできない？"
+          },
+          {
+            "sp": 0,
+            "en": "Good idea. Active learning, basically. We label the uncertain examples first, because they teach the model the most.",
+            "jp": "いい考えです。要するにアクティブラーニング。不確かな例を先にラベル付けします。モデルが一番学べるので。"
+          },
+          {
+            "sp": 1,
+            "en": "Let's try it on a thousand samples and compare the cost per point of accuracy.",
+            "jp": "1000サンプルで試して、精度1ポイントあたりのコストを比べよう。"
+          },
+          {
+            "sp": 0,
+            "en": "Gonna set up the pipeline this afternoon.",
+            "jp": "今日の午後にパイプラインを組みます。",
+            "note": "元の形: I'm going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. And let's retrain the annotators, y'know, a quick one-hour session with the new examples.",
+            "jp": "完璧。アノテーターの再研修もしよう、ほら、新しい例を使った1時間の短い研修を。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:補足を足す時"
+          }
+        ]
+      },
+      {
+        "t": "データの偏りと個人情報",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Before we kick off training, I need to flag something. I ran a quick analysis, and eighty percent of our dataset comes from just three websites.",
+            "jp": "学習を始める前に、共有したいことがあります。簡単な分析をしたら、データセットの8割がたった3つのサイトから来ています。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a coverage problem. The model's gonna sound like those three sites.",
+            "jp": "それはカバレッジの問題だ。モデルはその3つのサイトのような話し方になる。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:予想を言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Exactly. And I found something worse: a few thousand rows with email addresses and phone numbers still in them.",
+            "jp": "その通り。もっとまずいものも見つけました。メールアドレスと電話番号が残った行が数千行あります。"
+          },
+          {
+            "sp": 1,
+            "en": "Wait, we ran the PII scrubber, didn't we?",
+            "jp": "待って、個人情報除去ツールは通したよね？"
+          },
+          {
+            "sp": 0,
+            "en": "We did, but the regex only catches standard formats. Anything with spaces or dots in odd places slips through.",
+            "jp": "通しましたが、正規表現は標準的な形式しか拾えません。スペースやドットが変な所にあると、すり抜けます。"
+          },
+          {
+            "sp": 1,
+            "en": "Then we can't ship this data. We could get sued, or worse, the model could memorize and repeat someone's phone number.",
+            "jp": "なら、このデータは使えない。訴えられるかもしれないし、もっと悪いと、モデルが誰かの電話番号を覚えて繰り返しかねない。"
+          },
+          {
+            "sp": 0,
+            "en": "So what's the fix? I don't wanna delay the training by a month.",
+            "jp": "じゃあ、どう直す？学習を1か月遅らせたくないんだけど。",
+            "note": "元の形: do not want to／聞こえ方: ドンワナ／使う場面:避けたいと言う時"
+          },
+          {
+            "sp": 1,
+            "en": "We can add a model-based scrubber on top of the regex, and it'd take maybe three days. And meanwhile, I'll rebalance the sources.",
+            "jp": "正規表現の上にモデルベースの除去ツールを足せば、3日ほどです。その間に、ソースのバランスも調整します。"
+          },
+          {
+            "sp": 0,
+            "en": "What about the remaining coverage gap?",
+            "jp": "残るカバレッジの穴はどうする？"
+          },
+          {
+            "sp": 1,
+            "en": "We buy or license a second corpus, something with more conversational and technical text.",
+            "jp": "別のコーパスを購入かライセンスして、会話や技術的な文章が多いものを足します。"
+          },
+          {
+            "sp": 0,
+            "en": "Fine. Do it. And let's document the whole thing, so legal can sign off.",
+            "jp": "分かった。やって。それと全部を文書化して、法務が承認できるようにしよう。"
+          },
+          {
+            "sp": 1,
+            "en": "Already drafting the data sheet.",
+            "jp": "もうデータシートを書き始めています。"
+          }
+        ]
+      },
+      {
+        "t": "モデルの公開とバージョン管理",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, release checklist time. Is the new model version tagged in the registry?",
+            "jp": "では、リリースチェックリストです。新しいモデルのバージョンは、レジストリにタグ付けされていますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yep, v2.3.1, with the training config, data hash, and eval report attached.",
+            "jp": "はい、v2.3.1で、学習設定、データのハッシュ、評価レポートを添付済みです。"
+          },
+          {
+            "sp": 0,
+            "en": "Good. And the canary plan? I'd start at five percent, watch for twenty-four hours, and only then ramp up.",
+            "jp": "いいですね。カナリアの計画は？5%から始めて24時間観察して、それから初めて増やしたい。"
+          },
+          {
+            "sp": 1,
+            "en": "Five percent, twenty-four hours. Alerts are set on error rate, P95 latency, and the thumbs-down rate.",
+            "jp": "5%で24時間。アラートは、エラー率、P95レイテンシ、低評価率に設定済みです。"
+          },
+          {
+            "sp": 0,
+            "en": "What's the rollback trigger?",
+            "jp": "ロールバックの条件は？"
+          },
+          {
+            "sp": 1,
+            "en": "Error rate above two percent, or latency above one second for more than five minutes. Either one flips it back automatically.",
+            "jp": "エラー率が2%を超えるか、レイテンシが1秒を超える状態が5分以上続いたら。どちらでも自動で元に戻ります。"
+          },
+          {
+            "sp": 0,
+            "en": "Love it. Did we update the model card, though? Legal asked about the known limitations.",
+            "jp": "いいね。ただモデルカードは更新した？法務が既知の制限について聞いてた。"
+          },
+          {
+            "sp": 1,
+            "en": "Lemme check. Hmm, no, it still says v2.2. I'll fix it before we flip the flag.",
+            "jp": "確認する。うーん、いや、まだv2.2のまま。フラグを切り替える前に直す。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Also, the API docs changed, since the response format has a new field. Did we notify the customers?",
+            "jp": "それと、レスポンス形式に新しいフィールドが付いたので、APIのドキュメントも変わった。顧客には知らせた？"
+          },
+          {
+            "sp": 1,
+            "en": "Email's scheduled for tomorrow morning, a day before the rollout.",
+            "jp": "メールは明日の朝、公開の前日に送る予定です。"
+          },
+          {
+            "sp": 0,
+            "en": "Perfect. Then we're green. Let's ship it on Thursday.",
+            "jp": "完璧。ならゴーだ。木曜に出そう。"
+          },
+          {
+            "sp": 1,
+            "en": "Thursday it is.",
+            "jp": "木曜ですね。"
+          }
+        ]
+      },
+      {
+        "t": "運用コストとスケーリング",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, so, the cloud bill came in, and it's forty percent over budget this month. Anyone wanna take a guess why?",
+            "jp": "クラウドの請求書が届いて、今月は予算を4割超えています。理由を当てたい人はいますか？",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:聞く時"
+          },
+          {
+            "sp": 1,
+            "en": "Traffic doubled after the launch, and we're still running everything on the biggest GPUs.",
+            "jp": "ローンチ後にトラフィックが倍になって、まだ全部を最大のGPUで動かしてるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Right. But do we need the biggest GPUs for every request? A lot of queries are simple.",
+            "jp": "そうです。でも全リクエストに最大のGPUが必要ですか？多くの質問は単純です。"
+          },
+          {
+            "sp": 1,
+            "en": "Good point. We could route easy queries to a smaller distilled model and only send the hard ones to the big one.",
+            "jp": "いい指摘です。簡単な質問は小さい蒸留モデルに回して、難しいものだけ大きいモデルに送れます。"
+          },
+          {
+            "sp": 0,
+            "en": "How much quality would we lose?",
+            "jp": "品質はどのくらい落ちる？"
+          },
+          {
+            "sp": 1,
+            "en": "On the easy bucket, almost none. In my tests, the small model matched the big one ninety-four percent of the time.",
+            "jp": "簡単な層では、ほぼなし。テストでは、小さいモデルが大きいモデルと94%一致しました。"
+          },
+          {
+            "sp": 0,
+            "en": "And caching? A lot of users ask the same questions over and over.",
+            "jp": "キャッシュは？多くのユーザーが同じ質問を何度もしています。"
+          },
+          {
+            "sp": 1,
+            "en": "Semantic caching could save us maybe fifteen percent. We'd hash the embedding and return the stored answer if it's close enough.",
+            "jp": "セマンティックキャッシュなら15%くらい節約できるかも。埋め込みをハッシュして、十分近ければ保存した回答を返します。"
+          },
+          {
+            "sp": 0,
+            "en": "But watch out for stale answers. We hafta set a short expiry on anything time-sensitive.",
+            "jp": "でも古い回答に注意。時間に敏感なものには短い有効期限を設定しなきゃ。",
+            "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Agreed. Also, autoscaling. Right now we keep ten replicas warm all night, and traffic at night is basically zero.",
+            "jp": "同意。それと、オートスケーリングも。今は夜通し10台を温めておくのに、夜のトラフィックはほぼゼロです。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, that's three wins. Give me a plan with numbers by Friday.",
+            "jp": "よし、3つの改善案だね。金曜までに数字つきの計画をちょうだい。"
+          },
+          {
+            "sp": 1,
+            "en": "Will do.",
+            "jp": "やります。"
+          }
+        ]
+      },
+      {
+        "t": "研究発表：質疑応答",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thank you, everyone. That concludes my talk on reducing hallucinations with retrieval feedback. I'm happy to take questions.",
+            "jp": "皆さん、ありがとうございました。検索フィードバックによるハルシネーション削減の発表は以上です。ご質問をお受けします。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks for the talk. Quick question: how does your method scale when the document set is ten times larger?",
+            "jp": "発表ありがとうございます。簡単な質問です。文書セットが10倍になったとき、この手法はどうスケールしますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Good question. In our experiments, the retrieval cost grows roughly linearly, but accuracy plateaus, so there's a sweet spot around two million documents.",
+            "jp": "いい質問です。実験では、検索コストはほぼ線形に増えますが、精度は頭打ちになるので、200万件あたりが最適点です。"
+          },
+          {
+            "sp": 1,
+            "en": "Did you compare against a fine-tuned baseline, not just a prompted one?",
+            "jp": "プロンプトだけでなく、ファインチューニングしたベースラインとも比較しましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "We did, in the appendix. The fine-tuned model was close, within one point, but it needed ten times the training cost.",
+            "jp": "しました、付録に載せています。ファインチューニング版は1ポイント以内で近かったのですが、学習コストは10倍必要でした。"
+          },
+          {
+            "sp": 1,
+            "en": "Interesting. One concern: your eval set is only five hundred questions. Is that enough to claim significance?",
+            "jp": "興味深いです。一つ懸念があります。評価セットが500問だけです。有意だと主張するのに十分ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Fair challenge. We ran bootstrap confidence intervals, and the gain holds at ninety-five percent, but I agree a bigger set would be better.",
+            "jp": "もっともな指摘です。ブートストラップの信頼区間を計算し、向上は95%で維持されましたが、もっと大きいセットが望ましいのは同意します。"
+          },
+          {
+            "sp": 1,
+            "en": "Any plans to release the code and the data?",
+            "jp": "コードとデータを公開する予定はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "The code, yes, next month. The data has licensing restrictions, but we'll release the evaluation scripts.",
+            "jp": "コードは来月公開します。データはライセンスの制約がありますが、評価スクリプトは公開します。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. One last thing: what failed? Every project has dead ends.",
+            "jp": "ありがとう。最後に、何が失敗しましたか？どのプロジェクトにも行き詰まりはあります。"
+          },
+          {
+            "sp": 0,
+            "en": "Plenty. Our first approach, training a separate verifier, was too slow, and it added more errors than it fixed. That's what led us to this one.",
+            "jp": "たくさん。最初の手法である別の検証モデルの学習は遅すぎて、直すよりも多くの誤りを加えてしまいました。それがこの手法につながりました。"
+          },
+          {
+            "sp": 1,
+            "en": "Appreciate the honesty. Thank you.",
+            "jp": "正直に話してくれて感謝します。ありがとう。"
+          }
+        ]
+      }
+    ]
+  }
+]

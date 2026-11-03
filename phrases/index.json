@@ -1,5 +1,5 @@
 {
-"updated": 1793701004573,
+"updated": 1793701059522,
 "packs": [
 {
 "id": "airport-0001",
@@ -528,6 +528,14 @@
 "count": 50,
 "situation": "aidevtalk",
 "sname": "AI開発の現場・専門用語"
+},
+{
+"id": "aistages-1801",
+"file": "aistages-1801.json",
+"ver": 1,
+"count": 50,
+"situation": "aistages",
+"sname": "AI開発の別の段階（データ・運用・研究）"
 }
 ]
 }

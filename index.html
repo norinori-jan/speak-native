@@ -3491,7 +3491,7 @@ var CONV_DATA=DATA.concat(EXTRA_DATA);
 var packagedConversationPromise=null;
 var PK='dei_conv_prog',CK='dei_conv_custom';
 var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
-var root=$('#cvRoot'),body=$('#cvBody');
+var root=$('#cvRoot'),body=$('#cvBody');/*cont-play*/S.cont=+LS.get('dei_conv_cont',0)||0;var CONTL=['♾ 連続：切','♾ 連続：この場面','♾ 連続：全部','🔀 連続：ランダム'];var WL=null;
 if(LS.get('dei_conv_hen',false))root.classList.add('hen');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
 function prog(){var p=LS.get(PK,{});return p&&typeof p==='object'?p:{}}
@@ -3520,7 +3520,8 @@ function loadPackagedConversation(){
   {id:'honestadv',file:'honestadv-1401.json'},
   {id:'negoadv',file:'negoadv-1501.json'},
   {id:'traveladv',file:'traveladv-1601.json'},
-  {id:'aidevtalk',file:'aidevtalk-1701.json'}
+  {id:'aidevtalk',file:'aidevtalk-1701.json'},
+  {id:'aistages',file:'aistages-1801.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
@@ -3579,7 +3580,7 @@ function playAll(){
   u.onend=function(){
    if(my!==S.tok||i!==d.lines.length-1)return;
    S.playing=false;S.paused=false;mark(-1);updatePlaybackButton();
-   var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。';
+   var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。';contSchedule(my);
   };
   u.onerror=function(event){
    if(my!==S.tok)return;
@@ -3594,6 +3595,11 @@ function playAll(){
   }
  });
 }
+function contWake(on){try{if(on&&navigator.wakeLock){navigator.wakeLock.request('screen').then(function(l){WL=l}).catch(function(){})}else if(WL){WL.release();WL=null}}catch(e){}}
+function contSchedule(my){if(!S.cont)return;var w=$('#cvWho');var tm=setTimeout(function(){if(S.tok!==my||S.playing||!S.cont||S.stage!=='dlg'||S.mode!=='listen')return;contNext()},1600);if(w)w.textContent='✔ 聞き終わりました。まもなく次の会話へ…'}
+function contNext(){var list=S.cont===1?dlgs(S.sid):allD();if(!list.length)return;var cur=list.findIndex(function(x){return x.id===S.did}),n;
+ if(S.cont===3){n=Math.floor(Math.random()*list.length);if(list.length>1&&n===cur)n=(n+1)%list.length}else n=(cur+1+list.length)%list.length;
+ var nd=list[n];S.did=nd.id;S.sid=nd.scene;S.mode='listen';S.li=0;S.ri=-1;S.heard='';render();playAll()}
 function nextDialogue(){
  var list=dlgs(S.sid);if(!list.length)return;
  var current=list.findIndex(function(x){return x.id===S.did});
@@ -3651,7 +3657,7 @@ function render(){
   var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
-   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
    h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div></div>'}).join('')+'</div>';
    h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';
   }else if(S.mode==='shadow'){
@@ -3687,6 +3693,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll();mark(-1)}
  else if(a==='next-dialog')nextDialogue();
+ else if(a==='cont'){S.cont=(S.cont+1)%4;LS.set('dei_conv_cont',S.cont);b.textContent=CONTL[S.cont];b.classList.toggle('sel',!!S.cont);contWake(!!S.cont);if(S.cont&&!S.playing&&S.did)playAll()}
  else if(a==='slow'){S.slow=!S.slow;b.classList.toggle('sel',S.slow)}
  else if(a==='hen'){root.classList.toggle('hen');LS.set('dei_conv_hen',root.classList.contains('hen'));b.classList.toggle('sel',root.classList.contains('hen'))}
  else if(a==='hjp'){root.classList.toggle('hjp');b.classList.toggle('sel',root.classList.contains('hjp'))}
