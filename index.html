@@ -3522,7 +3522,8 @@ function loadPackagedConversation(){
   {id:'traveladv',file:'traveladv-1601.json'},
   {id:'aidevtalk',file:'aidevtalk-1701.json'},
   {id:'aistages',file:'aistages-1801.json'},
-  {id:'storylong',file:'storylong-2001.json'}
+  {id:'storylong',file:'storylong-2001.json'},
+  {id:'dineout',file:'dineout-0501.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

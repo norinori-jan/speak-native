@@ -1,5 +1,5 @@
 {
-"updated": 1793701140818,
+"updated": 1793701197898,
 "packs": [
 {
 "id": "airport-0001",
@@ -544,6 +544,14 @@
 "count": 50,
 "situation": "storylong",
 "sname": "長編ストーリー（連続再生向け）"
+},
+{
+"id": "dineout-0501",
+"file": "dineout-0501.json",
+"ver": 1,
+"count": 50,
+"situation": "dineout",
+"sname": "レストラン・バー"
 }
 ]
 }

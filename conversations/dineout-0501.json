@@ -1,0 +1,448 @@
+[
+  {
+    "id": "dineout",
+    "ic": "🍻",
+    "n": "レストラン・バー",
+    "hint": "friends, strangers, and servers talk at a busy restaurant and bar, from seating to ordering to paying",
+    "level": 3,
+    "keywords": [
+      "restaurant",
+      "bar",
+      "ordering"
+    ],
+    "d": [
+      {
+        "t": "予約なしで入れるか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi there. Do you have a table for two? We don't have a reservation, but we're not in a rush.",
+            "jp": "こんにちは。2名の席はありますか？予約はないのですが、急いではいません。"
+          },
+          {
+            "sp": 1,
+            "en": "Let me check. It's pretty busy tonight. The wait's about thirty minutes for a table, or you can sit at the bar right now.",
+            "jp": "確認しますね。今夜はかなり混んでいます。テーブルは30分待ちですが、バーならすぐ座れます。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Bar's fine with me. You okay with that?",
+            "jp": "僕はバーでいいよ。君はそれで大丈夫？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Whatever gets us fed the fastest.",
+            "jp": "もちろん。一番早く食べられるならどこでも。"
+          },
+          {
+            "sp": 0,
+            "en": "Great. Two seats at the end, right there. Menus are on the counter.",
+            "jp": "よかった。奥に2席あります、あそこです。メニューはカウンターにあります。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. Is the kitchen open late? We might hang around for a while.",
+            "jp": "ありがとう。厨房は遅くまでやってますか？しばらくいるかもしれなくて。"
+          },
+          {
+            "sp": 0,
+            "en": "Kitchen's open till eleven, and the bar stays open till one. Take your time.",
+            "jp": "厨房は11時まで、バーは1時までです。ごゆっくり。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. Could we get some water while we look?",
+            "jp": "ちょうどいい。見ている間にお水をもらえますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Coming right up.",
+            "jp": "すぐお持ちします。"
+          }
+        ]
+      },
+      {
+        "t": "注文で迷う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, so, what's good here? I can't decide between the burger and the fish tacos.",
+            "jp": "ここは何がおいしい？バーガーとフィッシュタコスで決められないんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, both are solid. But if you wanna try something different, the lamb skewers are kinda famous.",
+            "jp": "正直どっちも間違いない。でも違うものを試したいなら、ラムの串焼きがちょっと有名だよ。",
+            "note": "元の形: want to／kind of／聞こえ方: ワナ／カインダ／使う場面:勧める時"
+          },
+          {
+            "sp": 0,
+            "en": "Lamb? I'm not sure. I've never really liked the smell.",
+            "jp": "ラム？どうかな。においが苦手でね。"
+          },
+          {
+            "sp": 1,
+            "en": "It's not gamey at all. The marinade's got lemon and garlic, so it tastes fresh. And I'd split the fries with you, if you want.",
+            "jp": "臭みは全然ないよ。マリネにレモンとニンニクが入っていて、さっぱりしてる。ほしければフライも半分こしよう。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, okay, you've convinced me. Lamb it is. And a beer, I guess.",
+            "jp": "分かった、説得されたよ。ラムにする。それとビールかな。"
+          },
+          {
+            "sp": 1,
+            "en": "Excuse me, we're ready to order. One lamb skewer plate, the fish tacos, and a side of fries to share.",
+            "jp": "すみません、注文をお願いします。ラムの串焼きプレート、フィッシュタコス、シェア用のフライを。"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. Anything to drink?",
+            "jp": "承知しました。お飲み物は？",
+            "note": "元の形: I have it／聞こえ方: ガット／使う場面:了解を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "A pale ale for me, and she'll have a sparkling water with lime.",
+            "jp": "僕はペールエール、彼女はライム入りの炭酸水で。"
+          },
+          {
+            "sp": 0,
+            "en": "Perfect. I'll bring those right out.",
+            "jp": "承知しました。すぐお持ちします。"
+          }
+        ]
+      },
+      {
+        "t": "アレルギーを伝える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Before we order, I need to mention something. I'm allergic to peanuts, pretty seriously.",
+            "jp": "注文の前に伝えておきたいことが。ピーナッツのアレルギーがあって、かなり重いんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you for telling me. I'll make a note. Let me check which dishes are safe. Do you avoid tree nuts, too?",
+            "jp": "教えてくれてありがとう。メモします。安全な料理を確認しますね。ナッツ類も避けていますか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Just peanuts, but cross-contamination is a real concern for me.",
+            "jp": "ピーナッツだけですが、交差汚染が本当に心配なんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Understood. I'll talk to the chef. Our fryer's shared, so I'd skip anything fried, to be safe.",
+            "jp": "分かりました。シェフに話します。フライヤーは共用なので、念のため揚げ物は避けた方がいいです。"
+          },
+          {
+            "sp": 0,
+            "en": "That's helpful. What about the pad thai? I've heard it usually has peanuts.",
+            "jp": "助かります。パッタイはどうですか？普通ピーナッツが入ると聞きました。"
+          },
+          {
+            "sp": 1,
+            "en": "It does, and we can't make it without them. But the grilled salmon and the roasted vegetables are both peanut-free, and the chef can use a clean pan.",
+            "jp": "入っていますし、抜いては作れません。でもグリルサーモンとローストした野菜はピーナッツ不使用で、シェフがきれいなフライパンを使えます。"
+          },
+          {
+            "sp": 0,
+            "en": "The salmon sounds great. Can you make sure the kitchen knows it's an allergy, not a preference?",
+            "jp": "サーモンがいいですね。好みではなくアレルギーだと、厨房に必ず伝えてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. I'll mark the ticket in red.",
+            "jp": "もちろん。伝票に赤で印をつけます。"
+          },
+          {
+            "sp": 0,
+            "en": "Thank you. I really appreciate you taking it seriously.",
+            "jp": "ありがとう。真剣に受け止めてくれて本当に助かります。"
+          }
+        ]
+      },
+      {
+        "t": "料理が違う・遅い",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, sorry to bother you. I ordered the chicken, but this looks like the steak.",
+            "jp": "すみません、お呼びして申し訳ありません。チキンを頼んだのですが、これはステーキのようです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh no, I'm so sorry. Let me check the ticket. You're right, that's table nine's order. I'll fix it right away.",
+            "jp": "ああ、大変申し訳ありません。伝票を確認します。おっしゃる通り、9番テーブルのものです。すぐ直します。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Thank you. Also, we've been waiting for our drinks for about twenty minutes now.",
+            "jp": "ありがとう。それと、飲み物をもう20分ほど待っています。"
+          },
+          {
+            "sp": 1,
+            "en": "Twenty minutes? That's way too long. Lemme talk to the bartender. Gimme two minutes.",
+            "jp": "20分？それは長すぎます。バーテンダーに話してきます。2分ください。",
+            "note": "元の形: let me／give me／聞こえ方: レミ／ギミ／使う場面:対応を約束する時"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. And is it possible to get the chicken boxed up, in case we have to leave soon?",
+            "jp": "お願いします。急いで出ることになったら、チキンを箱に詰めてもらうことはできますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Of course. And since the mix-up was our fault, the drinks are on us tonight.",
+            "jp": "もちろんです。こちらの間違いなので、今夜の飲み物は当店負担にします。"
+          },
+          {
+            "sp": 0,
+            "en": "That's very kind. Thank you.",
+            "jp": "ご親切にありがとうございます。"
+          },
+          {
+            "sp": 1,
+            "en": "Not at all. Thanks for being so patient.",
+            "jp": "とんでもない。辛抱強く待ってくださってありがとうございます。"
+          },
+          {
+            "sp": 0,
+            "en": "No problem. Mistakes happen.",
+            "jp": "大丈夫です。間違いは起きますから。"
+          }
+        ]
+      },
+      {
+        "t": "バーで知らない人と",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Is this seat taken? Everywhere else looks full.",
+            "jp": "この席、空いてますか？ほかは全部埋まってるみたいで。"
+          },
+          {
+            "sp": 1,
+            "en": "All yours. I'm just waiting for a friend, and she's, like, forty minutes late.",
+            "jp": "どうぞ。友達を待ってるだけで、彼女は、もう40分遅れてる。"
+          },
+          {
+            "sp": 0,
+            "en": "Ouch. Rough. I'm Alex, by the way.",
+            "jp": "きついね。ところで、アレックスです。"
+          },
+          {
+            "sp": 1,
+            "en": "Dana. So, what are you drinking? You look like someone who's got opinions about beer.",
+            "jp": "ダナよ。で、何を飲んでるの？ビールにこだわりがありそうな顔してる。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! Guilty. It's a local stout, super smooth, almost like chocolate. You wanna try a sip?",
+            "jp": "はは！当たり。地元のスタウトで、すごく滑らかで、チョコレートみたい。ひと口飲んでみる？",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:勧める時"
+          },
+          {
+            "sp": 1,
+            "en": "I'm more of a wine person, but sure, why not.",
+            "jp": "私はワイン派だけど、いいわよ、せっかくだし。"
+          },
+          {
+            "sp": 0,
+            "en": "Well? Verdict?",
+            "jp": "どう？感想は？"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, that's actually good. Don't tell my friends I said that.",
+            "jp": "うん、これ実はおいしい。友達には言わないでね。"
+          },
+          {
+            "sp": 0,
+            "en": "My lips are sealed. So, what do you do, Dana?",
+            "jp": "秘密にするよ。ところで、ダナは何の仕事をしてるの？"
+          },
+          {
+            "sp": 1,
+            "en": "I teach high school chemistry. Which, yes, means I'm very good at explaining why your drink tastes the way it does.",
+            "jp": "高校で化学を教えてるの。つまり、あなたのお酒がその味になる理由を説明するのが得意ってこと。"
+          },
+          {
+            "sp": 0,
+            "en": "Now I'm intimidated.",
+            "jp": "それはちょっと緊張するな。"
+          }
+        ]
+      },
+      {
+        "t": "乾杯と割り勘",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, everyone, glasses up. To Maya's promotion. You earned it.",
+            "jp": "よし、みんなグラスを上げて。マヤの昇進に。当然の結果だよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Cheers! Seriously, though, I couldn't have done it without this team.",
+            "jp": "乾杯！本当に、このチームがなければ無理だった。"
+          },
+          {
+            "sp": 0,
+            "en": "Aw, stop. You're gonna make me cry in the middle of a bar.",
+            "jp": "やめてよ。バーの真ん中で泣かせないで。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:冗談めかして言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Speaking of crying, who's picking up the check? I'm broke until Friday.",
+            "jp": "泣くと言えば、会計は誰が持つの？金曜まで一文無しなんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "Let's just split it evenly. Four people, easy math.",
+            "jp": "単純に均等割りにしよう。4人だから計算も楽だ。"
+          },
+          {
+            "sp": 1,
+            "en": "Hold on. I only had a salad and a soda, and you guys had three rounds of cocktails.",
+            "jp": "ちょっと待って。私はサラダとソーダだけで、君たちはカクテルを3杯ずつ飲んでるよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Fair point. Okay, so, everyone pays for what they ordered, and we split the appetizers.",
+            "jp": "もっともだ。じゃあ、各自が頼んだ分を払って、前菜は割り勘にしよう。"
+          },
+          {
+            "sp": 1,
+            "en": "Works for me. Can we get separate checks, please?",
+            "jp": "それでいいよ。別々の伝票にしてもらえますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Sure thing. I'll split it four ways for you.",
+            "jp": "承知しました。4つに分けますね。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. And hey, the drinks for Maya are on me.",
+            "jp": "ありがとう。それと、マヤの飲み物は僕のおごりね。"
+          }
+        ]
+      },
+      {
+        "t": "隣の席がうるさい",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, sorry, this is kind of awkward, but is there any chance we could move to another table? It's really loud over here.",
+            "jp": "あの、ちょっと言いにくいんですが、別のテーブルに移れませんか？こちらはとてもうるさくて。"
+          },
+          {
+            "sp": 1,
+            "en": "Of course. Is it the birthday party next to you?",
+            "jp": "もちろんです。隣の誕生日会ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah. They're having a great time, and I don't wanna be the one to ruin it, but I can't even hear my friend.",
+            "jp": "ええ。みんな楽しんでるし、水を差したくはないんですが、友達の声さえ聞こえなくて。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:遠慮して言う時"
+          },
+          {
+            "sp": 1,
+            "en": "I understand completely. There's a quiet booth by the window. Lemme set it up for you.",
+            "jp": "よく分かります。窓際に静かなボックス席があります。準備しますね。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:手配を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "That'd be perfect. Can you bring our food over, too?",
+            "jp": "それは助かります。料理も運んでもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. I'll move everything and keep your drinks fresh.",
+            "jp": "もちろん。全部移して、飲み物も新しいものにします。"
+          },
+          {
+            "sp": 0,
+            "en": "You're a lifesaver. Thank you.",
+            "jp": "本当に助かります。ありがとう。"
+          },
+          {
+            "sp": 1,
+            "en": "Anytime. And no worries, it happens a lot on Fridays.",
+            "jp": "いつでもどうぞ。気にしないで、金曜はよくあることです。"
+          },
+          {
+            "sp": 0,
+            "en": "Good to know. We'll come on a weeknight next time.",
+            "jp": "いいことを聞いた。次は平日の夜に来ます。"
+          }
+        ]
+      },
+      {
+        "t": "会計とチップ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, could we get the check, please? We're gonna head out.",
+            "jp": "すみません、お会計をお願いします。そろそろ出ます。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Of course. Here you go. Take your time.",
+            "jp": "もちろん。こちらです。ごゆっくり。"
+          },
+          {
+            "sp": 0,
+            "en": "Hmm, the total's a bit higher than I expected. Can you walk me through the charges?",
+            "jp": "うーん、合計が思ったより高いな。内訳を説明してもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. That's the food, the drinks, the tax, and an automatic eighteen percent service charge, because your party was over six.",
+            "jp": "はい。料理と飲み物、税、それと6名を超えるお客様なので、自動で18%のサービス料が入っています。"
+          },
+          {
+            "sp": 0,
+            "en": "Oh, I didn't realize it was included. So, no extra tip needed?",
+            "jp": "ああ、含まれているとは知りませんでした。じゃあ、追加のチップは要らない？"
+          },
+          {
+            "sp": 1,
+            "en": "Not unless you wanna leave something extra for great service. It's totally up to you.",
+            "jp": "素晴らしいサービスだと思えば別ですが、そうでなければ不要です。完全にお任せします。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:任意だと言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Well, you were great. I'll add a little something. Can I pay by card?",
+            "jp": "いや、君は素晴らしかった。少し足すよ。カードで払えますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, I'll bring the machine over.",
+            "jp": "はい、機械をお持ちします。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks again for a lovely evening.",
+            "jp": "素敵な夜をありがとうございました。"
+          },
+          {
+            "sp": 1,
+            "en": "Our pleasure. Come back soon.",
+            "jp": "こちらこそ。またお越しください。"
+          }
+        ]
+      }
+    ]
+  }
+]

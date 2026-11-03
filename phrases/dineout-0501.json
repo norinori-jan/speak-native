@@ -1,0 +1,380 @@
+{
+  "app": "phrase-pack",
+  "id": "dineout-0501",
+  "ver": 1,
+  "situation": "dineout",
+  "sname": "レストラン・バー",
+  "icon": "🍻",
+  "level": 3,
+  "title": "レストラン・バーの口語表現",
+  "items": [
+    {
+      "id": "dineout-0501-001",
+      "en": "Hi there. Do you have a table for two? We don't have a reservation.",
+      "jp": "こんにちは。2名の席はありますか？予約はしていません。",
+      "speak": "Hi there. Do you have a table for two? We don't have a reservation.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-002",
+      "en": "Let me check. The wait's about thirty minutes, or you can sit at the bar.",
+      "jp": "確認します。待ち時間は30分ほどで、バー席ならすぐ座れます。",
+      "speak": "Let me check. The wait's about thirty minutes, or you can sit at the bar.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-003",
+      "en": "Bar's fine with me. Whatever gets us fed the fastest.",
+      "jp": "僕はバーでいい。一番早く食べられるならどこでも。",
+      "speak": "Bar's fine with me. Whatever gets us fed the fastest.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-004",
+      "en": "Is the kitchen open late? We might hang around for a while.",
+      "jp": "厨房は遅くまでやってる？しばらくいるかもしれなくて。",
+      "speak": "Is the kitchen open late? We might hang around for a while.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-005",
+      "en": "What's good here? I can't decide between the burger and the tacos.",
+      "jp": "ここは何がおいしい？バーガーとタコスで決められない。",
+      "speak": "What's good here? I can't decide between the burger and the tacos.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-006",
+      "en": "Both are solid. But if you wanna try something different, the skewers are kinda famous.",
+      "jp": "どっちも間違いない。でも違うものなら、串焼きがちょっと有名だよ。",
+      "speak": "Both are solid. But if you wanna try something different, the skewers are kinda famous.",
+      "say": [],
+      "note": "元の形: want to／kind of／聞こえ方: ワナ／カインダ／使う場面:勧める時"
+    },
+    {
+      "id": "dineout-0501-007",
+      "en": "I'd split the fries with you, if you want.",
+      "jp": "ほしければ、フライを半分こしよう。",
+      "speak": "I'd split the fries with you, if you want.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-008",
+      "en": "We're ready to order. One skewer plate, the tacos, and fries to share.",
+      "jp": "注文をお願いします。串焼きプレートと、タコスと、シェア用のフライを。",
+      "speak": "We're ready to order. One skewer plate, the tacos, and fries to share.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-009",
+      "en": "Got it. Anything to drink?",
+      "jp": "承知しました。お飲み物は？",
+      "speak": "Got it. Anything to drink?",
+      "say": [],
+      "note": "元の形: I have it／聞こえ方: ガット／使う場面:了解を伝える時"
+    },
+    {
+      "id": "dineout-0501-010",
+      "en": "I'm allergic to peanuts, pretty seriously. Can you tell the kitchen?",
+      "jp": "ピーナッツのアレルギーがかなり重いんです。厨房に伝えてもらえますか？",
+      "speak": "I'm allergic to peanuts, pretty seriously. Can you tell the kitchen?",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-011",
+      "en": "Cross-contamination is a real concern for me.",
+      "jp": "交差汚染が、本当に心配なんです。",
+      "speak": "Cross-contamination is a real concern for me.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-012",
+      "en": "Our fryer's shared, so I'd skip anything fried, to be safe.",
+      "jp": "フライヤーは共用なので、念のため揚げ物は避けた方がいいです。",
+      "speak": "Our fryer's shared, so I'd skip anything fried, to be safe.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-013",
+      "en": "Can you make sure the kitchen knows it's an allergy, not a preference?",
+      "jp": "好みではなくアレルギーだと、厨房に必ず伝えてもらえますか？",
+      "speak": "Can you make sure the kitchen knows it's an allergy, not a preference?",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-014",
+      "en": "I ordered the chicken, but this looks like the steak.",
+      "jp": "チキンを頼んだのに、これはステーキみたい。",
+      "speak": "I ordered the chicken, but this looks like the steak.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-015",
+      "en": "We've been waiting for our drinks for about twenty minutes now.",
+      "jp": "飲み物をもう20分ほど待っています。",
+      "speak": "We've been waiting for our drinks for about twenty minutes now.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-016",
+      "en": "Lemme talk to the bartender. Gimme two minutes.",
+      "jp": "バーテンダーに話してきます。2分ください。",
+      "speak": "Lemme talk to the bartender. Gimme two minutes.",
+      "say": [],
+      "note": "元の形: let me／give me／聞こえ方: レミ／ギミ／使う場面:対応を約束する時"
+    },
+    {
+      "id": "dineout-0501-017",
+      "en": "Since the mix-up was our fault, the drinks are on us tonight.",
+      "jp": "こちらの間違いなので、今夜の飲み物は当店負担にします。",
+      "speak": "Since the mix-up was our fault, the drinks are on us tonight.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-018",
+      "en": "Could you box this up? We might have to leave soon.",
+      "jp": "これを箱に詰めてもらえますか？急いで出るかもしれなくて。",
+      "speak": "Could you box this up? We might have to leave soon.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-019",
+      "en": "Is this seat taken? Everywhere else looks full.",
+      "jp": "この席、空いてますか？ほかは全部埋まってるみたい。",
+      "speak": "Is this seat taken? Everywhere else looks full.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-020",
+      "en": "I'm just waiting for a friend, and she's, like, forty minutes late.",
+      "jp": "友達を待ってるだけで、彼女は、もう40分遅れてる。",
+      "speak": "I'm just waiting for a friend, and she's, like, forty minutes late.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-021",
+      "en": "You wanna try a sip? It's a local stout, super smooth.",
+      "jp": "ひと口飲んでみる？地元のスタウトで、すごく滑らかだよ。",
+      "speak": "You wanna try a sip? It's a local stout, super smooth.",
+      "say": [],
+      "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:勧める時"
+    },
+    {
+      "id": "dineout-0501-022",
+      "en": "I'm more of a wine person, but sure, why not.",
+      "jp": "私はワイン派だけど、いいわよ、せっかくだし。",
+      "speak": "I'm more of a wine person, but sure, why not.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-023",
+      "en": "Don't tell my friends I said that. It's actually good.",
+      "jp": "友達には言わないでね。これ、実はおいしい。",
+      "speak": "Don't tell my friends I said that. It's actually good.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-024",
+      "en": "To Maya's promotion. You earned it. Cheers!",
+      "jp": "マヤの昇進に。当然の結果だよ。乾杯！",
+      "speak": "To Maya's promotion. You earned it. Cheers!",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-025",
+      "en": "You're gonna make me cry in the middle of a bar.",
+      "jp": "バーの真ん中で泣かせないでよ。",
+      "speak": "You're gonna make me cry in the middle of a bar.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:冗談めかして言う時"
+    },
+    {
+      "id": "dineout-0501-026",
+      "en": "Who's picking up the check? I'm broke until Friday.",
+      "jp": "会計は誰が持つの？金曜まで一文無しなんだ。",
+      "speak": "Who's picking up the check? I'm broke until Friday.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-027",
+      "en": "Let's split it evenly. Four people, easy math.",
+      "jp": "均等に割ろう。4人だから計算も楽だ。",
+      "speak": "Let's split it evenly. Four people, easy math.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-028",
+      "en": "I only had a salad and a soda. Can we get separate checks?",
+      "jp": "サラダとソーダだけだったよ。別々の伝票にしてもらえる？",
+      "speak": "I only had a salad and a soda. Can we get separate checks?",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-029",
+      "en": "Is there any chance we could move to another table? It's really loud over here.",
+      "jp": "別のテーブルに移れませんか？こちらはとてもうるさくて。",
+      "speak": "Is there any chance we could move to another table? It's really loud over here.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-030",
+      "en": "I don't wanna ruin their party, but I can't even hear my friend.",
+      "jp": "彼らのパーティーを台無しにしたくないけど、友達の声さえ聞こえない。",
+      "speak": "I don't wanna ruin their party, but I can't even hear my friend.",
+      "say": [],
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:遠慮して言う時"
+    },
+    {
+      "id": "dineout-0501-031",
+      "en": "There's a quiet booth by the window. Lemme set it up for you.",
+      "jp": "窓際に静かなボックス席があります。準備しますね。",
+      "speak": "There's a quiet booth by the window. Lemme set it up for you.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:手配を始める時"
+    },
+    {
+      "id": "dineout-0501-032",
+      "en": "Could we get the check, please? We're gonna head out.",
+      "jp": "お会計をお願いします。そろそろ出ます。",
+      "speak": "Could we get the check, please? We're gonna head out.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "dineout-0501-033",
+      "en": "Can you walk me through the charges? The total's higher than I expected.",
+      "jp": "内訳を説明してもらえますか？合計が思ったより高くて。",
+      "speak": "Can you walk me through the charges? The total's higher than I expected.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-034",
+      "en": "An automatic eighteen percent service charge is included for large parties.",
+      "jp": "大人数のお客様には、自動で18%のサービス料が入っています。",
+      "speak": "An automatic eighteen percent service charge is included for large parties.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-035",
+      "en": "Not unless you wanna leave something extra for great service.",
+      "jp": "素晴らしいサービスだと思えば別ですが、そうでなければ不要です。",
+      "speak": "Not unless you wanna leave something extra for great service.",
+      "say": [],
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:任意だと言う時"
+    },
+    {
+      "id": "dineout-0501-036",
+      "en": "Hey, Dana, nice to meet you. What are you drinking?",
+      "jp": "ねえダナ、はじめまして。何を飲んでるの？",
+      "speak": "Hey, Dana, nice to meet you. What are you drinking?",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-037",
+      "en": "Dude, the lamb skewers are unreal. Try one.",
+      "jp": "なあ、ラムの串焼きは最高だよ。食べてみて。",
+      "speak": "Dude, the lamb skewers are unreal. Try one.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-038",
+      "en": "Man, that was the best fish taco I've ever had.",
+      "jp": "うわ、今まで食べた中で一番おいしいフィッシュタコスだった。",
+      "speak": "Man, that was the best fish taco I've ever had.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-039",
+      "en": "Sir, can I get you another round?",
+      "jp": "お客様、もう一杯いかがですか？",
+      "speak": "Sir, can I get you another round?",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-040",
+      "en": "Babe, you want dessert or should we go?",
+      "jp": "ねえ、デザートいる？それとも行く？",
+      "speak": "Babe, you want dessert or should we go?",
+      "say": [],
+      "note": "元の形: do you／聞こえ方: ユー／使う場面:問いかける時"
+    },
+    {
+      "id": "dineout-0501-041",
+      "en": "Buddy, this one's on me. Don't even argue.",
+      "jp": "おい、これは僕のおごり。言い返さないで。",
+      "speak": "Buddy, this one's on me. Don't even argue.",
+      "say": []
+    },
+    {
+      "id": "dineout-0501-042",
+      "en": "Dunno. What's the soup of the day?",
+      "jp": "さあ。今日のスープは何？",
+      "speak": "Dunno. What's the soup of the day?",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:迷っている時"
+    },
+    {
+      "id": "dineout-0501-043",
+      "en": "Beats me why it's taking so long.",
+      "jp": "なぜこんなに時間がかかるのか分からない。",
+      "speak": "Beats me why it's taking so long.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "dineout-0501-044",
+      "en": "Ya think they'll give us a discount for the wait?",
+      "jp": "待たせたから、割引してくれると思う？",
+      "speak": "Ya think they'll give us a discount for the wait?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "dineout-0501-045",
+      "en": "Whatcha having? Everything looks so good.",
+      "jp": "何にする？全部おいしそうだね。",
+      "speak": "Whatcha having? Everything looks so good.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "dineout-0501-046",
+      "en": "Didja see the specials board? There's a crab pasta.",
+      "jp": "おすすめの黒板見た？カニのパスタがあるよ。",
+      "speak": "Didja see the specials board? There's a crab pasta.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:出来事を伝える時"
+    },
+    {
+      "id": "dineout-0501-047",
+      "en": "I gotta try the dessert. People keep raving about it.",
+      "jp": "デザートは試さなきゃ。みんなが絶賛してるから。",
+      "speak": "I gotta try the dessert. People keep raving about it.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やりたいことを言う時"
+    },
+    {
+      "id": "dineout-0501-048",
+      "en": "We hafta leave by ten. My babysitter's waiting.",
+      "jp": "10時までに出なきゃ。ベビーシッターが待ってるんだ。",
+      "speak": "We hafta leave by ten. My babysitter's waiting.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:期限を言う時"
+    },
+    {
+      "id": "dineout-0501-049",
+      "en": "Y'know, I come here every Friday, and it never gets old.",
+      "jp": "ほら、毎週金曜にここへ来るけど、飽きないんだ。",
+      "speak": "Y'know, I come here every Friday, and it never gets old.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:しみじみ言う時"
+    },
+    {
+      "id": "dineout-0501-050",
+      "en": "Long story short, they comped our drinks.",
+      "jp": "要するに、飲み物をおごってくれたんだ。",
+      "speak": "Long story short, they comped our drinks.",
+      "say": []
+    }
+  ]
+}
