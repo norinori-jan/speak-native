@@ -1,5 +1,5 @@
 {
-"updated": 1793701059522,
+"updated": 1793701140818,
 "packs": [
 {
 "id": "airport-0001",
@@ -536,6 +536,14 @@
 "count": 50,
 "situation": "aistages",
 "sname": "AI開発の別の段階（データ・運用・研究）"
+},
+{
+"id": "storylong-2001",
+"file": "storylong-2001.json",
+"ver": 1,
+"count": 50,
+"situation": "storylong",
+"sname": "長編ストーリー（連続再生向け）"
 }
 ]
 }

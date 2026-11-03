@@ -1,0 +1,379 @@
+{
+  "app": "phrase-pack",
+  "id": "storylong-2001",
+  "ver": 1,
+  "situation": "storylong",
+  "sname": "長編ストーリー（連続再生向け）",
+  "icon": "📖",
+  "level": 4,
+  "title": "長編ストーリー（前編・中編・後編）",
+  "items": [
+    {
+      "id": "storylong-2001-001",
+      "en": "I got nervous and left an hour ahead. I walked around the block twice.",
+      "jp": "緊張して1時間早く出た。ブロックを2周したよ。",
+      "speak": "I got nervous and left an hour ahead. I walked around the block twice.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-002",
+      "en": "Here's your badge, and lemme show you where you're sitting.",
+      "jp": "これがバッジで、席を案内するね。",
+      "speak": "Here's your badge, and lemme show you where you're sitting.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:案内を始める時"
+    },
+    {
+      "id": "storylong-2001-003",
+      "en": "Tell 'em you're new, and they'll set up everything.",
+      "jp": "新人だと言えば、全部設定してくれるよ。",
+      "speak": "Tell 'em you're new, and they'll set up everything.",
+      "say": [],
+      "note": "元の形: them／聞こえ方: エム／使う場面:人をくだけて指す時"
+    },
+    {
+      "id": "storylong-2001-004",
+      "en": "Just your name, your last job, and one fun fact. Don't overthink it.",
+      "jp": "名前と前の仕事と豆知識を一つだけ。考えすぎないで。",
+      "speak": "Just your name, your last job, and one fun fact. Don't overthink it.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-005",
+      "en": "Skip the Thursday curry. Trust me.",
+      "jp": "木曜のカレーは避けて。信じて。",
+      "speak": "Skip the Thursday curry. Trust me.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-006",
+      "en": "We ship every two weeks, and the deadlines are real.",
+      "jp": "2週間ごとにリリースで、締め切りは本物だよ。",
+      "speak": "We ship every two weeks, and the deadlines are real.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-007",
+      "en": "Nobody expects you to stay late. Burnout's real.",
+      "jp": "誰も遅くまで残ることは期待してない。燃え尽きは現実にある。",
+      "speak": "Nobody expects you to stay late. Burnout's real.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-008",
+      "en": "Blunt, but fair. Nobody's trying to make you feel small.",
+      "jp": "率直だけど公平。誰も君を小さく見せようとはしない。",
+      "speak": "Blunt, but fair. Nobody's trying to make you feel small.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-009",
+      "en": "Did you send an email to the whole company a few minutes ago?",
+      "jp": "数分前に、全社員にメールを送った？",
+      "speak": "Did you send an email to the whole company a few minutes ago?",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-010",
+      "en": "Everybody's done it once. You survived day one. That's the only goal.",
+      "jp": "みんな一度はやるよ。初日を乗り切った。目標はそれだけだ。",
+      "speak": "Everybody's done it once. You survived day one. That's the only goal.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-011",
+      "en": "I'm gonna go home before I send another one.",
+      "jp": "もう1通送る前に帰るよ。",
+      "speak": "I'm gonna go home before I send another one.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+    },
+    {
+      "id": "storylong-2001-012",
+      "en": "I know I'm really late. My flight was delayed four hours.",
+      "jp": "ひどく遅くなってごめんなさい。フライトが4時間遅れて。",
+      "speak": "I know I'm really late. My flight was delayed four hours.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-013",
+      "en": "Room service's open until midnight, even though the kitchen closed at ten.",
+      "jp": "厨房は10時で閉まったけど、ルームサービスは夜中まで開いてる。",
+      "speak": "Room service's open until midnight, even though the kitchen closed at ten.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-014",
+      "en": "The first train's at five thirty. Day passes are at the front desk.",
+      "jp": "始発は5時半。1日券はフロントで買える。",
+      "speak": "The first train's at five thirty. Day passes are at the front desk.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-015",
+      "en": "Lemme warn you, I'm a light sleeper. Is the room facing the street?",
+      "jp": "先に言っておくと、眠りが浅いんだ。部屋は通り側？",
+      "speak": "Lemme warn you, I'm a light sleeper. Is the room facing the street?",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:前置きを言う時"
+    },
+    {
+      "id": "storylong-2001-016",
+      "en": "My map's not working. Is the old market far from here?",
+      "jp": "地図が動かない。古い市場はここから遠い？",
+      "speak": "My map's not working. Is the old market far from here?",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-017",
+      "en": "It's kinda far. Maybe thirty minutes on foot.",
+      "jp": "ちょっと遠いね。歩いて30分くらいかな。",
+      "speak": "It's kinda far. Maybe thirty minutes on foot.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+    },
+    {
+      "id": "storylong-2001-018",
+      "en": "Buy a ticket first, at the kiosk. It's cheaper, and the driver doesn't take big bills.",
+      "jp": "先に売店で切符を買って。安いし、運転手は高額紙幣を受けつけない。",
+      "speak": "Buy a ticket first, at the kiosk. It's cheaper, and the driver doesn't take big bills.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-019",
+      "en": "Look for a small place with a blue door, and ask for the fish soup.",
+      "jp": "青いドアの小さな店を探して、魚のスープを頼んで。",
+      "speak": "Look for a small place with a blue door, and ask for the fish soup.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-020",
+      "en": "Watch your bag at the market. It gets crowded.",
+      "jp": "市場ではバッグに気をつけて。混むから。",
+      "speak": "Watch your bag at the market. It gets crowded.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-021",
+      "en": "Gimme a sec. I think there's a problem with my airport shuttle.",
+      "jp": "ちょっと待って。空港シャトルに問題があるみたい。",
+      "speak": "Gimme a sec. I think there's a problem with my airport shuttle.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+    },
+    {
+      "id": "storylong-2001-022",
+      "en": "The schedule changed this morning, and we should've called you.",
+      "jp": "今朝、時刻が変更になって、お電話すべきでした。",
+      "speak": "The schedule changed this morning, and we should've called you.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-023",
+      "en": "Is seven thirty gonna be too late for a ten o'clock flight?",
+      "jp": "10時のフライトに、7時半では遅すぎる？",
+      "speak": "Is seven thirty gonna be too late for a ten o'clock flight?",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:心配を伝える時"
+    },
+    {
+      "id": "storylong-2001-024",
+      "en": "I can arrange a taxi at our expense, leaving in ten minutes.",
+      "jp": "当方の負担でタクシーを手配でき、10分後に出発できます。",
+      "speak": "I can arrange a taxi at our expense, leaving in ten minutes.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-025",
+      "en": "It gets a lot of natural light. The living room faces south.",
+      "jp": "自然光がたっぷり入ります。リビングは南向きです。",
+      "speak": "It gets a lot of natural light. The living room faces south.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-026",
+      "en": "The rent's twelve hundred, utilities not included.",
+      "jp": "家賃は1200ドルで、光熱費は別です。",
+      "speak": "The rent's twelve hundred, utilities not included.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-027",
+      "en": "The owner might drop it to eleven fifty if you sign for two years.",
+      "jp": "2年契約なら、オーナーが1150ドルに下げるかもしれません。",
+      "speak": "The owner might drop it to eleven fifty if you sign for two years.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-028",
+      "en": "Is the street loud at night? The windows are double-glazed.",
+      "jp": "夜は通りがうるさい？窓は二重ガラスです。",
+      "speak": "Is the street loud at night? The windows are double-glazed.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-029",
+      "en": "I gotta be honest, I really like it. When do you need an answer?",
+      "jp": "正直、とても気に入りました。いつまでに返事が必要ですか？",
+      "speak": "I gotta be honest, I really like it. When do you need an answer?",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:本音を言う時"
+    },
+    {
+      "id": "storylong-2001-030",
+      "en": "Bring your ID and the first month's rent tomorrow at ten.",
+      "jp": "明日の10時に、身分証と1か月目の家賃を持ってきて。",
+      "speak": "Bring your ID and the first month's rent tomorrow at ten.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-031",
+      "en": "The deposit's refundable when you move out, as long as there's no damage.",
+      "jp": "敷金は、傷みがなければ、退去時に返金されます。",
+      "speak": "The deposit's refundable when you move out, as long as there's no damage.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-032",
+      "en": "I just wanna hang a few shelves. Is that okay?",
+      "jp": "棚を2、3個つけたいだけ。いいですか？",
+      "speak": "I just wanna hang a few shelves. Is that okay?",
+      "say": [],
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたいことを言う時"
+    },
+    {
+      "id": "storylong-2001-033",
+      "en": "Shelves are okay, as long as you patch the holes when you leave.",
+      "jp": "棚は大丈夫、出る時に穴を埋めてくれれば。",
+      "speak": "Shelves are okay, as long as you patch the holes when you leave.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-034",
+      "en": "I just moved into 5C. I wanted to say hello and apologize for the boxes.",
+      "jp": "5Cに引っ越してきました。あいさつと、箱のおわびをしたくて。",
+      "speak": "I just moved into 5C. I wanted to say hello and apologize for the boxes.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-035",
+      "en": "Take the legs off the couch, and tilt it. Everybody has that problem.",
+      "jp": "ソファの脚を外して傾けて。みんなそれで困るの。",
+      "speak": "Take the legs off the couch, and tilt it. Everybody has that problem.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-036",
+      "en": "Recycling is on Thursdays, and the janitor gets grumpy if you mess it up.",
+      "jp": "リサイクルは木曜で、間違えると管理人さんが不機嫌になる。",
+      "speak": "Recycling is on Thursdays, and the janitor gets grumpy if you mess it up.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-037",
+      "en": "If I'm ever too loud, just knock. I won't be offended.",
+      "jp": "うるさかったら、ノックして。気を悪くしないから。",
+      "speak": "If I'm ever too loud, just knock. I won't be offended.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-038",
+      "en": "Dunno. I've never been in this part of town.",
+      "jp": "さあ。この辺りには来たことがないんだ。",
+      "speak": "Dunno. I've never been in this part of town.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "storylong-2001-039",
+      "en": "Beats me why the shuttle changed its schedule.",
+      "jp": "なぜシャトルの時刻が変わったのか分からない。",
+      "speak": "Beats me why the shuttle changed its schedule.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "storylong-2001-040",
+      "en": "Ya think the owner'll lower the rent?",
+      "jp": "オーナーは家賃を下げてくれると思う？",
+      "speak": "Ya think the owner'll lower the rent?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "storylong-2001-041",
+      "en": "Whatcha doing here so early? The office doesn't open till nine.",
+      "jp": "こんなに早く何してるの？事務所は9時まで開かないよ。",
+      "speak": "Whatcha doing here so early? The office doesn't open till nine.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "storylong-2001-042",
+      "en": "Didja see the welcome thread? Half the company replied.",
+      "jp": "歓迎のスレッド見た？会社の半分が返信してるよ。",
+      "speak": "Didja see the welcome thread? Half the company replied.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:出来事を伝える時"
+    },
+    {
+      "id": "storylong-2001-043",
+      "en": "We hafta leave for the airport by seven thirty.",
+      "jp": "7時半までに空港に向けて出なきゃ。",
+      "speak": "We hafta leave for the airport by seven thirty.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:期限を言う時"
+    },
+    {
+      "id": "storylong-2001-044",
+      "en": "Y'know, I didn't expect people to be this nice.",
+      "jp": "ほら、こんなに親切にしてもらえるとは思ってなかった。",
+      "speak": "Y'know, I didn't expect people to be this nice.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:しみじみ言う時"
+    },
+    {
+      "id": "storylong-2001-045",
+      "en": "Long story short, I got the apartment, and I start Monday.",
+      "jp": "要するに、部屋が決まって、月曜から始まる。",
+      "speak": "Long story short, I got the apartment, and I start Monday.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-046",
+      "en": "Look, you survived day one. Go home and get some rest.",
+      "jp": "いいかい、初日は乗り切った。帰ってゆっくり休んで。",
+      "speak": "Look, you survived day one. Go home and get some rest.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-047",
+      "en": "I mean, it's a great place, but it's a bit pricey.",
+      "jp": "つまり、素敵な場所だけど、少し高いってこと。",
+      "speak": "I mean, it's a great place, but it's a bit pricey.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-048",
+      "en": "No can do. The shuttle's full until eight.",
+      "jp": "それは無理だね。シャトルは8時まで満席だよ。",
+      "speak": "No can do. The shuttle's full until eight.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-049",
+      "en": "Sounds good. See you tomorrow at ten.",
+      "jp": "いいね。明日の10時に会おう。",
+      "speak": "Sounds good. See you tomorrow at ten.",
+      "say": []
+    },
+    {
+      "id": "storylong-2001-050",
+      "en": "C'mon, I'll show you where the laundry room is.",
+      "jp": "ほら、洗濯室の場所を教えるよ。",
+      "speak": "C'mon, I'll show you where the laundry room is.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す時"
+    }
+  ]
+}

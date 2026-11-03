@@ -1,0 +1,602 @@
+[
+  {
+    "id": "storylong",
+    "ic": "📖",
+    "n": "長編ストーリー（連続再生向け）",
+    "hint": "three connected story arcs: a first day at a new job, a three-day trip, and moving into a new apartment",
+    "level": 4,
+    "keywords": [
+      "story",
+      "long",
+      "continuous"
+    ],
+    "d": [
+      {
+        "t": "【入社初日①】朝の受付と席",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi, I'm Maya Ito. It's my first day, and I'm supposed to meet someone named Tom at nine.",
+            "jp": "こんにちは、伊藤マヤです。初日で、9時にトムという人と会うことになっています。"
+          },
+          {
+            "sp": 1,
+            "en": "Maya! Welcome. I'm Tom. Wow, you're early. Nobody's ever early on a Monday.",
+            "jp": "マヤ！ようこそ。トムだよ。わあ、早いね。月曜に早く来る人なんて誰もいないよ。"
+          },
+          {
+            "sp": 0,
+            "en": "I got nervous and left an hour ahead. I ended up walking around the block twice.",
+            "jp": "緊張して1時間早く出たんです。結局、ブロックを2周しました。"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! Been there. Okay, first things first. Here's your badge, and lemme show you where you're sitting.",
+            "jp": "はは！経験あるよ。まず最初に、これがバッジで、席を案内するね。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:案内を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "Great. Is it okay if I put some photos on my desk?",
+            "jp": "よかった。机に写真を置いてもいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure, go nuts. Just no candles. Last year somebody set off the fire alarm.",
+            "jp": "もちろん、好きにして。ただしキャンドルはだめ。去年、誰かが火災報知器を鳴らしたから。"
+          },
+          {
+            "sp": 0,
+            "en": "Noted. Where do I get my laptop?",
+            "jp": "覚えておきます。ノートパソコンはどこでもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "IT's on the third floor. Tell 'em you're new, and they'll set up everything, the email, the VPN, all that.",
+            "jp": "ITは3階だよ。新人だと伝えれば、メールもVPNも全部設定してくれる。",
+            "note": "元の形: them／聞こえ方: エム／使う場面:人をくだけて指す時"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. And what about the team? Who should I talk to first?",
+            "jp": "分かりました。チームはどうですか？最初に誰と話せばいいですか？",
+            "note": "元の形: I have it／聞こえ方: ガット／使う場面:了解を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Me, for now. Then at ten, we've got the team meeting, and everyone's gonna introduce themselves.",
+            "jp": "今は僕と。それから10時にチーム会議があって、みんなが自己紹介する予定だよ。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:予定を言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. Should I prepare something?",
+            "jp": "分かりました。何か準備した方がいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Just your name, your last job, and one fun fact. Don't overthink it.",
+            "jp": "名前と前の仕事と、おもしろい豆知識を一つだけ。考えすぎないで。"
+          }
+        ]
+      },
+      {
+        "t": "【入社初日②】ランチと先輩の本音",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Maya, over here! We saved you a seat. This is Priya, and that's Jordan.",
+            "jp": "マヤ、こっち！席を取っておいたよ。こちらがプリヤで、あっちがジョーダン。"
+          },
+          {
+            "sp": 1,
+            "en": "Hey, nice to meet you both. Wow, this cafeteria's huge.",
+            "jp": "はじめまして。わあ、この食堂は広いですね。"
+          },
+          {
+            "sp": 0,
+            "en": "Right? The food's decent, and it's cheap. But skip the Thursday curry. Trust me.",
+            "jp": "でしょ？味はまあまあで、安いの。でも木曜のカレーは避けて。信じて。"
+          },
+          {
+            "sp": 1,
+            "en": "Noted. So, how's the team? Honestly, I wanna know what I'm walking into.",
+            "jp": "覚えておきます。それで、チームはどうですか？正直、何に飛び込むのか知りたいんです。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:本音を聞く時"
+          },
+          {
+            "sp": 0,
+            "en": "It's good, but busy. We ship every two weeks, and the deadlines are real. Still, nobody expects you to stay late.",
+            "jp": "いいチームだけど忙しいよ。2週間ごとにリリースで、締め切りは本物。でも、遅くまで残ることは誰も期待してない。"
+          },
+          {
+            "sp": 1,
+            "en": "Really? At my last job, leaving at six felt like a crime.",
+            "jp": "本当ですか？前の職場では、6時に帰るのは犯罪みたいな雰囲気でした。"
+          },
+          {
+            "sp": 0,
+            "en": "Not here. Tom'd tell you to go home, y'know, even if you didn't wanna.",
+            "jp": "ここでは違うよ。トムは、ほら、帰りたくなくても帰れって言うから。",
+            "note": "元の形: you know／want to／聞こえ方: ヤノウ／ワナ／使う場面:補足を足す時"
+          },
+          {
+            "sp": 1,
+            "en": "Guilty. Burnout's real, and I've seen it happen.",
+            "jp": "その通り。燃え尽きは現実にあるし、実際に見てきたから。"
+          },
+          {
+            "sp": 0,
+            "en": "That's good to hear. One thing I'm worried about is the code review. Is it brutal?",
+            "jp": "それを聞いて安心です。心配なのはコードレビューです。厳しいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Blunt, but fair. Nobody's trying to make you feel small. If somebody does, tell me.",
+            "jp": "率直だけど公平。誰も君を小さく見せようとはしない。もしそんな人がいたら、私に言って。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks, Jordan. I already feel better.",
+            "jp": "ありがとう、ジョーダン。もう気が楽になりました。"
+          },
+          {
+            "sp": 1,
+            "en": "Good. Now eat. The curry's not on today's menu, so you're safe.",
+            "jp": "よし。さあ食べて。今日はカレーがないから、大丈夫。"
+          }
+        ]
+      },
+      {
+        "t": "【入社初日③】最初のミスと帰り道",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Maya, quick question. Did you send an email to the whole company a few minutes ago?",
+            "jp": "ねえマヤ、ちょっと聞くけど。数分前に、全社員にメールを送った？"
+          },
+          {
+            "sp": 1,
+            "en": "Oh no. I was just replying to the welcome thread. Did it go to everybody?",
+            "jp": "まずい。ただ歓迎のスレッドに返信しただけです。全員に届きました？"
+          },
+          {
+            "sp": 0,
+            "en": "Eight hundred people. It says, 'Thanks, everyone! Can't wait to learn from you all!' with three smiley faces.",
+            "jp": "800人に。『皆さんありがとう！皆さんから学ぶのが待ちきれません！』って、笑顔の絵文字が3つ付いて。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh my God. I'm so embarrassed. I'm gonna hide under my desk.",
+            "jp": "もう、恥ずかしい。机の下に隠れます。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:大げさに言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Don't. Honestly, it's kinda sweet. Half the company's already replied with welcome messages.",
+            "jp": "やめて。正直、ちょっと素敵だよ。もう会社の半分が歓迎のメッセージを返してる。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Really? That's the opposite of what I expected.",
+            "jp": "本当ですか？予想と正反対です。"
+          },
+          {
+            "sp": 0,
+            "en": "Everybody's done it once. I did it in my second week, and I attached a salary spreadsheet.",
+            "jp": "みんな一度はやるよ。僕は2週目にやって、給与の表を添付したから。"
+          },
+          {
+            "sp": 1,
+            "en": "Wait, you didn't.",
+            "jp": "うそでしょう、そんなことしてないですよね。"
+          },
+          {
+            "sp": 0,
+            "en": "I did. Look, you survived day one. That's the only goal.",
+            "jp": "やったよ。いいかい、君は初日を乗り切った。目標はそれだけだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks, Tom. Okay, I'm gonna go home before I send another one.",
+            "jp": "ありがとう、トム。じゃあ、もう1通送る前に帰ります。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからやると言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Good call. See you tomorrow. And, Maya? Great first day.",
+            "jp": "いい判断。また明日。それとマヤ、いい初日だったよ。"
+          },
+          {
+            "sp": 1,
+            "en": "Thanks. See you tomorrow.",
+            "jp": "ありがとう。また明日。"
+          }
+        ]
+      },
+      {
+        "t": "【旅の3日間①】到着日：遅延とホテル",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi, I'm checking in. Reservation under Sato. I know I'm really late. My flight was delayed four hours.",
+            "jp": "チェックインをお願いします。佐藤で予約しています。ひどく遅くなってすみません。フライトが4時間遅れて。"
+          },
+          {
+            "sp": 1,
+            "en": "No problem at all, Mr. Sato. We saw the delay. Let me pull up your booking. Two nights, correct?",
+            "jp": "全く問題ありません、佐藤様。遅延は確認しています。ご予約を出しますね。2泊でよろしいですか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:手続きを始める時"
+          },
+          {
+            "sp": 0,
+            "en": "That's right. Is the restaurant still open? I haven't eaten since the plane.",
+            "jp": "そうです。レストランはまだ開いていますか？機内食から何も食べていなくて。"
+          },
+          {
+            "sp": 1,
+            "en": "The kitchen closed at ten, but room service's open until midnight. I'll send you a menu.",
+            "jp": "厨房は10時で閉まりましたが、ルームサービスは夜中まで開いています。メニューをお送りします。"
+          },
+          {
+            "sp": 0,
+            "en": "Perfect. And is there a way to get to the city center tomorrow morning without a taxi?",
+            "jp": "よかった。明日の朝、タクシーなしで市の中心部へ行く方法はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, the metro's two blocks away, and the first train's at five thirty. Day passes are at the front desk.",
+            "jp": "はい、地下鉄が2ブロック先で、始発は5時半です。1日券はフロントで買えます。"
+          },
+          {
+            "sp": 0,
+            "en": "Great. One more thing. Lemme warn you, I'm a light sleeper, so, is the room facing the street?",
+            "jp": "よかった。もう一つ。先に言っておくと、眠りが浅いので、部屋は通り側ですか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:前置きを言う時"
+          },
+          {
+            "sp": 1,
+            "en": "It's on the sixth floor, facing the courtyard, so it should be nice and quiet.",
+            "jp": "6階で中庭側ですので、静かだと思います。"
+          },
+          {
+            "sp": 0,
+            "en": "Wonderful. Thank you so much.",
+            "jp": "素晴らしい。ありがとうございます。"
+          },
+          {
+            "sp": 1,
+            "en": "My pleasure. Here's your key. Enjoy your stay, and get some rest.",
+            "jp": "どういたしまして。こちらが鍵です。ご滞在をお楽しみください、ゆっくりお休みを。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. Good night.",
+            "jp": "ありがとう。おやすみなさい。"
+          }
+        ]
+      },
+      {
+        "t": "【旅の3日間②】2日目：道に迷う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, do you speak English? I'm trying to get to the old market, but my map's not working.",
+            "jp": "すみません、英語は話せますか？古い市場に行きたいんですが、地図が動かなくて。"
+          },
+          {
+            "sp": 1,
+            "en": "A little. The old market? That's, how do you say, kinda far. Maybe thirty minutes by foot.",
+            "jp": "少し。古い市場？それは、なんて言うか、ちょっと遠いです。歩いて30分くらい。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Thirty minutes. Hmm. Is there a bus?",
+            "jp": "30分ですか。うーん。バスはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, number twelve. The stop is there, behind the church. But it comes only every twenty minutes.",
+            "jp": "はい、12番です。停留所はあそこ、教会の後ろ。でも20分おきです。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. Do I pay on the bus, or should I buy a ticket first?",
+            "jp": "分かりました。バスで払いますか、それとも先に切符を買うべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Buy first, at the kiosk. It's cheaper, and the driver doesn't take big bills.",
+            "jp": "先に売店で買ってください。安いし、運転手は高額紙幣を受けつけません。"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. And can you recommend a place to eat there? Somewhere local, not touristy.",
+            "jp": "分かりました。あそこで食べる店のおすすめはありますか？観光客向けじゃなくて、地元の店で。",
+            "note": "元の形: I have it／聞こえ方: ガット／使う場面:了解を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "Ah, yes. Look for a small place with a blue door. Ask for the fish soup. My grandmother used to make it.",
+            "jp": "ああ、はい。青いドアの小さな店を探して。魚のスープを頼んでください。私の祖母が作っていました。"
+          },
+          {
+            "sp": 0,
+            "en": "That sounds perfect. I really appreciate it.",
+            "jp": "最高ですね。本当に助かります。"
+          },
+          {
+            "sp": 1,
+            "en": "Enjoy! And watch your bag at the market. It gets crowded.",
+            "jp": "楽しんで！それと市場ではバッグに気をつけて。混むので。"
+          },
+          {
+            "sp": 0,
+            "en": "Will do. Thank you.",
+            "jp": "そうします。ありがとう。"
+          }
+        ]
+      },
+      {
+        "t": "【旅の3日間③】3日目：空港行きに間に合うか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Front desk? Hi, it's Sato again. Gimme a sec. I think there's a problem with my airport shuttle.",
+            "jp": "フロントですか？また佐藤です。ちょっと待ってください。空港シャトルに問題があるようで。",
+            "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+          },
+          {
+            "sp": 1,
+            "en": "Good morning, Mr. Sato. What seems to be the trouble?",
+            "jp": "おはようございます、佐藤様。どうされましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "I booked the seven o'clock shuttle, but I just checked the board downstairs, and it says seven thirty.",
+            "jp": "7時のシャトルを予約したのに、今下の掲示板を見たら、7時半と書いてあります。"
+          },
+          {
+            "sp": 1,
+            "en": "Let me check. Oh, I'm sorry. The schedule changed this morning, and we should've called you.",
+            "jp": "確認します。ああ、申し訳ありません。今朝、時刻が変更になって、お電話すべきでした。"
+          },
+          {
+            "sp": 0,
+            "en": "My flight's at ten. Is seven thirty gonna be too late?",
+            "jp": "フライトは10時です。7時半では遅すぎますか？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:心配を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "It should be okay, but I'd rather not risk it. I can arrange a taxi at our expense, leaving in ten minutes.",
+            "jp": "大丈夫なはずですが、危険は避けたいです。当方の負担でタクシーを手配でき、10分後に出発できます。"
+          },
+          {
+            "sp": 0,
+            "en": "That would be great. How long's the drive?",
+            "jp": "それは助かります。運転時間はどのくらいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "About forty minutes, so you'll be there well before eight thirty.",
+            "jp": "約40分なので、8時半よりずっと前に着きます。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, I'll be down in five. Thanks for fixing this.",
+            "jp": "分かりました、5分で降ります。対応してくれてありがとう。"
+          },
+          {
+            "sp": 1,
+            "en": "Our pleasure, and again, sorry about the mix-up. Safe travels!",
+            "jp": "とんでもありません、重ねて、手違いをお詫びします。道中お気をつけて！"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. It's been a great trip, honestly.",
+            "jp": "ありがとう。正直、とてもいい旅でした。"
+          }
+        ]
+      },
+      {
+        "t": "【引っ越し新生活①】内見",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Come on in. As you can see, it gets a lot of natural light. The living room faces south.",
+            "jp": "どうぞ入って。ご覧の通り、自然光がたっぷり入ります。リビングは南向きです。"
+          },
+          {
+            "sp": 1,
+            "en": "Wow, it's bigger than the photos. What's the monthly rent again?",
+            "jp": "わあ、写真より広い。家賃は月いくらでしたっけ？"
+          },
+          {
+            "sp": 0,
+            "en": "Twelve hundred, utilities not included. Heat's about eighty a month in winter.",
+            "jp": "1200ドルで、光熱費は別です。冬の暖房は月80ドルくらい。"
+          },
+          {
+            "sp": 1,
+            "en": "Hmm. That's a bit above my budget. Is there any flexibility?",
+            "jp": "うーん。予算より少し高いな。交渉の余地はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Honestly, the owner might drop it to eleven fifty if you sign for two years.",
+            "jp": "正直、2年契約なら、オーナーが1150ドルに下げるかもしれません。"
+          },
+          {
+            "sp": 1,
+            "en": "Two years is a long time. Lemme think about it. Can I see the bedroom first?",
+            "jp": "2年は長いですね。ちょっと考えさせて。まず寝室を見てもいいですか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:考える時間をとる時"
+          },
+          {
+            "sp": 0,
+            "en": "Of course. It's right through here. The closet's a walk-in, which is rare in this building.",
+            "jp": "もちろん。こちらです。クローゼットはウォークインで、この建物では珍しいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh, that's nice. What about noise? Is the street loud at night?",
+            "jp": "わあ、いいですね。騒音はどうですか？夜は通りがうるさい？"
+          },
+          {
+            "sp": 0,
+            "en": "A little, but the windows are double-glazed. Most tenants say they don't even notice.",
+            "jp": "少しだけど、窓は二重ガラスです。ほとんどの住人は気づかないと言います。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. I gotta be honest, I really like it. When can I give you an answer?",
+            "jp": "分かりました。正直、とても気に入りました。いつまでにお返事すればいいですか？",
+            "note": "元の形: have got to／聞こえ方: ガラ／使う場面:本音を言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Two other people are coming this afternoon, so, tonight if you can.",
+            "jp": "午後に他の2人も来るので、できれば今夜までに。"
+          },
+          {
+            "sp": 1,
+            "en": "I'll call you by six.",
+            "jp": "6時までに電話します。"
+          }
+        ]
+      },
+      {
+        "t": "【引っ越し新生活②】契約と鍵",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hello, it's Ken. I'd like to take the apartment. The one on Maple Street, with the south-facing living room.",
+            "jp": "もしもし、ケンです。あの部屋に決めたいです。メープル通りの、南向きのリビングの。"
+          },
+          {
+            "sp": 1,
+            "en": "Wonderful. Come by tomorrow at ten, and we'll sign the lease. Bring your ID and the first month's rent.",
+            "jp": "素晴らしい。明日の10時に来てください。賃貸契約に署名します。身分証と1か月目の家賃を持ってきて。"
+          },
+          {
+            "sp": 0,
+            "en": "Do I need to pay a deposit, too?",
+            "jp": "敷金も払う必要がありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, one month's rent, refundable when you move out, as long as there's no damage.",
+            "jp": "はい、家賃1か月分で、退去時に、傷みがなければ返金されます。"
+          },
+          {
+            "sp": 0,
+            "en": "Understood. And pets? I've got a small cat.",
+            "jp": "分かりました。ペットは？小さな猫がいるんですが。"
+          },
+          {
+            "sp": 1,
+            "en": "Cats are fine, with a fifty-dollar monthly pet fee. Is it vaccinated?",
+            "jp": "猫は大丈夫で、月50ドルのペット料金がかかります。予防接種は済んでいますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Yep, all up to date. I can bring the records tomorrow.",
+            "jp": "はい、全部最新です。明日記録を持っていきます。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. One more thing. Lemme warn you, the lease has a clause about no painting without permission.",
+            "jp": "よし。もう一つ。先に言っておくと、契約には、許可なしでの塗装は禁止という条項があります。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:前置きを言う時"
+          },
+          {
+            "sp": 0,
+            "en": "That's fine. I just wanna hang a few shelves.",
+            "jp": "それは大丈夫です。棚を2、3個つけたいだけなので。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたいことを言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Shelves are okay, as long as you patch the holes when you leave.",
+            "jp": "棚は大丈夫です、出る時に穴を埋めてくれれば。"
+          },
+          {
+            "sp": 0,
+            "en": "Deal. See you at ten.",
+            "jp": "了解。10時に。"
+          }
+        ]
+      },
+      {
+        "t": "【引っ越し新生活③】隣人にあいさつ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi there! I'm Ken. I just moved into 5C, right next door. I wanted to say hello and apologize in advance for the boxes.",
+            "jp": "こんにちは！ケンです。隣の5Cに引っ越してきました。あいさつと、箱で騒がしくなることを先におわびしたくて。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh, welcome! I'm Linda. Don't worry about the boxes. We've all been there. Do you need any help?",
+            "jp": "まあ、ようこそ！リンダよ。箱のことは気にしないで。みんな通る道だから。手伝いはいる？"
+          },
+          {
+            "sp": 0,
+            "en": "Actually, yeah. I can't get the couch through the door. It's stuck at the corner.",
+            "jp": "実は、はい。ソファがドアを通らなくて。角で引っかかってるんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Ha! Everybody has that problem. Take the legs off, and tilt it. My husband'll come and help.",
+            "jp": "はは！みんなそれで困るの。脚を外して、傾けて。夫が来て手伝うわ。"
+          },
+          {
+            "sp": 0,
+            "en": "That'd be amazing. Thanks so much. Y'know, I didn't expect people to be this nice.",
+            "jp": "本当に助かります。ありがとうございます。ほら、こんなに親切にしてもらえるとは思っていなくて。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:しみじみ言う時"
+          },
+          {
+            "sp": 1,
+            "en": "We're a friendly building. Just one rule: recycling is on Thursdays, and the janitor gets grumpy if you mess it up.",
+            "jp": "親切なビルなのよ。ルールは一つ、リサイクルは木曜で、間違えると管理人さんが不機嫌になるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Thursdays. Got it. Anything else I should know?",
+            "jp": "木曜ですね。分かりました。ほかに知っておくことは？",
+            "note": "元の形: I have it／聞こえ方: ガット／使う場面:了解を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "The laundry room closes at ten, and the elevator's slow, so take the stairs if you're in a hurry.",
+            "jp": "洗濯室は10時に閉まるし、エレベーターは遅いから、急ぐなら階段を使って。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. And please, if I'm ever too loud, just knock. I won't be offended.",
+            "jp": "ありがとう。それと、もし私がうるさかったら、ノックしてください。気を悪くしませんから。"
+          },
+          {
+            "sp": 1,
+            "en": "Will do. And you'll hear me, too. I've got a toddler.",
+            "jp": "そうするわ。私もうるさいわよ。幼い子がいるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! Deal. Nice to meet you, Linda.",
+            "jp": "はは！了解。よろしく、リンダ。"
+          },
+          {
+            "sp": 1,
+            "en": "You too, Ken. Welcome home.",
+            "jp": "こちらこそ、ケン。おかえりなさい。"
+          }
+        ]
+      }
+    ]
+  }
+]
