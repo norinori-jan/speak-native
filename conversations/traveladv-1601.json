@@ -1,0 +1,331 @@
+[
+  {
+    "id": "traveladv",
+    "ic": "🧳",
+    "n": "旅行先トラブル・応用編",
+    "hint": "travelers deal with lost bags, a missing hotel booking, a stolen wallet, a car breakdown, and a tight connection",
+    "level": 4,
+    "keywords": [
+      "travel",
+      "trouble",
+      "advanced"
+    ],
+    "d": [
+      {
+        "t": "荷物が出てこない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, I've been waiting at carousel six for forty minutes, and my suitcase still hasn't shown up. Everyone else's bags are gone.",
+            "jp": "すみません、6番のターンテーブルで40分待っているのに、スーツケースが出てきません。ほかの人の荷物はもうありません。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm sorry to hear that. Can I see your baggage claim tag, please?",
+            "jp": "それは申し訳ありません。手荷物引換証を見せていただけますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Here you go. It's a black suitcase with a red ribbon on the handle.",
+            "jp": "どうぞ。黒いスーツケースで、持ち手に赤いリボンが付いています。"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you. Hmm, it looks like it was never loaded in Chicago. It's still sitting there, and it'll probably arrive on tomorrow morning's flight.",
+            "jp": "ありがとうございます。うーん、シカゴで積まれなかったようです。まだそこにあって、おそらく明日朝の便で届きます。"
+          },
+          {
+            "sp": 0,
+            "en": "Tomorrow? I've got a wedding to go to tonight, and my suit is in that bag.",
+            "jp": "明日？今夜は結婚式があって、スーツはそのバッグの中なんです。"
+          },
+          {
+            "sp": 1,
+            "en": "I understand. Let me file a report and arrange delivery to your hotel. Meanwhile, the airline offers an emergency allowance for essentials.",
+            "jp": "分かります。報告書を作成して、ホテルへの配送を手配します。その間、航空会社は必需品用の緊急手当を出しています。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:手続きを始める時"
+          },
+          {
+            "sp": 0,
+            "en": "How much is the allowance?",
+            "jp": "手当はいくらですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Seventy-five dollars. Keep your receipts, and you can submit them online.",
+            "jp": "75ドルです。領収書を保管して、オンラインで提出してください。"
+          },
+          {
+            "sp": 0,
+            "en": "Seventy-five won't buy a suit, but at least it's something. Can I get a reference number?",
+            "jp": "75ドルではスーツは買えませんが、ないよりはましです。受付番号をもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Of course. It's on this slip, and you can track your bag online with it.",
+            "jp": "もちろん。この紙に書いてあり、それでバッグをオンラインで追跡できます。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. You've been really kind about all this.",
+            "jp": "ありがとう。いろいろ親切にしてくれて。"
+          },
+          {
+            "sp": 1,
+            "en": "It's the least I can do. I hope you make it to the wedding.",
+            "jp": "それくらいはさせてください。結婚式に間に合うことを願っています。"
+          }
+        ]
+      },
+      {
+        "t": "ホテルの予約が入っていない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Good evening. Reservation for Tanaka, please. Two nights, and I booked a room with a view.",
+            "jp": "こんばんは。田中で予約しています。2泊で、眺めのいい部屋を予約しました。"
+          },
+          {
+            "sp": 1,
+            "en": "Let me check. Hmm, I'm not finding anything under that name. Could it be under a different spelling?",
+            "jp": "確認します。うーん、その名前では見つかりません。別の綴りではありませんか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "No, I have the confirmation email right here. Look, it says confirmed, with the booking number.",
+            "jp": "いえ、確認メールがここにあります。ほら、予約番号つきで確定と書いてあります。"
+          },
+          {
+            "sp": 1,
+            "en": "I see it. Oh, I'm so sorry. This was booked through a third-party site, and sometimes the system doesn't sync up.",
+            "jp": "拝見しました。ああ、大変申し訳ありません。これは第三者サイト経由の予約で、システムが連携しないことがあるんです。"
+          },
+          {
+            "sp": 0,
+            "en": "So what does that mean for tonight? I've been traveling for fourteen hours, and I'm really not in the mood.",
+            "jp": "それで、今夜はどうなるんですか？14時間移動してきて、本当にそんな気分じゃないんです。"
+          },
+          {
+            "sp": 1,
+            "en": "I completely understand. We are fully booked tonight, but I can get you a room at our sister hotel, five minutes away, at no extra charge.",
+            "jp": "よく分かります。今夜は満室ですが、5分ほどの姉妹ホテルに、追加料金なしでお部屋をご用意できます。"
+          },
+          {
+            "sp": 0,
+            "en": "Is it comparable? I'd rather not end up in a closet with a sink.",
+            "jp": "同じくらいのお部屋ですか？洗面台つきの物置は勘弁してほしいんです。"
+          },
+          {
+            "sp": 1,
+            "en": "It's actually a bit nicer, with a city view. And we'll cover the taxi and a free breakfast tomorrow.",
+            "jp": "実は少し上等で、街の眺めがあります。タクシー代と、明日の朝食も無料にします。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. That's fair. Can you write down the address for the driver?",
+            "jp": "分かりました。それは妥当です。運転手用に住所を書いてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. And again, I'm sorry about the mix-up. Please enjoy your stay.",
+            "jp": "もちろんです。重ねて、手違いをお詫びします。ご滞在をお楽しみください。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. And, hey, you handled that well.",
+            "jp": "ありがとう。それと、対応がよかったよ。"
+          }
+        ]
+      },
+      {
+        "t": "財布をすられた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Officer, I need to report something. I think my wallet was stolen on the subway about twenty minutes ago.",
+            "jp": "警察の方、報告したいことがあります。20分ほど前に、地下鉄で財布を盗まれたと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, take a deep breath. Tell me what happened, from the beginning.",
+            "jp": "分かりました、深呼吸して。最初から何があったか話してください。"
+          },
+          {
+            "sp": 0,
+            "en": "I was standing near the door, and the train was packed. A guy bumped into me, said sorry, and a minute later I reached for my phone, and my wallet was gone.",
+            "jp": "ドアの近くに立っていて、電車は満員でした。男の人がぶつかってきて謝り、1分後に携帯を取ろうとしたら、財布がありませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Can you describe him?",
+            "jp": "その人の特徴を言えますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Tall, gray jacket, maybe thirty? I didn't really see his face. It happened so fast.",
+            "jp": "背が高くて、グレーのジャケット、30歳くらい？顔はよく見ていません。あっという間でした。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a common trick. What was in the wallet?",
+            "jp": "よくある手口です。財布には何が入っていましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "About two hundred in cash, my credit cards, and my driver's license. My passport's at the hotel, thank goodness.",
+            "jp": "現金が200ドルほど、クレジットカード、免許証です。パスポートはホテルにあって、助かりました。"
+          },
+          {
+            "sp": 1,
+            "en": "First thing, call your bank and cancel the cards right now. You can do that while I file the report.",
+            "jp": "まず、今すぐ銀行に電話してカードを止めてください。私が報告書を作る間にできます。"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah, good idea. Is there any chance of getting the wallet back?",
+            "jp": "ええ、いい考えです。財布が戻る可能性はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, the cash is gone, but sometimes thieves toss the wallet. If someone turns it in, we'll call you at the hotel.",
+            "jp": "正直、現金は戻りませんが、泥棒が財布を捨てることもあります。誰かが届けたら、ホテルに電話します。"
+          },
+          {
+            "sp": 0,
+            "en": "Thank you. Do I get a copy of the report for the insurance?",
+            "jp": "ありがとうございます。保険用に、報告書の写しはもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, ma'am. You'll have it before you leave.",
+            "jp": "はい。お帰りになる前にお渡しします。"
+          }
+        ]
+      },
+      {
+        "t": "レンタカーのトラブル",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi, I'm calling about the rental car I picked up this morning. The engine light just came on, and I'm in the middle of nowhere.",
+            "jp": "こんにちは、今朝借りたレンタカーのことで電話しています。エンジンの警告灯がついて、周りには何もない場所にいます。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm sorry about that. Where are you right now, and are you somewhere safe?",
+            "jp": "それは申し訳ありません。今どこにいらっしゃいますか、安全な場所ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "I'm on Highway Nine, about thirty miles past the gas station in Millbrook. I pulled onto the shoulder.",
+            "jp": "9号線で、ミルブルックのガソリンスタンドから30マイルほど先です。路肩に停めました。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. Is the car still running, or has it stopped?",
+            "jp": "分かりました。車はまだ動いていますか、それとも止まりましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "It's still running, but it's shaking, and there's a weird smell. I don't wanna risk driving any farther.",
+            "jp": "まだ動いていますが、揺れていて、変なにおいがします。これ以上運転するのは危険だと思います。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたくない時"
+          },
+          {
+            "sp": 1,
+            "en": "That's smart. Don't drive it. I'm sending a tow truck, and it should reach you in about forty-five minutes.",
+            "jp": "賢明です。運転しないでください。レッカー車を手配しますので、45分ほどで着きます。"
+          },
+          {
+            "sp": 0,
+            "en": "And what about my trip? I have a hotel booked two hours from here.",
+            "jp": "旅行はどうなりますか？ここから2時間のところにホテルを予約してあるんです。"
+          },
+          {
+            "sp": 1,
+            "en": "We'll bring a replacement car to wherever the tow truck takes you, and there's no charge for the swap.",
+            "jp": "レッカー車の行き先まで代わりの車をお持ちします。交換の費用はかかりません。"
+          },
+          {
+            "sp": 0,
+            "en": "Great. Can I get that in an email, just in case?",
+            "jp": "よかった。念のため、それをメールでもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. And please stay inside the car with your hazard lights on until the truck arrives.",
+            "jp": "もちろん。レッカー車が着くまで、ハザードランプをつけて、車の中にいてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Will do. Thanks for the quick help.",
+            "jp": "そうします。迅速に対応してくれてありがとう。"
+          }
+        ]
+      },
+      {
+        "t": "乗り継ぎに間に合わない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Excuse me, my connecting flight to Seattle leaves in twenty minutes, and my first flight just landed. Can you help me?",
+            "jp": "すみません、シアトル行きの乗り継ぎ便が20分後に出発するのに、最初の便が今着いたところです。助けてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Let me see your boarding pass. Oh, you're at gate B12, and you're at gate C40. That's a long walk.",
+            "jp": "搭乗券を見せてください。ああ、B12にいて、C40に行くのですね。かなり歩きます。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認する時"
+          },
+          {
+            "sp": 0,
+            "en": "How long does it take, realistically?",
+            "jp": "現実的には、どのくらいかかりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Twelve to fifteen minutes if you hurry. Take the shuttle on your left, and tell the staff at the gate that you're a tight connection.",
+            "jp": "急げば12分から15分です。左のシャトルに乗って、乗り継ぎがぎりぎりだとゲートの係員に伝えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I miss it?",
+            "jp": "間に合わなかったらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Then the airline has to rebook you at no charge. Just don't wait, and go straight to the nearest help desk.",
+            "jp": "その場合、航空会社が無料で別の便を手配します。待たずに、一番近い案内カウンターに行ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, shuttle on the left. Thank you so much.",
+            "jp": "分かりました、左のシャトルですね。ありがとうございます。"
+          },
+          {
+            "sp": 1,
+            "en": "Good luck. Run if you have to, but don't trip.",
+            "jp": "がんばって。必要なら走って、でも転ばないでね。"
+          },
+          {
+            "sp": 0,
+            "en": "Wait, excuse me, one more thing. My bag. Is it gonna make it?",
+            "jp": "待って、すみません、もう一つ。私の荷物は間に合いますか？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:心配を伝える時"
+          },
+          {
+            "sp": 1,
+            "en": "It should. When it's a tight connection, they usually move the bags faster. But I can't promise anything.",
+            "jp": "たぶん。ぎりぎりの乗り継ぎなら、荷物も早く動かすのが普通です。でも約束はできません。"
+          },
+          {
+            "sp": 0,
+            "en": "Fair enough. Thanks again.",
+            "jp": "もっともです。重ねてありがとう。"
+          }
+        ]
+      }
+    ]
+  }
+]

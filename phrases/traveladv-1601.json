@@ -1,0 +1,377 @@
+{
+  "app": "phrase-pack",
+  "id": "traveladv-1601",
+  "ver": 1,
+  "situation": "traveladv",
+  "sname": "旅行先トラブル・応用編",
+  "icon": "🧳",
+  "level": 4,
+  "title": "旅行先トラブル・応用編（長い掛け合い）",
+  "items": [
+    {
+      "id": "traveladv-1601-001",
+      "en": "Excuse me, my suitcase never showed up at carousel six.",
+      "jp": "すみません、6番のターンテーブルにスーツケースが出てきませんでした。",
+      "speak": "Excuse me, my suitcase never showed up at carousel six.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-002",
+      "en": "Can I see your baggage claim tag, please?",
+      "jp": "手荷物引換証を見せていただけますか？",
+      "speak": "Can I see your baggage claim tag, please?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-003",
+      "en": "It's still sitting in Chicago. It'll come on tomorrow's flight.",
+      "jp": "まだシカゴにあります。明日の便で届きます。",
+      "speak": "It's still sitting in Chicago. It'll come on tomorrow's flight.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-004",
+      "en": "Keep your receipts, and you can submit them online.",
+      "jp": "領収書を保管して、オンラインで提出してください。",
+      "speak": "Keep your receipts, and you can submit them online.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-005",
+      "en": "Lemme file a report and arrange delivery to your hotel.",
+      "jp": "報告書を作成して、ホテルへの配送を手配します。",
+      "speak": "Lemme file a report and arrange delivery to your hotel.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:手続きを始める時"
+    },
+    {
+      "id": "traveladv-1601-006",
+      "en": "I'm not finding anything under that name. Could it be a different spelling?",
+      "jp": "その名前では見つかりません。別の綴りではありませんか？",
+      "speak": "I'm not finding anything under that name. Could it be a different spelling?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-007",
+      "en": "I have the confirmation email right here, with the booking number.",
+      "jp": "確認メールがここにあります。予約番号つきで。",
+      "speak": "I have the confirmation email right here, with the booking number.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-008",
+      "en": "We're fully booked, but I can get you a room at our sister hotel.",
+      "jp": "満室ですが、姉妹ホテルにお部屋をご用意できます。",
+      "speak": "We're fully booked, but I can get you a room at our sister hotel.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-009",
+      "en": "Is it comparable? I'd rather not end up in a closet.",
+      "jp": "同じくらいですか？物置は勘弁してほしいな。",
+      "speak": "Is it comparable? I'd rather not end up in a closet.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-010",
+      "en": "We'll cover the taxi and a free breakfast tomorrow.",
+      "jp": "タクシー代と、明日の朝食は無料にします。",
+      "speak": "We'll cover the taxi and a free breakfast tomorrow.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-011",
+      "en": "I think my wallet was stolen on the subway about twenty minutes ago.",
+      "jp": "20分ほど前に、地下鉄で財布を盗まれたと思います。",
+      "speak": "I think my wallet was stolen on the subway about twenty minutes ago.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-012",
+      "en": "A guy bumped into me, said sorry, and a minute later my wallet was gone.",
+      "jp": "男の人がぶつかってきて謝り、1分後には財布がなかった。",
+      "speak": "A guy bumped into me, said sorry, and a minute later my wallet was gone.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-013",
+      "en": "First thing, call your bank and cancel the cards right now.",
+      "jp": "まず、今すぐ銀行に電話してカードを止めてください。",
+      "speak": "First thing, call your bank and cancel the cards right now.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-014",
+      "en": "Do I get a copy of the report for the insurance?",
+      "jp": "保険用に、報告書の写しはもらえますか？",
+      "speak": "Do I get a copy of the report for the insurance?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-015",
+      "en": "The engine light just came on, and I'm in the middle of nowhere.",
+      "jp": "エンジンの警告灯がついて、周りには何もない場所にいます。",
+      "speak": "The engine light just came on, and I'm in the middle of nowhere.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-016",
+      "en": "I don't wanna risk driving any farther. It's shaking pretty bad.",
+      "jp": "これ以上運転するのは危険です。かなり揺れています。",
+      "speak": "I don't wanna risk driving any farther. It's shaking pretty bad.",
+      "say": [],
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたくない時"
+    },
+    {
+      "id": "traveladv-1601-017",
+      "en": "Stay inside the car with your hazard lights on until the truck arrives.",
+      "jp": "レッカー車が着くまで、ハザードランプをつけて車内にいてください。",
+      "speak": "Stay inside the car with your hazard lights on until the truck arrives.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-018",
+      "en": "We'll bring a replacement car, and there's no charge for the swap.",
+      "jp": "代わりの車をお持ちします。交換の費用はかかりません。",
+      "speak": "We'll bring a replacement car, and there's no charge for the swap.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-019",
+      "en": "My connecting flight leaves in twenty minutes. Can you help me?",
+      "jp": "乗り継ぎ便が20分後に出発します。助けてもらえますか？",
+      "speak": "My connecting flight leaves in twenty minutes. Can you help me?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-020",
+      "en": "Take the shuttle on your left, and tell the staff it's a tight connection.",
+      "jp": "左のシャトルに乗って、乗り継ぎがぎりぎりだと係員に伝えて。",
+      "speak": "Take the shuttle on your left, and tell the staff it's a tight connection.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-021",
+      "en": "If you miss it, the airline has to rebook you at no charge.",
+      "jp": "間に合わなければ、航空会社が無料で別の便を手配します。",
+      "speak": "If you miss it, the airline has to rebook you at no charge.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-022",
+      "en": "Is my bag gonna make it? I can't promise anything.",
+      "jp": "荷物は間に合いますか？約束はできませんが。",
+      "speak": "Is my bag gonna make it? I can't promise anything.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:心配を伝える時"
+    },
+    {
+      "id": "traveladv-1601-023",
+      "en": "Gimme a sec. I need to find my passport.",
+      "jp": "ちょっと待って。パスポートを探さなきゃ。",
+      "speak": "Gimme a sec. I need to find my passport.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:少し待ってもらう時"
+    },
+    {
+      "id": "traveladv-1601-024",
+      "en": "Hey, buddy, you dropped your boarding pass.",
+      "jp": "ねえ、搭乗券を落としたよ。",
+      "speak": "Hey, buddy, you dropped your boarding pass.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-025",
+      "en": "Sir, I'm afraid this seat is already taken.",
+      "jp": "お客様、申し訳ありませんが、この席はすでに埋まっています。",
+      "speak": "Sir, I'm afraid this seat is already taken.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-026",
+      "en": "Ma'am, could you step over here for a moment?",
+      "jp": "お客様、少しこちらへお越しいただけますか？",
+      "speak": "Ma'am, could you step over here for a moment?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-027",
+      "en": "Dude, we're gonna miss the train if we don't hurry.",
+      "jp": "なあ、急がないと電車に乗り遅れるよ。",
+      "speak": "Dude, we're gonna miss the train if we don't hurry.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:急がせる時"
+    },
+    {
+      "id": "traveladv-1601-028",
+      "en": "Babe, did you grab the tickets? I can't find them.",
+      "jp": "ねえ、チケット持った？見つからないの。",
+      "speak": "Babe, did you grab the tickets? I can't find them.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-029",
+      "en": "Man, I can't believe they lost my bag again.",
+      "jp": "うわ、また荷物をなくされたなんて信じられない。",
+      "speak": "Man, I can't believe they lost my bag again.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-030",
+      "en": "Hey, Sam, you good? You look kinda pale.",
+      "jp": "ねえサム、大丈夫？ちょっと顔色が悪いよ。",
+      "speak": "Hey, Sam, you good? You look kinda pale.",
+      "say": [],
+      "note": "元の形: are you good／kind of／聞こえ方: ユー グッド／カインダ／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "traveladv-1601-031",
+      "en": "I dunno. The sign says closed, but the door's open.",
+      "jp": "分からない。看板は閉店なのに、ドアは開いてる。",
+      "speak": "I dunno. The sign says closed, but the door's open.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "traveladv-1601-032",
+      "en": "Beats me. I've never seen this machine before.",
+      "jp": "さあね。この機械は初めて見たよ。",
+      "speak": "Beats me. I've never seen this machine before.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:全く分からない時"
+    },
+    {
+      "id": "traveladv-1601-033",
+      "en": "Ya think they'll let us in without a reservation?",
+      "jp": "予約なしで入れてくれると思う？",
+      "speak": "Ya think they'll let us in without a reservation?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:予想を聞く時"
+    },
+    {
+      "id": "traveladv-1601-034",
+      "en": "Whatcha doing here so early? The place doesn't open till ten.",
+      "jp": "こんなに早く何してるの？店は10時まで開かないよ。",
+      "speak": "Whatcha doing here so early? The place doesn't open till ten.",
+      "say": [],
+      "note": "元の形: what are you／聞こえ方: ワッチャ／使う場面:気軽に聞く時"
+    },
+    {
+      "id": "traveladv-1601-035",
+      "en": "Didja check the gate number? It might've changed.",
+      "jp": "ゲート番号は確認した？変わったかもしれないよ。",
+      "speak": "Didja check the gate number? It might've changed.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:確認する時"
+    },
+    {
+      "id": "traveladv-1601-036",
+      "en": "I gotta call the bank before they close.",
+      "jp": "閉まる前に銀行に電話しなきゃ。",
+      "speak": "I gotta call the bank before they close.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "traveladv-1601-037",
+      "en": "We hafta be at the airport two hours early.",
+      "jp": "空港に2時間前に着かなきゃ。",
+      "speak": "We hafta be at the airport two hours early.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "traveladv-1601-038",
+      "en": "Y'know, this isn't how I pictured the first day.",
+      "jp": "ほら、初日がこんなふうになるとは思ってなかった。",
+      "speak": "Y'know, this isn't how I pictured the first day.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:しみじみ言う時"
+    },
+    {
+      "id": "traveladv-1601-039",
+      "en": "Long story short, we ended up sleeping at the airport.",
+      "jp": "要するに、空港で寝る羽目になったんだ。",
+      "speak": "Long story short, we ended up sleeping at the airport.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-040",
+      "en": "Look, I know it's not your fault. I'm just really tired.",
+      "jp": "いいかい、君のせいじゃないのは分かってる。ただ本当に疲れてるんだ。",
+      "speak": "Look, I know it's not your fault. I'm just really tired.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-041",
+      "en": "I mean, it could've been worse. At least nobody got hurt.",
+      "jp": "つまり、もっとひどくなってたかもしれない。少なくとも誰もけがしなかった。",
+      "speak": "I mean, it could've been worse. At least nobody got hurt.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-042",
+      "en": "Wait, what? They canceled the whole flight?",
+      "jp": "待って、何？便が全部欠航？",
+      "speak": "Wait, what? They canceled the whole flight?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-043",
+      "en": "Say again? The announcement was too loud to hear.",
+      "jp": "もう一度言って？アナウンスがうるさくて聞こえなかった。",
+      "speak": "Say again? The announcement was too loud to hear.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-044",
+      "en": "Just talk normally. I don't understand the jargon.",
+      "jp": "普通に話して。専門用語は分からないから。",
+      "speak": "Just talk normally. I don't understand the jargon.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-045",
+      "en": "Chill. We've got three hours. We'll make it.",
+      "jp": "落ち着いて。3時間あるから、間に合うよ。",
+      "speak": "Chill. We've got three hours. We'll make it.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-046",
+      "en": "No can do. The next shuttle's not till noon.",
+      "jp": "それは無理だね。次のシャトルは正午までないよ。",
+      "speak": "No can do. The next shuttle's not till noon.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-047",
+      "en": "Sounds good. Let's meet at the info desk at six.",
+      "jp": "いいね。6時に案内所で会おう。",
+      "speak": "Sounds good. Let's meet at the info desk at six.",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-048",
+      "en": "Need a hand with those bags?",
+      "jp": "その荷物、手伝おうか？",
+      "speak": "Need a hand with those bags?",
+      "say": []
+    },
+    {
+      "id": "traveladv-1601-049",
+      "en": "C'mon, let's find a place to sit down and sort this out.",
+      "jp": "ほら、座れるところを見つけて、片づけよう。",
+      "speak": "C'mon, let's find a place to sit down and sort this out.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す時"
+    },
+    {
+      "id": "traveladv-1601-050",
+      "en": "Any luck finding a taxi? It's pouring out there.",
+      "jp": "タクシーは見つかった？外は土砂降りだよ。",
+      "speak": "Any luck finding a taxi? It's pouring out there.",
+      "say": []
+    }
+  ]
+}

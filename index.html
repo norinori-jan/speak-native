@@ -3516,7 +3516,10 @@ function loadPackagedConversation(){
   {id:'traffic',file:'traffic-1101.json'},
   {id:'aiwork',file:'aiwork-1001.json'},
   {id:'newstalk',file:'newstalk-0901.json'},
-  {id:'cinemaadv',file:'cinemaadv-1301.json'}
+  {id:'cinemaadv',file:'cinemaadv-1301.json'},
+  {id:'honestadv',file:'honestadv-1401.json'},
+  {id:'negoadv',file:'negoadv-1501.json'},
+  {id:'traveladv',file:'traveladv-1601.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

@@ -1,5 +1,5 @@
 {
-"updated": 1793700822997,
+"updated": 1793700931186,
 "packs": [
 {
 "id": "airport-0001",
@@ -496,6 +496,30 @@
 "count": 50,
 "situation": "cinemaadv",
 "sname": "映画のワンシーン・応用編"
+},
+{
+"id": "honestadv-1401",
+"file": "honestadv-1401.json",
+"ver": 1,
+"count": 50,
+"situation": "honestadv",
+"sname": "職場の本音・応用編"
+},
+{
+"id": "negoadv-1501",
+"file": "negoadv-1501.json",
+"ver": 1,
+"count": 50,
+"situation": "negoadv",
+"sname": "ビジネス交渉・応用編"
+},
+{
+"id": "traveladv-1601",
+"file": "traveladv-1601.json",
+"ver": 1,
+"count": 50,
+"situation": "traveladv",
+"sname": "旅行先トラブル・応用編"
 }
 ]
 }

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "negoadv",
+    "ic": "🤝",
+    "n": "ビジネス交渉・応用編",
+    "hint": "two business people negotiate delivery dates, discounts, contract clauses, and a tense moment before a deal",
+    "level": 4,
+    "keywords": [
+      "negotiation",
+      "business",
+      "advanced"
+    ],
+    "d": [
+      {
+        "t": "納期の前倒しを頼まれる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for taking the call, Ms. Lee. I'll be upfront: our launch moved up three weeks, and we need the units by the fifteenth, not the fifth of next month.",
+            "jp": "お電話ありがとうございます、リーさん。率直に言います。当社の発売が3週間前倒しになり、来月5日ではなく15日までに製品が必要です。"
+          },
+          {
+            "sp": 1,
+            "en": "Three weeks? That's a serious change. Our production line is booked solid through the end of this month.",
+            "jp": "3週間？それは大きな変更です。うちの生産ラインは今月末までびっしり埋まっています。"
+          },
+          {
+            "sp": 0,
+            "en": "I understand. That's why I'm calling you directly instead of sending an email. Is there any way to make it work?",
+            "jp": "承知しています。だからメールではなく直接お電話しています。何とか実現する方法はありませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "It might be possible, but it would mean overtime shifts, and that costs money. I'd estimate an extra eight percent.",
+            "jp": "可能かもしれませんが、残業シフトが必要で、費用がかかります。8%の追加と見ています。"
+          },
+          {
+            "sp": 0,
+            "en": "Eight is steep. What if we gave you a larger order for the next quarter to offset it?",
+            "jp": "8%は高いですね。その分を相殺するために、次の四半期に大きな注文を出すというのはどうでしょう？"
+          },
+          {
+            "sp": 1,
+            "en": "Now we're talking. How much larger?",
+            "jp": "それなら話は別です。どのくらい大きく？"
+          },
+          {
+            "sp": 0,
+            "en": "Thirty percent more than the current order, guaranteed in writing.",
+            "jp": "現在の注文より30%増しで、書面で保証します。"
+          },
+          {
+            "sp": 1,
+            "en": "Hmm. If I can get that guarantee, I could absorb half of the overtime cost myself, so, four percent.",
+            "jp": "うーん。その保証をいただけるなら、残業費の半分は自社で吸収できるので、4%です。"
+          },
+          {
+            "sp": 0,
+            "en": "Four percent, and you ship by the twelfth, giving us a little buffer?",
+            "jp": "4%で、12日までに出荷して、少し余裕をもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "The twelfth is tight, but I can push for the thirteenth.",
+            "jp": "12日はきついですが、13日までなら頑張れます。"
+          },
+          {
+            "sp": 0,
+            "en": "The thirteenth works. Can you send over the revised terms today?",
+            "jp": "13日で大丈夫です。今日中に修正した条件を送ってもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "By end of day. And thank you for being straight with me.",
+            "jp": "今日中に。それと、率直に話してくれてありがとう。"
+          }
+        ]
+      },
+      {
+        "t": "値下げ交渉で譲らない相手",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Let's not waste each other's time. Your competitor's offering the same service for twenty percent less.",
+            "jp": "お互いの時間を無駄にするのはやめましょう。御社の競合は、同じサービスを20%安く提供しています。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm sure they are. But are they offering the same service? Because I looked at their contract, and the support is business hours only.",
+            "jp": "そうでしょうね。でも本当に同じサービスですか？契約書を見ましたが、サポートは営業時間内のみです。"
+          },
+          {
+            "sp": 0,
+            "en": "Support hours don't matter much to us. We rarely need help.",
+            "jp": "サポート時間は、うちにはあまり関係ありません。ほとんど助けは要りませんから。"
+          },
+          {
+            "sp": 1,
+            "en": "Then you're paying for a safety net you don't use. I get it. So let me offer something different.",
+            "jp": "では、使わない安全網にお金を払っているわけですね。分かります。では違う提案をさせてください。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:提案を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "I'm listening.",
+            "jp": "聞いています。"
+          },
+          {
+            "sp": 1,
+            "en": "A tiered plan. Basic support at fifteen percent off, and you can upgrade any month you need us.",
+            "jp": "段階式のプランです。基本サポートで15%引き、必要な月だけアップグレードできます。"
+          },
+          {
+            "sp": 0,
+            "en": "That's closer, but fifteen's still not twenty.",
+            "jp": "近づきましたが、15%はまだ20%ではありません。"
+          },
+          {
+            "sp": 1,
+            "en": "It's not. But our response time is under an hour, and theirs is two days. That's what the extra five percent is buying you.",
+            "jp": "違います。でも当社の対応は1時間以内で、他社は2日です。その追加の5%で買えるのがそこなんです。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, I'll be honest, that's a point. Two days did worry me.",
+            "jp": "分かりました、正直、それは一理あります。2日は心配でした。"
+          },
+          {
+            "sp": 1,
+            "en": "So, fifteen percent, a twelve-month term, and a free upgrade if you ever have an emergency?",
+            "jp": "では、15%引き、12か月契約、緊急時は無料でアップグレード、でいかがですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Twelve months is long. Can we do six, with the option to renew?",
+            "jp": "12か月は長いですね。6か月で、更新の選択肢つきにできませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "I can do nine. That's as far as I can go.",
+            "jp": "9か月ならできます。それが限界です。"
+          },
+          {
+            "sp": 0,
+            "en": "Nine. Fine. Send me the paperwork.",
+            "jp": "9か月。いいでしょう。書類を送ってください。"
+          }
+        ]
+      },
+      {
+        "t": "契約書の気になる条項",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Before we sign, I'd like to go over clause fourteen. It says either party can terminate with thirty days' notice, but nothing about a refund.",
+            "jp": "署名の前に、14条を確認させてください。どちらの当事者も30日前の通知で解約できるとありますが、返金のことが書かれていません。"
+          },
+          {
+            "sp": 1,
+            "en": "Good catch. That was left out on purpose, since our fees are non-refundable once the work has started.",
+            "jp": "いい指摘です。わざと入れていません。作業が始まったら、弊社の料金は返金不可なので。"
+          },
+          {
+            "sp": 0,
+            "en": "I see. But what if the work hasn't started, and we cancel on day two?",
+            "jp": "なるほど。でも、作業がまだ始まっておらず、2日目に解約した場合は？"
+          },
+          {
+            "sp": 1,
+            "en": "In that case, you'd get back eighty percent. I can add that language right now if you'd like.",
+            "jp": "その場合は80%が戻ります。よければ、今その文言を追加できます。"
+          },
+          {
+            "sp": 0,
+            "en": "Please do. And while we're on it, clause nine says you may subcontract any part of the work.",
+            "jp": "お願いします。ついでに、9条には、作業の一部を外注してもよいとあります。"
+          },
+          {
+            "sp": 1,
+            "en": "That's standard. We often bring in specialists.",
+            "jp": "それは標準的な内容です。専門家を入れることはよくあります。"
+          },
+          {
+            "sp": 0,
+            "en": "I understand, but we'd like to approve any subcontractor in advance, because of the confidential data involved.",
+            "jp": "分かりますが、機密データが関わるので、外注先は事前に承認させてください。"
+          },
+          {
+            "sp": 1,
+            "en": "Hmm. That could slow us down. Would a notification work instead of an approval?",
+            "jp": "うーん。それだと遅くなるかもしれません。承認の代わりに通知ではだめですか？"
+          },
+          {
+            "sp": 0,
+            "en": "A notification with the right to object within five days. That's reasonable on both sides.",
+            "jp": "5日以内に異議を申し立てる権利つきの通知。それなら双方にとって妥当です。"
+          },
+          {
+            "sp": 1,
+            "en": "Agreed. I'll mark up both changes and send you a clean copy by tonight.",
+            "jp": "合意です。両方の変更を反映して、今夜までにきれいな版を送ります。"
+          },
+          {
+            "sp": 0,
+            "en": "Thank you. I appreciate your flexibility.",
+            "jp": "ありがとう。柔軟に対応してくれて感謝します。"
+          }
+        ]
+      },
+      {
+        "t": "交渉が決裂しかける",
+        "l": [
+          {
+            "sp": 0,
+            "en": "I'll be blunt. Your last proposal doesn't work for us. We were told the price included installation, and now you're quoting it separately.",
+            "jp": "はっきり言います。前回の提案は受け入れられません。設置込みと聞いていたのに、今は別料金で見積もっています。"
+          },
+          {
+            "sp": 1,
+            "en": "I see. I'm sorry for the confusion. Who told you that?",
+            "jp": "なるほど。混乱させて申し訳ありません。誰がそう言いましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "Your sales rep, in an email. I can forward it to you right now.",
+            "jp": "御社の営業担当がメールで。今すぐ転送できます。"
+          },
+          {
+            "sp": 1,
+            "en": "Please do. If that's what he wrote, we'll honor it. I won't pretend otherwise.",
+            "jp": "お願いします。彼がそう書いたなら、それに従います。そうでないふりはしません。"
+          },
+          {
+            "sp": 0,
+            "en": "That's good to hear, because we were close to walking away from this deal altogether.",
+            "jp": "それを聞いて安心しました。この取引から完全に手を引く寸前だったので。"
+          },
+          {
+            "sp": 1,
+            "en": "I understand. Walking away costs both of us, so let's try to avoid that.",
+            "jp": "分かります。手を引けば双方に損失なので、避けるようにしましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Agreed. But I need more than an apology. I need something that tells my team you take this seriously.",
+            "jp": "同意します。ただ、謝罪以上のものが必要です。誠意を示すものがチームに必要なんです。"
+          },
+          {
+            "sp": 1,
+            "en": "What if we waive the installation fee and extend the warranty by six months?",
+            "jp": "設置費を免除して、保証を6か月延長するのはどうでしょう？"
+          },
+          {
+            "sp": 0,
+            "en": "That's a start. Make it a year, and I can take it to my director.",
+            "jp": "それは出発点ですね。1年にしてくれれば、役員に持っていけます。"
+          },
+          {
+            "sp": 1,
+            "en": "A year is a lot, but I can see why. Give me an hour to check with my boss.",
+            "jp": "1年は大きいですが、理由は分かります。上司に確認するので1時間ください。"
+          },
+          {
+            "sp": 0,
+            "en": "Take two. I'd rather you get it right than rush it.",
+            "jp": "2時間どうぞ。急いで間違えるより、きちんと決めてほしいので。"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you. I'll call you back by three.",
+            "jp": "ありがとう。3時までに折り返します。"
+          }
+        ]
+      },
+      {
+        "t": "条件がまとまり握手する",
+        "l": [
+          {
+            "sp": 0,
+            "en": "So, let's recap, to make sure we're on the same page. Annual contract, quarterly billing, and a five percent discount if payment arrives within ten days.",
+            "jp": "では、認識が合っているか確認するために、要約しましょう。年間契約、四半期ごとの請求、10日以内の入金で5%割引です。"
+          },
+          {
+            "sp": 1,
+            "en": "That's right. And the service level is ninety-nine point five percent uptime, with credits if we miss it.",
+            "jp": "その通りです。サービス水準は稼働率99.5%で、満たせなければクレジットを付与します。"
+          },
+          {
+            "sp": 0,
+            "en": "Good. One more thing. Who's the main contact on your side, in case something breaks at two in the morning?",
+            "jp": "いいですね。もう一つ。午前2時に何か壊れた時に、そちら側の窓口は誰ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Me, until we hire a dedicated account manager next month. After that, it'll be Dana Brooks.",
+            "jp": "来月に専任の担当者を雇うまでは私です。その後は、ダナ・ブルックスです。"
+          },
+          {
+            "sp": 0,
+            "en": "Dana Brooks. Got it. Can you put her name and number in the contract as an appendix?",
+            "jp": "ダナ・ブルックス。分かりました。契約に、彼女の名前と番号を付録として入れてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. I'll leave a blank for the number and fill it in as soon as she starts.",
+            "jp": "もちろん。番号は空欄にして、彼女が着任したらすぐ埋めます。"
+          },
+          {
+            "sp": 0,
+            "en": "Perfect. Honestly, this went smoother than I expected.",
+            "jp": "完璧です。正直、予想よりずっとスムーズでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Same here. I was bracing for a fight.",
+            "jp": "こちらもです。ぶつかる覚悟をしていました。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha! So was I. But I think we both wanted the same thing.",
+            "jp": "はは！私もです。でも、お互い同じことを望んでいたんだと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Agreed. Shall we shake on it?",
+            "jp": "同感です。握手しましょうか？"
+          },
+          {
+            "sp": 0,
+            "en": "Let's. And I'll have the signed copy to you by Friday.",
+            "jp": "しましょう。署名済みの写しは金曜までにお送りします。"
+          },
+          {
+            "sp": 1,
+            "en": "Wonderful. Looking forward to working together.",
+            "jp": "素晴らしい。一緒に仕事ができるのを楽しみにしています。"
+          }
+        ]
+      }
+    ]
+  }
+]

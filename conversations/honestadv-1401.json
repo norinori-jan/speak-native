@@ -1,0 +1,348 @@
+[
+  {
+    "id": "honestadv",
+    "ic": "🗣",
+    "n": "職場の本音・応用編",
+    "hint": "coworkers face credit-stealing, pay talks, quitting colleagues, cover-ups, and saying no",
+    "level": 4,
+    "keywords": [
+      "workplace",
+      "honest talk",
+      "advanced"
+    ],
+    "d": [
+      {
+        "t": "手柄を横取りされた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Jordan, you got a minute? I wanna talk about the presentation yesterday.",
+            "jp": "ねえジョーダン、ちょっといい？昨日のプレゼンのことで話したいんだ。",
+            "note": "元の形: have you got／want to／聞こえ方: ガタ／ワナ／使う場面:話を切り出す時"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Great job, by the way. The client loved it.",
+            "jp": "もちろん。ところで、お見事だったよ。お客さんは気に入ってた。"
+          },
+          {
+            "sp": 0,
+            "en": "That's kinda the thing. When the boss asked who built the model, you said, 'We worked on it together.' But I built it, and you saw it for the first time on Monday.",
+            "jp": "そこなんだ。上司が誰がモデルを作ったか聞いた時、君は『一緒に作った』と言った。でも作ったのは私で、君は月曜に初めて見たよね。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり切り出す時"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, hold on. I didn't mean it like that.",
+            "jp": "待って。そういうつもりじゃなかったんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "Then how did you mean it? Because from where I was sitting, it sounded like you were taking credit for three weeks of my work.",
+            "jp": "じゃあどういうつもり？私の席からは、3週間分の私の仕事の手柄を取っているように聞こえたけど。"
+          },
+          {
+            "sp": 1,
+            "en": "Look, I was put on the spot. I panicked, and 'we' just came out.",
+            "jp": "いいかい、急に振られたんだ。焦って、つい『一緒に』と口から出てしまった。"
+          },
+          {
+            "sp": 0,
+            "en": "I get that. Honestly, I do. But it matters, Jordan, because that's how promotions get decided around here.",
+            "jp": "それは分かる。本当に。でも大事なことなんだ、ジョーダン。ここでは、そうやって昇進が決まるんだから。"
+          },
+          {
+            "sp": 1,
+            "en": "You're right. And I'm sorry. What do you want me to do?",
+            "jp": "君の言う通りだ。悪かった。どうしてほしい？"
+          },
+          {
+            "sp": 0,
+            "en": "Tell him. Not in a big, dramatic way. Just send a quick email saying the model was mine, and you were glad to present it.",
+            "jp": "彼に伝えて。大げさにじゃなくていい。モデルは私のもので、発表できて嬉しかったと、短くメールして。"
+          },
+          {
+            "sp": 1,
+            "en": "Done. I'll write it before lunch.",
+            "jp": "分かった。昼前に書く。"
+          },
+          {
+            "sp": 0,
+            "en": "And one more thing. Next time, don't make me chase you for this.",
+            "jp": "もう一つ。次は、こんなことで私に追いかけさせないで。"
+          },
+          {
+            "sp": 1,
+            "en": "Fair. You've got my word.",
+            "jp": "もっともだ。約束するよ。"
+          }
+        ]
+      },
+      {
+        "t": "評価面談で昇給を頼む",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for coming in, Priya. Let's start with the good news: your numbers this quarter were the best on the team.",
+            "jp": "来てくれてありがとう、プリヤ。まずいい知らせから。今期の君の数字はチームで一番だった。"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you. That's actually what I wanted to talk about, if that's okay.",
+            "jp": "ありがとうございます。実は、そのことでお話ししたかったんです、よければ。"
+          },
+          {
+            "sp": 0,
+            "en": "Of course. Go ahead.",
+            "jp": "もちろん。どうぞ。"
+          },
+          {
+            "sp": 1,
+            "en": "So, I've taken on two extra clients since January, I trained the new hires, and I covered for Mike during his leave. I think my role has grown a lot, but my pay hasn't changed.",
+            "jp": "えっと、1月から顧客を2社追加で担当し、新人の研修もして、マイクの休暇中は代わりも務めました。役割はかなり大きくなったのに、給与は変わっていません。"
+          },
+          {
+            "sp": 0,
+            "en": "I see. And what are you hoping for?",
+            "jp": "なるほど。どのくらいを希望していますか？"
+          },
+          {
+            "sp": 1,
+            "en": "I did some research, and the going rate for this role is about twelve percent above what I make now.",
+            "jp": "調べたところ、この職種の相場は、今の私の給与より12%ほど高いです。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a big jump. I'm not sure budget-wise I can do twelve, but I do hear you.",
+            "jp": "大きな上げ幅だね。予算的に12は難しいかもしれないが、言いたいことは分かるよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I understand. What would help is knowing what I'd need to do to get there.",
+            "jp": "分かります。そこに届くために何をすべきか教えてもらえると助かります。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a fair question. Give me a week to talk to HR, and I'll come back with a concrete plan.",
+            "jp": "もっともな質問だ。1週間人事と話させてくれ、具体的な計画を持って戻るよ。"
+          },
+          {
+            "sp": 1,
+            "en": "A week is fine. Can we put a date on the calendar so it doesn't slip?",
+            "jp": "1週間で大丈夫です。流れてしまわないよう、予定に日付を入れてもいいですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Smart. Let's say next Thursday at two.",
+            "jp": "賢いね。来週木曜の2時にしよう。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. Thank you for hearing me out.",
+            "jp": "完璧です。聞いてくださってありがとうございます。"
+          }
+        ]
+      },
+      {
+        "t": "同僚が辞めると聞いて",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dude, did you hear? Chris just handed in his notice. Last day's the end of the month.",
+            "jp": "なあ、聞いた？クリスが退職届を出したって。最終日は月末だって。"
+          },
+          {
+            "sp": 1,
+            "en": "Seriously? He told me last week he was happy here.",
+            "jp": "本当に？先週は、ここで満足してるって言ってたのに。"
+          },
+          {
+            "sp": 0,
+            "en": "Maybe he was. But I heard a competitor offered him a title and a lot more money, and, y'know, hard to say no to that.",
+            "jp": "そうかもな。でも競合が、役職とずっと多い給料を出したらしくて、ほら、それは断りにくいよ。",
+            "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:補足を足す時"
+          },
+          {
+            "sp": 1,
+            "en": "Man, that's rough. He basically held this team together.",
+            "jp": "うわ、それはきついな。彼がこのチームをまとめてたようなものだから。"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah. And guess who's gonna get his clients.",
+            "jp": "うん。そして、誰が彼の顧客を引き継ぐと思う？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:予想を言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Please don't say me.",
+            "jp": "お願いだから、私とは言わないで。"
+          },
+          {
+            "sp": 0,
+            "en": "Bingo. I overheard the manager saying it this morning.",
+            "jp": "当たり。今朝、部長が言ってるのが聞こえたんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Ugh. I'm already drowning, and now this?",
+            "jp": "うわあ。もう溺れそうなのに、さらにこれ？"
+          },
+          {
+            "sp": 0,
+            "en": "Then say something before it's official. Tell her you'll take half, but only if you get some help.",
+            "jp": "なら正式になる前に言いなよ。半分なら引き受けるけど、助けをもらえるならと伝えて。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a good idea. If I just say yes, I'll be saying yes to everything forever.",
+            "jp": "いい考えだ。ただ引き受けたら、ずっと何でも引き受けることになるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Exactly. And hey, wanna grab lunch with Chris before he goes? My treat.",
+            "jp": "その通り。それと、クリスが辞める前にランチに行かない？私のおごり。",
+            "note": "元の形: do you want to／聞こえ方: ワナ／使う場面:誘う時"
+          },
+          {
+            "sp": 1,
+            "en": "Definitely. Let's do it Friday.",
+            "jp": "もちろん。金曜にしよう。"
+          }
+        ]
+      },
+      {
+        "t": "ミスを隠したい新人",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, you've got that look. What's wrong?",
+            "jp": "ねえ、そんな顔して。どうしたの？"
+          },
+          {
+            "sp": 1,
+            "en": "Nothing. It's fine.",
+            "jp": "何でもない。大丈夫。"
+          },
+          {
+            "sp": 0,
+            "en": "Sam, I've worked here six years. 'Nothing' never looks like that.",
+            "jp": "サム、ここで6年働いてるのよ。『何でもない』はそんな顔をしない。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, okay. I sent the wrong file to the client. It had the old pricing in it, and I just noticed.",
+            "jp": "分かったよ。お客さんに間違ったファイルを送ったんだ。古い価格が入ってて、今気づいた。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. Deep breath. Have they opened it?",
+            "jp": "大丈夫。深呼吸して。向こうは開いた？"
+          },
+          {
+            "sp": 1,
+            "en": "I don't know. I was thinking maybe I could just... send the right one and hope they don't notice.",
+            "jp": "分からない。もしかして、正しいのを送って、気づかれないことを祈ればいいかなって。"
+          },
+          {
+            "sp": 0,
+            "en": "No. That's the worst thing you can do. If they've already seen the old numbers, and then you quietly swap them, it looks like you were hiding something.",
+            "jp": "だめ。それが一番やってはいけないこと。古い数字をもう見ていて、あなたがこっそり差し替えたら、何か隠したように見える。"
+          },
+          {
+            "sp": 1,
+            "en": "But I'm gonna get fired.",
+            "jp": "でも、クビになる。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:不安を口にする時"
+          },
+          {
+            "sp": 0,
+            "en": "You're not gonna get fired over a wrong attachment. You will, however, lose trust if you hide it.",
+            "jp": "添付ファイルを間違えたくらいでクビにはならない。でも隠したら、信頼は失うよ。"
+          },
+          {
+            "sp": 1,
+            "en": "So what do I do?",
+            "jp": "じゃあどうすれば？"
+          },
+          {
+            "sp": 0,
+            "en": "Call them now. Say, 'I sent the wrong version by mistake. Please ignore it. The correct one is coming in two minutes.' Short, calm, honest.",
+            "jp": "今すぐ電話して。『誤って違う版を送りました。無視してください。正しいものを2分後に送ります』って。短く、落ち着いて、正直に。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. Okay. Thank you.",
+            "jp": "分かった。分かった。ありがとう。"
+          },
+          {
+            "sp": 0,
+            "en": "Anytime. And write it down. You'll never make that mistake again.",
+            "jp": "いつでも。それと書き留めて。二度とその間違いはしなくなるから。"
+          }
+        ]
+      },
+      {
+        "t": "残業を断る",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, Maya, before you leave, I need a favor. The client moved the deadline up, and we need the report by tomorrow morning.",
+            "jp": "ねえマヤ、帰る前に頼みがある。お客さんが締め切りを前倒しして、明日の朝までに報告書が必要なんだ。"
+          },
+          {
+            "sp": 1,
+            "en": "Tomorrow morning? It's already six.",
+            "jp": "明日の朝？もう6時だよ。"
+          },
+          {
+            "sp": 0,
+            "en": "I know. I'd do it myself, but I've got meetings until nine. It'd just be a few hours.",
+            "jp": "分かってる。自分でやりたいけど、9時まで会議なんだ。ほんの数時間だよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm sorry, but I can't tonight. I've got plans I can't move. It's my sister's birthday dinner.",
+            "jp": "ごめんなさい、今夜は無理です。動かせない予定があって、姉の誕生日の食事なんです。"
+          },
+          {
+            "sp": 0,
+            "en": "Come on, it's just this once. I'll owe you big time.",
+            "jp": "頼むよ、今回だけだ。大きな借りにするから。",
+            "note": "元の形: come on／聞こえ方: カモン／使う場面:頼み込む時"
+          },
+          {
+            "sp": 1,
+            "en": "I'd say yes if it were just once. But this is the third time this month, and I've said yes every time.",
+            "jp": "一度きりなら引き受けます。でも今月3回目で、毎回引き受けてきました。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, that's fair. I didn't realize it was that many.",
+            "jp": "分かった、もっともだ。そんなに多いとは気づいてなかった。"
+          },
+          {
+            "sp": 1,
+            "en": "Here's what I can do. I'll send you the template and my notes tonight, and tomorrow I'll come in an hour early to finish it.",
+            "jp": "こうならできます。今夜テンプレートとメモを送って、明日1時間早く来て仕上げます。"
+          },
+          {
+            "sp": 0,
+            "en": "An hour early would work. Honestly, I'd take that.",
+            "jp": "1時間早いなら大丈夫だ。正直、それでありがたい。"
+          },
+          {
+            "sp": 1,
+            "en": "Good. But can we talk about how these requests come in? Let's set up some kind of heads-up system.",
+            "jp": "よかった。ただ、こういう依頼の入り方について話せますか？前もって知らせる仕組みを作りましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah. Let's do it next week. And thanks, Maya. Enjoy the dinner.",
+            "jp": "ああ。来週やろう。ありがとう、マヤ。食事を楽しんで。"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,379 @@
+{
+  "app": "phrase-pack",
+  "id": "honestadv-1401",
+  "ver": 1,
+  "situation": "honestadv",
+  "sname": "職場の本音・応用編",
+  "icon": "🗣",
+  "level": 4,
+  "title": "職場の本音・応用編（長い掛け合い）",
+  "items": [
+    {
+      "id": "honestadv-1401-001",
+      "en": "Hey, Jordan, you got a minute? I wanna talk about yesterday.",
+      "jp": "ねえジョーダン、ちょっといい？昨日のことで話したいんだ。",
+      "speak": "Hey, Jordan, you got a minute? I wanna talk about yesterday.",
+      "say": [],
+      "note": "元の形: have you got／want to／聞こえ方: ガタ／ワナ／使う場面:話を切り出す時"
+    },
+    {
+      "id": "honestadv-1401-002",
+      "en": "It's kinda the thing. You said 'we' built it, but I built it.",
+      "jp": "そこなんだ。君は『一緒に』作ったと言ったけど、作ったのは私だよ。",
+      "speak": "It's kinda the thing. You said 'we' built it, but I built it.",
+      "say": [],
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:やんわり切り出す時"
+    },
+    {
+      "id": "honestadv-1401-003",
+      "en": "I was put on the spot. I panicked, and 'we' just came out.",
+      "jp": "急に振られて、焦って、つい『一緒に』と出てしまった。",
+      "speak": "I was put on the spot. I panicked, and 'we' just came out.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-004",
+      "en": "Don't make me chase you for this. Just send the email.",
+      "jp": "こんなことで追いかけさせないで。メールを送って。",
+      "speak": "Don't make me chase you for this. Just send the email.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-005",
+      "en": "I've taken on two extra clients, but my pay hasn't changed.",
+      "jp": "顧客を2社追加で担当したのに、給与は変わっていません。",
+      "speak": "I've taken on two extra clients, but my pay hasn't changed.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-006",
+      "en": "I did some research, and the going rate is about twelve percent higher.",
+      "jp": "調べたところ、相場は12%ほど高いです。",
+      "speak": "I did some research, and the going rate is about twelve percent higher.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-007",
+      "en": "Gimme a week to talk to HR, and I'll come back with a plan.",
+      "jp": "1週間、人事と話させて。計画を持って戻るから。",
+      "speak": "Gimme a week to talk to HR, and I'll come back with a plan.",
+      "say": [],
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:時間をもらう時"
+    },
+    {
+      "id": "honestadv-1401-008",
+      "en": "Can we put a date on the calendar so it doesn't slip?",
+      "jp": "流れないように、予定に日付を入れてもいい？",
+      "speak": "Can we put a date on the calendar so it doesn't slip?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-009",
+      "en": "Dude, Chris just handed in his notice. Last day's the end of the month.",
+      "jp": "なあ、クリスが退職届を出した。最終日は月末だって。",
+      "speak": "Dude, Chris just handed in his notice. Last day's the end of the month.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-010",
+      "en": "Man, he basically held this team together.",
+      "jp": "うわ、彼はこのチームをまとめてたようなものなのに。",
+      "speak": "Man, he basically held this team together.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-011",
+      "en": "Guess who's gonna get his clients? Yep, you.",
+      "jp": "誰が彼の顧客を引き継ぐと思う？そう、君だよ。",
+      "speak": "Guess who's gonna get his clients? Yep, you.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:予想を言う時"
+    },
+    {
+      "id": "honestadv-1401-012",
+      "en": "If I just say yes, I'll be saying yes to everything forever.",
+      "jp": "ただ引き受けたら、ずっと何でも引き受けることになる。",
+      "speak": "If I just say yes, I'll be saying yes to everything forever.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-013",
+      "en": "I'm already drowning, and now this? Come on.",
+      "jp": "もう溺れそうなのに、さらにこれ？勘弁してよ。",
+      "speak": "I'm already drowning, and now this? Come on.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-014",
+      "en": "Sam, I've worked here six years. 'Nothing' never looks like that.",
+      "jp": "サム、ここで6年働いてるの。『何でもない』はそんな顔しない。",
+      "speak": "Sam, I've worked here six years. 'Nothing' never looks like that.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-015",
+      "en": "I sent the wrong file to the client. It had the old pricing.",
+      "jp": "お客さんに間違ったファイルを送った。古い価格が入ってた。",
+      "speak": "I sent the wrong file to the client. It had the old pricing.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-016",
+      "en": "Don't hide it. Hiding it looks way worse than the mistake.",
+      "jp": "隠さないで。隠す方が、ミスよりずっと悪く見える。",
+      "speak": "Don't hide it. Hiding it looks way worse than the mistake.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-017",
+      "en": "Call them now. Short, calm, honest. That's all.",
+      "jp": "今すぐ電話して。短く、落ち着いて、正直に。それだけ。",
+      "speak": "Call them now. Short, calm, honest. That's all.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-018",
+      "en": "You're not gonna get fired over a wrong attachment.",
+      "jp": "添付ファイルを間違えたくらいでクビにはならないよ。",
+      "speak": "You're not gonna get fired over a wrong attachment.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:安心させる時"
+    },
+    {
+      "id": "honestadv-1401-019",
+      "en": "I'd say yes if it were just once, but this is the third time.",
+      "jp": "一度きりなら引き受けるけど、これで3回目なんだ。",
+      "speak": "I'd say yes if it were just once, but this is the third time.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-020",
+      "en": "I can't tonight. I've got plans I can't move.",
+      "jp": "今夜は無理です。動かせない予定があって。",
+      "speak": "I can't tonight. I've got plans I can't move.",
+      "say": [],
+      "note": "元の形: I have got／聞こえ方: ガット／使う場面:予定を言う時"
+    },
+    {
+      "id": "honestadv-1401-021",
+      "en": "Here's what I can do. I'll come in an hour early tomorrow.",
+      "jp": "こうならできます。明日1時間早く来ます。",
+      "speak": "Here's what I can do. I'll come in an hour early tomorrow.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-022",
+      "en": "Can we set up some kind of heads-up system for these requests?",
+      "jp": "こういう依頼に、前もって知らせる仕組みを作れない？",
+      "speak": "Can we set up some kind of heads-up system for these requests?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-023",
+      "en": "Hey, Liz, you good? You've been quiet all day.",
+      "jp": "ねえリズ、大丈夫？今日ずっと静かだね。",
+      "speak": "Hey, Liz, you good? You've been quiet all day.",
+      "say": [],
+      "note": "元の形: are you good／聞こえ方: ユー グッド／使う場面:様子を気づかう時"
+    },
+    {
+      "id": "honestadv-1401-024",
+      "en": "Boss, can I grab five minutes before the meeting?",
+      "jp": "ボス、会議の前に5分いただけますか？",
+      "speak": "Boss, can I grab five minutes before the meeting?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-025",
+      "en": "Babe, don't wait up. I'll be late again.",
+      "jp": "ねえ、待たないで。また遅くなるから。",
+      "speak": "Babe, don't wait up. I'll be late again.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-026",
+      "en": "Buddy, it's not worth fighting over. Let it go.",
+      "jp": "おい、争う価値はないよ。水に流そう。",
+      "speak": "Buddy, it's not worth fighting over. Let it go.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-027",
+      "en": "Sir, I'd like to flag a concern before we move forward.",
+      "jp": "部長、進める前に一つ懸念を伝えたいです。",
+      "speak": "Sir, I'd like to flag a concern before we move forward.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-028",
+      "en": "Lemme be honest. I don't think this plan is realistic.",
+      "jp": "正直に言わせて。この計画は現実的じゃないと思う。",
+      "speak": "Lemme be honest. I don't think this plan is realistic.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:本音を言う前に"
+    },
+    {
+      "id": "honestadv-1401-029",
+      "en": "I gotta say, that's not what I expected from you.",
+      "jp": "言わせてもらうけど、君からそんなことは予想してなかった。",
+      "speak": "I gotta say, that's not what I expected from you.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:言いにくいことを言う時"
+    },
+    {
+      "id": "honestadv-1401-030",
+      "en": "We hafta fix this before the client finds out.",
+      "jp": "お客さんに知られる前に直さなきゃ。",
+      "speak": "We hafta fix this before the client finds out.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:やるべきことを言う時"
+    },
+    {
+      "id": "honestadv-1401-031",
+      "en": "Dunno. Nobody told me the deadline moved.",
+      "jp": "さあ。締め切りが動いたなんて誰も言わなかったよ。",
+      "speak": "Dunno. Nobody told me the deadline moved.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "honestadv-1401-032",
+      "en": "Beats me why they'd cut the budget now.",
+      "jp": "なんで今になって予算を削るのか分からない。",
+      "speak": "Beats me why they'd cut the budget now.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "honestadv-1401-033",
+      "en": "Ya think the boss noticed? I really hope not.",
+      "jp": "上司は気づいたと思う？そうでないことを祈るよ。",
+      "speak": "Ya think the boss noticed? I really hope not.",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:意見を聞く時"
+    },
+    {
+      "id": "honestadv-1401-034",
+      "en": "Didja see the email? They moved the whole launch.",
+      "jp": "メール見た？ローンチ全体が動いたよ。",
+      "speak": "Didja see the email? They moved the whole launch.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:出来事を伝える時"
+    },
+    {
+      "id": "honestadv-1401-035",
+      "en": "Whatcha gonna say when she asks about the numbers?",
+      "jp": "数字について聞かれたら、何て言うつもり？",
+      "speak": "Whatcha gonna say when she asks about the numbers?",
+      "say": [],
+      "note": "元の形: what are you going to／聞こえ方: ワッチャ ガナ／使う場面:行動を聞く時"
+    },
+    {
+      "id": "honestadv-1401-036",
+      "en": "Y'know, I'm not mad. I'm just tired of doing this alone.",
+      "jp": "ほら、怒ってるんじゃないんだ。一人でやるのに疲れただけ。",
+      "speak": "Y'know, I'm not mad. I'm just tired of doing this alone.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:本音を言う時"
+    },
+    {
+      "id": "honestadv-1401-037",
+      "en": "Long story short, they chose the other vendor.",
+      "jp": "要するに、向こうは別の業者を選んだんだ。",
+      "speak": "Long story short, they chose the other vendor.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-038",
+      "en": "Look, I'm not trying to blame anyone. I just wanna fix it.",
+      "jp": "いいかい、誰かを責めたいんじゃない。直したいだけだ。",
+      "speak": "Look, I'm not trying to blame anyone. I just wanna fix it.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-039",
+      "en": "I mean, it's not a disaster, but it's not great either.",
+      "jp": "つまり、大惨事じゃないけど、良くもないってこと。",
+      "speak": "I mean, it's not a disaster, but it's not great either.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-040",
+      "en": "Wait, what? They want it by tomorrow?",
+      "jp": "待って、何？明日までに？",
+      "speak": "Wait, what? They want it by tomorrow?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-041",
+      "en": "Say again? I think I missed the part about the budget.",
+      "jp": "もう一度言って？予算の部分を聞き逃したみたい。",
+      "speak": "Say again? I think I missed the part about the budget.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-042",
+      "en": "Just talk normally. You don't have to sound like a memo.",
+      "jp": "普通に話して。社内メモみたいに話さなくていいよ。",
+      "speak": "Just talk normally. You don't have to sound like a memo.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-043",
+      "en": "Chill. It's one email, not the end of the world.",
+      "jp": "落ち着いて。メール1通で、世界の終わりじゃないよ。",
+      "speak": "Chill. It's one email, not the end of the world.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-044",
+      "en": "Relax, it's me. You can tell me what you really think.",
+      "jp": "気楽にして、私だよ。本音を言っていいよ。",
+      "speak": "Relax, it's me. You can tell me what you really think.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-045",
+      "en": "No can do. I've already said yes to three other things.",
+      "jp": "それは無理だね。すでに他の3件に了承してるから。",
+      "speak": "No can do. I've already said yes to three other things.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-046",
+      "en": "Sounds good. Let's circle back on Thursday.",
+      "jp": "いいね。木曜にまた話そう。",
+      "speak": "Sounds good. Let's circle back on Thursday.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-047",
+      "en": "Running behind. Start without me.",
+      "jp": "遅れてる。先に始めてて。",
+      "speak": "Running behind. Start without me.",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-048",
+      "en": "Need a hand with the slides?",
+      "jp": "スライドを手伝おうか？",
+      "speak": "Need a hand with the slides?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-049",
+      "en": "Any luck with the client? Did they reply?",
+      "jp": "お客さんの件はどう？返信あった？",
+      "speak": "Any luck with the client? Did they reply?",
+      "say": []
+    },
+    {
+      "id": "honestadv-1401-050",
+      "en": "C'mon, give me a chance to explain.",
+      "jp": "ほら、説明させてよ。",
+      "speak": "C'mon, give me a chance to explain.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:食い下がる時"
+    }
+  ]
+}

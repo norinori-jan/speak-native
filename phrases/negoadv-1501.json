@@ -1,0 +1,377 @@
+{
+  "app": "phrase-pack",
+  "id": "negoadv-1501",
+  "ver": 1,
+  "situation": "negoadv",
+  "sname": "ビジネス交渉・応用編",
+  "icon": "🤝",
+  "level": 4,
+  "title": "ビジネス交渉・応用編（長い掛け合い）",
+  "items": [
+    {
+      "id": "negoadv-1501-001",
+      "en": "Let's cut to the chase. We need the units by the fifteenth.",
+      "jp": "単刀直入にいこう。15日までに製品が必要です。",
+      "speak": "Let's cut to the chase. We need the units by the fifteenth.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-002",
+      "en": "That'd mean overtime shifts, and overtime costs money.",
+      "jp": "それは残業シフトを意味して、残業は費用がかかります。",
+      "speak": "That'd mean overtime shifts, and overtime costs money.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-003",
+      "en": "Eight percent is steep. What if we place a bigger order next quarter?",
+      "jp": "8%は高い。次の四半期に大きな注文を出したらどう？",
+      "speak": "Eight percent is steep. What if we place a bigger order next quarter?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-004",
+      "en": "Now we're talking. How much bigger are we talking about?",
+      "jp": "それなら話は別だ。どのくらい大きいの？",
+      "speak": "Now we're talking. How much bigger are we talking about?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-005",
+      "en": "Lemme check with my boss, and I'll get back to you by three.",
+      "jp": "上司に確認して、3時までに折り返します。",
+      "speak": "Lemme check with my boss, and I'll get back to you by three.",
+      "say": [],
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:確認すると言う時"
+    },
+    {
+      "id": "negoadv-1501-006",
+      "en": "Gimme a day to run the numbers. I don't wanna promise too much.",
+      "jp": "計算する時間を1日ください。約束しすぎたくないので。",
+      "speak": "Gimme a day to run the numbers. I don't wanna promise too much.",
+      "say": [],
+      "note": "元の形: give me／want to／聞こえ方: ギミ／ワナ／使う場面:時間をもらう時"
+    },
+    {
+      "id": "negoadv-1501-007",
+      "en": "I'm not gonna lie, that's a tough number to swallow.",
+      "jp": "正直に言うと、その数字は飲み込みにくい。",
+      "speak": "I'm not gonna lie, that's a tough number to swallow.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:本音を言う時"
+    },
+    {
+      "id": "negoadv-1501-008",
+      "en": "We were told the price included installation. It's in the email.",
+      "jp": "設置込みの価格と聞いていた。メールに書いてある。",
+      "speak": "We were told the price included installation. It's in the email.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-009",
+      "en": "I won't pretend otherwise. If that's what he wrote, we'll honor it.",
+      "jp": "そうでないふりはしません。彼がそう書いたなら、従います。",
+      "speak": "I won't pretend otherwise. If that's what he wrote, we'll honor it.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-010",
+      "en": "Walking away costs both of us, so let's try to avoid that.",
+      "jp": "手を引けば双方に損失なので、避けるようにしましょう。",
+      "speak": "Walking away costs both of us, so let's try to avoid that.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-011",
+      "en": "That's a start, but I need more than an apology.",
+      "jp": "それは出発点だが、謝罪以上のものが必要だ。",
+      "speak": "That's a start, but I need more than an apology.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-012",
+      "en": "Make it a year, and I can take it to my director.",
+      "jp": "1年にしてくれたら、役員に持っていけます。",
+      "speak": "Make it a year, and I can take it to my director.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-013",
+      "en": "A twelve-month term is long. Can we do six, with an option to renew?",
+      "jp": "12か月は長い。更新の選択肢つきで6か月にできない？",
+      "speak": "A twelve-month term is long. Can we do six, with an option to renew?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-014",
+      "en": "I can do nine. That's as far as I can go.",
+      "jp": "9か月ならできます。それが限界です。",
+      "speak": "I can do nine. That's as far as I can go.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-015",
+      "en": "Before we sign, I'd like to go over clause fourteen.",
+      "jp": "署名の前に、14条を確認したいです。",
+      "speak": "Before we sign, I'd like to go over clause fourteen.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-016",
+      "en": "Good catch. That was left out on purpose.",
+      "jp": "いい指摘です。わざと入れていません。",
+      "speak": "Good catch. That was left out on purpose.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-017",
+      "en": "Can you put that in writing, as an appendix?",
+      "jp": "それを、付録として書面にしてもらえますか？",
+      "speak": "Can you put that in writing, as an appendix?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-018",
+      "en": "I'll mark up both changes and send you a clean copy tonight.",
+      "jp": "両方の変更を反映して、今夜きれいな版を送ります。",
+      "speak": "I'll mark up both changes and send you a clean copy tonight.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-019",
+      "en": "Hey, Ms. Lee, thanks for taking the call on such short notice.",
+      "jp": "リーさん、急なお電話に出ていただきありがとうございます。",
+      "speak": "Hey, Ms. Lee, thanks for taking the call on such short notice.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-020",
+      "en": "Sir, with all due respect, that's not what we agreed to.",
+      "jp": "お言葉ですが、それは合意した内容ではありません。",
+      "speak": "Sir, with all due respect, that's not what we agreed to.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-021",
+      "en": "Boss, the client's pushing back on the delivery date.",
+      "jp": "ボス、お客さんが納期に反対しています。",
+      "speak": "Boss, the client's pushing back on the delivery date.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-022",
+      "en": "Man, they really drive a hard bargain.",
+      "jp": "うわ、向こうは本当に値切りが厳しいな。",
+      "speak": "Man, they really drive a hard bargain.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-023",
+      "en": "Dude, don't accept the first offer. They always come back.",
+      "jp": "なあ、最初の提案は受けるな。向こうは必ず戻ってくる。",
+      "speak": "Dude, don't accept the first offer. They always come back.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-024",
+      "en": "Buddy, you're gonna want that in writing.",
+      "jp": "おい、それは書面にしておきたいはずだよ。",
+      "speak": "Buddy, you're gonna want that in writing.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:念を押す時"
+    },
+    {
+      "id": "negoadv-1501-025",
+      "en": "Dunno. We'd have to ask legal about that clause.",
+      "jp": "さあ。その条項は法務に聞かないと。",
+      "speak": "Dunno. We'd have to ask legal about that clause.",
+      "say": [],
+      "note": "元の形: I don't know／聞こえ方: ダノウ／使う場面:知らないと言う時"
+    },
+    {
+      "id": "negoadv-1501-026",
+      "en": "Beats me why they changed the terms at the last minute.",
+      "jp": "なぜ土壇場で条件を変えたのか分からない。",
+      "speak": "Beats me why they changed the terms at the last minute.",
+      "say": [],
+      "note": "元の形: it beats me／聞こえ方: ビーツミー／使う場面:理由が分からない時"
+    },
+    {
+      "id": "negoadv-1501-027",
+      "en": "Ya think they'll go for a nine-month term?",
+      "jp": "9か月の契約を受けると思う？",
+      "speak": "Ya think they'll go for a nine-month term?",
+      "say": [],
+      "note": "元の形: do you think／聞こえ方: ヤ シンク／使う場面:予想を聞く時"
+    },
+    {
+      "id": "negoadv-1501-028",
+      "en": "Whatcha gonna do if they walk away?",
+      "jp": "向こうが手を引いたらどうするつもり？",
+      "speak": "Whatcha gonna do if they walk away?",
+      "say": [],
+      "note": "元の形: what are you going to／聞こえ方: ワッチャ ガナ／使う場面:行動を聞く時"
+    },
+    {
+      "id": "negoadv-1501-029",
+      "en": "Y'know, I think we both wanted the same thing.",
+      "jp": "ほら、お互い同じことを望んでたんだと思うよ。",
+      "speak": "Y'know, I think we both wanted the same thing.",
+      "say": [],
+      "note": "元の形: you know／聞こえ方: ヤノウ／使う場面:同意を求める時"
+    },
+    {
+      "id": "negoadv-1501-030",
+      "en": "We hafta decide by Friday, or the offer expires.",
+      "jp": "金曜までに決めなきゃ、提案は失効する。",
+      "speak": "We hafta decide by Friday, or the offer expires.",
+      "say": [],
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:期限を言う時"
+    },
+    {
+      "id": "negoadv-1501-031",
+      "en": "I gotta be straight with you. We can't go any lower.",
+      "jp": "正直に言わなきゃ。これ以上は下げられない。",
+      "speak": "I gotta be straight with you. We can't go any lower.",
+      "say": [],
+      "note": "元の形: have got to／聞こえ方: ガラ／使う場面:本音を言う時"
+    },
+    {
+      "id": "negoadv-1501-032",
+      "en": "Long story short, we agreed on nine months at fifteen percent off.",
+      "jp": "要するに、15%引きで9か月に合意した。",
+      "speak": "Long story short, we agreed on nine months at fifteen percent off.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-033",
+      "en": "Look, I'm not trying to squeeze you. I just need a number I can defend.",
+      "jp": "いいかい、絞り取りたいんじゃない。説明できる数字がほしいだけ。",
+      "speak": "Look, I'm not trying to squeeze you. I just need a number I can defend.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-034",
+      "en": "I mean, it's a fair offer, but it's not a great one.",
+      "jp": "つまり、公平な提案だけど、すごくいいわけじゃない。",
+      "speak": "I mean, it's a fair offer, but it's not a great one.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-035",
+      "en": "Wait, what? They want exclusivity too?",
+      "jp": "待って、何？独占契約も求めてるの？",
+      "speak": "Wait, what? They want exclusivity too?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-036",
+      "en": "Say again? I think I missed the part about the penalty.",
+      "jp": "もう一度言って？違約金の部分を聞き逃したみたい。",
+      "speak": "Say again? I think I missed the part about the penalty.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-037",
+      "en": "Just talk normally. Skip the legal jargon, please.",
+      "jp": "普通に話して。法律用語は抜きでお願い。",
+      "speak": "Just talk normally. Skip the legal jargon, please.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-038",
+      "en": "Chill. It's a negotiation, not a fight.",
+      "jp": "落ち着いて。これは交渉で、けんかじゃない。",
+      "speak": "Chill. It's a negotiation, not a fight.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-039",
+      "en": "No can do. That's outside my authority.",
+      "jp": "それは無理です。私の権限の外です。",
+      "speak": "No can do. That's outside my authority.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-040",
+      "en": "Sounds good. Send me the revised terms by end of day.",
+      "jp": "いいですね。修正した条件を今日中に送ってください。",
+      "speak": "Sounds good. Send me the revised terms by end of day.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-041",
+      "en": "Running behind. Can we push the call to four?",
+      "jp": "遅れてる。電話を4時にずらせない？",
+      "speak": "Running behind. Can we push the call to four?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-042",
+      "en": "Hey, Ken, can you walk me through the second page?",
+      "jp": "ねえケン、2ページ目を説明してくれる？",
+      "speak": "Hey, Ken, can you walk me through the second page?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-043",
+      "en": "Need a hand with the paperwork?",
+      "jp": "書類を手伝おうか？",
+      "speak": "Need a hand with the paperwork?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-044",
+      "en": "C'mon, meet me halfway here.",
+      "jp": "ほら、ここは歩み寄ってよ。",
+      "speak": "C'mon, meet me halfway here.",
+      "say": [],
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:歩み寄りを求める時"
+    },
+    {
+      "id": "negoadv-1501-045",
+      "en": "Didja get the signed copy? I sent it yesterday.",
+      "jp": "署名済みの写しは届いた？昨日送ったんだけど。",
+      "speak": "Didja get the signed copy? I sent it yesterday.",
+      "say": [],
+      "note": "元の形: did you／聞こえ方: ディジャ／使う場面:確認する時"
+    },
+    {
+      "id": "negoadv-1501-046",
+      "en": "Any luck getting approval from your director?",
+      "jp": "役員の承認はもらえた？",
+      "speak": "Any luck getting approval from your director?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-047",
+      "en": "Hey, Dana, can you loop in legal on this thread?",
+      "jp": "ねえダナ、このスレッドに法務も入れてくれる？",
+      "speak": "Hey, Dana, can you loop in legal on this thread?",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-048",
+      "en": "Hey, Sam, nice work closing that deal.",
+      "jp": "ねえサム、あの契約をまとめたのはお見事だよ。",
+      "speak": "Hey, Sam, nice work closing that deal.",
+      "say": []
+    },
+    {
+      "id": "negoadv-1501-049",
+      "en": "Got it. I'll have the contract drafted within the hour.",
+      "jp": "分かりました。1時間以内に契約書を作成します。",
+      "speak": "Got it. I'll have the contract drafted within the hour.",
+      "say": [],
+      "note": "元の形: I've got it／聞こえ方: ガット／使う場面:了解の時"
+    },
+    {
+      "id": "negoadv-1501-050",
+      "en": "Mind if I record the call for my notes?",
+      "jp": "メモ用に通話を録音してもいい？",
+      "speak": "Mind if I record the call for my notes?",
+      "say": [],
+      "note": "元の形: do you mind／聞こえ方: マインディフ／使う場面:許可を軽くとる時"
+    }
+  ]
+}
