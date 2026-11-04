@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "aiclass-2301",
+  "ver": 1,
+  "situation": "aiclass",
+  "sname": "AI入門ドラマ",
+  "icon": "🎓",
+  "level": 3,
+  "title": "AI入門ドラマの口語表現",
+  "items": [
+    {
+      "id": "aiclass-2301-001",
+      "en": "What is AI, in plain English?",
+      "jp": "AIとは、やさしい英語で言うと何ですか？",
+      "speak": "What is AI, in plain English?",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-002",
+      "en": "It learns patterns from examples.",
+      "jp": "例からパターンを学びます。",
+      "speak": "It learns patterns from examples.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-003",
+      "en": "It has no brain and no feelings.",
+      "jp": "頭脳も感情もありません。",
+      "speak": "It has no brain and no feelings.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-004",
+      "en": "It's just math running on a lot of data.",
+      "jp": "大量のデータの上で動く数学にすぎません。",
+      "speak": "It's just math running on a lot of data.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-005",
+      "en": "You've probably used AI without knowing it.",
+      "jp": "知らないうちにAIを使ったことがあるでしょう。",
+      "speak": "You've probably used AI without knowing it.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-006",
+      "en": "How does a computer actually learn?",
+      "jp": "コンピュータは実際にどう学ぶのですか？",
+      "speak": "How does a computer actually learn?",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-007",
+      "en": "We show it ten thousand labeled photos.",
+      "jp": "ラベル付きの写真を1万枚見せます。",
+      "speak": "We show it ten thousand labeled photos.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-008",
+      "en": "It guesses first, and it's usually wrong.",
+      "jp": "まず推測して、たいてい間違えます。",
+      "speak": "It guesses first, and it's usually wrong.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-009",
+      "en": "It adjusts a little and tries again.",
+      "jp": "少し調整してまた試します。",
+      "speak": "It adjusts a little and tries again.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-010",
+      "en": "Mistakes are how it learns.",
+      "jp": "間違いが学ぶ方法です。",
+      "speak": "Mistakes are how it learns.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-011",
+      "en": "We call that training.",
+      "jp": "それを学習と呼びます。",
+      "speak": "We call that training.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-012",
+      "en": "The variety of the data matters a lot.",
+      "jp": "データの多様さがとても大事です。",
+      "speak": "The variety of the data matters a lot.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-013",
+      "en": "Garbage in, garbage out.",
+      "jp": "ゴミを入れればゴミが出ます。",
+      "speak": "Garbage in, garbage out.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-014",
+      "en": "If the data's messy, the AI learns the mess.",
+      "jp": "データが雑なら、AIはその雑さを学びます。",
+      "speak": "If the data's messy, the AI learns the mess.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-015",
+      "en": "It reflects whatever we feed it.",
+      "jp": "与えたものをそのまま映します。",
+      "speak": "It reflects whatever we feed it.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-016",
+      "en": "It just copied the pattern.",
+      "jp": "ただパターンを真似しただけです。",
+      "speak": "It just copied the pattern.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-017",
+      "en": "Humans have to check the data first.",
+      "jp": "人がまずデータを確認しなければなりません。",
+      "speak": "Humans have to check the data first.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-018",
+      "en": "Labeling data is tedious work.",
+      "jp": "データのラベル付けは地味な作業です。",
+      "speak": "Labeling data is tedious work.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-019",
+      "en": "A neural network is made of layers.",
+      "jp": "ニューラルネットワークは層でできています。",
+      "speak": "A neural network is made of layers.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-020",
+      "en": "Each node does one tiny calculation.",
+      "jp": "各ノードがごく小さな計算をひとつします。",
+      "speak": "Each node does one tiny calculation.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-021",
+      "en": "Each connection has a weight.",
+      "jp": "各つながりには重みがあります。",
+      "speak": "Each connection has a weight.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-022",
+      "en": "Training turns all those knobs.",
+      "jp": "学習がそのつまみを全部回します。",
+      "speak": "Training turns all those knobs.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-023",
+      "en": "A modern model has billions of them.",
+      "jp": "最近のモデルには数十億もあります。",
+      "speak": "A modern model has billions of them.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-024",
+      "en": "It needs powerful computers and weeks of training.",
+      "jp": "高性能なコンピュータと数週間の学習が必要です。",
+      "speak": "It needs powerful computers and weeks of training.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-025",
+      "en": "It predicts the next word.",
+      "jp": "次の単語を予測します。",
+      "speak": "It predicts the next word.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-026",
+      "en": "It splits text into small chunks called tokens.",
+      "jp": "文章をトークンという小さな塊に分けます。",
+      "speak": "It splits text into small chunks called tokens.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-027",
+      "en": "It picks the most likely token each time.",
+      "jp": "毎回もっともありそうなトークンを選びます。",
+      "speak": "It picks the most likely token each time.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-028",
+      "en": "Long chats cost more tokens.",
+      "jp": "長い会話はトークンを多く使います。",
+      "speak": "Long chats cost more tokens.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-029",
+      "en": "That's a hallucination.",
+      "jp": "それはハルシネーションです。",
+      "speak": "That's a hallucination.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-030",
+      "en": "It made up something that sounds right.",
+      "jp": "本当らしく聞こえるものを作り出しました。",
+      "speak": "It made up something that sounds right.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-031",
+      "en": "It sounded confident, but it was wrong.",
+      "jp": "自信ありげでしたが、間違っていました。",
+      "speak": "It sounded confident, but it was wrong.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-032",
+      "en": "Believable isn't the same as correct.",
+      "jp": "もっともらしいことと正しいことは違います。",
+      "speak": "Believable isn't the same as correct.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-033",
+      "en": "Double-check names, numbers, and dates.",
+      "jp": "名前、数字、日付は二重に確認してください。",
+      "speak": "Double-check names, numbers, and dates.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-034",
+      "en": "Use it as a first draft, not the final word.",
+      "jp": "最終結論ではなく、最初の下書きとして使いましょう。",
+      "speak": "Use it as a first draft, not the final word.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-035",
+      "en": "Vague input gets vague output.",
+      "jp": "あいまいな入力はあいまいな出力になります。",
+      "speak": "Vague input gets vague output.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-036",
+      "en": "The question you write is called a prompt.",
+      "jp": "あなたが書く質問をプロンプトと呼びます。",
+      "speak": "The question you write is called a prompt.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-037",
+      "en": "Give it a role, a goal, and some context.",
+      "jp": "役割、目的、背景を伝えてください。",
+      "speak": "Give it a role, a goal, and some context.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-038",
+      "en": "Don't start over, just say what to change.",
+      "jp": "やり直さず、直すところだけ伝えましょう。",
+      "speak": "Don't start over, just say what to change.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-039",
+      "en": "Make it shorter and less formal.",
+      "jp": "もっと短く、堅くなく。",
+      "speak": "Make it shorter and less formal.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-040",
+      "en": "One good example beats long instructions.",
+      "jp": "よい見本ひとつは長い説明に勝ります。",
+      "speak": "One good example beats long instructions.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-041",
+      "en": "Try it on your next task.",
+      "jp": "次の仕事で試してみてください。",
+      "speak": "Try it on your next task.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-042",
+      "en": "What's hype and what's real?",
+      "jp": "何が誇張で何が本当ですか？",
+      "speak": "What's hype and what's real?",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-043",
+      "en": "Some tasks will change a lot.",
+      "jp": "大きく変わる仕事もあります。",
+      "speak": "Some tasks will change a lot.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-044",
+      "en": "The goal is to use it well.",
+      "jp": "目標はうまく使うことです。",
+      "speak": "The goal is to use it well.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-045",
+      "en": "Let it handle the boring parts.",
+      "jp": "退屈な部分はAIに任せましょう。",
+      "speak": "Let it handle the boring parts.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-046",
+      "en": "You focus on judgment and creativity.",
+      "jp": "あなたは判断と創造性に集中しましょう。",
+      "speak": "You focus on judgment and creativity.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-047",
+      "en": "Keep checking its work.",
+      "jp": "出力の確認は続けてください。",
+      "speak": "Keep checking its work.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-048",
+      "en": "It can be confidently wrong.",
+      "jp": "自信ありげに間違うことがあります。",
+      "speak": "It can be confidently wrong.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-049",
+      "en": "You went from no clue to teaching others.",
+      "jp": "全く分からない状態から、人に教えるまで来ました。",
+      "speak": "You went from no clue to teaching others.",
+      "say": []
+    },
+    {
+      "id": "aiclass-2301-050",
+      "en": "Class dismissed.",
+      "jp": "以上で授業は終わりです。",
+      "speak": "Class dismissed.",
+      "say": []
+    }
+  ]
+}

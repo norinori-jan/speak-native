@@ -1,0 +1,383 @@
+[
+  {
+    "id": "aiclass",
+    "ic": "🎓",
+    "n": "AI入門ドラマ",
+    "hint": "Mia, a new hire, learns how AI works from her mentor Ken in an eight-part serial drama from basics to everyday use",
+    "level": 3,
+    "keywords": [
+      "AI",
+      "machine learning",
+      "prompt"
+    ],
+    "d": [
+      {
+        "t": "Part 1：AIって結局なに？",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my boss just put me on the AI team, and honestly, I have no clue what AI even is. Can you explain it in plain English?",
+            "jp": "ケン、上司に突然AIチームに入れられたんですが、正直AIが何かさえ分かりません。やさしい英語で説明してもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure, Mia. Welcome aboard. Think of AI as software that learns patterns from examples instead of following rules a human wrote line by line.",
+            "jp": "もちろん、ミア。ようこそ。AIとは、人が一行ずつ書いたルールに従うのではなく、例からパターンを学ぶソフトだと考えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "So it's not like a robot with a brain? That's what the movies made me think.",
+            "jp": "じゃあ頭脳を持ったロボットみたいなものじゃないんですね？映画のせいでそう思っていました。"
+          },
+          {
+            "sp": 1,
+            "en": "Nope. No brain, no feelings. It's just math running on a lot of data, though it can look pretty smart from the outside.",
+            "jp": "違います。頭脳も感情もありません。大量のデータの上で動く数学にすぎませんが、外から見るとかなり賢そうには見えます。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, give me an example. Where would I have already used AI without knowing it?",
+            "jp": "じゃあ例をください。知らないうちにAIを使っていた場面はどこですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Every time your phone suggests the next word while you're typing, or your email app moves junk into the spam folder. That's all AI.",
+            "jp": "文字を打つ時にスマホが次の単語を提案したり、メールアプリが迷惑メールを振り分けたりする時です。全部AIですよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Huh, that's way more normal than I expected. So what's the hard part?",
+            "jp": "へえ、思ったよりずっと身近ですね。じゃあ難しいのはどこですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Good question, and that's our next lesson. Meet me after lunch, and bring a notebook.",
+            "jp": "いい質問です、それが次の授業です。昼食後に来て、ノートを持ってきてください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 2：機械学習のしくみ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, I'm back, notebook in hand. You said AI learns from examples. How does a computer actually learn?",
+            "jp": "戻りました、ノートも持って。AIは例から学ぶと言いましたよね。コンピュータはどうやって実際に学ぶんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Let's say we want it to recognize cats. We show it ten thousand photos, each one labeled 'cat' or 'not cat.'",
+            "jp": "たとえば猫を見分けさせたいとします。1万枚の写真を見せ、それぞれに『猫』か『猫でない』のラベルをつけます。"
+          },
+          {
+            "sp": 0,
+            "en": "And it just figures it out? That sounds almost too easy.",
+            "jp": "それで勝手に分かるんですか？簡単すぎる気がします。"
+          },
+          {
+            "sp": 1,
+            "en": "It guesses first, and it's usually wrong. Then it checks the right answer, adjusts a little, and tries again, over and over.",
+            "jp": "まず推測して、たいてい間違えます。それから正解を確かめて、少し調整して、また試す。それを何度も繰り返します。",
+            "note": "元の形: over and over／聞こえ方: オウヴァ アンド オウヴァ／使う場面:何度も繰り返す時"
+          },
+          {
+            "sp": 0,
+            "en": "So mistakes are basically how it learns. Kind of like me on my first day here.",
+            "jp": "つまり間違いが学ぶ方法なんですね。ここでの私の初日みたいです。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "Ha, exactly. We call that training. After enough rounds, the guesses get really good.",
+            "jp": "はは、その通り。それを『学習』と呼びます。十分に繰り返すと、推測がとても正確になります。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens if I show it a cat it's never seen, like a hairless one?",
+            "jp": "見たことのない猫、たとえば毛のない猫を見せたらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It might miss it. That's why the variety of the training data matters so much, which is where we're going next.",
+            "jp": "見逃すかもしれません。だから学習データの多様さがとても大事なんです。次はそこを話します。"
+          }
+        ]
+      },
+      {
+        "t": "Part 3：データがすべて",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I read that bad data gives bad results. Is that really true, or is it just a saying?",
+            "jp": "ケン、悪いデータは悪い結果を生むと読みました。本当ですか、それともただの格言ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It's painfully true. We say 'garbage in, garbage out.' If the data's messy, the AI learns the mess.",
+            "jp": "痛いほど本当です。『ゴミを入れればゴミが出る』と言います。データが雑なら、AIはその雑さを学びます。"
+          },
+          {
+            "sp": 0,
+            "en": "Can you give me a real case? I want something I can picture.",
+            "jp": "実際の例をもらえますか？想像できるものがいいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. A company trained a hiring tool on ten years of resumes, but most of those hires were men, so it started favoring men.",
+            "jp": "いいですよ。ある会社が10年分の履歴書で採用ツールを学習させたら、採用者の多くが男性だったため、男性を優遇し始めました。"
+          },
+          {
+            "sp": 0,
+            "en": "Whoa, that's scary. The AI wasn't trying to be unfair, right? It just copied the pattern.",
+            "jp": "うわ、怖いですね。AIは不公平にしようとしたわけじゃなく、ただパターンを真似しただけですよね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. It has no opinions. It reflects whatever we feed it, which is why humans have to check the data first.",
+            "jp": "その通り。意見は持っていません。与えたものをそのまま映すので、人がまずデータを確認しなければなりません。"
+          },
+          {
+            "sp": 0,
+            "en": "So who cleans and labels all this data? Is that part of our job?",
+            "jp": "じゃあ、そのデータは誰が整理してラベルをつけるんですか？私たちの仕事の一部ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Partly, yes. Next week you'll help me label a small set, and you'll see how tedious it is.",
+            "jp": "一部はそうです。来週、小さなデータ集のラベル付けを手伝ってもらいますが、どれほど地味な作業か分かりますよ。"
+          }
+        ]
+      },
+      {
+        "t": "Part 4：ニューラルネットワーク",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Today's word is 'neural network.' It sounds really intimidating, Ken. Is it as hard as it sounds?",
+            "jp": "今日の言葉は『ニューラルネットワーク』です。すごく威圧的に聞こえます、ケン。名前ほど難しいんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not at all. Picture a big team where each person only does one tiny calculation and passes the result to the next person.",
+            "jp": "全然。大きなチームを想像してください。各人はごく小さな計算をひとつだけして、結果を次の人に渡します。"
+          },
+          {
+            "sp": 0,
+            "en": "So no single person knows the whole answer?",
+            "jp": "つまり、誰も答えの全体は知らないんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Each one is called a node, and the nodes are arranged in layers. The first layer takes in the data, and the last one gives the answer.",
+            "jp": "その通り。ひとつひとつをノードと呼び、層に並べます。最初の層がデータを受け取り、最後の層が答えを出します。"
+          },
+          {
+            "sp": 0,
+            "en": "And where does the learning happen? In the passing between people?",
+            "jp": "学習はどこで起こるんですか？人から人への受け渡しの部分ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Great guess. Each connection has a weight, like a volume knob, and training slowly turns all those knobs until the answers improve.",
+            "jp": "いい推測です。各つながりに重みという、音量つまみのようなものがあり、学習で答えがよくなるまで全部のつまみを少しずつ回します。"
+          },
+          {
+            "sp": 0,
+            "en": "How many knobs are we talking about? Hundreds?",
+            "jp": "つまみはどれくらいですか？数百？"
+          },
+          {
+            "sp": 1,
+            "en": "Try billions. That's why a modern model needs powerful computers and weeks of training.",
+            "jp": "数十億です。だから最近のモデルには高性能なコンピュータと何週間もの学習が必要なんです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 5：ChatGPTのような言語モデル",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my cousin keeps asking me how chatbots like ChatGPT actually work. I told her I'd find out.",
+            "jp": "ケン、いとこがChatGPTのようなチャットボットが実際どう動くのかしつこく聞くんです。調べると言ってしまいました。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, here's the short version. A large language model reads huge amounts of text and learns to predict the next word.",
+            "jp": "じゃあ短く説明します。大規模言語モデルは大量の文章を読んで、次の単語を予測することを学びます。"
+          },
+          {
+            "sp": 0,
+            "en": "That's it? Just the next word? It feels like it does so much more than that.",
+            "jp": "それだけ？次の単語だけ？もっとたくさんのことをしている気がします。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the surprising part. Predict one word, add it, then predict the next one. Do that a few hundred times, and you get a whole answer.",
+            "jp": "そこが意外なところです。ひとつ単語を予測して、足して、次を予測する。それを数百回やると、答え全体になります。"
+          },
+          {
+            "sp": 0,
+            "en": "So when it writes an essay, it's not planning the whole thing ahead like a human would?",
+            "jp": "じゃあエッセイを書く時も、人間みたいに全体を先に計画しているわけじゃないんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not in the way we do. It splits text into small chunks called tokens, and it picks the most likely token each time.",
+            "jp": "私たちのようにはしません。文章を『トークン』という小さな塊に分けて、毎回もっともありそうなトークンを選びます。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, tokens. And that's why long chats cost more, right? More tokens to handle?",
+            "jp": "トークンですね。だから長い会話は料金が高くなるんですよね？処理するトークンが増えるから？"
+          },
+          {
+            "sp": 1,
+            "en": "Spot on. You're catching on fast, Mia. Let's talk about where it goes wrong next.",
+            "jp": "まさにその通り。飲み込みが早いですね、ミア。次は失敗する場面を話しましょう。",
+            "note": "元の形: spot on／聞こえ方: スポット オン／使う場面:ぴったり正解と言う時"
+          }
+        ]
+      },
+      {
+        "t": "Part 6：もっともらしい嘘",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I asked the chatbot about a book, and it gave me a title, an author, and a summary. Then I couldn't find the book anywhere.",
+            "jp": "ケン、チャットボットに本のことを聞いたら、題名も著者もあらすじも答えてくれたんです。でもその本がどこにも見つかりません。"
+          },
+          {
+            "sp": 1,
+            "en": "Ah, you just met a hallucination. The model made up something that sounds right but isn't real.",
+            "jp": "ああ、ハルシネーションに出会いましたね。モデルが、本当らしく聞こえるけれど実在しないものを作り出したんです。"
+          },
+          {
+            "sp": 0,
+            "en": "But why would it do that? It didn't say 'I'm not sure,' it just sounded confident.",
+            "jp": "でもなぜそんなことを？『分かりません』とは言わず、自信ありげでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Remember, it predicts likely words, not true ones. A believable sentence and a correct sentence aren't the same thing to it.",
+            "jp": "思い出してください、予測するのはありそうな言葉で、正しい言葉ではありません。もっともらしい文と正しい文は、モデルにとって同じではないんです。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a little unsettling. So how do I know when to trust it?",
+            "jp": "ちょっと不安になりますね。いつ信用していいか、どうやって分かるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Rule of thumb: the more specific and checkable the claim is, the more you should double-check it, especially names, numbers, and dates.",
+            "jp": "経験則として、主張が具体的で確認できるものほど、二重に確認してください。特に名前、数字、日付です。",
+            "note": "元の形: rule of thumb／聞こえ方: ルール オブ サム／使う場面:経験則を言う時"
+          },
+          {
+            "sp": 0,
+            "en": "So use it as a fast first draft, not as the final word.",
+            "jp": "つまり、最終結論ではなく、素早い下書きとして使えということですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And that leads into how to ask better questions, which is our next topic.",
+            "jp": "その通り。そして、それはよりよい質問の仕方につながります。次のテーマです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 7：プロンプトのコツ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, last time I asked a chatbot to 'write something about our product,' and what I got was totally useless.",
+            "jp": "ケン、前に『うちの製品について何か書いて』と頼んだら、全く使えないものが返ってきました。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a classic. Vague input gets vague output. The question we write to the AI is called a prompt.",
+            "jp": "よくある話です。あいまいな入力はあいまいな出力になります。AIに書く質問を『プロンプト』と呼びます。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, so how do I write a good one?",
+            "jp": "じゃあ、いいプロンプトはどう書けばいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Give it a role, a goal, and some context. For example: 'You're a friendly sales writer. Write three lines for busy parents.'",
+            "jp": "役割、目的、背景を伝えてください。たとえば『あなたは親しみやすい営業ライターです。忙しい親向けに3行書いてください』のように。"
+          },
+          {
+            "sp": 0,
+            "en": "That's so much clearer. What if the answer still isn't what I wanted?",
+            "jp": "ずっと明確ですね。それでも望んだ答えにならなかったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Don't start over. Just reply with what to change, like 'Make it shorter and less formal.' Think of it as a conversation.",
+            "jp": "最初からやり直さないで。『もっと短くて堅くなく』のように、直すところだけ返します。会話だと思ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "And showing an example helps too, right?",
+            "jp": "例を見せるのも役に立ちますよね？"
+          },
+          {
+            "sp": 1,
+            "en": "Big time. One good sample beats a paragraph of instructions. Go ahead and try it on your next task.",
+            "jp": "すごく役立ちます。よい見本ひとつは、長い説明文に勝ります。次の仕事でぜひ試してみて。",
+            "note": "元の形: go ahead／聞こえ方: ゴウ アヘッド／使う場面:どうぞやって、と促す時"
+          }
+        ]
+      },
+      {
+        "t": "Part 8：AIと上手に付き合う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, it's been a few weeks, and I actually feel kind of comfortable with AI now. But I still have one big worry.",
+            "jp": "ケン、数週間たって、AIにだいぶ慣れた気がします。でも大きな心配がひとつ残っています。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "Let me guess. Is it about losing your job?",
+            "jp": "当ててみましょうか。仕事を失うことですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah. Everyone keeps saying AI will take over everything, and I can't tell what's hype and what's real.",
+            "jp": "はい。みんながAIが全部奪うと言っていて、何が誇張で何が本当か分かりません。"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, some tasks will change a lot. But people who know how to work with AI will usually be in better shape than those who don't.",
+            "jp": "正直、変わる仕事はたくさんあります。ただ、AIと働く方法を知っている人は、知らない人より有利なことが多いでしょう。"
+          },
+          {
+            "sp": 0,
+            "en": "So the goal isn't to compete with it, it's to use it well?",
+            "jp": "つまり目標は競争することではなく、うまく使うことですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Let it handle the boring parts, and you focus on judgment, creativity, and talking to real people.",
+            "jp": "そうです。退屈な部分はAIに任せて、あなたは判断、創造性、実際の人との対話に集中してください。"
+          },
+          {
+            "sp": 0,
+            "en": "And keep checking its work, since it can be confidently wrong.",
+            "jp": "そして、自信ありげに間違うことがあるので、出力の確認は続ける、ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "You've got it. Congratulations, Mia. You went from 'no clue' to teaching your cousin. Class dismissed.",
+            "jp": "その通り。おめでとう、ミア。『全く分からない』から、いとこに教えるまで来ましたね。以上で授業は終わりです。",
+            "note": "元の形: you have got it／聞こえ方: ユーヴ ガリット／使う場面:よく分かったね、と認める時"
+          }
+        ]
+      }
+    ]
+  }
+]

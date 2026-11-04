@@ -1,0 +1,378 @@
+[
+  {
+    "id": "aiclass5",
+    "ic": "🎓",
+    "n": "AI入門ドラマ5",
+    "hint": "Season five and finale: Mia and Ken cover agents in practice, creativity, music, startups, careers, translation, AI failures, and a farewell lesson",
+    "level": 3,
+    "keywords": [
+      "agent",
+      "career",
+      "startup"
+    ],
+    "d": [
+      {
+        "t": "Part 33：エージェントに仕事を任せる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I want to try an agent for our weekly report. It would gather the numbers, write the summary, and email the team.",
+            "jp": "ケン、週報にエージェントを試したいです。数字を集めて、要約を書いて、チームにメールを送ってくれるものです。"
+          },
+          {
+            "sp": 1,
+            "en": "Sounds promising. First, let's write down every step you do by hand, because an agent can't follow a process nobody has described.",
+            "jp": "有望ですね。まず、手作業で行う全ステップを書き出しましょう。誰も説明していない手順をエージェントは辿れません。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. Open the sheet, copy three columns, check for blanks, write five bullet points, and send.",
+            "jp": "分かりました。表を開いて、3列をコピーして、空欄を確認して、箇条書きを5つ書いて、送る。"
+          },
+          {
+            "sp": 1,
+            "en": "Good. Now mark which steps are safe to automate and which need your approval. Sending the email should stay manual at first.",
+            "jp": "いいですね。次に、自動化して安全な手順と、承認が必要な手順に印をつけましょう。メール送信は最初は手動のままにします。"
+          },
+          {
+            "sp": 0,
+            "en": "So the agent prepares a draft, and I press send.",
+            "jp": "つまりエージェントが下書きを用意して、私が送信を押すんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. After a few weeks of clean results, you can loosen the leash a little. Trust should be earned, even by software.",
+            "jp": "そうです。数週間きれいな結果が続いたら、少しずつ手綱を緩められます。信頼は、ソフトウェアでも積み上げるものです。"
+          },
+          {
+            "sp": 0,
+            "en": "What should I log so I can see what it did?",
+            "jp": "何を記録しておけば、エージェントがしたことを確認できますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Every step, every tool it called, and every number it used. If something looks off on Monday, you can trace it in two minutes.",
+            "jp": "全ステップ、呼んだ全ツール、使った全数字です。月曜に何かおかしければ、2分でたどれます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 34：AIと創作",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm writing a short story in my spare time, and the AI keeps giving me ideas that feel really generic.",
+            "jp": "ケン、空き時間に短編小説を書いているんですが、AIが出すアイデアがどれもありきたりに感じます。"
+          },
+          {
+            "sp": 1,
+            "en": "That's normal. The model picks likely words, so left alone it drifts toward the average of everything it's read.",
+            "jp": "普通のことです。モデルはありそうな言葉を選ぶので、放っておくと読んだもの全体の平均に寄っていきます。"
+          },
+          {
+            "sp": 0,
+            "en": "So how do I get something fresh out of it?",
+            "jp": "じゃあ、新鮮なものを引き出すにはどうすればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Give it strange constraints. Say, 'a lighthouse keeper who is afraid of the sea, told in letters, with no names.' Odd limits create odd results.",
+            "jp": "奇妙な制約を与えてください。『海を怖がる灯台守、手紙形式、名前は一切なし』のように。変な制限が変な結果を生みます。"
+          },
+          {
+            "sp": 0,
+            "en": "And then I rewrite it in my own voice.",
+            "jp": "そして私自身の声で書き直す、ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Use it as a brainstorming partner, not a ghostwriter. The taste and the final choices have to be yours.",
+            "jp": "その通り。代筆者ではなく、ブレインストームの相手として使ってください。センスと最終的な選択はあなたのものでなければいけません。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I'm planning to publish it somewhere?",
+            "jp": "どこかに公開するつもりだったらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Check the rules of the place you submit to, and be honest about how much help you had. Many places now ask.",
+            "jp": "投稿先の規則を確認して、どれだけ助けを借りたかを正直に伝えましょう。今は多くの場所が尋ねます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 35：AIと音楽",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my friend just made a whole song with AI in ten minutes, vocals and all. Is music about to disappear as a job?",
+            "jp": "ケン、友達がAIで歌も入った曲を10分でまるごと作りました。音楽は仕事として消えてしまうんでしょうか？"
+          },
+          {
+            "sp": 1,
+            "en": "I don't think so, but it's changing. The AI can make something that sounds nice, but it doesn't have a life story behind it.",
+            "jp": "そうは思いませんが、変わってはいます。AIは心地よく聞こえるものを作れますが、その背後に人生の物語はありません。"
+          },
+          {
+            "sp": 0,
+            "en": "Does it matter to listeners? Honestly, I can't always tell.",
+            "jp": "聞く人にとって重要ですか？正直、私にはいつも見分けられません。"
+          },
+          {
+            "sp": 1,
+            "en": "For background music, maybe not. But people connect to artists, to their stories, and to live shows, which AI can't replace.",
+            "jp": "BGMなら重要ではないかもしれません。でも人はアーティストや、その物語、ライブにつながりを感じます。それはAIが置き換えられません。"
+          },
+          {
+            "sp": 0,
+            "en": "So musicians should use it as a tool?",
+            "jp": "じゃあ音楽家は道具として使うべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Many already do, for rough demos, for ideas, or to hear a melody in a different style. The skill moves from playing every note to choosing and shaping.",
+            "jp": "すでに多くの人が、ラフなデモ、アイデア出し、別のスタイルでメロディを聴くために使っています。技術は、全部の音を弾くことから、選んで形を整えることへ移ります。"
+          },
+          {
+            "sp": 0,
+            "en": "Like a producer more than a player.",
+            "jp": "演奏者というよりプロデューサーのように。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. And the legal side matters, too, so always check where the training music came from.",
+            "jp": "そうです。法律面も大事なので、学習に使われた音楽の出所は必ず確認してください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 36：AIスタートアップを考える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I have a startup idea. An AI tool that writes meeting notes and turns them into tasks. Is that a good idea?",
+            "jp": "ケン、起業のアイデアがあります。会議のメモを書いてタスクに変えるAIツールです。いい考えでしょうか？"
+          },
+          {
+            "sp": 1,
+            "en": "It's a real problem, which is good. But a hundred other teams have the same idea, so what would make yours different?",
+            "jp": "本物の課題なのはいい点です。でも他にも100チームが同じ案を持っているので、あなたのは何が違うんですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Hmm. Honestly, I hadn't thought that far.",
+            "jp": "うーん。正直、そこまで考えていませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Here's a test. If the big AI companies add your feature next month, would customers still need you?",
+            "jp": "テストがあります。大手のAI企業が来月その機能を追加したら、お客さんはまだあなたを必要としますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Probably not, if it's just a thin layer on top of someone else's model.",
+            "jp": "他社のモデルの上の薄い層にすぎないなら、たぶん必要としません。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. The strong ones own something special: unique data, a deep fit with one industry, or a workflow people can't live without.",
+            "jp": "その通り。強いところは何か特別なものを持っています。独自のデータ、ひとつの業界への深い適合、手放せない業務の流れなどです。"
+          },
+          {
+            "sp": 0,
+            "en": "So maybe I should focus on one type of team, like sales, and solve their whole problem.",
+            "jp": "じゃあ、営業のようなひとつのタイプのチームに絞って、その人たちの問題全体を解決するのがいいかもしれません。"
+          },
+          {
+            "sp": 1,
+            "en": "Now you're thinking like a founder. Go talk to ten real salespeople before you write a single line of code.",
+            "jp": "創業者の考え方になってきましたね。コードを1行書く前に、本物の営業担当者10人と話しなさい。",
+            "note": "元の形: now you are thinking／聞こえ方: ナウ ヨア スィンキン／使う場面:褒める時"
+          }
+        ]
+      },
+      {
+        "t": "Part 37：AI時代のキャリア",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm updating my resume. How do I show my AI skills without sounding like everyone else?",
+            "jp": "ケン、履歴書を更新しています。ほかの人と同じに聞こえず、AIのスキルを見せるにはどうすればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Skip the buzzwords. Instead, describe a real result, like 'cut report time from two days to three hours using an AI workflow.'",
+            "jp": "流行り言葉は避けて、実際の成果を書きましょう。『AIの業務フローで報告書の時間を2日から3時間に短縮』のように。"
+          },
+          {
+            "sp": 0,
+            "en": "Numbers do help. What about in an interview? They might test me.",
+            "jp": "数字は確かに役立ちますね。面接ではどうですか？試されるかもしれません。"
+          },
+          {
+            "sp": 1,
+            "en": "Be ready to explain one project end to end: the problem, what you tried, what failed, and what you'd do differently.",
+            "jp": "ひとつのプロジェクトを最初から最後まで説明できるようにしてください。課題、試したこと、失敗したこと、次にどうするか。"
+          },
+          {
+            "sp": 0,
+            "en": "I like that failures are part of it. I have plenty.",
+            "jp": "失敗も含めていいんですね。私にはたくさんあります。"
+          },
+          {
+            "sp": 1,
+            "en": "Honesty about mistakes shows judgment, and judgment is what companies can't get from a model.",
+            "jp": "間違いについての正直さは判断力を示します。そして判断力は、企業がモデルからは得られないものです。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I keep learning new tools every week? It feels exhausting.",
+            "jp": "毎週新しいツールを学び続けるべきですか？疲れてしまいます。"
+          },
+          {
+            "sp": 1,
+            "en": "No. Learn the fundamentals deeply and pick up tools as you need them. Tools expire, fundamentals don't.",
+            "jp": "いいえ。基本を深く学んで、道具は必要な時に覚えればいいです。道具は古くなりますが、基本は古くなりません。"
+          }
+        ]
+      },
+      {
+        "t": "Part 38：AIで言葉の壁を越える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I used AI to translate an email from our client in Brazil, and it read perfectly. Can I just trust it?",
+            "jp": "ケン、ブラジルのお客様のメールをAIで翻訳したら、完璧に読めました。そのまま信用していいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "For the gist, yes. For contracts, medical notes, or anything with real consequences, have a human who knows the language check it.",
+            "jp": "大意なら、はい。契約書や医療記録など、実際に影響が出るものは、その言語が分かる人に確認してもらってください。"
+          },
+          {
+            "sp": 0,
+            "en": "Why? It seemed so natural.",
+            "jp": "なぜですか？とても自然でしたが。"
+          },
+          {
+            "sp": 1,
+            "en": "Natural isn't the same as accurate. Politeness levels, jokes, and cultural references are easy for a model to flatten or misread.",
+            "jp": "自然なことと正確なことは違います。丁寧さの度合い、冗談、文化的な言及は、モデルが平らにしたり誤読したりしやすいです。"
+          },
+          {
+            "sp": 0,
+            "en": "So for casual messages I can use it, but for important ones I need a second opinion.",
+            "jp": "じゃあ気軽なメッセージには使えて、大事なものには第二の意見が必要なんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a good rule. And here's a trick: translate it back into your language and see if it still says what you meant.",
+            "jp": "いい規則です。それとコツがあります。自分の言語に翻訳し直して、言いたかったことがまだ伝わるか見てみましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Clever. Does this mean I don't have to learn English anymore?",
+            "jp": "賢いですね。これって、もう英語を学ばなくていいということですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not at all. A translator helps you speak, but only your own English lets you build trust in the room, face to face.",
+            "jp": "全然違います。翻訳は話す手助けにはなりますが、その場で顔を合わせて信頼を築けるのは、あなた自身の英語だけです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 39：AIの失敗から学ぶ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the news said a company's chatbot promised a customer a refund that didn't exist, and the company had to pay. How does that happen?",
+            "jp": "ケン、ニュースで、ある会社のチャットボットが存在しない返金を顧客に約束して、会社が支払うことになったと言っていました。どうしてそうなるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "The bot made up a policy, just like a hallucination, and the customer believed it. Courts often treat the bot's words as the company's words.",
+            "jp": "ボットが規則を作り話で作ってしまい、ハルシネーションと同じですね、顧客がそれを信じました。裁判所はボットの発言を会社の発言として扱うことが多いです。"
+          },
+          {
+            "sp": 0,
+            "en": "That's scary. How do we prevent it on our own bot?",
+            "jp": "怖いですね。自社のボットでどう防ぎますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Give it only approved documents to answer from, tell it to say 'I'm not sure' when it can't find an answer, and hand hard cases to a human.",
+            "jp": "答えるための文書を承認済みのものだけにして、答えが見つからない時は『分かりません』と言わせ、難しい案件は人に引き継ぎます。"
+          },
+          {
+            "sp": 0,
+            "en": "And we should test it by asking tricky questions on purpose.",
+            "jp": "わざと意地悪な質問をしてテストもすべきですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and keep a log. When something goes wrong, the first question is always, 'what exactly did it say, and why?'",
+            "jp": "はい、そして記録を残します。何か問題が起きた時、最初の質問はいつも『正確に何と言ったのか、そしてなぜか？』です。"
+          },
+          {
+            "sp": 0,
+            "en": "So every failure is really a lesson for the checklist.",
+            "jp": "つまり失敗は全部、チェックリストへの教訓なんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Good teams write down their failures so the same mistake never happens twice.",
+            "jp": "その通り。良いチームは失敗を書き留めて、同じ間違いが二度と起きないようにします。"
+          }
+        ]
+      },
+      {
+        "t": "Part 40：AI入門ドラマ、最終回",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I can't believe it's the final lesson of the whole series. Forty parts. When I started, I thought a neural network was a type of internet cable.",
+            "jp": "ケン、シリーズ全体の最終回だなんて信じられません。40回です。始めた頃は、ニューラルネットワークはインターネットケーブルの一種だと思っていました。"
+          },
+          {
+            "sp": 1,
+            "en": "Ha, and now you've explained it to a room full of people. How does that feel?",
+            "jp": "はは、そして今では部屋いっぱいの人に説明しましたね。どんな気分ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Honestly, kind of proud, but also humble. The more I learn, the more I see how much I don't know.",
+            "jp": "正直、ちょっと誇らしいですが、謙虚な気持ちでもあります。学ぶほど、知らないことの多さが見えてきます。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "That's the best sign of learning. The people who say they know everything about AI are the ones to worry about.",
+            "jp": "それが学びの最良の印です。AIのことを全部知っていると言う人こそ、心配したほうがいい人です。"
+          },
+          {
+            "sp": 0,
+            "en": "If you could give new learners just one piece of advice, what would it be?",
+            "jp": "新しく学ぶ人にたったひとつ助言するとしたら、何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Stay curious, check the facts, and never stop asking, 'How do you know?' That question works on people and on AI.",
+            "jp": "好奇心を持ち続けて、事実を確認して、『どうしてそう分かるの？』と聞き続けること。その質問は人にもAIにも効きます。"
+          },
+          {
+            "sp": 0,
+            "en": "I'll remember that. Thank you for everything, Ken. Truly.",
+            "jp": "覚えておきます。いろいろありがとう、ケン。本当に。"
+          },
+          {
+            "sp": 1,
+            "en": "It's been my pleasure, Mia. Now, shall we go get some coffee, and then see what the next forty lessons should be?",
+            "jp": "こちらこそ楽しかったです、ミア。さあ、コーヒーでも飲みに行って、次の40回が何になるか考えましょうか？"
+          }
+        ]
+      }
+    ]
+  }
+]

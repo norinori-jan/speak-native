@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "aiclass5-2305",
+  "ver": 1,
+  "situation": "aiclass5",
+  "sname": "AI入門ドラマ5",
+  "icon": "🎓",
+  "level": 3,
+  "title": "AI入門ドラマ5の口語表現",
+  "items": [
+    {
+      "id": "aiclass5-2305-001",
+      "en": "Write down every step you do by hand.",
+      "jp": "手作業の全ステップを書き出しましょう。",
+      "speak": "Write down every step you do by hand.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-002",
+      "en": "An agent can't follow a process nobody has described.",
+      "jp": "誰も説明していない手順をエージェントは辿れません。",
+      "speak": "An agent can't follow a process nobody has described.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-003",
+      "en": "Mark which steps need your approval.",
+      "jp": "承認が必要な手順に印をつけましょう。",
+      "speak": "Mark which steps need your approval.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-004",
+      "en": "The agent prepares a draft, and I press send.",
+      "jp": "エージェントが下書きを用意し、私が送信を押します。",
+      "speak": "The agent prepares a draft, and I press send.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-005",
+      "en": "Trust should be earned, even by software.",
+      "jp": "信頼はソフトウェアでも積み上げるものです。",
+      "speak": "Trust should be earned, even by software.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-006",
+      "en": "Log every step and every tool it called.",
+      "jp": "全ステップと呼んだ全ツールを記録しましょう。",
+      "speak": "Log every step and every tool it called.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-007",
+      "en": "The ideas feel really generic.",
+      "jp": "アイデアがどれもありきたりに感じます。",
+      "speak": "The ideas feel really generic.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-008",
+      "en": "It drifts toward the average.",
+      "jp": "平均に寄っていきます。",
+      "speak": "It drifts toward the average.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-009",
+      "en": "Give it strange constraints.",
+      "jp": "奇妙な制約を与えましょう。",
+      "speak": "Give it strange constraints.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-010",
+      "en": "Odd limits create odd results.",
+      "jp": "変な制限が変な結果を生みます。",
+      "speak": "Odd limits create odd results.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-011",
+      "en": "Use it as a brainstorming partner, not a ghostwriter.",
+      "jp": "代筆者ではなく、ブレインストームの相手として使いましょう。",
+      "speak": "Use it as a brainstorming partner, not a ghostwriter.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-012",
+      "en": "The final choices have to be yours.",
+      "jp": "最終的な選択はあなたのものでなければいけません。",
+      "speak": "The final choices have to be yours.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-013",
+      "en": "Be honest about how much help you had.",
+      "jp": "どれだけ助けを借りたかを正直に伝えましょう。",
+      "speak": "Be honest about how much help you had.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-014",
+      "en": "It sounds nice, but there's no life story behind it.",
+      "jp": "心地よく聞こえますが、背後に人生の物語はありません。",
+      "speak": "It sounds nice, but there's no life story behind it.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-015",
+      "en": "People connect to artists and live shows.",
+      "jp": "人はアーティストやライブにつながりを感じます。",
+      "speak": "People connect to artists and live shows.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-016",
+      "en": "It's good for rough demos and ideas.",
+      "jp": "ラフなデモやアイデア出しに向いています。",
+      "speak": "It's good for rough demos and ideas.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-017",
+      "en": "The skill moves from playing to choosing.",
+      "jp": "技術は演奏することから選ぶことへ移ります。",
+      "speak": "The skill moves from playing to choosing.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-018",
+      "en": "Check where the training music came from.",
+      "jp": "学習に使われた音楽の出所を確認しましょう。",
+      "speak": "Check where the training music came from.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-019",
+      "en": "It's a real problem, but so many teams have the same idea.",
+      "jp": "本物の課題ですが、同じ案のチームがとても多いです。",
+      "speak": "It's a real problem, but so many teams have the same idea.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-020",
+      "en": "What would make yours different?",
+      "jp": "あなたのは何が違うのですか？",
+      "speak": "What would make yours different?",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-021",
+      "en": "Would customers still need you next month?",
+      "jp": "来月もお客さんはあなたを必要としますか？",
+      "speak": "Would customers still need you next month?",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-022",
+      "en": "It's just a thin layer on top of someone else's model.",
+      "jp": "他社のモデルの上の薄い層にすぎません。",
+      "speak": "It's just a thin layer on top of someone else's model.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-023",
+      "en": "Unique data is a real advantage.",
+      "jp": "独自のデータは本物の強みです。",
+      "speak": "Unique data is a real advantage.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-024",
+      "en": "Solve one type of team's whole problem.",
+      "jp": "ひとつのタイプのチームの問題全体を解決しましょう。",
+      "speak": "Solve one type of team's whole problem.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-025",
+      "en": "Talk to ten real customers first.",
+      "jp": "まず本物のお客さん10人と話しましょう。",
+      "speak": "Talk to ten real customers first.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-026",
+      "en": "Skip the buzzwords and describe a real result.",
+      "jp": "流行り言葉は避けて、実際の成果を書きましょう。",
+      "speak": "Skip the buzzwords and describe a real result.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-027",
+      "en": "I cut the report time from two days to three hours.",
+      "jp": "報告書の時間を2日から3時間に短縮しました。",
+      "speak": "I cut the report time from two days to three hours.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-028",
+      "en": "Explain one project from start to finish.",
+      "jp": "ひとつのプロジェクトを最初から最後まで説明しましょう。",
+      "speak": "Explain one project from start to finish.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-029",
+      "en": "What failed, and what would you do differently?",
+      "jp": "何が失敗し、次はどうしますか？",
+      "speak": "What failed, and what would you do differently?",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-030",
+      "en": "Honesty about mistakes shows judgment.",
+      "jp": "間違いについての正直さは判断力を示します。",
+      "speak": "Honesty about mistakes shows judgment.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-031",
+      "en": "Tools expire, but fundamentals don't.",
+      "jp": "道具は古くなりますが、基本は古くなりません。",
+      "speak": "Tools expire, but fundamentals don't.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-032",
+      "en": "It's fine for the gist.",
+      "jp": "大意なら大丈夫です。",
+      "speak": "It's fine for the gist.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-033",
+      "en": "Have a human who knows the language check it.",
+      "jp": "その言語が分かる人に確認してもらいましょう。",
+      "speak": "Have a human who knows the language check it.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-034",
+      "en": "Natural isn't the same as accurate.",
+      "jp": "自然なことと正確なことは違います。",
+      "speak": "Natural isn't the same as accurate.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-035",
+      "en": "Jokes and politeness are easy to misread.",
+      "jp": "冗談や丁寧さは誤読されやすいです。",
+      "speak": "Jokes and politeness are easy to misread.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-036",
+      "en": "Translate it back and see if it still says the same thing.",
+      "jp": "翻訳し直して、同じことを言っているか確かめましょう。",
+      "speak": "Translate it back and see if it still says the same thing.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-037",
+      "en": "Only your own English builds trust face to face.",
+      "jp": "顔を合わせて信頼を築けるのは、あなた自身の英語だけです。",
+      "speak": "Only your own English builds trust face to face.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-038",
+      "en": "The bot made up a policy.",
+      "jp": "ボットが規則を作り話で作りました。",
+      "speak": "The bot made up a policy.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-039",
+      "en": "The company had to pay.",
+      "jp": "会社が支払うことになりました。",
+      "speak": "The company had to pay.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-040",
+      "en": "Only let it answer from approved documents.",
+      "jp": "承認済みの文書からだけ答えさせましょう。",
+      "speak": "Only let it answer from approved documents.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-041",
+      "en": "Tell it to say I'm not sure.",
+      "jp": "分かりませんと言うように伝えましょう。",
+      "speak": "Tell it to say I'm not sure.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-042",
+      "en": "Hand hard cases to a human.",
+      "jp": "難しい案件は人に引き継ぎましょう。",
+      "speak": "Hand hard cases to a human.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-043",
+      "en": "What exactly did it say, and why?",
+      "jp": "正確に何と言ったのか、そしてなぜですか？",
+      "speak": "What exactly did it say, and why?",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-044",
+      "en": "Write down failures so they never happen twice.",
+      "jp": "同じ失敗が二度と起きないよう、書き留めましょう。",
+      "speak": "Write down failures so they never happen twice.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-045",
+      "en": "The more I learn, the more I see what I don't know.",
+      "jp": "学ぶほど、知らないことが見えてきます。",
+      "speak": "The more I learn, the more I see what I don't know.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-046",
+      "en": "Stay curious and check the facts.",
+      "jp": "好奇心を持ち続けて、事実を確認しましょう。",
+      "speak": "Stay curious and check the facts.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-047",
+      "en": "How do you know?",
+      "jp": "どうしてそう分かるのですか？",
+      "speak": "How do you know?",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-048",
+      "en": "It's been my pleasure.",
+      "jp": "こちらこそ楽しかったです。",
+      "speak": "It's been my pleasure.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-049",
+      "en": "Trust is earned, one clean result at a time.",
+      "jp": "信頼は、きれいな結果を一つずつ積んで得るものです。",
+      "speak": "Trust is earned, one clean result at a time.",
+      "say": []
+    },
+    {
+      "id": "aiclass5-2305-050",
+      "en": "Thank you for everything.",
+      "jp": "いろいろありがとう。",
+      "speak": "Thank you for everything.",
+      "say": []
+    }
+  ]
+}

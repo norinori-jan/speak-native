@@ -1,5 +1,5 @@
 {
-"updated": 1793786771085,
+"updated": 1793786914979,
 "packs": [
 {
 "id": "airport-0001",
@@ -560,6 +560,46 @@
 "count": 73,
 "situation": "musthave",
 "sname": "覚えておきたい定番フレーズ"
+},
+{
+"id": "aiclass-2301",
+"file": "aiclass-2301.json",
+"ver": 1,
+"count": 50,
+"situation": "aiclass",
+"sname": "AI入門ドラマ"
+},
+{
+"id": "aiclass2-2302",
+"file": "aiclass2-2302.json",
+"ver": 1,
+"count": 50,
+"situation": "aiclass2",
+"sname": "AI入門ドラマ2"
+},
+{
+"id": "aiclass3-2303",
+"file": "aiclass3-2303.json",
+"ver": 1,
+"count": 50,
+"situation": "aiclass3",
+"sname": "AI入門ドラマ3"
+},
+{
+"id": "aiclass4-2304",
+"file": "aiclass4-2304.json",
+"ver": 1,
+"count": 50,
+"situation": "aiclass4",
+"sname": "AI入門ドラマ4"
+},
+{
+"id": "aiclass5-2305",
+"file": "aiclass5-2305.json",
+"ver": 1,
+"count": 50,
+"situation": "aiclass5",
+"sname": "AI入門ドラマ5"
 }
 ]
 }

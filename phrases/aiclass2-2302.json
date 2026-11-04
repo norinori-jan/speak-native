@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "aiclass2-2302",
+  "ver": 1,
+  "situation": "aiclass2",
+  "sname": "AI入門ドラマ2",
+  "icon": "🎓",
+  "level": 3,
+  "title": "AI入門ドラマ2の口語表現",
+  "items": [
+    {
+      "id": "aiclass2-2302-001",
+      "en": "It made the picture from a single sentence.",
+      "jp": "一文から絵を作りました。",
+      "speak": "It made the picture from a single sentence.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-002",
+      "en": "It starts with noise and cleans it up step by step.",
+      "jp": "ノイズから始めて少しずつきれいにします。",
+      "speak": "It starts with noise and cleans it up step by step.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-003",
+      "en": "Hands are tricky for image generators.",
+      "jp": "手は画像生成AIには難しいです。",
+      "speak": "Hands are tricky for image generators.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-004",
+      "en": "Describe the style, the colors, and the mood.",
+      "jp": "スタイル、色、雰囲気を書いてください。",
+      "speak": "Describe the style, the colors, and the mood.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-005",
+      "en": "Expect to try a few times.",
+      "jp": "何回か試すつもりでいてください。",
+      "speak": "Expect to try a few times.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-006",
+      "en": "It can handle a big chunk of the work.",
+      "jp": "仕事の大部分をこなせます。",
+      "speak": "It can handle a big chunk of the work.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-007",
+      "en": "The work is repetitive and easy to automate.",
+      "jp": "繰り返しの作業で、自動化しやすいです。",
+      "speak": "The work is repetitive and easy to automate.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-008",
+      "en": "People make typos when they're tired.",
+      "jp": "人は疲れるとタイプミスをします。",
+      "speak": "People make typos when they're tired.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-009",
+      "en": "Keep a human in the loop.",
+      "jp": "人を間に入れておきましょう。",
+      "speak": "Keep a human in the loop.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-010",
+      "en": "A person approves it before it goes out.",
+      "jp": "送る前に人が承認します。",
+      "speak": "A person approves it before it goes out.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-011",
+      "en": "Start small and measure the time saved.",
+      "jp": "小さく始めて、節約できた時間を測りましょう。",
+      "speak": "Start small and measure the time saved.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-012",
+      "en": "That's bias, and you're right to notice it.",
+      "jp": "それがバイアスで、気づいたのは正しいです。",
+      "speak": "That's bias, and you're right to notice it.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-013",
+      "en": "The text has old stereotypes in it.",
+      "jp": "その文章には古い固定観念が含まれています。",
+      "speak": "The text has old stereotypes in it.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-014",
+      "en": "Bias is spread through the data in subtle ways.",
+      "jp": "バイアスはデータ全体に微妙に広がっています。",
+      "speak": "Bias is spread through the data in subtle ways.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-015",
+      "en": "Test with different kinds of people and cases.",
+      "jp": "いろいろな人や場合でテストしましょう。",
+      "speak": "Test with different kinds of people and cases.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-016",
+      "en": "Never let AI decide about people alone.",
+      "jp": "人についての判断をAIだけに任せないでください。",
+      "speak": "Never let AI decide about people alone.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-017",
+      "en": "Is it okay under our company policy?",
+      "jp": "会社の規則では大丈夫ですか？",
+      "speak": "Is it okay under our company policy?",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-018",
+      "en": "Anything you paste may be stored.",
+      "jp": "貼ったものは保存されるかもしれません。",
+      "speak": "Anything you paste may be stored.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-019",
+      "en": "Never paste private or secret information.",
+      "jp": "個人情報や機密は貼らないでください。",
+      "speak": "Never paste private or secret information.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-020",
+      "en": "Remove the name and the number first.",
+      "jp": "先に名前と番号を消しましょう。",
+      "speak": "Remove the name and the number first.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-021",
+      "en": "Use the tool our company approved.",
+      "jp": "会社が承認したツールを使ってください。",
+      "speak": "Use the tool our company approved.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-022",
+      "en": "When in doubt, ask before you paste.",
+      "jp": "迷ったら、貼る前に聞きましょう。",
+      "speak": "When in doubt, ask before you paste.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-023",
+      "en": "Is it okay, legally?",
+      "jp": "法律的に大丈夫ですか？",
+      "speak": "Is it okay, legally?",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-024",
+      "en": "It depends, and the rules are still changing.",
+      "jp": "場合によります。ルールはまだ変わっています。",
+      "speak": "It depends, and the rules are still changing.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-025",
+      "en": "Who owns the result?",
+      "jp": "結果は誰のものですか？",
+      "speak": "Who owns the result?",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-026",
+      "en": "That's the biggest red flag.",
+      "jp": "それが最大の警告です。",
+      "speak": "That's the biggest red flag.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-027",
+      "en": "Check the license before business use.",
+      "jp": "業務利用の前にライセンスを確認しましょう。",
+      "speak": "Check the license before business use.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-028",
+      "en": "Run it by legal before it goes live.",
+      "jp": "公開前に法務に確認してもらいましょう。",
+      "speak": "Run it by legal before it goes live.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-029",
+      "en": "A chatbot answers; an agent takes actions.",
+      "jp": "チャットボットは答え、エージェントは行動します。",
+      "speak": "A chatbot answers; an agent takes actions.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-030",
+      "en": "It can search, send emails, and book meetings.",
+      "jp": "検索、メール送信、会議の予約ができます。",
+      "speak": "It can search, send emails, and book meetings.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-031",
+      "en": "Limit what it's allowed to touch.",
+      "jp": "触れていいものを制限しましょう。",
+      "speak": "Limit what it's allowed to touch.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-032",
+      "en": "Ask for approval before anything big.",
+      "jp": "大きなことの前には承認を求めましょう。",
+      "speak": "Ask for approval before anything big.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-033",
+      "en": "It works in a loop until it's done.",
+      "jp": "終わるまでループで動きます。",
+      "speak": "It works in a loop until it's done.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-034",
+      "en": "Set a step limit so it stops and asks for help.",
+      "jp": "ステップの上限を決めて、止まって助けを求めさせます。",
+      "speak": "Set a step limit so it stops and asks for help.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-035",
+      "en": "It's like a fast intern who needs supervision.",
+      "jp": "監督が必要な、速いインターンのようなものです。",
+      "speak": "It's like a fast intern who needs supervision.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-036",
+      "en": "Can it answer using our own manuals?",
+      "jp": "自社のマニュアルを使って答えられますか？",
+      "speak": "Can it answer using our own manuals?",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-037",
+      "en": "It searches your documents first.",
+      "jp": "まず文書を検索します。",
+      "speak": "It searches your documents first.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-038",
+      "en": "It reads the right page before answering.",
+      "jp": "答える前に正しいページを読みます。",
+      "speak": "It reads the right page before answering.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-039",
+      "en": "It's like an open-book exam.",
+      "jp": "持ち込み可の試験のようなものです。",
+      "speak": "It's like an open-book exam.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-040",
+      "en": "The model can quote the source.",
+      "jp": "モデルは出典を引用できます。",
+      "speak": "The model can quote the source.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-041",
+      "en": "If the manuals are messy, the answers will be too.",
+      "jp": "マニュアルが雑なら、答えも雑になります。",
+      "speak": "If the manuals are messy, the answers will be too.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-042",
+      "en": "Good documents come first.",
+      "jp": "まず良い文書です。",
+      "speak": "Good documents come first.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-043",
+      "en": "It'll be built into everything, like electricity.",
+      "jp": "電気のようにすべてに組み込まれるでしょう。",
+      "speak": "It'll be built into everything, like electricity.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-044",
+      "en": "Know what to ask and when the answer is wrong.",
+      "jp": "何を聞くべきかと、答えが間違いの時を知ることです。",
+      "speak": "Know what to ask and when the answer is wrong.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-045",
+      "en": "Curiosity and good judgment matter most.",
+      "jp": "好奇心と良い判断力が最も大事です。",
+      "speak": "Curiosity and good judgment matter most.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-046",
+      "en": "The tools change, but those skills won't.",
+      "jp": "道具は変わりますが、その力は変わりません。",
+      "speak": "The tools change, but those skills won't.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-047",
+      "en": "You've come a long way.",
+      "jp": "ずいぶん進みましたね。",
+      "speak": "You've come a long way.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-048",
+      "en": "Let me teach the next new hire.",
+      "jp": "次の新人を私に教えさせてください。",
+      "speak": "Let me teach the next new hire.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-049",
+      "en": "It might miss it if it has never seen one.",
+      "jp": "見たことがなければ見逃すかもしれません。",
+      "speak": "It might miss it if it has never seen one.",
+      "say": []
+    },
+    {
+      "id": "aiclass2-2302-050",
+      "en": "A thirty-second question beats a thirty-day headache.",
+      "jp": "30秒の質問は30日の頭痛に勝ります。",
+      "speak": "A thirty-second question beats a thirty-day headache.",
+      "say": []
+    }
+  ]
+}

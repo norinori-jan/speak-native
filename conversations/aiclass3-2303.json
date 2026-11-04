@@ -1,0 +1,378 @@
+[
+  {
+    "id": "aiclass3",
+    "ic": "🎓",
+    "n": "AI入門ドラマ3",
+    "hint": "Season three: Mia and Ken use AI to write, debug, review, and test code, call models through an API, control costs, and measure quality",
+    "level": 3,
+    "keywords": [
+      "coding",
+      "API",
+      "eval"
+    ],
+    "d": [
+      {
+        "t": "Part 17：AIにコードを書かせる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, great news. After the training, they're moving me to the development team, and I'll be writing code with AI helping me.",
+            "jp": "ケン、いいニュースです。研修のあと、開発チームに移って、AIの助けを借りてコードを書くことになりました。"
+          },
+          {
+            "sp": 1,
+            "en": "Congratulations, Mia. Season three, then. Have you ever asked an AI to write code before?",
+            "jp": "おめでとう、ミア。じゃあシーズン3ですね。以前AIにコードを書かせたことはありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Once. I typed 'make a to-do app,' and it gave me two hundred lines I didn't understand at all.",
+            "jp": "一度だけ。『ToDoアプリを作って』と打ったら、全く理解できない200行が返ってきました。"
+          },
+          {
+            "sp": 1,
+            "en": "Classic mistake. Ask for small pieces instead, and say the language, the goal, and what the input and output look like.",
+            "jp": "よくある間違いです。小さな部品を頼んで、言語、目的、入力と出力の形を伝えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "So something like, 'write a function that takes a list of prices and returns the total with tax'?",
+            "jp": "たとえば『価格のリストを受け取って、税込み合計を返す関数を書いて』のような感じですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And then read every line. If you can't explain it to me, you shouldn't commit it.",
+            "jp": "その通り。そして全行を読んでください。私に説明できないなら、コミットしてはいけません。"
+          },
+          {
+            "sp": 0,
+            "en": "That's strict, but fair. The AI writes it, but I'm the one responsible.",
+            "jp": "厳しいけど、もっともです。書くのはAIでも、責任を負うのは私ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Think of it as a very fast pair-programmer who sometimes confidently makes things up.",
+            "jp": "そうです。とても速いペアプログラマーで、ときどき自信満々に作り話をする、と思ってください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 18：バグを一緒に探す",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my program keeps crashing, and I've stared at it for an hour. I've got no idea what's wrong.",
+            "jp": "ケン、プログラムが落ち続けて、1時間も見つめています。何が悪いのか全く分かりません。"
+          },
+          {
+            "sp": 1,
+            "en": "Did you paste the error message into the AI along with the code around it?",
+            "jp": "エラーメッセージと、その周りのコードをAIに貼りましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "Just the error. I wasn't sure if I should include the rest.",
+            "jp": "エラーだけです。残りも入れるべきか分かりませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Always include both, plus what you expected to happen and what actually happened. The more context, the better the guess.",
+            "jp": "必ず両方入れて、期待した動きと実際の動きも書いてください。文脈が多いほど推測が良くなります。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, I did that. It says I'm using a variable before it's been set. Oh, I see it now!",
+            "jp": "やってみました。変数を設定する前に使っていると言っています。ああ、分かりました！"
+          },
+          {
+            "sp": 1,
+            "en": "Nice. But here's the thing: don't just accept the fix. Ask it why that was the problem, so you learn the pattern.",
+            "jp": "いいですね。でも大事なのは、直し方をそのまま受け入れないことです。なぜ問題だったのか聞いて、パターンを学んでください。",
+            "note": "元の形: here is the thing／聞こえ方: ヒアズ ザ スィング／使う場面:大事な点を切り出す時"
+          },
+          {
+            "sp": 0,
+            "en": "That makes sense. Otherwise I'd make the same mistake next week.",
+            "jp": "なるほど。そうしないと来週も同じ間違いをしますね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And if the AI's fix doesn't work, tell it what happened. Debugging is a conversation, not a vending machine.",
+            "jp": "その通り。AIの直し方が効かなかったら、何が起きたか伝えましょう。デバッグは会話で、自動販売機ではありません。"
+          }
+        ]
+      },
+      {
+        "t": "Part 19：AIのコードをレビューする",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, could you review my pull request? Most of it was written by the AI, and it passed all the checks.",
+            "jp": "ケン、プルリクエストをレビューしてもらえますか？大部分はAIが書いたもので、チェックはすべて通りました。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Passing the checks is a start, not a finish. Let's walk through it together, starting with this function.",
+            "jp": "いいですよ。チェックを通ったのは出発点で、ゴールではありません。この関数から一緒に見ていきましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "It looks clean to me. Is something wrong with it?",
+            "jp": "私にはきれいに見えます。何か問題がありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It works, but it reads the whole file into memory. With a small file, that's fine. With a big one, the server could crash.",
+            "jp": "動きますが、ファイル全体をメモリに読み込んでいます。小さいファイルなら問題ありませんが、大きいとサーバーが落ちるかもしれません。"
+          },
+          {
+            "sp": 0,
+            "en": "I never would've caught that. The AI never mentioned it, either.",
+            "jp": "私なら絶対に気づきませんでした。AIも何も言っていませんでしたし。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the limit. The AI writes code that looks right, but it doesn't know your real data, your traffic, or your users.",
+            "jp": "それが限界です。AIは正しく見えるコードを書きますが、あなたの実際のデータ、アクセス量、ユーザーは知りません。"
+          },
+          {
+            "sp": 0,
+            "en": "So I should ask it directly about edge cases, like huge files or empty input.",
+            "jp": "じゃあ、巨大なファイルや空の入力のような特殊な場合を、直接聞くべきですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and read the code like you're the skeptic. Your job is to doubt it, politely but firmly.",
+            "jp": "はい、そして疑う側としてコードを読んでください。あなたの仕事は、礼儀正しく、でもきっぱり疑うことです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 20：テストを書かせる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I finished the feature, but I hate writing tests. They feel like double the work.",
+            "jp": "ケン、機能はできましたが、テストを書くのが嫌いです。仕事が倍になる感じがします。"
+          },
+          {
+            "sp": 1,
+            "en": "Let the AI draft them. Tests are a perfect job for it, since they're repetitive and follow clear patterns.",
+            "jp": "AIに下書きさせましょう。テストは繰り返しで決まったパターンがあるので、AIにぴったりの仕事です。"
+          },
+          {
+            "sp": 0,
+            "en": "Really? But if it writes both the code and the tests, couldn't it just be wrong twice?",
+            "jp": "本当ですか？でも、コードもテストもAIが書いたら、2回続けて間違うことはありませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sharp thinking. That's exactly the risk. So you decide the expected results first, and then have it write tests around those.",
+            "jp": "鋭いですね。まさにそれがリスクです。だから先に期待する結果をあなたが決めて、それに沿ってテストを書かせます。"
+          },
+          {
+            "sp": 0,
+            "en": "So I'd say, 'this input should give that output,' and let it fill in the rest?",
+            "jp": "つまり『この入力ならこの出力になるはず』と言って、残りを埋めさせるんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Also ask for the weird cases: empty lists, negative numbers, really long text. That's where bugs like to hide.",
+            "jp": "そうです。変なケースも頼んでください。空のリスト、負の数、とても長い文章。バグが隠れたがる場所です。"
+          },
+          {
+            "sp": 0,
+            "en": "And then I run them and see which ones fail?",
+            "jp": "そして実行して、どれが失敗するか見るんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes. A failing test isn't bad news. It's the AI and the code finally telling you something true.",
+            "jp": "はい。失敗したテストは悪い知らせではありません。AIとコードがようやく本当のことを教えてくれた、ということです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 21：自分のアプリにAIを組み込む",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our product manager wants a chat feature inside our app. Do we have to build our own model for that?",
+            "jp": "ケン、プロダクトマネージャーが自社アプリの中にチャット機能を入れたいそうです。そのために自前のモデルを作る必要がありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Almost never. You call an existing model through an API, which means sending a request over the internet and getting an answer back.",
+            "jp": "ほとんどありません。既存のモデルをAPI経由で呼びます。インターネットでリクエストを送って、答えを受け取るということです。"
+          },
+          {
+            "sp": 0,
+            "en": "What does the request actually contain?",
+            "jp": "リクエストには実際に何が入るんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Usually the model name, the user's message, and some instructions called a system prompt, like 'you're a helpful support assistant for our store.'",
+            "jp": "たいていモデル名、ユーザーのメッセージ、そしてシステムプロンプトという指示です。『あなたは当店の親切なサポート担当です』のような。"
+          },
+          {
+            "sp": 0,
+            "en": "And the answer comes back as text that I can show on the screen?",
+            "jp": "そして答えは、画面に表示できる文章として返ってくるんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. One more important thing: never put your API key in the app itself, because anyone can find it and run up your bill.",
+            "jp": "そうです。もうひとつ大事なこと。APIキーはアプリ自体に絶対に入れないでください。誰でも見つけて、請求額を膨らませられます。"
+          },
+          {
+            "sp": 0,
+            "en": "So where does the key live?",
+            "jp": "じゃあキーはどこに置くんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "On a server you control. The app talks to your server, and your server talks to the model.",
+            "jp": "自分で管理するサーバーです。アプリはあなたのサーバーと話し、あなたのサーバーがモデルと話します。"
+          }
+        ]
+      },
+      {
+        "t": "Part 22：コストと速さ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the finance team just sent me our AI bill for last month. It's three times what we expected.",
+            "jp": "ケン、経理がさっき先月のAIの請求書を送ってきました。想定の3倍です。"
+          },
+          {
+            "sp": 1,
+            "en": "Let's look. Remember, you pay per token, both the ones you send and the ones the model writes back.",
+            "jp": "見てみましょう。覚えていますか、送るトークンと、モデルが書き返すトークンの両方に料金がかかります。"
+          },
+          {
+            "sp": 0,
+            "en": "Hmm, it looks like we send the entire chat history every single time.",
+            "jp": "うーん、毎回チャット履歴を全部送っているようです。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a common culprit. Keep only the recent messages, or summarize the old ones into a short note.",
+            "jp": "よくある原因です。最近のメッセージだけ残すか、古いものを短いメモに要約しましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "What else can we do? The answers also feel kind of slow.",
+            "jp": "他に何ができますか？答えもちょっと遅く感じます。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "Use a smaller, faster model for easy jobs, and save the big one for hard questions. And stream the answer so users see words right away.",
+            "jp": "簡単な仕事には小さくて速いモデルを使い、大きいモデルは難しい質問用に取っておきます。それと答えをストリーミングして、すぐ文字が見えるようにします。"
+          },
+          {
+            "sp": 0,
+            "en": "Streaming makes it feel faster even if the total time is the same.",
+            "jp": "合計時間が同じでも、速く感じられるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Speed is partly about the clock and partly about how it feels.",
+            "jp": "その通り。速さは、時計の問題でもあり、感じ方の問題でもあります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 23：品質をどう測るか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I changed the prompt, and the answers seem better to me. But my teammate thinks they got worse. How do we settle this?",
+            "jp": "ケン、プロンプトを変えたら、私には答えが良くなったように見えます。でもチームメイトは悪くなったと思っています。どう決着をつけますか？"
+          },
+          {
+            "sp": 1,
+            "en": "With evidence, not feelings. We build a small test set, called an eval, with real questions and the answers we'd consider good.",
+            "jp": "気持ちではなく証拠で。評価用の小さなテスト集を作ります。eval と呼び、実際の質問と、良いと考える答えを入れます。"
+          },
+          {
+            "sp": 0,
+            "en": "How many questions do we need?",
+            "jp": "質問は何個必要ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Start with fifty. Cover the common cases, the tricky ones, and a few that should be refused, like asking for private data.",
+            "jp": "まず50個です。よくある場合、難しい場合、そして拒否すべきもの、たとえば個人データを求めるものも少し入れます。"
+          },
+          {
+            "sp": 0,
+            "en": "And then we run the old prompt and the new prompt on the same fifty?",
+            "jp": "そして古いプロンプトと新しいプロンプトを同じ50個で試すんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and compare the scores. You can even have another model grade the answers, as long as a human spot-checks the grading.",
+            "jp": "はい、点数を比べます。別のモデルに採点させてもいいですが、人が採点を抜き打ちで確認することが条件です。"
+          },
+          {
+            "sp": 0,
+            "en": "So it's like a unit test, but for answers instead of code.",
+            "jp": "つまりユニットテストの、コードではなく答え版なんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Great way to say it. No eval, no changes. That's our team rule from now on.",
+            "jp": "うまい言い方です。evalなしでは変更しない。それが今からのチームルールです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 24：卒業とこれから",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the new hire starts Monday, and I've prepared all eight lessons, plus a few of my own mistakes as examples.",
+            "jp": "ケン、新人が月曜に入ります。8つの授業と、自分の失敗談をいくつか例として準備しました。"
+          },
+          {
+            "sp": 1,
+            "en": "Putting your own mistakes in the lesson is smart. People remember stories better than rules.",
+            "jp": "自分の失敗を授業に入れるのは賢いですね。人はルールより物語をよく覚えます。"
+          },
+          {
+            "sp": 0,
+            "en": "I've learned that from you. Honestly, this year went by so fast. I started with no clue about AI, and now I review code.",
+            "jp": "あなたから学びました。正直、この1年はあっという間でした。AIのことを全く知らないところから始めて、今はコードをレビューしています。"
+          },
+          {
+            "sp": 1,
+            "en": "And you've been asking better questions every month. That's the real sign of progress.",
+            "jp": "そして毎月、より良い質問をするようになりました。それが本当の進歩の印です。"
+          },
+          {
+            "sp": 0,
+            "en": "What do you think I should learn next? I feel like I've only scratched the surface.",
+            "jp": "次に何を学ぶべきだと思いますか？まだ表面をなでただけな気がします。"
+          },
+          {
+            "sp": 1,
+            "en": "Pick one real problem at work and solve it end to end with AI. You'll learn more from that than from any course.",
+            "jp": "仕事の本物の問題をひとつ選んで、AIを使って最初から最後まで解決してください。どんな講座よりも学べます。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, challenge accepted. And if I get stuck, can I still come knocking on your door?",
+            "jp": "分かりました、挑戦を受けます。行き詰まったら、これからもドアをノックしに行っていいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Anytime, Mia. That's what mentors are for. Now go teach that new hire.",
+            "jp": "いつでもどうぞ、ミア。それがメンターの役目です。さあ、新人を教えに行きなさい。"
+          }
+        ]
+      }
+    ]
+  }
+]

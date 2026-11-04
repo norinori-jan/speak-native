@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "aiclass4-2304",
+  "ver": 1,
+  "situation": "aiclass4",
+  "sname": "AI入門ドラマ4",
+  "icon": "🎓",
+  "level": 3,
+  "title": "AI入門ドラマ4の口語表現",
+  "items": [
+    {
+      "id": "aiclass4-2304-001",
+      "en": "How do we make sure AI doesn't do harm?",
+      "jp": "AIが有害なことをしないようどう確保するのですか？",
+      "speak": "How do we make sure AI doesn't do harm?",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-002",
+      "en": "People rate the answers, and the model learns from that.",
+      "jp": "人が答えを評価し、モデルがそこから学びます。",
+      "speak": "People rate the answers, and the model learns from that.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-003",
+      "en": "It's like teaching it manners.",
+      "jp": "マナーを教えるようなものです。",
+      "speak": "It's like teaching it manners.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-004",
+      "en": "Red teaming means trying to break it on purpose.",
+      "jp": "レッドチーミングとは、わざと壊そうとすることです。",
+      "speak": "Red teaming means trying to break it on purpose.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-005",
+      "en": "Safety is never finished.",
+      "jp": "安全性に完成はありません。",
+      "speak": "Safety is never finished.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-006",
+      "en": "Keep testing, monitoring, and fixing.",
+      "jp": "テストと監視と修正を続けましょう。",
+      "speak": "Keep testing, monitoring, and fixing.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-007",
+      "en": "A multimodal model handles more than text.",
+      "jp": "マルチモーダルモデルは文字以外も扱います。",
+      "speak": "A multimodal model handles more than text.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-008",
+      "en": "It can read a photo of a whiteboard.",
+      "jp": "ホワイトボードの写真を読めます。",
+      "speak": "It can read a photo of a whiteboard.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-009",
+      "en": "Images are chopped into small patches.",
+      "jp": "画像は小さなパッチに切り分けられます。",
+      "speak": "Images are chopped into small patches.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-010",
+      "en": "Everything ends up as numbers.",
+      "jp": "結局すべて数字になります。",
+      "speak": "Everything ends up as numbers.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-011",
+      "en": "It's bad at counting small objects.",
+      "jp": "小さな物を数えるのは苦手です。",
+      "speak": "It's bad at counting small objects.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-012",
+      "en": "Check the important details yourself.",
+      "jp": "大事な部分は自分で確認しましょう。",
+      "speak": "Check the important details yourself.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-013",
+      "en": "It depends on how you use it.",
+      "jp": "使い方次第です。",
+      "speak": "It depends on how you use it.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-014",
+      "en": "Don't give me the answer. Ask me questions.",
+      "jp": "答えは教えないで、私に質問してください。",
+      "speak": "Don't give me the answer. Ask me questions.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-015",
+      "en": "It's a coach, not a calculator.",
+      "jp": "計算機ではなく、コーチです。",
+      "speak": "It's a coach, not a calculator.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-016",
+      "en": "Ask it to play a role and correct your mistakes.",
+      "jp": "役を演じさせて、間違いを直させましょう。",
+      "speak": "Ask it to play a role and correct your mistakes.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-017",
+      "en": "It never gets tired of your questions.",
+      "jp": "質問に飽きることがありません。",
+      "speak": "It never gets tired of your questions.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-018",
+      "en": "The goal is to learn, not to finish.",
+      "jp": "目的は終わらせることではなく、学ぶことです。",
+      "speak": "The goal is to learn, not to finish.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-019",
+      "en": "AI is a second pair of eyes.",
+      "jp": "AIはもう一組の目です。",
+      "speak": "AI is a second pair of eyes.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-020",
+      "en": "The doctor makes the final call.",
+      "jp": "最終判断は医師がします。",
+      "speak": "The doctor makes the final call.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-021",
+      "en": "The stakes are too high.",
+      "jp": "リスクが大きすぎます。",
+      "speak": "The stakes are too high.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-022",
+      "en": "It can't know the patient's whole story.",
+      "jp": "患者さんの全体像は分かりません。",
+      "speak": "It can't know the patient's whole story.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-023",
+      "en": "One wrong detail can cost a fortune.",
+      "jp": "細部のひとつの誤りが大金に響きます。",
+      "speak": "One wrong detail can cost a fortune.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-024",
+      "en": "AI assists and humans decide.",
+      "jp": "AIが補助し、人が決めます。",
+      "speak": "AI assists and humans decide.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-025",
+      "en": "The higher the risk, the more oversight.",
+      "jp": "リスクが高いほど、監督が必要です。",
+      "speak": "The higher the risk, the more oversight.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-026",
+      "en": "Try the prompt first.",
+      "jp": "まずプロンプトを試しましょう。",
+      "speak": "Try the prompt first.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-027",
+      "en": "It's cheap, fast, and easy to change.",
+      "jp": "安くて速くて、変えやすいです。",
+      "speak": "It's cheap, fast, and easy to change.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-028",
+      "en": "Fine-tuning trains the model on your own examples.",
+      "jp": "ファインチューニングは自分の例でモデルを学習させます。",
+      "speak": "Fine-tuning trains the model on your own examples.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-029",
+      "en": "It's a last resort for most teams.",
+      "jp": "多くのチームにとって最後の手段です。",
+      "speak": "It's a last resort for most teams.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-030",
+      "en": "Fix the cheap things first.",
+      "jp": "安いことから先に直しましょう。",
+      "speak": "Fix the cheap things first.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-031",
+      "en": "Some models are open and free to download.",
+      "jp": "ダウンロードして使える公開モデルがあります。",
+      "speak": "Some models are open and free to download.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-032",
+      "en": "It runs on your own laptop with no internet.",
+      "jp": "インターネットなしで自分のノートPCで動きます。",
+      "speak": "It runs on your own laptop with no internet.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-033",
+      "en": "What's the catch?",
+      "jp": "落とし穴は何ですか？",
+      "speak": "What's the catch?",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-034",
+      "en": "Smaller models are less capable.",
+      "jp": "小さいモデルは能力が低いです。",
+      "speak": "Smaller models are less capable.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-035",
+      "en": "Your data never leaves your machine.",
+      "jp": "データが自分の機械から出ません。",
+      "speak": "Your data never leaves your machine.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-036",
+      "en": "There's no per-token bill.",
+      "jp": "トークンごとの請求がありません。",
+      "speak": "There's no per-token bill.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-037",
+      "en": "Use a local model for private work.",
+      "jp": "内密な仕事にはローカルモデルを使いましょう。",
+      "speak": "Use a local model for private work.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-038",
+      "en": "Training a giant model takes a lot of power.",
+      "jp": "巨大なモデルの学習は多くの電力を使います。",
+      "speak": "Training a giant model takes a lot of power.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-039",
+      "en": "Data centers add up fast.",
+      "jp": "データセンターは急速に積み上がります。",
+      "speak": "Data centers add up fast.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-040",
+      "en": "Engineers are making models more efficient.",
+      "jp": "技術者がモデルをより効率的にしています。",
+      "speak": "Engineers are making models more efficient.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-041",
+      "en": "Don't send a giant request when a small one will do.",
+      "jp": "小さな依頼で済むなら、巨大な依頼を送らないでください。",
+      "speak": "Don't send a giant request when a small one will do.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-042",
+      "en": "Good engineering means doing more with less.",
+      "jp": "良い設計とは、より少ない資源で同じ仕事をすることです。",
+      "speak": "Good engineering means doing more with less.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-043",
+      "en": "Good rules can build trust.",
+      "jp": "良い規則は信頼を築きます。",
+      "speak": "Good rules can build trust.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-044",
+      "en": "Tell people when they're talking to an AI.",
+      "jp": "AIと話していることを人に知らせましょう。",
+      "speak": "Tell people when they're talking to an AI.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-045",
+      "en": "We should be able to explain how it decided.",
+      "jp": "どう判断したかを説明できるべきです。",
+      "speak": "We should be able to explain how it decided.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-046",
+      "en": "I'm hopeful, but I'm also worried.",
+      "jp": "期待していますが、心配もしています。",
+      "speak": "I'm hopeful, but I'm also worried.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-047",
+      "en": "We may move faster than we learn.",
+      "jp": "学ぶより速く進んでしまうかもしれません。",
+      "speak": "We may move faster than we learn.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-048",
+      "en": "Keep learning and keep asking good questions.",
+      "jp": "学び続けて、良い質問をし続けましょう。",
+      "speak": "Keep learning and keep asking good questions.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-049",
+      "en": "That's the whole course in one sentence.",
+      "jp": "それが講座全体の一文の要約です。",
+      "speak": "That's the whole course in one sentence.",
+      "say": []
+    },
+    {
+      "id": "aiclass4-2304-050",
+      "en": "Well said.",
+      "jp": "よく言いました。",
+      "speak": "Well said.",
+      "say": []
+    }
+  ]
+}

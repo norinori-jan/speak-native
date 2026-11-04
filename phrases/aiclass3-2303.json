@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "aiclass3-2303",
+  "ver": 1,
+  "situation": "aiclass3",
+  "sname": "AI入門ドラマ3",
+  "icon": "🎓",
+  "level": 3,
+  "title": "AI入門ドラマ3の口語表現",
+  "items": [
+    {
+      "id": "aiclass3-2303-001",
+      "en": "Ask for small pieces, not a whole app.",
+      "jp": "アプリ全体ではなく、小さな部品を頼みましょう。",
+      "speak": "Ask for small pieces, not a whole app.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-002",
+      "en": "Say the language, the goal, and the input and output.",
+      "jp": "言語、目的、入力と出力を伝えてください。",
+      "speak": "Say the language, the goal, and the input and output.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-003",
+      "en": "Read every line before you commit it.",
+      "jp": "コミットする前に全行を読んでください。",
+      "speak": "Read every line before you commit it.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-004",
+      "en": "The AI writes it, but you're responsible.",
+      "jp": "書くのはAIでも、責任を負うのはあなたです。",
+      "speak": "The AI writes it, but you're responsible.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-005",
+      "en": "It's like a very fast pair-programmer.",
+      "jp": "とても速いペアプログラマーのようなものです。",
+      "speak": "It's like a very fast pair-programmer.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-006",
+      "en": "Paste the error message and the code around it.",
+      "jp": "エラーメッセージとその周りのコードを貼ってください。",
+      "speak": "Paste the error message and the code around it.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-007",
+      "en": "Say what you expected and what actually happened.",
+      "jp": "期待した動きと実際の動きを書いてください。",
+      "speak": "Say what you expected and what actually happened.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-008",
+      "en": "The more context, the better the guess.",
+      "jp": "文脈が多いほど推測が良くなります。",
+      "speak": "The more context, the better the guess.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-009",
+      "en": "Don't just accept the fix. Ask why.",
+      "jp": "直し方をそのまま受け入れず、理由を聞きましょう。",
+      "speak": "Don't just accept the fix. Ask why.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-010",
+      "en": "Debugging is a conversation, not a vending machine.",
+      "jp": "デバッグは会話で、自動販売機ではありません。",
+      "speak": "Debugging is a conversation, not a vending machine.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-011",
+      "en": "Passing the checks is a start, not a finish.",
+      "jp": "チェックを通ったのは出発点で、ゴールではありません。",
+      "speak": "Passing the checks is a start, not a finish.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-012",
+      "en": "It works, but it might not scale.",
+      "jp": "動きますが、規模が大きくなると困るかもしれません。",
+      "speak": "It works, but it might not scale.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-013",
+      "en": "The AI doesn't know your real data or users.",
+      "jp": "AIはあなたの実際のデータやユーザーを知りません。",
+      "speak": "The AI doesn't know your real data or users.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-014",
+      "en": "Ask it about edge cases.",
+      "jp": "特殊な場合について聞いてみましょう。",
+      "speak": "Ask it about edge cases.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-015",
+      "en": "Read the code like a skeptic.",
+      "jp": "疑う側としてコードを読みましょう。",
+      "speak": "Read the code like a skeptic.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-016",
+      "en": "Let the AI draft the tests.",
+      "jp": "AIにテストの下書きをさせましょう。",
+      "speak": "Let the AI draft the tests.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-017",
+      "en": "It could be wrong twice.",
+      "jp": "2回続けて間違うかもしれません。",
+      "speak": "It could be wrong twice.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-018",
+      "en": "Decide the expected results first.",
+      "jp": "先に期待する結果を決めましょう。",
+      "speak": "Decide the expected results first.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-019",
+      "en": "Ask for the weird cases too.",
+      "jp": "変なケースも頼みましょう。",
+      "speak": "Ask for the weird cases too.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-020",
+      "en": "That's where bugs like to hide.",
+      "jp": "そこがバグの隠れたがる場所です。",
+      "speak": "That's where bugs like to hide.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-021",
+      "en": "A failing test is telling you something true.",
+      "jp": "失敗したテストは本当のことを教えてくれています。",
+      "speak": "A failing test is telling you something true.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-022",
+      "en": "You call an existing model through an API.",
+      "jp": "既存のモデルをAPI経由で呼びます。",
+      "speak": "You call an existing model through an API.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-023",
+      "en": "The request has the model name and the user's message.",
+      "jp": "リクエストにはモデル名とユーザーのメッセージが入ります。",
+      "speak": "The request has the model name and the user's message.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-024",
+      "en": "A system prompt gives the model its instructions.",
+      "jp": "システムプロンプトがモデルに指示を与えます。",
+      "speak": "A system prompt gives the model its instructions.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-025",
+      "en": "Never put your API key in the app.",
+      "jp": "APIキーをアプリに入れないでください。",
+      "speak": "Never put your API key in the app.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-026",
+      "en": "The app talks to your server, and your server talks to the model.",
+      "jp": "アプリはあなたのサーバーと話し、サーバーがモデルと話します。",
+      "speak": "The app talks to your server, and your server talks to the model.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-027",
+      "en": "You pay per token.",
+      "jp": "トークンごとに料金がかかります。",
+      "speak": "You pay per token.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-028",
+      "en": "We send the whole chat history every time.",
+      "jp": "毎回チャット履歴を全部送っています。",
+      "speak": "We send the whole chat history every time.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-029",
+      "en": "Summarize the old messages into a short note.",
+      "jp": "古いメッセージを短いメモに要約しましょう。",
+      "speak": "Summarize the old messages into a short note.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-030",
+      "en": "Use a smaller model for easy jobs.",
+      "jp": "簡単な仕事には小さいモデルを使いましょう。",
+      "speak": "Use a smaller model for easy jobs.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-031",
+      "en": "Stream the answer so it feels faster.",
+      "jp": "答えをストリーミングして、速く感じさせましょう。",
+      "speak": "Stream the answer so it feels faster.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-032",
+      "en": "We need evidence, not feelings.",
+      "jp": "気持ちではなく証拠が必要です。",
+      "speak": "We need evidence, not feelings.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-033",
+      "en": "Build a small test set called an eval.",
+      "jp": "evalという小さなテスト集を作りましょう。",
+      "speak": "Build a small test set called an eval.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-034",
+      "en": "Start with fifty real questions.",
+      "jp": "まず実際の質問を50個から始めましょう。",
+      "speak": "Start with fifty real questions.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-035",
+      "en": "Run the old and new prompts on the same set.",
+      "jp": "古いプロンプトと新しいプロンプトを同じ集で試しましょう。",
+      "speak": "Run the old and new prompts on the same set.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-036",
+      "en": "A human should spot-check the grading.",
+      "jp": "人が採点を抜き打ちで確認すべきです。",
+      "speak": "A human should spot-check the grading.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-037",
+      "en": "No eval, no changes.",
+      "jp": "evalなしでは変更しません。",
+      "speak": "No eval, no changes.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-038",
+      "en": "It's a unit test for answers.",
+      "jp": "答えのためのユニットテストです。",
+      "speak": "It's a unit test for answers.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-039",
+      "en": "People remember stories better than rules.",
+      "jp": "人はルールより物語をよく覚えます。",
+      "speak": "People remember stories better than rules.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-040",
+      "en": "You've been asking better questions every month.",
+      "jp": "毎月、より良い質問をするようになりました。",
+      "speak": "You've been asking better questions every month.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-041",
+      "en": "I feel like I've only scratched the surface.",
+      "jp": "まだ表面をなでただけな気がします。",
+      "speak": "I feel like I've only scratched the surface.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-042",
+      "en": "Pick one real problem and solve it end to end.",
+      "jp": "本物の問題を選んで、最初から最後まで解決しましょう。",
+      "speak": "Pick one real problem and solve it end to end.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-043",
+      "en": "You'll learn more from that than from any course.",
+      "jp": "どんな講座よりも学べます。",
+      "speak": "You'll learn more from that than from any course.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-044",
+      "en": "Challenge accepted.",
+      "jp": "挑戦を受けます。",
+      "speak": "Challenge accepted.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-045",
+      "en": "That's what mentors are for.",
+      "jp": "それがメンターの役目です。",
+      "speak": "That's what mentors are for.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-046",
+      "en": "Now go teach that new hire.",
+      "jp": "さあ、新人を教えに行きなさい。",
+      "speak": "Now go teach that new hire.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-047",
+      "en": "Debug it step by step.",
+      "jp": "一歩ずつデバッグしましょう。",
+      "speak": "Debug it step by step.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-048",
+      "en": "Ship small, test often.",
+      "jp": "小さく出して、何度もテストしましょう。",
+      "speak": "Ship small, test often.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-049",
+      "en": "Start with one real question.",
+      "jp": "まず実際の質問をひとつから始めましょう。",
+      "speak": "Start with one real question.",
+      "say": []
+    },
+    {
+      "id": "aiclass3-2303-050",
+      "en": "Doubt it, politely but firmly.",
+      "jp": "礼儀正しく、でもきっぱり疑いましょう。",
+      "speak": "Doubt it, politely but firmly.",
+      "say": []
+    }
+  ]
+}

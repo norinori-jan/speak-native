@@ -1,0 +1,381 @@
+[
+  {
+    "id": "aiclass2",
+    "ic": "🎓",
+    "n": "AI入門ドラマ2",
+    "hint": "Season two: Mia and her mentor Ken explore image generators, automation, bias, privacy, copyright, agents, company data, and the future of AI",
+    "level": 3,
+    "keywords": [
+      "AI",
+      "agent",
+      "privacy"
+    ],
+    "d": [
+      {
+        "t": "Part 9：画像を作るAI",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I saw a picture online of a dog riding a skateboard in space, and a computer made it from a single sentence. How is that even possible?",
+            "jp": "ケン、ネットで宇宙でスケボーに乗る犬の絵を見たんですが、一文からコンピュータが作ったそうです。そんなことがどうして可能なんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Welcome to season two, Mia. Those are image generators. They learned from millions of pictures paired with short descriptions.",
+            "jp": "シーズン2へようこそ、ミア。それは画像生成AIです。何百万枚もの絵と短い説明文のペアから学んでいます。"
+          },
+          {
+            "sp": 0,
+            "en": "So it's not copying one picture. It's mixing what it's learned about dogs, skateboards, and space?",
+            "jp": "じゃあ1枚をコピーしているのではなく、犬、スケボー、宇宙について学んだことを混ぜているんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Roughly, yes. Most of them start with pure noise, like TV static, and clean it up step by step until a picture appears.",
+            "jp": "おおよそそうです。多くは、テレビの砂嵐のような純粋なノイズから始めて、絵が現れるまで少しずつきれいにしていきます。"
+          },
+          {
+            "sp": 0,
+            "en": "That's wild. Is that why the hands always look weird?",
+            "jp": "すごいですね。だから手がいつも変に見えるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Partly. Hands are tricky, with lots of fingers in lots of positions, and the model only knows what looks likely, not how a hand works.",
+            "jp": "一部はそうです。手は指がたくさんあって形も多様で難しく、モデルは手の仕組みではなく、それらしい見た目しか知りません。"
+          },
+          {
+            "sp": 0,
+            "en": "Can I try it for our team slides? I wanna make a cover image for our next meeting.",
+            "jp": "チームのスライドで試してもいいですか？次の会議の表紙画像を作りたいんです。",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:やりたいと言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Go for it. Just describe the style, the colors, and the mood, and expect to try a few times before it clicks.",
+            "jp": "どうぞ。スタイル、色、雰囲気を書いて、うまくいくまで何回か試すつもりでいてください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 10：仕事の自動化",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our finance team asked if AI can fill in their monthly reports. They spend two whole days on it.",
+            "jp": "ケン、経理チームから、AIで月次報告書を埋められないかと聞かれました。2日まるごとかけているそうです。"
+          },
+          {
+            "sp": 1,
+            "en": "It probably can handle a big chunk of it. First, let's look at what the work actually involves, step by step.",
+            "jp": "大部分はおそらくできます。まず、その仕事が実際に何をするものか、順を追って見てみましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "They copy numbers from three systems, check them, and then write a short summary for the managers.",
+            "jp": "3つのシステムから数字をコピーして、確認して、管理職向けに短い要約を書きます。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect for automation. The copying and the first draft of the summary are repetitive, and people make typos when they're tired.",
+            "jp": "自動化に最適です。コピーと要約の下書きは繰り返しの作業で、人は疲れるとタイプミスをします。"
+          },
+          {
+            "sp": 0,
+            "en": "But what about checking? I don't want an AI quietly getting a number wrong.",
+            "jp": "でも確認はどうしますか？AIが静かに数字を間違えるのは困ります。"
+          },
+          {
+            "sp": 1,
+            "en": "Good instinct. Keep a human in the loop: the AI prepares everything, and a person approves it before it goes out.",
+            "jp": "いい勘です。人を間に入れましょう。AIがすべて準備して、送る前に人が承認します。",
+            "note": "元の形: in the loop／聞こえ方: イン ザ ループ／使う場面:関与させておく時"
+          },
+          {
+            "sp": 0,
+            "en": "So they'd save most of the two days, but still own the final result.",
+            "jp": "つまり、2日のほとんどを節約しつつ、最終結果の責任は持ち続けるわけですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Start with one report, measure the time saved, and then decide whether to expand.",
+            "jp": "その通り。1つの報告書から始めて、節約できた時間を測り、広げるかどうかを決めましょう。"
+          }
+        ]
+      },
+      {
+        "t": "Part 11：AIのバイアスと公平さ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I tested a chatbot and asked it to describe a nurse and a pilot. It automatically used 'she' for the nurse and 'he' for the pilot.",
+            "jp": "ケン、チャットボットに看護師とパイロットを説明させてみたら、看護師は自動的に『彼女』、パイロットは『彼』を使いました。"
+          },
+          {
+            "sp": 1,
+            "en": "That's bias, and you're right to notice it. The model learned from text written by people, and that text has old stereotypes in it.",
+            "jp": "それがバイアスで、気づいたのは正しいです。モデルは人が書いた文章から学び、その文章に古い固定観念が含まれているんです。"
+          },
+          {
+            "sp": 0,
+            "en": "Can't the developers just remove it?",
+            "jp": "開発者が取り除けないんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "They try, but it's hard, because bias isn't a single bug. It's spread all through the data in subtle ways.",
+            "jp": "試みますが難しいです。バイアスはひとつの不具合ではなく、データ全体に微妙な形で広がっているからです。"
+          },
+          {
+            "sp": 0,
+            "en": "So how should we deal with it on our team?",
+            "jp": "じゃあ私たちのチームではどう対処すればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Test with different kinds of people and cases, write down what you find, and never let AI make a decision about people alone.",
+            "jp": "いろいろな人や場合でテストし、見つけたことを記録し、人についての判断をAIだけに任せないでください。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a lot of responsibility. It feels bigger than just using a tool.",
+            "jp": "責任が重いですね。ただ道具を使うより大きなことに感じます。"
+          },
+          {
+            "sp": 1,
+            "en": "It is. But being aware of it already puts you ahead of most people.",
+            "jp": "その通りです。でも意識しているだけで、ほとんどの人より一歩先に出ています。"
+          }
+        ]
+      },
+      {
+        "t": "Part 12：個人情報とプライバシー",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, quick question before I send this. Can I paste a customer's email into the chatbot to get a summary?",
+            "jp": "ケン、送る前に簡単な質問です。お客様のメールをチャットボットに貼って要約してもらってもいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Hold on. Whose data is it, and does our company policy allow that?",
+            "jp": "ちょっと待って。それは誰のデータで、会社の規則はそれを許していますか？"
+          },
+          {
+            "sp": 0,
+            "en": "It has the customer's name and phone number in it. I didn't think about that.",
+            "jp": "お客様の名前と電話番号が入っています。そこまで考えていませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, here's the rule of thumb. Anything you paste may be stored or seen by the provider, so never paste private or secret information.",
+            "jp": "いいですか、経験則です。貼ったものは提供会社に保存されたり見られたりするかもしれないので、個人情報や機密は絶対に貼らないでください。"
+          },
+          {
+            "sp": 0,
+            "en": "What can I do instead? I still need the summary.",
+            "jp": "代わりに何ができますか？それでも要約は必要です。"
+          },
+          {
+            "sp": 1,
+            "en": "Remove the name and the number first, or use the tool our company approved, which keeps the data inside our own system.",
+            "jp": "先に名前と番号を消すか、会社が承認したツール、つまりデータを社内システムの中に置くものを使ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. So when in doubt, I should ask before I paste.",
+            "jp": "分かりました。迷ったら、貼る前に聞く、ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Always. A thirty-second question beats a thirty-day headache.",
+            "jp": "いつでも。30秒の質問は、30日の頭痛に勝ります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 13：著作権と生成物",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the marketing team wants to use an AI-generated image on our website. Is that okay, legally?",
+            "jp": "ケン、マーケティングチームがAI生成の画像をウェブサイトに使いたいそうです。法律的に大丈夫ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Honestly, it depends. The rules are still changing, and they're different in every country.",
+            "jp": "正直、場合によります。ルールはまだ変わっている最中で、国ごとに違います。"
+          },
+          {
+            "sp": 0,
+            "en": "What are the main worries? I'd like to explain them clearly to the team.",
+            "jp": "主な心配は何ですか？チームにはっきり説明したいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Two things. First, did the model learn from copyrighted work without permission? Second, who owns the result, you or the tool's company?",
+            "jp": "2つです。まず、モデルが許可なく著作物から学んだのではないか。次に、結果は誰のもの、あなたかツールの会社か。"
+          },
+          {
+            "sp": 0,
+            "en": "And what if the image looks a lot like a real artist's work?",
+            "jp": "それに、画像が実在のアーティストの作品にとても似ていたら？"
+          },
+          {
+            "sp": 1,
+            "en": "That's the biggest red flag. Never ask for 'in the style of' a living artist for anything you'll publish.",
+            "jp": "それが最大の警告です。公開するものに、存命のアーティストの『スタイルで』と頼むのは絶対にやめてください。",
+            "note": "元の形: red flag／聞こえ方: レッド フラッグ／使う場面:危険信号を言う時"
+          },
+          {
+            "sp": 0,
+            "en": "So safe choices are our own designs, or tools whose license says business use is allowed.",
+            "jp": "じゃあ安全な選択は、自分たちのデザインか、業務利用が許可されているライセンスのツールですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. And when in doubt, run it by legal before anything goes live.",
+            "jp": "そうです。迷ったら、公開前に法務に確認してもらってください。",
+            "note": "元の形: run it by／聞こえ方: ラニット バイ／使う場面:確認を取る時"
+          }
+        ]
+      },
+      {
+        "t": "Part 14：自分で動くAIエージェント",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I keep hearing the word 'agent.' Is that just another name for a chatbot?",
+            "jp": "ケン、『エージェント』という言葉をよく聞きます。チャットボットの別名にすぎないんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not quite. A chatbot answers questions. An agent can also take actions, like searching, sending an email, or booking a meeting.",
+            "jp": "少し違います。チャットボットは質問に答えます。エージェントは、検索したり、メールを送ったり、会議を予約したりと、行動もできます。"
+          },
+          {
+            "sp": 0,
+            "en": "That sounds powerful, but also kind of risky if it makes a mistake.",
+            "jp": "強力そうですが、間違えたらちょっと危険にも聞こえます。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "It is. That's why we limit what it's allowed to touch and ask for approval before anything big, like spending money.",
+            "jp": "その通りです。だから触れていいものを制限し、お金を使うような大きなことの前には承認を求めます。"
+          },
+          {
+            "sp": 0,
+            "en": "How does it decide what to do next?",
+            "jp": "次に何をするかをどう決めているんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It works in a loop: look at the goal, pick a step, use a tool, read the result, and repeat until it thinks it's done.",
+            "jp": "ループで動きます。目標を見て、手順を選び、ツールを使い、結果を読み、終わったと判断するまで繰り返します。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens if it gets stuck or goes in circles?",
+            "jp": "行き詰まったり、同じところを回り続けたらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "We set a step limit, so it stops and asks for help. Think of it as a very fast intern who needs supervision.",
+            "jp": "ステップの上限を設定して、止まって助けを求めるようにします。とても速いけれど監督が必要なインターンだと思ってください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 15：会社のデータをAIに使わせる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our support team wants the chatbot to answer using our own manuals, not just general knowledge. Can we do that?",
+            "jp": "ケン、サポートチームは、一般知識だけでなく自社のマニュアルを使ってチャットボットに答えさせたいそうです。できますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and the common way is called RAG, which stands for retrieval-augmented generation. The name is scarier than the idea.",
+            "jp": "はい、よくある方法はRAGと呼ばれ、検索拡張生成の略です。名前のほうが考え方より怖いです。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, translate that for me, please.",
+            "jp": "じゃあ、それを訳してください。"
+          },
+          {
+            "sp": 1,
+            "en": "When a question comes in, the system first searches your documents, finds the most relevant pages, and hands them to the model along with the question.",
+            "jp": "質問が来たら、システムがまず文書を検索して最も関連するページを見つけ、質問と一緒にモデルに渡します。"
+          },
+          {
+            "sp": 0,
+            "en": "So the model reads the right page before answering, like an open-book exam.",
+            "jp": "つまりモデルは答える前に正しいページを読むんですね、持ち込み可の試験みたいに。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect comparison. It also cuts down on made-up answers, because the model can quote the source.",
+            "jp": "完璧な例えです。モデルが出典を引用できるので、作り話も減ります。"
+          },
+          {
+            "sp": 0,
+            "en": "What could go wrong with that?",
+            "jp": "それで問題になりうることは何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "If the manuals are old or messy, the answers will be too. Good documents come first, which loops back to our lesson on data.",
+            "jp": "マニュアルが古かったり雑だったりすると、答えもそうなります。まず良い文書です、データの授業に戻ってきますね。"
+          }
+        ]
+      },
+      {
+        "t": "Part 16：これからのAIと私たち",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I can't believe it's already the last lesson. I came in with no clue, and now I'm explaining RAG to people at lunch.",
+            "jp": "ケン、もう最後の授業だなんて信じられません。何も分からないまま来たのに、今はお昼に人にRAGを説明しています。"
+          },
+          {
+            "sp": 1,
+            "en": "You've come a long way, Mia. So, what do you think the next few years will look like?",
+            "jp": "ずいぶん進みましたね、ミア。それで、これからの数年はどうなると思いますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Honestly, I think AI will be built into everything, like electricity. People will stop saying 'AI tool' and just say 'tool.'",
+            "jp": "正直、AIは電気のようにすべてに組み込まれると思います。『AIツール』とは言わなくなって、ただ『ツール』と言うようになる。"
+          },
+          {
+            "sp": 1,
+            "en": "I agree. And the skill that matters most might be knowing what to ask and knowing when the answer is wrong.",
+            "jp": "同感です。そして最も大事な技能は、何を聞くべきかを知ることと、答えが間違いだと気づくことかもしれません。"
+          },
+          {
+            "sp": 0,
+            "en": "So curiosity and good judgment, basically.",
+            "jp": "つまり好奇心と良い判断力、ということですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. The tools will keep changing every few months, but those two skills won't.",
+            "jp": "その通り。道具は数か月ごとに変わり続けますが、その2つの力は変わりません。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks for being such a patient teacher. Would you let me teach the next new hire on the team?",
+            "jp": "辛抱強い先生でいてくれてありがとうございます。次にチームに入る新人を、私に教えさせてもらえませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "I was hoping you'd ask. Next Monday, the class is yours, and I'll sit in the back and take notes.",
+            "jp": "聞いてくれるのを期待していました。来週の月曜、授業はあなたのものです。私は後ろに座ってメモを取ります。"
+          }
+        ]
+      }
+    ]
+  }
+]

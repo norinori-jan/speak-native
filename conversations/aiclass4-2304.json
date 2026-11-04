@@ -1,0 +1,378 @@
+[
+  {
+    "id": "aiclass4",
+    "ic": "🎓",
+    "n": "AI入門ドラマ4",
+    "hint": "Season four: Mia and Ken discuss AI safety, multimodal models, learning with AI, specialist fields, fine-tuning, local models, energy use, and regulation",
+    "level": 3,
+    "keywords": [
+      "safety",
+      "multimodal",
+      "regulation"
+    ],
+    "d": [
+      {
+        "t": "Part 25：AIの安全性",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, Jun, the new hire, asked me something I couldn't answer. He asked, 'How do we make sure an AI doesn't do something harmful?'",
+            "jp": "ケン、新人のジュンに答えられない質問をされました。『AIが有害なことをしないようにするにはどうするのか』と。"
+          },
+          {
+            "sp": 1,
+            "en": "Great question, and it's called safety work. Let's start with how a model learns what's acceptable in the first place.",
+            "jp": "いい質問です、それは安全性の取り組みと呼ばれます。まず、モデルが何が許されるかをそもそもどう学ぶかから始めましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Doesn't it just learn from the internet, which has some pretty awful stuff on it?",
+            "jp": "インターネットから学ぶだけではないんですか？かなりひどい内容もありますよね？"
+          },
+          {
+            "sp": 1,
+            "en": "It does, which is why there's a second stage. People rate the model's answers, and the model is trained to prefer the ones people rate as helpful and safe.",
+            "jp": "そうです、だから第2段階があります。人がモデルの答えを評価し、役に立って安全だと評価された答えを好むように学習させます。"
+          },
+          {
+            "sp": 0,
+            "en": "So humans are teaching it manners, kind of like raising a kid.",
+            "jp": "つまり人間がマナーを教えているんですね、子育てみたいに。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "Sort of. Plus, companies test it by trying to break it on purpose, which is called red teaming.",
+            "jp": "ある意味では。それに企業は、わざと壊そうとしてテストします。それをレッドチーミングと言います。"
+          },
+          {
+            "sp": 0,
+            "en": "Does that catch everything? I doubt it.",
+            "jp": "それですべて防げるんですか？疑わしいです。"
+          },
+          {
+            "sp": 1,
+            "en": "No, and honest teams admit that. Safety is never finished, so you keep testing, keep monitoring, and keep fixing.",
+            "jp": "いいえ、そして誠実なチームはそれを認めます。安全性に完成はないので、テストと監視と修正を続けます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 26：画像や音声も理解するAI",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I took a photo of our whiteboard and sent it to the AI, and it typed up all my messy notes. That felt like magic.",
+            "jp": "ケン、ホワイトボードの写真をAIに送ったら、私の雑なメモを全部文字にしてくれました。魔法みたいでした。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a multimodal model, which means it can handle more than text, like images, sound, and sometimes video.",
+            "jp": "それはマルチモーダルモデルで、文字だけでなく画像や音声、時には動画も扱えるという意味です。"
+          },
+          {
+            "sp": 0,
+            "en": "How does it read a picture? It's not made of words.",
+            "jp": "画像はどうやって読むんですか？言葉でできていませんよね。"
+          },
+          {
+            "sp": 1,
+            "en": "The image gets chopped into small patches and turned into numbers, the same way text gets turned into tokens.",
+            "jp": "画像は小さなパッチに切り分けられて、文章がトークンになるのと同じように数字に変えられます。"
+          },
+          {
+            "sp": 0,
+            "en": "So everything ends up as numbers in the end.",
+            "jp": "結局、すべて数字になるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Pretty much. That's why one model can look at a chart, hear a question, and answer in speech.",
+            "jp": "だいたいその通り。だから1つのモデルが、グラフを見て、質問を聞いて、音声で答えられるんです。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there anything it's bad at with images?",
+            "jp": "画像で苦手なことはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Counting small objects and reading blurry handwriting, for example. So always check the important details yourself.",
+            "jp": "たとえば小さい物の数え上げや、ぼやけた手書きの読み取りです。大事な部分は必ず自分で確認してください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 27：AIと学ぶ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my little brother uses AI to do his homework, and my mom is worried. Is that cheating?",
+            "jp": "ケン、弟がAIで宿題をしていて、母が心配しています。それはズルですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It depends on how he uses it. If it writes the answer for him, he learns nothing. If it explains the idea, it can be a great tutor.",
+            "jp": "使い方次第です。答えを書いてあげるなら、何も学べません。考え方を説明してくれるなら、素晴らしい家庭教師になれます。"
+          },
+          {
+            "sp": 0,
+            "en": "So how should he ask? Just 'help me'?",
+            "jp": "じゃあ、どう頼めばいいですか？ただ『助けて』ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Better: 'Don't give me the answer. Ask me questions until I figure it out.' That turns it into a coach instead of a calculator.",
+            "jp": "もっといいのは『答えは教えないで。私が分かるまで質問して』です。それで計算機ではなくコーチになります。"
+          },
+          {
+            "sp": 0,
+            "en": "I love that. What about languages? I use it to practice English with you guys.",
+            "jp": "いいですね。語学はどうですか？私はそれで英語の練習をしています。"
+          },
+          {
+            "sp": 1,
+            "en": "It's wonderful for that. You can ask it to play a role, correct your mistakes gently, and repeat as many times as you like, with no embarrassment.",
+            "jp": "それには最適です。役を演じさせて、間違いをやさしく直させて、恥ずかしがらずに何度でも繰り返せます。"
+          },
+          {
+            "sp": 0,
+            "en": "And it never gets tired of my questions.",
+            "jp": "しかも私の質問に飽きたりしません。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Just remember to double-check facts, and to keep thinking for yourself. The goal is to learn, not to finish.",
+            "jp": "そうです。事実は確認して、自分でも考え続けてください。目的は終わらせることではなく、学ぶことです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 28：専門分野でAIを使う",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, a doctor friend told me her hospital is testing AI to help read X-rays. That sounds amazing and a little scary.",
+            "jp": "ケン、医者の友達が、病院でレントゲンを読むのを助けるAIを試していると言っていました。すごいけど、少し怖いです。"
+          },
+          {
+            "sp": 1,
+            "en": "Both feelings are fair. In medicine, AI usually works as a second pair of eyes, pointing out spots the doctor should look at closely.",
+            "jp": "どちらの気持ちももっともです。医療では、AIは通常、もう一組の目として、医師が注意して見るべき箇所を示します。"
+          },
+          {
+            "sp": 0,
+            "en": "But the doctor still makes the final call?",
+            "jp": "でも最終判断は医師がするんですよね？"
+          },
+          {
+            "sp": 1,
+            "en": "Always. The stakes are too high, and the AI can't know the patient's whole story, like allergies or family history.",
+            "jp": "必ずです。リスクが大きすぎますし、AIはアレルギーや家族歴など、患者さんの全体像は分かりません。"
+          },
+          {
+            "sp": 0,
+            "en": "What about law or finance? Could AI replace a lawyer?",
+            "jp": "法律や金融はどうですか？AIが弁護士の代わりになれますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It can help find documents and draft summaries quickly, but lawyers still carry the responsibility, because one wrong detail can cost a fortune.",
+            "jp": "書類を探したり要約の下書きを素早く作ったりはできますが、責任は弁護士が負います。細部のひとつの誤りが大金に響くからです。"
+          },
+          {
+            "sp": 0,
+            "en": "So in serious fields, AI assists and humans decide.",
+            "jp": "つまり重大な分野では、AIが補助して、人が決めるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the pattern. The higher the risk, the more human oversight you need.",
+            "jp": "それが基本の形です。リスクが高いほど、人による監督が必要になります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 29：学習し直すかプロンプトで頑張るか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our support bot keeps using the wrong tone with customers. Should we retrain the model, or just fix the prompt?",
+            "jp": "ケン、サポートボットが顧客に対していつも口調を間違えます。モデルを学習し直すべきですか、それともプロンプトを直すだけでいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Always try the prompt first. It's cheap, it's fast, and you can change it in five minutes.",
+            "jp": "まずは必ずプロンプトを試してください。安くて速くて、5分で変えられます。"
+          },
+          {
+            "sp": 0,
+            "en": "And if the prompt isn't enough?",
+            "jp": "プロンプトで足りなかったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Then you can consider fine-tuning, which means training the model a bit more on your own examples, like a thousand perfect replies from your best agents.",
+            "jp": "そのときファインチューニングを考えます。自分たちの例、たとえば最高の担当者の完璧な返信1000件で、モデルをもう少し学習させることです。"
+          },
+          {
+            "sp": 0,
+            "en": "That sounds like a lot of work to prepare.",
+            "jp": "準備がすごく大変そうです。"
+          },
+          {
+            "sp": 1,
+            "en": "It is. You need clean examples, time to test, and a plan to redo it when the model gets updated, so it's a last resort for most teams.",
+            "jp": "大変です。きれいな例、テストの時間、モデルが更新された時にやり直す計画が必要なので、多くのチームにとって最後の手段です。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, so the order is: better prompt, then better documents, then fine-tuning.",
+            "jp": "分かりました。順番は、よいプロンプト、次によい文書、最後にファインチューニング、ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "You've got it. Fix the cheap things first, and only spend big when the cheap fixes run out.",
+            "jp": "その通り。安いことから直して、安い手が尽きた時にだけ大きくお金をかけます。",
+            "note": "元の形: you have got it／聞こえ方: ユーヴ ガリット／使う場面:よく分かったね、と認める時"
+          }
+        ]
+      },
+      {
+        "t": "Part 30：自分のパソコンで動かすAI",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I heard you can run an AI model on your own laptop, with no internet at all. Is that true?",
+            "jp": "ケン、インターネットなしで、自分のノートパソコンでAIモデルを動かせると聞きました。本当ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It is. Some models are open, meaning the weights are published, so anyone can download and run them.",
+            "jp": "本当です。公開されているモデルがあり、重みが配布されているので、誰でもダウンロードして動かせます。"
+          },
+          {
+            "sp": 0,
+            "en": "What's the catch? There must be one.",
+            "jp": "落とし穴は何ですか？きっとありますよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Two big ones. Small enough models to fit on a laptop are less capable, and a good computer chip costs real money.",
+            "jp": "大きく2つ。ノートPCに入る小さいモデルは能力が低く、性能のいいチップは本当にお金がかかります。"
+          },
+          {
+            "sp": 0,
+            "en": "So why would anyone bother?",
+            "jp": "じゃあ、わざわざやる理由は何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Privacy, for one. Your data never leaves your machine. Also, no per-token bill, and it works on a plane.",
+            "jp": "ひとつはプライバシーです。データが自分の機械から出ません。それに、トークンごとの請求がなく、飛行機の中でも使えます。"
+          },
+          {
+            "sp": 0,
+            "en": "That's perfect for sensitive company documents.",
+            "jp": "機密性の高い社内文書にはぴったりですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Many teams use a small local model for private work and a big cloud model for the hard stuff.",
+            "jp": "その通り。多くのチームが、内密な仕事には小さいローカルモデルを、難しい仕事には大きなクラウドモデルを使い分けています。"
+          }
+        ]
+      },
+      {
+        "t": "Part 31：AIと電気と社会",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I read that AI uses a huge amount of electricity. Is that true, or is it exaggerated?",
+            "jp": "ケン、AIは膨大な電気を使うと読みました。本当ですか、それとも大げさですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Both, honestly. Training a giant model takes a lot of power, and the data centers running chatbots all day add up fast.",
+            "jp": "正直、両方です。巨大なモデルの学習はたくさん電力を使いますし、一日中チャットボットを動かすデータセンターも急速に積み上がります。"
+          },
+          {
+            "sp": 0,
+            "en": "Is anyone trying to fix that?",
+            "jp": "それを直そうとしている人はいますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes. Engineers are making models smaller and more efficient, and many companies are moving their data centers to renewable power.",
+            "jp": "はい。技術者がモデルを小さく効率的にしていて、多くの企業がデータセンターを再生可能エネルギーに切り替えています。"
+          },
+          {
+            "sp": 0,
+            "en": "So what can I do, as one person using it?",
+            "jp": "じゃあ、使う一個人として私に何ができますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Don't send a giant request when a small one will do. Use the smaller model for simple jobs, which also saves money.",
+            "jp": "小さな依頼で済むのに巨大な依頼を送らないことです。簡単な仕事には小さいモデルを使えば、お金の節約にもなります。"
+          },
+          {
+            "sp": 0,
+            "en": "Funny how saving money and saving energy line up.",
+            "jp": "お金を節約することとエネルギーを節約することがそろうなんて、おもしろいですね。"
+          },
+          {
+            "sp": 1,
+            "en": "They often do. Good engineering usually means doing the same job with less.",
+            "jp": "よくそうなります。良い設計とは、たいてい同じ仕事をより少ない資源でやることです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 32：ルールと未来",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, governments are writing rules about AI now. Do you think regulation will slow everything down?",
+            "jp": "ケン、各国政府がAIの規則を作り始めています。規制は何もかも遅くすると思いますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Some, maybe, but good rules can build trust, and trust is what lets people use AI for important things like health and banking.",
+            "jp": "多少は遅くなるかもしれませんが、良い規則は信頼を築きます。そして信頼があるからこそ、健康や銀行のような大事なことにAIを使えます。"
+          },
+          {
+            "sp": 0,
+            "en": "What kinds of rules are people talking about?",
+            "jp": "どんな規則が話題になっているんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Telling people when they're talking to an AI, protecting personal data, testing high-risk systems, and being able to explain how a decision was made.",
+            "jp": "AIと話していると人に知らせること、個人データの保護、高リスクのシステムの試験、判断の理由を説明できること、などです。"
+          },
+          {
+            "sp": 0,
+            "en": "And what do you think about the future, honestly? Are you hopeful or worried?",
+            "jp": "そして正直に、未来についてどう思いますか？期待していますか、心配していますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Both. I'm hopeful because the tools are getting more useful, and worried because we may move faster than we learn to use them wisely.",
+            "jp": "両方です。道具がより役に立つようになるので期待していて、賢く使う方法を学ぶより速く進んでしまうかもしれないので心配です。"
+          },
+          {
+            "sp": 0,
+            "en": "Then it's on people like us to keep learning and keep asking good questions.",
+            "jp": "じゃあ、学び続けて良い質問をし続けるのは、私たちのような人の役目ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Well said, Mia. That's the whole course in one sentence. Thank you for being such a great student, and now, a great teacher.",
+            "jp": "よく言いました、ミア。それが講座全体の要約です。素晴らしい生徒、そして今や素晴らしい先生でいてくれてありがとう。"
+          }
+        ]
+      }
+    ]
+  }
+]
