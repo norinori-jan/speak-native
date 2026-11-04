@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "cyberteam2-2402",
+  "ver": 1,
+  "situation": "cyberteam2",
+  "sname": "ネットワーク防衛ドラマ2",
+  "icon": "🛡️",
+  "level": 3,
+  "title": "ネットワーク防衛ドラマ2の口語表現",
+  "items": [
+    {
+      "id": "cyberteam2-2402-001",
+      "en": "Is this a trick, or a genuine report?",
+      "jp": "これは罠ですか、それとも本物の報告ですか？",
+      "speak": "Is this a trick, or a genuine report?",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-002",
+      "en": "Verify it before we do anything.",
+      "jp": "何かする前に確認しましょう。",
+      "speak": "Verify it before we do anything.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-003",
+      "en": "That's how responsible disclosure works.",
+      "jp": "それが責任ある開示の仕組みです。",
+      "speak": "That's how responsible disclosure works.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-004",
+      "en": "Reply within a day and confirm you received it.",
+      "jp": "1日以内に返信して、受け取ったと伝えましょう。",
+      "speak": "Reply within a day and confirm you received it.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-005",
+      "en": "Never threaten someone who's trying to help.",
+      "jp": "助けようとしている人を脅してはいけません。",
+      "speak": "Never threaten someone who's trying to help.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-006",
+      "en": "Rate how serious it is, then fix it.",
+      "jp": "深刻度を評価して、直しましょう。",
+      "speak": "Rate how serious it is, then fix it.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-007",
+      "en": "Tell the reporter when it's done.",
+      "jp": "終わったら報告者に伝えましょう。",
+      "speak": "Tell the reporter when it's done.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-008",
+      "en": "Change the setting to private right now.",
+      "jp": "今すぐ設定を非公開に変えてください。",
+      "speak": "Change the setting to private right now.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-009",
+      "en": "It's usually a mistake, not a hack.",
+      "jp": "たいていハッキングではなくミスです。",
+      "speak": "It's usually a mistake, not a hack.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-010",
+      "en": "Turn on automatic checks for public folders.",
+      "jp": "公開フォルダの自動チェックを有効にしましょう。",
+      "speak": "Turn on automatic checks for public folders.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-011",
+      "en": "Fewer buttons, fewer mistakes.",
+      "jp": "ボタンが少なければ、ミスも少なくなります。",
+      "speak": "Fewer buttons, fewer mistakes.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-012",
+      "en": "Check the access logs first.",
+      "jp": "まずアクセスログを確認しましょう。",
+      "speak": "Check the access logs first.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-013",
+      "en": "Nobody owned the checklist.",
+      "jp": "誰もそのチェックリストを担当していませんでした。",
+      "speak": "Nobody owned the checklist.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-014",
+      "en": "Shut off access when someone leaves.",
+      "jp": "誰かが辞めたらアクセスを止めましょう。",
+      "speak": "Shut off access when someone leaves.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-015",
+      "en": "Luck isn't a plan.",
+      "jp": "運は計画ではありません。",
+      "speak": "Luck isn't a plan.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-016",
+      "en": "Give everyone the minimum access they need.",
+      "jp": "全員に必要最低限のアクセスだけ与えましょう。",
+      "speak": "Give everyone the minimum access they need.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-017",
+      "en": "Review permissions every quarter.",
+      "jp": "権限を3か月ごとに見直しましょう。",
+      "speak": "Review permissions every quarter.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-018",
+      "en": "Remove the old access when someone moves.",
+      "jp": "異動する時は古い権限を外しましょう。",
+      "speak": "Remove the old access when someone moves.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-019",
+      "en": "Don't trust anything just because it's inside.",
+      "jp": "内側にあるというだけで何も信用しないでください。",
+      "speak": "Don't trust anything just because it's inside.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-020",
+      "en": "Once they're inside, they can roam freely.",
+      "jp": "中に入られると、自由に動き回られます。",
+      "speak": "Once they're inside, they can roam freely.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-021",
+      "en": "Who are you, and is your device healthy?",
+      "jp": "あなたは誰で、端末は健全ですか？",
+      "speak": "Who are you, and is your device healthy?",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-022",
+      "en": "Check every request, every time.",
+      "jp": "毎回、すべての要求を確認しましょう。",
+      "speak": "Check every request, every time.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-023",
+      "en": "Good security is nearly invisible to users.",
+      "jp": "良いセキュリティは利用者にほとんど意識されません。",
+      "speak": "Good security is nearly invisible to users.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-024",
+      "en": "It's called supply chain risk.",
+      "jp": "サプライチェーンのリスクと呼ばれます。",
+      "speak": "It's called supply chain risk.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-025",
+      "en": "Attackers go after a smaller partner.",
+      "jp": "攻撃者は小さな取引先を狙います。",
+      "speak": "Attackers go after a smaller partner.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-026",
+      "en": "Pause the connections for now.",
+      "jp": "いったん接続を一時停止しましょう。",
+      "speak": "Pause the connections for now.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-027",
+      "en": "Change any shared passwords.",
+      "jp": "共有しているパスワードを変更しましょう。",
+      "speak": "Change any shared passwords.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-028",
+      "en": "Call a number we already had.",
+      "jp": "すでに知っている番号に電話しましょう。",
+      "speak": "Call a number we already had.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-029",
+      "en": "Ask suppliers about their security before connecting.",
+      "jp": "つなぐ前に取引先にセキュリティを質問しましょう。",
+      "speak": "Ask suppliers about their security before connecting.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-030",
+      "en": "That's alert fatigue.",
+      "jp": "それは警報疲れです。",
+      "speak": "That's alert fatigue.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-031",
+      "en": "When everything screams, nobody listens.",
+      "jp": "全部が叫ぶと、誰も聞きません。",
+      "speak": "When everything screams, nobody listens.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-032",
+      "en": "Don't turn them off, tune them.",
+      "jp": "切るのではなく、調整しましょう。",
+      "speak": "Don't turn them off, tune them.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-033",
+      "en": "Does a human need to act on this tonight?",
+      "jp": "今夜、人が対応する必要がありますか？",
+      "speak": "Does a human need to act on this tonight?",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-034",
+      "en": "Send it to a daily summary instead.",
+      "jp": "代わりに日次の要約に回しましょう。",
+      "speak": "Send it to a daily summary instead.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-035",
+      "en": "Keep the urgent channel for real emergencies.",
+      "jp": "緊急チャンネルは本当の緊急事態のために残しましょう。",
+      "speak": "Keep the urgent channel for real emergencies.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-036",
+      "en": "Replay old incidents to test the alerts.",
+      "jp": "過去のインシデントを再生して警報を試しましょう。",
+      "speak": "Replay old incidents to test the alerts.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-037",
+      "en": "We practice when it's safe.",
+      "jp": "安全な時に練習します。",
+      "speak": "We practice when it's safe.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-038",
+      "en": "Assign clear roles.",
+      "jp": "役割をはっきり決めましょう。",
+      "speak": "Assign clear roles.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-039",
+      "en": "Say what you're doing out loud.",
+      "jp": "していることを声に出して言いましょう。",
+      "speak": "Say what you're doing out loud.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-040",
+      "en": "One incident leader makes the decisions.",
+      "jp": "ひとりのインシデントリーダーが判断します。",
+      "speak": "One incident leader makes the decisions.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-041",
+      "en": "Someone takes notes on who did what and when.",
+      "jp": "誰かが、誰がいつ何をしたかをメモします。",
+      "speak": "Someone takes notes on who did what and when.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-042",
+      "en": "The drill only counts if we fix what it shows.",
+      "jp": "演習は、見つかったことを直してこそ意味があります。",
+      "speak": "The drill only counts if we fix what it shows.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-043",
+      "en": "Skip the technical details.",
+      "jp": "専門的な細部は省きましょう。",
+      "speak": "Skip the technical details.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-044",
+      "en": "Show what could go wrong in business terms.",
+      "jp": "何がまずくなりうるかをビジネスの言葉で見せましょう。",
+      "speak": "Show what could go wrong in business terms.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-045",
+      "en": "Real stories beat scary statistics.",
+      "jp": "本物の話は怖い統計に勝ちます。",
+      "speak": "Real stories beat scary statistics.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-046",
+      "en": "Pick three things and give a simple price tag.",
+      "jp": "3つ選んで、簡単な値段をつけましょう。",
+      "speak": "Pick three things and give a simple price tag.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-047",
+      "en": "Make the trade-offs visible.",
+      "jp": "トレードオフを見えるようにしましょう。",
+      "speak": "Make the trade-offs visible.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-048",
+      "en": "Write down what risk they're willing to accept.",
+      "jp": "どのリスクを受け入れるかを書き留めましょう。",
+      "speak": "Write down what risk they're willing to accept.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-049",
+      "en": "Fewer cooks in the kitchen.",
+      "jp": "料理人が少ないほうがいいです。",
+      "speak": "Fewer cooks in the kitchen.",
+      "say": []
+    },
+    {
+      "id": "cyberteam2-2402-050",
+      "en": "Security isn't about saying no.",
+      "jp": "セキュリティは断ることではありません。",
+      "speak": "Security isn't about saying no.",
+      "say": []
+    }
+  ]
+}

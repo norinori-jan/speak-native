@@ -1,0 +1,376 @@
+[
+  {
+    "id": "cyberteam2",
+    "ic": "🛡️",
+    "n": "ネットワーク防衛ドラマ2",
+    "hint": "Season two: Mia and Ken handle vulnerability reports, cloud misconfiguration, access control, zero trust, supplier risk, alert fatigue, a drill, and a board presentation",
+    "level": 3,
+    "keywords": [
+      "security",
+      "zero trust",
+      "drill"
+    ],
+    "d": [
+      {
+        "t": "Part 9：脆弱性の報告を受ける",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, we just got an email from a stranger saying he found a hole in our website. Is this a trick?",
+            "jp": "ケン、見知らぬ人から、うちのウェブサイトに穴を見つけたというメールが届きました。これは罠ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Could be, but many times it's a genuine researcher trying to help. Let's treat it seriously and verify it before we do anything.",
+            "jp": "そうかもしれませんが、本当に善意の研究者であることも多いです。真剣に受け止めて、何かする前に確認しましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "He says he didn't download any customer data. He only wants us to fix it.",
+            "jp": "お客様のデータは一切ダウンロードしていないと言っています。直してほしいだけだそうです。"
+          },
+          {
+            "sp": 1,
+            "en": "That's how responsible disclosure works. The finder tells the company privately and gives it time to fix the problem before telling anyone else.",
+            "jp": "それが責任ある開示の仕組みです。見つけた人が会社にだけ内密に伝え、他の人に話す前に直す時間をくれます。"
+          },
+          {
+            "sp": 0,
+            "en": "So I should thank him and reply quickly?",
+            "jp": "じゃあ感謝して、すぐ返信すべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, within a day, and confirm you received the report. Never threaten or ignore someone who's trying to help.",
+            "jp": "はい、1日以内に、報告を受け取ったと伝えてください。助けようとしている人を脅したり無視したりしてはいけません。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens after we confirm the hole is real?",
+            "jp": "穴が本物だと確認できたら、そのあとはどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "We rate how serious it is, fix it, test the fix, and tell the reporter when it's done. Then everyone's safer.",
+            "jp": "深刻度を評価して、直して、修正をテストして、終わったら報告者に伝えます。それで全員がより安全になります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 10：クラウドの設定ミス",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I found a storage folder in our cloud account that anyone on the internet can open. It's full of internal files.",
+            "jp": "ケン、クラウドのアカウントに、インターネット上の誰でも開けるストレージのフォルダを見つけました。社内ファイルがたくさん入っています。"
+          },
+          {
+            "sp": 1,
+            "en": "Close it right now. Change the setting to private, and then we'll figure out how long it's been open.",
+            "jp": "今すぐ閉じてください。設定を非公開に変えて、それから何時間開いていたかを調べます。"
+          },
+          {
+            "sp": 0,
+            "en": "Done. It's private now. How does something like this even happen?",
+            "jp": "完了です。非公開になりました。こういうことはそもそもどうして起きるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Most of the time it's not a hack, it's a mistake. Someone clicks the wrong option while setting up a quick test and forgets about it.",
+            "jp": "ほとんどの場合、ハッキングではなくミスです。誰かが簡単なテストを設定する時に間違った選択肢を押して、そのまま忘れてしまいます。"
+          },
+          {
+            "sp": 0,
+            "en": "So how do we prevent it?",
+            "jp": "じゃあどう防ぎますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Turn on automatic checks that flag public folders, and give people only the permissions they need. Fewer buttons, fewer mistakes.",
+            "jp": "公開フォルダを検出する自動チェックを有効にして、必要な権限だけを与えます。ボタンが少なければ、ミスも少なくなります。"
+          },
+          {
+            "sp": 0,
+            "en": "And what about the files that were exposed? Do we have to tell anyone?",
+            "jp": "それと、公開されていたファイルはどうしますか？誰かに知らせる必要がありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Check the access logs first. If strangers actually opened them, we may have to notify customers, and legal will guide us.",
+            "jp": "まずアクセスログを確認します。本当に第三者が開いていたなら、お客様に通知する必要があるかもしれず、法務が指示します。"
+          }
+        ]
+      },
+      {
+        "t": "Part 11：必要な人だけが入れるように",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, a former employee's account was still active three months after he left. Why didn't we catch that?",
+            "jp": "ケン、退職した人のアカウントが、辞めて3か月たっても有効でした。なぜ見逃したんでしょう？"
+          },
+          {
+            "sp": 1,
+            "en": "Probably because nobody owned the checklist. Leaving a company should automatically trigger a list of things to shut off.",
+            "jp": "おそらく誰もそのチェックリストを担当していなかったからです。退職したら、止めるべきものの一覧が自動的に動くべきです。"
+          },
+          {
+            "sp": 0,
+            "en": "Was anything accessed with that account?",
+            "jp": "そのアカウントで何かにアクセスされましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "I checked. No logins since the day he left, so we were lucky. But luck isn't a plan.",
+            "jp": "確認しました。辞めた日以降ログインはないので、運が良かったです。でも運は計画ではありません。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there a general rule we should follow?",
+            "jp": "従うべき一般的な規則はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Least privilege. Everyone gets the minimum access needed for their job, and we review it regularly, like every quarter.",
+            "jp": "最小権限です。全員が仕事に必要な最低限のアクセスだけを持ち、3か月ごとなど定期的に見直します。"
+          },
+          {
+            "sp": 0,
+            "en": "What about people who change teams? They collect permissions over the years.",
+            "jp": "部署を移る人はどうですか？何年もかけて権限がたまっていきますよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Great catch. When someone moves, we remove the old access, not just add new. Otherwise it piles up like junk in a drawer.",
+            "jp": "いい指摘です。異動する時は新しい権限を足すだけでなく、古い権限を外します。そうしないと引き出しのガラクタのように積もります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 12：誰も信用しない設計",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our CEO read an article about 'zero trust,' and now she wants to know if we're doing it. What do I say?",
+            "jp": "ケン、CEOがゼロトラストの記事を読んで、うちがやっているかと聞いています。何と答えればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Tell her the simple version: we don't automatically trust anything just because it's inside our office network.",
+            "jp": "簡単に言うと、オフィスのネットワークの内側にあるというだけでは、何も自動的に信用しない、と伝えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "But isn't the office network the safe part?",
+            "jp": "でもオフィスのネットワークは安全な側じゃないんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It used to feel that way, like a castle with a moat. But once an attacker is inside, they can roam freely, which is the problem.",
+            "jp": "昔はそう感じられました、堀のある城のように。でも攻撃者が中に入ると自由に動き回れてしまうのが問題です。"
+          },
+          {
+            "sp": 0,
+            "en": "So every request gets checked, even from inside?",
+            "jp": "じゃあ内側からでも、すべての要求が確認されるんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes: who are you, is your device healthy, and are you allowed to see this specific thing? Every single time.",
+            "jp": "はい。あなたは誰か、端末は健全か、この特定のものを見る許可があるか。毎回です。"
+          },
+          {
+            "sp": 0,
+            "en": "That sounds like more steps for everyone.",
+            "jp": "みんなにとって手順が増えそうです。"
+          },
+          {
+            "sp": 1,
+            "en": "A little, but good systems make it nearly invisible. The user stays smooth, and the attacker hits walls everywhere.",
+            "jp": "少しだけです。でも良いシステムはほとんど意識させません。利用者はスムーズで、攻撃者はあらゆる所で壁にぶつかります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 13：取引先経由のリスク",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our biggest supplier just announced that they were hacked. Should we be worried, even though it wasn't our system?",
+            "jp": "ケン、最大の取引先がハッキングされたと発表しました。うちのシステムではなくても、心配すべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes. Attackers often go after a smaller partner to reach bigger targets. It's called a supply chain risk.",
+            "jp": "はい。攻撃者はしばしば、大きな標的に届くために小さな取引先を狙います。サプライチェーンのリスクと呼ばれます。"
+          },
+          {
+            "sp": 0,
+            "en": "What do we have connected to them? Accounts, shared files?",
+            "jp": "うちは何を彼らとつないでいますか？アカウントや共有ファイル？"
+          },
+          {
+            "sp": 1,
+            "en": "Two shared folders and an invoice system. First, let's pause the connections and change any shared passwords.",
+            "jp": "共有フォルダ2つと請求システムです。まず接続を一時停止して、共有しているパスワードを変更しましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I email them to ask what happened?",
+            "jp": "何が起きたか、メールで聞いてもいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Call their security contact instead, using a number we already had. Don't trust a new number in a fresh email.",
+            "jp": "代わりに、すでに知っている番号で先方のセキュリティ担当に電話してください。新しいメールにある新しい番号は信用しないで。"
+          },
+          {
+            "sp": 0,
+            "en": "Smart, since attackers might send fake messages pretending to be them.",
+            "jp": "賢いですね、攻撃者が先方のふりをして偽のメッセージを送るかもしれないので。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And long term, we should ask every supplier about their security before we connect to them.",
+            "jp": "その通り。そして長期的には、つなぐ前にすべての取引先にセキュリティについて質問すべきです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 14：警報が多すぎる問題",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, our monitoring system sent four hundred alerts last night. I looked at ten and gave up. They were all false alarms.",
+            "jp": "ケン、昨夜、監視システムが400件の警報を出しました。10件見て諦めました。全部誤報でした。"
+          },
+          {
+            "sp": 1,
+            "en": "That's alert fatigue, and it's dangerous. When everything screams, nobody listens, and the real problem hides in the noise.",
+            "jp": "それは警報疲れで、危険です。全部が叫ぶと誰も聞かなくなり、本物の問題がノイズに隠れます。"
+          },
+          {
+            "sp": 0,
+            "en": "So we should turn most of them off?",
+            "jp": "じゃあほとんどを切るべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not turn off, tune. Go through the top ten noisiest ones, and ask for each: does a human need to act on this tonight?",
+            "jp": "切るのではなく、調整です。うるさい上位10個を見て、それぞれ『今夜、人が対応する必要があるか』を問います。"
+          },
+          {
+            "sp": 0,
+            "en": "If the answer is no, we send it to a daily summary instead.",
+            "jp": "答えが『いいえ』なら、代わりに日次の要約に回すんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Keep the loud, urgent channel for things that truly need a human, and your team will trust it again.",
+            "jp": "そうです。本当に人が必要なものだけを、うるさくて緊急のチャンネルに残せば、チームはまた信頼するようになります。"
+          },
+          {
+            "sp": 0,
+            "en": "How will we know we didn't hide something important?",
+            "jp": "重要なものを隠していないとどう分かりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "We review the daily summary every morning for two weeks, and we replay old incidents to check they'd still trigger an alert.",
+            "jp": "2週間、毎朝日次の要約を確認し、過去のインシデントを再生して、今でも警報が鳴ることを確かめます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 15：防衛演習の日",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm nervous about today's drill. Management says it'll be a surprise scenario, and the whole company will be watching.",
+            "jp": "ケン、今日の演習で緊張しています。経営陣は予告なしのシナリオだと言っていて、全社が見ています。"
+          },
+          {
+            "sp": 1,
+            "en": "Don't worry, that's the point. We practice when it's safe, so we don't have to learn during a real emergency.",
+            "jp": "心配しないで、それが目的です。安全な時に練習して、本番の緊急時に学ばなくて済むようにします。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I freeze and forget the steps?",
+            "jp": "固まってしまって、手順を忘れたらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Then we all learn something useful. We keep the checklist on the wall, assign clear roles, and say what we're doing out loud.",
+            "jp": "それならみんなが有益なことを学べます。チェックリストを壁に貼って、役割をはっきり決めて、していることを声に出して言います。"
+          },
+          {
+            "sp": 0,
+            "en": "Who's in charge during an incident?",
+            "jp": "インシデントの間は誰が指揮をとりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "One incident leader, who makes decisions and doesn't type. Another person takes notes, so we always know who did what and when.",
+            "jp": "ひとりのインシデントリーダーが判断し、キーボードは打ちません。もうひとりがメモを取って、誰がいつ何をしたかが常に分かるようにします。"
+          },
+          {
+            "sp": 0,
+            "en": "That makes sense. Fewer cooks in the kitchen.",
+            "jp": "なるほど。料理人が少ないほうがいいですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And afterward we'll talk about what felt confusing. The drill only counts if we fix what it shows us.",
+            "jp": "その通り。終わったら、何が混乱したかを話し合います。演習は、見つかったことを直してこそ意味があります。"
+          }
+        ]
+      },
+      {
+        "t": "Part 16：経営陣に守りの価値を伝える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I have to present to the board next week and ask for more security budget. I've never talked to executives before.",
+            "jp": "ケン、来週、取締役会で発表して、セキュリティ予算の増額をお願いしなければなりません。経営陣に話したことはありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Skip the technical details. Executives care about risk, money, and trust. Show what could go wrong in business terms.",
+            "jp": "専門的な細部は省きましょう。経営陣が気にするのは、リスク、お金、信頼です。何がまずくなりうるかを、ビジネスの言葉で見せてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Like how much a day of downtime would cost us?",
+            "jp": "たとえば1日止まったらいくら損をするか、ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, with real numbers from our own incident last month. Real stories beat scary statistics every time.",
+            "jp": "はい、先月の自分たちのインシデントの実際の数字で。本物の話は、怖い統計にいつも勝ちます。"
+          },
+          {
+            "sp": 0,
+            "en": "And what should I ask for, specifically?",
+            "jp": "具体的に何をお願いすればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Pick three things, explain what each one prevents, and give a simple price tag. A short, clear ask is easier to approve than a long list.",
+            "jp": "3つ選んで、それぞれが何を防ぐか説明して、簡単な値段をつけます。短くはっきりしたお願いは、長い一覧より承認されやすいです。"
+          },
+          {
+            "sp": 0,
+            "en": "What if they say no?",
+            "jp": "断られたらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Then ask what risk they're willing to accept, and write it down. Security isn't about saying no. It's about making the trade-offs visible.",
+            "jp": "それなら、どのリスクなら受け入れるのかを聞いて、書き留めましょう。セキュリティは断ることではなく、トレードオフを見えるようにすることです。"
+          }
+        ]
+      }
+    ]
+  }
+]
