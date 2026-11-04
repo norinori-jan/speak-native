@@ -1,5 +1,5 @@
 {
-"updated": 1793786993023,
+"updated": 1793787143444,
 "packs": [
 {
 "id": "airport-0001",
@@ -608,6 +608,14 @@
 "count": 50,
 "situation": "housing",
 "sname": "住まい・引っ越し"
+},
+{
+"id": "cyberteam-2401",
+"file": "cyberteam-2401.json",
+"ver": 1,
+"count": 50,
+"situation": "cyberteam",
+"sname": "ネットワーク防衛ドラマ"
 }
 ]
 }

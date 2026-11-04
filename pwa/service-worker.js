@@ -1,5 +1,5 @@
 // Speak Native Service Worker
-const CACHE_VERSION = 'dei-pwa-v27';
+const CACHE_VERSION = 'dei-pwa-v28';
 const ASSETS = [
   './',
   './index.html',
@@ -54,6 +54,8 @@ const ASSETS = [
   './conversations/aiclass5-2305.json',
   './phrases/housing-0801.json',
   './conversations/housing-0801.json',
+  './phrases/cyberteam-2401.json',
+  './conversations/cyberteam-2401.json',
   './phrases/musthave-2201.json'
 ];
 const OPTIONAL_ASSETS = [

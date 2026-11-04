@@ -1,0 +1,377 @@
+[
+  {
+    "id": "cyberteam",
+    "ic": "🛡️",
+    "n": "ネットワーク防衛ドラマ",
+    "hint": "Mia and Ken on a network security team respond to phishing, an infected laptop, log analysis, ransomware, patching, passwords, staff communication, and a post-incident review",
+    "level": 3,
+    "keywords": [
+      "security",
+      "phishing",
+      "incident"
+    ],
+    "d": [
+      {
+        "t": "Part 1：怪しいメールが届いた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, this email says it's from our bank and asks me to click a link to confirm my account. Something feels off.",
+            "jp": "ケン、このメールは銀行からだと言って、アカウント確認のためにリンクを押せと言っています。何か変な感じがします。"
+          },
+          {
+            "sp": 1,
+            "en": "Good instinct. Don't click anything. Let's look at the sender's address first, not just the name that shows up.",
+            "jp": "いい勘です。何も押さないで。まず、表示される名前だけでなく、送信者のアドレスを見ましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "It ends in a strange domain, with an extra word in the middle. That's not our bank's real address.",
+            "jp": "変なドメインで終わっていて、途中に余計な単語があります。うちの銀行の本当のアドレスではありません。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a phishing email. The goal is to scare you into acting fast without thinking.",
+            "jp": "それはフィッシングメールです。怖がらせて、考えずに急いで行動させるのが狙いです。"
+          },
+          {
+            "sp": 0,
+            "en": "It says my account will close in twenty-four hours. That's pretty scary.",
+            "jp": "24時間以内にアカウントが閉鎖されると書いてあります。かなり怖いです。"
+          },
+          {
+            "sp": 1,
+            "en": "That pressure is the trick. Real banks don't threaten you by email. Use the report button, so our team can warn everyone.",
+            "jp": "その圧力が手口です。本物の銀行はメールで脅しません。報告ボタンを使って、チームが全員に警告できるようにしましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Done. Should I also delete it?",
+            "jp": "送りました。削除もしていいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "After you report it, yes. And if you ever do click one by mistake, tell us right away. No blame, just speed.",
+            "jp": "報告したあとなら、はい。もし間違って押してしまったら、すぐ教えてください。責めません、必要なのは速さだけです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 2：感染の疑いと隔離",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, Sam's laptop is acting weird. The fan is roaring, and a pop-up keeps saying his files are in danger.",
+            "jp": "ケン、サムのノートPCの様子が変です。ファンがうなっていて、ファイルが危険だというポップアップが出続けています。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, stay calm. First step is to cut it off from the network, so whatever it is can't spread to other machines.",
+            "jp": "分かりました、落ち着いて。まずネットワークから切り離します。何であれ、他のマシンに広がらないようにするためです。"
+          },
+          {
+            "sp": 0,
+            "en": "Do I just unplug the cable?",
+            "jp": "ケーブルを抜けばいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and turn off Wi-Fi too. But don't shut the laptop down yet, because we may need what's in its memory to learn what happened.",
+            "jp": "はい、Wi-Fiもオフにして。ただノートPCの電源はまだ切らないで。何が起きたかを知るのに、メモリの中身が必要になるかもしれません。"
+          },
+          {
+            "sp": 0,
+            "en": "Got it. Sam says he opened an attachment about twenty minutes ago.",
+            "jp": "分かりました。サムは20分ほど前に添付ファイルを開いたと言っています。"
+          },
+          {
+            "sp": 1,
+            "en": "That's our starting point. Write down the time, the file name, and what he saw on the screen.",
+            "jp": "それが出発点です。時刻、ファイル名、画面に出たものを書き留めてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I tell the whole team?",
+            "jp": "チーム全員に伝えるべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Tell the incident channel, not everyone. Keep it short and factual, so we don't cause a panic.",
+            "jp": "全員ではなく、インシデント用のチャンネルに伝えてください。パニックを起こさないよう、短く事実だけで。"
+          }
+        ]
+      },
+      {
+        "t": "Part 3：ログを読む",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I pulled the logs from Sam's laptop, but it's thousands of lines. Where do I even start?",
+            "jp": "ケン、サムのPCのログを取り出しましたが、何千行もあります。どこから見ればいいんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Start with the time he opened the attachment. Filter for fifteen minutes before and after that moment.",
+            "jp": "添付ファイルを開いた時刻から始めます。その前後15分で絞り込んでください。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. I see a lot of normal stuff. Oh, wait, there's a connection to an address I don't recognize.",
+            "jp": "はい。普通のものがたくさんあります。あ、待って、見覚えのないアドレスへの接続があります。"
+          },
+          {
+            "sp": 1,
+            "en": "Now we're getting somewhere. Check if that address is on our list of known bad ones, and see which other computers contacted it.",
+            "jp": "いい調子です。そのアドレスが既知の悪いものの一覧にあるか調べて、他のどのコンピュータがそこに接続したかも見てください。"
+          },
+          {
+            "sp": 0,
+            "en": "Two other machines did, both in the finance office.",
+            "jp": "他に2台が接続していました。どちらも経理の部屋です。"
+          },
+          {
+            "sp": 1,
+            "en": "That tells us the infection may have spread, so isolate those two as well, right now.",
+            "jp": "それは感染が広がったかもしれないということなので、その2台も今すぐ隔離してください。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there a pattern I should be watching for in the logs in general?",
+            "jp": "ログ全般で注意すべきパターンはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Anything unusual: odd hours, huge data transfers, or lots of failed logins. Normal is boring, so learn what boring looks like.",
+            "jp": "普通でないものすべてです。変な時間帯、大量のデータ転送、ログイン失敗の連続。普通は退屈なものなので、退屈な状態がどう見えるか覚えてください。"
+          }
+        ]
+      },
+      {
+        "t": "Part 4：身代金要求の画面",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, emergency. A machine in accounting is showing a message demanding payment to unlock the files.",
+            "jp": "ケン、緊急です。経理のマシンが、ファイルを解除するための支払いを要求するメッセージを出しています。"
+          },
+          {
+            "sp": 1,
+            "en": "That's ransomware. Don't pay, and don't negotiate. First, isolate it, and then check if our backups are safe.",
+            "jp": "ランサムウェアです。払わず、交渉もしないで。まず隔離して、バックアップが無事か確認します。"
+          },
+          {
+            "sp": 0,
+            "en": "Are the backups connected to the network? What if they got hit too?",
+            "jp": "バックアップはネットワークにつながっていますか？それも被害にあったらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Good question. That's why we keep a copy offline that nothing can reach. Let me confirm it's untouched.",
+            "jp": "いい質問です。だから何も届かないオフラインのコピーを持っています。手つかずか確認します。"
+          },
+          {
+            "sp": 0,
+            "en": "And if it's fine, we can restore everything?",
+            "jp": "そして無事なら、全部復元できるんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, though it takes time, and we'll only restore after we're sure the infection is gone, or we'd just get hit again.",
+            "jp": "はい、時間はかかりますが、感染が消えたと確信してから復元します。そうしないとまた被害にあうだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "Should we call someone outside, like the police?",
+            "jp": "警察など、外部に連絡すべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, our management will handle that, along with our insurance and the legal team. Our job is to contain it and keep records.",
+            "jp": "はい、経営陣が保険会社と法務チームと一緒に対応します。私たちの仕事は、封じ込めと記録を残すことです。"
+          }
+        ]
+      },
+      {
+        "t": "Part 5：アップデートを後回しにしない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I keep clicking 'remind me later' on the update notice. It always seems to pop up at the worst time.",
+            "jp": "ケン、更新の通知を『後で』にし続けています。いつも一番悪いタイミングで出る気がして。"
+          },
+          {
+            "sp": 1,
+            "en": "I get it, but that delay is how many attacks succeed. Updates fix known holes, and attackers love computers that haven't patched yet.",
+            "jp": "気持ちは分かりますが、その先延ばしが多くの攻撃が成功する理由です。更新は既知の穴をふさぎ、攻撃者は更新していないコンピュータが大好きです。"
+          },
+          {
+            "sp": 0,
+            "en": "So the bad guys already know about the hole before I update?",
+            "jp": "つまり私が更新する前に、悪い人たちはその穴を知っているんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Once a fix is published, everyone can study it. The race is between you installing it and them using it.",
+            "jp": "その通り。修正が公開されたら、誰でもそれを調べられます。あなたがインストールするのと、相手が悪用するのとの競争です。"
+          },
+          {
+            "sp": 0,
+            "en": "What if an update breaks something important?",
+            "jp": "更新が大事なものを壊したらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "That's why we test on a few machines first, then roll it out in stages. But we don't skip it.",
+            "jp": "だからまず数台で試して、段階的に展開します。でも飛ばしはしません。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, I'll set my laptop to update overnight.",
+            "jp": "分かりました、ノートPCを夜間に自動更新するようにします。"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. Make the secure choice the easy one, and people will actually follow it.",
+            "jp": "完璧です。安全な選択を簡単な選択にすれば、人は実際に従います。"
+          }
+        ]
+      },
+      {
+        "t": "Part 6：パスワードと二段階認証",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm tired of passwords. I have like forty accounts, and I just reuse the same one for most of them.",
+            "jp": "ケン、パスワードにうんざりです。アカウントが40個くらいあって、ほとんど同じものを使い回しています。"
+          },
+          {
+            "sp": 1,
+            "en": "That's very common, and very dangerous. If one site leaks it, attackers try it everywhere else.",
+            "jp": "とてもよくあることで、とても危険です。1つのサイトが漏らしたら、攻撃者は他のあらゆる所で試します。"
+          },
+          {
+            "sp": 0,
+            "en": "So what's the fix? I can't memorize forty different ones.",
+            "jp": "じゃあ解決策は？40個も違うものは覚えられません。"
+          },
+          {
+            "sp": 1,
+            "en": "Use a password manager. It makes long, random passwords for each site, and you only remember one strong master password.",
+            "jp": "パスワード管理ツールを使いましょう。サイトごとに長くてランダムなパスワードを作り、覚えるのは強いマスターパスワードひとつだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "And what about that two-step login thing? It's kind of annoying.",
+            "jp": "それと、あの二段階ログインは？ちょっと面倒です。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "It's your best protection. Even if someone steals your password, they still need your phone to get in.",
+            "jp": "それが最強の守りです。パスワードを盗まれても、入るにはあなたの電話が必要です。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, that's worth thirty extra seconds. Can I turn it on for work email today?",
+            "jp": "なるほど、30秒の価値はありますね。今日、仕事のメールで有効にできますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Do it right now, and I'll walk you through it. Then we'll do your personal accounts, too.",
+            "jp": "今すぐやりましょう、手順は案内します。それから個人のアカウントもやりましょう。"
+          }
+        ]
+      },
+      {
+        "t": "Part 7：全社員への報告",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the management wants a message to all staff about the incident. I've never written one of those before.",
+            "jp": "ケン、経営陣が、今回のインシデントについて全社員向けの連絡を求めています。そういうのは書いたことがありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Keep it simple. Say what happened, what we did, and what people should do now. No jargon, and no blame.",
+            "jp": "シンプルに。何が起きたか、何をしたか、今みんなが何をすべきかを書きます。専門用語はなし、責める言葉もなしで。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I say how the attacker got in?",
+            "jp": "攻撃者がどう入ったかを書くべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not in detail. We don't want to teach anyone else, and we're still investigating. Say 'a malicious email,' and leave it at that.",
+            "jp": "詳しくは書きません。他の人に教えたくないですし、調査中でもあります。『悪意のあるメール』とだけ書いて、そこで止めます。"
+          },
+          {
+            "sp": 0,
+            "en": "What do I tell people to do?",
+            "jp": "人々に何をするよう伝えますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Change passwords, report any odd emails, and don't open attachments you weren't expecting. Three clear actions are better than ten vague ones.",
+            "jp": "パスワードを変える、変なメールを報告する、予期しない添付ファイルは開かない。はっきりした3つの行動は、あいまいな10個より良いです。"
+          },
+          {
+            "sp": 0,
+            "en": "And a thank-you to Sam for reporting it fast?",
+            "jp": "それと、すぐ報告してくれたサムへの感謝は？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. People who report quickly should be thanked, not scolded, or next time they'll stay quiet.",
+            "jp": "もちろん。早く報告した人は叱るのではなく感謝すべきです。そうしないと次は黙ってしまいます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 8：復旧と振り返り",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, all the machines are clean, and the files are restored. I can't believe we got through it in two days.",
+            "jp": "ケン、全部のマシンがきれいになって、ファイルも復元されました。2日で乗り切れたなんて信じられません。"
+          },
+          {
+            "sp": 1,
+            "en": "You did great, Mia. Now comes the part most people skip: the review. What went well, and what didn't?",
+            "jp": "よくやりました、ミア。ここからが、ほとんどの人が飛ばす部分です。振り返りです。何がうまくいき、何がうまくいかなかったですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Well, reporting was fast, and the offline backup saved us. But we were slow to spot the second infected machine.",
+            "jp": "えっと、報告は速くて、オフラインのバックアップが助けになりました。でも2台目の感染マシンを見つけるのが遅かったです。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. So let's add an alert that fires when several machines contact the same unknown address.",
+            "jp": "そうです。では、複数のマシンが同じ見知らぬアドレスに接続した時に鳴る警報を追加しましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Should we run a training for the staff, too? Maybe a fake phishing test?",
+            "jp": "スタッフ向けの研修もやるべきですか？フィッシングの模擬テストとか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, but keep it friendly. The goal is to build habits, not to catch people out.",
+            "jp": "はい、でも感じよくやりましょう。目的は習慣を作ることで、人を引っかけることではありません。"
+          },
+          {
+            "sp": 0,
+            "en": "I feel like I learned more in these two days than in a whole semester.",
+            "jp": "この2日で、学期まるごとより多く学んだ気がします。"
+          },
+          {
+            "sp": 1,
+            "en": "That's how it works in this field. Every incident makes the team stronger, as long as we write down the lessons.",
+            "jp": "この分野はそういうものです。教訓を書き留めておけば、インシデントのたびにチームは強くなります。"
+          }
+        ]
+      }
+    ]
+  }
+]

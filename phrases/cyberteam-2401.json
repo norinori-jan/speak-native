@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "cyberteam-2401",
+  "ver": 1,
+  "situation": "cyberteam",
+  "sname": "ネットワーク防衛ドラマ",
+  "icon": "🛡️",
+  "level": 3,
+  "title": "ネットワーク防衛ドラマの口語表現",
+  "items": [
+    {
+      "id": "cyberteam-2401-001",
+      "en": "Something feels off about this email.",
+      "jp": "このメールは何か変な感じがします。",
+      "speak": "Something feels off about this email.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-002",
+      "en": "Don't click anything.",
+      "jp": "何も押さないでください。",
+      "speak": "Don't click anything.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-003",
+      "en": "Check the sender's address, not just the name.",
+      "jp": "名前だけでなく、送信者のアドレスを確認しましょう。",
+      "speak": "Check the sender's address, not just the name.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-004",
+      "en": "That's a phishing email.",
+      "jp": "それはフィッシングメールです。",
+      "speak": "That's a phishing email.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-005",
+      "en": "It tries to scare you into acting fast.",
+      "jp": "怖がらせて急いで行動させようとします。",
+      "speak": "It tries to scare you into acting fast.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-006",
+      "en": "Use the report button.",
+      "jp": "報告ボタンを使いましょう。",
+      "speak": "Use the report button.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-007",
+      "en": "Tell us right away. No blame, just speed.",
+      "jp": "すぐ教えてください。責めません、必要なのは速さです。",
+      "speak": "Tell us right away. No blame, just speed.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-008",
+      "en": "This laptop is acting weird.",
+      "jp": "このノートPCの様子が変です。",
+      "speak": "This laptop is acting weird.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-009",
+      "en": "Cut it off from the network first.",
+      "jp": "まずネットワークから切り離しましょう。",
+      "speak": "Cut it off from the network first.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-010",
+      "en": "Don't shut it down yet.",
+      "jp": "まだ電源は切らないでください。",
+      "speak": "Don't shut it down yet.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-011",
+      "en": "Write down the time and the file name.",
+      "jp": "時刻とファイル名を書き留めてください。",
+      "speak": "Write down the time and the file name.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-012",
+      "en": "Keep it short and factual.",
+      "jp": "短く、事実だけにしましょう。",
+      "speak": "Keep it short and factual.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-013",
+      "en": "Start with the time he opened the attachment.",
+      "jp": "添付ファイルを開いた時刻から始めましょう。",
+      "speak": "Start with the time he opened the attachment.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-014",
+      "en": "Filter the logs around that moment.",
+      "jp": "その時刻の前後でログを絞り込みましょう。",
+      "speak": "Filter the logs around that moment.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-015",
+      "en": "There's a connection to an address I don't recognize.",
+      "jp": "見覚えのないアドレスへの接続があります。",
+      "speak": "There's a connection to an address I don't recognize.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-016",
+      "en": "Which other machines contacted it?",
+      "jp": "他のどのマシンがそこに接続しましたか？",
+      "speak": "Which other machines contacted it?",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-017",
+      "en": "The infection may have spread.",
+      "jp": "感染が広がったかもしれません。",
+      "speak": "The infection may have spread.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-018",
+      "en": "Look for odd hours and huge data transfers.",
+      "jp": "変な時間帯や大量のデータ転送を探しましょう。",
+      "speak": "Look for odd hours and huge data transfers.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-019",
+      "en": "Learn what normal looks like.",
+      "jp": "普通の状態がどう見えるか覚えましょう。",
+      "speak": "Learn what normal looks like.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-020",
+      "en": "It's ransomware.",
+      "jp": "ランサムウェアです。",
+      "speak": "It's ransomware.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-021",
+      "en": "Don't pay, and don't negotiate.",
+      "jp": "払わず、交渉もしないでください。",
+      "speak": "Don't pay, and don't negotiate.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-022",
+      "en": "Check that the backups are safe.",
+      "jp": "バックアップが無事か確認しましょう。",
+      "speak": "Check that the backups are safe.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-023",
+      "en": "Keep a copy offline that nothing can reach.",
+      "jp": "何も届かないオフラインのコピーを持ちましょう。",
+      "speak": "Keep a copy offline that nothing can reach.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-024",
+      "en": "Restore only after the infection is gone.",
+      "jp": "感染が消えてから復元しましょう。",
+      "speak": "Restore only after the infection is gone.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-025",
+      "en": "Our job is to contain it and keep records.",
+      "jp": "私たちの仕事は封じ込めと記録です。",
+      "speak": "Our job is to contain it and keep records.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-026",
+      "en": "Updates fix known holes.",
+      "jp": "更新は既知の穴をふさぎます。",
+      "speak": "Updates fix known holes.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-027",
+      "en": "Attackers love computers that haven't patched yet.",
+      "jp": "攻撃者は更新していないコンピュータが大好きです。",
+      "speak": "Attackers love computers that haven't patched yet.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-028",
+      "en": "It's a race between you and them.",
+      "jp": "あなたと相手との競争です。",
+      "speak": "It's a race between you and them.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-029",
+      "en": "Test on a few machines first.",
+      "jp": "まず数台で試しましょう。",
+      "speak": "Test on a few machines first.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-030",
+      "en": "Set it to update overnight.",
+      "jp": "夜間に自動更新するよう設定しましょう。",
+      "speak": "Set it to update overnight.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-031",
+      "en": "Make the secure choice the easy one.",
+      "jp": "安全な選択を簡単な選択にしましょう。",
+      "speak": "Make the secure choice the easy one.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-032",
+      "en": "Don't reuse the same password.",
+      "jp": "同じパスワードを使い回さないでください。",
+      "speak": "Don't reuse the same password.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-033",
+      "en": "If one site leaks it, attackers try it everywhere.",
+      "jp": "1つのサイトが漏らすと、攻撃者はあらゆる所で試します。",
+      "speak": "If one site leaks it, attackers try it everywhere.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-034",
+      "en": "Use a password manager.",
+      "jp": "パスワード管理ツールを使いましょう。",
+      "speak": "Use a password manager.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-035",
+      "en": "Turn on two-step login.",
+      "jp": "二段階ログインを有効にしましょう。",
+      "speak": "Turn on two-step login.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-036",
+      "en": "They still need your phone to get in.",
+      "jp": "入るにはまだあなたの電話が必要です。",
+      "speak": "They still need your phone to get in.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-037",
+      "en": "Say what happened and what people should do.",
+      "jp": "何が起きたか、何をすべきかを伝えましょう。",
+      "speak": "Say what happened and what people should do.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-038",
+      "en": "No jargon and no blame.",
+      "jp": "専門用語も責める言葉もなしで。",
+      "speak": "No jargon and no blame.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-039",
+      "en": "We're still investigating.",
+      "jp": "まだ調査中です。",
+      "speak": "We're still investigating.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-040",
+      "en": "Three clear actions beat ten vague ones.",
+      "jp": "はっきりした3つの行動は、あいまいな10個に勝ります。",
+      "speak": "Three clear actions beat ten vague ones.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-041",
+      "en": "Thank people who report quickly.",
+      "jp": "早く報告した人に感謝しましょう。",
+      "speak": "Thank people who report quickly.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-042",
+      "en": "Don't open attachments you weren't expecting.",
+      "jp": "予期しない添付ファイルは開かないでください。",
+      "speak": "Don't open attachments you weren't expecting.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-043",
+      "en": "What went well, and what didn't?",
+      "jp": "何がうまくいき、何がうまくいかなかったですか？",
+      "speak": "What went well, and what didn't?",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-044",
+      "en": "The offline backup saved us.",
+      "jp": "オフラインのバックアップが助けになりました。",
+      "speak": "The offline backup saved us.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-045",
+      "en": "We were slow to spot the second machine.",
+      "jp": "2台目のマシンを見つけるのが遅かったです。",
+      "speak": "We were slow to spot the second machine.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-046",
+      "en": "Let's add an alert for that.",
+      "jp": "それ用の警報を追加しましょう。",
+      "speak": "Let's add an alert for that.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-047",
+      "en": "Build habits, don't catch people out.",
+      "jp": "習慣を作りましょう、人を引っかけないでください。",
+      "speak": "Build habits, don't catch people out.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-048",
+      "en": "Every incident makes the team stronger.",
+      "jp": "インシデントのたびにチームは強くなります。",
+      "speak": "Every incident makes the team stronger.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-049",
+      "en": "Real banks don't threaten you by email.",
+      "jp": "本物の銀行はメールで脅しません。",
+      "speak": "Real banks don't threaten you by email.",
+      "say": []
+    },
+    {
+      "id": "cyberteam-2401-050",
+      "en": "Write down the lessons.",
+      "jp": "教訓を書き留めましょう。",
+      "speak": "Write down the lessons.",
+      "say": []
+    }
+  ]
+}
