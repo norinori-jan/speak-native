@@ -1,5 +1,5 @@
 {
-"updated": 1793701197898,
+"updated": 1793786771085,
 "packs": [
 {
 "id": "airport-0001",
@@ -552,6 +552,14 @@
 "count": 50,
 "situation": "dineout",
 "sname": "レストラン・バー"
+},
+{
+"id": "musthave-2201",
+"file": "musthave-2201.json",
+"ver": 1,
+"count": 73,
+"situation": "musthave",
+"sname": "覚えておきたい定番フレーズ"
 }
 ]
 }

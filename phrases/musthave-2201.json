@@ -1,0 +1,596 @@
+{
+ "app": "phrase-pack",
+ "id": "musthave-2201",
+ "ver": 1,
+ "situation": "musthave",
+ "sname": "覚えておきたい定番フレーズ",
+ "icon": "⭐",
+ "level": 2,
+ "title": "覚えておきたい定番フレーズ",
+ "items": [
+  {
+   "id": "musthave-2201-001",
+   "en": "Could you say that again?",
+   "jp": "もう一度言っていただけますか？",
+   "speak": "Could you say that again?",
+   "say": [],
+   "note": "聞き返す定番"
+  },
+  {
+   "id": "musthave-2201-002",
+   "en": "Sorry, I didn't catch that.",
+   "jp": "すみません、聞き取れませんでした。",
+   "speak": "Sorry, I didn't catch that.",
+   "say": [],
+   "note": "聞き取れない時"
+  },
+  {
+   "id": "musthave-2201-003",
+   "en": "Could you speak a little slower?",
+   "jp": "もう少しゆっくり話していただけますか？",
+   "speak": "Could you speak a little slower?",
+   "say": [],
+   "note": "ゆっくり頼む"
+  },
+  {
+   "id": "musthave-2201-004",
+   "en": "What does that mean?",
+   "jp": "それはどういう意味ですか？",
+   "speak": "What does that mean?",
+   "say": [],
+   "note": "意味を聞く"
+  },
+  {
+   "id": "musthave-2201-005",
+   "en": "How do you say this in English?",
+   "jp": "これは英語でなんと言いますか？",
+   "speak": "How do you say this in English?",
+   "say": [],
+   "note": "言い方を聞く"
+  },
+  {
+   "id": "musthave-2201-006",
+   "en": "I'm not sure I understand.",
+   "jp": "よく分かりません。",
+   "speak": "I'm not sure I understand.",
+   "say": [],
+   "note": "理解できない時"
+  },
+  {
+   "id": "musthave-2201-007",
+   "en": "Let me think for a second.",
+   "jp": "ちょっと考えさせてください。",
+   "speak": "Let me think for a second.",
+   "say": [],
+   "note": "間をつなぐ"
+  },
+  {
+   "id": "musthave-2201-008",
+   "en": "Let me check and get back to you.",
+   "jp": "確認して折り返します。",
+   "speak": "Let me check and get back to you.",
+   "say": [],
+   "note": "仕事の定番"
+  },
+  {
+   "id": "musthave-2201-009",
+   "en": "That makes sense.",
+   "jp": "なるほど、納得です。",
+   "speak": "That makes sense.",
+   "say": [],
+   "note": "相づち"
+  },
+  {
+   "id": "musthave-2201-010",
+   "en": "I see what you mean.",
+   "jp": "おっしゃることは分かります。",
+   "speak": "I see what you mean.",
+   "say": [],
+   "note": "共感・理解"
+  },
+  {
+   "id": "musthave-2201-011",
+   "en": "Fair enough.",
+   "jp": "もっともですね。",
+   "speak": "Fair enough.",
+   "say": [],
+   "note": "軽い同意"
+  },
+  {
+   "id": "musthave-2201-012",
+   "en": "Good point.",
+   "jp": "いい指摘ですね。",
+   "speak": "Good point.",
+   "say": [],
+   "note": "相づち"
+  },
+  {
+   "id": "musthave-2201-013",
+   "en": "Exactly.",
+   "jp": "まさにその通り。",
+   "speak": "Exactly.",
+   "say": [],
+   "note": "強い同意"
+  },
+  {
+   "id": "musthave-2201-014",
+   "en": "I totally agree.",
+   "jp": "全く同感です。",
+   "speak": "I totally agree.",
+   "say": [],
+   "note": "同意"
+  },
+  {
+   "id": "musthave-2201-015",
+   "en": "I'm not so sure about that.",
+   "jp": "それはどうかな、と思います。",
+   "speak": "I'm not so sure about that.",
+   "say": [],
+   "note": "やんわり反対"
+  },
+  {
+   "id": "musthave-2201-016",
+   "en": "I'd rather not, to be honest.",
+   "jp": "正直、遠慮したいです。",
+   "speak": "I'd rather not, to be honest.",
+   "say": [],
+   "note": "やんわり断る"
+  },
+  {
+   "id": "musthave-2201-017",
+   "en": "Maybe next time.",
+   "jp": "また今度で。",
+   "speak": "Maybe next time.",
+   "say": [],
+   "note": "やんわり断る"
+  },
+  {
+   "id": "musthave-2201-018",
+   "en": "Sounds good to me.",
+   "jp": "いいですね、それでいきましょう。",
+   "speak": "Sounds good to me.",
+   "say": [],
+   "note": "OKの返事"
+  },
+  {
+   "id": "musthave-2201-019",
+   "en": "No problem at all.",
+   "jp": "全然問題ないですよ。",
+   "speak": "No problem at all.",
+   "say": [],
+   "note": "気にしないで"
+  },
+  {
+   "id": "musthave-2201-020",
+   "en": "Don't worry about it.",
+   "jp": "気にしないで。",
+   "speak": "Don't worry about it.",
+   "say": [],
+   "note": "気にしないで"
+  },
+  {
+   "id": "musthave-2201-021",
+   "en": "I really appreciate it.",
+   "jp": "本当に感謝します。",
+   "speak": "I really appreciate it.",
+   "say": [],
+   "note": "お礼"
+  },
+  {
+   "id": "musthave-2201-022",
+   "en": "Thanks for your help.",
+   "jp": "助けてくれてありがとう。",
+   "speak": "Thanks for your help.",
+   "say": [],
+   "note": "お礼"
+  },
+  {
+   "id": "musthave-2201-023",
+   "en": "I'm sorry about that.",
+   "jp": "それはすみません。",
+   "speak": "I'm sorry about that.",
+   "say": [],
+   "note": "軽い謝罪"
+  },
+  {
+   "id": "musthave-2201-024",
+   "en": "My bad.",
+   "jp": "私のミスです。",
+   "speak": "My bad.",
+   "say": [],
+   "note": "カジュアルな謝罪"
+  },
+  {
+   "id": "musthave-2201-025",
+   "en": "Sorry to keep you waiting.",
+   "jp": "お待たせしてすみません。",
+   "speak": "Sorry to keep you waiting.",
+   "say": [],
+   "note": "待たせた時"
+  },
+  {
+   "id": "musthave-2201-026",
+   "en": "Excuse me, could I get through?",
+   "jp": "すみません、通していただけますか？",
+   "speak": "Excuse me, could I get through?",
+   "say": [],
+   "note": "通る時"
+  },
+  {
+   "id": "musthave-2201-027",
+   "en": "Can I ask you something?",
+   "jp": "ひとつ聞いてもいいですか？",
+   "speak": "Can I ask you something?",
+   "say": [],
+   "note": "質問の切り出し"
+  },
+  {
+   "id": "musthave-2201-028",
+   "en": "Do you have a minute?",
+   "jp": "ちょっといいですか？",
+   "speak": "Do you have a minute?",
+   "say": [],
+   "note": "話しかける"
+  },
+  {
+   "id": "musthave-2201-029",
+   "en": "Can I get your name?",
+   "jp": "お名前を伺ってもいいですか？",
+   "speak": "Can I get your name?",
+   "say": [],
+   "note": "名前を聞く"
+  },
+  {
+   "id": "musthave-2201-030",
+   "en": "Nice to meet you.",
+   "jp": "はじめまして。",
+   "speak": "Nice to meet you.",
+   "say": [],
+   "note": "初対面"
+  },
+  {
+   "id": "musthave-2201-031",
+   "en": "How's it going?",
+   "jp": "調子はどう？",
+   "speak": "How's it going?",
+   "say": [],
+   "note": "あいさつ"
+  },
+  {
+   "id": "musthave-2201-032",
+   "en": "Long time no see.",
+   "jp": "久しぶり。",
+   "speak": "Long time no see.",
+   "say": [],
+   "note": "再会"
+  },
+  {
+   "id": "musthave-2201-033",
+   "en": "What have you been up to?",
+   "jp": "最近どうしてた？",
+   "speak": "What have you been up to?",
+   "say": [],
+   "note": "近況"
+  },
+  {
+   "id": "musthave-2201-034",
+   "en": "What do you do for a living?",
+   "jp": "お仕事は何をされていますか？",
+   "speak": "What do you do for a living?",
+   "say": [],
+   "note": "仕事を聞く"
+  },
+  {
+   "id": "musthave-2201-035",
+   "en": "Where are you from?",
+   "jp": "ご出身はどちらですか？",
+   "speak": "Where are you from?",
+   "say": [],
+   "note": "出身を聞く"
+  },
+  {
+   "id": "musthave-2201-036",
+   "en": "What are you up to this weekend?",
+   "jp": "今週末は何するの？",
+   "speak": "What are you up to this weekend?",
+   "say": [],
+   "note": "週末の話題"
+  },
+  {
+   "id": "musthave-2201-037",
+   "en": "Do you want to grab a coffee?",
+   "jp": "コーヒーでも飲みに行かない？",
+   "speak": "Do you want to grab a coffee?",
+   "say": [],
+   "note": "誘う"
+  },
+  {
+   "id": "musthave-2201-038",
+   "en": "Let's keep in touch.",
+   "jp": "連絡を取り合いましょう。",
+   "speak": "Let's keep in touch.",
+   "say": [],
+   "note": "別れ際"
+  },
+  {
+   "id": "musthave-2201-039",
+   "en": "I'm on my way.",
+   "jp": "今向かっています。",
+   "speak": "I'm on my way.",
+   "say": [],
+   "note": "移動中"
+  },
+  {
+   "id": "musthave-2201-040",
+   "en": "I'll be there in ten minutes.",
+   "jp": "10分で着きます。",
+   "speak": "I'll be there in ten minutes.",
+   "say": [],
+   "note": "到着予定"
+  },
+  {
+   "id": "musthave-2201-041",
+   "en": "I'm running a little late.",
+   "jp": "少し遅れそうです。",
+   "speak": "I'm running a little late.",
+   "say": [],
+   "note": "遅刻の連絡"
+  },
+  {
+   "id": "musthave-2201-042",
+   "en": "Can we reschedule?",
+   "jp": "日程を変えられますか？",
+   "speak": "Can we reschedule?",
+   "say": [],
+   "note": "予定変更"
+  },
+  {
+   "id": "musthave-2201-043",
+   "en": "Let's get started.",
+   "jp": "始めましょう。",
+   "speak": "Let's get started.",
+   "say": [],
+   "note": "会議の冒頭"
+  },
+  {
+   "id": "musthave-2201-044",
+   "en": "Let's wrap this up.",
+   "jp": "そろそろまとめましょう。",
+   "speak": "Let's wrap this up.",
+   "say": [],
+   "note": "会議の終わり"
+  },
+  {
+   "id": "musthave-2201-045",
+   "en": "Can you walk me through it?",
+   "jp": "順を追って説明してもらえますか？",
+   "speak": "Can you walk me through it?",
+   "say": [],
+   "note": "説明を頼む"
+  },
+  {
+   "id": "musthave-2201-046",
+   "en": "Could you send me the details?",
+   "jp": "詳細を送っていただけますか？",
+   "speak": "Could you send me the details?",
+   "say": [],
+   "note": "依頼"
+  },
+  {
+   "id": "musthave-2201-047",
+   "en": "I'll look into it.",
+   "jp": "調べておきます。",
+   "speak": "I'll look into it.",
+   "say": [],
+   "note": "対応を約束"
+  },
+  {
+   "id": "musthave-2201-048",
+   "en": "That works for me.",
+   "jp": "私はそれで大丈夫です。",
+   "speak": "That works for me.",
+   "say": [],
+   "note": "日程・条件OK"
+  },
+  {
+   "id": "musthave-2201-049",
+   "en": "How much is this?",
+   "jp": "これはいくらですか？",
+   "speak": "How much is this?",
+   "say": [],
+   "note": "買い物"
+  },
+  {
+   "id": "musthave-2201-050",
+   "en": "Can I get the check, please?",
+   "jp": "お会計をお願いします。",
+   "speak": "Can I get the check, please?",
+   "say": [],
+   "note": "レストラン"
+  },
+  {
+   "id": "musthave-2201-051",
+   "en": "I'll have the same.",
+   "jp": "同じものをください。",
+   "speak": "I'll have the same.",
+   "say": [],
+   "note": "注文"
+  },
+  {
+   "id": "musthave-2201-052",
+   "en": "Can I get this to go?",
+   "jp": "持ち帰りにできますか？",
+   "speak": "Can I get this to go?",
+   "say": [],
+   "note": "注文"
+  },
+  {
+   "id": "musthave-2201-053",
+   "en": "Is this seat taken?",
+   "jp": "この席は空いていますか？",
+   "speak": "Is this seat taken?",
+   "say": [],
+   "note": "席"
+  },
+  {
+   "id": "musthave-2201-054",
+   "en": "Where is the restroom?",
+   "jp": "お手洗いはどこですか？",
+   "speak": "Where is the restroom?",
+   "say": [],
+   "note": "場所を聞く"
+  },
+  {
+   "id": "musthave-2201-055",
+   "en": "Could you help me find this place?",
+   "jp": "この場所を探すのを手伝ってもらえますか？",
+   "speak": "Could you help me find this place?",
+   "say": [],
+   "note": "道を聞く"
+  },
+  {
+   "id": "musthave-2201-056",
+   "en": "I'm just looking, thanks.",
+   "jp": "見ているだけです、ありがとう。",
+   "speak": "I'm just looking, thanks.",
+   "say": [],
+   "note": "店員さんに"
+  },
+  {
+   "id": "musthave-2201-057",
+   "en": "I think I'm lost.",
+   "jp": "道に迷ったみたいです。",
+   "speak": "I think I'm lost.",
+   "say": [],
+   "note": "道に迷う"
+  },
+  {
+   "id": "musthave-2201-058",
+   "en": "I have a reservation under Sanada.",
+   "jp": "真田の名前で予約しています。",
+   "speak": "I have a reservation under Sanada.",
+   "say": [],
+   "note": "予約確認"
+  },
+  {
+   "id": "musthave-2201-059",
+   "en": "Could I have a refund?",
+   "jp": "返金をお願いできますか？",
+   "speak": "Could I have a refund?",
+   "say": [],
+   "note": "トラブル"
+  },
+  {
+   "id": "musthave-2201-060",
+   "en": "Something's wrong with this.",
+   "jp": "これ、どこかおかしいです。",
+   "speak": "Something's wrong with this.",
+   "say": [],
+   "note": "トラブル"
+  },
+  {
+   "id": "musthave-2201-061",
+   "en": "I'm allergic to nuts.",
+   "jp": "ナッツアレルギーがあります。",
+   "speak": "I'm allergic to nuts.",
+   "say": [],
+   "note": "食事の注意"
+  },
+  {
+   "id": "musthave-2201-062",
+   "en": "I need a hand with this.",
+   "jp": "これ、手伝ってもらえますか？",
+   "speak": "I need a hand with this.",
+   "say": [],
+   "note": "助けを求める"
+  },
+  {
+   "id": "musthave-2201-063",
+   "en": "Can you give me a ride?",
+   "jp": "車に乗せてもらえますか？",
+   "speak": "Can you give me a ride?",
+   "say": [],
+   "note": "頼みごと"
+  },
+  {
+   "id": "musthave-2201-064",
+   "en": "What time does it start?",
+   "jp": "何時に始まりますか？",
+   "speak": "What time does it start?",
+   "say": [],
+   "note": "時間を聞く"
+  },
+  {
+   "id": "musthave-2201-065",
+   "en": "How long does it take?",
+   "jp": "どのくらいかかりますか？",
+   "speak": "How long does it take?",
+   "say": [],
+   "note": "所要時間"
+  },
+  {
+   "id": "musthave-2201-066",
+   "en": "It's up to you.",
+   "jp": "あなたにお任せします。",
+   "speak": "It's up to you.",
+   "say": [],
+   "note": "決定を任せる"
+  },
+  {
+   "id": "musthave-2201-067",
+   "en": "I'm not in the mood.",
+   "jp": "そんな気分じゃないんだ。",
+   "speak": "I'm not in the mood.",
+   "say": [],
+   "note": "気分"
+  },
+  {
+   "id": "musthave-2201-068",
+   "en": "I can't make it.",
+   "jp": "行けなくなりました。",
+   "speak": "I can't make it.",
+   "say": [],
+   "note": "断る・欠席"
+  },
+  {
+   "id": "musthave-2201-069",
+   "en": "It doesn't matter to me.",
+   "jp": "私はどちらでもいいです。",
+   "speak": "It doesn't matter to me.",
+   "say": [],
+   "note": "こだわらない"
+  },
+  {
+   "id": "musthave-2201-070",
+   "en": "Take your time.",
+   "jp": "ゆっくりでいいですよ。",
+   "speak": "Take your time.",
+   "say": [],
+   "note": "急がせない"
+  },
+  {
+   "id": "musthave-2201-071",
+   "en": "Keep me posted.",
+   "jp": "進展を教えてね。",
+   "speak": "Keep me posted.",
+   "say": [],
+   "note": "連絡をお願い"
+  },
+  {
+   "id": "musthave-2201-072",
+   "en": "Count me in.",
+   "jp": "私も参加します。",
+   "speak": "Count me in.",
+   "say": [],
+   "note": "参加表明"
+  },
+  {
+   "id": "musthave-2201-073",
+   "en": "Let me know if you need anything.",
+   "jp": "何かあれば言ってください。",
+   "speak": "Let me know if you need anything.",
+   "say": [],
+   "note": "気づかい"
+  }
+ ]
+}
