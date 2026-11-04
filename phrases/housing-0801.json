@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "housing-0801",
+  "ver": 1,
+  "situation": "housing",
+  "sname": "住まい・引っ越し",
+  "icon": "🏠",
+  "level": 3,
+  "title": "住まい・引っ越しの口語表現",
+  "items": [
+    {
+      "id": "housing-0801-001",
+      "en": "Is the rent negotiable?",
+      "jp": "家賃は交渉できますか？",
+      "speak": "Is the rent negotiable?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-002",
+      "en": "What's included in the rent?",
+      "jp": "家賃には何が含まれていますか？",
+      "speak": "What's included in the rent?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-003",
+      "en": "Are utilities included?",
+      "jp": "光熱費は含まれていますか？",
+      "speak": "Are utilities included?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-004",
+      "en": "How much is the deposit?",
+      "jp": "敷金はいくらですか？",
+      "speak": "How much is the deposit?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-005",
+      "en": "When can I move in?",
+      "jp": "いつ入居できますか？",
+      "speak": "When can I move in?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-006",
+      "en": "How long is the lease?",
+      "jp": "契約期間はどのくらいですか？",
+      "speak": "How long is the lease?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-007",
+      "en": "Is the place pet-friendly?",
+      "jp": "ペットは大丈夫ですか？",
+      "speak": "Is the place pet-friendly?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-008",
+      "en": "Is there parking nearby?",
+      "jp": "近くに駐車場はありますか？",
+      "speak": "Is there parking nearby?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-009",
+      "en": "Does the building have laundry?",
+      "jp": "建物に洗濯機はありますか？",
+      "speak": "Does the building have laundry?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-010",
+      "en": "Which way does the window face?",
+      "jp": "窓はどの向きですか？",
+      "speak": "Which way does the window face?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-011",
+      "en": "Is it quiet at night?",
+      "jp": "夜は静かですか？",
+      "speak": "Is it quiet at night?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-012",
+      "en": "How's the neighborhood?",
+      "jp": "この辺りはどんなところですか？",
+      "speak": "How's the neighborhood?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-013",
+      "en": "Can I take a look around?",
+      "jp": "中を見てもいいですか？",
+      "speak": "Can I take a look around?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-014",
+      "en": "Can I think it over?",
+      "jp": "考えさせてもらえますか？",
+      "speak": "Can I think it over?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-015",
+      "en": "I'll let you know by tomorrow.",
+      "jp": "明日までにお知らせします。",
+      "speak": "I'll let you know by tomorrow.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-016",
+      "en": "Could you put that in writing?",
+      "jp": "それを書面にしてもらえますか？",
+      "speak": "Could you put that in writing?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-017",
+      "en": "What happens if I break the lease?",
+      "jp": "途中で解約したらどうなりますか？",
+      "speak": "What happens if I break the lease?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-018",
+      "en": "I need to give sixty days' notice.",
+      "jp": "60日前に通知する必要があります。",
+      "speak": "I need to give sixty days' notice.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-019",
+      "en": "Who do I call if something breaks?",
+      "jp": "何か壊れたら誰に電話すればいいですか？",
+      "speak": "Who do I call if something breaks?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-020",
+      "en": "The heater isn't working.",
+      "jp": "暖房が動きません。",
+      "speak": "The heater isn't working.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-021",
+      "en": "There's a leak under the sink.",
+      "jp": "流しの下から水漏れしています。",
+      "speak": "There's a leak under the sink.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-022",
+      "en": "The Wi-Fi keeps dropping.",
+      "jp": "Wi-Fiが何度も切れます。",
+      "speak": "The Wi-Fi keeps dropping.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-023",
+      "en": "Could someone come take a look?",
+      "jp": "誰か見に来てもらえますか？",
+      "speak": "Could someone come take a look?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-024",
+      "en": "When can he stop by?",
+      "jp": "いつ寄れますか？",
+      "speak": "When can he stop by?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-025",
+      "en": "I'll be home after six.",
+      "jp": "6時以降は家にいます。",
+      "speak": "I'll be home after six.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-026",
+      "en": "Do you have a spare key?",
+      "jp": "合鍵はありますか？",
+      "speak": "Do you have a spare key?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-027",
+      "en": "I got locked out.",
+      "jp": "鍵を閉め出されました。",
+      "speak": "I got locked out.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-028",
+      "en": "I'm moving next Saturday.",
+      "jp": "来週の土曜に引っ越します。",
+      "speak": "I'm moving next Saturday.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-029",
+      "en": "Could I get a quote?",
+      "jp": "見積もりをもらえますか？",
+      "speak": "Could I get a quote?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-030",
+      "en": "Can you work around my schedule?",
+      "jp": "私の予定に合わせてもらえますか？",
+      "speak": "Can you work around my schedule?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-031",
+      "en": "I'll pack the boxes myself.",
+      "jp": "箱詰めは自分でやります。",
+      "speak": "I'll pack the boxes myself.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-032",
+      "en": "Be careful, that's fragile.",
+      "jp": "気をつけて、それは壊れ物です。",
+      "speak": "Be careful, that's fragile.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-033",
+      "en": "Where do you want this?",
+      "jp": "これはどこに置きますか？",
+      "speak": "Where do you want this?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-034",
+      "en": "Let me give you a hand.",
+      "jp": "手伝いますよ。",
+      "speak": "Let me give you a hand.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-035",
+      "en": "I'm still unpacking.",
+      "jp": "まだ荷ほどきの途中です。",
+      "speak": "I'm still unpacking.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-036",
+      "en": "I'm Daniel from 3A.",
+      "jp": "3Aのダニエルです。",
+      "speak": "I'm Daniel from 3A.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-037",
+      "en": "Sorry for the noise.",
+      "jp": "うるさくてすみません。",
+      "speak": "Sorry for the noise.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-038",
+      "en": "Just knock if it's too loud.",
+      "jp": "うるさかったらノックしてください。",
+      "speak": "Just knock if it's too loud.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-039",
+      "en": "The walls are pretty thin.",
+      "jp": "壁がかなり薄いです。",
+      "speak": "The walls are pretty thin.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-040",
+      "en": "When does the garbage go out?",
+      "jp": "ごみはいつ出しますか？",
+      "speak": "When does the garbage go out?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-041",
+      "en": "Where do I put the recycling?",
+      "jp": "リサイクルはどこに出しますか？",
+      "speak": "Where do I put the recycling?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-042",
+      "en": "Could you keep it down, please?",
+      "jp": "もう少し静かにしてもらえますか？",
+      "speak": "Could you keep it down, please?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-043",
+      "en": "I'd hate to start off on the wrong foot.",
+      "jp": "最初からうまくいかないのは避けたいです。",
+      "speak": "I'd hate to start off on the wrong foot.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-044",
+      "en": "Feel free to stop by anytime.",
+      "jp": "いつでも気軽に寄ってください。",
+      "speak": "Feel free to stop by anytime.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-045",
+      "en": "When will I get my deposit back?",
+      "jp": "敷金はいつ戻りますか？",
+      "speak": "When will I get my deposit back?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-046",
+      "en": "That mark was already there.",
+      "jp": "その跡は元からありました。",
+      "speak": "That mark was already there.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-047",
+      "en": "It's just normal wear and tear.",
+      "jp": "ただの普通の消耗です。",
+      "speak": "It's just normal wear and tear.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-048",
+      "en": "I cleaned everything.",
+      "jp": "全部掃除しました。",
+      "speak": "I cleaned everything.",
+      "say": []
+    },
+    {
+      "id": "housing-0801-049",
+      "en": "Should we buy or keep renting?",
+      "jp": "買うべきか、借り続けるべきか？",
+      "speak": "Should we buy or keep renting?",
+      "say": []
+    },
+    {
+      "id": "housing-0801-050",
+      "en": "We need twenty percent down.",
+      "jp": "頭金が2割必要です。",
+      "speak": "We need twenty percent down.",
+      "say": []
+    }
+  ]
+}

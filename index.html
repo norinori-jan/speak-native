@@ -3528,7 +3528,8 @@ function loadPackagedConversation(){
   {id:'aiclass2',file:'aiclass2-2302.json'},
   {id:'aiclass3',file:'aiclass3-2303.json'},
   {id:'aiclass4',file:'aiclass4-2304.json'},
-  {id:'aiclass5',file:'aiclass5-2305.json'}
+  {id:'aiclass5',file:'aiclass5-2305.json'},
+  {id:'housing',file:'housing-0801.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

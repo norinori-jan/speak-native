@@ -1,0 +1,389 @@
+[
+  {
+    "id": "housing",
+    "ic": "🏠",
+    "n": "住まい・引っ越し",
+    "hint": "tenants, landlords, movers, and neighbors talk about finding a place, moving in, and living next door",
+    "level": 3,
+    "keywords": [
+      "apartment",
+      "moving",
+      "landlord"
+    ],
+    "d": [
+      {
+        "t": "内見で気になる点を聞く",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for showing me the place. It's bigger than it looked in the photos, but the living room is kind of dark.",
+            "jp": "案内ありがとうございます。写真より広いですが、リビングが少し暗いですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yeah, it faces north. You get nice light in the bedroom, though. Wanna see it?",
+            "jp": "ええ、北向きなんです。でも寝室は日当たりがいいですよ。見ますか？",
+            "note": "元の形: want to／聞こえ方: ワナ／使う場面:見るか誘う時"
+          },
+          {
+            "sp": 0,
+            "en": "Sure. Oh, that's much better. How much is the rent again?",
+            "jp": "ぜひ。ああ、ずっといいですね。家賃はいくらでしたっけ？"
+          },
+          {
+            "sp": 1,
+            "en": "It's fourteen hundred a month, and utilities are on top of that. Gotta be honest, the heating bill gets high in winter.",
+            "jp": "月1,400ドルで、光熱費は別です。正直に言うと、冬は暖房代が高くなります。",
+            "note": "元の形: got to／聞こえ方: ガラ／使う場面:言いにくいことを言う時"
+          },
+          {
+            "sp": 0,
+            "en": "Okay. What about the neighbors? Is it quiet at night?",
+            "jp": "なるほど。近所の人はどうですか？夜は静かですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Pretty quiet. The guy upstairs has a dog, but I've never heard it bark.",
+            "jp": "かなり静かです。上の階の人は犬を飼っていますが、吠えるのを聞いたことはありません。"
+          },
+          {
+            "sp": 0,
+            "en": "Good to know. Can I have a day or two to think it over before I decide?",
+            "jp": "それは安心です。決める前に1、2日考えてもいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Totally, but I've got another couple coming at six, so don't wait too long.",
+            "jp": "もちろん。ただ6時に別の夫婦が来るので、あまり待たないでくださいね。"
+          }
+        ]
+      },
+      {
+        "t": "契約書の気になるところ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Before I sign, can I ask about this clause? It says I lose my whole deposit if I leave early.",
+            "jp": "署名の前に、この条項について聞いてもいいですか？早く出ると敷金が全部なくなると書いてあります。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. It's pretty standard. You'd only lose it if you break the lease before the twelve months are up.",
+            "jp": "そうです。かなり標準的なものです。12か月が終わる前に解約した場合だけです。"
+          },
+          {
+            "sp": 0,
+            "en": "What if my company transfers me? That could happen next year.",
+            "jp": "会社に転勤させられたらどうなりますか？来年あり得るんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Hmm. Lemme talk to the owner. Some landlords will let you out if you give sixty days' notice.",
+            "jp": "うーん。オーナーに相談してみます。60日前に通知すれば出してくれる大家さんもいます。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を約束する時"
+          },
+          {
+            "sp": 0,
+            "en": "That'd be a huge relief. Could you add that in writing, please?",
+            "jp": "それなら大いに安心です。それを書面に加えてもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "I'll try. No promises, though. He's kind of old-school about paperwork.",
+            "jp": "やってみます。ただ約束はできません。書類にはちょっと昔気質の人なので。"
+          },
+          {
+            "sp": 0,
+            "en": "Fair enough. And what's the deal with the parking spot? Is it included in the rent?",
+            "jp": "もっともです。駐車場はどうなっていますか？家賃に含まれていますか？",
+            "note": "元の形: what is the deal／聞こえ方: ワッツダ ディール／使う場面:事情や扱いを聞く時"
+          },
+          {
+            "sp": 1,
+            "en": "Nope, that's another eighty a month. Honestly, most people just park on the street.",
+            "jp": "いいえ、それは月80ドル別です。正直、ほとんどの人は路上に停めています。"
+          }
+        ]
+      },
+      {
+        "t": "引っ越し業者との電話",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi, I'm moving next Saturday and I need a quote. It's a one-bedroom, so not a lot of stuff.",
+            "jp": "こんにちは、来週の土曜に引っ越すので見積もりが欲しいです。1ベッドルームなので荷物は多くありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Where are you moving from, and where to? Any stairs on either end?",
+            "jp": "分かりました。どこからどこへですか？どちらかに階段はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Third floor with no elevator, unfortunately. The new place is on the ground floor, thank goodness.",
+            "jp": "残念ながら3階でエレベーターなしです。新居は1階で、助かります。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, that adds a little. Do you have any big stuff, like a piano or a huge sofa?",
+            "jp": "分かりました、それで少し加算されます。ピアノや大きなソファのような大物はありますか？"
+          },
+          {
+            "sp": 0,
+            "en": "Just a sofa and a bed. I'm gonna pack the boxes myself to save some money.",
+            "jp": "ソファとベッドだけです。お金を節約するために、箱詰めは自分でやるつもりです。",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:予定を言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Smart. For that, you're looking at about four hundred, plus a fee if it runs over three hours.",
+            "jp": "賢いですね。それなら約400ドルで、3時間を超えたら追加料金がかかります。"
+          },
+          {
+            "sp": 0,
+            "en": "That's fine. Could you put the quote in an email so I can compare it with the other companies?",
+            "jp": "大丈夫です。他の会社と比べたいので、見積もりをメールで送ってもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Absolutely. I'll send it within the hour. Just remember, Saturdays book up fast.",
+            "jp": "もちろん。1時間以内に送ります。ただ土曜はすぐ埋まるので、覚えておいてください。"
+          }
+        ]
+      },
+      {
+        "t": "引っ越しの荷造りと手伝い",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dude, thanks for coming. I swear I own more junk than I thought.",
+            "jp": "来てくれてありがとう。持ち物が思っていたよりガラクタだらけだって痛感するよ。"
+          },
+          {
+            "sp": 1,
+            "en": "No worries. Where do you want me to start? The kitchen looks like a disaster.",
+            "jp": "気にしないで。どこから始めようか？キッチンがひどい状態に見えるけど。"
+          },
+          {
+            "sp": 0,
+            "en": "Yeah, start there. Wrap the glasses in newspaper, and don't stack the plates too high.",
+            "jp": "うん、そこから頼む。グラスは新聞紙で包んで、皿は高く積みすぎないで。"
+          },
+          {
+            "sp": 1,
+            "en": "Got it. What's in this box? It weighs a ton.",
+            "jp": "了解。この箱には何が入ってるの？ものすごく重いよ。",
+            "note": "元の形: ton／a ton／聞こえ方: タン／使う場面:とても重い時"
+          },
+          {
+            "sp": 0,
+            "en": "Books. I should've split them into two boxes, but I ran out of tape.",
+            "jp": "本だよ。2つの箱に分けるべきだったけど、テープが切れちゃって。"
+          },
+          {
+            "sp": 1,
+            "en": "Classic. Okay, I'll carry that one and you take the lamp.",
+            "jp": "あるあるだね。じゃあこれは僕が運ぶから、君はランプを持って。"
+          },
+          {
+            "sp": 0,
+            "en": "Deal. Hey, I'll buy you pizza after this, okay? It's the least I can do.",
+            "jp": "了解。ねえ、終わったらピザをおごるよ。せめてものお礼だから。"
+          },
+          {
+            "sp": 1,
+            "en": "Now you're talking. Make it a large, and add a drink.",
+            "jp": "それなら話が早い。大きいのにして、飲み物もつけてね。",
+            "note": "元の形: now you are talking／聞こえ方: ナウ ヨア トーキン／使う場面:いい提案に乗る時"
+          }
+        ]
+      },
+      {
+        "t": "新居の初日のトラブル",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi, this is Ellie in apartment 4B. I just moved in, and there's no hot water. Could someone take a look?",
+            "jp": "こんにちは、4Bのエリーです。引っ越してきたばかりなのですが、お湯が出ません。誰か見てもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sorry about that. Lemme pull up your file. Did you try letting it run for a few minutes?",
+            "jp": "申し訳ありません。ファイルを確認しますね。数分間流してみましたか？",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認を始める時"
+          },
+          {
+            "sp": 0,
+            "en": "I did, like ten minutes. It's still ice cold, and I really wanna take a shower tonight.",
+            "jp": "やりました、10分くらい。まだ氷のように冷たくて、今夜はどうしてもシャワーを浴びたいんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Understood. The boiler in that building acts up sometimes. I'll send our guy over this evening.",
+            "jp": "承知しました。その建物のボイラーはときどき調子が悪くなります。今夜、担当者を行かせます。"
+          },
+          {
+            "sp": 0,
+            "en": "What time, roughly? I have to step out at seven to pick up my dinner.",
+            "jp": "だいたい何時ですか？7時に夕食を取りに出かけなければならないんです。"
+          },
+          {
+            "sp": 1,
+            "en": "He'll be there between five and six. If you're not home, can he use the spare key from the office?",
+            "jp": "5時から6時の間に着きます。ご不在の場合、事務所の合鍵を使ってもいいですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Hmm, I'd rather be there. I'll just wait. Please tell him to knock loudly.",
+            "jp": "うーん、私が立ち会いたいです。待っています。強めにノックするよう伝えてください。",
+            "note": "元の形: I would rather／聞こえ方: アイドラザー／使う場面:希望をはっきり言う時"
+          },
+          {
+            "sp": 1,
+            "en": "Will do. And again, sorry. Welcome to the building, I guess.",
+            "jp": "そうします。重ねてすみません。ようこそ、といったところですね。"
+          }
+        ]
+      },
+      {
+        "t": "隣人へのあいさつと騒音の相談",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hi there! I'm Daniel, I just moved into 3A. I wanted to introduce myself and say sorry in advance for the boxes.",
+            "jp": "こんにちは！3Aに引っ越してきたダニエルです。自己紹介と、箱の音で先にお詫びをしたくて。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh, nice to meet you. I'm Carol. Welcome. Don't worry, we've all been there.",
+            "jp": "まあ、はじめまして。キャロルです。ようこそ。気にしないで、みんな経験してますから。"
+          },
+          {
+            "sp": 0,
+            "en": "Thanks. Hey, if my music's ever too loud, just knock on the door. Seriously, I won't be offended.",
+            "jp": "ありがとうございます。もし音楽がうるさかったら、ドアをノックしてください。本当に、気を悪くしませんから。"
+          },
+          {
+            "sp": 1,
+            "en": "That's really kind. Honestly, the walls are thin, so I can hear a lot, but it's mostly fine.",
+            "jp": "ご親切に。正直、壁が薄くてよく聞こえますが、たいてい問題ありません。"
+          },
+          {
+            "sp": 0,
+            "en": "Good to know. I'll keep it down after ten. Anything else I should know about the building?",
+            "jp": "分かりました。10時以降は静かにします。この建物について他に知っておくべきことはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Garbage goes out Tuesday and Friday mornings, and recycling is Thursday. Folks get kinda touchy about that.",
+            "jp": "ごみは火曜と金曜の朝、リサイクルは木曜です。みんなそこはちょっとうるさいんです。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 0,
+            "en": "Ha, noted. I'd hate to start off on the wrong foot with the neighbors.",
+            "jp": "ははは、覚えておきます。隣人と最初からうまくいかないのは避けたいですから。"
+          },
+          {
+            "sp": 1,
+            "en": "You'll be fine. Stop by anytime. I'm usually around on weekends.",
+            "jp": "大丈夫ですよ。いつでも寄ってください。週末はたいていいますから。"
+          }
+        ]
+      },
+      {
+        "t": "退去時の立ち会いと敷金",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Thanks for meeting me. I cleaned everything, so I hope there won't be any surprises with the deposit.",
+            "jp": "会ってくれてありがとう。全部掃除したので、敷金で予想外のことがないといいのですが。"
+          },
+          {
+            "sp": 1,
+            "en": "Let's see. The kitchen looks great. Hmm, what's this mark on the wall by the window?",
+            "jp": "見てみましょう。キッチンはきれいですね。うーん、窓のそばの壁のこの跡は何ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "Oh, that was already there when I moved in. I think there's a note about it on the checklist.",
+            "jp": "ああ、それは入居した時からありました。チェックリストにメモがあると思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Lemme look. You're right, it says 'small scuff, left wall.' Okay, that one's not on you.",
+            "jp": "見てみます。その通りです、『小さな擦れ、左の壁』とあります。分かりました、それはあなたの責任ではありません。",
+            "note": "元の形: let me／聞こえ方: レミ／使う場面:確認する時"
+          },
+          {
+            "sp": 0,
+            "en": "Great. What about the carpet? There's a stain near the door, but I tried scrubbing it.",
+            "jp": "よかった。カーペットはどうですか？ドアの近くにしみがありますが、こすってみました。"
+          },
+          {
+            "sp": 1,
+            "en": "That's normal wear and tear after two years. I wouldn't charge you for it.",
+            "jp": "それは2年住めば普通の消耗です。請求はしませんよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Wow, thank you. How long until I get the deposit back?",
+            "jp": "わあ、ありがとうございます。敷金はいつ戻ってきますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Usually about two weeks. If it takes longer, just shoot me an email and I'll chase it up.",
+            "jp": "たいてい2週間くらいです。もっとかかったらメールをください、催促します。",
+            "note": "元の形: shoot me／聞こえ方: シューミー／使う場面:連絡してね、と軽く言う時"
+          }
+        ]
+      },
+      {
+        "t": "家を買うか借り続けるか",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, so I've been running the numbers all night. If we buy, the mortgage would be about the same as our rent.",
+            "jp": "さて、一晩中計算していたんだけど。買うなら、住宅ローンは今の家賃とほぼ同じになる。"
+          },
+          {
+            "sp": 1,
+            "en": "That sounds too good to be true. What are we missing? Taxes, repairs, insurance?",
+            "jp": "話がうますぎるね。何を見落としてる？税金、修理、保険？"
+          },
+          {
+            "sp": 0,
+            "en": "Exactly. Add those up and it's maybe three hundred more a month. Plus we'd need twenty percent down.",
+            "jp": "その通り。それらを足すと月300ドルくらい多いかな。それに頭金が2割必要になる。"
+          },
+          {
+            "sp": 1,
+            "en": "Which we don't have yet. Honestly, I'm kinda nervous about locking ourselves in for thirty years.",
+            "jp": "まだないよね。正直、30年も縛られるのはちょっと不安だな。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 0,
+            "en": "I get that. But renting forever feels like throwing money away, you know?",
+            "jp": "分かる。でもずっと借りるのはお金を捨ててるみたいに感じない？"
+          },
+          {
+            "sp": 1,
+            "en": "Not necessarily. When the roof leaks, it's the landlord's problem, not ours.",
+            "jp": "必ずしもそうじゃないよ。屋根が雨漏りしたら、大家さんの問題で、私たちのじゃないから。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, fair. How about we wait one more year, save a bigger down payment, and decide then?",
+            "jp": "うん、そうだね。もう1年待って、頭金をもっと貯めて、その時に決めるのはどう？"
+          },
+          {
+            "sp": 1,
+            "en": "That works for me. Let's put it on the calendar so we don't forget.",
+            "jp": "私はそれでいいよ。忘れないようにカレンダーに入れておこう。"
+          }
+        ]
+      }
+    ]
+  }
+]
