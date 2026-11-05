@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "mystery-2501",
+  "ver": 1,
+  "situation": "mystery",
+  "sname": "探偵事務所ドラマ",
+  "icon": "🔎",
+  "level": 4,
+  "title": "探偵事務所ドラマの口語表現",
+  "items": [
+    {
+      "id": "mystery-2501-001",
+      "en": "She looks pretty shaken up.",
+      "jp": "彼女はかなり動揺しているようです。",
+      "speak": "She looks pretty shaken up.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-002",
+      "en": "Tell us what happened from the beginning.",
+      "jp": "最初から何があったか話してください。",
+      "speak": "Tell us what happened from the beginning.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-003",
+      "en": "I have no idea how it happened.",
+      "jp": "どうやって起きたのか全く見当がつきません。",
+      "speak": "I have no idea how it happened.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-004",
+      "en": "Was there a break-in?",
+      "jp": "侵入されましたか？",
+      "speak": "Was there a break-in?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-005",
+      "en": "The alarm never went off.",
+      "jp": "警報は鳴りませんでした。",
+      "speak": "The alarm never went off.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-006",
+      "en": "Who has a key besides you?",
+      "jp": "あなた以外に誰が鍵を持っていますか？",
+      "speak": "Who has a key besides you?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-007",
+      "en": "We'll take the case.",
+      "jp": "お引き受けします。",
+      "speak": "We'll take the case.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-008",
+      "en": "There's no sign that anyone touched it.",
+      "jp": "誰かが触れた形跡はありません。",
+      "speak": "There's no sign that anyone touched it.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-009",
+      "en": "Someone cleaned in a hurry and missed this.",
+      "jp": "誰かが急いで掃除して、ここを見逃しました。",
+      "speak": "Someone cleaned in a hurry and missed this.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-010",
+      "en": "Whoever did this knew the code.",
+      "jp": "犯人は暗証番号を知っていました。",
+      "speak": "Whoever did this knew the code.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-011",
+      "en": "Everyone's been looking at the wrong time.",
+      "jp": "みんな間違った時間を見ていました。",
+      "speak": "Everyone's been looking at the wrong time.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-012",
+      "en": "Thanks for seeing us.",
+      "jp": "お会いくださってありがとうございます。",
+      "speak": "Thanks for seeing us.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-013",
+      "en": "Did you notice anything unusual?",
+      "jp": "何か普通でないことに気づきましたか？",
+      "speak": "Did you notice anything unusual?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-014",
+      "en": "Now that you mention it, there was a delivery man.",
+      "jp": "そう言われれば、配達員がいました。",
+      "speak": "Now that you mention it, there was a delivery man.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-015",
+      "en": "I didn't think twice about it.",
+      "jp": "深く考えませんでした。",
+      "speak": "I didn't think twice about it.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-016",
+      "en": "Did you see his face?",
+      "jp": "顔は見えましたか？",
+      "speak": "Did you see his face?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-017",
+      "en": "That doesn't match what he told me.",
+      "jp": "それは彼が私に言ったことと合いません。",
+      "speak": "That doesn't match what he told me.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-018",
+      "en": "One of them is mistaken, or he's lying.",
+      "jp": "どちらかが間違っているか、嘘をついています。",
+      "speak": "One of them is mistaken, or he's lying.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-019",
+      "en": "Let's not accuse him yet.",
+      "jp": "まだ責めるのはやめましょう。",
+      "speak": "Let's not accuse him yet.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-020",
+      "en": "Obvious answers are the most dangerous.",
+      "jp": "明らかな答えほど危険です。",
+      "speak": "Obvious answers are the most dangerous.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-021",
+      "en": "Let's check the cameras.",
+      "jp": "カメラを調べましょう。",
+      "speak": "Let's check the cameras.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-022",
+      "en": "It's grainy, but you can see the alley.",
+      "jp": "荒いですが、路地が映っています。",
+      "speak": "It's grainy, but you can see the alley.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-023",
+      "en": "There's no company logo at all.",
+      "jp": "会社のロゴがまったくありません。",
+      "speak": "There's no company logo at all.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-024",
+      "en": "He was pretending to be a courier.",
+      "jp": "配達員のふりをしていました。",
+      "speak": "He was pretending to be a courier.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-025",
+      "en": "Rewind it a bit.",
+      "jp": "少し巻き戻してください。",
+      "speak": "Rewind it a bit.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-026",
+      "en": "That's enough to narrow it down.",
+      "jp": "絞り込むには十分です。",
+      "speak": "That's enough to narrow it down.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-027",
+      "en": "Do you want to change your story?",
+      "jp": "話を変えたいですか？",
+      "speak": "Do you want to change your story?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-028",
+      "en": "I swear I left right away.",
+      "jp": "誓ってすぐ出ました。",
+      "speak": "I swear I left right away.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-029",
+      "en": "Nobody said you did.",
+      "jp": "誰もあなたがやったとは言っていません。",
+      "speak": "Nobody said you did.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-030",
+      "en": "Who else knew about that?",
+      "jp": "他に誰がそれを知っていましたか？",
+      "speak": "Who else knew about that?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-031",
+      "en": "I can't sleep.",
+      "jp": "眠れません。",
+      "speak": "I can't sleep.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-032",
+      "en": "It doesn't fit anywhere.",
+      "jp": "どこにも当てはまりません。",
+      "speak": "It doesn't fit anywhere.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-033",
+      "en": "But wait, what if it wasn't the real one?",
+      "jp": "でも待って、本物ではなかったら？",
+      "speak": "But wait, what if it wasn't the real one?",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-034",
+      "en": "Someone had to take it down and put it back up.",
+      "jp": "誰かが外して、また掛けなければなりませんでした。",
+      "speak": "Someone had to take it down and put it back up.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-035",
+      "en": "Check the records for who worked on it.",
+      "jp": "誰が関わったか記録を調べてください。",
+      "speak": "Check the records for who worked on it.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-036",
+      "en": "I'll find his name first thing in the morning.",
+      "jp": "朝一番に彼の名前を調べます。",
+      "speak": "I'll find his name first thing in the morning.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-037",
+      "en": "We've solved it.",
+      "jp": "解決しました。",
+      "speak": "We've solved it.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-038",
+      "en": "I'm afraid you won't like the answer.",
+      "jp": "お気に召さない答えかもしれません。",
+      "speak": "I'm afraid you won't like the answer.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-039",
+      "en": "I can't stand not knowing any longer.",
+      "jp": "もう知らないままではいられません。",
+      "speak": "I can't stand not knowing any longer.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-040",
+      "en": "It was a copy.",
+      "jp": "それは複製でした。",
+      "speak": "It was a copy.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-041",
+      "en": "He was blackmailing him over a debt.",
+      "jp": "借金をネタに彼を脅していました。",
+      "speak": "He was blackmailing him over a debt.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-042",
+      "en": "He wanted everyone to think it was stolen last night.",
+      "jp": "皆に昨夜盗まれたと思わせたかったのです。",
+      "speak": "He wanted everyone to think it was stolen last night.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-043",
+      "en": "The police arrested him this afternoon.",
+      "jp": "警察が今日の午後に彼を逮捕しました。",
+      "speak": "The police arrested him this afternoon.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-044",
+      "en": "He's cooperating with the police.",
+      "jp": "彼は警察に協力しています。",
+      "speak": "He's cooperating with the police.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-045",
+      "en": "I don't know what I would've done without you.",
+      "jp": "あなたたちがいなければどうしていたか分かりません。",
+      "speak": "I don't know what I would've done without you.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-046",
+      "en": "Case closed.",
+      "jp": "事件解決です。",
+      "speak": "Case closed.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-047",
+      "en": "That's the strange part.",
+      "jp": "そこが不思議なところです。",
+      "speak": "That's the strange part.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-048",
+      "en": "It seems pretty obvious to me.",
+      "jp": "私にはかなり明らかに思えます。",
+      "speak": "It seems pretty obvious to me.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-049",
+      "en": "Fair enough.",
+      "jp": "もっともです。",
+      "speak": "Fair enough.",
+      "say": []
+    },
+    {
+      "id": "mystery-2501-050",
+      "en": "Something doesn't add up.",
+      "jp": "何かつじつまが合いません。",
+      "speak": "Something doesn't add up.",
+      "say": []
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "gittrouble-2801",
+  "ver": 1,
+  "situation": "gittrouble",
+  "sname": "Gitでつまずいた時",
+  "icon": "🌿",
+  "level": 3,
+  "title": "Gitでつまずいた時の口語表現",
+  "items": [
+    {
+      "id": "gittrouble-2801-001",
+      "en": "My push was rejected.",
+      "jp": "pushが拒否されました。",
+      "speak": "My push was rejected.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-002",
+      "en": "Read the message first.",
+      "jp": "まずメッセージを読みましょう。",
+      "speak": "Read the message first.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-003",
+      "en": "It's a server error, not my fault.",
+      "jp": "サーバーのエラーで、私のせいではありません。",
+      "speak": "It's a server error, not my fault.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-004",
+      "en": "Your commit is safe on your computer.",
+      "jp": "コミットはあなたのコンピュータで無事です。",
+      "speak": "Your commit is safe on your computer.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-005",
+      "en": "Wait a bit and try again.",
+      "jp": "少し待って、もう一度試しましょう。",
+      "speak": "Wait a bit and try again.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-006",
+      "en": "My branch is behind.",
+      "jp": "ブランチが遅れています。",
+      "speak": "My branch is behind.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-007",
+      "en": "Someone else pushed first.",
+      "jp": "誰かが先にpushしました。",
+      "speak": "Someone else pushed first.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-008",
+      "en": "Pull their changes before you push yours.",
+      "jp": "あなたのをpushする前に、相手の変更をpullしましょう。",
+      "speak": "Pull their changes before you push yours.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-009",
+      "en": "It protects the shared history.",
+      "jp": "共有の履歴を守ります。",
+      "speak": "It protects the shared history.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-010",
+      "en": "Pull brings other people's commits down.",
+      "jp": "pullは他の人のコミットを持ってきます。",
+      "speak": "Pull brings other people's commits down.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-011",
+      "en": "Rebase keeps the history in a straight line.",
+      "jp": "rebaseは履歴を一直線に保ちます。",
+      "speak": "Rebase keeps the history in a straight line.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-012",
+      "en": "Use autostash for unfinished work.",
+      "jp": "未完成の作業にはautostashを使いましょう。",
+      "speak": "Use autostash for unfinished work.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-013",
+      "en": "It puts your work aside and brings it back.",
+      "jp": "作業を脇に置いて、あとで戻します。",
+      "speak": "It puts your work aside and brings it back.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-014",
+      "en": "There's a conflict in my file.",
+      "jp": "ファイルに衝突があります。",
+      "speak": "There's a conflict in my file.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-015",
+      "en": "Two people changed the same lines.",
+      "jp": "2人が同じ行を変更しました。",
+      "speak": "Two people changed the same lines.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-016",
+      "en": "Git doesn't know which version to keep.",
+      "jp": "gitはどちらの版を残すか分かりません。",
+      "speak": "Git doesn't know which version to keep.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-017",
+      "en": "Decide what the final text should be.",
+      "jp": "最終的な文章をどうするか決めましょう。",
+      "speak": "Decide what the final text should be.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-018",
+      "en": "Keep one, or combine both.",
+      "jp": "片方を残すか、両方を組み合わせましょう。",
+      "speak": "Keep one, or combine both.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-019",
+      "en": "Back up the file first.",
+      "jp": "先にファイルのバックアップを取りましょう。",
+      "speak": "Back up the file first.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-020",
+      "en": "Nothing is ever really lost.",
+      "jp": "本当に失われるものはありません。",
+      "speak": "Nothing is ever really lost.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-021",
+      "en": "I deleted a file by mistake.",
+      "jp": "間違ってファイルを消しました。",
+      "speak": "I deleted a file by mistake.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-022",
+      "en": "Every earlier commit still has the file.",
+      "jp": "以前のコミットにはすべてそのファイルがあります。",
+      "speak": "Every earlier commit still has the file.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-023",
+      "en": "Find the last commit where it existed.",
+      "jp": "そのファイルがあった最後のコミットを探しましょう。",
+      "speak": "Find the last commit where it existed.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-024",
+      "en": "Restore it from there.",
+      "jp": "そこから復元しましょう。",
+      "speak": "Restore it from there.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-025",
+      "en": "Be careful with the powerful commands.",
+      "jp": "強力なコマンドには注意しましょう。",
+      "speak": "Be careful with the powerful commands.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-026",
+      "en": "Some of them throw away work for good.",
+      "jp": "完全に作業を捨てるものもあります。",
+      "speak": "Some of them throw away work for good.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-027",
+      "en": "Anything with hard or force deserves a pause.",
+      "jp": "hardやforceが付くものは、立ち止まりましょう。",
+      "speak": "Anything with hard or force deserves a pause.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-028",
+      "en": "Can I get this back?",
+      "jp": "これは元に戻せますか？",
+      "speak": "Can I get this back?",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-029",
+      "en": "Update and fix aren't helpful messages.",
+      "jp": "updateやfixは役に立つメッセージではありません。",
+      "speak": "Update and fix aren't helpful messages.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-030",
+      "en": "It matters in three months.",
+      "jp": "3か月後に重要になります。",
+      "speak": "It matters in three months.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-031",
+      "en": "Say what changed and why.",
+      "jp": "何を、なぜ変えたかを書きましょう。",
+      "speak": "Say what changed and why.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-032",
+      "en": "You should understand it without opening the code.",
+      "jp": "コードを開かなくても分かるべきです。",
+      "speak": "You should understand it without opening the code.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-033",
+      "en": "Pick one language and stay consistent.",
+      "jp": "言語をひとつ選んで、一貫させましょう。",
+      "speak": "Pick one language and stay consistent.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-034",
+      "en": "One idea per commit.",
+      "jp": "1コミット1つの考え。",
+      "speak": "One idea per commit.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-035",
+      "en": "Split it into separate commits.",
+      "jp": "別々のコミットに分けましょう。",
+      "speak": "Split it into separate commits.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-036",
+      "en": "Mistakes are easy to undo.",
+      "jp": "ミスは簡単に取り消せます。",
+      "speak": "Mistakes are easy to undo.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-037",
+      "en": "I almost committed my password.",
+      "jp": "もう少しでパスワードをコミットするところでした。",
+      "speak": "I almost committed my password.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-038",
+      "en": "Tell git what to ignore.",
+      "jp": "gitに無視させるものを伝えましょう。",
+      "speak": "Tell git what to ignore.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-039",
+      "en": "Check git status before you commit.",
+      "jp": "コミットの前にgit statusを確認しましょう。",
+      "speak": "Check git status before you commit.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-040",
+      "en": "Treat it as leaked.",
+      "jp": "漏れたものと考えましょう。",
+      "speak": "Treat it as leaked.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-041",
+      "en": "Cancel the key first.",
+      "jp": "まずキーを無効にしましょう。",
+      "speak": "Cancel the key first.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-042",
+      "en": "Deleting the file isn't enough.",
+      "jp": "ファイルを消すだけでは足りません。",
+      "speak": "Deleting the file isn't enough.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-043",
+      "en": "The old commits still contain it.",
+      "jp": "古いコミットにまだ残っています。",
+      "speak": "The old commits still contain it.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-044",
+      "en": "Make the old secret useless.",
+      "jp": "古い秘密を使えなくしましょう。",
+      "speak": "Make the old secret useless.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-045",
+      "en": "Keep it private by default.",
+      "jp": "標準で非公開にしましょう。",
+      "speak": "Keep it private by default.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-046",
+      "en": "You can't take back what people already saw.",
+      "jp": "すでに人に見られたものは取り戻せません。",
+      "speak": "You can't take back what people already saw.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-047",
+      "en": "History is a safety net.",
+      "jp": "履歴は安全網です。",
+      "speak": "History is a safety net.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-048",
+      "en": "It's protecting everyone's work.",
+      "jp": "みんなの作業を守っています。",
+      "speak": "It's protecting everyone's work.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-049",
+      "en": "It's safe in almost every case.",
+      "jp": "ほとんどの場合で安全です。",
+      "speak": "It's safe in almost every case.",
+      "say": []
+    },
+    {
+      "id": "gittrouble-2801-050",
+      "en": "It avoids the annoying error.",
+      "jp": "面倒なエラーを避けられます。",
+      "speak": "It avoids the annoying error.",
+      "say": []
+    }
+  ]
+}

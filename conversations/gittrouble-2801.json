@@ -1,0 +1,286 @@
+[
+  {
+    "id": "gittrouble",
+    "ic": "🌿",
+    "n": "Gitでつまずいた時",
+    "hint": "Mia and Ken fix common git troubles: rejected pushes, pull and rebase, conflicts, restoring deleted files, commit messages, and keeping secrets out",
+    "level": 3,
+    "keywords": [
+      "git",
+      "conflict",
+      "commit"
+    ],
+    "d": [
+      {
+        "t": "pushが拒否された",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my push just failed with a message saying 'rejected.' Did I break something?",
+            "jp": "ケン、pushが『rejected』というメッセージで失敗しました。何か壊しましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "Probably not. Read the message first. It usually says whether the problem is on your side or the server's side.",
+            "jp": "たぶん違います。まずメッセージを読んでください。問題があなた側かサーバー側か、たいてい書いてあります。"
+          },
+          {
+            "sp": 0,
+            "en": "This one says 'Internal Server Error.' That sounds like it's not my fault.",
+            "jp": "これは『Internal Server Error』と書いてあります。私のせいではなさそうです。"
+          },
+          {
+            "sp": 1,
+            "en": "Right, that's GitHub having a bad moment. Your commit is safe on your computer. Just wait a bit and try again.",
+            "jp": "そうです、GitHubの調子が悪い時です。コミットはあなたのコンピュータで無事です。少し待って、もう一度試してください。"
+          },
+          {
+            "sp": 0,
+            "en": "What if the message says my branch is behind?",
+            "jp": "メッセージが、ブランチが遅れていると言っていたら？"
+          },
+          {
+            "sp": 1,
+            "en": "That means someone else pushed first. You need to pull their changes before you can push yours.",
+            "jp": "誰かが先にpushしたということです。あなたのをpushする前に、その変更をpullする必要があります。"
+          },
+          {
+            "sp": 0,
+            "en": "So the server won't accept my version until I've caught up.",
+            "jp": "じゃあ、追いつくまでサーバーは私の版を受け付けないんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. It's protecting the shared history so nobody's work is overwritten by accident.",
+            "jp": "その通り。共有の履歴を守って、誰の作業も誤って上書きされないようにしているんです。"
+          }
+        ]
+      },
+      {
+        "t": "pullしてから押す",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm not sure what pull actually does. Is it just the opposite of push?",
+            "jp": "ケン、pullが実際に何をするのか分かりません。pushの反対というだけですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Pretty much. Push sends your commits up, and pull brings other people's commits down and combines them with yours.",
+            "jp": "だいたいそうです。pushはあなたのコミットを上に送り、pullは他の人のコミットを持ってきて、あなたのと合わせます。"
+          },
+          {
+            "sp": 0,
+            "en": "And what is this 'rebase' I keep seeing?",
+            "jp": "それと、よく見る『rebase』は何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It's a tidy way to combine. It puts your new commits on top of what's already on the server, so the history stays in a straight line.",
+            "jp": "整った合わせ方です。あなたの新しいコミットを、サーバーにすでにあるものの上に載せて、履歴を一直線に保ちます。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I have changes I haven't committed yet?",
+            "jp": "まだコミットしていない変更がある場合は？"
+          },
+          {
+            "sp": 1,
+            "en": "Use autostash. It puts your unfinished work aside, pulls, and then puts your work back on top.",
+            "jp": "autostashを使います。未完成の作業を脇に置いて、pullして、その上に作業を戻します。"
+          },
+          {
+            "sp": 0,
+            "en": "That's why you always use that option in our commands.",
+            "jp": "だから私たちのコマンドでは、いつもそのオプションを使うんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes. It avoids the annoying error about uncommitted changes, and it's safe in almost every case.",
+            "jp": "はい。未コミットの変更についての面倒なエラーを避けられて、ほとんどの場合で安全です。"
+          }
+        ]
+      },
+      {
+        "t": "衝突が起きた",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, git says there's a conflict in my file, and now the file is full of strange symbols. Help!",
+            "jp": "ケン、gitがファイルに衝突があると言っていて、ファイルが変な記号だらけになりました。助けて！"
+          },
+          {
+            "sp": 1,
+            "en": "Stay calm. A conflict just means two people changed the same lines, and git doesn't know which version to keep.",
+            "jp": "落ち着いて。衝突は、2人が同じ行を変更して、gitがどちらを残すか分からないというだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "And those symbols?",
+            "jp": "それで、その記号は？"
+          },
+          {
+            "sp": 1,
+            "en": "They mark the two versions: yours on one side, theirs on the other. Your job is to decide what the final text should be.",
+            "jp": "2つの版の目印です。片側があなたの版、反対側が相手の版。最終的な文章をどうするか決めるのがあなたの仕事です。"
+          },
+          {
+            "sp": 0,
+            "en": "So I delete the symbols and keep the right lines?",
+            "jp": "じゃあ記号を消して、正しい行を残すんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right, keep one, or combine both. Then save, add the file, and finish with a commit.",
+            "jp": "そうです、片方を残すか、両方を組み合わせます。それから保存して、ファイルをaddして、コミットで終えます。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I'm scared I'll mess it up?",
+            "jp": "うまくできるか怖かったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Make a backup copy of the file first. Then you can experiment safely, and nothing is ever really lost.",
+            "jp": "先にファイルのバックアップを取ります。そうすれば安全に試せて、本当に失われるものはありません。"
+          }
+        ]
+      },
+      {
+        "t": "間違えて消した、戻したい",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I deleted a file by mistake, and I already committed. Is it gone forever?",
+            "jp": "ケン、間違ってファイルを消して、もうコミットしてしまいました。永遠になくなったんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "No, and that's the beauty of git. Every earlier commit still has the file inside it.",
+            "jp": "いいえ、それがgitの良いところです。以前のコミットには、すべてそのファイルが入っています。"
+          },
+          {
+            "sp": 0,
+            "en": "So how do I get it back?",
+            "jp": "じゃあ、どうやって取り戻しますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Look at the history, find the last commit where the file existed, and restore it from there.",
+            "jp": "履歴を見て、そのファイルがあった最後のコミットを見つけて、そこから復元します。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there a command that just undoes my last commit?",
+            "jp": "直前のコミットを取り消すだけのコマンドはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "There is, but be careful with the powerful ones. Some of them throw away work for good.",
+            "jp": "あります、でも強力なものには注意してください。いくつかは、作業を完全に捨ててしまいます。"
+          },
+          {
+            "sp": 0,
+            "en": "How can I tell which commands are risky?",
+            "jp": "どのコマンドが危険か、どう分かりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Anything with the word 'hard' or 'force' deserves a pause. Ask yourself, 'can I get this back?' before you press enter.",
+            "jp": "『hard』や『force』という言葉が付くものは、立ち止まる価値があります。Enterを押す前に『これは元に戻せるか』と自問してください。"
+          }
+        ]
+      },
+      {
+        "t": "コミットメッセージを書く",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my commit messages say things like 'update' and 'fix.' Does it really matter?",
+            "jp": "ケン、私のコミットメッセージは『update』とか『fix』ばかりです。本当に重要ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "It matters a lot in three months, when you're searching for the change that broke something.",
+            "jp": "3か月後、何かを壊した変更を探している時に、とても重要になります。"
+          },
+          {
+            "sp": 0,
+            "en": "So what makes a good message?",
+            "jp": "じゃあ、良いメッセージとは？"
+          },
+          {
+            "sp": 1,
+            "en": "One short line that says what changed and why, like 'Fix button size on small phones.' Someone should understand it without opening the code.",
+            "jp": "何を、なぜ変えたかを書いた短い1行です。たとえば『小さなスマホでのボタンの大きさを修正』。コードを開かなくても分かるべきです。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I write in English or Japanese?",
+            "jp": "英語と日本語、どちらで書くべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Either is fine. Pick one for each project and stay consistent. Consistency matters more than the language.",
+            "jp": "どちらでも構いません。プロジェクトごとにひとつ選んで、一貫させてください。言語より一貫性が大事です。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I changed many things at once?",
+            "jp": "たくさんのことを一度に変えたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Then split it into separate commits. One idea per commit keeps the history readable and makes mistakes easy to undo.",
+            "jp": "それなら別々のコミットに分けます。1コミット1つの考えにすると、履歴が読みやすく、ミスも簡単に取り消せます。"
+          }
+        ]
+      },
+      {
+        "t": "リポジトリを安全に保つ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I almost committed a file with my password in it. How do I stop that from happening?",
+            "jp": "ケン、パスワードが入ったファイルを、もう少しでコミットするところでした。それを防ぐにはどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Use a file that tells git what to ignore, and always check git status before you commit.",
+            "jp": "gitに無視させるものを書いたファイルを使って、コミットの前にいつもgit statusを確認します。"
+          },
+          {
+            "sp": 0,
+            "en": "And if I already pushed a secret?",
+            "jp": "もう秘密をpushしてしまっていたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Treat it as leaked. Cancel the key or change the password first, and then clean up the history. Deleting the file isn't enough.",
+            "jp": "漏れたものと考えてください。まずキーを無効にするかパスワードを変えて、それから履歴を掃除します。ファイルを消すだけでは足りません。"
+          },
+          {
+            "sp": 0,
+            "en": "Because the old commits still contain it.",
+            "jp": "古いコミットにまだ残っているからですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Anyone who looks at the history can find it, so the only safe fix is to make the old secret useless.",
+            "jp": "その通り。履歴を見れば誰でも見つけられるので、安全な唯一の直し方は、古い秘密を使えなくすることです。"
+          },
+          {
+            "sp": 0,
+            "en": "Should the repository be public or private?",
+            "jp": "リポジトリは公開と非公開、どちらにすべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Private by default for anything personal. You can always make it public later, but you can't take back what people already saw.",
+            "jp": "個人的なものは、標準で非公開に。あとから公開にはできますが、すでに人に見られたものは取り戻せません。"
+          }
+        ]
+      }
+    ]
+  }
+]

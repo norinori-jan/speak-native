@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "scriptlearn-2601",
+  "ver": 1,
+  "situation": "scriptlearn",
+  "sname": "スクリプトを自分で作る",
+  "icon": "💻",
+  "level": 3,
+  "title": "スクリプトを自分で作る口語表現",
+  "items": [
+    {
+      "id": "scriptlearn-2601-001",
+      "en": "I'd like to write my own scripts.",
+      "jp": "自分でスクリプトを書けるようになりたいです。",
+      "speak": "I'd like to write my own scripts.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-002",
+      "en": "Where should I start?",
+      "jp": "どこから始めればいいですか？",
+      "speak": "Where should I start?",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-003",
+      "en": "Start without any code.",
+      "jp": "コードなしで始めましょう。",
+      "speak": "Start without any code.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-004",
+      "en": "Write down what you do by hand.",
+      "jp": "手作業でしていることを書き出しましょう。",
+      "speak": "Write down what you do by hand.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-005",
+      "en": "Do it one step at a time.",
+      "jp": "一歩ずつやりましょう。",
+      "speak": "Do it one step at a time.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-006",
+      "en": "That's just my normal routine.",
+      "jp": "それはただの普段の流れです。",
+      "speak": "That's just my normal routine.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-007",
+      "en": "A script is your routine, written down.",
+      "jp": "スクリプトは、普段の流れを書き下ろしたものです。",
+      "speak": "A script is your routine, written down.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-008",
+      "en": "If I can't describe the steps, I can't write the script.",
+      "jp": "手順を説明できなければ、スクリプトも書けません。",
+      "speak": "If I can't describe the steps, I can't write the script.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-009",
+      "en": "Most of the work is thinking clearly.",
+      "jp": "仕事の大部分は、はっきり考えることです。",
+      "speak": "Most of the work is thinking clearly.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-010",
+      "en": "Turn each step into a single command.",
+      "jp": "各手順をひとつのコマンドにしましょう。",
+      "speak": "Turn each step into a single command.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-011",
+      "en": "Don't try to be clever at the beginning.",
+      "jp": "最初から賢くしようとしないでください。",
+      "speak": "Don't try to be clever at the beginning.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-012",
+      "en": "Say what to copy and where to copy it to.",
+      "jp": "何をどこにコピーするかを書きましょう。",
+      "speak": "Say what to copy and where to copy it to.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-013",
+      "en": "A few simple commands are plenty.",
+      "jp": "いくつかの単純なコマンドで十分です。",
+      "speak": "A few simple commands are plenty.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-014",
+      "en": "It's a shorter list than I expected.",
+      "jp": "思っていたより短い一覧です。",
+      "speak": "It's a shorter list than I expected.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-015",
+      "en": "Most scripts are built from simple pieces.",
+      "jp": "ほとんどのスクリプトは単純な部品でできています。",
+      "speak": "Most scripts are built from simple pieces.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-016",
+      "en": "The script kept going even after it failed.",
+      "jp": "失敗した後もスクリプトは続いてしまいました。",
+      "speak": "The script kept going even after it failed.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-017",
+      "en": "A script has to stop when something goes wrong.",
+      "jp": "何かおかしい時、スクリプトは止まらなければなりません。",
+      "speak": "A script has to stop when something goes wrong.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-018",
+      "en": "Check whether each step worked.",
+      "jp": "各手順がうまくいったか確認しましょう。",
+      "speak": "Check whether each step worked.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-019",
+      "en": "Throw an error with a clear message.",
+      "jp": "はっきりしたメッセージ付きでエラーを投げましょう。",
+      "speak": "Throw an error with a clear message.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-020",
+      "en": "Say what failed in plain words.",
+      "jp": "何が失敗したかを普通の言葉で書きましょう。",
+      "speak": "Say what failed in plain words.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-021",
+      "en": "Future you will be grateful.",
+      "jp": "未来のあなたが感謝します。",
+      "speak": "Future you will be grateful.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-022",
+      "en": "A good script fails loudly, not quietly.",
+      "jp": "良いスクリプトは、静かにではなく大きな声で失敗します。",
+      "speak": "A good script fails loudly, not quietly.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-023",
+      "en": "A quiet failure hides until it's too late.",
+      "jp": "静かな失敗は、手遅れになるまで隠れています。",
+      "speak": "A quiet failure hides until it's too late.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-024",
+      "en": "I'm scared to run it.",
+      "jp": "実行するのが怖いです。",
+      "speak": "I'm scared to run it.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-025",
+      "en": "Never run everything at once the first time.",
+      "jp": "初回に全部を一度に実行してはいけません。",
+      "speak": "Never run everything at once the first time.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-026",
+      "en": "Delete the push line and run the safe steps.",
+      "jp": "pushの行を消して、安全な手順だけ実行しましょう。",
+      "speak": "Delete the push line and run the safe steps.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-027",
+      "en": "Add one new line and run it again.",
+      "jp": "新しい行を1つ足して、もう一度実行しましょう。",
+      "speak": "Add one new line and run it again.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-028",
+      "en": "Add a step, test a step, and repeat.",
+      "jp": "手順を足して、テストして、繰り返しましょう。",
+      "speak": "Add a step, test a step, and repeat.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-029",
+      "en": "Small steps help you find the problem fast.",
+      "jp": "小さな歩幅なら問題をすぐ見つけられます。",
+      "speak": "Small steps help you find the problem fast.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-030",
+      "en": "You know the last thing you changed.",
+      "jp": "最後に変えたものが分かります。",
+      "speak": "You know the last thing you changed.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-031",
+      "en": "Keep a backup, just in case.",
+      "jp": "念のため、バックアップを取っておきましょう。",
+      "speak": "Keep a backup, just in case.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-032",
+      "en": "A backup turns a panic into a minor annoyance.",
+      "jp": "バックアップは、パニックを小さな面倒に変えます。",
+      "speak": "A backup turns a panic into a minor annoyance.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-033",
+      "en": "What's the smallest script I can try?",
+      "jp": "試せる一番小さなスクリプトは何ですか？",
+      "speak": "What's the smallest script I can try?",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-034",
+      "en": "It doesn't break anything.",
+      "jp": "何も壊しません。",
+      "speak": "It doesn't break anything.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-035",
+      "en": "It only looks. It doesn't change anything.",
+      "jp": "見るだけで、何も変更しません。",
+      "speak": "It only looks. It doesn't change anything.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-036",
+      "en": "It prints the file names and sizes.",
+      "jp": "ファイル名とサイズを表示します。",
+      "speak": "It prints the file names and sizes.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-037",
+      "en": "List every file that starts with this prefix.",
+      "jp": "この接頭辞で始まるファイルをすべて一覧表示します。",
+      "speak": "List every file that starts with this prefix.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-038",
+      "en": "Save the path to your Downloads folder.",
+      "jp": "Downloadsフォルダの場所を保存しましょう。",
+      "speak": "Save the path to your Downloads folder.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-039",
+      "en": "Then add a copy line and run it.",
+      "jp": "次にコピーの行を足して実行しましょう。",
+      "speak": "Then add a copy line and run it.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-040",
+      "en": "Check what changed with git status.",
+      "jp": "gitのstatusで何が変わったか確認しましょう。",
+      "speak": "Check what changed with git status.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-041",
+      "en": "One line at a time.",
+      "jp": "一行ずつ。",
+      "speak": "One line at a time.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-042",
+      "en": "That's the whole method.",
+      "jp": "それが方法のすべてです。",
+      "speak": "That's the whole method.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-043",
+      "en": "Let's rewrite an old script together.",
+      "jp": "古いスクリプトを一緒に書き直しましょう。",
+      "speak": "Let's rewrite an old script together.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-044",
+      "en": "Line by line.",
+      "jp": "一行ずつ。",
+      "speak": "Line by line.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-045",
+      "en": "I'm ready to practice.",
+      "jp": "練習する準備ができました。",
+      "speak": "I'm ready to practice.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-046",
+      "en": "It's completely safe.",
+      "jp": "完全に安全です。",
+      "speak": "It's completely safe.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-047",
+      "en": "Right, that's the point.",
+      "jp": "そうです、それが大事な点です。",
+      "speak": "Right, that's the point.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-048",
+      "en": "It's faster than cleaning up a disaster.",
+      "jp": "大惨事の後片付けより速いです。",
+      "speak": "It's faster than cleaning up a disaster.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-049",
+      "en": "Typing comes second.",
+      "jp": "タイピングは二番目です。",
+      "speak": "Typing comes second.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn-2601-050",
+      "en": "You'll repeat the same few moves all the time.",
+      "jp": "同じ数個の動きを何度も繰り返します。",
+      "speak": "You'll repeat the same few moves all the time.",
+      "say": []
+    }
+  ]
+}

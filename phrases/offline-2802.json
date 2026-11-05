@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "offline-2802",
+  "ver": 1,
+  "situation": "offline",
+  "sname": "オフラインで動くアプリ",
+  "icon": "📶",
+  "level": 3,
+  "title": "オフラインで動くアプリの口語表現",
+  "items": [
+    {
+      "id": "offline-2802-001",
+      "en": "It still worked with no signal.",
+      "jp": "電波がなくても動きました。",
+      "speak": "It still worked with no signal.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-002",
+      "en": "A service worker sits between the app and the internet.",
+      "jp": "サービスワーカーはアプリとインターネットの間にいます。",
+      "speak": "A service worker sits between the app and the internet.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-003",
+      "en": "It can answer from a saved copy.",
+      "jp": "保存したコピーから答えられます。",
+      "speak": "It can answer from a saved copy.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-004",
+      "en": "The browser keeps the saved copies in the cache.",
+      "jp": "ブラウザがキャッシュに保存したコピーを持っています。",
+      "speak": "The browser keeps the saved copies in the cache.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-005",
+      "en": "You decide which files go in it.",
+      "jp": "どのファイルを入れるかはあなたが決めます。",
+      "speak": "You decide which files go in it.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-006",
+      "en": "It opens fast and works anywhere.",
+      "jp": "速く開いて、どこでも動きます。",
+      "speak": "It opens fast and works anywhere.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-007",
+      "en": "Cache only what the app needs to start.",
+      "jp": "アプリの起動に必要なものだけキャッシュしましょう。",
+      "speak": "Cache only what the app needs to start.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-008",
+      "en": "Don't lock in data that changes.",
+      "jp": "変わるデータを固定しないでください。",
+      "speak": "Don't lock in data that changes.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-009",
+      "en": "Try the network first.",
+      "jp": "まずネットワークを試しましょう。",
+      "speak": "Try the network first.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-010",
+      "en": "Fall back to the saved copy when offline.",
+      "jp": "オフラインの時は保存したコピーに戻りましょう。",
+      "speak": "Fall back to the saved copy when offline.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-011",
+      "en": "Cache first for files that rarely change.",
+      "jp": "めったに変わらないファイルはキャッシュ優先で。",
+      "speak": "Cache first for files that rarely change.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-012",
+      "en": "Network first for fresh content.",
+      "jp": "新しい内容はネットワーク優先で。",
+      "speak": "Network first for fresh content.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-013",
+      "en": "Choose per file, not for everything.",
+      "jp": "全部ではなく、ファイルごとに選びましょう。",
+      "speak": "Choose per file, not for everything.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-014",
+      "en": "It works online but fails offline.",
+      "jp": "オンラインでは動きますが、オフラインでは失敗します。",
+      "speak": "It works online but fails offline.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-015",
+      "en": "Always test with the network turned off.",
+      "jp": "必ずネットワークを切ってテストしましょう。",
+      "speak": "Always test with the network turned off.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-016",
+      "en": "My phone still shows the old version.",
+      "jp": "スマホがまだ古い版を表示します。",
+      "speak": "My phone still shows the old version.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-017",
+      "en": "The cache keeps serving the saved copy.",
+      "jp": "キャッシュが保存したコピーを出し続けます。",
+      "speak": "The cache keeps serving the saved copy.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-018",
+      "en": "Change the version name of the cache.",
+      "jp": "キャッシュのバージョン名を変えましょう。",
+      "speak": "Change the version name of the cache.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-019",
+      "en": "The browser sees the file changed.",
+      "jp": "ブラウザはファイルが変わったと気づきます。",
+      "speak": "The browser sees the file changed.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-020",
+      "en": "Change it whenever a cached file changes.",
+      "jp": "キャッシュしたファイルが変わるたびに変えましょう。",
+      "speak": "Change it whenever a cached file changes.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-021",
+      "en": "It's a small chore, but it saves confusion.",
+      "jp": "小さな手間ですが、混乱を防げます。",
+      "speak": "It's a small chore, but it saves confusion.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-022",
+      "en": "Delete the old cache during the update.",
+      "jp": "更新の時に古いキャッシュを削除しましょう。",
+      "speak": "Delete the old cache during the update.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-023",
+      "en": "Turn the network off and open the app again.",
+      "jp": "ネットワークを切って、アプリをもう一度開きましょう。",
+      "speak": "Turn the network off and open the app again.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-024",
+      "en": "Switch the phone to airplane mode.",
+      "jp": "スマホを機内モードにしましょう。",
+      "speak": "Switch the phone to airplane mode.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-025",
+      "en": "Tap through every screen.",
+      "jp": "全部の画面を押してみましょう。",
+      "speak": "Tap through every screen.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-026",
+      "en": "A blank screen means a file is missing.",
+      "jp": "画面が空白なら、ファイルが足りません。",
+      "speak": "A blank screen means a file is missing.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-027",
+      "en": "The first visit has to be online.",
+      "jp": "最初の訪問はオンラインが必要です。",
+      "speak": "The first visit has to be online.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-028",
+      "en": "After that, it can live offline.",
+      "jp": "その後は、オフラインで生きられます。",
+      "speak": "After that, it can live offline.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-029",
+      "en": "Check the application tab in the developer tools.",
+      "jp": "開発者ツールのアプリケーションのタブを確認しましょう。",
+      "speak": "Check the application tab in the developer tools.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-030",
+      "en": "It lists every cached file.",
+      "jp": "キャッシュされた全ファイルを一覧にします。",
+      "speak": "It lists every cached file.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-031",
+      "en": "Will the app lose my notes?",
+      "jp": "アプリはメモを失いますか？",
+      "speak": "Will the app lose my notes?",
+      "say": []
+    },
+    {
+      "id": "offline-2802-032",
+      "en": "Browsers may clear stored data when space is short.",
+      "jp": "空きが少ないと、ブラウザが保存データを消すことがあります。",
+      "speak": "Browsers may clear stored data when space is short.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-033",
+      "en": "Ask the browser to keep your storage.",
+      "jp": "ブラウザに保存を保つよう頼みましょう。",
+      "speak": "Ask the browser to keep your storage.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-034",
+      "en": "Give users a button to export their data.",
+      "jp": "データを書き出すボタンを利用者に用意しましょう。",
+      "speak": "Give users a button to export their data.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-035",
+      "en": "The export button is like a backup.",
+      "jp": "書き出しボタンはバックアップのようなものです。",
+      "speak": "The export button is like a backup.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-036",
+      "en": "Don't let the only copy live in one place.",
+      "jp": "唯一のコピーがひとつの場所にあるようにしないでください。",
+      "speak": "Don't let the only copy live in one place.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-037",
+      "en": "Make the import as easy as the export.",
+      "jp": "読み込みも書き出しと同じくらい簡単にしましょう。",
+      "speak": "Make the import as easy as the export.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-038",
+      "en": "Remind them gently, once a month.",
+      "jp": "月に1回、やさしく思い出させましょう。",
+      "speak": "Remind them gently, once a month.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-039",
+      "en": "Offline works, updates work.",
+      "jp": "オフラインも更新も動きます。",
+      "speak": "Offline works, updates work.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-040",
+      "en": "What am I missing?",
+      "jp": "何が足りませんか？",
+      "speak": "What am I missing?",
+      "say": []
+    },
+    {
+      "id": "offline-2802-041",
+      "en": "Write a clear message for when something goes wrong.",
+      "jp": "おかしい時の分かりやすいメッセージを書きましょう。",
+      "speak": "Write a clear message for when something goes wrong.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-042",
+      "en": "You're offline, but your notes are safe.",
+      "jp": "オフラインですが、メモは安全です。",
+      "speak": "You're offline, but your notes are safe.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-043",
+      "en": "Calm, honest messages build trust.",
+      "jp": "落ち着いた正直なメッセージは信頼を築きます。",
+      "speak": "Calm, honest messages build trust.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-044",
+      "en": "Test with a bad connection.",
+      "jp": "通信が悪い状態でテストしましょう。",
+      "speak": "Test with a bad connection.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-045",
+      "en": "Test updating from an old version.",
+      "jp": "古い版からの更新をテストしましょう。",
+      "speak": "Test updating from an old version.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-046",
+      "en": "That's where bugs hide.",
+      "jp": "そこが不具合の隠れ場所です。",
+      "speak": "That's where bugs hide.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-047",
+      "en": "Take your time.",
+      "jp": "じっくり取り組みましょう。",
+      "speak": "Take your time.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-048",
+      "en": "An app you can trust anywhere.",
+      "jp": "どこでも信頼できるアプリ。",
+      "speak": "An app you can trust anywhere.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-049",
+      "en": "Even in a tunnel.",
+      "jp": "トンネルの中でも。",
+      "speak": "Even in a tunnel.",
+      "say": []
+    },
+    {
+      "id": "offline-2802-050",
+      "en": "It acts like a middleman.",
+      "jp": "仲介人のように動きます。",
+      "speak": "It acts like a middleman.",
+      "say": []
+    }
+  ]
+}

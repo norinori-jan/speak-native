@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "apptips-2701",
+  "ver": 1,
+  "situation": "apptips",
+  "sname": "アプリの作り方",
+  "icon": "📱",
+  "level": 3,
+  "title": "アプリの作り方の口語表現",
+  "items": [
+    {
+      "id": "apptips-2701-001",
+      "en": "I want to build a small app for my phone.",
+      "jp": "スマホ用の小さなアプリを作りたいです。",
+      "speak": "I want to build a small app for my phone.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-002",
+      "en": "HTML is the skeleton of the page.",
+      "jp": "HTMLはページの骨組みです。",
+      "speak": "HTML is the skeleton of the page.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-003",
+      "en": "It decides what's on the screen.",
+      "jp": "画面に何があるかを決めます。",
+      "speak": "It decides what's on the screen.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-004",
+      "en": "One file is easy to move and back up.",
+      "jp": "ひとつのファイルなら移動もバックアップも簡単です。",
+      "speak": "One file is easy to move and back up.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-005",
+      "en": "You only need a text editor and a browser.",
+      "jp": "必要なのはテキストエディタとブラウザだけです。",
+      "speak": "You only need a text editor and a browser.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-006",
+      "en": "Write, save, and refresh the page.",
+      "jp": "書いて、保存して、ページを更新しましょう。",
+      "speak": "Write, save, and refresh the page.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-007",
+      "en": "CSS controls colors, sizes, and spacing.",
+      "jp": "CSSは色、大きさ、余白を決めます。",
+      "speak": "CSS controls colors, sizes, and spacing.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-008",
+      "en": "It's like the clothes on the skeleton.",
+      "jp": "骨組みに着せる服のようなものです。",
+      "speak": "It's like the clothes on the skeleton.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-009",
+      "en": "Make the buttons big enough for a thumb.",
+      "jp": "ボタンは親指で押せる大きさにしましょう。",
+      "speak": "Make the buttons big enough for a thumb.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-010",
+      "en": "Touch comes first.",
+      "jp": "タッチが最優先です。",
+      "speak": "Touch comes first.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-011",
+      "en": "Support dark mode with a few lines.",
+      "jp": "数行でダークモードに対応しましょう。",
+      "speak": "Support dark mode with a few lines.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-012",
+      "en": "Start simple and polish later.",
+      "jp": "シンプルに始めて、仕上げは後にしましょう。",
+      "speak": "Start simple and polish later.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-013",
+      "en": "Nothing happens when I tap the button.",
+      "jp": "ボタンを押しても何も起きません。",
+      "speak": "Nothing happens when I tap the button.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-014",
+      "en": "JavaScript is the part that reacts.",
+      "jp": "JavaScriptは反応する部分です。",
+      "speak": "JavaScript is the part that reacts.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-015",
+      "en": "Every tap or scroll is an event.",
+      "jp": "タップやスクロールはすべてイベントです。",
+      "speak": "Every tap or scroll is an event.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-016",
+      "en": "Start with a simple counter.",
+      "jp": "簡単なカウンターから始めましょう。",
+      "speak": "Start with a simple counter.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-017",
+      "en": "Open the browser's console.",
+      "jp": "ブラウザのコンソールを開きましょう。",
+      "speak": "Open the browser's console.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-018",
+      "en": "It shows the error and the line number.",
+      "jp": "エラーと行番号が表示されます。",
+      "speak": "It shows the error and the line number.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-019",
+      "en": "It forgets everything when I close the page.",
+      "jp": "ページを閉じるとすべて忘れます。",
+      "speak": "It forgets everything when I close the page.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-020",
+      "en": "Save the data in local storage.",
+      "jp": "ローカルストレージにデータを保存しましょう。",
+      "speak": "Save the data in local storage.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-021",
+      "en": "Never store passwords or keys there.",
+      "jp": "パスワードや鍵は保存しないでください。",
+      "speak": "Never store passwords or keys there.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-022",
+      "en": "The app must work with an empty storage.",
+      "jp": "保存が空でもアプリは動かなければいけません。",
+      "speak": "The app must work with an empty storage.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-023",
+      "en": "Storage is a convenience, not a guarantee.",
+      "jp": "ストレージは便利なものであって、保証ではありません。",
+      "speak": "Storage is a convenience, not a guarantee.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-024",
+      "en": "Let people export their data.",
+      "jp": "データを書き出せるようにしましょう。",
+      "speak": "Let people export their data.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-025",
+      "en": "It looks perfect on my computer, but not on my phone.",
+      "jp": "パソコンでは完璧なのに、スマホではだめです。",
+      "speak": "It looks perfect on my computer, but not on my phone.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-026",
+      "en": "Always test on the real phone.",
+      "jp": "必ず本物のスマホで試しましょう。",
+      "speak": "Always test on the real phone.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-027",
+      "en": "Check both portrait and landscape.",
+      "jp": "縦向きと横向きの両方を確認しましょう。",
+      "speak": "Check both portrait and landscape.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-028",
+      "en": "Tap every button.",
+      "jp": "全部のボタンを押してみましょう。",
+      "speak": "Tap every button.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-029",
+      "en": "Look at the top and bottom edges.",
+      "jp": "上下の端を見ましょう。",
+      "speak": "Look at the top and bottom edges.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-030",
+      "en": "Find the bug at your own desk.",
+      "jp": "不具合は自分の机で見つけましょう。",
+      "speak": "Find the bug at your own desk.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-031",
+      "en": "How do I put it on the internet?",
+      "jp": "インターネットに公開するにはどうしますか？",
+      "speak": "How do I put it on the internet?",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-032",
+      "en": "Push the file to a repository.",
+      "jp": "ファイルをリポジトリにpushしましょう。",
+      "speak": "Push the file to a repository.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-033",
+      "en": "Turn on GitHub Pages.",
+      "jp": "GitHub Pagesを有効にしましょう。",
+      "speak": "Turn on GitHub Pages.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-034",
+      "en": "Add it to your home screen.",
+      "jp": "ホーム画面に追加しましょう。",
+      "speak": "Add it to your home screen.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-035",
+      "en": "The phone may still show the old version.",
+      "jp": "スマホが古い版を表示することがあります。",
+      "speak": "The phone may still show the old version.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-036",
+      "en": "The browser keeps a copy called the cache.",
+      "jp": "ブラウザはキャッシュというコピーを保存しています。",
+      "speak": "The browser keeps a copy called the cache.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-037",
+      "en": "Bump the version number after every update.",
+      "jp": "更新のたびにバージョン番号を上げましょう。",
+      "speak": "Bump the version number after every update.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-038",
+      "en": "Write what changed in the commit message.",
+      "jp": "何を変えたかをコミットメッセージに書きましょう。",
+      "speak": "Write what changed in the commit message.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-039",
+      "en": "So you can always look back.",
+      "jp": "いつでも振り返れるように。",
+      "speak": "So you can always look back.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-040",
+      "en": "The page needs a title and some buttons.",
+      "jp": "ページにはタイトルといくつかのボタンが必要です。",
+      "speak": "The page needs a title and some buttons.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-041",
+      "en": "It says here's a button and here's a heading.",
+      "jp": "ここにボタン、ここに見出し、と言います。",
+      "speak": "It says here's a button and here's a heading.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-042",
+      "en": "Don't rely on a mouse.",
+      "jp": "マウス前提にしないでください。",
+      "speak": "Don't rely on a mouse.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-043",
+      "en": "Keep the text readable.",
+      "jp": "文字は読みやすく保ちましょう。",
+      "speak": "Keep the text readable.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-044",
+      "en": "The phone tells the page which mode it prefers.",
+      "jp": "スマホが好みのモードをページに伝えます。",
+      "speak": "The phone tells the page which mode it prefers.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-045",
+      "en": "It's one app that adapts, not two.",
+      "jp": "2つではなく、合わせて変わるひとつのアプリです。",
+      "speak": "It's one app that adapts, not two.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-046",
+      "en": "When this button is tapped, do this.",
+      "jp": "このボタンが押されたら、これをしてください。",
+      "speak": "When this button is tapped, do this.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-047",
+      "en": "It keeps small pieces of information on the device.",
+      "jp": "端末に少量の情報を残します。",
+      "speak": "It keeps small pieces of information on the device.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-048",
+      "en": "Start fresh if the storage is empty.",
+      "jp": "保存が空なら、新しく始めましょう。",
+      "speak": "Start fresh if the storage is empty.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-049",
+      "en": "A real phone beats an imitation.",
+      "jp": "本物のスマホは、真似よりずっといいです。",
+      "speak": "A real phone beats an imitation.",
+      "say": []
+    },
+    {
+      "id": "apptips-2701-050",
+      "en": "It behaves like a real app.",
+      "jp": "本物のアプリのように動きます。",
+      "speak": "It behaves like a real app.",
+      "say": []
+    }
+  ]
+}

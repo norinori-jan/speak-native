@@ -1,0 +1,286 @@
+[
+  {
+    "id": "apptips",
+    "ic": "📱",
+    "n": "アプリの作り方",
+    "hint": "Mia and Ken walk through building a one-file phone app: HTML, CSS, JavaScript, saving data, testing on a real phone, and publishing",
+    "level": 3,
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "d": [
+      {
+        "t": "HTMLは骨組み",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I want to build a small app that runs on my phone. Where do I even begin?",
+            "jp": "ケン、スマホで動く小さなアプリを作りたいです。どこから始めればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Start with HTML. It's the skeleton of the page: the title, the buttons, the text boxes, and the lists.",
+            "jp": "HTMLから始めます。ページの骨組みで、タイトル、ボタン、入力欄、リストなどです。"
+          },
+          {
+            "sp": 0,
+            "en": "So HTML decides what's on the screen?",
+            "jp": "つまりHTMLが、画面に何があるかを決めるんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. It says 'here's a button' and 'here's a heading,' but it doesn't say how they look or what they do.",
+            "jp": "そうです。『ここにボタン』『ここに見出し』と言いますが、見た目や動きは決めません。"
+          },
+          {
+            "sp": 0,
+            "en": "Can I put everything in a single file?",
+            "jp": "全部をひとつのファイルに入れてもいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, for a small app that's perfect. One file is easy to move, easy to back up, and easy to publish.",
+            "jp": "はい、小さなアプリならそれが最適です。ひとつのファイルなら、移動もバックアップも公開も簡単です。"
+          },
+          {
+            "sp": 0,
+            "en": "And do I need any special software?",
+            "jp": "特別なソフトは必要ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Only a text editor and a browser. You write, save, and refresh the page to see the result.",
+            "jp": "テキストエディタとブラウザだけです。書いて、保存して、ページを更新して結果を見ます。"
+          }
+        ]
+      },
+      {
+        "t": "CSSは見た目",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my page works, but it looks like something from 1995. How do I make it nicer?",
+            "jp": "ケン、ページは動くのですが、1995年のもののように見えます。もっときれいにするにはどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "That's the job of CSS. It controls colors, sizes, spacing, and fonts. Think of it as the clothes on the skeleton.",
+            "jp": "それはCSSの仕事です。色、大きさ、余白、フォントを決めます。骨組みに着せる服だと思ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "What should I watch out for on a phone?",
+            "jp": "スマホでは何に気をつければいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Make the buttons big enough for a thumb, keep the text readable, and never rely on a mouse. Touch comes first.",
+            "jp": "ボタンは親指で押せる大きさにして、文字を読みやすくして、マウス前提にしないでください。タッチが最優先です。"
+          },
+          {
+            "sp": 0,
+            "en": "What about a dark mode? My eyes get tired at night.",
+            "jp": "ダークモードはどうですか？夜は目が疲れます。"
+          },
+          {
+            "sp": 1,
+            "en": "You can support it with a few lines. The phone tells the page which mode it prefers, and the page changes its colors.",
+            "jp": "数行で対応できます。スマホが好みのモードをページに伝えて、ページが色を切り替えます。"
+          },
+          {
+            "sp": 0,
+            "en": "So I'm not building two apps, just one that adapts.",
+            "jp": "つまり2つのアプリを作るのではなく、合わせて変わるひとつを作るんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Start simple, and polish the look only after everything works.",
+            "jp": "その通り。シンプルに始めて、見た目の仕上げは、すべて動いてからにします。"
+          }
+        ]
+      },
+      {
+        "t": "JavaScriptは動き",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I have a button, but nothing happens when I tap it. What's missing?",
+            "jp": "ケン、ボタンはあるのですが、押しても何も起きません。何が足りないんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "JavaScript. It's the part that reacts: when someone taps a button, it runs a bit of code.",
+            "jp": "JavaScriptです。反応する部分で、誰かがボタンを押したら、少しのコードを実行します。"
+          },
+          {
+            "sp": 0,
+            "en": "So I tell it, 'when this button is tapped, do this.'",
+            "jp": "じゃあ『このボタンが押されたら、これをして』と伝えるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, that's called an event. Tap, type, scroll: everything the user does is an event you can respond to.",
+            "jp": "はい、それをイベントと呼びます。タップ、入力、スクロール、ユーザーのすべての操作が、反応できるイベントです。"
+          },
+          {
+            "sp": 0,
+            "en": "What would a tiny first example be?",
+            "jp": "最初の小さな例は何でしょう？"
+          },
+          {
+            "sp": 1,
+            "en": "A counter. Each tap adds one to a number and shows it on the screen. It teaches you the whole idea in five lines.",
+            "jp": "カウンターです。押すたびに数字を1増やして画面に表示します。5行で考え方全体が学べます。"
+          },
+          {
+            "sp": 0,
+            "en": "And if I make a mistake in the code?",
+            "jp": "コードを間違えたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Open the browser's console. It shows the error and the line number, just like the red text in the terminal.",
+            "jp": "ブラウザのコンソールを開きます。ターミナルの赤い文字と同じように、エラーと行番号を表示します。"
+          }
+        ]
+      },
+      {
+        "t": "データを保存する",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my to-do app forgets everything when I close the page. How do I make it remember?",
+            "jp": "ケン、ToDoアプリが、ページを閉じるとすべて忘れてしまいます。覚えさせるにはどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Save the data in the browser's local storage. It keeps small pieces of information on the device, even after you close the page.",
+            "jp": "ブラウザのローカルストレージに保存します。ページを閉じても、端末に少量の情報が残ります。"
+          },
+          {
+            "sp": 0,
+            "en": "Is it safe to store everything there?",
+            "jp": "全部そこに保存して安全ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not for secrets. Anyone with access to that browser can read it, so never store passwords or keys.",
+            "jp": "秘密には向きません。そのブラウザに触れる人は誰でも読めるので、パスワードや鍵は保存しないでください。"
+          },
+          {
+            "sp": 0,
+            "en": "What if the storage gets cleared, like in a private window?",
+            "jp": "プライベートウィンドウのように、保存が消されたらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Good question. The app must still work with an empty storage, so wrap the saving in a safety check and start fresh if needed.",
+            "jp": "いい質問です。保存が空でもアプリは動かなければいけないので、保存部分を安全確認で囲み、必要なら新しく始めます。"
+          },
+          {
+            "sp": 0,
+            "en": "So storage is a convenience, not a guarantee.",
+            "jp": "つまりストレージは便利なものであって、保証ではないんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. And let people export their data, so they never feel trapped.",
+            "jp": "そうです。そして、データを書き出せるようにして、閉じ込められた気分にさせないでください。"
+          }
+        ]
+      },
+      {
+        "t": "スマホで確認する",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the app looks perfect on my computer, but on my phone, the buttons overlap. What happened?",
+            "jp": "ケン、パソコンでは完璧に見えるのに、スマホではボタンが重なります。どうしたんでしょう？"
+          },
+          {
+            "sp": 1,
+            "en": "The screen sizes differ. Always test on the real phone, because a computer can only imitate it.",
+            "jp": "画面の大きさが違います。必ず本物のスマホで試してください。パソコンは真似ができるだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "What should I check on the phone?",
+            "jp": "スマホでは何を確認すればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Check the layout in both portrait and landscape, tap every button, and look at the top and bottom edges where the notch and the home bar are.",
+            "jp": "縦向きと横向きの両方でレイアウトを見て、全部のボタンを押して、切り欠きやホームバーがある上下の端を見ます。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there a way to test before I publish?",
+            "jp": "公開する前に試す方法はありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, you can run a small local server on your computer and open it from your phone on the same Wi-Fi.",
+            "jp": "はい、パソコンで小さなローカルサーバーを動かして、同じWi-Fiのスマホから開けます。"
+          },
+          {
+            "sp": 0,
+            "en": "That sounds more complicated than I expected.",
+            "jp": "思っていたより複雑そうです。"
+          },
+          {
+            "sp": 1,
+            "en": "It's a one-line command once you've done it. And finding a bug on your own desk beats finding it after you've shared the link.",
+            "jp": "一度やれば1行のコマンドです。そして自分の机で不具合を見つけるほうが、リンクを共有した後に見つけるより、ずっといいです。"
+          }
+        ]
+      },
+      {
+        "t": "公開して更新する",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my app is finally done. How do I put it on the internet so I can use it anywhere?",
+            "jp": "ケン、アプリがやっと完成しました。どこでも使えるように、インターネットに公開するにはどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "With GitHub Pages. You push your file to a repository, turn on Pages, and GitHub gives you a free web address.",
+            "jp": "GitHub Pagesです。ファイルをリポジトリにpushして、Pagesを有効にすると、GitHubが無料のウェブアドレスをくれます。"
+          },
+          {
+            "sp": 0,
+            "en": "And then I can open it on my phone and add it to my home screen?",
+            "jp": "そうしたらスマホで開いて、ホーム画面に追加できますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and it behaves like a real app. But remember, after you update, the phone may still show the old version.",
+            "jp": "はい、本物のアプリのように動きます。ただ、更新後も、スマホが古い版を表示することがあるのを覚えておいてください。"
+          },
+          {
+            "sp": 0,
+            "en": "Why does that happen?",
+            "jp": "なぜそうなるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "The browser keeps a copy to load faster, which is called the cache. You bump the version number so the phone knows to fetch the new one.",
+            "jp": "ブラウザが速く開けるようにコピーを保存していて、それをキャッシュと呼びます。バージョン番号を上げて、スマホに新しい版を取りに行かせます。"
+          },
+          {
+            "sp": 0,
+            "en": "So every update means changing the version too.",
+            "jp": "つまり更新のたびに、バージョンも変えるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly, and it's a good habit to write what changed in the commit message, so you can always look back.",
+            "jp": "その通り。そして何を変えたかをコミットメッセージに書くのは良い習慣です。いつでも振り返れます。"
+          }
+        ]
+      }
+    ]
+  }
+]

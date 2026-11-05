@@ -1,0 +1,286 @@
+[
+  {
+    "id": "offline",
+    "ic": "📶",
+    "n": "オフラインで動くアプリ",
+    "hint": "Mia and Ken learn offline apps: service workers, what to cache, updating without confusion, testing offline, protecting data, and polishing",
+    "level": 3,
+    "keywords": [
+      "offline",
+      "cache",
+      "service worker"
+    ],
+    "d": [
+      {
+        "t": "オフラインで動くアプリ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I opened my app on the train with no signal, and it still worked. How is that possible?",
+            "jp": "ケン、電波のない電車で自分のアプリを開いたら、ちゃんと動きました。どうしてそんなことができるんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "That's the work of a service worker. It's a small script that sits between your app and the internet.",
+            "jp": "サービスワーカーの働きです。アプリとインターネットの間に座っている、小さなスクリプトです。"
+          },
+          {
+            "sp": 0,
+            "en": "So it's like a middleman?",
+            "jp": "つまり仲介人のようなものですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. When the app asks for a file, the service worker can answer from a saved copy instead of going online.",
+            "jp": "その通り。アプリがファイルを求めた時、サービスワーカーはオンラインに行く代わりに、保存したコピーから答えられます。"
+          },
+          {
+            "sp": 0,
+            "en": "Where does it keep those saved copies?",
+            "jp": "そのコピーはどこに保管しているんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "In the cache, a storage area managed by the browser. You decide which files go in it.",
+            "jp": "キャッシュです。ブラウザが管理する保管場所で、どのファイルを入れるかはあなたが決めます。"
+          },
+          {
+            "sp": 0,
+            "en": "And that works for a phone app on my home screen too?",
+            "jp": "それはホーム画面のスマホアプリでも動きますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, that's what makes a web page feel like a real app. It opens fast and works anywhere.",
+            "jp": "はい、それがウェブページを本物のアプリのように感じさせます。速く開いて、どこでも動きます。"
+          }
+        ]
+      },
+      {
+        "t": "何をキャッシュに入れる？",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, which files should I put in the cache? Everything?",
+            "jp": "ケン、どのファイルをキャッシュに入れるべきですか？全部ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Only what the app needs to start: the main page, the icons, and any scripts or styles it depends on.",
+            "jp": "アプリの起動に必要なものだけです。メインのページ、アイコン、それが頼っているスクリプトやスタイルです。"
+          },
+          {
+            "sp": 0,
+            "en": "What about data that changes, like news or prices?",
+            "jp": "ニュースや価格のように変わるデータは？"
+          },
+          {
+            "sp": 1,
+            "en": "Don't lock that in. Try the network first, and fall back to the saved copy only when you're offline.",
+            "jp": "それは固定しないでください。まずネットワークを試して、オフラインの時だけ保存したコピーに戻ります。"
+          },
+          {
+            "sp": 0,
+            "en": "So there are two strategies.",
+            "jp": "つまり2つの戦略があるんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Cache first for files that rarely change, and network first for fresh content. Choose per file, not for everything.",
+            "jp": "そうです。めったに変わらないファイルはキャッシュ優先、新しい内容はネットワーク優先。全部ではなく、ファイルごとに選びます。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens if I forget a file in the list?",
+            "jp": "一覧にファイルを入れ忘れたらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It works online, but fails offline. That's why you always test with the network turned off.",
+            "jp": "オンラインでは動きますが、オフラインでは失敗します。だから必ずネットワークを切ってテストします。"
+          }
+        ]
+      },
+      {
+        "t": "更新が反映されない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I fixed a bug and pushed it, but my phone still shows the old version. I'm confused.",
+            "jp": "ケン、不具合を直してpushしたのに、スマホはまだ古い版を表示します。混乱しています。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the cache doing its job a little too well. The service worker keeps serving the saved copy until it's told to update.",
+            "jp": "キャッシュが少し働きすぎているんです。サービスワーカーは、更新するよう言われるまで、保存したコピーを出し続けます。"
+          },
+          {
+            "sp": 0,
+            "en": "So how do I tell it?",
+            "jp": "じゃあ、どうやって伝えますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Change the version name of the cache in your service worker file. The browser sees the file changed and installs the new one.",
+            "jp": "サービスワーカーのファイルの、キャッシュのバージョン名を変えます。ブラウザはファイルが変わったと気づいて、新しい版をインストールします。"
+          },
+          {
+            "sp": 0,
+            "en": "Do I have to change it every time I update the app?",
+            "jp": "アプリを更新するたびに変えなければいけませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, whenever any cached file changes. It's a small chore, but it saves a lot of confusion.",
+            "jp": "はい、キャッシュしたファイルが変わるたびに。小さな手間ですが、多くの混乱を防げます。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens to the old cache?",
+            "jp": "古いキャッシュはどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "You delete it during the update step, so the phone doesn't fill up with old versions.",
+            "jp": "更新の段階で削除します。そうすればスマホが古い版でいっぱいになりません。"
+          }
+        ]
+      },
+      {
+        "t": "オフラインのテスト",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, how do I know my app really works offline before I show it to anyone?",
+            "jp": "ケン、誰かに見せる前に、アプリが本当にオフラインで動くとどう確かめますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Load the page once while online, and then turn the network off, or switch the phone to airplane mode.",
+            "jp": "一度オンラインでページを読み込んで、それからネットワークを切るか、スマホを機内モードにします。"
+          },
+          {
+            "sp": 0,
+            "en": "And then I open the app again?",
+            "jp": "それからアプリをもう一度開くんですね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and tap through every screen. If anything is blank or shows an error, a file is missing from the cache.",
+            "jp": "はい、そして全部の画面を押してみます。何か空白になったりエラーが出たりしたら、キャッシュにファイルが足りません。"
+          },
+          {
+            "sp": 0,
+            "en": "What about the first visit? It has to be online, right?",
+            "jp": "最初の訪問はどうですか？オンラインが必要ですよね？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. The first time, the app has to download everything. After that, it can live offline.",
+            "jp": "そうです。最初の1回は、アプリがすべてをダウンロードしなければなりません。その後は、オフラインで生きられます。"
+          },
+          {
+            "sp": 0,
+            "en": "Is there a tool that shows what's in the cache?",
+            "jp": "キャッシュに何が入っているか見せてくれるツールはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, the browser's developer tools have an application tab that lists every cached file. It's the best way to debug it.",
+            "jp": "はい、ブラウザの開発者ツールに、キャッシュされた全ファイルを一覧にするアプリケーションのタブがあります。デバッグには最良の方法です。"
+          }
+        ]
+      },
+      {
+        "t": "データが消えない工夫",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, what if my phone runs out of space? Will the app lose my notes?",
+            "jp": "ケン、スマホの空き容量がなくなったら、アプリはメモを失いますか？"
+          },
+          {
+            "sp": 1,
+            "en": "It can, in rare cases. Browsers may clear stored data when the device is really short on space.",
+            "jp": "まれにあります。端末の空きが本当に少ない時、ブラウザが保存データを消すことがあります。"
+          },
+          {
+            "sp": 0,
+            "en": "That's scary. What can I do about it?",
+            "jp": "怖いですね。何ができますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Ask the browser to treat your storage as persistent, and give users a button to export their data to a file.",
+            "jp": "ブラウザに保存を永続的に扱うよう頼んで、データをファイルに書き出すボタンを利用者に用意します。"
+          },
+          {
+            "sp": 0,
+            "en": "So the export button is like a backup.",
+            "jp": "つまり書き出しボタンは、バックアップのようなものですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Never let the only copy of someone's data live in one place that the app can't control.",
+            "jp": "その通り。誰かのデータの唯一のコピーが、アプリが制御できないひとつの場所にあるようにしてはいけません。"
+          },
+          {
+            "sp": 0,
+            "en": "And how often should people use it?",
+            "jp": "それで、どれくらいの頻度で使うべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Remind them gently, maybe once a month, and make the import just as easy as the export.",
+            "jp": "やさしく、たとえば月に1回思い出させて、読み込みも書き出しと同じくらい簡単にします。"
+          }
+        ]
+      },
+      {
+        "t": "オフラインアプリの仕上げ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I think my app is ready. Offline works, updates work, and there's an export button. What am I missing?",
+            "jp": "ケン、アプリは準備ができたと思います。オフラインも更新も動いて、書き出しボタンもあります。何が足りませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "A clear message for when something goes wrong. If the app can't load, say why and what to do next.",
+            "jp": "何かおかしい時の、分かりやすいメッセージです。アプリが読み込めない時は、理由と次にすることを伝えます。"
+          },
+          {
+            "sp": 0,
+            "en": "Like, 'you're offline, but your notes are safe'?",
+            "jp": "たとえば『オフラインですが、メモは安全です』のような？"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. Calm, honest messages make people trust the app even when it isn't perfect.",
+            "jp": "完璧です。落ち着いた正直なメッセージは、アプリが完璧でなくても、人に信頼を与えます。"
+          },
+          {
+            "sp": 0,
+            "en": "Anything else before I share it?",
+            "jp": "共有する前に他にはありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Test on a real phone, in a bad connection, with an old version first. Updating from an old version is where bugs hide.",
+            "jp": "本物のスマホで、通信が悪い状態で、古い版を入れた状態から試してください。古い版からの更新が、不具合の隠れ場所です。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a part I would have skipped.",
+            "jp": "そこは飛ばしていたと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Most people do. Take your time, and you'll end up with an app you can trust anywhere, even in a tunnel.",
+            "jp": "多くの人がそうです。じっくり取り組めば、トンネルの中でも、どこでも信頼できるアプリになります。"
+          }
+        ]
+      }
+    ]
+  }
+]

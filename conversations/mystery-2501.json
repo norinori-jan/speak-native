@@ -1,0 +1,377 @@
+[
+  {
+    "id": "mystery",
+    "ic": "🔎",
+    "n": "探偵事務所ドラマ",
+    "hint": "Mia and Ken, detectives, investigate a vanished painting at a small gallery through interviews, security footage, and a final reveal",
+    "level": 4,
+    "keywords": [
+      "detective",
+      "mystery",
+      "gallery"
+    ],
+    "d": [
+      {
+        "t": "Part 1：ギャラリーからの依頼",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, we've got a new client waiting in the office. She looks pretty shaken up, so be nice.",
+            "jp": "ケン、事務所に新しい依頼人が待っています。かなり動揺しているようなので、優しくしてくださいね。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm always nice. Come in, Ms. Walker. Sit down, and tell us what happened, from the beginning.",
+            "jp": "私はいつも優しいですよ。どうぞ、ウォーカーさん。座って、最初から何があったか話してください。"
+          },
+          {
+            "sp": 0,
+            "en": "It's my gallery on Pine Street. Last night, a small painting disappeared, and I have no idea how.",
+            "jp": "パイン通りにある私のギャラリーです。昨夜、小さな絵が消えてしまって、どうやってなのか全く見当がつきません。"
+          },
+          {
+            "sp": 1,
+            "en": "Was there a break-in? Any broken windows or forced locks?",
+            "jp": "侵入されましたか？割れた窓や壊された鍵はありましたか？"
+          },
+          {
+            "sp": 0,
+            "en": "That's the strange part. Everything was locked this morning, and the alarm never went off.",
+            "jp": "そこが不思議なんです。今朝、すべて鍵がかかっていて、警報も鳴りませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Gonna need the list of everyone with a key. Who has one besides you?",
+            "jp": "鍵を持っている全員の一覧が必要です。あなた以外に誰が持っていますか？",
+            "note": "元の形: going to／聞こえ方: ガナ／使う場面:必要だと伝える時"
+          },
+          {
+            "sp": 0,
+            "en": "My assistant, Paul, and the cleaner, Mrs. Lee. That's it. I trust them both, honestly.",
+            "jp": "アシスタントのポールと、清掃のリーさんだけです。それだけ。正直、ふたりとも信頼しています。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay, we'll take the case. Mia, grab your coat. We're going to see that gallery tonight.",
+            "jp": "分かりました、お引き受けします。ミア、コートを取って。今夜そのギャラリーを見に行きます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 2：現場の違和感",
+        "l": [
+          {
+            "sp": 0,
+            "en": "So this is the spot. The painting hung right here, and there's no sign that anyone touched the wall.",
+            "jp": "ここがその場所ですね。絵はちょうどここに掛かっていて、誰かが壁に触れた形跡はありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Look at the floor, Ken. There's a tiny bit of white dust right under the frame's empty hook.",
+            "jp": "床を見てください、ケン。空になった額縁のフックの真下に、ほんの少し白い粉があります。"
+          },
+          {
+            "sp": 0,
+            "en": "Plaster, maybe. Or chalk. Hmm, someone cleaned in a hurry and missed this one.",
+            "jp": "石膏かもしれません。あるいはチョーク。うーん、誰かが急いで掃除して、ここを見逃したんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "The alarm panel is fine, too. No error messages in the log.",
+            "jp": "警報の操作盤も問題ありません。記録にエラーも出ていません。"
+          },
+          {
+            "sp": 0,
+            "en": "Which means whoever did this knew the code, or came in while the alarm was off.",
+            "jp": "つまり犯人は暗証番号を知っていたか、警報が切れている間に入ったということです。"
+          },
+          {
+            "sp": 1,
+            "en": "Ms. Walker says the alarm is off from eight to eight-thirty every morning, when the cleaner comes in.",
+            "jp": "ウォーカーさんによると、清掃の人が来る毎朝8時から8時半は、警報が切られているそうです。"
+          },
+          {
+            "sp": 0,
+            "en": "So the painting could've been taken in the morning, not the night before.",
+            "jp": "それなら絵は、前の晩ではなく朝に持ち出された可能性があります。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Everyone's been looking at the wrong time. Let's talk to Mrs. Lee tomorrow.",
+            "jp": "そうです。みんな間違った時間を見ていました。明日、リーさんと話しましょう。"
+          }
+        ]
+      },
+      {
+        "t": "Part 3：清掃員の話",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Mrs. Lee, thanks for seeing us. We just have a few questions about yesterday morning.",
+            "jp": "リーさん、お会いくださってありがとうございます。昨日の朝のことで、いくつかお聞きしたいだけです。"
+          },
+          {
+            "sp": 1,
+            "en": "Oh dear, I already told the police everything. I came in at eight, cleaned the floors, and left at nine.",
+            "jp": "まあ、警察にもう全部話しましたよ。8時に入って、床を掃除して、9時に出ました。"
+          },
+          {
+            "sp": 0,
+            "en": "Did you notice anything unusual? A person nearby, a delivery, a strange sound?",
+            "jp": "何か普通でないことに気づきましたか？近くにいた人、配達、変な音など。"
+          },
+          {
+            "sp": 1,
+            "en": "Now that you mention it, there was a delivery man at the back door around eight-fifteen. He had a big flat box.",
+            "jp": "そう言われれば、8時15分ごろ、裏口に配達員がいました。大きくて平たい箱を持っていました。"
+          },
+          {
+            "sp": 0,
+            "en": "A flat box. Did he come inside, or did you meet him at the door?",
+            "jp": "平たい箱。中に入りましたか、それともドアのところで会いましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "I let him in to put it in the storage room. I didn't think twice, since it's normal for deliveries.",
+            "jp": "保管室に置いてもらうために入れました。配達は普通のことなので、深く考えませんでした。"
+          },
+          {
+            "sp": 0,
+            "en": "Did you see his face, or a name on his uniform?",
+            "jp": "顔や、制服の名前は見えましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "Just a cap and a mask. Everyone wears masks these days, so I didn't find it odd.",
+            "jp": "帽子とマスクだけです。最近はみんなマスクをしているので、変だとは思いませんでした。"
+          }
+        ]
+      },
+      {
+        "t": "Part 4：食い違う証言",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I talked to Paul, the assistant. He says he was home all night and never came near the gallery.",
+            "jp": "ケン、アシスタントのポールと話しました。一晩中家にいて、ギャラリーには近づいていないと言っています。"
+          },
+          {
+            "sp": 1,
+            "en": "Convenient. But a neighbor of his told me she saw his car leaving at six in the morning.",
+            "jp": "都合がいいですね。でも彼の隣人は、朝6時に彼の車が出ていくのを見たと言っていました。"
+          },
+          {
+            "sp": 0,
+            "en": "Six? That doesn't match what he told me. He said he slept until seven.",
+            "jp": "6時？私に言ったことと合いません。7時まで寝ていたと言っていました。"
+          },
+          {
+            "sp": 1,
+            "en": "So one of them is mistaken, or he's lying. Let's not accuse him yet, though.",
+            "jp": "じゃあどちらかが間違っているか、彼が嘘をついています。でもまだ責めるのはやめましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Why not? It seems pretty obvious to me.",
+            "jp": "どうしてですか？私にはかなり明らかに思えますが。"
+          },
+          {
+            "sp": 1,
+            "en": "Because obvious answers are the most dangerous. He might have gone out for a harmless reason, like buying coffee.",
+            "jp": "明らかな答えほど危険だからです。コーヒーを買うような無害な理由で出かけたのかもしれません。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, fair. So what do we do?",
+            "jp": "うん、もっともですね。じゃあどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "We check the traffic cameras near the gallery, and see exactly who drove by that morning.",
+            "jp": "ギャラリー近くの交通カメラを調べて、その朝に誰が通ったか正確に見ます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 5：防犯カメラの映像",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I got the footage from the camera across the street. It's grainy, but you can see the back alley.",
+            "jp": "ケン、通りの向かいのカメラの映像が手に入りました。荒いですが、裏の路地が映っています。"
+          },
+          {
+            "sp": 1,
+            "en": "Play it from eight o'clock. There. A van pulls up, and a man gets out with a flat box.",
+            "jp": "8時から再生してください。そこ。バンが止まって、男が平たい箱を持って降りてきます。"
+          },
+          {
+            "sp": 0,
+            "en": "That matches Mrs. Lee's story. But look at the van's door. There's no company logo at all.",
+            "jp": "リーさんの話と合います。でもバンのドアを見てください。会社のロゴがまったくありません。"
+          },
+          {
+            "sp": 1,
+            "en": "A real delivery company would have its name on it. So he was pretending to be a courier.",
+            "jp": "本物の配達会社なら名前が入っているはずです。つまり配達員のふりをしていたんですね。"
+          },
+          {
+            "sp": 0,
+            "en": "Rewind a bit. When he leaves, he carries the same flat box, but now it looks heavier.",
+            "jp": "少し巻き戻してください。出ていく時、同じ平たい箱を持っていますが、今は重そうに見えます。"
+          },
+          {
+            "sp": 1,
+            "en": "Because there's a painting in it now. He walked in with an empty box and walked out with the artwork.",
+            "jp": "今は中に絵が入っているからです。空の箱で入って、美術品を持って出ていきました。"
+          },
+          {
+            "sp": 0,
+            "en": "Can you read the license plate?",
+            "jp": "ナンバープレートは読めますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Just the first three characters, but that's enough for the police to narrow it down.",
+            "jp": "最初の3文字だけですが、警察が絞り込むには十分です。"
+          }
+        ]
+      },
+      {
+        "t": "Part 6：ポールとの対面",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Paul, thanks for coming in. We'd like to ask about the van you were seen near the gallery that morning.",
+            "jp": "ポール、来てくれてありがとう。あの朝ギャラリーの近くで目撃されたバンについて、聞きたいことがあります。"
+          },
+          {
+            "sp": 1,
+            "en": "I don't know anything about a van. I told you, I was at home.",
+            "jp": "バンのことは何も知りません。言いましたよね、家にいたと。"
+          },
+          {
+            "sp": 0,
+            "en": "A neighbor saw your car leave at six. Do you want to change your story?",
+            "jp": "隣人があなたの車が6時に出るのを見ました。話を変えたいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Fine. I went to the gallery early, because I forgot my laptop the night before. I left right away, I swear.",
+            "jp": "分かりました。前の晩にノートPCを忘れたので、朝早くギャラリーに行きました。すぐ出ました、誓って。"
+          },
+          {
+            "sp": 0,
+            "en": "So you were there before eight. Did you see the delivery man in the back alley?",
+            "jp": "じゃあ8時前にはいたんですね。裏の路地の配達員を見ましたか？"
+          },
+          {
+            "sp": 1,
+            "en": "No. By eight I was already gone. Why would I take a painting? I love that gallery.",
+            "jp": "いいえ。8時には、もういませんでした。なぜ私が絵を盗むんですか？あのギャラリーが大好きなのに。"
+          },
+          {
+            "sp": 0,
+            "en": "Nobody said you did. But someone told the thief about the alarm being off at eight. Who knew that?",
+            "jp": "誰もあなたがやったとは言っていません。でも誰かが泥棒に、8時に警報が切れていることを教えました。それを知っていたのは誰ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Only the three of us, and, well, anyone who watched Ms. Walker's gallery tour video online. She mentions it in the video.",
+            "jp": "私たち3人だけです。それと、ウォーカーさんのギャラリー紹介動画をネットで見た人なら誰でも。動画で話していますから。"
+          }
+        ]
+      },
+      {
+        "t": "Part 7：ひらめきの瞬間",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I can't sleep. I keep thinking about that white dust on the floor. It doesn't fit anywhere.",
+            "jp": "ケン、眠れません。床の白い粉のことばかり考えてしまいます。どこにも当てはまりません。"
+          },
+          {
+            "sp": 1,
+            "en": "What do we know? The painting was small, framed, hanging on a plaster wall. Nothing was broken.",
+            "jp": "何が分かっていますか？絵は小さくて、額縁に入って、石膏の壁に掛かっていました。何も壊れていません。"
+          },
+          {
+            "sp": 0,
+            "en": "But wait. What if the painting on the wall wasn't the real one? What if someone swapped it earlier?",
+            "jp": "でも待って。壁にあった絵が本物でなかったら？誰かが前もってすり替えていたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Interesting. Then the thief only took a copy, and the real painting left the gallery weeks ago.",
+            "jp": "面白いですね。それなら泥棒が持っていったのは複製で、本物は何週間も前にギャラリーを出ていたことになります。"
+          },
+          {
+            "sp": 0,
+            "en": "And the dust came from re-hanging the fake. Someone had to take it down and put it back up.",
+            "jp": "そして粉は、偽物を掛け直した時のものです。誰かが外して、また掛けなければなりませんでした。"
+          },
+          {
+            "sp": 1,
+            "en": "Who has the skills to copy a painting that well?",
+            "jp": "あんなに上手に絵を複製できる技術を持っているのは誰ですか？"
+          },
+          {
+            "sp": 0,
+            "en": "An art student, maybe, or a restorer. Check the gallery's records for who worked on that painting recently.",
+            "jp": "美術学生か、修復師かもしれません。最近その絵に関わった人をギャラリーの記録で調べてください。"
+          },
+          {
+            "sp": 1,
+            "en": "On it. Ms. Walker said a restorer cleaned it last month. I'll find his name first thing in the morning.",
+            "jp": "やります。ウォーカーさんは先月、修復師が洗浄したと言っていました。朝一番に名前を調べます。"
+          }
+        ]
+      },
+      {
+        "t": "Part 8：事件の真相",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ms. Walker, we've solved it. But I'm afraid you won't like the answer.",
+            "jp": "ウォーカーさん、解決しました。ただ、お気に召さない答えかもしれません。"
+          },
+          {
+            "sp": 1,
+            "en": "Please, just tell me. I can't stand not knowing any longer.",
+            "jp": "お願いです、教えてください。もう知らないままではいられません。"
+          },
+          {
+            "sp": 0,
+            "en": "The painting that disappeared was a copy. The real one was swapped out last month, when it was sent for cleaning.",
+            "jp": "消えた絵は複製でした。本物は先月、洗浄に出された時にすり替えられたんです。"
+          },
+          {
+            "sp": 1,
+            "en": "The restorer, a man named Grant, made the copy. Paul helped him, but only because Grant was blackmailing him over a debt.",
+            "jp": "修復師のグラントという男が複製を作りました。ポールは手伝いましたが、グラントに借金をネタに脅されていたからです。"
+          },
+          {
+            "sp": 0,
+            "en": "Oh, poor Paul. And the delivery man at the back door?",
+            "jp": "まあ、かわいそうなポール。それで裏口の配達員は？"
+          },
+          {
+            "sp": 1,
+            "en": "Grant himself, in a fake courier outfit. He took the copy so everyone would think it was stolen last night, and hide the earlier swap.",
+            "jp": "グラント本人で、偽の配達員の服装でした。複製を持ち出して、皆に昨夜盗まれたと思わせ、前のすり替えを隠そうとしたんです。"
+          },
+          {
+            "sp": 0,
+            "en": "The police arrested him this afternoon, and the real painting was in his studio. Paul is cooperating and will likely be treated fairly.",
+            "jp": "警察が今日の午後に彼を逮捕し、本物の絵は彼のアトリエにありました。ポールは協力していて、公正に扱われるでしょう。"
+          },
+          {
+            "sp": 1,
+            "en": "Thank you both. I don't know what I would've done without you. Consider the case closed.",
+            "jp": "お二人ともありがとうございます。あなたたちがいなければどうしていたか。これで事件は解決ですね。"
+          }
+        ]
+      }
+    ]
+  }
+]

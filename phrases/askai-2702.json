@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "askai-2702",
+  "ver": 1,
+  "situation": "askai",
+  "sname": "AIに開発を頼むコツ",
+  "icon": "🤝",
+  "level": 3,
+  "title": "AIに開発を頼むコツの口語表現",
+  "items": [
+    {
+      "id": "askai-2702-001",
+      "en": "The result is never quite what I imagined.",
+      "jp": "結果が思い描いたものと少し違います。",
+      "speak": "The result is never quite what I imagined.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-002",
+      "en": "The request is too vague.",
+      "jp": "頼み方があいまいです。",
+      "speak": "The request is too vague.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-003",
+      "en": "Say what the app is for and who will use it.",
+      "jp": "アプリが何のためで、誰が使うかを伝えましょう。",
+      "speak": "Say what the app is for and who will use it.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-004",
+      "en": "The AI can't read your mind.",
+      "jp": "AIはあなたの心を読めません。",
+      "speak": "The AI can't read your mind.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-005",
+      "en": "Whatever you leave out, it fills in with a guess.",
+      "jp": "省いたものは、推測で埋められます。",
+      "speak": "Whatever you leave out, it fills in with a guess.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-006",
+      "en": "The more I write, the fewer surprises.",
+      "jp": "書くほど、驚きが減ります。",
+      "speak": "The more I write, the fewer surprises.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-007",
+      "en": "Short and specific beats long and rambling.",
+      "jp": "短く具体的なほうが、長くだらだらしたものに勝ります。",
+      "speak": "Short and specific beats long and rambling.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-008",
+      "en": "Say it up front.",
+      "jp": "最初に言いましょう。",
+      "speak": "Say it up front.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-009",
+      "en": "List your conditions.",
+      "jp": "条件を並べましょう。",
+      "speak": "List your conditions.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-010",
+      "en": "Single file, no build tools, works offline.",
+      "jp": "1ファイル、ビルドツールなし、オフラインで動く。",
+      "speak": "Single file, no build tools, works offline.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-011",
+      "en": "No external libraries.",
+      "jp": "外部ライブラリなし。",
+      "speak": "No external libraries.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-012",
+      "en": "Tell it the exact file names you want.",
+      "jp": "欲しいファイル名を正確に伝えましょう。",
+      "speak": "Tell it the exact file names you want.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-013",
+      "en": "Keep the existing names.",
+      "jp": "既存の名前は保ちましょう。",
+      "speak": "Keep the existing names.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-014",
+      "en": "Save the checklist and paste it every time.",
+      "jp": "チェックリストを保存して、毎回貼りましょう。",
+      "speak": "Save the checklist and paste it every time.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-015",
+      "en": "Ask for the smallest working version first.",
+      "jp": "まず最小で動く版を頼みましょう。",
+      "speak": "Ask for the smallest working version first.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-016",
+      "en": "Add one feature at a time.",
+      "jp": "機能をひとつずつ足しましょう。",
+      "speak": "Add one feature at a time.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-017",
+      "en": "When something breaks, you know where to look.",
+      "jp": "何か壊れても、どこを見ればいいか分かります。",
+      "speak": "When something breaks, you know where to look.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-018",
+      "en": "Small, test, repeat.",
+      "jp": "小さく、試して、繰り返す。",
+      "speak": "Small, test, repeat.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-019",
+      "en": "Paste the current version of the file.",
+      "jp": "現在のファイルを貼りましょう。",
+      "speak": "Paste the current version of the file.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-020",
+      "en": "Restate your conditions.",
+      "jp": "条件をもう一度伝えましょう。",
+      "speak": "Restate your conditions.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-021",
+      "en": "A fresh reminder keeps it on track.",
+      "jp": "改めて思い出させると、軌道に乗ります。",
+      "speak": "A fresh reminder keeps it on track.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-022",
+      "en": "It doesn't work.",
+      "jp": "動きません。",
+      "speak": "It doesn't work.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-023",
+      "en": "Say what you did, what you expected, and what happened.",
+      "jp": "何をして、何を期待し、何が起きたかを伝えましょう。",
+      "speak": "Say what you did, what you expected, and what happened.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-024",
+      "en": "Paste any error message from the console.",
+      "jp": "コンソールのエラーメッセージを貼りましょう。",
+      "speak": "Paste any error message from the console.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-025",
+      "en": "That's a request the AI can act on.",
+      "jp": "それならAIが対応できる依頼です。",
+      "speak": "That's a request the AI can act on.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-026",
+      "en": "Test the fix and ask what it changed.",
+      "jp": "修正を試して、何を変えたか聞きましょう。",
+      "speak": "Test the fix and ask what it changed.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-027",
+      "en": "If you can't explain it, you don't own it yet.",
+      "jp": "説明できないなら、まだあなたのものではありません。",
+      "speak": "If you can't explain it, you don't own it yet.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-028",
+      "en": "Keep asking why until it makes sense.",
+      "jp": "納得できるまでなぜと聞き続けましょう。",
+      "speak": "Keep asking why until it makes sense.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-029",
+      "en": "It's the fastest way to learn.",
+      "jp": "それが最速の学び方です。",
+      "speak": "It's the fastest way to learn.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-030",
+      "en": "Never paste keys, passwords, or tokens into a chat.",
+      "jp": "キー、パスワード、トークンをチャットに貼らないでください。",
+      "speak": "Never paste keys, passwords, or tokens into a chat.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-031",
+      "en": "If one leaks, anyone can use it.",
+      "jp": "漏れたら誰でも使えます。",
+      "speak": "If one leaks, anyone can use it.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-032",
+      "en": "Use a fake placeholder in the code.",
+      "jp": "コードには偽の仮の値を使いましょう。",
+      "speak": "Use a fake placeholder in the code.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-033",
+      "en": "Put the real one in later, on your own machine.",
+      "jp": "本物はあとで自分のマシンの中だけで入れましょう。",
+      "speak": "Put the real one in later, on your own machine.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-034",
+      "en": "Cancel it right away and make a new one.",
+      "jp": "すぐに無効にして新しいのを作りましょう。",
+      "speak": "Cancel it right away and make a new one.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-035",
+      "en": "Treat any key that left your hands as burned.",
+      "jp": "手を離れたキーは使えないものと考えましょう。",
+      "speak": "Treat any key that left your hands as burned.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-036",
+      "en": "Keep sensitive things out of the chat.",
+      "jp": "機密のものはチャットに入れないでください。",
+      "speak": "Keep sensitive things out of the chat.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-037",
+      "en": "It broke something that was working before.",
+      "jp": "前に動いていたものが壊れました。",
+      "speak": "It broke something that was working before.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-038",
+      "en": "Save a copy before every change.",
+      "jp": "変更の前に必ずコピーを保存しましょう。",
+      "speak": "Save a copy before every change.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-039",
+      "en": "A working version is worth more than a new feature.",
+      "jp": "動いている版は新しい機能より価値があります。",
+      "speak": "A working version is worth more than a new feature.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-040",
+      "en": "Every commit is a save point.",
+      "jp": "コミットはすべてセーブポイントです。",
+      "speak": "Every commit is a save point.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-041",
+      "en": "You can jump back to any earlier moment.",
+      "jp": "以前のどの時点にも戻れます。",
+      "speak": "You can jump back to any earlier moment.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-042",
+      "en": "Commit what works before asking for a change.",
+      "jp": "変更を頼む前に動くものをコミットしましょう。",
+      "speak": "Commit what works before asking for a change.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-043",
+      "en": "Write what the version does in the message.",
+      "jp": "その版が何をするかをメッセージに書きましょう。",
+      "speak": "Write what the version does in the message.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-044",
+      "en": "The AI is a bold helper, and git is the safety net.",
+      "jp": "AIは大胆な助手で、gitは安全網です。",
+      "speak": "The AI is a bold helper, and git is the safety net.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-045",
+      "en": "You're the one in charge.",
+      "jp": "責任者はあなたです。",
+      "speak": "You're the one in charge.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-046",
+      "en": "Be specific about what you want.",
+      "jp": "欲しいものを具体的に伝えましょう。",
+      "speak": "Be specific about what you want.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-047",
+      "en": "Now it knows what to aim for.",
+      "jp": "これで目標が分かります。",
+      "speak": "Now it knows what to aim for.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-048",
+      "en": "Names that change by surprise cause trouble.",
+      "jp": "不意に変わる名前は面倒を起こします。",
+      "speak": "Names that change by surprise cause trouble.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-049",
+      "en": "It saves the AI from reaching for the wrong tools.",
+      "jp": "AIが違うツールに手を伸ばすのを防げます。",
+      "speak": "It saves the AI from reaching for the wrong tools.",
+      "say": []
+    },
+    {
+      "id": "askai-2702-050",
+      "en": "I want to actually understand my own apps.",
+      "jp": "自分のアプリをきちんと理解したいです。",
+      "speak": "I want to actually understand my own apps.",
+      "say": []
+    }
+  ]
+}

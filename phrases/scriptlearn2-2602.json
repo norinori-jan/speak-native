@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "scriptlearn2-2602",
+  "ver": 1,
+  "situation": "scriptlearn2",
+  "sname": "スクリプトを自分で作る2",
+  "icon": "💻",
+  "level": 3,
+  "title": "スクリプトを自分で作る2の口語表現",
+  "items": [
+    {
+      "id": "scriptlearn2-2602-001",
+      "en": "That red text is a clue, not an attack.",
+      "jp": "あの赤い文字は手がかりであって、攻撃ではありません。",
+      "speak": "That red text is a clue, not an attack.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-002",
+      "en": "Don't close the window. Read the message.",
+      "jp": "ウィンドウを閉じないで、メッセージを読みましょう。",
+      "speak": "Don't close the window. Read the message.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-003",
+      "en": "Start with the first line, then the last.",
+      "jp": "最初の行、次に最後の行から見ましょう。",
+      "speak": "Start with the first line, then the last.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-004",
+      "en": "It says it cannot find the path.",
+      "jp": "パスが見つからないと言っています。",
+      "speak": "It says it cannot find the path.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-005",
+      "en": "Check the spelling of the folder name.",
+      "jp": "フォルダ名の綴りを確認しましょう。",
+      "speak": "Check the spelling of the folder name.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-006",
+      "en": "Check that you're in the right folder.",
+      "jp": "正しいフォルダにいるか確認しましょう。",
+      "speak": "Check that you're in the right folder.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-007",
+      "en": "Copy the exact error message and search for it.",
+      "jp": "エラーメッセージを正確にコピーして検索しましょう。",
+      "speak": "Copy the exact error message and search for it.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-008",
+      "en": "A precise message gets a precise answer.",
+      "jp": "正確なメッセージには正確な答えが返ります。",
+      "speak": "A precise message gets a precise answer.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-009",
+      "en": "Add means putting things into the box.",
+      "jp": "add は物を箱に入れることです。",
+      "speak": "Add means putting things into the box.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-010",
+      "en": "Commit means taping the box shut with a label.",
+      "jp": "commit は箱にテープを貼ってラベルを付けることです。",
+      "speak": "Commit means taping the box shut with a label.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-011",
+      "en": "Push sends it to GitHub.",
+      "jp": "push はGitHubに送ります。",
+      "speak": "Push sends it to GitHub.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-012",
+      "en": "Until you push, it only exists on your computer.",
+      "jp": "pushするまでは、自分のコンピュータの中にしかありません。",
+      "speak": "Until you push, it only exists on your computer.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-013",
+      "en": "I forgot to push.",
+      "jp": "pushを忘れました。",
+      "speak": "I forgot to push.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-014",
+      "en": "Run git status often.",
+      "jp": "git status をよく実行しましょう。",
+      "speak": "Run git status often.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-015",
+      "en": "A variable is a labeled drawer.",
+      "jp": "変数はラベルの付いた引き出しです。",
+      "speak": "A variable is a labeled drawer.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-016",
+      "en": "Put the path in once and use the name everywhere.",
+      "jp": "パスを一度入れて、名前をどこでも使いましょう。",
+      "speak": "Put the path in once and use the name everywhere.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-017",
+      "en": "Update one line instead of ten.",
+      "jp": "10行ではなく1行だけ直しましょう。",
+      "speak": "Update one line instead of ten.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-018",
+      "en": "Pick a clear name for it.",
+      "jp": "分かりやすい名前をつけましょう。",
+      "speak": "Pick a clear name for it.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-019",
+      "en": "Names are a gift to your future self.",
+      "jp": "名前は未来の自分への贈り物です。",
+      "speak": "Names are a gift to your future self.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-020",
+      "en": "Use a filter to pick only the files you want.",
+      "jp": "欲しいファイルだけ選ぶのにフィルターを使いましょう。",
+      "speak": "Use a filter to pick only the files you want.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-021",
+      "en": "A clear prefix keeps the filter safe.",
+      "jp": "はっきりした接頭辞はフィルターを安全にします。",
+      "speak": "A clear prefix keeps the filter safe.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-022",
+      "en": "You won't grab the wrong file by accident.",
+      "jp": "間違ったファイルを誤って取ることがありません。",
+      "speak": "You won't grab the wrong file by accident.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-023",
+      "en": "Sort by date and take the newest one.",
+      "jp": "日付で並べ替えて、一番新しいものを取りましょう。",
+      "speak": "Sort by date and take the newest one.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-024",
+      "en": "If nothing matches, stop and say so.",
+      "jp": "何も一致しなかったら、止めてそう伝えましょう。",
+      "speak": "If nothing matches, stop and say so.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-025",
+      "en": "A loop repeats the same action for each item.",
+      "jp": "ループは各項目に同じ動作を繰り返します。",
+      "speak": "A loop repeats the same action for each item.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-026",
+      "en": "You write it once.",
+      "jp": "書くのは1回だけです。",
+      "speak": "You write it once.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-027",
+      "en": "It's like a stamp you press on every page.",
+      "jp": "全ページに押すスタンプのようなものです。",
+      "speak": "It's like a stamp you press on every page.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-028",
+      "en": "Stop on the first error.",
+      "jp": "最初のエラーで止まりましょう。",
+      "speak": "Stop on the first error.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-029",
+      "en": "Print the name of each file as it goes.",
+      "jp": "進みながら各ファイル名を表示しましょう。",
+      "speak": "Print the name of each file as it goes.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-030",
+      "en": "Good scripts talk a little.",
+      "jp": "良いスクリプトは少し喋ります。",
+      "speak": "Good scripts talk a little.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-031",
+      "en": "I'm about to delete some old files.",
+      "jp": "古いファイルを削除しようとしています。",
+      "speak": "I'm about to delete some old files.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-032",
+      "en": "Nervous is smart.",
+      "jp": "緊張は賢さです。",
+      "speak": "Nervous is smart.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-033",
+      "en": "Do a dry run first.",
+      "jp": "まず予行演習をしましょう。",
+      "speak": "Do a dry run first.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-034",
+      "en": "It only shows what would happen.",
+      "jp": "何が起こるかだけを表示します。",
+      "speak": "It only shows what would happen.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-035",
+      "en": "Read the list carefully.",
+      "jp": "一覧をよく読みましょう。",
+      "speak": "Read the list carefully.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-036",
+      "en": "Keep the backup until you're sure.",
+      "jp": "確信するまでバックアップを残しましょう。",
+      "speak": "Keep the backup until you're sure.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-037",
+      "en": "Add a question, like are you sure?",
+      "jp": "『本当にいいですか？』という確認を入れましょう。",
+      "speak": "Add a question, like are you sure?",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-038",
+      "en": "A two-second question prevents a two-week problem.",
+      "jp": "2秒の質問が2週間の問題を防ぎます。",
+      "speak": "A two-second question prevents a two-week problem.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-039",
+      "en": "Save the commands in a script file.",
+      "jp": "コマンドをスクリプトファイルに保存しましょう。",
+      "speak": "Save the commands in a script file.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-040",
+      "en": "Run the whole thing with one line.",
+      "jp": "ひと行で全部を実行できます。",
+      "speak": "Run the whole thing with one line.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-041",
+      "en": "Put it in a folder you back up.",
+      "jp": "バックアップを取っているフォルダに置きましょう。",
+      "speak": "Put it in a folder you back up.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-042",
+      "en": "Store it in a repository so the history is saved.",
+      "jp": "履歴も残るよう、リポジトリに入れましょう。",
+      "speak": "Store it in a repository so the history is saved.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-043",
+      "en": "Write a short comment at the top.",
+      "jp": "一番上に短いコメントを書きましょう。",
+      "speak": "Write a short comment at the top.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-044",
+      "en": "Say what it does and when you made it.",
+      "jp": "何をするか、いつ作ったかを書きましょう。",
+      "speak": "Say what it does and when you made it.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-045",
+      "en": "It worked on the first try, mostly.",
+      "jp": "ほとんど一発で動きました。",
+      "speak": "It worked on the first try, mostly.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-046",
+      "en": "Improve one old script a little.",
+      "jp": "古いスクリプトをひとつ少し改善しましょう。",
+      "speak": "Improve one old script a little.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-047",
+      "en": "Every improvement teaches you something.",
+      "jp": "改善のたびに何かを学べます。",
+      "speak": "Every improvement teaches you something.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-048",
+      "en": "Automate it one piece at a time.",
+      "jp": "一度にひとつずつ自動化しましょう。",
+      "speak": "Automate it one piece at a time.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-049",
+      "en": "Small steps, and keep a backup.",
+      "jp": "小さな歩幅で、バックアップを忘れずに。",
+      "speak": "Small steps, and keep a backup.",
+      "say": []
+    },
+    {
+      "id": "scriptlearn2-2602-050",
+      "en": "You're going to be great at this.",
+      "jp": "あなたはこれが得意になります。",
+      "speak": "You're going to be great at this.",
+      "say": []
+    }
+  ]
+}

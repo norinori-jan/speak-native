@@ -3531,7 +3531,14 @@ function loadPackagedConversation(){
   {id:'aiclass5',file:'aiclass5-2305.json'},
   {id:'housing',file:'housing-0801.json'},
   {id:'cyberteam',file:'cyberteam-2401.json'},
-  {id:'cyberteam2',file:'cyberteam2-2402.json'}
+  {id:'cyberteam2',file:'cyberteam2-2402.json'},
+  {id:'mystery',file:'mystery-2501.json'},
+  {id:'scriptlearn',file:'scriptlearn-2601.json'},
+  {id:'scriptlearn2',file:'scriptlearn2-2602.json'},
+  {id:'apptips',file:'apptips-2701.json'},
+  {id:'askai',file:'askai-2702.json'},
+  {id:'gittrouble',file:'gittrouble-2801.json'},
+  {id:'offline',file:'offline-2802.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

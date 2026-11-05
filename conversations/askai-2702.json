@@ -1,0 +1,286 @@
+[
+  {
+    "id": "askai",
+    "ic": "🤝",
+    "n": "AIに開発を頼むコツ",
+    "hint": "Mia and Ken practice asking AI for development help: clear goals, conditions, small requests, reporting problems, never pasting secrets, and keeping backups",
+    "level": 3,
+    "keywords": [
+      "prompt",
+      "secrets",
+      "backup"
+    ],
+    "d": [
+      {
+        "t": "目的を一文で伝える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, when I ask the AI to build something, the result is never quite what I imagined. What am I doing wrong?",
+            "jp": "ケン、AIに何か作ってもらうと、思い描いたものと違うものが返ってきます。何が悪いんでしょう？"
+          },
+          {
+            "sp": 1,
+            "en": "Probably the request is too vague. Start with one sentence that says what the app is for and who will use it.",
+            "jp": "おそらく頼み方があいまいなんです。アプリが何のためで、誰が使うのかを、一文で伝えることから始めましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "Like, 'a to-do app'?",
+            "jp": "たとえば『ToDoアプリ』ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Closer to, 'a simple to-do app for me, used on an iPhone, with big buttons and no sign-in.' Now it knows what to aim for.",
+            "jp": "もっと、『自分用で、iPhoneで使う、ボタンが大きくてログインなしのシンプルなToDoアプリ』のようにです。これで目標が分かります。"
+          },
+          {
+            "sp": 0,
+            "en": "That's so much more specific.",
+            "jp": "ずっと具体的ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "The AI can't read your mind. Whatever you leave out, it fills in with a guess.",
+            "jp": "AIはあなたの心を読めません。省いたものは、推測で埋めます。"
+          },
+          {
+            "sp": 0,
+            "en": "So the more I write, the fewer surprises.",
+            "jp": "じゃあ書くほど、驚きが減るんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Up to a point. Short and specific beats long and rambling.",
+            "jp": "ある程度までは。短くて具体的なほうが、長くてだらだらしたものより良いです。"
+          }
+        ]
+      },
+      {
+        "t": "条件を先に伝える",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, last time the AI gave me a project with ten files and a bunch of tools I don't know. I wanted just one file.",
+            "jp": "ケン、前回AIが、10個のファイルと知らないツールだらけのプロジェクトを返してきました。私はファイル1つだけがほしかったんです。"
+          },
+          {
+            "sp": 1,
+            "en": "Then say so up front. List your conditions: single file, no build tools, works offline, runs on a phone.",
+            "jp": "それなら最初に言いましょう。条件を並べてください。1ファイル、ビルドツールなし、オフラインで動く、スマホで動く。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I list what I don't want, too?",
+            "jp": "望まないことも書くべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, 'no external libraries' is very helpful. It saves the AI from reaching for tools you'd never choose.",
+            "jp": "はい、『外部ライブラリなし』はとても役立ちます。あなたが選ばないツールにAIが手を伸ばすのを防げます。"
+          },
+          {
+            "sp": 0,
+            "en": "What about the file names? I always get confused.",
+            "jp": "ファイル名はどうですか？いつも混乱します。"
+          },
+          {
+            "sp": 1,
+            "en": "Tell it the exact names you want, and ask it to keep the existing ones. Names that change by surprise cause real trouble.",
+            "jp": "欲しい名前を正確に伝えて、既存の名前は保つよう頼んでください。不意に変わる名前は、本当に面倒を起こします。"
+          },
+          {
+            "sp": 0,
+            "en": "I'll write my conditions as a short checklist at the start.",
+            "jp": "最初に、条件を短いチェックリストにして書きます。"
+          },
+          {
+            "sp": 1,
+            "en": "Good. You can even save that checklist and paste it every time.",
+            "jp": "いいですね。そのチェックリストを保存して、毎回貼ることもできます。"
+          }
+        ]
+      },
+      {
+        "t": "小さく頼んで、少しずつ育てる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I asked for a whole app with ten features in one request, and the result was a mess.",
+            "jp": "ケン、10個の機能を持つアプリ全体をひとつの依頼で頼んだら、ぐちゃぐちゃな結果でした。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a common trap. Ask for the smallest working version first, with just one feature.",
+            "jp": "よくある落とし穴です。まず、機能をひとつだけの、最小で動くものを頼みましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "And after that works?",
+            "jp": "それが動いたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Add one more feature, and test again. Each step is small, so when something breaks, you know exactly where to look.",
+            "jp": "もうひとつ機能を足して、また試します。各段階が小さいので、何か壊れても、どこを見ればいいかが分かります。"
+          },
+          {
+            "sp": 0,
+            "en": "It's the same advice you gave me for scripts.",
+            "jp": "スクリプトの時に私に言ったのと同じ助言ですね。"
+          },
+          {
+            "sp": 1,
+            "en": "It is. Building anything big works the same way: small, test, repeat.",
+            "jp": "そうです。大きなものを作るのは、どれも同じです。小さく、試して、繰り返す。"
+          },
+          {
+            "sp": 0,
+            "en": "What if the AI forgets earlier parts as the chat gets long?",
+            "jp": "チャットが長くなって、AIが前の部分を忘れたらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Paste the current version of the file, and restate your conditions. A fresh reminder keeps it on track.",
+            "jp": "現在のファイルを貼って、条件をもう一度伝えます。改めて思い出させると、軌道に乗ります。"
+          }
+        ]
+      },
+      {
+        "t": "結果を確認して直してもらう",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the AI gave me the code, and I pasted it in, but the button doesn't work. What do I tell it now?",
+            "jp": "ケン、AIがコードをくれて貼ったのですが、ボタンが動きません。今、何と伝えればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Say exactly what you did, what you expected, and what happened. And paste any error message from the console.",
+            "jp": "何をしたか、何を期待したか、何が起きたかを正確に。それとコンソールのエラーメッセージも貼ってください。"
+          },
+          {
+            "sp": 0,
+            "en": "So not just 'it doesn't work.'",
+            "jp": "つまり『動かない』だけではだめなんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. 'I tapped Add, expected a new item, and nothing appeared. The console says undefined.' That's a request the AI can act on.",
+            "jp": "そうです。『追加を押して、新しい項目が出るはずが、何も出ません。コンソールには undefined とあります』。それならAIが対応できる依頼です。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I just trust the fix it gives me?",
+            "jp": "出してくれた修正は、そのまま信用していいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Test it, and ask it to explain what it changed. If you can't explain the fix, you don't really own the app yet.",
+            "jp": "試して、何を変えたのか説明してもらってください。修正を説明できないなら、そのアプリはまだ本当にあなたのものではありません。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a good rule. I want to actually understand my own apps.",
+            "jp": "いい規則です。自分のアプリを、きちんと理解したいです。"
+          },
+          {
+            "sp": 1,
+            "en": "Then keep asking 'why' until it makes sense. It's the fastest way to learn.",
+            "jp": "じゃあ納得できるまで『なぜ』と聞き続けてください。それが最速の学び方です。"
+          }
+        ]
+      },
+      {
+        "t": "秘密を貼らない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, the AI asked for my API key so it could test the code. Should I give it?",
+            "jp": "ケン、AIがコードをテストするために、私のAPIキーを求めてきました。渡すべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Never. Don't paste keys, passwords, or tokens into any chat. If one leaks, anyone can use it and run up your bill.",
+            "jp": "絶対にだめです。キー、パスワード、トークンをどのチャットにも貼らないでください。漏れたら、誰でも使えて、請求額が膨らみます。"
+          },
+          {
+            "sp": 0,
+            "en": "But then how can the AI help with that part?",
+            "jp": "でもそれなら、その部分でAIはどう手伝えますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Use a fake placeholder in the code, like 'YOUR_KEY_HERE,' and put the real one in later, only on your own machine.",
+            "jp": "コードには『YOUR_KEY_HERE』のような偽の仮の値を使って、本物は、あとで自分のマシンの中だけで入れます。"
+          },
+          {
+            "sp": 0,
+            "en": "What if I already pasted a key by accident?",
+            "jp": "もう間違って貼ってしまっていたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Cancel it right away and make a new one. Treat any key that left your hands as burned.",
+            "jp": "すぐに無効にして、新しいのを作ってください。手を離れたキーは、使えないものと考えてください。"
+          },
+          {
+            "sp": 0,
+            "en": "The same goes for private notes and personal data, right?",
+            "jp": "個人的なメモや個人情報も同じですよね？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, keep sensitive things out of the chat entirely. The AI doesn't need them to help you with the code.",
+            "jp": "はい、機密のものはチャットから完全に外してください。コードを手伝うのに、AIはそれらを必要としません。"
+          }
+        ]
+      },
+      {
+        "t": "バックアップと履歴を残す",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I asked the AI to improve my app, and it broke something that was working before. Now I can't get it back.",
+            "jp": "ケン、AIにアプリの改善を頼んだら、前は動いていたものが壊れました。元に戻せません。"
+          },
+          {
+            "sp": 1,
+            "en": "That's why we save a copy before every change. A working version is worth more than a new feature.",
+            "jp": "だから変更の前には必ずコピーを保存します。動いている版は、新しい機能より価値があります。"
+          },
+          {
+            "sp": 0,
+            "en": "Is the backup the same thing as git?",
+            "jp": "バックアップはgitと同じものですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Git is the better version. Every commit is a save point, so you can jump back to any earlier moment.",
+            "jp": "gitのほうが優れた版です。コミットはすべてセーブポイントなので、以前のどの時点にも戻れます。"
+          },
+          {
+            "sp": 0,
+            "en": "So before I ask for a change, I commit what works.",
+            "jp": "じゃあ変更を頼む前に、動いているものをコミットするんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. And write a message that says what the version does, so you can find the right one later.",
+            "jp": "その通り。そして、その版が何をするかをメッセージに書いて、あとで正しいものを探せるようにします。"
+          },
+          {
+            "sp": 0,
+            "en": "It sounds like the AI is a bold helper, and git is my safety net.",
+            "jp": "AIは大胆な助手で、gitは私の安全網のようですね。"
+          },
+          {
+            "sp": 1,
+            "en": "That's a perfect way to put it. Bold helper, safety net, and you're the one in charge.",
+            "jp": "完璧な言い方です。大胆な助手と、安全網と、そして責任者はあなたです。"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,241 @@
+[
+  {
+    "id": "scriptlearn",
+    "ic": "💻",
+    "n": "スクリプトを自分で作る",
+    "hint": "Mia and Ken practice how to write your own scripts: describe the routine, one line at a time, stop on failure, and test in small steps",
+    "level": 3,
+    "keywords": [
+      "script",
+      "PowerShell",
+      "practice"
+    ],
+    "d": [
+      {
+        "t": "手作業を日本語で書き出す",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'd like to write my own scripts instead of always asking for help. Where should I start?",
+            "jp": "ケン、いつも頼むのではなく、自分でスクリプトを書けるようになりたいです。どこから始めればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Start without any code. Write down in plain words what you do by hand, one step at a time.",
+            "jp": "コードなしで始めましょう。手作業でしていることを、普通の言葉で一歩ずつ書き出します。"
+          },
+          {
+            "sp": 0,
+            "en": "Like what? Give me an example.",
+            "jp": "たとえば？例をください。"
+          },
+          {
+            "sp": 1,
+            "en": "Say you push an app to GitHub. Step one, take the files from Downloads. Step two, put them in the repository. Step three, test. Step four, push.",
+            "jp": "アプリをGitHubに上げるとします。1つ目、Downloadsからファイルを取る。2つ目、リポジトリに置く。3つ目、テスト。4つ目、push。"
+          },
+          {
+            "sp": 0,
+            "en": "That's just my normal routine. It doesn't feel like programming at all.",
+            "jp": "それはただの普段の流れです。プログラミングには全然感じません。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly, and that's the point. A script is only your routine, written down so a computer can repeat it.",
+            "jp": "まさにそれが大事な点です。スクリプトは、あなたの普段の流れを、コンピュータが繰り返せるように書き下ろしたものにすぎません。"
+          },
+          {
+            "sp": 0,
+            "en": "So if I can't describe the steps, I can't write the script.",
+            "jp": "じゃあ手順を説明できなければ、スクリプトも書けないんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Most of the work is thinking clearly. The typing comes second.",
+            "jp": "そうです。仕事の大部分は、はっきり考えることです。タイピングは二番目です。"
+          }
+        ]
+      },
+      {
+        "t": "一行ずつコマンドにする",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, I've got my four steps written down. Now how do I turn them into commands?",
+            "jp": "分かりました、4つの手順は書きました。次は、どうやってコマンドにしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "One line at a time. Each step becomes a single command. Don't try to be clever at the beginning.",
+            "jp": "一行ずつです。各手順がひとつのコマンドになります。最初から賢くしようとしないでください。"
+          },
+          {
+            "sp": 0,
+            "en": "What would step two look like, putting the files in the repository?",
+            "jp": "2つ目の手順、リポジトリにファイルを置くのは、どうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Copy-Item. You say what to copy and where to copy it to. That's all.",
+            "jp": "Copy-Item です。何をコピーして、どこにコピーするかを書く。それだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "And for moving into the folder first?",
+            "jp": "それと、先にフォルダに移動するのは？"
+          },
+          {
+            "sp": 1,
+            "en": "Use cd. In the beginning, cd, Copy-Item, and a few git commands are plenty.",
+            "jp": "cd を使います。最初は、cd と Copy-Item と、いくつかの git コマンドで十分です。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a much shorter list than I expected.",
+            "jp": "思っていたよりずっと短い一覧です。"
+          },
+          {
+            "sp": 1,
+            "en": "Most scripts are built from a handful of simple pieces. You'll repeat the same few moves all the time.",
+            "jp": "ほとんどのスクリプトは、ひと握りの単純な部品でできています。同じ数個の動きを、何度も繰り返すことになります。"
+          }
+        ]
+      },
+      {
+        "t": "失敗したら止める",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my script ran, but one step failed in the middle, and it kept going anyway. Now my files are in a mess.",
+            "jp": "ケン、スクリプトは動きましたが、途中で1つの手順が失敗したのに、そのまま続けてしまいました。今ファイルがぐちゃぐちゃです。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the most common beginner problem. A script has to stop when something goes wrong, or it makes things worse.",
+            "jp": "それは初心者が一番よく陥る問題です。スクリプトは、何かおかしい時に止まらなければ、状況を悪くします。"
+          },
+          {
+            "sp": 0,
+            "en": "How do I tell it to stop?",
+            "jp": "どうやって止まるように伝えますか？"
+          },
+          {
+            "sp": 1,
+            "en": "After each step, check whether it worked. If it didn't, throw an error with a clear message, and the script ends right there.",
+            "jp": "各手順の後に、うまくいったか確認します。うまくいかなければ、はっきりしたメッセージ付きでエラーを投げて、スクリプトをそこで終わらせます。"
+          },
+          {
+            "sp": 0,
+            "en": "What does the message need to say?",
+            "jp": "メッセージには何を書く必要がありますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Say what failed in plain words, like 'copy failed, check the folder name.' Future you will be grateful.",
+            "jp": "何が失敗したかを、『コピーに失敗しました、フォルダ名を確認してください』のように普通の言葉で。未来のあなたが感謝します。"
+          },
+          {
+            "sp": 0,
+            "en": "So a good script is one that fails loudly, not quietly.",
+            "jp": "つまり良いスクリプトは、静かにではなく、大きな声で失敗するものなんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. A loud failure is easy to fix. A quiet one hides until it's too late.",
+            "jp": "その通り。大きな失敗は直しやすいです。静かな失敗は、手遅れになるまで隠れています。"
+          }
+        ]
+      },
+      {
+        "t": "一度に全部やらない",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I wrote the whole script at once, and I'm scared to run it. What if it pushes something I didn't want?",
+            "jp": "ケン、スクリプトを一度に全部書いたのですが、実行するのが怖いです。望んでいないものをpushしたらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Good instinct. Never run everything at once the first time. Delete the push line, and run only the safe steps.",
+            "jp": "いい勘です。初回に全部を一度に実行してはいけません。pushの行を消して、安全な手順だけ実行しましょう。"
+          },
+          {
+            "sp": 0,
+            "en": "And if the safe steps work?",
+            "jp": "安全な手順がうまくいったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Then add one new line, run it again, and check the result. Add a step, test a step, and repeat.",
+            "jp": "それなら新しい行を1つ足して、もう一度実行して、結果を確認します。手順を足して、テストして、繰り返します。"
+          },
+          {
+            "sp": 0,
+            "en": "It sounds slow, but I guess it's faster than cleaning up a disaster.",
+            "jp": "遅く聞こえますが、大惨事の後片付けよりは速いでしょうね。"
+          },
+          {
+            "sp": 1,
+            "en": "Much faster. Small steps let you find the problem immediately, because you know the last thing you changed.",
+            "jp": "ずっと速いです。小さな歩幅なら、最後に変えたものが分かるので、問題をすぐ見つけられます。"
+          },
+          {
+            "sp": 0,
+            "en": "Should I keep a backup, just in case?",
+            "jp": "念のため、バックアップは取っておくべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Always, especially before anything that deletes or overwrites files. A backup turns a panic into a minor annoyance.",
+            "jp": "いつでも、特にファイルを削除したり上書きしたりするものの前に。バックアップは、パニックを小さな面倒に変えてくれます。"
+          }
+        ]
+      },
+      {
+        "t": "最小の練習スクリプト",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, Ken, I'm ready to practice. What's the smallest script I can try without breaking anything?",
+            "jp": "よし、ケン、練習する準備ができました。何も壊さずに試せる、一番小さなスクリプトは何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Try this. Save the path to your Downloads folder, then list every file there that starts with a certain prefix.",
+            "jp": "これを試してください。Downloadsフォルダの場所を保存して、そこにある、特定の接頭辞で始まるファイルをすべて一覧表示します。"
+          },
+          {
+            "sp": 0,
+            "en": "So it only looks. It doesn't copy, delete, or change anything.",
+            "jp": "つまり見るだけなんですね。コピーも削除も変更もしません。"
+          },
+          {
+            "sp": 1,
+            "en": "Right, it's completely safe. It just prints the file names and sizes on the screen.",
+            "jp": "そうです、完全に安全です。ファイル名とサイズを画面に表示するだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "And after that works, what's next?",
+            "jp": "それがうまくいったら、次は何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Add a Copy-Item line, run it, and then check the repository with git status to see what changed.",
+            "jp": "Copy-Item の行を足して、実行して、gitのstatusでリポジトリを確認して、何が変わったか見ます。"
+          },
+          {
+            "sp": 0,
+            "en": "One line at a time, just like we said.",
+            "jp": "一行ずつ、さっき言った通りですね。"
+          },
+          {
+            "sp": 1,
+            "en": "That's the whole method. If you want, we can rewrite one of your old scripts together, line by line.",
+            "jp": "それが方法のすべてです。よければ、あなたの古いスクリプトのひとつを、一緒に一行ずつ書き直しましょう。"
+          }
+        ]
+      }
+    ]
+  }
+]

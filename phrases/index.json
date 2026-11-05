@@ -1,5 +1,5 @@
 {
-"updated": 1793787187773,
+"updated": 1793871499600,
 "packs": [
 {
 "id": "airport-0001",
@@ -624,6 +624,62 @@
 "count": 50,
 "situation": "cyberteam2",
 "sname": "ネットワーク防衛ドラマ2"
+},
+{
+"id": "mystery-2501",
+"file": "mystery-2501.json",
+"ver": 1,
+"count": 50,
+"situation": "mystery",
+"sname": "探偵事務所ドラマ"
+},
+{
+"id": "scriptlearn-2601",
+"file": "scriptlearn-2601.json",
+"ver": 1,
+"count": 50,
+"situation": "scriptlearn",
+"sname": "スクリプトを自分で作る"
+},
+{
+"id": "scriptlearn2-2602",
+"file": "scriptlearn2-2602.json",
+"ver": 1,
+"count": 50,
+"situation": "scriptlearn2",
+"sname": "スクリプトを自分で作る2"
+},
+{
+"id": "apptips-2701",
+"file": "apptips-2701.json",
+"ver": 1,
+"count": 50,
+"situation": "apptips",
+"sname": "アプリの作り方"
+},
+{
+"id": "askai-2702",
+"file": "askai-2702.json",
+"ver": 1,
+"count": 50,
+"situation": "askai",
+"sname": "AIに開発を頼むコツ"
+},
+{
+"id": "gittrouble-2801",
+"file": "gittrouble-2801.json",
+"ver": 1,
+"count": 50,
+"situation": "gittrouble",
+"sname": "Gitでつまずいた時"
+},
+{
+"id": "offline-2802",
+"file": "offline-2802.json",
+"ver": 1,
+"count": 50,
+"situation": "offline",
+"sname": "オフラインで動くアプリ"
 }
 ]
 }

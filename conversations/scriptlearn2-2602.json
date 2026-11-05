@@ -1,0 +1,377 @@
+[
+  {
+    "id": "scriptlearn2",
+    "ic": "💻",
+    "n": "スクリプトを自分で作る2",
+    "hint": "Part two: Mia and Ken practice reading errors, git basics, variables, filters, loops, dry runs, saving scripts, and growing your own scripts",
+    "level": 3,
+    "keywords": [
+      "script",
+      "git",
+      "loop"
+    ],
+    "d": [
+      {
+        "t": "エラーメッセージを読む",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my script printed a wall of red text, and I panicked. I just closed the window.",
+            "jp": "ケン、スクリプトが赤い文字をずらっと出して、慌てました。思わずウィンドウを閉じてしまいました。"
+          },
+          {
+            "sp": 1,
+            "en": "Don't close it next time. That red text is the computer telling you exactly what went wrong. It's a clue, not an attack.",
+            "jp": "次は閉じないでください。あの赤い文字は、何がまずかったかをコンピュータが正確に教えてくれているものです。手がかりであって、攻撃ではありません。"
+          },
+          {
+            "sp": 0,
+            "en": "But it's so long. Where am I supposed to look?",
+            "jp": "でもとても長いです。どこを見ればいいんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Start with the first line, and then the last. The first usually says what failed, and the last often says where.",
+            "jp": "最初の行から、それから最後の行を見ます。最初はたいてい何が失敗したかを、最後はどこでかを教えてくれます。"
+          },
+          {
+            "sp": 0,
+            "en": "Here it says 'cannot find path.' So the folder name is probably wrong.",
+            "jp": "ここに『パスが見つかりません』とあります。つまりフォルダ名が間違っているのかもしれません。"
+          },
+          {
+            "sp": 1,
+            "en": "Good reading. Check the spelling, and check whether you're in the right folder when you run it.",
+            "jp": "いい読み方です。綴りを確認して、実行する時に正しいフォルダにいるかも確認してください。"
+          },
+          {
+            "sp": 0,
+            "en": "And if I still can't figure it out?",
+            "jp": "それでも分からなかったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Copy the exact error message, and search for it, or ask for help. A precise message gets a precise answer.",
+            "jp": "エラーメッセージを正確にコピーして、検索するか、助けを求めます。正確なメッセージには、正確な答えが返ってきます。"
+          }
+        ]
+      },
+      {
+        "t": "Gitの基本の流れ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I always type the same three git commands, and honestly, I don't fully understand them. Can you explain?",
+            "jp": "ケン、いつも同じ3つのgitコマンドを打っているのですが、正直、完全には理解していません。説明してもらえますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sure. Think of it like mailing a package. First, add means putting things into the box.",
+            "jp": "もちろん。荷物を送ることに例えましょう。まず add は、物を箱に入れることです。"
+          },
+          {
+            "sp": 0,
+            "en": "Then commit is taping the box shut and writing a label on it?",
+            "jp": "それから commit は、箱にテープを貼って、ラベルを書くことですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. The label is your message, like 'fix typo in the title.' It tells future you what's inside.",
+            "jp": "その通り。ラベルがメッセージで、『タイトルの誤字を修正』のようなものです。未来のあなたに、中身を伝えます。"
+          },
+          {
+            "sp": 0,
+            "en": "And push is handing it to the delivery truck.",
+            "jp": "そして push は、配送トラックに渡すことですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right, push sends the box to GitHub. Until you push, it only exists on your own computer.",
+            "jp": "そうです、push は箱をGitHubに送ります。pushするまでは、自分のコンピュータの中にしかありません。"
+          },
+          {
+            "sp": 0,
+            "en": "So that's why my changes weren't online last night. I forgot to push.",
+            "jp": "だから昨夜、変更がネットに出ていなかったんですね。pushを忘れていました。"
+          },
+          {
+            "sp": 1,
+            "en": "That happens to everyone. Run git status often, and it'll tell you what's waiting to be sent.",
+            "jp": "誰にでもあります。git status をよく実行すれば、送られるのを待っているものを教えてくれます。"
+          }
+        ]
+      },
+      {
+        "t": "変数とパス",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, why do scripts keep saving a path in something called a variable? It seems like extra work.",
+            "jp": "ケン、どうしてスクリプトは、パスを変数というものに保存するんですか？余計な手間に見えます。"
+          },
+          {
+            "sp": 1,
+            "en": "Think of a variable as a labeled drawer. You put the path in once, and then refer to it by name everywhere.",
+            "jp": "変数は、ラベルの付いた引き出しだと思ってください。パスを一度入れて、あとはどこでも名前で呼びます。"
+          },
+          {
+            "sp": 0,
+            "en": "And what's the benefit?",
+            "jp": "それで利点は何ですか？"
+          },
+          {
+            "sp": 1,
+            "en": "If the folder changes, you update one line instead of ten. It saves time and prevents mistakes.",
+            "jp": "フォルダが変わったら、10行ではなく1行だけ直せば済みます。時間を節約して、ミスも防げます。"
+          },
+          {
+            "sp": 0,
+            "en": "Can I give the drawer any name?",
+            "jp": "引き出しには好きな名前をつけていいんですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, but pick a clear one. 'Downloads folder' is far better than 'x,' because you'll be reading it a month from now.",
+            "jp": "はい、でも分かりやすい名前を。『Downloadsフォルダ』は『x』よりずっといいです。1か月後に自分が読むのですから。"
+          },
+          {
+            "sp": 0,
+            "en": "So names are a gift to my future self.",
+            "jp": "つまり名前は、未来の自分への贈り物なんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Clear names make a script almost explain itself.",
+            "jp": "その通り。分かりやすい名前は、スクリプトをほとんど自己説明にしてくれます。"
+          }
+        ]
+      },
+      {
+        "t": "ファイルを探して絞り込む",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, my Downloads folder has hundreds of files. How can the script pick only the ones I want?",
+            "jp": "ケン、Downloadsフォルダに何百ものファイルがあります。スクリプトに欲しいものだけを選ばせるには、どうすればいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Use a filter. You give it a pattern, like 'every file that starts with this prefix,' and it returns only the matches.",
+            "jp": "フィルターを使います。『この接頭辞で始まるファイルすべて』のような型を渡すと、一致するものだけが返ってきます。"
+          },
+          {
+            "sp": 0,
+            "en": "That's why you always ask me to name files with a prefix.",
+            "jp": "だからいつも、ファイル名に接頭辞を付けるように言うんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, a clear prefix makes the filter simple and safe. You won't grab the wrong file by accident.",
+            "jp": "はい、はっきりした接頭辞なら、フィルターが単純で安全になります。間違ったファイルを誤って取ることがありません。"
+          },
+          {
+            "sp": 0,
+            "en": "What if two files match, like an old version and a new one?",
+            "jp": "一致するファイルが2つ、たとえば古い版と新しい版があったらどうしますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Sort them by date and take the newest one. That's what I do in my own scripts.",
+            "jp": "日付で並べ替えて、一番新しいものを取ります。私は自分のスクリプトでそうしています。"
+          },
+          {
+            "sp": 0,
+            "en": "And if nothing matches at all?",
+            "jp": "何も一致しなかったら？"
+          },
+          {
+            "sp": 1,
+            "en": "Then stop and say so clearly. A script that continues with nothing is a script that breaks things later.",
+            "jp": "止まって、はっきり伝えます。何もないまま続けるスクリプトは、あとで物を壊すスクリプトです。"
+          }
+        ]
+      },
+      {
+        "t": "くり返しを任せる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I have to copy five files into five different folders. Do I really have to write five copy lines?",
+            "jp": "ケン、5つのファイルを5つの別々のフォルダにコピーしなければなりません。本当にコピーの行を5つ書かないといけませんか？"
+          },
+          {
+            "sp": 1,
+            "en": "Not necessarily. A loop can repeat the same action for each item in a list. You write it once.",
+            "jp": "必ずしもそうではありません。ループなら、一覧の各項目に同じ動作を繰り返せます。1回書くだけです。"
+          },
+          {
+            "sp": 0,
+            "en": "So I make a list of the five files, and the loop handles them one by one.",
+            "jp": "じゃあ5つのファイルの一覧を作って、ループが1つずつ処理するんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Same instructions, new item each time. It's like a stamp you press on every page.",
+            "jp": "そうです。同じ指示で、毎回新しい項目。全ページに押すスタンプのようなものです。"
+          },
+          {
+            "sp": 0,
+            "en": "What if the loop fails halfway through?",
+            "jp": "ループが途中で失敗したらどうなりますか？"
+          },
+          {
+            "sp": 1,
+            "en": "That's why you check each round and stop on the first error. Otherwise, you won't know how far it got.",
+            "jp": "だから毎回確認して、最初のエラーで止まります。そうしないと、どこまで進んだか分かりません。"
+          },
+          {
+            "sp": 0,
+            "en": "And I should print the name of each file as it goes, so I can follow along?",
+            "jp": "それと、進みながら各ファイル名を表示して、様子を追えるようにするべきですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Perfect. Good scripts talk a little, so you always know what they're doing.",
+            "jp": "完璧です。良いスクリプトは少し喋るので、何をしているかがいつも分かります。"
+          }
+        ]
+      },
+      {
+        "t": "まず確認、それから実行",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I'm about to run a script that deletes old files. I'm honestly a bit nervous.",
+            "jp": "ケン、古いファイルを削除するスクリプトを実行しようとしています。正直、少し緊張しています。"
+          },
+          {
+            "sp": 1,
+            "en": "Good, nervous is smart. Before anything gets deleted, do a dry run. Many commands have a mode that only shows what would happen.",
+            "jp": "いいですね、緊張は賢さです。何か削除される前に、予行演習をします。多くのコマンドには、何が起こるかだけを表示するモードがあります。"
+          },
+          {
+            "sp": 0,
+            "en": "So it pretends to delete, and just lists the files?",
+            "jp": "つまり削除するふりをして、ファイルを一覧表示するだけですか？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. Read the list carefully. If you see a file you'd miss, you've just saved yourself a long afternoon.",
+            "jp": "その通り。一覧をよく読んでください。惜しいファイルが見つかったら、長い午後の苦労を省けたことになります。"
+          },
+          {
+            "sp": 0,
+            "en": "And what if everything on the list looks right?",
+            "jp": "一覧がすべて正しく見えたら？"
+          },
+          {
+            "sp": 1,
+            "en": "Then run it for real, and keep the backup until you're sure everything is fine.",
+            "jp": "それなら本番で実行して、すべて問題ないと確信するまでバックアップを残しておきます。"
+          },
+          {
+            "sp": 0,
+            "en": "Can I also add a question, like 'are you sure?' before it deletes?",
+            "jp": "削除する前に『本当にいいですか？』のような確認を入れることもできますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, and for anything risky, I'd recommend it. A two-second question can prevent a two-week problem.",
+            "jp": "はい、危険なものには勧めます。2秒の質問が、2週間の問題を防げます。"
+          }
+        ]
+      },
+      {
+        "t": "スクリプトを保存して使い回す",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I typed the same commands again this morning. Can I save them somewhere and just run them next time?",
+            "jp": "ケン、今朝もまた同じコマンドを打ちました。どこかに保存して、次回はそれを実行するだけにできますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Of course. Save them in a file ending in dot p s one, and you can run the whole thing with one line.",
+            "jp": "もちろん。拡張子が ps1 のファイルに保存すれば、ひと行で全部を実行できます。"
+          },
+          {
+            "sp": 0,
+            "en": "Where should I keep it? I don't want to lose it.",
+            "jp": "どこに置けばいいですか？なくしたくありません。"
+          },
+          {
+            "sp": 1,
+            "en": "Put it in a folder you back up, and give it a clear name. Even better, store it in a repository, so the history is saved too.",
+            "jp": "バックアップを取っているフォルダに、分かりやすい名前で置きます。さらに良いのは、リポジトリに入れて、履歴も残すことです。"
+          },
+          {
+            "sp": 0,
+            "en": "What should I write at the top, so I remember what it does?",
+            "jp": "何をするものか思い出せるように、一番上には何を書けばいいですか？"
+          },
+          {
+            "sp": 1,
+            "en": "A short comment: what it does, when you made it, and anything you must check before running it.",
+            "jp": "短いコメントを。何をするか、いつ作ったか、実行前に確認すべきことです。"
+          },
+          {
+            "sp": 0,
+            "en": "So the comment is like a note to my future self again.",
+            "jp": "つまりコメントも、また未来の自分へのメモなんですね。"
+          },
+          {
+            "sp": 1,
+            "en": "Yes. Scripts you can reuse in a year are the ones that explain themselves.",
+            "jp": "はい。1年後も使い回せるスクリプトは、自分で自分を説明しているものです。"
+          }
+        ]
+      },
+      {
+        "t": "自分のスクリプトを育てる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I wrote my first complete script this week, and it worked on the first try, mostly. I feel kind of proud.",
+            "jp": "ケン、今週、初めて完全なスクリプトを書いて、ほとんど一発で動きました。ちょっと誇らしいです。",
+            "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと、と和らげる時"
+          },
+          {
+            "sp": 1,
+            "en": "That's wonderful. Did you follow the four steps? Write it down, one line at a time, stop on failure, test in small pieces?",
+            "jp": "素晴らしいです。4つの手順に従いましたか？書き出す、一行ずつ、失敗したら止める、小さく試す。"
+          },
+          {
+            "sp": 0,
+            "en": "Yes, every one of them. The small-pieces step saved me twice.",
+            "jp": "はい、全部です。小さく試す手順に、2回助けられました。"
+          },
+          {
+            "sp": 1,
+            "en": "Now the real learning begins. Every few weeks, improve one old script a little: a clearer name, a better message, a safety check.",
+            "jp": "これからが本当の学びです。数週間ごとに、古いスクリプトをひとつ少しだけ改善します。分かりやすい名前、よいメッセージ、安全確認。"
+          },
+          {
+            "sp": 0,
+            "en": "Even working scripts can get better?",
+            "jp": "動いているスクリプトでも、もっと良くできますか？"
+          },
+          {
+            "sp": 1,
+            "en": "Always. And each improvement teaches you something, so it's the best practice there is.",
+            "jp": "いつでも。そして改善のたびに何かを学べるので、最高の練習です。"
+          },
+          {
+            "sp": 0,
+            "en": "I think I want to automate my whole morning routine, step by step.",
+            "jp": "朝の流れ全部を、ひとつずつ自動化したいと思います。"
+          },
+          {
+            "sp": 1,
+            "en": "Do it, but one piece at a time. Remember, small steps, and keep a backup. You're going to be great at this.",
+            "jp": "やってください、でも一度にひとつずつ。小さな歩幅で、バックアップを忘れずに。あなたはこれが得意になります。"
+          }
+        ]
+      }
+    ]
+  }
+]
