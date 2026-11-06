@@ -24,6 +24,7 @@ export default {
       "/gemini-proxy": callGemini,
       "/claude-proxy": callClaude,
       "/openai-proxy": callOpenAI,
+      "/news-feed": callNewsFeed,
     };
     const handler = routes[url.pathname];
     if (!handler) return new Response("Not Found", { status: 404 });
@@ -144,6 +145,40 @@ async function callOpenAI(body, env, cors) {
     body: JSON.stringify({ model: env.OPENAI_MODEL || "gpt-4o-mini", messages, max_tokens: 600 }),
   });
   return passthrough(res, cors);
+}
+
+// ---------- ニュース見出し (RSSの見出しと要約だけ。記事本文は取らない) ----------
+const NEWS_FEEDS = {
+  bbc: "https://feeds.bbci.co.uk/news/world/rss.xml",
+  npr: "https://feeds.npr.org/1004/rss.xml",
+  guardian: "https://www.theguardian.com/world/rss",
+};
+async function callNewsFeed(body, env, cors) {
+  const src = NEWS_FEEDS[body && body.src] ? body.src : "bbc";
+  const res = await fetch(NEWS_FEEDS[src], {
+    headers: { "User-Agent": "speak-native/1.0" },
+    cf: { cacheTtl: 600, cacheEverything: true },
+  });
+  if (!res.ok) return jsonError("Feed error " + res.status, 502, cors);
+  const items = parseRss((await res.text()).slice(0, 400000));
+  return new Response(JSON.stringify({ src, items }), {
+    status: 200, headers: { ...cors, "Content-Type": "application/json" },
+  });
+}
+function parseRss(xml) {
+  const tag = (blk, name) => {
+    const m = blk.match(new RegExp("<" + name + "[^>]*>([\\s\\S]*?)</" + name + ">", "i"));
+    if (!m) return "";
+    let v = m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1");
+    v = v.replace(/<[^>]+>/g, " ");
+    v = v.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&amp;/g, "&");
+    return v.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  };
+  return (xml.split(/<item[\s>]/i).slice(1, 9)).map(b => ({
+    t: tag(b, "title").slice(0, 200),
+    d: tag(b, "description").slice(0, 500),
+    date: tag(b, "pubDate").slice(0, 40),
+  })).filter(x => x.t);
 }
 
 // ---------- 共通 ----------
