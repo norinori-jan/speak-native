@@ -3599,7 +3599,8 @@ function loadPackagedConversation(){
   {id:'askai',file:'askai-2702.json'},
   {id:'gittrouble',file:'gittrouble-2801.json'},
   {id:'offline',file:'offline-2802.json'},
-  {id:'newsnow',file:'newsnow-2901.json'}
+  {id:'newsnow',file:'newsnow-2901.json'},
+  {id:'album',file:'album-3001.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

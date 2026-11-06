@@ -1,0 +1,370 @@
+{
+  "app": "phrase-pack",
+  "id": "album-3001",
+  "ver": 1,
+  "situation": "album",
+  "sname": "ドラマ・アルバム",
+  "icon": "🎵",
+  "level": 4,
+  "title": "ドラマ・アルバム（5話＋主題歌）",
+  "items": [
+    {
+      "id": "album-3001-001",
+      "en": "You caught me right before bed.",
+      "jp": "ちょうど寝る前だったよ。",
+      "speak": "You caught me right before bed.",
+      "say": []
+    },
+    {
+      "id": "album-3001-002",
+      "en": "It's almost midnight here.",
+      "jp": "こっちはもうすぐ夜中の12時。",
+      "speak": "It's almost midnight here.",
+      "say": []
+    },
+    {
+      "id": "album-3001-003",
+      "en": "I wanna just jump on a plane.",
+      "jp": "飛行機に飛び乗りたくなる。",
+      "speak": "I wanna just jump on a plane.",
+      "say": [],
+      "note": "元の形: want to／聞こえ方: wanna／使う場面:くだけた会話"
+    },
+    {
+      "id": "album-3001-004",
+      "en": "Don't tempt me.",
+      "jp": "誘惑しないで。",
+      "speak": "Don't tempt me.",
+      "say": []
+    },
+    {
+      "id": "album-3001-005",
+      "en": "We agreed to wait until the summer.",
+      "jp": "夏まで待つって決めたでしょ。",
+      "speak": "We agreed to wait until the summer.",
+      "say": []
+    },
+    {
+      "id": "album-3001-006",
+      "en": "Waiting is harder than I thought.",
+      "jp": "待つのは思ったより大変。",
+      "speak": "Waiting is harder than I thought.",
+      "say": []
+    },
+    {
+      "id": "album-3001-007",
+      "en": "Just keep talking to me.",
+      "jp": "とにかく話し続けて。",
+      "speak": "Just keep talking to me.",
+      "say": []
+    },
+    {
+      "id": "album-3001-008",
+      "en": "Two time zones, one heart.",
+      "jp": "二つの時間、ひとつの心。",
+      "speak": "Two time zones, one heart.",
+      "say": []
+    },
+    {
+      "id": "album-3001-009",
+      "en": "I'm never really alone.",
+      "jp": "本当は一人じゃない。",
+      "speak": "I'm never really alone.",
+      "say": []
+    },
+    {
+      "id": "album-3001-010",
+      "en": "Say goodnight, say good morning.",
+      "jp": "おやすみと、おはようを言い合おう。",
+      "speak": "Say goodnight, say good morning.",
+      "say": []
+    },
+    {
+      "id": "album-3001-011",
+      "en": "I quit my job today.",
+      "jp": "今日、仕事を辞めたの。",
+      "speak": "I quit my job today.",
+      "say": []
+    },
+    {
+      "id": "album-3001-012",
+      "en": "That's a big step with no safety net.",
+      "jp": "保険のない大きな一歩だよ。",
+      "speak": "That's a big step with no safety net.",
+      "say": []
+    },
+    {
+      "id": "album-3001-013",
+      "en": "I'd regret it more if I never tried.",
+      "jp": "挑戦しなかったらもっと後悔する。",
+      "speak": "I'd regret it more if I never tried.",
+      "say": [],
+      "note": "元の形: I would／聞こえ方: I'd／使う場面:仮定の気持ち"
+    },
+    {
+      "id": "album-3001-014",
+      "en": "Then I'm in.",
+      "jp": "じゃあ僕も乗る。",
+      "speak": "Then I'm in.",
+      "say": []
+    },
+    {
+      "id": "album-3001-015",
+      "en": "I just need somebody to tell me I'm not crazy.",
+      "jp": "私は変じゃないと誰かに言ってほしい。",
+      "speak": "I just need somebody to tell me I'm not crazy.",
+      "say": []
+    },
+    {
+      "id": "album-3001-016",
+      "en": "You're not crazy. You're just early.",
+      "jp": "変じゃない。ただ早いだけ。",
+      "speak": "You're not crazy. You're just early.",
+      "say": []
+    },
+    {
+      "id": "album-3001-017",
+      "en": "I'm gonna put that on a T-shirt.",
+      "jp": "それTシャツにするね。",
+      "speak": "I'm gonna put that on a T-shirt.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: gonna／使う場面:未来の予定"
+    },
+    {
+      "id": "album-3001-018",
+      "en": "I'm not done yet.",
+      "jp": "私はまだ終わってない。",
+      "speak": "I'm not done yet.",
+      "say": []
+    },
+    {
+      "id": "album-3001-019",
+      "en": "I'm just getting started.",
+      "jp": "始まったばかり。",
+      "speak": "I'm just getting started.",
+      "say": []
+    },
+    {
+      "id": "album-3001-020",
+      "en": "Every door they closed, I'm walking through.",
+      "jp": "閉ざされたドアは全部通り抜ける。",
+      "speak": "Every door they closed, I'm walking through.",
+      "say": []
+    },
+    {
+      "id": "album-3001-021",
+      "en": "Is that really you?",
+      "jp": "本当にあなた？",
+      "speak": "Is that really you?",
+      "say": []
+    },
+    {
+      "id": "album-3001-022",
+      "en": "I almost didn't recognize you.",
+      "jp": "ほとんど気づかなかった。",
+      "speak": "I almost didn't recognize you.",
+      "say": []
+    },
+    {
+      "id": "album-3001-023",
+      "en": "Some things never change.",
+      "jp": "変わらないものもあるよね。",
+      "speak": "Some things never change.",
+      "say": []
+    },
+    {
+      "id": "album-3001-024",
+      "en": "I'm sorry I never called.",
+      "jp": "一度も電話しなくてごめん。",
+      "speak": "I'm sorry I never called.",
+      "say": []
+    },
+    {
+      "id": "album-3001-025",
+      "en": "I was angry for a long time, but I'm not anymore.",
+      "jp": "長い間怒ってたけど、もう怒ってない。",
+      "speak": "I was angry for a long time, but I'm not anymore.",
+      "say": []
+    },
+    {
+      "id": "album-3001-026",
+      "en": "That's none of my business.",
+      "jp": "僕には関係ないことだね。",
+      "speak": "That's none of my business.",
+      "say": [],
+      "note": "元の形: none of／聞こえ方: nunnuv／使う場面:関係ない"
+    },
+    {
+      "id": "album-3001-027",
+      "en": "There was someone, but it ended.",
+      "jp": "いたけど、終わった。",
+      "speak": "There was someone, but it ended.",
+      "say": []
+    },
+    {
+      "id": "album-3001-028",
+      "en": "Just me, and a lot of regrets.",
+      "jp": "僕だけ、それと後悔がたくさん。",
+      "speak": "Just me, and a lot of regrets.",
+      "say": []
+    },
+    {
+      "id": "album-3001-029",
+      "en": "Can I buy you a coffee?",
+      "jp": "コーヒーおごってもいい？",
+      "speak": "Can I buy you a coffee?",
+      "say": [],
+      "note": "元の形: Can I／聞こえ方: Kinai／使う場面:お願い・申し出"
+    },
+    {
+      "id": "album-3001-030",
+      "en": "Five years later, here we are.",
+      "jp": "5年後、私たちはここにいる。",
+      "speak": "Five years later, here we are.",
+      "say": []
+    },
+    {
+      "id": "album-3001-031",
+      "en": "You don't have to carry all my boxes.",
+      "jp": "荷物を全部運ばなくていいよ。",
+      "speak": "You don't have to carry all my boxes.",
+      "say": []
+    },
+    {
+      "id": "album-3001-032",
+      "en": "Let me, okay?",
+      "jp": "やらせてくれ。",
+      "speak": "Let me, okay?",
+      "say": []
+    },
+    {
+      "id": "album-3001-033",
+      "en": "You make it sound like I'm leaving forever.",
+      "jp": "永遠に行っちゃうみたいに言うね。",
+      "speak": "You make it sound like I'm leaving forever.",
+      "say": []
+    },
+    {
+      "id": "album-3001-034",
+      "en": "The house is gonna be awfully quiet.",
+      "jp": "家がひどく静かになるんだ。",
+      "speak": "The house is gonna be awfully quiet.",
+      "say": [],
+      "note": "元の形: going to／聞こえ方: gonna／使う場面:未来の予定"
+    },
+    {
+      "id": "album-3001-035",
+      "en": "I'll call you every Sunday.",
+      "jp": "毎週日曜に電話するね。",
+      "speak": "I'll call you every Sunday.",
+      "say": []
+    },
+    {
+      "id": "album-3001-036",
+      "en": "Don't make promises you can't keep.",
+      "jp": "守れない約束はしなくていい。",
+      "speak": "Don't make promises you can't keep.",
+      "say": [],
+      "note": "元の形: can not／聞こえ方: can't／使う場面:キャント"
+    },
+    {
+      "id": "album-3001-037",
+      "en": "Just call when you miss us.",
+      "jp": "寂しくなったら電話しなさい。",
+      "speak": "Just call when you miss us.",
+      "say": []
+    },
+    {
+      "id": "album-3001-038",
+      "en": "Thanks for always believing in me.",
+      "jp": "いつも信じてくれてありがとう。",
+      "speak": "Thanks for always believing in me.",
+      "say": []
+    },
+    {
+      "id": "album-3001-039",
+      "en": "Leave the light on.",
+      "jp": "明かりをつけておいて。",
+      "speak": "Leave the light on.",
+      "say": []
+    },
+    {
+      "id": "album-3001-040",
+      "en": "I'll find my way back home.",
+      "jp": "帰り道を見つけるから。",
+      "speak": "I'll find my way back home.",
+      "say": []
+    },
+    {
+      "id": "album-3001-041",
+      "en": "That meeting was a disaster.",
+      "jp": "あの会議は大失敗だった。",
+      "speak": "That meeting was a disaster.",
+      "say": []
+    },
+    {
+      "id": "album-3001-042",
+      "en": "You saved me back there.",
+      "jp": "あそこで助けてくれたね。",
+      "speak": "You saved me back there.",
+      "say": []
+    },
+    {
+      "id": "album-3001-043",
+      "en": "They just weren't listening.",
+      "jp": "みんなが聞いてなかっただけ。",
+      "speak": "They just weren't listening.",
+      "say": []
+    },
+    {
+      "id": "album-3001-044",
+      "en": "I've been trying to find the right moment.",
+      "jp": "ふさわしい瞬間を探してた。",
+      "speak": "I've been trying to find the right moment.",
+      "say": [],
+      "note": "元の形: I have／聞こえ方: I've／使う場面:現在完了"
+    },
+    {
+      "id": "album-3001-045",
+      "en": "There's never a right moment.",
+      "jp": "ふさわしい瞬間なんてない。",
+      "speak": "There's never a right moment.",
+      "say": []
+    },
+    {
+      "id": "album-3001-046",
+      "en": "There's just now.",
+      "jp": "あるのは今だけ。",
+      "speak": "There's just now.",
+      "say": []
+    },
+    {
+      "id": "album-3001-047",
+      "en": "I like you. A lot.",
+      "jp": "君が好き。すごく。",
+      "speak": "I like you. A lot.",
+      "say": []
+    },
+    {
+      "id": "album-3001-048",
+      "en": "I don't care what HR thinks.",
+      "jp": "人事がどう思おうと気にしない。",
+      "speak": "I don't care what HR thinks.",
+      "say": []
+    },
+    {
+      "id": "album-3001-049",
+      "en": "First, dinner. My treat.",
+      "jp": "まず夕食。私のおごり。",
+      "speak": "First, dinner. My treat.",
+      "say": []
+    },
+    {
+      "id": "album-3001-050",
+      "en": "Say it before Monday.",
+      "jp": "月曜の前に言って。",
+      "speak": "Say it before Monday.",
+      "say": []
+    }
+  ]
+}

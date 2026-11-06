@@ -1,5 +1,5 @@
 {
-"updated": 1793959736765,
+"updated": 1794003267065,
 "packs": [
 {
 "id": "airport-0001",
@@ -688,6 +688,14 @@
 "count": 50,
 "situation": "newsnow",
 "sname": "ニュース英会話（11/6時点）"
+},
+{
+"id": "album-3001",
+"file": "album-3001.json",
+"ver": 1,
+"count": 50,
+"situation": "album",
+"sname": "ドラマ・アルバム"
 }
 ]
 }

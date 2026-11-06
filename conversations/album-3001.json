@@ -1,0 +1,467 @@
+[
+  {
+    "id": "album",
+    "ic": "🎵",
+    "n": "ドラマ・アルバム",
+    "hint": "Mia and Ken: five drama episodes (long-distance love, chasing a dream, reunion, parent and child, office romance), each followed by its theme song as a duet",
+    "level": 4,
+    "keywords": "album, drama, song, lyrics, love, family",
+    "d": [
+      {
+        "t": "① 遠距離恋愛：Two Time Zones",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Hey, you caught me right before bed. It's almost midnight here.",
+            "jp": "ちょうど寝る前だったよ。こっちはもうすぐ夜中の12時。"
+          },
+          {
+            "sp": 1,
+            "en": "And it's nine in the morning here. It's weird how we're living in different days.",
+            "jp": "こっちは朝の9時。違う日を生きてるなんて、変な感じだね。"
+          },
+          {
+            "sp": 0,
+            "en": "Some days I wanna just jump on a plane and show up at your door.",
+            "jp": "たまに、飛行機に飛び乗って君の家の前に現れたくなる。",
+            "note": "元の形: want to／聞こえ方: wanna／使う場面:くだけた会話"
+          },
+          {
+            "sp": 1,
+            "en": "Don't tempt me. I've been checking flight prices all week, y'know.",
+            "jp": "誘惑しないで。今週ずっと航空券の値段を調べてるんだ。",
+            "note": "元の形: you know／聞こえ方: y'know／使う場面:間をつなぐ"
+          },
+          {
+            "sp": 0,
+            "en": "Seriously? Ken, we agreed to wait until the summer.",
+            "jp": "本気？ケン、夏まで待つって決めたでしょ。"
+          },
+          {
+            "sp": 1,
+            "en": "I know. But waiting is harder than I thought it would be.",
+            "jp": "わかってる。でも待つのは思ったより大変だ。"
+          },
+          {
+            "sp": 0,
+            "en": "For me too. Just keep talking to me, okay? Even about nothing.",
+            "jp": "私も。とにかく話し続けて、いい？どうでもいいことでも。"
+          },
+          {
+            "sp": 1,
+            "en": "Okay. Let me tell you about my terrible coffee this morning, then.",
+            "jp": "いいよ。じゃあ、今朝の最悪なコーヒーの話をさせて。"
+          }
+        ]
+      },
+      {
+        "t": "① 主題歌「Two Time Zones」（デュエット）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Your morning is my midnight, and I'm still wide awake.",
+            "jp": "あなたの朝は私の真夜中、私はまだ眠れない。"
+          },
+          {
+            "sp": 1,
+            "en": "I count the hours between us, every single one they take.",
+            "jp": "二人の間の時間を数える、ひとつ残らず。"
+          },
+          {
+            "sp": 0,
+            "en": "I hold my phone like a candle, in the dark across the sea.",
+            "jp": "暗闇の中、海の向こうで、携帯をろうそくのように握る。"
+          },
+          {
+            "sp": 1,
+            "en": "Your voice is all the light I need to get me through to three.",
+            "jp": "あなたの声があれば、夜の3時まで乗り切れる。"
+          },
+          {
+            "sp": 0,
+            "en": "Two time zones, one heart, I'm calling you my home.",
+            "jp": "二つの時間、ひとつの心。あなたを私の帰る場所と呼ぶ。"
+          },
+          {
+            "sp": 1,
+            "en": "Two time zones, one heart, I'm never really alone.",
+            "jp": "二つの時間、ひとつの心。本当は一人じゃない。"
+          },
+          {
+            "sp": 0,
+            "en": "Wherever the sun is rising, I'll be waiting for the light.",
+            "jp": "どこで朝日が昇っても、その光を待っている。"
+          },
+          {
+            "sp": 1,
+            "en": "Say goodnight, say good morning, and we'll make it through the night.",
+            "jp": "おやすみと、おはようを言い合って、夜を越えていこう。"
+          }
+        ]
+      },
+      {
+        "t": "② 夢を追う：Not Done Yet",
+        "l": [
+          {
+            "sp": 0,
+            "en": "I did it. I quit my job today, and I feel sick and amazing at the same time.",
+            "jp": "やったよ。今日、仕事を辞めたの。気持ち悪いのに最高、って感じ。"
+          },
+          {
+            "sp": 1,
+            "en": "Wow. Are you sure? That's a big step with no safety net.",
+            "jp": "わあ。本当に大丈夫？保険のない大きな一歩だよ。"
+          },
+          {
+            "sp": 0,
+            "en": "I'm not sure about anything, but I'd regret it more if I never tried.",
+            "jp": "何も確かじゃないけど、挑戦しなかったらもっと後悔すると思う。",
+            "note": "元の形: would have／聞こえ方: I'd／使う場面:仮定の後悔"
+          },
+          {
+            "sp": 1,
+            "en": "Then I'm in. What do you need? A place to practice? A ride? A loud cheering section?",
+            "jp": "じゃあ僕も乗る。何がいる？練習場所？送り迎え？大声の応援団？"
+          },
+          {
+            "sp": 0,
+            "en": "Honestly, I just need somebody to tell me I'm not crazy.",
+            "jp": "正直、私は変じゃないって誰かに言ってほしいだけ。"
+          },
+          {
+            "sp": 1,
+            "en": "You're not crazy. You're just early. Most people don't see it yet.",
+            "jp": "変じゃないよ。ただ早いだけ。ほとんどの人はまだ気づいてない。"
+          },
+          {
+            "sp": 0,
+            "en": "Ha, I'm gonna put that on a T-shirt. 'Not crazy, just early.'",
+            "jp": "はは、それTシャツにするね。「変じゃない、ただ早いだけ」って。",
+            "note": "元の形: going to／聞こえ方: gonna／使う場面:未来の予定"
+          },
+          {
+            "sp": 1,
+            "en": "Do it. And when you sell out your first show, I get the front row.",
+            "jp": "やりなよ。初ライブが完売したら、最前列は僕のものね。"
+          }
+        ]
+      },
+      {
+        "t": "② 主題歌「Not Done Yet」（デュエット）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "They said I'd never make it, said it's time to settle down.",
+            "jp": "無理だって言われた、そろそろ落ち着けって。"
+          },
+          {
+            "sp": 1,
+            "en": "But you kept on running faster, and you never turned around.",
+            "jp": "でも君はもっと速く走り続けて、振り返らなかった。"
+          },
+          {
+            "sp": 0,
+            "en": "Every no became a stepping stone, every fall became a song.",
+            "jp": "ひとつひとつの「ノー」が踏み台になり、転ぶたびに歌が生まれた。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm still standing in the spotlight, and I've been here all along.",
+            "jp": "私は今もスポットライトの中に立っている、ずっとここにいた。"
+          },
+          {
+            "sp": 0,
+            "en": "I'm not done yet, I'm just getting started.",
+            "jp": "私はまだ終わってない、始まったばかり。"
+          },
+          {
+            "sp": 1,
+            "en": "Every door they closed, I'm walking through.",
+            "jp": "閉ざされたドアは全部、私が通り抜けていく。"
+          },
+          {
+            "sp": 0,
+            "en": "Louder than the doubt inside my head.",
+            "jp": "頭の中の迷いよりも、もっと大きな声で。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm not done yet, and neither are you.",
+            "jp": "私はまだ終わらない、あなたもね。"
+          }
+        ]
+      },
+      {
+        "t": "③ 再会：Five Years Later",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken? Is that really you? I almost didn't recognize you with the beard.",
+            "jp": "ケン？本当にあなた？ひげがあって、ほとんど気づかなかった。"
+          },
+          {
+            "sp": 1,
+            "en": "Mia. Wow. Five years, and you still walk like you're late for something.",
+            "jp": "ミア。うわあ、5年たっても、何かに遅れてるみたいな歩き方だね。"
+          },
+          {
+            "sp": 0,
+            "en": "I'm always late for something. Some things never change.",
+            "jp": "私はいつも何かに遅れてるの。変わらないものもあるよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Some things do. I'm sorry I never called after I left. I was a coward.",
+            "jp": "変わるものもある。出て行ったあと、一度も電話しなくてごめん。臆病だった。"
+          },
+          {
+            "sp": 0,
+            "en": "It's okay. I was angry for a long time, but I'm not anymore.",
+            "jp": "いいの。長い間怒ってたけど、もう怒ってない。"
+          },
+          {
+            "sp": 1,
+            "en": "Are you seeing anyone? Sorry, that's none of my business.",
+            "jp": "誰かとつき合ってる？ごめん、僕には関係ないことだね。",
+            "note": "元の形: none of／聞こえ方: nunnuv／使う場面:関係ない"
+          },
+          {
+            "sp": 0,
+            "en": "No, it's fine. There was someone, but it ended. What about you?",
+            "jp": "ううん、いいの。いたけど、終わった。あなたは？"
+          },
+          {
+            "sp": 1,
+            "en": "Just me, and a lot of regrets. Can I buy you a coffee before your train comes?",
+            "jp": "僕だけだよ、それと後悔がたくさん。電車が来る前にコーヒーおごってもいい？"
+          }
+        ]
+      },
+      {
+        "t": "③ 主題歌「Five Years Later」（デュエット）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "I saw you on the platform, and the whole world went slow.",
+            "jp": "ホームであなたを見かけて、世界がゆっくりになった。"
+          },
+          {
+            "sp": 1,
+            "en": "Five years of silence folded in a single hello.",
+            "jp": "5年分の沈黙が、たったひとつのこんにちはに畳まれた。"
+          },
+          {
+            "sp": 0,
+            "en": "You're older and I'm older, but your smile is still the same.",
+            "jp": "あなたも私も年を重ねたのに、笑顔は昔のまま。"
+          },
+          {
+            "sp": 1,
+            "en": "I wanted to say a thousand things, but I only said your name.",
+            "jp": "言いたいことは千もあったのに、名前を呼ぶだけだった。"
+          },
+          {
+            "sp": 0,
+            "en": "If I could turn the clock back, would I do it all again?",
+            "jp": "時計を戻せるなら、もう一度同じことをするだろうか。"
+          },
+          {
+            "sp": 1,
+            "en": "Would I hold you a little tighter, would I stay instead of run?",
+            "jp": "もう少し強く抱きしめるだろうか、逃げずにそばにいるだろうか。"
+          },
+          {
+            "sp": 0,
+            "en": "Five years later, here we are, with nothing left to prove.",
+            "jp": "5年後、私たちはここにいる、もう証明するものは何もない。"
+          },
+          {
+            "sp": 1,
+            "en": "Just two people on a platform, still learning how to move.",
+            "jp": "ホームに立つ二人、まだ歩き方を学んでいる。"
+          }
+        ]
+      },
+      {
+        "t": "④ 親子：Leave the Light On",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Dad, you don't have to carry all my boxes. I can take them myself.",
+            "jp": "お父さん、私の荷物を全部運ばなくていいよ。自分で持てるから。"
+          },
+          {
+            "sp": 1,
+            "en": "Let me, okay? It's the last thing I get to do for you before you go.",
+            "jp": "やらせてくれ。お前が行く前に、してやれる最後のことなんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "You make it sound like I'm leaving forever. It's only a train ride away.",
+            "jp": "まるで永遠に行っちゃうみたいに言うね。電車で行ける距離だよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I know. It's just that the house is gonna be awfully quiet without you.",
+            "jp": "わかってる。ただ、お前がいないと家がひどく静かになるんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "I'll call you every Sunday. I promise. Even when I'm busy.",
+            "jp": "毎週日曜に電話するね。約束する。忙しい時でも。"
+          },
+          {
+            "sp": 1,
+            "en": "Don't make promises you can't keep. Just call when you miss us.",
+            "jp": "守れない約束はしなくていい。寂しくなったら電話しなさい。"
+          },
+          {
+            "sp": 0,
+            "en": "I'm gonna miss you guys so much. Thanks for always believing in me, Dad.",
+            "jp": "みんなのことが恋しくなるな。いつも信じてくれてありがとう、お父さん。"
+          },
+          {
+            "sp": 1,
+            "en": "Always. Now go, before I start crying in front of the whole station.",
+            "jp": "いつでも。さあ行きなさい、駅中の人の前で泣き出す前に。"
+          }
+        ]
+      },
+      {
+        "t": "④ 主題歌「Leave the Light On」（デュエット）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "You taught me how to ride a bike, then let go of my seat.",
+            "jp": "あなたは自転車の乗り方を教えて、サドルから手を離した。"
+          },
+          {
+            "sp": 1,
+            "en": "I wobbled and I kept on going, and I never felt defeat.",
+            "jp": "ふらついても進み続けた、負けたと思ったことはなかった。"
+          },
+          {
+            "sp": 0,
+            "en": "Now the road is wide and open, and I'm packing up my things.",
+            "jp": "いま道は広く開けて、私は荷物をまとめている。"
+          },
+          {
+            "sp": 1,
+            "en": "You're smiling at the doorway, hiding everything it brings.",
+            "jp": "あなたは戸口で笑っている、込み上げるものを隠して。"
+          },
+          {
+            "sp": 0,
+            "en": "Leave the light on, I'll find my way back home.",
+            "jp": "明かりをつけておいて、私は帰り道を見つけるから。"
+          },
+          {
+            "sp": 1,
+            "en": "Leave the light on, you will never be alone.",
+            "jp": "明かりをつけておくよ、お前は決して一人じゃない。"
+          },
+          {
+            "sp": 0,
+            "en": "Whatever I become, wherever I may roam,",
+            "jp": "私が何になっても、どこをさまよっても、"
+          },
+          {
+            "sp": 1,
+            "en": "Leave the light on, and I'll always be your own.",
+            "jp": "明かりをつけておいて、私はいつもあなたの子だから。"
+          }
+        ]
+      },
+      {
+        "t": "⑤ 職場の恋：Say It Before Monday",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Okay, that meeting was a disaster, but you saved me back there. Thank you.",
+            "jp": "さて、あの会議は大失敗だったけど、あそこで助けてくれてありがとう。"
+          },
+          {
+            "sp": 1,
+            "en": "Anytime. You had the best idea in the room. They just weren't listening.",
+            "jp": "いつでも。君が部屋で一番いい案を出してた。みんなが聞いてなかっただけだよ。"
+          },
+          {
+            "sp": 0,
+            "en": "Ken, can I ask you something weird? Do you ever think about us outside of work?",
+            "jp": "ケン、変なこと聞いていい？仕事の外での私たちのこと、考えたりする？"
+          },
+          {
+            "sp": 1,
+            "en": "All the time. I've been trying to find the right moment to say it for months.",
+            "jp": "しょっちゅうだよ。何か月も、言うのにふさわしい瞬間を探してた。"
+          },
+          {
+            "sp": 0,
+            "en": "Well, there's never a right moment. There's just now. So say it.",
+            "jp": "ええと、ふさわしい瞬間なんてないの。あるのは今だけ。だから言って。"
+          },
+          {
+            "sp": 1,
+            "en": "I like you, Mia. A lot. And I don't care what HR thinks about it.",
+            "jp": "君が好きだよ、ミア。すごく。人事がどう思おうと気にしない。"
+          },
+          {
+            "sp": 0,
+            "en": "Okay, we should probably tell HR. But first, dinner. My treat.",
+            "jp": "うん、たぶん人事には伝えるべきね。でもまず夕食。私のおごり。"
+          },
+          {
+            "sp": 1,
+            "en": "Deal. Just don't give me that look in the next meeting, or I'll laugh.",
+            "jp": "決まり。次の会議であの目つきはしないでね、笑っちゃうから。"
+          }
+        ]
+      },
+      {
+        "t": "⑤ 主題歌「Say It Before Monday」（デュエット）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "We sit across the table, pretending that we're fine.",
+            "jp": "テーブルの向こうに座って、平気なふりをしてる。"
+          },
+          {
+            "sp": 1,
+            "en": "Your eyes are on the screen, but I can feel them cross the line.",
+            "jp": "君の目は画面を見ているのに、その視線が一線を越えるのを感じる。"
+          },
+          {
+            "sp": 0,
+            "en": "Every time we pass the printer, my heart is running late.",
+            "jp": "コピー機の前を通るたび、心臓が遅刻して走り出す。"
+          },
+          {
+            "sp": 1,
+            "en": "I'm tired of all the small talk, I'm tired of the wait.",
+            "jp": "世間話にはもううんざり、待つのにもうんざり。"
+          },
+          {
+            "sp": 0,
+            "en": "Say it before Monday, say it before we change our minds.",
+            "jp": "月曜の前に言って、気が変わってしまう前に。"
+          },
+          {
+            "sp": 1,
+            "en": "Say it in the elevator, say it between the lines.",
+            "jp": "エレベーターの中で言って、行間で言って。"
+          },
+          {
+            "sp": 0,
+            "en": "I don't need a perfect moment, I just need you to be true.",
+            "jp": "完璧な瞬間はいらない、あなたが正直でいてくれればいい。"
+          },
+          {
+            "sp": 1,
+            "en": "Say it before Monday, and I'll say it back to you.",
+            "jp": "月曜の前に言って、私も同じ言葉を返すから。"
+          }
+        ]
+      }
+    ]
+  }
+]
