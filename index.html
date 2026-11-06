@@ -3491,7 +3491,7 @@ var CONV_DATA=DATA.concat(EXTRA_DATA);
 var packagedConversationPromise=null;
 var PK='dei_conv_prog',CK='dei_conv_custom';
 var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
-var root=$('#cvRoot'),body=$('#cvBody');/*cv-extra*/S.vmode=+LS.get('dei_conv_voice',1)||0;S.bg=+LS.get('dei_conv_bg',1)!==0;var VOICEL=['🎭 声：固定','🎭 声：会話ごと','🎭 声：ランダム'];/*cont-play*/S.cont=+LS.get('dei_conv_cont',0)||0;var CONTL=['♾ 連続：切','♾ 連続：この場面','♾ 連続：全部','🔀 連続：ランダム'];var WL=null;
+var root=$('#cvRoot'),body=$('#cvBody');/*bgx*/S.bgx=+LS.get('dei_conv_bgx',0)||0;var BGXN=0,BGXH=null,BGXA=null;/*cv-extra*/S.vmode=+LS.get('dei_conv_voice',1)||0;S.bg=+LS.get('dei_conv_bg',1)!==0;var VOICEL=['🎭 声：固定','🎭 声：会話ごと','🎭 声：ランダム'];/*cont-play*/S.cont=+LS.get('dei_conv_cont',0)||0;var CONTL=['♾ 連続：切','♾ 連続：この場面','♾ 連続：全部','🔀 連続：ランダム'];var WL=null;
 if(LS.get('dei_conv_hen',false))root.classList.add('hen');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
 function prog(){var p=LS.get(PK,{});return p&&typeof p==='object'?p:{}}
@@ -3500,6 +3500,43 @@ function pset(id,f){var p=prog();var o=p[id]||{l:0,s:0,a:0,b:0};f(o);p[id]=o;LS.
 function custom(){var a=LS.get(CK,[]);return Array.isArray(a)?a:[]}
 function dlgs(sid){var out=[];CONV_DATA.forEach(function(s){if(s.id===sid)s.d.forEach(function(d,i){out.push({id:s.id+(i+1),title:d.t,lines:d.l,scene:sid,own:0})})});custom().forEach(function(c){if(c.scene===sid)out.push({id:c.id,title:c.title,lines:c.lines,scene:sid,own:1})});return out}
 function allD(){var o=[];CONV_DATA.forEach(function(s){o=o.concat(dlgs(s.id))});return o}
+/*news-in*/var NEWSK='dei_news_in';
+function nwSplit(t){t=String(t||'').replace(/\s+/g,' ').trim();if(!t)return[];var m=t.match(/[^.!?。！？]+[.!?。！？]+["')”’]*|[^.!?。！？]+$/g)||[t];return m.map(function(x){return x.trim()}).filter(Boolean)}
+function nwDec(c){c=String(c).replace(/^SNNEWS:/,'').replace(/^#?news=/,'').trim();if(!/^[A-Za-z0-9_-]+$/.test(c)||c.length>40000)return null;
+ try{var b=atob(c.replace(/-/g,'+').replace(/_/g,'/')+'='.repeat((4-c.length%4)%4));var u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);var o=JSON.parse(new TextDecoder().decode(u));
+  return o&&typeof o.en==='string'?{t:String(o.t||'').slice(0,80),en:o.en.slice(0,6000),jp:String(o.jp||'').slice(0,6000)}:null}catch(e){return null}}
+var NW_REACT=[["Really? Tell me more about it.","本当に？もっと詳しく教えて。"],["I see. Why is that important?","なるほど。それはなぜ重要なの？"],["Hmm, and what happened next?","うーん、それでその次は？"],["That makes sense. Who does it affect?","納得です。誰に影響があるの？"],["Interesting. Is that confirmed, or is it only a report?","面白いね。それは確認済み？それとも報道だけ？"]];
+function nwBuild(t,en,jp){var E_=nwSplit(en).slice(0,10);if(!E_.length)return null;var J_=nwSplit(jp),same=J_.length===E_.length;var L=[];
+ L.push({sp:0,en:t?"Did you see the news today? It's about "+t.replace(/[.。]+$/,'')+".":"Did you see the news today? There's a big story.",jp:t?'今日のニュース見た？「'+t+'」のことだよ。':'今日のニュース見た？大きな話題があるよ。'});
+ L.push({sp:1,en:"Not yet. What does it say?",jp:"まだ。何て書いてあるの？"});
+ for(var i=0,k=0;i<E_.length;i+=2,k++){var ge=E_.slice(i,i+2).join(' ');var gj=same?J_.slice(i,i+2).join(''):'';L.push({sp:0,en:ge,jp:gj});
+  if(i+2<E_.length){var r=NW_REACT[k%NW_REACT.length];L.push({sp:1,en:r[0],jp:r[1]})}}
+ L.push({sp:1,en:"Thanks for explaining. I'll look up more details later.",jp:"説明ありがとう。あとで詳しく調べてみるね。"});
+ L.push({sp:0,en:"Good idea. It's smart to check more than one source.",jp:"いいね。複数の情報源を確認するのは賢いよ。"});
+ if(jp&&!same)L.push({sp:1,en:"Let me read the Japanese summary once more.",jp:String(jp).replace(/\s+/g,' ').slice(0,300)});
+ return L.slice(0,18)}
+function nwSave(t,en,jp){var L=nwBuild(t,en,jp);if(!L)return null;var sid=scn('newsnow')?'newsnow':(CONV_DATA[0]&&CONV_DATA[0].id);var c=custom();var id='n'+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
+ c.push({id:id,scene:sid,title:('📰 '+(t||'ニュース')).slice(0,34),lines:L});LS.set(CK,c.slice(-40));return{id:id,sid:sid}}
+function nwOpen(r){stopAll();S.did=r.id;S.sid=r.sid;S.mode='listen';S.li=0;S.ri=-1;S.heard='';S.stage='dlg';render()}
+function nwReceive(){var o=null,h=String(location.hash||'');
+ if(/^#news=/.test(h)){o=nwDec(h);try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
+ if(!o){try{var raw=localStorage.getItem(NEWSK);if(raw){var j=JSON.parse(raw);localStorage.removeItem(NEWSK);if(j&&typeof j.en==='string'&&Date.now()-(+j.ts||0)<36e5)o={t:String(j.t||'').slice(0,80),en:j.en.slice(0,6000),jp:String(j.jp||'').slice(0,6000)}}}catch(e){}}
+ if(!o)return;var r=nwSave(o.t,o.en,o.jp);if(!r)return;openCV();setTimeout(function(){nwOpen(r);toast('ニュースから会話を作りました')},60)}
+function newsBtn(){return'<button class="sc" data-a="newsopen"><span class="ic">📰</span><span class="tx"><div class="en">ニュースから会話を作る</div><div class="bd">英文を貼る／Table-padから送る（通信なし）</div></span></button>'}
+function newsForm(){return'<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">📰 ニュースから会話を作る</div><div class="bd">英語のニュースを貼ると、2人の会話にして端末に保存します。日本語訳は任意（文の数が合うと対訳になります）。Table-padのコード（SNNEWS:…）もそのまま貼れます。</div></div><div class="card"><input id="nwT" placeholder="見出し（任意）" style="width:100%;font-size:16px;padding:8px;margin-bottom:8px;box-sizing:border-box"><textarea id="nwE" placeholder="English news here…" style="width:100%;min-height:120px;font-size:16px;padding:8px;box-sizing:border-box"></textarea><textarea id="nwJ" placeholder="日本語訳（任意）" style="width:100%;min-height:80px;font-size:16px;padding:8px;margin-top:8px;box-sizing:border-box"></textarea><div class="row" style="margin-top:8px"><button class="pri" data-a="newsmake">会話にする</button></div></div><div class="sub">元の記事の全文を保存・配布しない使い方にしてください。自分の勉強用の範囲で。</div>'}
+var BGX_SIL='data:audio/wav;base64,UklGRmQfAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YUAfAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgA==';
+function bgxOn(){if(!S.bgx)return;try{if(!BGXA){BGXA=new Audio(BGX_SIL);BGXA.loop=true;BGXA.setAttribute('playsinline','');BGXA.volume=0.02}
+ var pr=BGXA.play();if(pr&&pr.catch)pr.catch(function(){});
+ if('mediaSession' in navigator){var d=S.did?findD(S.did):null;try{navigator.mediaSession.metadata=new MediaMetadata({title:d?d.title:'英会話',artist:'Speak Native'})}catch(e){}
+  navigator.mediaSession.playbackState='playing';
+  navigator.mediaSession.setActionHandler('pause',function(){if(S.playing&&!S.paused)playAll()});
+  navigator.mediaSession.setActionHandler('play',function(){if(S.paused||!S.playing)playAll()});
+  navigator.mediaSession.setActionHandler('stop',function(){stopAll()});
+  try{navigator.mediaSession.setActionHandler('nexttrack',function(){if(typeof contNext==='function'&&S.cont)contNext();else{nextDialogue();playAll()}})}catch(e){}}}catch(e){}}
+function bgxOff(){try{if(BGXA)BGXA.pause()}catch(e){}try{if('mediaSession' in navigator)navigator.mediaSession.playbackState='none'}catch(e){}}
+document.addEventListener('visibilitychange',function(){if(!S.bgx)return;
+ if(document.hidden){BGXH={n:BGXN,t:Date.now(),p:S.playing&&!S.paused}}
+ else{try{speechSynthesis.resume()}catch(e){}if(BGXH&&BGXH.p&&Date.now()-BGXH.t>4000){var adv=BGXN>BGXH.n;toast(adv?'裏でも再生が進みました ✅':'裏では止まっていました（戻ったので続きから）');try{localStorage.setItem('dei_bgx_result',adv?'ok':'ng')}catch(e){}}BGXH=null}});
 function findD(id){return allD().filter(function(d){return d.id===id})[0]}
 function mastered(id){var p=pget(id);return p.a&&p.b}
 function scn(sid){return CONV_DATA.filter(function(s){return s.id===sid})[0]}
@@ -3538,7 +3575,8 @@ function loadPackagedConversation(){
   {id:'apptips',file:'apptips-2701.json'},
   {id:'askai',file:'askai-2702.json'},
   {id:'gittrouble',file:'gittrouble-2801.json'},
-  {id:'offline',file:'offline-2802.json'}
+  {id:'offline',file:'offline-2802.json'},
+  {id:'newsnow',file:'newsnow-2901.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
@@ -3573,7 +3611,7 @@ function sayLine(text,sp,tok){return new Promise(function(res){
  u.rate=S.slow?0.7:0.90;applyTone(u,sp);var done=false;var fin=function(){if(!done){done=true;clearTimeout(tm);res()}};
  var tm=setTimeout(fin,Math.max(3500,text.length*140/(S.slow?0.7:1))+2500);u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}catch(e){res()}})}
 function updatePlaybackButton(){var b=$('#cvPlayBtn');if(b)b.textContent=S.playing?(S.paused?'▶ 再開':'⏸ 一時停止'):'▶ 会話を聞く'}
-function stopAll(){S.tok++;S.playing=false;S.paused=false;try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}updatePlaybackButton()}
+function stopAll(){S.tok++;S.playing=false;S.paused=false;bgxOff();try{speechSynthesis.cancel()}catch(e){}try{if(S.rec)S.rec.abort()}catch(e){}updatePlaybackButton()}
 function playAll(){
  if(S.playing){
   try{
@@ -3587,7 +3625,7 @@ function playAll(){
  if(!('speechSynthesis' in window)){var w=$('#cvWho');if(w)w.textContent='この端末では音声再生を利用できません';return}
  stopAll();setCast();var my=S.tok;
  pset(d.id,function(o){o.l=(o.l||0)+1});
- S.playing=true;S.paused=false;updatePlaybackButton();
+ S.playing=true;S.paused=false;updatePlaybackButton();bgxOn();
  d.lines.forEach(function(line,i){
   if(my!==S.tok)return;
   var u=new SpeechSynthesisUtterance(makeSpeakText(line.speak||line.en));
@@ -3656,6 +3694,13 @@ function nextDialogue(){
  var current=list.findIndex(function(x){return x.id===S.did});
  stopAll();S.did=list[(current+1+list.length)%list.length].id;S.mode='listen';S.li=0;S.ri=-1;S.heard='';render();
 }
+/*ai-next*/async function genNext(d){
+ var ctx=d.lines.slice(-14).map(function(l){return (l.sp?'B':'A')+': '+l.en}).join('\n');
+ var p='You write a continuation of a short English conversation for a Japanese learner.\nHere is the conversation so far (scene: '+d.title+'):\n'+ctx+'\n\nWrite what happens NEXT: a new conversation between the same two people (A is speaker 0, B is speaker 1), exactly 12 lines, alternating, starting with A. Make it feel like a movie scene: a small surprise, a joke, or an emotional turn. Use natural spoken English with reduced forms where natural (gonna, wanna, lemme, gimme, y\'know, kinda, dunno). Two or three lines should be long (20-30 words). Give a natural Japanese translation for every line. For 3 to 5 lines that use reduced speech, add "note" in this exact format (max 60 characters): 元の形: ...／聞こえ方: カタカナ／使う場面:...\nVariety seed: '+Math.random().toString(36).slice(2,8)+'.\nReturn ONLY compact JSON on one line, no markdown:\n{"title":"短い日本語のタイトル","lines":[{"sp":0,"en":"...","jp":"...","note":"optional"}]}';
+ for(var t=0;t<2;t++){var r=await ask(p,2400);if(r.error){if(t===1)return{error:r.error};continue}
+  var j=parseJ(r.text);if(j&&Array.isArray(j.lines)&&j.lines.length>=6&&j.lines.every(function(l){return l&&typeof l.en==='string'&&l.en&&typeof l.jp==='string'}))return{j:j};
+  if(t===1)return{error:'続きの形式が読み取れませんでした'}}
+ return{error:'うまく作れませんでした'}}
 function mark(i){S.curI=i;document.querySelectorAll('#cvRoot .ln').forEach(function(e,k){e.classList.toggle('cur',k===i)});var w=$('#cvWho');if(i>=0&&w)w.textContent='🗣 '+(i+1)+' / '+findD(S.did).lines.length}
 /* ---------- マイク ---------- */
 function listen(cb){var R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){toast('この端末では音声入力が使えません。「言えた/まだ」で自己判定してください');cb('',1);return}
@@ -3697,20 +3742,21 @@ function render(){
   h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
    h+='<div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
   h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
-  h+=keepBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+  h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
  }else if(S.stage==='scene'){
   var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
   dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
   h+='<div class="row"><button class="pri" data-a="ai">🤖 この場面の会話を AI で追加（保存）</button></div><div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
  }else if(S.stage==='keep'){h+=keepView();
+ }else if(S.stage==='newsin'){h+=newsForm();
  }else if(S.stage==='load'){
   h+='<div class="card"><div class="en">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
  }else if(S.stage==='dlg'){
   var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
-   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
-   h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><button data-a="keep" data-i="'+i+'">'+(isKept(l.en)?'★':'☆')+'</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div></div>'}).join('')+'</div>';
+   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><button data-a="keep" data-i="'+i+'">'+(isKept(l.en)?'★':'☆')+'</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div>'+(l.note?'<div class="jp" style="opacity:.85">💡 '+E(l.note)+'</div>':'')+'</div></div>'}).join('')+'</div>';
    h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';
   }else if(S.mode==='shadow'){
    var l=d.lines[S.li];
@@ -3744,6 +3790,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='md'){stopAll();S.mode=b.dataset.v;S.li=0;S.ri=-1;S.heard='';render()}
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll();mark(-1)}
+ else if(a==='bgx'){S.bgx=S.bgx?0:1;LS.set('dei_conv_bgx',S.bgx);b.textContent=S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切';b.classList.toggle('sel',!!S.bgx);if(S.bgx&&S.playing)bgxOn();else bgxOff();toast(S.bgx?'入れました。再生してから他のアプリへ移って確かめてください':'切りました')}
  else if(a==='next-dialog')nextDialogue();
  else if(a==='keepopen'){stopAll();S.stage='keep';render()}
  else if(a==='keep'){var kl=d.lines[i];var kon=toggleKeep(kl);b.textContent=kon?'★':'☆';toast(kon?'覚えるフレーズに追加しました':'覚えるフレーズから外しました')}
@@ -3768,6 +3815,17 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='hint'){var L=d.lines[S.ri];setHear('ヒント： '+L.en.split(' ').slice(0,3).join(' ')+' …')}
  else if(a==='hear'){var L2=d.lines[S.ri];setHear('聞いています…英語で言ってください');listen(function(t,err){setHear(err?'聞き取れませんでした':('あなた： '+t+'　（'+match(t,L2.en)+'% 一致）'))})}
  else if(a==='ok'||a==='ng'){stopAll();if(a==='ok')S.okN++;else{S.ngN++;try{var L3=d.lines[S.ri];if(typeof addMistake==='function')addMistake(L3.en,L3.jp,'会話集','conv')}catch(e){}}roleNext()}
+ else if(a==='ainext'){if(S.busy||!d)return;S.busy=true;b.disabled=true;b.textContent='🤖 作成中…（20秒ほど）';var w0=$('#cvWho');if(w0)w0.textContent='続きを作っています…';
+  var rn=await genNext(d);S.busy=false;
+  if(rn.error){b.disabled=false;b.textContent='🤖 続きをAIで';var w1=$('#cvWho');if(w1)w1.textContent=rn.error;return}
+  var cn=custom();var idn='u'+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
+  cn.push({id:idn,scene:d.scene,title:('続き：'+String(rn.j.title||'AIの会話')).slice(0,34),lines:rn.j.lines.slice(0,16).map(function(l,k){var o={sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:k%2),en:String(l.en).trim(),jp:String(l.jp).trim()};if(typeof l.note==='string'&&l.note.trim())o.note=l.note.trim().slice(0,80);return o})});
+  LS.set(CK,cn.slice(-40));stopAll();S.did=idn;S.sid=d.scene;S.mode='listen';S.li=0;S.ri=-1;S.heard='';render();toast('続きを作って保存しました')}
+ else if(a==='newsopen'){stopAll();S.stage='newsin';render()}
+ else if(a==='newsmake'){var nt=($('#nwT')||{}).value||'',ne=($('#nwE')||{}).value||'',nj=($('#nwJ')||{}).value||'';
+  if(/^\s*(SNNEWS:|#?news=)/.test(ne)){var dc=nwDec(ne.trim());if(!dc){toast('コードを読み取れませんでした');return}nt=dc.t;ne=dc.en;nj=dc.jp}
+  if(ne.trim().length<20){toast('英文を貼ってください（20文字以上）');return}
+  var nr=nwSave(nt.trim(),ne,nj);if(!nr){toast('会話を作れませんでした');return}nwOpen(nr);toast('会話を作って保存しました')}
  else if(a==='ai'){if(S.busy)return;S.busy=true;S.stage='load';render();var r=await genAI(S.sid);S.busy=false;
   if(r.error){S.stage='scene';S.msg=r.error;render();return}
   var c=custom();var id='u'+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
@@ -3782,7 +3840,7 @@ function openCV(){
   if(root.classList.contains('on')){S.msg='追加会話を読み込めませんでした: '+(e.message||e);render()}
  });
 }
-window.__convOpen=openCV;
+window.__convOpen=openCV;(function(){var m0=mark;mark=function(i){if(i>=0)BGXN++;return m0(i)}})();nwReceive();
 function mount(){
  if($('#cvCardBtn'))return;
  var g=$('.modes-grid');

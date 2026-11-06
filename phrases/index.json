@@ -1,5 +1,5 @@
 {
-"updated": 1793871499600,
+"updated": 1793959736765,
 "packs": [
 {
 "id": "airport-0001",
@@ -680,6 +680,14 @@
 "count": 50,
 "situation": "offline",
 "sname": "オフラインで動くアプリ"
+},
+{
+"id": "newsnow-2901",
+"file": "newsnow-2901.json",
+"ver": 1,
+"count": 50,
+"situation": "newsnow",
+"sname": "ニュース英会話（11/6時点）"
 }
 ]
 }

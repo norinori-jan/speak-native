@@ -1,0 +1,241 @@
+[
+  {
+    "id": "newsnow",
+    "ic": "📰",
+    "n": "ニュース英会話（11/6時点）",
+    "hint": "Friends talk about this week's news as reported on November 5-6, 2026: US midterm results, uncalled Senate races, ranked-choice voting, COP31, and how to read the news",
+    "level": 4,
+    "keywords": [
+      "news",
+      "election",
+      "climate"
+    ],
+    "d": [
+      {
+        "t": "中間選挙の結果（11月6日時点）",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, did you see the news this morning? The midterm elections were on Tuesday, and the results are all over the headlines.",
+            "jp": "ケン、今朝のニュース見た？中間選挙が火曜日にあって、結果が見出しにあふれてるよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I did, but I only read the headlines. According to the reports, the Democrats won control of both the House and the Senate.",
+            "jp": "見たけど見出しだけ。報道によると、民主党が下院と上院の両方で主導権を握ったそうよ。"
+          },
+          {
+            "sp": 0,
+            "en": "That's a big change. Before the election, the Republicans controlled both chambers.",
+            "jp": "大きな変化だね。選挙の前は、共和党が両方の議院を握っていたから。"
+          },
+          {
+            "sp": 1,
+            "en": "What does that mean for the next two years? Can the President still pass his plans?",
+            "jp": "これから2年間、どうなるの？大統領は計画をまだ通せるの？"
+          },
+          {
+            "sp": 0,
+            "en": "It gets harder. A law needs to pass both chambers, so the other party can slow or block it.",
+            "jp": "難しくなるよ。法律は両院を通る必要があるから、相手の党が遅らせたり止めたりできる。"
+          },
+          {
+            "sp": 1,
+            "en": "And Congress can also hold more hearings, right? Committees can question officials.",
+            "jp": "それに議会は、もっと公聴会を開けるんだよね？委員会が当局者に質問できるから。"
+          },
+          {
+            "sp": 0,
+            "en": "Yes, that's called oversight. But let's remember, it's early, and some numbers are still changing.",
+            "jp": "そう、それが監視機能と呼ばれるもの。でも、まだ早い段階で、数字が変わっているものもあるのは覚えておこう。"
+          },
+          {
+            "sp": 1,
+            "en": "Good point. I'll check a few news sources tonight, not just one.",
+            "jp": "いい指摘ね。今夜はひとつだけでなく、いくつかのニュースを確認するわ。"
+          }
+        ]
+      },
+      {
+        "t": "まだ決まらない上院選",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I keep reading that two Senate races haven't been called yet. What does 'called' mean?",
+            "jp": "ケン、上院の2つの選挙が、まだ『called』されていないとよく読むの。『called』って何？"
+          },
+          {
+            "sp": 1,
+            "en": "It means the news organizations haven't announced a winner. They wait until the numbers make the result clear.",
+            "jp": "報道機関がまだ勝者を発表していないということ。数字で結果がはっきりするまで待つんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "The reports say the races are in Alaska and Mississippi. Why are they taking so long?",
+            "jp": "報道ではアラスカとミシシッピの選挙だって。どうしてそんなに時間がかかるの？"
+          },
+          {
+            "sp": 1,
+            "en": "The margins are very small, and there are still ballots to count. Some are mail-in or provisional ballots, which take extra time to verify.",
+            "jp": "差がとても小さくて、数える票がまだあるんだ。郵送票や暫定票もあって、確認に余計な時間がかかる。"
+          },
+          {
+            "sp": 0,
+            "en": "What's a provisional ballot?",
+            "jp": "暫定票って何？"
+          },
+          {
+            "sp": 1,
+            "en": "It's a vote cast when a voter's eligibility needs to be checked first. Officials verify it before it's counted.",
+            "jp": "投票資格をまず確認する必要がある時に投じる票だよ。当局が確認してから数えるんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "And is there a recount if it's really close?",
+            "jp": "接戦なら、数え直しはあるの？"
+          },
+          {
+            "sp": 1,
+            "en": "It depends on the state and the margin. Each place has its own rules, so we should wait for official announcements.",
+            "jp": "州と差によるよ。場所ごとに規則があるから、公式な発表を待つべきだね。"
+          }
+        ]
+      },
+      {
+        "t": "アラスカの特別な数え方",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I heard Alaska counts votes in a special way. Something about 'ranked-choice voting'?",
+            "jp": "ケン、アラスカは特別な数え方をすると聞いたよ。『ranked-choice voting』とか？"
+          },
+          {
+            "sp": 1,
+            "en": "Right. Voters can rank candidates: first choice, second choice, and so on, instead of picking just one.",
+            "jp": "そう。有権者は1人だけ選ぶのではなく、第1希望、第2希望と、候補者に順位をつけられるの。"
+          },
+          {
+            "sp": 0,
+            "en": "So what happens if nobody gets more than half of the first-choice votes?",
+            "jp": "じゃあ、誰も第1希望で過半数を取れなかったらどうなるの？"
+          },
+          {
+            "sp": 1,
+            "en": "Then the candidate with the fewest votes is dropped, and those ballots go to each voter's next choice.",
+            "jp": "一番票が少ない候補者が外されて、その票は各有権者の次の希望に回るの。"
+          },
+          {
+            "sp": 0,
+            "en": "And they repeat that until someone has a majority?",
+            "jp": "それを誰かが過半数になるまで繰り返すの？"
+          },
+          {
+            "sp": 1,
+            "en": "Exactly. It takes longer, which is one reason the final result can arrive later than in other states.",
+            "jp": "その通り。時間がかかるから、最終結果が他の州より遅れる理由のひとつになるのよ。"
+          },
+          {
+            "sp": 0,
+            "en": "I think that's fair, as long as the rules are clear to everyone.",
+            "jp": "規則が全員に明確なら、公平だと思うな。"
+          },
+          {
+            "sp": 1,
+            "en": "Many people like it because it lets voters support a smaller candidate without feeling their vote is wasted.",
+            "jp": "多くの人が好むのは、小さな候補を支持しても、票が無駄になったと感じなくて済むからよ。"
+          }
+        ]
+      },
+      {
+        "t": "COP31がもうすぐ始まる",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, did you know the next UN climate conference starts on the ninth of November? It's called COP31.",
+            "jp": "ケン、国連の次の気候会議が11月9日に始まるって知ってた？COP31と呼ばれているよ。"
+          },
+          {
+            "sp": 1,
+            "en": "I did. It's scheduled for the ninth to the twentieth of November, and it's being held in Antalya, in Türkiye.",
+            "jp": "知ってる。11月9日から20日までの予定で、トルコのアンタルヤで開かれるんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "What happens at a COP? Do countries just give speeches?",
+            "jp": "COPでは何が起こるの？国々がスピーチをするだけ？"
+          },
+          {
+            "sp": 1,
+            "en": "There are speeches, but the real work is negotiation. Delegates from nearly every country try to agree on shared goals and rules.",
+            "jp": "スピーチもあるけど、本当の仕事は交渉だよ。ほぼすべての国の代表が、共通の目標と規則に合意しようとする。"
+          },
+          {
+            "sp": 0,
+            "en": "And do they always reach an agreement?",
+            "jp": "いつも合意に達するの？"
+          },
+          {
+            "sp": 1,
+            "en": "Not always, and the final text is often a compromise. That's why people watch the last few days so closely.",
+            "jp": "いつもではないし、最終的な文章は妥協案になることが多い。だから最後の数日を、みんなとても注意して見るんだ。"
+          },
+          {
+            "sp": 0,
+            "en": "I'd like to follow it. Where can I find reliable updates?",
+            "jp": "追いかけたいな。信頼できる最新情報はどこで見つかる？"
+          },
+          {
+            "sp": 1,
+            "en": "Check the official UN climate website first, and then compare a few major news outlets for context.",
+            "jp": "まず国連の公式な気候のウェブサイトを見て、それから背景を知るために主要なニュース媒体をいくつか比べるといいよ。"
+          }
+        ]
+      },
+      {
+        "t": "ニュースの読み方のコツ",
+        "l": [
+          {
+            "sp": 0,
+            "en": "Ken, I read three articles about the same event, and they all gave different numbers. Who's right?",
+            "jp": "ケン、同じ出来事について3つの記事を読んだら、どれも違う数字でした。誰が正しいの？"
+          },
+          {
+            "sp": 1,
+            "en": "Maybe all of them. Numbers change over time, especially during live events like an election count.",
+            "jp": "全部正しいかもしれないよ。数字は時間とともに変わるから、特に選挙の開票のような進行中の出来事では。"
+          },
+          {
+            "sp": 0,
+            "en": "So the first thing to check is the time the article was written?",
+            "jp": "じゃあ最初に確認するのは、記事が書かれた時刻？"
+          },
+          {
+            "sp": 1,
+            "en": "Yes, look for the date and the time, and for words like 'as of Thursday morning.' Old numbers can mislead you.",
+            "jp": "そう、日付と時刻、それから『木曜の朝時点で』のような言葉を探して。古い数字は誤解させるから。"
+          },
+          {
+            "sp": 0,
+            "en": "What about the headline? Sometimes it sounds more dramatic than the article.",
+            "jp": "見出しはどう？記事より大げさに聞こえることがあるよね。"
+          },
+          {
+            "sp": 1,
+            "en": "Right, so read past the headline. And notice who is being quoted, and whether the claim is a fact or just an opinion.",
+            "jp": "そうだね、だから見出しの先まで読もう。誰の発言が引用されているか、主張が事実か意見かにも注意して。"
+          },
+          {
+            "sp": 0,
+            "en": "Is it better to read in English, or in Japanese first?",
+            "jp": "英語で読むのと、先に日本語で読むのと、どちらがいい？"
+          },
+          {
+            "sp": 1,
+            "en": "Try both. Read the Japanese for the big picture, and then the English for the exact words. It's great practice, too.",
+            "jp": "両方試して。大枠は日本語で、正確な言葉は英語で。いい練習にもなるよ。"
+          }
+        ]
+      }
+    ]
+  }
+]

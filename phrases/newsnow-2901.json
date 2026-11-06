@@ -1,0 +1,362 @@
+{
+  "app": "phrase-pack",
+  "id": "newsnow-2901",
+  "ver": 1,
+  "situation": "newsnow",
+  "sname": "ニュース英会話（11/6時点）",
+  "icon": "📰",
+  "level": 4,
+  "title": "ニュース英会話の口語表現",
+  "items": [
+    {
+      "id": "newsnow-2901-001",
+      "en": "Did you see the news this morning?",
+      "jp": "今朝のニュースを見ましたか？",
+      "speak": "Did you see the news this morning?",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-002",
+      "en": "It's all over the headlines.",
+      "jp": "見出しにあふれています。",
+      "speak": "It's all over the headlines.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-003",
+      "en": "According to the reports, they won control.",
+      "jp": "報道によると、彼らが主導権を握りました。",
+      "speak": "According to the reports, they won control.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-004",
+      "en": "Both chambers are now under one party.",
+      "jp": "両方の議院が今は一つの党の下にあります。",
+      "speak": "Both chambers are now under one party.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-005",
+      "en": "A law needs to pass both chambers.",
+      "jp": "法律は両院を通る必要があります。",
+      "speak": "A law needs to pass both chambers.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-006",
+      "en": "The other party can slow or block it.",
+      "jp": "相手の党が遅らせたり止めたりできます。",
+      "speak": "The other party can slow or block it.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-007",
+      "en": "Committees can question officials.",
+      "jp": "委員会は当局者に質問できます。",
+      "speak": "Committees can question officials.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-008",
+      "en": "That's called oversight.",
+      "jp": "それが監視機能と呼ばれるものです。",
+      "speak": "That's called oversight.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-009",
+      "en": "It's early, and some numbers are still changing.",
+      "jp": "まだ早い段階で、数字が変わっているものもあります。",
+      "speak": "It's early, and some numbers are still changing.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-010",
+      "en": "Check more than one news source.",
+      "jp": "ひとつではなく複数のニュースを確認しましょう。",
+      "speak": "Check more than one news source.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-011",
+      "en": "The race hasn't been called yet.",
+      "jp": "その選挙はまだ勝者が発表されていません。",
+      "speak": "The race hasn't been called yet.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-012",
+      "en": "They wait until the result is clear.",
+      "jp": "結果がはっきりするまで待ちます。",
+      "speak": "They wait until the result is clear.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-013",
+      "en": "The margin is very small.",
+      "jp": "差がとても小さいです。",
+      "speak": "The margin is very small.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-014",
+      "en": "There are still ballots to count.",
+      "jp": "数える票がまだあります。",
+      "speak": "There are still ballots to count.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-015",
+      "en": "Mail-in ballots take extra time.",
+      "jp": "郵送票は余計な時間がかかります。",
+      "speak": "Mail-in ballots take extra time.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-016",
+      "en": "Officials verify the ballot before it's counted.",
+      "jp": "当局は数える前に票を確認します。",
+      "speak": "Officials verify the ballot before it's counted.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-017",
+      "en": "Each state has its own rules.",
+      "jp": "州ごとに独自の規則があります。",
+      "speak": "Each state has its own rules.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-018",
+      "en": "Wait for the official announcement.",
+      "jp": "公式な発表を待ちましょう。",
+      "speak": "Wait for the official announcement.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-019",
+      "en": "Voters can rank the candidates.",
+      "jp": "有権者は候補者に順位をつけられます。",
+      "speak": "Voters can rank the candidates.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-020",
+      "en": "Nobody got more than half of the votes.",
+      "jp": "誰も過半数を取れませんでした。",
+      "speak": "Nobody got more than half of the votes.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-021",
+      "en": "The candidate with the fewest votes is dropped.",
+      "jp": "一番票が少ない候補者が外されます。",
+      "speak": "The candidate with the fewest votes is dropped.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-022",
+      "en": "Those ballots go to the voter's next choice.",
+      "jp": "その票は有権者の次の希望に回ります。",
+      "speak": "Those ballots go to the voter's next choice.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-023",
+      "en": "It takes longer to get the final result.",
+      "jp": "最終結果までに時間がかかります。",
+      "speak": "It takes longer to get the final result.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-024",
+      "en": "The vote won't feel wasted.",
+      "jp": "票が無駄になったと感じません。",
+      "speak": "The vote won't feel wasted.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-025",
+      "en": "The conference starts on the ninth.",
+      "jp": "会議は9日に始まります。",
+      "speak": "The conference starts on the ninth.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-026",
+      "en": "It's being held in Antalya.",
+      "jp": "アンタルヤで開かれます。",
+      "speak": "It's being held in Antalya.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-027",
+      "en": "Delegates from nearly every country attend.",
+      "jp": "ほぼすべての国の代表が参加します。",
+      "speak": "Delegates from nearly every country attend.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-028",
+      "en": "The real work is negotiation.",
+      "jp": "本当の仕事は交渉です。",
+      "speak": "The real work is negotiation.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-029",
+      "en": "They try to agree on shared goals.",
+      "jp": "共通の目標に合意しようとします。",
+      "speak": "They try to agree on shared goals.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-030",
+      "en": "The final text is often a compromise.",
+      "jp": "最終的な文章はしばしば妥協案です。",
+      "speak": "The final text is often a compromise.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-031",
+      "en": "People watch the last few days closely.",
+      "jp": "人々は最後の数日を注意して見ます。",
+      "speak": "People watch the last few days closely.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-032",
+      "en": "Where can I find reliable updates?",
+      "jp": "信頼できる最新情報はどこで見つかりますか？",
+      "speak": "Where can I find reliable updates?",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-033",
+      "en": "Check the official website first.",
+      "jp": "まず公式のウェブサイトを確認しましょう。",
+      "speak": "Check the official website first.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-034",
+      "en": "Compare a few major news outlets.",
+      "jp": "主要なニュース媒体をいくつか比べましょう。",
+      "speak": "Compare a few major news outlets.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-035",
+      "en": "They all gave different numbers.",
+      "jp": "どれも違う数字でした。",
+      "speak": "They all gave different numbers.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-036",
+      "en": "Numbers change over time.",
+      "jp": "数字は時間とともに変わります。",
+      "speak": "Numbers change over time.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-037",
+      "en": "Check when the article was written.",
+      "jp": "記事が書かれた時刻を確認しましょう。",
+      "speak": "Check when the article was written.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-038",
+      "en": "As of Thursday morning.",
+      "jp": "木曜の朝時点で。",
+      "speak": "As of Thursday morning.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-039",
+      "en": "Old numbers can mislead you.",
+      "jp": "古い数字は誤解させます。",
+      "speak": "Old numbers can mislead you.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-040",
+      "en": "Read past the headline.",
+      "jp": "見出しの先まで読みましょう。",
+      "speak": "Read past the headline.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-041",
+      "en": "Notice who is being quoted.",
+      "jp": "誰の発言が引用されているか注意しましょう。",
+      "speak": "Notice who is being quoted.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-042",
+      "en": "Is it a fact or an opinion?",
+      "jp": "それは事実ですか、意見ですか？",
+      "speak": "Is it a fact or an opinion?",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-043",
+      "en": "Read the Japanese for the big picture.",
+      "jp": "大枠は日本語で読みましょう。",
+      "speak": "Read the Japanese for the big picture.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-044",
+      "en": "Read the English for the exact words.",
+      "jp": "正確な言葉は英語で読みましょう。",
+      "speak": "Read the English for the exact words.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-045",
+      "en": "It's great practice.",
+      "jp": "いい練習になります。",
+      "speak": "It's great practice.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-046",
+      "en": "Let's see how it develops.",
+      "jp": "どう展開するか見てみましょう。",
+      "speak": "Let's see how it develops.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-047",
+      "en": "The final result isn't official yet.",
+      "jp": "最終結果はまだ公式ではありません。",
+      "speak": "The final result isn't official yet.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-048",
+      "en": "I only read the headlines.",
+      "jp": "見出ししか読んでいません。",
+      "speak": "I only read the headlines.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-049",
+      "en": "It gets harder to pass new laws.",
+      "jp": "新しい法律を通すのは難しくなります。",
+      "speak": "It gets harder to pass new laws.",
+      "say": []
+    },
+    {
+      "id": "newsnow-2901-050",
+      "en": "That's a big change.",
+      "jp": "大きな変化ですね。",
+      "speak": "That's a big change.",
+      "say": []
+    }
+  ]
+}
