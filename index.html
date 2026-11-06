@@ -3627,7 +3627,7 @@ function loadPackagedConversation(){
 }
 /* ---------- 声 ---------- */
 function vlist(){try{return(speechSynthesis.getVoices()||[]).filter(function(v){return/^en[-_]/i.test(v.lang)})}catch(e){return[]}}
-function pickV(g,sp){if(S.vmode&&sp!==undefined){var vp=pickCastVoice(g,sp);if(vp)return vp}var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i,M=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male/i;var re=g==='m'?M:F;
+function pickV(g,sp){var vo=vselPick(g,sp);if(vo)return vo;if(S.vmode&&sp!==undefined){var vp=pickCastVoice(g,sp);if(vp)return vp}var vs=vlist();var F=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female/i,M=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male/i;var re=g==='m'?M:F;
  return vs.find(function(v){return re.test(v.name)&&/en-US/i.test(v.lang)})||vs.find(function(v){return re.test(v.name)})||vs.find(function(v){return/en-US/i.test(v.lang)})||vs[0]||null}
 function sayLine(text,sp,tok){return new Promise(function(res){
  try{var u=new SpeechSynthesisUtterance(makeSpeakText(text));u.lang='en-US';var g=GEN[sp]||'f';var v=pickV(g,sp);if(v){u.voice=v;u.lang=v.lang}
@@ -3753,6 +3753,31 @@ function plView(){var a=plList(),h='<div class="row"><button data-a="home">‹ �
  a.forEach(function(d,i){h+='<div class="ln"><button data-a="plopen" data-i="'+i+'">▶</button><div class="t"><div class="en">'+E(d.title)+'</div></div><button data-a="plup" data-i="'+i+'">↑</button><button data-a="pldel" data-i="'+i+'">🗑</button></div>'});
  return h+'</div><div class="sub">再生中は ♾ が「再生リスト」になり、リストの最後まで行くと最初に戻ります。</div>'}
 function plStart(i){var d=plList()[i||0];if(!d)return;stopAll();S.cont=4;LS.set('dei_conv_cont',4);S.did=d.id;S.sid=d.scene;S.mode='listen';S.li=0;S.ri=-1;S.heard='';S.stage='dlg';render();playAll()}
+/*voiceset*/var VSK='dei_conv_vsel',VGK='dei_conv_gen',VCN={US:'🇺🇸 アメリカ',GB:'🇬🇧 イギリス',AU:'🇦🇺 オーストラリア',IE:'🇮🇪 アイルランド',IN:'🇮🇳 インド',ZA:'🇿🇦 南アフリカ',CA:'🇨🇦 カナダ',NZ:'🇳🇿 ニュージーランド'};
+var VF=/samantha|karen|moira|tessa|victoria|zira|susan|serena|fiona|allison|ava|kate|female|nicky|catherine|jenny|aria/i,VM=/daniel|alex|fred|aaron|tom|david|mark|rishi|oliver|arthur|gordon|male|guy|james|evan/i;
+(function(){var g=LS.get(VGK,null);if(Array.isArray(g)&&g.length===2&&/^[fm]$/.test(g[0])&&/^[fm]$/.test(g[1])){GEN[0]=g[0];GEN[1]=g[1]}})();
+function vSel(){var a=LS.get(VSK,[null,null]);return Array.isArray(a)&&a.length===2?a:[null,null]}
+function vCountry(v){var m=String(v.lang).replace('_','-').match(/-([A-Za-z]{2})$/);return m?m[1].toUpperCase():''}
+function vGuess(v){return VF.test(v.name)?'f':(VM.test(v.name)?'m':'')}
+function vselPick(g,sp){if(sp===undefined)return null;var o=vSel()[sp];if(!o)return null;var vs=vlist();
+ if(o.n){return vs.filter(function(v){return v.name===o.n})[0]||null}
+ if(o.c){var pool=vs.filter(function(v){return vCountry(v)===o.c});var gg=pool.filter(function(v){return vGuess(v)===g});return(gg.length?gg:pool)[0]||null}
+ return null}
+function vNow(sp){var v=pickV(GEN[sp],sp);return v?v.name+'（'+(VCN[vCountry(v)]||v.lang)+'）':'（声なし）'}
+function vsView(){var h='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">🎙 声の設定</div><div class="sub">話し手ごとに、声の国・性別・声そのものを選べます。声は iPhone に入っているものから選びます（増やす方法は下）。</div></div>';
+ var vs=vlist(),sel=vSel();
+ [0,1].forEach(function(sp){var o=sel[sp]||{};
+  h+='<div class="card"><div class="en">'+NAMES[sp]+'　'+(GEN[sp]==='f'?'♀ 女性の声':'♂ 男性の声')+'</div><div class="bd">いま：'+E(vNow(sp))+'</div>';
+  h+='<div class="row"><button data-a="vgen" data-sp="'+sp+'">⇄ 性別を入れ替え</button><button data-a="vtest" data-sp="'+sp+'">▶ 試し聞き</button><button data-a="vauto" data-sp="'+sp+'" class="'+(!o.n&&!o.c?'sel':'')+'">自動</button></div>';
+  h+='<div class="row">'+Object.keys(VCN).map(function(c){return'<button data-a="vcty" data-sp="'+sp+'" data-c="'+c+'" class="'+(o.c===c?'sel':'')+'">'+VCN[c]+'</button>'}).join('')+'</div>';
+  h+='<select data-vsp="'+sp+'" style="width:100%;margin-top:8px;padding:8px;font-size:15px"><option value="">声を直接えらぶ…</option>'+vs.map(function(v){return'<option value="'+E(v.name)+'"'+(o.n===v.name?' selected':'')+'>'+E(v.name)+'（'+E(VCN[vCountry(v)]||v.lang)+'）'+(vGuess(v)==='f'?' ♀':(vGuess(v)==='m'?' ♂':''))+'</option>'}).join('')+'</select></div>'});
+ h+='<div class="card"><div class="en">📋 この iPhone の英語の声（'+vs.length+'）</div><div class="bd">'+(vs.length?vs.map(function(v){return E(v.name)+'　'+E(v.lang)}).join('<br>'):'一覧が空です。少し待ってから開き直してください')+'</div></div>';
+ h+='<div class="card"><div class="en">➕ 声を増やすには</div><div class="sub">iPhoneの「設定」→「アクセシビリティ」→「読み上げコンテンツ」→「声」→「英語」で、国ごとの声（拡張・プレミアム）をダウンロードします。ダウンロードしたら、このアプリを一度閉じて開き直してください。</div></div>';
+ return h+'<div class="sub">名前（Mia / Ken）は会話の本文に出てくるため、変えずにそのままです。</div>'}
+function vTest(sp){stopAll();var m=S.tok;sayLine(sp?"Hi, I'm Ken. Nice to meet you. How's it going?":"Hi, I'm Mia. Nice to meet you. How's it going?",sp,m)}
+function vSet(sp,o){var a=vSel();a[sp]=o;LS.set(VSK,a)}
+try{speechSynthesis.addEventListener('voiceschanged',function(){if(S.stage==='vs'&&root.classList.contains('on'))render()})}catch(e){}
+root.addEventListener('change',function(ev){var t=ev.target;if(t&&t.dataset&&t.dataset.vsp!==undefined){vSet(+t.dataset.vsp,t.value?{n:t.value}:null);render();vTest(+t.dataset.vsp)}});
 async function keepPlay(){stopAll();var my=S.tok,a=keeps();S.playing=true;for(var i=0;i<a.length;i++){if(my!==S.tok)return;await sayLine(a[i].en,i%2,my);if(my!==S.tok)return;await new Promise(function(r){setTimeout(r,700)})}if(my===S.tok)S.playing=false}
 window.__cvKeepAudio=function(){return !!(S.playing&&S.bg)};
 var miniEl=document.createElement('div');miniEl.id='cvMini';
@@ -3820,13 +3845,14 @@ function render(){
   h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
    h+='<div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
   h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
-  h+=srsBtn();h+=plBtn();h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+  h+=srsBtn();h+=plBtn();h+='<button class="sc" data-a="vset"><span class="ic">🎙</span><span class="tx"><div class="en">声の設定</div><div class="bd">国・性別・声を選ぶ（Mia / Ken）</div></span></button>';h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
  }else if(S.stage==='scene'){
   var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
   dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
   h+='<div class="row"><button class="pri" data-a="ai">🤖 この場面の会話を AI で追加（保存）</button></div><div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
  }else if(S.stage==='srs'){h+=srsView();
  }else if(S.stage==='pl'){h+=plView();
+ }else if(S.stage==='vs'){h+=vsView();
  }else if(S.stage==='keep'){h+=keepView();
  }else if(S.stage==='newsin'){h+=newsForm();
  }else if(S.stage==='load'){
@@ -3835,7 +3861,7 @@ function render(){
   var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
-   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="plad" class="'+(plHas(S.did)?'sel':'')+'">'+(plHas(S.did)?'📋 リストに入っています':'➕ 再生リストに追加')+'</button><button data-a="sleep" class="'+(S.sleepAt?'sel':'')+'">'+sleepLabel()+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="vset">🎙 声の設定</button><button data-a="plad" class="'+(plHas(S.did)?'sel':'')+'">'+(plHas(S.did)?'📋 リストに入っています':'➕ 再生リストに追加')+'</button><button data-a="sleep" class="'+(S.sleepAt?'sel':'')+'">'+sleepLabel()+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
    h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><button data-a="keep" data-i="'+i+'">'+(isKept(l.en)?'★':'☆')+'</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div>'+(l.note?'<div class="jp" style="opacity:.85">💡 '+E(l.note)+'</div>':'')+'</div></div>'}).join('')+'</div>';
    h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';h+=termsCard(d);
   }else if(S.mode==='shadow'){
@@ -3883,6 +3909,11 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='plup'){var pa=plIds();if(i>0&&i<pa.length){var pt=pa[i-1];pa[i-1]=pa[i];pa[i]=pt;LS.set(PLK,pa)}render()}
  else if(a==='pldel'){var pb=plIds();pb.splice(i,1);LS.set(PLK,pb);render()}
  else if(a==='sleep'){S.slpI=(S.slpI+1)%SLPV.length;S.sleepAt=SLPV[S.slpI]?Date.now()+SLPV[S.slpI]*6e4:0;sleepRefresh();toast(S.sleepAt?'😴 '+SLPV[S.slpI]+'分後に止めます':'おやすみタイマーを切りました')}
+ else if(a==='vset'){stopAll();S.stage='vs';render()}
+ else if(a==='vgen'){var vsp=+b.dataset.sp;GEN[vsp]=GEN[vsp]==='f'?'m':'f';LS.set(VGK,[GEN[0],GEN[1]]);render();vTest(vsp)}
+ else if(a==='vtest'){vTest(+b.dataset.sp)}
+ else if(a==='vauto'){vSet(+b.dataset.sp,null);render();vTest(+b.dataset.sp)}
+ else if(a==='vcty'){vSet(+b.dataset.sp,{c:b.dataset.c});render();vTest(+b.dataset.sp)}
  else if(a==='keepopen'){stopAll();S.stage='keep';render()}
  else if(a==='keep'){var kl=d.lines[i];var kon=toggleKeep(kl);b.textContent=kon?'★':'☆';toast(kon?'覚えるフレーズに追加しました':'覚えるフレーズから外しました')}
  else if(a==='keepone'){var ka=keeps()[i];if(ka){stopAll();var km=S.tok;sayLine(ka.en,i%2,km)}}
