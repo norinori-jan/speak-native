@@ -3689,8 +3689,48 @@ function toggleKeep(l){var a=keeps(),i=a.findIndex(function(k){return k.en===l.e
 function keepBtn(){var n=keeps().length;return'<button class="sc" data-a="keepopen"><span class="ic">⭐</span><span class="tx"><div class="en">覚えるフレーズ</div><div class="bd">'+n+'件（会話の ☆ で追加）</div></span></button>'}
 function keepView(){var a=keeps();var h='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">⭐ 覚えるフレーズ</div><div class="bd">'+a.length+'件</div></div>';
  if(!a.length)return h+'<div class="sub">会話の各行の ☆ を押すと、ここに集まります。</div>';
- h+='<div class="row"><button class="pri" data-a="keepplay">▶ 全部流す</button><button data-a="stop">■ 止める</button></div><div class="card">';
+ h+='<div class="row"><button class="pri" data-a="srs">🔁 今日の復習</button><button data-a="keepplay">▶ 全部流す</button><button data-a="stop">■ 止める</button></div><div class="card">';
  a.forEach(function(k,i){h+='<div class="ln"><button data-a="keepone" data-i="'+i+'">▶</button><div class="t"><div class="en">'+E(k.en)+'</div><div class="jp">'+E(k.jp)+'</div>'+(k.note?'<div class="jp" style="opacity:.85">💡 '+E(k.note)+'</div>':'')+'</div><button data-a="keepdel" data-i="'+i+'">🗑</button></div>'});return h+'</div>'}
+/*srs*/var SRS_IV=[0,1,3,7,14,30],SRK='dei_srs_streak';
+function srsDay(t){var d=new Date(t||Date.now());return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+function srsStreak(){var o=LS.get(SRK,null);if(!o||!o.d)return{n:0,today:false};var td=srsDay(),yd=srsDay(Date.now()-864e5);return{n:(o.d===td||o.d===yd)?(o.n||0):0,today:o.d===td}}
+function srsTouch(){var o=LS.get(SRK,null)||{},td=srsDay(),yd=srsDay(Date.now()-864e5);if(o.d===td)return;LS.set(SRK,{d:td,n:o.d===yd?(o.n||0)+1:1})}
+function srsDueList(){var t=Date.now();return keeps().filter(function(k){return !k.due||k.due<=t}).sort(function(x,y){return(x.due||0)-(y.due||0)})}
+function srsFind(en){return keeps().filter(function(k){return k.en===en})[0]}
+function srsRate(en,ok){var a=keeps(),k=a.filter(function(x){return x.en===en})[0];if(!k)return;var b=k.b||0;
+ if(ok){b=S.sfail&&S.sfail[en]?1:Math.min(5,b+1)}else b=0;
+ k.b=b;k.due=ok?Date.now()+SRS_IV[b]*864e5:Date.now();k.last=Date.now();LS.set(KK,a)}
+function srsBtn(){var a=keeps(),n=a.length,m=a.filter(function(k){return(k.b||0)>=4}).length,d=srsDueList().length,st=srsStreak().n;
+ return'<button class="sc" data-a="srs"><span class="ic">🔁</span><span class="tx"><div class="en">今日の復習 '+d+'件</div><div class="bd">'+(n?('定着 '+m+' / '+n+(st?'　🔥連続 '+st+'日':'')):'会話の ☆ で集めたフレーズを、忘れかけた頃に出します')+'</div></span></button>'}
+function srsStart(){var l=srsDueList().slice(0,10);S.sq=l.map(function(k){return k.en});S.stot=l.length;S.sshow=false;S.sdone=0;S.sfail={}}
+function srsCur(){return S.sq&&S.sq.length?srsFind(S.sq[0]):null}
+function srsMode(c){return((c&&c.b)||0)%2===0?'L':'S'}
+function srsSay(){var c=srsCur();if(!c)return;stopAll();var m=S.tok;sayLine(c.en,c.en.length%2,m)}
+function srsAuto(){var c=srsCur();if(S.stage==='srs'&&c&&!S.sshow&&srsMode(c)==='L')srsSay()}
+function srsView(){var h='<div class="row"><button data-a="home">‹ 場面一覧</button></div>';
+ var all=keeps();
+ if(!all.length)return h+'<div class="card"><div class="en">🔁 今日の復習</div><div class="sub">会話の各行の ☆ を押すと、ここで復習できます。まず1つ、気に入った一文に ☆ をつけてみましょう。</div></div>';
+ var c=srsCur();
+ if(!c){var left=srsDueList().length,fut=all.filter(function(k){return k.due&&k.due>Date.now()}).sort(function(x,y){return x.due-y.due})[0],st=srsStreak().n,m=all.filter(function(k){return(k.b||0)>=4}).length;
+  h+='<div class="card"><div class="en">'+(S.sdone?'✅ 今日の復習おわり':'🎉 いま復習するものはありません')+'</div>';
+  if(S.sdone)h+='<div class="bd">'+S.sdone+' 件 復習しました'+(st?'　🔥連続 '+st+' 日':'')+'</div>';
+  h+='<div class="bd">定着したフレーズ '+m+' / '+all.length+'</div>';
+  if(fut){var dd=Math.max(1,Math.round((fut.due-Date.now())/864e5));h+='<div class="sub">次に出てくるのは '+(dd<=1?'明日':dd+'日後')+'ごろ。忘れかけた頃にまた出します。</div>'}
+  h+='</div>';
+  if(left)h+='<div class="row"><button class="pri" data-a="srs">もう '+Math.min(10,left)+' 件やる（残り '+left+'）</button></div>';
+  h+='<div class="card"><div class="en">💪 なぜこれで聞こえるようになる？</div><div class="sub">会話でよく出る一文は、何度も出てきます。それを「音のまま」ごっそり覚えると、聞こえる部分が増えていきます。間隔をあけて思い出すと、長く残ります。毎日10件を続けるのが、いちばん強いです。</div></div>';
+  return h}
+ var md=srsMode(c),b=c.b||0,dots='';for(var i=0;i<5;i++)dots+=i<b?'●':'○';
+ h+='<div class="card"><div class="bd">'+(S.sdone+1)+' / '+(S.stot+Object.keys(S.sfail||{}).length)+'　定着度 '+dots+'</div>';
+ if(!S.sshow){
+  if(md==='L')h+='<div class="en">👂 いまの音、聞き取れた？</div><div class="sub">文字は見ずに、聞こえたまま口に出してみよう。うろ覚えでOK。</div><div class="row"><button data-a="srsplay">▶ もう一度聞く</button></div>';
+  else h+='<div class="en">🗣 英語で言ってみよう</div><div class="jp" style="font-size:20px;margin:10px 0">'+E(c.jp||'（意味なし）')+'</div><div class="sub">声に出してから答えを見る。</div>';
+  h+='</div><div class="row"><button class="pri" data-a="srsshow">答えを見る</button></div>';
+ }else{
+  h+='<div class="en" style="font-size:20px">'+E(c.en)+'</div><div class="jp">'+E(c.jp||'')+'</div>'+(c.note?'<div class="jp" style="opacity:.85">💡 '+E(c.note)+'</div>':'')+'<div class="row"><button data-a="srsplay">▶ もう一度聞く</button></div></div>'+
+   '<div class="row"><button class="pri" data-a="srsok">✅ '+(md==='L'?'聞き取れた':'言えた')+'</button><button data-a="srsno">🔁 まだ</button></div>';
+ }
+ return h}
 async function keepPlay(){stopAll();var my=S.tok,a=keeps();S.playing=true;for(var i=0;i<a.length;i++){if(my!==S.tok)return;await sayLine(a[i].en,i%2,my);if(my!==S.tok)return;await new Promise(function(r){setTimeout(r,700)})}if(my===S.tok)S.playing=false}
 window.__cvKeepAudio=function(){return !!(S.playing&&S.bg)};
 var miniEl=document.createElement('div');miniEl.id='cvMini';
@@ -3758,11 +3798,12 @@ function render(){
   h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
    h+='<div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
   h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
-  h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+  h+=srsBtn();h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
  }else if(S.stage==='scene'){
   var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
   dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
   h+='<div class="row"><button class="pri" data-a="ai">🤖 この場面の会話を AI で追加（保存）</button></div><div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
+ }else if(S.stage==='srs'){h+=srsView();
  }else if(S.stage==='keep'){h+=keepView();
  }else if(S.stage==='newsin'){h+=newsForm();
  }else if(S.stage==='load'){
@@ -3808,6 +3849,10 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='stop'){stopAll();mark(-1)}
  else if(a==='bgx'){S.bgx=S.bgx?0:1;LS.set('dei_conv_bgx',S.bgx);b.textContent=S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切';b.classList.toggle('sel',!!S.bgx);if(S.bgx&&S.playing)bgxOn();else bgxOff();toast(S.bgx?'入れました。再生してから他のアプリへ移って確かめてください':'切りました')}
  else if(a==='next-dialog')nextDialogue();
+ else if(a==='srs'){stopAll();srsStart();S.stage='srs';render();srsAuto()}
+ else if(a==='srsshow'){S.sshow=true;render();var sc0=srsCur();if(sc0&&srsMode(sc0)==='S')srsSay()}
+ else if(a==='srsplay'){srsSay()}
+ else if(a==='srsok'||a==='srsno'){var sc1=srsCur();if(sc1){var ok1=a==='srsok';srsRate(sc1.en,ok1);srsTouch();S.sq.shift();if(ok1){S.sdone++}else{S.sfail[sc1.en]=(S.sfail[sc1.en]||0)+1;if(S.sfail[sc1.en]<=2)S.sq.push(sc1.en)}S.sshow=false;stopAll();render();srsAuto()}}
  else if(a==='keepopen'){stopAll();S.stage='keep';render()}
  else if(a==='keep'){var kl=d.lines[i];var kon=toggleKeep(kl);b.textContent=kon?'★':'☆';toast(kon?'覚えるフレーズに追加しました':'覚えるフレーズから外しました')}
  else if(a==='keepone'){var ka=keeps()[i];if(ka){stopAll();var km=S.tok;sayLine(ka.en,i%2,km)}}
