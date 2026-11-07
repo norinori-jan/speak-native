@@ -1067,6 +1067,7 @@
       <button class="mic-btn" id="micBtn" onclick="toggleMic()">🎤</button>
       <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
     </div>
+    <button type="button" class="instant-btn" style="width:100%;margin-top:6px;" onclick="sendLatestEnglishToMusicSuite()">🎼 入力した英語を music-suite へ送る</button>
   </div>
 </div>
 
@@ -1935,6 +1936,16 @@ async function sendMessage() {
 
 function handleEnter(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+function sendLatestEnglishToMusicSuite() {
+  const latest = [...(STATE.history || [])].reverse().find(m => m && m.role === 'user' && String(m.content || '').trim());
+  if (!latest) { showToast('先に英語で会話してください'); return; }
+  const params = new URLSearchParams();
+  params.set('note', String(latest.content).trim().slice(0, 3000));
+  params.set('source', 'speak-native');
+  const url = 'https://norinori-jan.github.io/music-suite/apps/vocal-lab-v3.html#' + params.toString();
+  window.open(url, '_blank', 'noopener,noreferrer');
+  showToast('入力した英語を music-suite に送りました');
 }
 function autoResize(el) {
   el.style.height = 'auto';
