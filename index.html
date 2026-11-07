@@ -3571,6 +3571,16 @@ function nwFormMsg(){var h=S.msg&&S.stage==='newsin'?'<div class="sub">'+E(S.msg
  if(S.nwBusy)h+='<div class="sub">取っています…</div>';
  if(f&&f.items&&f.items.length){h+='<div class="sub">'+E(NWF_SRC[f.src]||'')+'　'+E(f.at?new Date(f.at).toLocaleString('ja-JP'):'')+' に取得（タップで入力欄へ）</div>'+f.items.map(function(x,i){return'<button class="sc" data-a="newspick" data-i="'+i+'"><span class="tx"><div class="en">'+E(x.t)+'</div>'+(x.d?'<div class="bd">'+E(x.d.slice(0,90))+'</div>':'')+'</span></button>'}).join('')}
  return h+'</div>'}
+function sendDialogueToMusicSuite(){
+ var d=S.did?findD(S.did):null;
+ if(!d||!Array.isArray(d.lines)||!d.lines.length){toast('送信する会話が見つかりません');return}
+ var english=d.lines.map(function(l){return String(l.en||'').trim()}).filter(Boolean).join('\\n');
+ if(!english){toast('英文がありません');return}
+ var payload={title:String(d.title||'Conversation').slice(0,100),scene:String((scn(d.scene)||{}).n||d.scene||'会話集').slice(0,80),dialogueId:String(d.id||''),lines:d.lines.slice(0,40).map(function(l){return{speaker:(l.sp===1?'B':'A'),en:String(l.en||'').slice(0,1000),jp:String(l.jp||'').slice(0,1000)}})};
+ var params=new URLSearchParams();params.set('source','speak-native');params.set('kind','conversation');params.set('note',english.slice(0,5000));params.set('title',payload.title);params.set('scene',payload.scene);params.set('dialogue',JSON.stringify(payload));
+ window.open('https://norinori-jan.github.io/music-suite/apps/vocal-lab-v3.html#'+params.toString(),'_blank','noopener,noreferrer');
+ toast('会話の英文をmusic-suiteへ送信しました');
+}
 function findD(id){return allD().filter(function(d){return d.id===id})[0]}
 function mastered(id){var p=pget(id);return p.a&&p.b}
 function scn(sid){return CONV_DATA.filter(function(s){return s.id===sid})[0]}
@@ -3870,7 +3880,7 @@ function render(){
  }else if(S.stage==='load'){
   h+='<div class="card"><div class="en">会話を作っています…</div><div class="jp">20秒ほどかかることがあります</div></div>';
  }else if(S.stage==='dlg'){
-  var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';
+  var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';h+='<div class="row"><button class="pri" data-a="music-send">🎼 この会話を music-suite へ送る</button></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
    h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="vset">🎙 声の設定</button><button data-a="plad" class="'+(plHas(S.did)?'sel':'')+'">'+(plHas(S.did)?'📋 リストに入っています':'➕ 再生リストに追加')+'</button><button data-a="sleep" class="'+(S.sleepAt?'sel':'')+'">'+sleepLabel()+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
@@ -3905,6 +3915,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='scene'){S.sid=b.dataset.id;S.stage='scene';S.msg='';render()}
  else if(a==='back'){stopAll();S.stage='scene';S.msg='';render()}
  else if(a==='open'){S.did=b.dataset.id;S.mode='listen';S.li=0;S.ri=-1;S.stage='dlg';render()}
+  else if(a==='music-send'){sendDialogueToMusicSuite()}
  else if(a==='md'){stopAll();S.mode=b.dataset.v;S.li=0;S.ri=-1;S.heard='';render()}
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll();mark(-1)}
