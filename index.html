@@ -3576,7 +3576,7 @@ function sendDialogueToMusicSuite(){
  if(!d||!Array.isArray(d.lines)||!d.lines.length){toast('送信する会話が見つかりません');return}
  var english=d.lines.map(function(l){return String(l.en||'').trim()}).filter(Boolean).join('\\n');
  if(!english){toast('英文がありません');return}
- var payload={title:String(d.title||'Conversation').slice(0,100),scene:String((scn(d.scene)||{}).n||d.scene||'会話集').slice(0,80),dialogueId:String(d.id||''),lines:d.lines.slice(0,40).map(function(l){return{speaker:(l.sp===1?'B':'A'),en:String(l.en||'').slice(0,1000),jp:String(l.jp||'').slice(0,1000)}})};
+ var payload={projectId:'sn-'+String(d.id||Date.now()),title:String(d.title||'Conversation').slice(0,100),scene:String((scn(d.scene)||{}).n||d.scene||'会話集').slice(0,80),dialogueId:String(d.id||''),lines:d.lines.slice(0,40).map(function(l){return{speaker:(l.sp===1?'B':'A'),en:String(l.en||'').slice(0,1000),jp:String(l.jp||'').slice(0,1000)}})};
  var params=new URLSearchParams();params.set('source','speak-native');params.set('kind','conversation');params.set('note',english.slice(0,5000));params.set('title',payload.title);params.set('scene',payload.scene);params.set('dialogue',JSON.stringify(payload));
  window.open('https://norinori-jan.github.io/music-suite/apps/vocal-lab-v3.html#'+params.toString(),'_blank','noopener,noreferrer');
  toast('会話の英文をmusic-suiteへ送信しました');
