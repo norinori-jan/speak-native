@@ -1,0 +1,23 @@
+name: Music Suite Handoff
+on:
+  push:
+    paths:
+      - "album/index.html"
+      - "tests/music-suite-handoff.test.mjs"
+      - "package.json"
+      - ".github/workflows/music-suite-handoff.yml"
+  pull_request:
+    paths:
+      - "album/index.html"
+      - "tests/music-suite-handoff.test.mjs"
+      - "package.json"
+      - ".github/workflows/music-suite-handoff.yml"
+jobs:
+  handoff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run test:handoff
