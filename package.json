@@ -7,7 +7,8 @@
   "scripts": {
     "generate-icons": "node make-icons.mjs",
     "dev": "python -m http.server 8000",
-    "build": "npm run generate-icons"
+    "build": "npm run generate-icons",
+    "test:handoff": "node --test tests/music-suite-handoff.test.mjs"
   },
   "keywords": [
     "english",
