@@ -4185,7 +4185,7 @@ function vAI(){var L=sits();
  '<h3>個数</h3><div class="row">'+[10,20,30,40].map(function(n){return'<button data-a="ain" data-v="'+n+'" class="'+(AI.n===n?'sel':'')+'">'+n+'</button>'}).join('')+'</div>'+
  '<div class="row"><button class="pri" data-a="aigo">🤖 アプリのAIで作る（通信）</button><button data-a="aicopy">📋 質問文をコピー（API不使用）</button></div>'+
  '<h3>AIの返事を貼る</h3><textarea id="aiPaste" rows="6" placeholder="AIの返事（[ から ] まで）を貼り付け" style="width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1px solid var(--border,#2a2d35);background:var(--surface2,#1e2128);color:inherit;font:inherit">'+esc(AI.paste)+'</textarea>'+
- '<div class="row"><button class="pri" data-a="aitake">✅ 貼った内容を取り込む</button></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
+ '<div class="row"><button class="pri" data-a="aiclip">📥 コピーした返事を、そのまま取り込む</button><button data-a="aitake">✅ 下に貼った内容を取り込む</button></div><div class="msg" id="phMsg">'+esc(S.msg)+'</div>'}
 function copyTxt(t){try{if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}catch(e){}return Promise.resolve(fb());function fb(){try{var ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok}catch(e){return false}}}
 function voiceLabel(){var g=LS.get('dei_ph_gender',''),a=LS.get('dei_ph_age',''),n=LS.get('dei_ph_voice','');return (n?n:((g==='f'?'女性':g==='m'?'男性':'おまかせ')))+'・'+(a==='y'?'若い':a==='o'?'年配':'標準')}
 function vtest(){stopAll();try{var u=new SpeechSynthesisUtterance(makeSpeakText('Thank you for coming. Could you say that one more time, please?'));u.lang='en-US';var ag=LS.get('dei_ph_age','');u.rate=S.rate*(ag==='y'?1.05:ag==='o'?0.92:1);if(ag==='y')u.pitch=1.15;else if(ag==='o')u.pitch=0.85;var v=pickVoice(0);if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
@@ -4217,6 +4217,7 @@ root.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(
  else if(a==='aisit'){AI.sit=b.dataset.k;S.msg='';render()}
  else if(a==='ain'){AI.n=+b.dataset.v;render()}
  else if(a==='aicopy'){copyTxt(aiPrompt()).then(function(ok){S.msg=ok?'質問文をコピーしました。普段使いのAIに貼って、返事を下に貼ってください':'コピーできませんでした。下に出した文を手でコピーしてください';render();if(!ok){var m=$('#phMsg',root);if(m)m.insertAdjacentHTML('afterend','<textarea rows="8" style="width:100%;box-sizing:border-box">'+esc(aiPrompt())+'</textarea>')}})}
+ else if(a==='aiclip'){if(!navigator.clipboard||!navigator.clipboard.readText){S.msg='この端末では自動で貼れません。下の欄に貼ってください';return render()}navigator.clipboard.readText().then(function(t){AI.paste=t;aiTake(t)}).catch(function(){S.msg='貼り付けが許可されませんでした。下の欄に貼ってください';render()})}
  else if(a==='aitake'){var pt=($('#aiPaste',root)||{}).value||AI.paste;aiTake(pt)}
  else if(a==='aigo'){if(typeof callAIOnce!=='function'){S.msg='このアプリのAIが使えません。「質問文をコピー」を使ってください';return render()}
   if(AI.busy)return;AI.busy=true;S.msg='AIに作らせています…（少し待ちます）';render();
@@ -4243,6 +4244,7 @@ function runFlow(){var s=curSit();if(!s)return;stopAll();var my=S.token,i=0;S.pl
 function open(){S.view='menu';S.msg='';root.classList.add('on');try{loadVoices()}catch(e){}
  if(!S.ready){render();loadAll().then(function(){render()})}else render()}
 window.__phOpen=open;
+window.__phAI=function(theme){S.view='ai';S.prev='menu';AI.sit='';AI.theme=String(theme||'').slice(0,40);S.msg='';root.classList.add('on');try{loadVoices()}catch(e){}if(!S.ready){render();loadAll().then(function(){render()})}else render()};
 function mount(){
  if($('#phCardBtn'))return;
  var g=$('.modes-grid');
@@ -4278,6 +4280,21 @@ mount();
 })();
 </script>
 <!--/ASK-FROM-KD-->
+
+<!--PH-AI-FROM-KD-->
+<script>
+/* 知識辞書から、「聞き取りフレーズ」の取り込み画面を開く（#ph=ai&theme=...） */
+(function () {
+  try {
+    var h = location.hash || '';
+    if (h.indexOf('#ph=ai') !== 0) return;
+    var p = new URLSearchParams(h.slice(1));
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (_) {}
+    if (typeof window.__phAI === 'function') window.__phAI(p.get('theme') || '');
+  } catch (_) {}
+})();
+</script>
+<!--/PH-AI-FROM-KD-->
 
 </body>
 </html>
