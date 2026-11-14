@@ -4254,5 +4254,30 @@ mount();
 </script>
 <!--PH-END-->
 
+<!--ASK-FROM-KD-->
+<script>
+/* 知識辞書から、話題を受け取って会話を始める（#ask=...&ai=claude|gemini） */
+(function () {
+  try {
+    var h = location.hash || '';
+    if (h.indexOf('#ask=') !== 0) return;
+    var p = new URLSearchParams(h.slice(1)), ask = p.get('ask'), ai = p.get('ai');
+    if (!ask) return;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (_) {}
+    (async function () {
+      try { await keysReady; } catch (_) {}
+      if (ai === 'claude' || ai === 'gemini') { try { switchProvider(ai); } catch (_) {} }
+      showScreen('freetalk');
+      var inp = document.getElementById('msgInput');
+      if (!inp) return;
+      inp.value = ask.slice(0, 2000);
+      if (STATE.appToken) { await sendMessage(); }
+      else { try { showToast('合言葉を入れてから、送信を押してください'); } catch (_) {} }
+    })();
+  } catch (_) {}
+})();
+</script>
+<!--/ASK-FROM-KD-->
+
 </body>
 </html>
