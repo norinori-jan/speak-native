@@ -3093,6 +3093,7 @@ function render(){
   h+='<div class="sub" style="margin-top:8px">場面</div><div class="row">'+Object.keys(SC).map(function(k){return'<button data-a="sc" data-v="'+k+'" class="'+sel(S.scene===k).trim()+'">'+SC[k][0]+'</button>'}).join('')+'</div></div>';
   var nlib=libGet().length;
   h+='<div class="row"><button class="pri big" data-a="lib">📚 保存した会話で練習（通信なし）'+(nlib?'　'+nlib+'本':'')+'</button><button class="big" data-a="newai">🤖 AIで新しい会話をつくる（自動で保存）</button><button class="big" data-a="newlocal">📖 内蔵の会話で練習（通信なし）</button></div><div class="sub">AIでつくった会話は端末に保存されます。次からは通信もAIも使わず、何度でも練習できます。</div>';
+  h+='<div class="card"><div class="sub"><b>✍ AIの返事を貼って、声で聞く</b>（API不使用・長い会話向き）</div><textarea id="lqPaste" rows="5" placeholder="AIが作った会話（{ から } まで）を貼る" style="width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1px solid var(--border,#2a2d35);background:var(--surface2,#1e2128);color:inherit;font:inherit">'+E(S.paste||'')+'</textarea><div class="row"><button class="pri" data-a="ptclip">📥 コピーしたものを取り込む</button><button data-a="pttake">✅ 貼った内容を取り込む</button></div></div>'; /*LQ-PASTE*/
   h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="row"><button data-a="ping">🔧 AI接続テスト</button></div><div class="sub">'+E(hist())+'</div>';
  }else if(S.stage==='lib'){
   var L=libGet();
@@ -3115,6 +3116,11 @@ function render(){
   if(done){h+='<div class="card"><div class="en">'+(S.picked===q.answer?'✅ 正解！':'❌ 不正解')+'</div><div class="jp" style="font-size:14px">'+E(q.why_jp||'')+'</div><div class="jp">'+E(q.why_en||'')+'</div></div>'}
   h+='<div class="row"><button data-a="replay">🔁 会話をもう一度聞く</button><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="hjp">'+(root.classList.contains('hjp')?'日本語を出す':'日本語を隠す')+'</button></div>';
   if(done)h+='<button class="pri big" data-a="nextq">'+(S.qi+1<S.qs.length?'次の問題 ›':'結果を見る ›')+'</button>';
+ }else if(S.stage==='text'){
+  h+='<div class="card"><div class="en" style="font-size:20px">'+E((S.dlg&&S.dlg.title)||'会話')+'</div><div class="jp">'+S.dlg.lines.length+'行。通信なしで、何度でも聞けます。</div></div>';
+  h+='<div class="row"><button class="pri big" data-a="play">▶ 全部を続けて聞く</button><button data-a="stop">■ とめる</button><button data-a="slow" class="'+sel(S.slow).trim()+'">🐢 ゆっくり</button><button data-a="hjp">'+(root.classList.contains('hjp')?'日本語を出す':'日本語を隠す')+'</button></div>';
+  h+='<div class="card">'+S.dlg.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><div class="t"><div class="nm">'+E(S.dlg.names[l.sp])+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div></div></div>'}).join('')+'</div>';
+  h+='<div class="msg" id="lqMsg">'+E(S.msg)+'</div><div class="row"><button data-a="menu">メニューへ</button><button data-a="lib">📚 保存した会話</button></div>';
  }else if(S.stage==='result'){
   h+='<div class="card"><div class="en" style="font-size:20px">'+S.score+' / '+S.qs.length+' 問 正解</div><div class="jp">'+(S.score===S.qs.length?'すばらしい！全問正解です。':S.score>=Math.ceil(S.qs.length/2)?'いい調子です。下の全文で、聞き取れなかった所を確認しましょう。':'まずは下の全文を読みながら、1文ずつ聞いてみましょう。')+'</div></div>';
   h+='<div class="card"><div class="sub">全文（英語・日本語）。▶で1文ずつ聞けます。🔖は聞き取れなかった文の印で、単語帳に入れて復習できます。</div>';
@@ -3126,6 +3132,13 @@ function render(){
 function setMsg(m){S.msg=m;var e=$('#lqMsg');if(e)e.textContent=m}
 function startQuiz(){S.qs=S.qs.map(function(q){var ops=q.options.map(function(o,i){return{o:o,ok:i===q.answer}});ops=shuffle(ops);return{q_en:q.q_en,q_jp:q.q_jp,why_jp:q.why_jp,why_en:q.why_en,options:ops.map(function(x){return x.o}),answer:ops.findIndex(function(x){return x.ok})}});
  S.qi=0;S.score=0;S.picked=null;S.marks={};S.played=0;S.stage='listen';S.msg='';render()}
+function ptTake(t){
+ var d=getDlg(t);
+ if(!d){S.paste=String(t||'').slice(0,20000);setMsg('会話を読み取れませんでした。AIの返事の「{」から「}」までを、そのまま貼ってください');return}
+ d.lines=d.lines.map(function(l,i){return{sp:(l.sp===1||l.sp==='1')?1:(l.sp===0||l.sp==='0'?0:i%2),en:String(l.en).trim(),jp:String(l.jp||'').trim()}});
+ d.names=Array.isArray(d.names)&&d.names.length>=2?d.names:['A','B'];d.genders=Array.isArray(d.genders)&&d.genders.length>=2?d.genders:['f','m'];
+ d.title=String(d.title||d.scene_jp||'貼り付けた会話').slice(0,60);
+ S.dlg=d;S.qs=[];S.paste='';S.libId=libSave(clone(d),[]);S.stage='text';S.msg=S.libId?'':'（端末の空きが足りず、保存はできませんでした）';render()}
 async function begin(ai){S.msg='';LS.set('dei_lq_level',S.level);LS.set('dei_lq_scene',S.scene);
  if(ai){S.stage='loading';render();var r=await genAI();if(r.error){S.stage='menu';S.msg=r.error+'。内蔵の会話なら通信なしで練習できます。';render();return}S.dlg=r.dlg;S.qs=r.qs;S.libId=libSave(clone(r.dlg),clone(r.qs));toast(S.libId?'会話を保存しました（📚 から何度でも練習できます）':'保存できませんでした（端末の空きが足りないかもしれません）')}
  else{S.libId=null;var l=genLocal();if(!l){S.msg='内蔵の会話が見つかりません';render();return}S.dlg=l.dlg;S.qs=l.qs}
@@ -3137,7 +3150,9 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='newai')begin(true);
  else if(a==='newlocal')begin(false);
  else if(a==='lib'){stopAll();S.stage='lib';S.msg='';render()}
- else if(a==='libgo'){var it=libGet().filter(function(x){return x.id===b.dataset.id})[0];if(it){S.dlg=clone(it.dlg);S.qs=clone(it.qs);S.libId=it.id;startQuiz()}}
+ else if(a==='ptclip'){if(!navigator.clipboard||!navigator.clipboard.readText){setMsg('この端末では自動で貼れません。下の欄に貼ってください');return}try{var pt0=await navigator.clipboard.readText();ptTake(pt0)}catch(e){setMsg('貼り付けが許可されませんでした。上の欄に貼ってください')}}
+ else if(a==='pttake'){ptTake((($('#lqPaste')||{}).value)||'')}
+ else if(a==='libgo'){var it=libGet().filter(function(x){return x.id===b.dataset.id})[0];if(it){S.dlg=clone(it.dlg);S.qs=clone(it.qs);S.libId=it.id;if(!(S.qs||[]).length){S.stage='text';S.msg='';render()}else startQuiz()}}
  else if(a==='libdel'){if(confirm('この会話を削除しますか？')){libDel(b.dataset.id);render()}}
  else if(a==='ping'){setMsg('AIに問い合わせ中…');var pr=await ask('Reply with the single word OK.',30);setMsg(pr.error?('つながりません： '+pr.error):('つながりました（'+pr.provider+'）'))}
  else if(a==='play')playAll();
@@ -4295,6 +4310,19 @@ mount();
 })();
 </script>
 <!--/PH-AI-FROM-KD-->
+
+<!--LQ-FROM-KD-->
+<script>
+(function () {
+  try {
+    var h = location.hash || '';
+    if (h.indexOf('#lq=') !== 0) return;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (_) {}
+    if (typeof window.__lqOpen === 'function') window.__lqOpen();
+  } catch (_) {}
+})();
+</script>
+<!--/LQ-FROM-KD-->
 
 </body>
 </html>
