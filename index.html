@@ -1957,7 +1957,7 @@ function sendLatestEnglishToMusicSuite() {
     conversationMode: convMode,
     topic: currentTopic || '',
     dialogue,
-    original: dialogue.map(line => (line.speaker === 'A' ? 'A' : 'B') + ': ' + line.text).join('\\n'),
+    original: dialogue.map(line => (line.speaker === 'A' ? 'A' : 'B') + ': ' + line.text).join('\n'),
     createdAt: new Date().toISOString()
   };
   const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
