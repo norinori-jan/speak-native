@@ -5,7 +5,12 @@
   "n": "ドラマ100・どんでん返し・ラストの一言",
   "hint": "Ten two-person dramas where one last line, discovery or reveal turns everything around",
   "level": 4,
-  "keywords": "twist, surprise, ending, drama",
+  "keywords": [
+   "twist",
+   "surprise",
+   "ending",
+   "drama"
+  ],
   "d": [
    {
     "t": "🎁 091｜二人のサプライズ：Double Surprise",
@@ -28,7 +33,8 @@
      {
       "sp": 1,
       "en": "That's the first one. The second is a surprise party for a woman named Hannah, also twenty guests.",
-      "jp": "それが1件目です。2件目は、ハンナさんという女性のサプライズパーティーで、同じく20人です。"
+      "jp": "それが1件目です。2件目は、ハンナさんという女性のサプライズパーティーで、同じく20人です。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -48,13 +54,13 @@
      {
       "sp": 1,
       "en": "Well, ma'am, you're both booked at the same table. It's a nice big one.",
-      "jp": "さて奥様、お二人とも同じテーブルでご予約です。大きくて素敵な席ですよ。",
-      "note": "元の形: Well, ma'am／聞こえ方: ウェル・マーム／使う場面: 丁寧に話を切り出す"
+      "jp": "さて奥様、お二人とも同じテーブルでご予約です。大きくて素敵な席ですよ。"
      },
      {
       "sp": 0,
       "en": "Don't cancel anything. Honestly, I can't wait to see his face on Saturday.",
-      "jp": "何もキャンセルしないで。正直、土曜の彼の顔を見るのが待ちきれないわ。"
+      "jp": "何もキャンセルしないで。正直、土曜の彼の顔を見るのが待ちきれないわ。",
+      "note": "元の形: can't wait／聞こえ方: キャンウェイト／使う場面:待ちきれないと言う時"
      }
     ]
    },
@@ -94,7 +100,8 @@
      {
       "sp": 0,
       "en": "Three months? Then why did you keep answering as Mr. Brown?",
-      "jp": "3か月も？なら、どうしてブラウン先生のふりを続けたんですか？"
+      "jp": "3か月も？なら、どうしてブラウン先生のふりを続けたんですか？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
@@ -105,7 +112,7 @@
       "sp": 0,
       "en": "Then come on Thursday at five. I'm a real piano teacher, you know.",
       "jp": "じゃあ木曜の5時に来て。実は私が本物のピアノの先生なのよ。",
-      "note": "元の形: come on／聞こえ方: カモン／使う場面: 気軽に誘う・促す"
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す・励ます時"
      }
     ]
    },
@@ -115,7 +122,8 @@
      {
       "sp": 0,
       "en": "Grandpa, the clock in the hall is stuck at 3:15 again. Let me take it to the repair shop.",
-      "jp": "おじいちゃん、廊下の時計がまた3時15分で止まってるよ。修理に持っていくね。"
+      "jp": "おじいちゃん、廊下の時計がまた3時15分で止まってるよ。修理に持っていくね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 1,
@@ -135,7 +143,8 @@
      {
       "sp": 0,
       "en": "Aww. So you stopped the clock because you never wanted to forget it?",
-      "jp": "えー、素敵。忘れたくなくて時計を止めたの？"
+      "jp": "えー、素敵。忘れたくなくて時計を止めたの？",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 1,
@@ -150,8 +159,7 @@
      {
       "sp": 1,
       "en": "Read it to me. My eyes aren't what they used to be.",
-      "jp": "読んでおくれ。目がむかしのようじゃなくてね。",
-      "note": "元の形: what they used to be／聞こえ方: ワット・ゼイ・ユースト・トゥ・ビー／使う場面: 昔と比べて衰えを言う"
+      "jp": "読んでおくれ。目がむかしのようじゃなくてね。"
      },
      {
       "sp": 0,
@@ -176,7 +184,8 @@
      {
       "sp": 0,
       "en": "It's okay. But I have to ask, why does your bag have a wedding ring box in it?",
-      "jp": "いいんです。でも聞かせて、どうしてあなたのカバンに結婚指輪の箱が入ってるの？"
+      "jp": "いいんです。でも聞かせて、どうしてあなたのカバンに結婚指輪の箱が入ってるの？",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 1,
@@ -196,13 +205,13 @@
      {
       "sp": 0,
       "en": "Yes! And the bride is Lucy. Wait, are you telling me we're going to the same wedding?",
-      "jp": "そうよ！新婦はルーシー。待って、同じ結婚式に行くってこと？"
+      "jp": "そうよ！新婦はルーシー。待って、同じ結婚式に行くってこと？",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
       "en": "Looks like it. At least we won't have to explain why we're holding each other's luggage.",
-      "jp": "そうみたいだね。お互いの荷物を持ってる理由を、説明しなくて済むよ。",
-      "note": "元の形: Looks like it／聞こえ方: ルックス・ライク・イット／使う場面: どうやらそうらしいと言う"
+      "jp": "そうみたいだね。お互いの荷物を持ってる理由を、説明しなくて済むよ。"
      },
      {
       "sp": 0,
@@ -232,7 +241,8 @@
      {
       "sp": 1,
       "en": "That's creepy. Can we go up to the attic now? It's almost ten.",
-      "jp": "気味が悪いな。いま屋根裏に行ってみましょうか。もうすぐ10時ですし。"
+      "jp": "気味が悪いな。いま屋根裏に行ってみましょうか。もうすぐ10時ですし。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -258,7 +268,7 @@
       "sp": 0,
       "en": "I'll take the house. And Walter comes with it. Nobody should be left behind.",
       "jp": "この家を買います。ウォルターも一緒に。誰も置いていかれるべきじゃありませんから。",
-      "note": "元の形: I'll take it／聞こえ方: アイル・テイク・イット／使う場面: 買う・決めると伝える"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -288,7 +298,8 @@
      {
       "sp": 0,
       "en": "You were watching me? That's why you kept the stage lights on?",
-      "jp": "見ていたんですか？だから舞台の照明をつけっぱなしにしていたの？"
+      "jp": "見ていたんですか？だから舞台の照明をつけっぱなしにしていたの？",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -304,7 +315,7 @@
       "sp": 1,
       "en": "Because the producers wanted a famous name. Tonight, they don't have a choice.",
       "jp": "プロデューサーが有名な名前を欲しがったからだ。今夜は、選びようがない。",
-      "note": "元の形: have a choice／聞こえ方: ハヴ・ア・チョイス／使う場面: 選択肢の有無を言う"
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -355,12 +366,13 @@
       "sp": 1,
       "en": "Now you know. It's a tradition, apparently. Would you like some coffee?",
       "jp": "いまは分かるでしょう。どうやら伝統みたい。コーヒーはいかが？",
-      "note": "元の形: Would you like／聞こえ方: ウッジュー・ライク／使う場面: 丁寧に勧める"
+      "note": "元の形: would you／聞こえ方: ウジュ／使う場面:ていねいに頼む時"
      },
      {
       "sp": 0,
       "en": "I'd love to. And Ms. Park, I'll keep waving, I promise.",
-      "jp": "喜んで。それにパクさん、これからも手を振ります。約束します。"
+      "jp": "喜んで。それにパクさん、これからも手を振ります。約束します。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -375,7 +387,8 @@
      {
       "sp": 1,
       "en": "Again? That's the tenth time this month. I'm starting to think I'm wasting everyone's money.",
-      "jp": "また？今月10回目よ。みんなのお金を無駄にしている気がしてきたわ。"
+      "jp": "また？今月10回目よ。みんなのお金を無駄にしている気がしてきたわ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -395,7 +408,8 @@
      {
       "sp": 1,
       "en": "We have to test it again, carefully this time. Don't touch anything and don't tell anyone yet.",
-      "jp": "今度は慎重に、もう一度試すわよ。何にも触らないで、まだ誰にも言わないでね。"
+      "jp": "今度は慎重に、もう一度試すわよ。何にも触らないで、まだ誰にも言わないでね。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -405,8 +419,7 @@
      {
       "sp": 1,
       "en": "No, we'll go. And we'll start with, 'We have good news about our failure.'",
-      "jp": "いいえ、出るわ。『失敗について、いいお知らせがあります』から始めましょう。",
-      "note": "元の形: start with／聞こえ方: スタート・ウィズ／使う場面: 話の切り出しを言う"
+      "jp": "いいえ、出るわ。『失敗について、いいお知らせがあります』から始めましょう。"
      },
      {
       "sp": 0,
@@ -426,7 +439,8 @@
      {
       "sp": 1,
       "en": "Ms. Lee, I hate to interrupt, but do you know the microphone is still on?",
-      "jp": "リーさん、遮りたくないんですが、マイクがまだ入っているのをご存じですか？"
+      "jp": "リーさん、遮りたくないんですが、マイクがまだ入っているのをご存じですか？",
+      "note": "元の形: You know／聞こえ方: ユノウ／使う場面:間をつなぐ・念を押す時"
      },
      {
       "sp": 0,
@@ -441,7 +455,8 @@
      {
       "sp": 0,
       "en": "Sir, I'm so sorry. I didn't mean it. I'll clean out my desk right now.",
-      "jp": "社長、本当に申し訳ありません。そんなつもりでは。いますぐ机を片付けます。"
+      "jp": "社長、本当に申し訳ありません。そんなつもりでは。いますぐ机を片付けます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 1,
@@ -456,8 +471,7 @@
      {
       "sp": 1,
       "en": "I wanted one person who'd tell me the truth. Starting Monday, you're head of communications.",
-      "jp": "本当のことを言ってくれる人が欲しかったんだ。月曜から、君は広報部長だ。",
-      "note": "元の形: wanted one person who'd／聞こえ方: ワンテッド・ワン・パーソン・フーッド／使う場面: who would の短縮"
+      "jp": "本当のことを言ってくれる人が欲しかったんだ。月曜から、君は広報部長だ。"
      },
      {
       "sp": 0,
@@ -472,7 +486,8 @@
      {
       "sp": 0,
       "en": "Evening. Airport, please. I'm sorry to ask this late. I know it's your last shift.",
-      "jp": "こんばんは。空港までお願いします。こんな遅くにすみません。今夜が最後の勤務だと聞きました。"
+      "jp": "こんばんは。空港までお願いします。こんな遅くにすみません。今夜が最後の勤務だと聞きました。",
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 1,
@@ -482,7 +497,8 @@
      {
       "sp": 0,
       "en": "Forty years. That's longer than I've been alive. Do you remember your first passenger?",
-      "jp": "40年。私が生きてきた年数より長いですね。最初のお客さんは覚えていますか？"
+      "jp": "40年。私が生きてきた年数より長いですね。最初のお客さんは覚えていますか？",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -507,8 +523,7 @@
      {
       "sp": 1,
       "en": "Then you were my first passenger, and now you're my last. What are the odds?",
-      "jp": "なら、君は私の最初のお客さんで、いまは最後のお客さんだ。こんな偶然があるかね？",
-      "note": "元の形: What are the odds／聞こえ方: ワット・アー・ジ・オッズ／使う場面: すごい偶然に驚く"
+      "jp": "なら、君は私の最初のお客さんで、いまは最後のお客さんだ。こんな偶然があるかね？"
      },
      {
       "sp": 0,

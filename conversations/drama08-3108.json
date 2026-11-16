@@ -5,7 +5,11 @@
   "n": "ドラマ100・真夜中の電話・メッセージ",
   "hint": "Ten short two-person dramas told through late-night calls, wrong numbers, voicemails and urgent messages.",
   "level": 3,
-  "keywords": "midnight, phone call, message",
+  "keywords": [
+   "midnight",
+   "phone call",
+   "message"
+  ],
   "d": [
    {
     "t": "📲 071｜間違いメッセージの行方：The Wrong Number Text",
@@ -18,7 +22,8 @@
      {
       "sp": 1,
       "en": "No problem. Though I'm curious. The text said, 'I'm outside your door with the cake.'",
-      "jp": "大丈夫ですよ。ちょっと気になるけど。『ケーキ持ってドアの外にいるよ』って書いてありました。"
+      "jp": "大丈夫ですよ。ちょっと気になるけど。『ケーキ持ってドアの外にいるよ』って書いてありました。",
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 0,
@@ -39,7 +44,7 @@
       "sp": 1,
       "en": "Then knock. I'll stay on the line. You can count down with me.",
       "jp": "じゃあノックして。僕は電話をつないでおくから。一緒にカウントダウンしましょう。",
-      "note": "元の形: I'll stay on the line／聞こえ方: アイル・ステイ・オン・ザ・ライン／使う場面: 電話を切らずにいる"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -85,7 +90,7 @@
       "sp": 0,
       "en": "He's awake. They think it's his blood pressure. They want to keep him overnight.",
       "jp": "目は覚めてる。血圧のせいだろうって。一晩入院させたいって。",
-      "note": "元の形: I know it's late／聞こえ方: アイ・ノウ・イッツ・レイト／使う場面: 夜遅い電話のお詫び"
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 1,
@@ -95,7 +100,8 @@
      {
       "sp": 0,
       "en": "You don't have to come tonight. You have that big presentation at nine.",
-      "jp": "今夜来なくていいのよ。朝9時に大事なプレゼンがあるでしょ。"
+      "jp": "今夜来なくていいのよ。朝9時に大事なプレゼンがあるでしょ。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 1,
@@ -120,8 +126,7 @@
      {
       "sp": 1,
       "en": "Of course I'm up. I've read chapter six four times and I remember nothing.",
-      "jp": "もちろん起きてるよ。6章を4回読んだけど、何も覚えてない。",
-      "note": "元の形: I'm getting dressed／聞こえ方: アイム・ゲッティング・ドレスト／使う場面: すぐ行くと伝える"
+      "jp": "もちろん起きてるよ。6章を4回読んだけど、何も覚えてない。"
      },
      {
       "sp": 0,
@@ -141,7 +146,8 @@
      {
       "sp": 1,
       "en": "Correct! See, you know more than you think. Next one: 'reluctant.'",
-      "jp": "正解!ほら、思ってるより覚えてるよ。次、『reluctant』。"
+      "jp": "正解!ほら、思ってるより覚えてるよ。次、『reluctant』。",
+      "note": "元の形: You know／聞こえ方: ユノウ／使う場面:間をつなぐ・念を押す時"
      },
      {
       "sp": 0,
@@ -151,7 +157,8 @@
      {
       "sp": 1,
       "en": "Then don't hang up. I'll stay on until the sun comes up.",
-      "jp": "なら切らなくていい。朝日が昇るまでつないでおくよ。"
+      "jp": "なら切らなくていい。朝日が昇るまでつないでおくよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -191,13 +198,13 @@
      {
       "sp": 1,
       "en": "The other ten were worse. Why did you keep it?",
-      "jp": "ほかの10回はもっとひどかった。どうして残してたの?"
+      "jp": "ほかの10回はもっとひどかった。どうして残してたの?",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
       "en": "Because at the end you say you'll wait for me, whatever I decide.",
-      "jp": "最後に、僕は君がどう決めても待ってるって言ってたから。",
-      "note": "元の形: at the end／聞こえ方: アット・ジ・エンド／使う場面: 最後に・終わりに"
+      "jp": "最後に、僕は君がどう決めても待ってるって言ってたから。"
      },
      {
       "sp": 1,
@@ -207,7 +214,8 @@
      {
       "sp": 0,
       "en": "Then come to the café on Maple Street tomorrow at ten. I'll buy the coffee.",
-      "jp": "じゃあ明日の10時、メープル通りのカフェに来て。コーヒーはおごるわ。"
+      "jp": "じゃあ明日の10時、メープル通りのカフェに来て。コーヒーはおごるわ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -222,7 +230,8 @@
      {
       "sp": 1,
       "en": "It's one a.m., Mia. But you never call without a reason. What's going on?",
-      "jp": "午前1時だよ、ミア。でも理由なしに電話してこないだろ。どうしたの?"
+      "jp": "午前1時だよ、ミア。でも理由なしに電話してこないだろ。どうしたの?",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
      },
      {
       "sp": 0,
@@ -237,13 +246,13 @@
      {
       "sp": 0,
       "en": "Both perfect. They named her Grace, after Grandma.",
-      "jp": "ふたりとも完璧。おばあちゃんにちなんで、グレースって名づけたの。",
-      "note": "元の形: after Grandma／聞こえ方: アフター・グランマ／使う場面: 〜にちなんで名づける"
+      "jp": "ふたりとも完璧。おばあちゃんにちなんで、グレースって名づけたの。"
      },
      {
       "sp": 1,
       "en": "That's beautiful. I wish I were there. Twenty hours of flying is just too far.",
-      "jp": "素敵だな。そこにいたかった。飛行機で20時間は遠すぎるよ。"
+      "jp": "素敵だな。そこにいたかった。飛行機で20時間は遠すぎるよ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -273,7 +282,8 @@
      {
       "sp": 1,
       "en": "No, I'm at my sister's till tomorrow. Why? It's almost midnight.",
-      "jp": "いえ、明日まで姉の家です。どうしたんです?もうすぐ真夜中ですよ。"
+      "jp": "いえ、明日まで姉の家です。どうしたんです?もうすぐ真夜中ですよ。",
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 0,
@@ -288,8 +298,7 @@
      {
       "sp": 0,
       "en": "I already called the fire department. They're on the way. Where's your spare key?",
-      "jp": "もう消防に電話しました。向かってます。合鍵はどこですか?",
-      "note": "元の形: Please don't go inside／聞こえ方: プリーズ・ドント・ゴー・インサイド／使う場面: 危険な行動を止める"
+      "jp": "もう消防に電話しました。向かってます。合鍵はどこですか?"
      },
      {
       "sp": 1,
@@ -299,7 +308,8 @@
      {
       "sp": 0,
       "en": "I won't. I can hear the sirens now. I'll tell them about the key.",
-      "jp": "入りません。サイレンが聞こえてきました。鍵のことは伝えます。"
+      "jp": "入りません。サイレンが聞こえてきました。鍵のことは伝えます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 1,
@@ -329,7 +339,8 @@
      {
       "sp": 0,
       "en": "No. Yes. I don't know. I've been sitting here for three hours, trying to write you a message.",
-      "jp": "ううん。あるの。分からない。3時間ここに座って、メッセージを書こうとしてたの。"
+      "jp": "ううん。あるの。分からない。3時間ここに座って、メッセージを書こうとしてたの。",
+      "note": "元の形: don't know／聞こえ方: ドンノウ／使う場面:知らないと答える時"
      },
      {
       "sp": 1,
@@ -360,7 +371,7 @@
       "sp": 0,
       "en": "It's more than open. I'll cook. Don't be late this time.",
       "jp": "もちろんよ。私が作る。今度は遅れないでね。",
-      "note": "元の形: Don't be late／聞こえ方: ドント・ビー・レイト／使う場面: 遅れないでと念を押す"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -405,13 +416,14 @@
      {
       "sp": 1,
       "en": "Then from now on, I'll answer on the second ring. If you ever want to talk, call.",
-      "jp": "じゃあこれからは、僕も2コール目で出ます。話したくなったら、いつでもどうぞ。"
+      "jp": "じゃあこれからは、僕も2コール目で出ます。話したくなったら、いつでもどうぞ。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
       "en": "Thank you, stranger. That means more than you know.",
       "jp": "ありがとう、見知らぬ方。あなたが思う以上に、救われます。",
-      "note": "元の形: That means more than you know／聞こえ方: ザット・ミーンズ・モア・ザン・ユー・ノウ／使う場面: 深く感謝する"
+      "note": "元の形: You know／聞こえ方: ユノウ／使う場面:間をつなぐ・念を押す時"
      }
     ]
    },
@@ -436,7 +448,8 @@
      {
       "sp": 1,
       "en": "Okay. Give me the hotel's name. I'll pay with my card over the phone.",
-      "jp": "分かった。ホテルの名前を教えて。電話で僕のカードで払うから。"
+      "jp": "分かった。ホテルの名前を教えて。電話で僕のカードで払うから。",
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:ちょうだいと頼む時"
      },
      {
       "sp": 0,
@@ -446,13 +459,13 @@
      {
       "sp": 1,
       "en": "And you called me anyway. That tells me something. Don't hang up, I'm calling them now.",
-      "jp": "それでも僕に電話をくれた。それが答えだよ。切らないで、今ホテルにかける。",
-      "note": "元の形: Don't hang up／聞こえ方: ドント・ハング・アップ／使う場面: 電話を切らないで"
+      "jp": "それでも僕に電話をくれた。それが答えだよ。切らないで、今ホテルにかける。"
      },
      {
       "sp": 0,
       "en": "My phone's going to die. I'll walk to the hotel and wait at the front desk.",
-      "jp": "携帯が切れそう。ホテルまで歩いて、フロントで待つわ。"
+      "jp": "携帯が切れそう。ホテルまで歩いて、フロントで待つわ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -487,13 +500,13 @@
      {
       "sp": 1,
       "en": "Forty years! That's a lot of night shifts. Are you nervous?",
-      "jp": "40年!夜勤がたくさんあったでしょう。緊張してますか?"
+      "jp": "40年!夜勤がたくさんあったでしょう。緊張してますか?",
+      "note": "元の形: a lot of／聞こえ方: ア ロタ／使う場面:たくさんと言う時"
      },
      {
       "sp": 0,
       "en": "A little. Your voice kept me company on every night shift. I wanted to say thank you.",
-      "jp": "少しだけ。夜勤のたびに、あなたの声がそばにいてくれました。お礼が言いたくて。",
-      "note": "元の形: keep someone company／聞こえ方: キープ・サムワン・カンパニー／使う場面: そばにいて寂しさを紛らす"
+      "jp": "少しだけ。夜勤のたびに、あなたの声がそばにいてくれました。お礼が言いたくて。"
      },
      {
       "sp": 1,
@@ -513,7 +526,8 @@
      {
       "sp": 0,
       "en": "Thank you. Now I think I'll finally sleep. Good night, everyone.",
-      "jp": "ありがとう。やっと眠れそうです。みなさん、おやすみなさい。"
+      "jp": "ありがとう。やっと眠れそうです。みなさん、おやすみなさい。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    }

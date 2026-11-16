@@ -5,7 +5,11 @@
   "n": "ドラマ100・ミステリー・秘密",
   "hint": "Ten short two-person mystery dramas about missing objects, broken alibis, hidden letters, strange calls and secrets that change everything.",
   "level": 4,
-  "keywords": "mystery, secret, drama",
+  "keywords": [
+   "mystery",
+   "secret",
+   "drama"
+  ],
   "d": [
    {
     "t": "🗝️ 021｜消えた鍵：The Missing Key",
@@ -18,7 +22,8 @@
      {
       "sp": 1,
       "en": "That's strange. I checked the safe at midnight, and it was still there.",
-      "jp": "おかしいですね。零時に金庫を確認したときは、まだありましたよ。"
+      "jp": "おかしいですね。零時に金庫を確認したときは、まだありましたよ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -54,7 +59,7 @@
       "sp": 0,
       "en": "Right. And the guest in 412 checked out an hour ago. We've gotta find out who he really is.",
       "jp": "そうよ。しかも412のお客は一時間前に出ていった。正体を突き止めなきゃ。",
-      "note": "元の形: got to／聞こえ方: gotta／使う場面: くだけた会話"
+      "note": "元の形: gotta／聞こえ方: ガラ／使う場面:しなきゃと言う時"
      },
      {
       "sp": 1,
@@ -79,7 +84,8 @@
      {
       "sp": 0,
       "en": "Funny. The cinema was closed that night because of a power failure.",
-      "jp": "妙ね。あの夜、映画館は停電で休館だったのよ。"
+      "jp": "妙ね。あの夜、映画館は停電で休館だったのよ。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 1,
@@ -95,7 +101,7 @@
       "sp": 1,
       "en": "Okay, okay. I'm gonna be honest. I wasn't at the cinema, but I never touched that safe, I swear.",
       "jp": "わかりました、正直に言います。映画館にはいませんでした。でも、その金庫には触ってません、誓います。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -125,7 +131,8 @@
      {
       "sp": 1,
       "en": "Put it down, Emma. That's not yours to open.",
-      "jp": "置きなさい、エマ。それはお前が開けるものじゃない。"
+      "jp": "置きなさい、エマ。それはお前が開けるものじゃない。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -146,7 +153,7 @@
       "sp": 1,
       "en": "A lighthouse? ...Let me see that.",
       "jp": "灯台?ちょっと見せてくれ。",
-      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 0,
@@ -176,7 +183,8 @@
      {
       "sp": 0,
       "en": "Ben, a number I don't know has called me nine times since midnight.",
-      "jp": "ベン、零時から知らない番号に九回も電話されてるの。"
+      "jp": "ベン、零時から知らない番号に九回も電話されてるの。",
+      "note": "元の形: don't know／聞こえ方: ドンノウ／使う場面:知らないと答える時"
      },
      {
       "sp": 1,
@@ -222,7 +230,7 @@
       "sp": 1,
       "en": "Then don't go home. I'm gonna drive over and check your door first.",
       "jp": "じゃあ家には帰らないで。僕が先に君の家のドアを見に行ってくる。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -232,7 +240,8 @@
      {
       "sp": 0,
       "en": "Jake, can I tell you something? You have to promise it stays between us.",
-      "jp": "ジェイク、ちょっと話していい?私たちだけの秘密にするって約束してね。"
+      "jp": "ジェイク、ちょっと話していい?私たちだけの秘密にするって約束してね。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 1,
@@ -263,7 +272,7 @@
       "sp": 0,
       "en": "I don't know. And when he saw me, he smiled and said, 'Don't worry, I'm just taking out the trash.'",
       "jp": "わからない。それに私に気づいたら、笑って『心配ないよ、ゴミを出してるだけだ』って。",
-      "note": "元の形: I don't know／聞こえ方: I dunno／使う場面: くだけた会話"
+      "note": "元の形: don't know／聞こえ方: ドンノウ／使う場面:知らないと答える時"
      },
      {
       "sp": 1,
@@ -314,7 +323,7 @@
       "sp": 1,
       "en": "Okay, now I'm kinda worried. Did you hear any noise last night?",
       "jp": "さすがに僕もちょっと心配になってきた。昨夜、何か物音は聞いた?",
-      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+      "note": "元の形: kinda／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
      },
      {
       "sp": 0,
@@ -334,7 +343,8 @@
      {
       "sp": 1,
       "en": "Because I just found his bowl in the kitchen. It's full of food I never bought.",
-      "jp": "だって、台所で犬の皿を見つけたんだ。僕が買った覚えのない餌が山盛りになってる。"
+      "jp": "だって、台所で犬の皿を見つけたんだ。僕が買った覚えのない餌が山盛りになってる。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      }
     ]
    },
@@ -350,7 +360,7 @@
       "sp": 1,
       "en": "Let me see. Hmm, that's a cipher. Write down the letters in order.",
       "jp": "どれどれ。ふむ、暗号だな。下線の文字を順番に書き出してごらん。",
-      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 0,
@@ -360,7 +370,8 @@
      {
       "sp": 1,
       "en": "It must continue in another book. Which section did you find it in?",
-      "jp": "続きは別の本にあるんだろう。それはどの棚にあった?"
+      "jp": "続きは別の本にあるんだろう。それはどの棚にあった?",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
@@ -411,7 +422,7 @@
       "sp": 0,
       "en": "But it's kinda heavy. It's full of receipts and little notes.",
       "jp": "でも、ちょっと重いよ。レシートとか小さなメモでいっぱい。",
-      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+      "note": "元の形: kinda／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
      },
      {
       "sp": 1,
@@ -441,7 +452,8 @@
      {
       "sp": 0,
       "en": "Mom lives with us. I mean, Aunt Carol raised me... Dad, what are you saying?",
-      "jp": "お母さんは一緒に住んでるでしょ。叔母さんのキャロルが私を育てて…お父さん、何を言ってるの?"
+      "jp": "お母さんは一緒に住んでるでしょ。叔母さんのキャロルが私を育てて…お父さん、何を言ってるの?",
+      "note": "元の形: what are you／聞こえ方: ワラヤ／使う場面:何をしているかたずねる時"
      },
      {
       "sp": 1,
@@ -471,7 +483,8 @@
      {
       "sp": 1,
       "en": "Good. And what did you find on the sofa?",
-      "jp": "いいぞ。で、ソファには何があった?"
+      "jp": "いいぞ。で、ソファには何があった?",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
@@ -486,8 +499,7 @@
      {
       "sp": 0,
       "en": "Mine are tiny. But I didn't do it, I swear! Whaddaya think, was it Max?",
-      "jp": "私の指も小さいけど、やってないよ、本当に!マックスかな、どう思う?",
-      "note": "元の形: what do you／聞こえ方: whaddaya／使う場面: くだけた会話"
+      "jp": "私の指も小さいけど、やってないよ、本当に!マックスかな、どう思う?"
      },
      {
       "sp": 1,
@@ -502,7 +514,8 @@
      {
       "sp": 1,
       "en": "Right. So let me check something. Katie, hold out your hands.",
-      "jp": "そうだ。ちょっと確かめさせてくれ。ケイティ、手を出してごらん。"
+      "jp": "そうだ。ちょっと確かめさせてくれ。ケイティ、手を出してごらん。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      }
     ]
    },
@@ -532,7 +545,8 @@
      {
       "sp": 0,
       "en": "What kind of project needs a hammer at midnight? I hear it every night.",
-      "jp": "真夜中にハンマーが要る作りものって?毎晩聞こえますよ。"
+      "jp": "真夜中にハンマーが要る作りものって?毎晩聞こえますよ。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
      },
      {
       "sp": 1,
@@ -548,7 +562,7 @@
       "sp": 1,
       "en": "I can't say. But I gotta ask you a favor. Could you please stop closing your curtains at night?",
       "jp": "言えません。でも一つお願いしなきゃ。夜にカーテンを閉めるのをやめてもらえませんか?",
-      "note": "元の形: got to／聞こえ方: gotta／使う場面: くだけた会話"
+      "note": "元の形: gotta／聞こえ方: ガラ／使う場面:しなきゃと言う時"
      },
      {
       "sp": 0,

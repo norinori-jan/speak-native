@@ -5,7 +5,11 @@
   "n": "ドラマ100・家族の事件簿",
   "hint": "Ten short two-person family dramas about hidden secrets, sibling fights, old letters, weddings and trips gone wrong.",
   "level": 3,
-  "keywords": "family, secret, drama",
+  "keywords": [
+   "family",
+   "secret",
+   "drama"
+  ],
   "d": [
    {
     "t": "🍲 041｜母の秘密のレシピ：Mom's Secret Recipe",
@@ -23,13 +27,14 @@
      {
       "sp": 0,
       "en": "You know I never wrote that part down. It's a family secret.",
-      "jp": "その部分は書いたことないって知ってるでしょ。家族の秘密なの。"
+      "jp": "その部分は書いたことないって知ってるでしょ。家族の秘密なの。",
+      "note": "元の形: You know／聞こえ方: ユノウ／使う場面:間をつなぐ・念を押す時"
      },
      {
       "sp": 1,
       "en": "I'm your son! Come on, I won't tell anyone. Is it cinnamon? Coffee?",
       "jp": "息子だよ?頼むよ、誰にも言わないから。シナモン?コーヒー?",
-      "note": "元の形: Come on／聞こえ方: カモン／使う場面: 頼み込む・促す"
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す・励ます時"
      },
      {
       "sp": 0,
@@ -79,8 +84,7 @@
      {
       "sp": 1,
       "en": "Okay, fine. A shopping cart rolled into it at the grocery store. It's not my fault!",
-      "jp": "分かったよ。スーパーでカートが転がってきたんだ。俺のせいじゃない!",
-      "note": "元の形: Okay, fine／聞こえ方: オーケー・ファイン／使う場面: しぶしぶ認める"
+      "jp": "分かったよ。スーパーでカートが転がってきたんだ。俺のせいじゃない!"
      },
      {
       "sp": 0,
@@ -90,7 +94,8 @@
      {
       "sp": 1,
       "en": "Because last time you didn't talk to me for a month over a scratch.",
-      "jp": "だって前は、傷ひとつで1か月口きいてくれなかったじゃん。"
+      "jp": "だって前は、傷ひとつで1か月口きいてくれなかったじゃん。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -100,7 +105,8 @@
      {
       "sp": 1,
       "en": "Look, I'll pay for the repair. I've got four hundred dollars saved up.",
-      "jp": "修理代は俺が払うよ。400ドル貯めてあるから。"
+      "jp": "修理代は俺が払うよ。400ドル貯めてあるから。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -130,13 +136,13 @@
      {
       "sp": 0,
       "en": "There's a tiny key taped under the lid of his old toolbox. I think it fits.",
-      "jp": "古い工具箱のふたの裏に、小さい鍵がテープで貼ってあったの。合うと思う。"
+      "jp": "古い工具箱のふたの裏に、小さい鍵がテープで貼ってあったの。合うと思う。",
+      "note": "元の形: there's／聞こえ方: ゼアズ／使う場面:〜があると言う時"
      },
      {
       "sp": 1,
       "en": "Try it. My hands are shaking a little, to be honest.",
-      "jp": "開けてみて。正直、ちょっと手が震えてるよ。",
-      "note": "元の形: to be honest／聞こえ方: トゥ・ビー・オネスト／使う場面: 本音を言う前置き"
+      "jp": "開けてみて。正直、ちょっと手が震えてるよ。"
      },
      {
       "sp": 0,
@@ -161,7 +167,8 @@
      {
       "sp": 0,
       "en": "Then let's go this June. Together. I'll buy the tickets.",
-      "jp": "じゃあ今年の6月、一緒に行きましょう。切符は私が買うわ。"
+      "jp": "じゃあ今年の6月、一緒に行きましょう。切符は私が買うわ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -176,7 +183,8 @@
      {
       "sp": 1,
       "en": "I quit, Mom. I was going to tell you this weekend.",
-      "jp": "やめたんだ、母さん。週末に話すつもりだった。"
+      "jp": "やめたんだ、母さん。週末に話すつもりだった。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -186,13 +194,13 @@
      {
       "sp": 1,
       "en": "Nothing happened. I'm just not good enough, and I'm tired of pretending I am.",
-      "jp": "何もないよ。ただ、俺はうまくない。うまいふりをするのに疲れたんだ。"
+      "jp": "何もないよ。ただ、俺はうまくない。うまいふりをするのに疲れたんだ。",
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 0,
       "en": "Where have you been going every afternoon, then?",
-      "jp": "じゃあ毎日、放課後どこに行ってたの?",
-      "note": "元の形: Why didn't you just tell me／聞こえ方: ワイ・ディドゥンチュー・ジャス・テル・ミー／使う場面: どうして言わなかったのと責める"
+      "jp": "じゃあ毎日、放課後どこに行ってたの?"
      },
      {
       "sp": 1,
@@ -237,7 +245,8 @@
      {
       "sp": 1,
       "en": "Oh, thank goodness. Wait, September? That's only three months away!",
-      "jp": "ああ、よかった。ちょっと待て、9月?あと3か月しかないじゃないか!"
+      "jp": "ああ、よかった。ちょっと待て、9月?あと3か月しかないじゃないか!",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -258,7 +267,7 @@
       "sp": 1,
       "en": "Fine. But I'm warning you, I'm going to cry when I walk you down the aisle.",
       "jp": "分かった。だが言っておくぞ、バージンロードを歩くとき、絶対泣くからな。",
-      "note": "元の形: Keep your money／聞こえ方: キープ・ヨア・マニー／使う場面: お金はいらないと断る"
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -273,8 +282,7 @@
      {
       "sp": 0,
       "en": "Dad, I found this in Mom's sewing drawer. It has my name on it.",
-      "jp": "お父さん、お母さんの裁縫の引き出しからこれが出てきたの。私の名前が書いてある。",
-      "note": "元の形: Dad, sit down／聞こえ方: ダッド・シット・ダウン／使う場面: 大事な話を切り出す"
+      "jp": "お父さん、お母さんの裁縫の引き出しからこれが出てきたの。私の名前が書いてある。"
      },
      {
       "sp": 1,
@@ -314,7 +322,8 @@
      {
       "sp": 0,
       "en": "I know. But I'm going to keep the scarf safe anyway.",
-      "jp": "分かってる。でも、そのスカーフは大事にしまっておくわ。"
+      "jp": "分かってる。でも、そのスカーフは大事にしまっておくわ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -344,13 +353,14 @@
      {
       "sp": 0,
       "en": "Forty minutes there and forty back? That's eighty minutes. Plus traffic!",
-      "jp": "往復で80分でしょ?それに渋滞もあるし!"
+      "jp": "往復で80分でしょ?それに渋滞もあるし!",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
       "en": "Then I'll drive fast. Well, legally fast. You rebook us on the later flight.",
       "jp": "じゃあ飛ばすよ。まあ、法定速度ぎりぎりでね。君は遅い便に変更しておいて。",
-      "note": "元の形: calm down／聞こえ方: カーム・ダウン／使う場面: 落ち着かせる"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -380,7 +390,8 @@
      {
       "sp": 1,
       "en": "Grandma, that's just a message. Somebody texted you.",
-      "jp": "おばあちゃん、それはメッセージが来ただけだよ。誰かが送ってきたんだ。"
+      "jp": "おばあちゃん、それはメッセージが来ただけだよ。誰かが送ってきたんだ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -400,8 +411,7 @@
      {
       "sp": 1,
       "en": "Just tap here and type. Or press the microphone and talk.",
-      "jp": "ここを押して打つだけ。マイクを押して話してもいいよ。",
-      "note": "元の形: Just tap here／聞こえ方: ジャスト・タップ・ヒア／使う場面: 簡単な操作を教える"
+      "jp": "ここを押して打つだけ。マイクを押して話してもいいよ。"
      },
      {
       "sp": 0,
@@ -451,7 +461,8 @@
      {
       "sp": 1,
       "en": "I was going to tell you. I just kept thinking I'd find something by Friday.",
-      "jp": "話すつもりだったんだ。金曜までには次が見つかると思い続けてた。"
+      "jp": "話すつもりだったんだ。金曜までには次が見つかると思い続けてた。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -466,8 +477,7 @@
      {
       "sp": 0,
       "en": "Next time, eat it at home with me. I'd rather worry together than alone.",
-      "jp": "次からは、家で私と食べて。ひとりで悩むより、一緒に悩みたいの。",
-      "note": "元の形: I'd rather ... than ...／聞こえ方: アイド・ラザー／使う場面: 〜するほうがいいと言う"
+      "jp": "次からは、家で私と食べて。ひとりで悩むより、一緒に悩みたいの。"
      }
     ]
    },
@@ -497,13 +507,13 @@
      {
       "sp": 0,
       "en": "Please tell me you came up with a good excuse.",
-      "jp": "ちゃんとした言い訳を考えたって言って。",
-      "note": "元の形: came up with／聞こえ方: ケイム・アップ・ウィズ／使う場面: 思いつく・考え出す"
+      "jp": "ちゃんとした言い訳を考えたって言って。"
      },
      {
       "sp": 1,
       "en": "I said it was for my own friend's birthday. He gave me this look, like he didn't believe me.",
-      "jp": "友達の誕生日だって言った。信じてないような目で見られたけど。"
+      "jp": "友達の誕生日だって言った。信じてないような目で見られたけど。",
+      "note": "元の形: it was／聞こえ方: イロズ／使う場面:過去を言う時"
      },
      {
       "sp": 0,

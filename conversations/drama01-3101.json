@@ -5,7 +5,11 @@
   "n": "ドラマ100・恋のはじまり・すれ違い",
   "hint": "Ten short two-person dramas about the start of love: crushes, misunderstandings, awkward dates, and almost-confessions.",
   "level": 3,
-  "keywords": "romance, misunderstanding, drama",
+  "keywords": [
+   "romance",
+   "misunderstanding",
+   "drama"
+  ],
   "d": [
    {
     "t": "💘 001｜既読スルーの理由：Left on Read",
@@ -28,7 +32,8 @@
      {
       "sp": 1,
       "en": "Because I wanted my answer to sound cool. And every version sounded desperate.",
-      "jp": "だって、かっこよく返したかったんだ。でもどれも必死な感じになっちゃってさ。"
+      "jp": "だって、かっこよく返したかったんだ。でもどれも必死な感じになっちゃってさ。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -38,8 +43,7 @@
      {
       "sp": 1,
       "en": "Thirteen and a half. I fell asleep for a while.",
-      "jp": "13時間半。ちょっと寝たから。",
-      "note": "元の形: a while／聞こえ方: ア ワイル（つなげて発音）／使う場面: 短い時間を表す日常会話"
+      "jp": "13時間半。ちょっと寝たから。"
      },
      {
       "sp": 0,
@@ -49,7 +53,8 @@
      {
       "sp": 1,
       "en": "Yes. Yes, I want to go to the concert with you. Is that cool enough?",
-      "jp": "うん。うん、君とコンサートに行きたい。これでかっこいい？"
+      "jp": "うん。うん、君とコンサートに行きたい。これでかっこいい？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -90,7 +95,7 @@
       "sp": 1,
       "en": "Ouch. Okay, that's fair. I'm Ethan, by the way.",
       "jp": "痛いな。まあ、その通りだ。僕はイーサン。",
-      "note": "元の形: that is fair／聞こえ方: ザッツ フェア／使う場面: 相手の指摘を素直に認めるとき"
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -100,7 +105,8 @@
      {
       "sp": 1,
       "en": "Actually, I think I'll wait for the next one. If you don't mind sharing the umbrella.",
-      "jp": "実は、次のに乗ることにするよ。傘を一緒に使わせてもらえるなら。"
+      "jp": "実は、次のに乗ることにするよ。傘を一緒に使わせてもらえるなら。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -131,12 +137,13 @@
       "sp": 1,
       "en": "Ha. Fine. Let me buy you a new one. It's the least I can do.",
       "jp": "はは。わかった。新しいのをおごらせて。せめてもの償いに。",
-      "note": "元の形: the least I can do／聞こえ方: ザ リースト アイ キャン ドゥ／使う場面: お詫びやお礼を申し出るとき"
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 0,
       "en": "You don't have to. I'm late for work anyway.",
-      "jp": "いいのに。どうせ仕事に遅刻しそうだし。"
+      "jp": "いいのに。どうせ仕事に遅刻しそうだし。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 1,
@@ -176,7 +183,8 @@
      {
       "sp": 1,
       "en": "I know! That's why I typed it in the wrong chat. My thumb slipped.",
-      "jp": "わかってる！ だから間違えたんだ。親指が滑って、違うチャットに打っちゃって。"
+      "jp": "わかってる！ だから間違えたんだ。親指が滑って、違うチャットに打っちゃって。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -187,7 +195,7 @@
       "sp": 1,
       "en": "No. I mean, yes, I wrote it for you. But I was going to send it next month, after the project.",
       "jp": "いや、その、君宛てに書いたのは本当。でも来月、プロジェクトが終わってから送るつもりだったんだ。",
-      "note": "元の形: I was going to／聞こえ方: アイ ワズ ゴナ／使う場面: 実行しなかった予定を話すとき"
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -217,7 +225,8 @@
      {
       "sp": 1,
       "en": "So tell him. You've liked him since ninth grade. That's four years.",
-      "jp": "なら言えばいい。9年生のときからずっと好きだろ。もう4年だぞ。"
+      "jp": "なら言えばいい。9年生のときからずっと好きだろ。もう4年だぞ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -228,7 +237,7 @@
       "sp": 1,
       "en": "Then you'll never see him again anyway. What do you have to lose?",
       "jp": "どうせ明日からは会わなくなるんだ。失うものなんてないだろ。",
-      "note": "元の形: What do you have to lose?／聞こえ方: ワット ドゥ ヤ ハフ トゥ ルーズ／使う場面: 背中を押すとき"
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -283,7 +292,8 @@
      {
       "sp": 0,
       "en": "That's why they all sounded so strange. I wondered about that.",
-      "jp": "だからどれも変な感じだったのね。不思議に思ってたの。"
+      "jp": "だからどれも変な感じだったのね。不思議に思ってたの。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -293,13 +303,13 @@
      {
       "sp": 0,
       "en": "I didn't say that. I said it was the worst. I didn't say it wasn't fun.",
-      "jp": "そんなこと言ってないわ。最悪だったとは言ったけど、楽しくなかったとは言ってない。",
-      "note": "元の形: didn't say that／聞こえ方: ディドゥン セイ ザッ（tをほぼ発音しない）／使う場面: 相手の誤解を正すとき"
+      "jp": "そんなこと言ってないわ。最悪だったとは言ったけど、楽しくなかったとは言ってない。"
      },
      {
       "sp": 1,
       "en": "So there's a second date?",
-      "jp": "じゃあ、2回目はあるの？"
+      "jp": "じゃあ、2回目はあるの？",
+      "note": "元の形: there's／聞こえ方: ゼアズ／使う場面:〜があると言う時"
      },
      {
       "sp": 0,
@@ -314,12 +324,14 @@
      {
       "sp": 0,
       "en": "Why is your phone face down? And why did you hide it when I walked in?",
-      "jp": "どうしてスマホを伏せてるの？ 私が入ってきたとき、どうして隠したの？"
+      "jp": "どうしてスマホを伏せてるの？ 私が入ってきたとき、どうして隠したの？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
       "en": "It's nothing. Just work stuff. Boring. You don't want to see it.",
-      "jp": "何でもないよ。仕事のことさ。つまらないよ。見たくないでしょ。"
+      "jp": "何でもないよ。仕事のことさ。つまらないよ。見たくないでしょ。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -329,8 +341,7 @@
      {
       "sp": 1,
       "en": "Wait, you heard that? Okay, this looks bad. But it's not what you think.",
-      "jp": "待って、聞いてたの？ まあ、怪しく見えるよね。でも君が思ってるようなことじゃないんだ。",
-      "note": "元の形: what you think／聞こえ方: ワッチュ シンク／使う場面: 誤解を解こうとするとき"
+      "jp": "待って、聞いてたの？ まあ、怪しく見えるよね。でも君が思ってるようなことじゃないんだ。"
      },
      {
       "sp": 0,
@@ -380,7 +391,8 @@
      {
       "sp": 1,
       "en": "Because I, uh, borrowed the book first. In October. I read it twice.",
-      "jp": "えっと、僕が先にその本を借りたからさ。10月に。2回も読んだんだ。"
+      "jp": "えっと、僕が先にその本を借りたからさ。10月に。2回も読んだんだ。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -401,7 +413,7 @@
       "sp": 1,
       "en": "The last one said, Want to get coffee? I panicked. I'm shy in person.",
       "jp": "最後のは「コーヒー飲みに行かない？」だった。パニックになったんだ。実際に会うと人見知りでさ。",
-      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた誘い・質問"
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -436,18 +448,19 @@
      {
       "sp": 0,
       "en": "Relieved? Why would you be relieved?",
-      "jp": "ほっとした？ どうしてほっとするの？"
+      "jp": "ほっとした？ どうしてほっとするの？",
+      "note": "元の形: would you／聞こえ方: ウジュ／使う場面:ていねいに頼む時"
      },
      {
       "sp": 1,
       "en": "Because every time you were with him, I wished it was me.",
-      "jp": "君が彼といるたびに、それが僕だったらって思ってたからだよ。"
+      "jp": "君が彼といるたびに、それが僕だったらって思ってたからだよ。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
       "en": "Sam, we're at the very top. You really picked the moment.",
-      "jp": "サム、今ちょうど一番上よ。ほんとにタイミング選んだわね。",
-      "note": "元の形: picked the moment／聞こえ方: ピックト ザ モーメント（kとtが続いて短く切れる）／使う場面: 皮肉まじりの冗談"
+      "jp": "サム、今ちょうど一番上よ。ほんとにタイミング選んだわね。"
      },
      {
       "sp": 1,
@@ -472,7 +485,8 @@
      {
       "sp": 1,
       "en": "Okay, breathe. Do you want to leave, or do you want to look amazing in front of him?",
-      "jp": "よし、深呼吸して。帰りたい？ それとも彼の前で最高に素敵に見せたい？"
+      "jp": "よし、深呼吸して。帰りたい？ それとも彼の前で最高に素敵に見せたい？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -482,7 +496,8 @@
      {
       "sp": 1,
       "en": "It's a good cat. Listen, I'll pretend to be your boyfriend. Just for ten minutes.",
-      "jp": "いい猫だよ。聞いて、僕が君の彼氏のふりをする。ほんの10分だけ。"
+      "jp": "いい猫だよ。聞いて、僕が君の彼氏のふりをする。ほんの10分だけ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -497,8 +512,7 @@
      {
       "sp": 0,
       "en": "That's a little creepy, but fine. He's walking over. Hold my hand.",
-      "jp": "ちょっと気味悪いけど、まあいいわ。彼がこっちに来る。手をつないで。",
-      "note": "元の形: a little／聞こえ方: ア リルル（tがラ行のように聞こえる）／使う場面: 「少し」をやわらかく言うとき"
+      "jp": "ちょっと気味悪いけど、まあいいわ。彼がこっちに来る。手をつないで。"
      },
      {
       "sp": 1,

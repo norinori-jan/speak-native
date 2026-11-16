@@ -5,7 +5,11 @@
   "n": "ドラマ100・職場の人間ドラマ",
   "hint": "Ten short two-person workplace dramas about promotions, rivals, mistakes, resignations and the quiet moments that change a career.",
   "level": 3,
-  "keywords": "workplace, career, drama",
+  "keywords": [
+   "workplace",
+   "career",
+   "drama"
+  ],
   "d": [
    {
     "t": "🏢 031｜昇進の裏側：Behind the Promotion",
@@ -28,13 +32,13 @@
      {
       "sp": 1,
       "en": "I trained you on the Harper account six years ago, Maya. I'm allowed to be a little stunned.",
-      "jp": "六年前、ハーパー社の担当を教えたのは僕だぞ、マヤ。少しぐらい呆然としてもいいだろ。",
-      "note": "元の形: allowed to／聞こえ方: allowed ta／使う場面: くだけた会話"
+      "jp": "六年前、ハーパー社の担当を教えたのは僕だぞ、マヤ。少しぐらい呆然としてもいいだろ。"
      },
      {
       "sp": 0,
       "en": "That's exactly why I asked them to keep you on my team. I want you as my deputy.",
-      "jp": "だからこそ、あなたを私のチームに残してほしいと頼んだの。副官になってほしい。"
+      "jp": "だからこそ、あなたを私のチームに残してほしいと頼んだの。副官になってほしい。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -45,7 +49,7 @@
       "sp": 0,
       "en": "I'm gonna need someone who'll tell me when I'm wrong. You've never once been shy about that.",
       "jp": "間違ってるときに指摘してくれる人が必要なの。あなたはそういうの、一度も遠慮したことがないでしょ。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -91,12 +95,13 @@
       "sp": 1,
       "en": "Then I'm gonna steal your budget spreadsheet and win next time. You wouldn't mind, right?",
       "jp": "じゃあ次は、あなたの予算表を盗んで勝つわ。構わないでしょ？",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
       "en": "Take it. Take the whole folder. Just promise you'll let me read your slogans first.",
-      "jp": "持っていっていいよ。フォルダごとでも。その代わり、君のスローガンを先に読ませてくれ。"
+      "jp": "持っていっていいよ。フォルダごとでも。その代わり、君のスローガンを先に読ませてくれ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 1,
@@ -111,7 +116,8 @@
      {
       "sp": 0,
       "en": "Greg, I found it. The wrong dose on bed twelve. It was my label, and I didn't double-check it.",
-      "jp": "グレッグ、見つけました。十二番ベッドの薬の量が違っていたんです。私のラベルで、再確認もしていませんでした。"
+      "jp": "グレッグ、見つけました。十二番ベッドの薬の量が違っていたんです。私のラベルで、再確認もしていませんでした。",
+      "note": "元の形: it was／聞こえ方: イロズ／使う場面:過去を言う時"
      },
      {
       "sp": 1,
@@ -121,13 +127,13 @@
      {
       "sp": 0,
       "en": "The nurse caught it before the second dose. He's fine. But I've been awake since four a.m., thinking about what could've happened.",
-      "jp": "二回目の投与の前に看護師さんが気づいてくれました。無事です。でも午前四時から眠れなくて、何が起きていたかと考えてしまって。",
-      "note": "元の形: could have／聞こえ方: could've／使う場面: 仮定の話をするとき"
+      "jp": "二回目の投与の前に看護師さんが気づいてくれました。無事です。でも午前四時から眠れなくて、何が起きていたかと考えてしまって。"
      },
      {
       "sp": 1,
       "en": "Listen. Our system let you print that label with no second check. That's my failure, not just yours.",
-      "jp": "聞いてくれ。うちのシステムは二重確認なしでそのラベルを印刷できた。それは君だけじゃなく、僕の落ち度でもある。"
+      "jp": "聞いてくれ。うちのシステムは二重確認なしでそのラベルを印刷できた。それは君だけじゃなく、僕の落ち度でもある。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -183,12 +189,13 @@
       "sp": 1,
       "en": "And you repaid me by rebuilding our whole payment system. Honestly, I'm gonna miss you more than I can say.",
       "jp": "そして君は恩返しに、うちの決済システムを丸ごと作り直してくれた。正直、言葉にできないくらい寂しくなるよ。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
       "en": "Please don't. I'll cry, and I look terrible when I cry.",
-      "jp": "やめてください。泣いちゃうし、泣くとひどい顔になるんです。"
+      "jp": "やめてください。泣いちゃうし、泣くとひどい顔になるんです。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 1,
@@ -213,7 +220,8 @@
      {
       "sp": 1,
       "en": "Nora, how many batches are we talking about? Give me the real number.",
-      "jp": "ノラ、何ロット分の話なんだ？ 本当の数字を教えてくれ。"
+      "jp": "ノラ、何ロット分の話なんだ？ 本当の数字を教えてくれ。",
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:ちょうだいと頼む時"
      },
      {
       "sp": 0,
@@ -229,7 +237,7 @@
       "sp": 0,
       "en": "He signed the waiver himself. I saw the signature. I'm gonna take this to the state food agency tomorrow.",
       "jp": "本人が免除書類にサインしてた。この目で見たの。明日、州の食品当局に持っていくつもり。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -264,7 +272,8 @@
      {
       "sp": 0,
       "en": "Josh, you're shaking. Breathe. The plane's not going to leave without its bags, no matter how fast you load them.",
-      "jp": "ジョシュ、手が震えてるわよ。深呼吸して。どんなに急いで積んでも、荷物なしで飛行機は出ないんだから。"
+      "jp": "ジョシュ、手が震えてるわよ。深呼吸して。どんなに急いで積んでも、荷物なしで飛行機は出ないんだから。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -279,7 +288,8 @@
      {
       "sp": 1,
       "en": "Seriously? What did you do?",
-      "jp": "本当ですか？ どうしたんです？"
+      "jp": "本当ですか？ どうしたんです？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
@@ -294,8 +304,7 @@
      {
       "sp": 0,
       "en": "Exactly. Speed comes in about three weeks. Now, lemme show you how to stack the heavy ones first.",
-      "jp": "その通り。スピードは三週間もすれば付いてくる。さあ、重いものを先に積むコツを見せてあげる。",
-      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "jp": "その通り。スピードは三週間もすれば付いてくる。さあ、重いものを先に積むコツを見せてあげる。"
      },
      {
       "sp": 1,
@@ -330,7 +339,8 @@
      {
       "sp": 1,
       "en": "But the paper's rule says we have to give him a chance to answer. If we skip it, we could get sued.",
-      "jp": "でも新聞の規則では、反論の機会を与えなきゃいけないんですよね。飛ばしたら訴えられるかも。"
+      "jp": "でも新聞の規則では、反論の機会を与えなきゃいけないんですよね。飛ばしたら訴えられるかも。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -341,7 +351,7 @@
       "sp": 1,
       "en": "That's gonna hit hard. Okay. Typing it now.",
       "jp": "それは強烈ですね。分かりました、今打ちます。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -366,7 +376,8 @@
      {
       "sp": 0,
       "en": "Carlos, did you hear? They're saying the second shift is getting cut. Eighty people.",
-      "jp": "カルロス、聞いた？ 二交代目が削減されるって。八十人も。"
+      "jp": "カルロス、聞いた？ 二交代目が削減されるって。八十人も。",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
@@ -381,8 +392,7 @@
      {
       "sp": 1,
       "en": "Okay, that's not nothing. But I work in HR, and I haven't seen any list. Don't panic yet.",
-      "jp": "まあ、ただの噂とは言えないな。でも僕は人事にいるけど、そんなリストは見てない。まだ慌てないで。",
-      "note": "元の形: That's not nothing／聞こえ方: ザッツ・ナット・ナッシング／使う場面: 小さくない・無視できないと言う"
+      "jp": "まあ、ただの噂とは言えないな。でも僕は人事にいるけど、そんなリストは見てない。まだ慌てないで。"
      },
      {
       "sp": 0,
@@ -402,7 +412,8 @@
      {
       "sp": 1,
       "en": "No, it isn't. So update your resume this weekend, just in case. And I'll tell you the second I can.",
-      "jp": "そうだね、違う。だから念のため、週末に履歴書を更新しておいて。話せるようになったら、すぐ伝える。"
+      "jp": "そうだね、違う。だから念のため、週末に履歴書を更新しておいて。話せるようになったら、すぐ伝える。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -423,7 +434,7 @@
       "sp": 1,
       "en": "Jess, listen. I can explain. I was gonna put your name on it. I just ran out of time before the meeting.",
       "jp": "ジェス、聞いてくれ。説明できる。君の名前を入れるつもりだったんだ。会議の前に時間がなくなっただけで。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -443,7 +454,8 @@
      {
       "sp": 1,
       "en": "Yeah. Terrible. I'll go to the director right now and tell him the truth.",
-      "jp": "ああ、最低だ。今すぐディレクターのところに行って、本当のことを話す。"
+      "jp": "ああ、最低だ。今すぐディレクターのところに行って、本当のことを話す。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -473,7 +485,8 @@
      {
       "sp": 1,
       "en": "Ms. Lopez, you don't have to do that. I just mop floors. Nobody needs a speech for that.",
-      "jp": "ロペス先生、そんなことしなくていいんですよ。私はただ床を拭いてるだけです。そんなことで挨拶なんか。"
+      "jp": "ロペス先生、そんなことしなくていいんですよ。私はただ床を拭いてるだけです。そんなことで挨拶なんか。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -499,7 +512,7 @@
       "sp": 0,
       "en": "Then let me do it for both of us. Thank you. For the clean halls, the warm tea, and every single morning you said hello to the kids by name.",
       "jp": "なら、二人分、私が言わせてください。ありがとう。きれいな廊下も、温かいお茶も、毎朝子どもたちを名前で呼んで挨拶してくれたことも。",
-      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 1,

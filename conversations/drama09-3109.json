@@ -5,7 +5,12 @@
   "n": "ドラマ100・ご近所・友情・ちょっとコメディ",
   "hint": "Ten light, funny two-person dramas about noisy neighbors, borrowed things, failed surprises and mix-ups, each ending with a small warm moment.",
   "level": 3,
-  "keywords": "neighbors, friendship, comedy, drama",
+  "keywords": [
+   "neighbors",
+   "friendship",
+   "comedy",
+   "drama"
+  ],
   "d": [
    {
     "t": "🥁 081｜真夜中のドラマー：The Midnight Drummer",
@@ -18,7 +23,8 @@
      {
       "sp": 1,
       "en": "Oh no. That's me. I'm so sorry. I'm practicing for my first concert on Saturday, and I lost track of time.",
-      "jp": "うわ、それ僕です。すみません。土曜の初ライブの練習で、時間を忘れてました。"
+      "jp": "うわ、それ僕です。すみません。土曜の初ライブの練習で、時間を忘れてました。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -38,7 +44,8 @@
      {
       "sp": 1,
       "en": "Really? Thank you! I'll give you two free tickets to the show to say sorry.",
-      "jp": "本当に? ありがとう! お詫びに、ライブのチケットを2枚あげますよ。"
+      "jp": "本当に? ありがとう! お詫びに、ライブのチケットを2枚あげますよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -48,8 +55,7 @@
      {
       "sp": 1,
       "en": "The Quiet Neighbors. I swear, we picked the name before tonight.",
-      "jp": "『ザ・クワイエット・ネイバーズ』。誓って、今夜より前に決めた名前なんです。",
-      "note": "元の形: What if／聞こえ方: ワッティフ／使う場面: 提案の会話"
+      "jp": "『ザ・クワイエット・ネイバーズ』。誓って、今夜より前に決めた名前なんです。"
      }
     ]
    },
@@ -64,7 +70,8 @@
      {
       "sp": 1,
       "en": "Your drill? Right. The orange one. Okay, I have to be honest with you. I'm not sure where it is.",
-      "jp": "君のドリル? ああ、オレンジの。正直に言うよ。どこにあるのか分からないんだ。"
+      "jp": "君のドリル? ああ、オレンジの。正直に言うよ。どこにあるのか分からないんだ。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -100,7 +107,7 @@
       "sp": 0,
       "en": "Fine, I forgive everyone. But from now on, I'm writing my name on everything I lend.",
       "jp": "いいわ、みんなを許す。でも今後は貸すもの全部に名前を書くことにする。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      }
     ]
    },
@@ -115,7 +122,8 @@
      {
       "sp": 1,
       "en": "Hold on, Maria. Are you sure his birthday is today? Because I just got a text from him.",
-      "jp": "ちょっと待って、マリア。彼の誕生日、本当に今日? だって今、彼からメッセージが来たんだけど。"
+      "jp": "ちょっと待って、マリア。彼の誕生日、本当に今日? だって今、彼からメッセージが来たんだけど。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -146,7 +154,7 @@
       "sp": 1,
       "en": "Wow. You guys are the worst. And the best. Is that chocolate cake? Then I'm happy to be surprised twice.",
       "jp": "うわあ。君たち最悪だ。で、最高だ。それチョコケーキ? なら2回驚くのも大歓迎だよ。",
-      "note": "元の形: you guys／聞こえ方: ユーガイズ／使う場面: くだけた会話"
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      }
     ]
    },
@@ -156,12 +164,14 @@
      {
       "sp": 0,
       "en": "Excuse me, this is going to sound weird, but is your cat gray with a white nose? He's been sleeping on my sofa all week.",
-      "jp": "すみません、変なお話なんですけど、お宅の猫は鼻の白い灰色ですか? 一週間ずっと私のソファで寝ているんです。"
+      "jp": "すみません、変なお話なんですけど、お宅の猫は鼻の白い灰色ですか? 一週間ずっと私のソファで寝ているんです。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
       "en": "My cat, Biscuit? He's brown! Wait. Is your cat a gray one called Mochi? Because I've been feeding a gray cat for a week.",
-      "jp": "うちのビスケット? 茶色ですよ! ……待って、お宅の猫は『モチ』って灰色の子ですか? 一週間灰色の猫に餌をあげてたんです。"
+      "jp": "うちのビスケット? 茶色ですよ! ……待って、お宅の猫は『モチ』って灰色の子ですか? 一週間灰色の猫に餌をあげてたんです。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -191,8 +201,7 @@
      {
       "sp": 1,
       "en": "Only if the brown one can visit you. Honestly, I think they planned this.",
-      "jp": "そちらの茶色の子も遊びに行っていいなら。正直、猫たちが仕組んだ気がしますよ。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "jp": "そちらの茶色の子も遊びに行っていいなら。正直、猫たちが仕組んだ気がしますよ。"
      }
     ]
    },
@@ -222,7 +231,8 @@
      {
       "sp": 0,
       "en": "I'm tilting! My arms are shaking. If we drop this, I'm moving back to my old apartment.",
-      "jp": "傾けてるわよ! 腕が震えてる。落としたら、前のアパートに戻るからね。"
+      "jp": "傾けてるわよ! 腕が震えてる。落としたら、前のアパートに戻るからね。",
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 1,
@@ -238,7 +248,7 @@
       "sp": 1,
       "en": "Flat pizza. Honestly, that's the best thing that's happened all day. Let's eat it on the new sofa.",
       "jp": "ぺしゃんこのピザか。正直、今日一番いいことだよ。新しいソファで食べよう。",
-      "note": "元の形: Let us／聞こえ方: レッツ／使う場面: 誘うとき"
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      }
     ]
    },
@@ -268,7 +278,8 @@
      {
       "sp": 0,
       "en": "Would you? I wrote his number on a napkin, and the napkin got wet. I may have dialed three wrong numbers.",
-      "jp": "いいんですか? ナプキンに番号を書いたんですけど、濡れちゃって。もう3回間違えてかけてるかも。"
+      "jp": "いいんですか? ナプキンに番号を書いたんですけど、濡れちゃって。もう3回間違えてかけてるかも。",
+      "note": "元の形: would you／聞こえ方: ウジュ／使う場面:ていねいに頼む時"
      },
      {
       "sp": 1,
@@ -284,7 +295,7 @@
       "sp": 1,
       "en": "It's Ben. Tell your daughter the chicken is going to be a star on Friday.",
       "jp": "ベンです。娘さんに、金曜はチキンが主役になるよって伝えてあげて。",
-      "note": "元の形: Do you want to／聞こえ方: ジュワナ／使う場面: 日常会話"
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -314,12 +325,14 @@
      {
       "sp": 0,
       "en": "Then let me help. I'll knock on your door every Tuesday night. You put it out Wednesday morning.",
-      "jp": "じゃあ手伝いますよ。毎週火曜の夜にドアをノックします。水曜の朝に出してください。"
+      "jp": "じゃあ手伝いますよ。毎週火曜の夜にドアをノックします。水曜の朝に出してください。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 1,
       "en": "That's very kind. I'll make you my famous lemon cookies. The raccoon can't have those.",
-      "jp": "ご親切に。お礼に自慢のレモンクッキーを焼くよ。アライグマにはあげないけどね。"
+      "jp": "ご親切に。お礼に自慢のレモンクッキーを焼くよ。アライグマにはあげないけどね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -329,8 +342,7 @@
      {
       "sp": 1,
       "en": "Hello, my friend. Sorry, your free dinner is over. Maybe I'll leave you one cookie.",
-      "jp": "やあ、友よ。残念ながらただの夕食はおしまいだ。クッキーを1枚くらいは置いておこうかな。",
-      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "jp": "やあ、友よ。残念ながらただの夕食はおしまいだ。クッキーを1枚くらいは置いておこうかな。"
      }
     ]
    },
@@ -345,7 +357,8 @@
      {
       "sp": 1,
       "en": "I'm trying to be a good neighbor. I bought too many bananas, and I don't know how to stop baking.",
-      "jp": "いい隣人になろうとしてるんだよ。バナナを買いすぎて、焼くのをやめられなくなった。"
+      "jp": "いい隣人になろうとしてるんだよ。バナナを買いすぎて、焼くのをやめられなくなった。",
+      "note": "元の形: don't know／聞こえ方: ドンノウ／使う場面:知らないと答える時"
      },
      {
       "sp": 0,
@@ -365,7 +378,8 @@
      {
       "sp": 1,
       "en": "Whoa, you're serious. Okay, I'll bake, you do the signs. Your handwriting is much nicer than mine.",
-      "jp": "おお、本気だね。分かった、僕が焼いて、君が看板担当。君の字は僕よりずっときれいだし。"
+      "jp": "おお、本気だね。分かった、僕が焼いて、君が看板担当。君の字は僕よりずっときれいだし。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -375,8 +389,7 @@
      {
       "sp": 1,
       "en": "I love it. And you get the first loaf free. Wait, you already have forty.",
-      "jp": "いいね。最初の1本は君に無料だ。……いや、もう40本あるんだっけ。",
-      "note": "元の形: you are going to／聞こえ方: ユアゴナ／使う場面: くだけた会話"
+      "jp": "いいね。最初の1本は君に無料だ。……いや、もう40本あるんだっけ。"
      }
     ]
    },
@@ -406,7 +419,8 @@
      {
       "sp": 0,
       "en": "That's sweet. Honestly, I've gotten used to it. It's kind of like a roommate who's very punctual.",
-      "jp": "素敵ね。正直、もう慣れちゃったわ。すごく時間に正確なルームメイトみたい。"
+      "jp": "素敵ね。正直、もう慣れちゃったわ。すごく時間に正確なルームメイトみたい。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
      },
      {
       "sp": 1,
@@ -416,13 +430,13 @@
      {
       "sp": 0,
       "en": "A party with a grandfather clock? Okay. But I want to hear it chime one last time.",
-      "jp": "大時計つきのパーティー? いいわ。でも最後にもう一度、鐘を聞きたいの。"
+      "jp": "大時計つきのパーティー? いいわ。でも最後にもう一度、鐘を聞きたいの。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 1,
       "en": "It's six o'clock in ten minutes. Perfect timing. Pun intended.",
-      "jp": "あと10分で6時だ。ちょうどいいタイミングだね。ダジャレのつもりだよ。",
-      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+      "jp": "あと10分で6時だ。ちょうどいいタイミングだね。ダジャレのつもりだよ。"
      }
     ]
    },
@@ -432,7 +446,8 @@
      {
       "sp": 0,
       "en": "Someone is stealing my tomatoes, Leo. Three this week, from my balcony garden. I'm going to find out who.",
-      "jp": "誰かが私のトマトを盗んでるの、レオ。今週だけで3つ、ベランダ菜園から。犯人を見つけてやるわ。"
+      "jp": "誰かが私のトマトを盗んでるの、レオ。今週だけで3つ、ベランダ菜園から。犯人を見つけてやるわ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -447,7 +462,8 @@
      {
       "sp": 1,
       "en": "You set up a camera? That's serious. Okay, let's look at it. What do you see?",
-      "jp": "カメラを置いたの? 本格的だな。見てみよう。何が映ってる?"
+      "jp": "カメラを置いたの? 本格的だな。見てみよう。何が映ってる?",
+      "note": "元の形: what do you／聞こえ方: ワダヤ／使う場面:相手に何かをたずねる時"
      },
      {
       "sp": 0,
@@ -472,8 +488,7 @@
      {
       "sp": 0,
       "en": "Seeds, and you're helping me water everything all summer. Squirrel boy.",
-      "jp": "種と、夏じゅう水やりを手伝うこと。リス男さん。",
-      "note": "元の形: couldn't have／聞こえ方: クドゥントヘルプ／使う場面: 日常会話"
+      "jp": "種と、夏じゅう水やりを手伝うこと。リス男さん。"
      }
     ]
    }

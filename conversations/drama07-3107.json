@@ -5,7 +5,11 @@
   "n": "ドラマ100・旅先のハプニング・出会い",
   "hint": "Ten short two-person dramas about travel mishaps and chance meetings, from missed flights and swapped suitcases to surprise encounters on trains and in foreign cities.",
   "level": 3,
-  "keywords": "travel, encounter, drama",
+  "keywords": [
+   "travel",
+   "encounter",
+   "drama"
+  ],
   "d": [
    {
     "t": "✈️ 061｜乗り遅れた最終便：The Last Flight",
@@ -28,7 +32,8 @@
      {
       "sp": 1,
       "en": "Hold on. Let me check something. There's a night flight to New York at 11:55, and a train to Boston from there.",
-      "jp": "少しお待ちを。調べてみます。11時55分発のニューヨーク行きがあります。そこからボストンへは電車です。"
+      "jp": "少しお待ちを。調べてみます。11時55分発のニューヨーク行きがあります。そこからボストンへは電車です。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 0,
@@ -49,7 +54,7 @@
       "sp": 1,
       "en": "Because I missed my own brother's wedding once. Go, run! Gate 22. And next time, set two alarms.",
       "jp": "僕も昔、兄の結婚式に出られなかったことがあるんです。さあ走って! 22番ゲートです。次は目覚ましを2つかけてくださいね。",
-      "note": "元の形: Let me／聞こえ方: lemme／使う場面: くだけた会話"
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      }
     ]
    },
@@ -64,7 +69,8 @@
      {
       "sp": 1,
       "en": "Funny, because I tied the same ribbon on mine. Mine is in Prague, though. This one's in Lisbon, apparently.",
-      "jp": "不思議ですね、僕も同じリボンを結んでいたんです。僕のはプラハに行ってしまったみたいですが。"
+      "jp": "不思議ですね、僕も同じリボンを結んでいたんです。僕のはプラハに行ってしまったみたいですが。",
+      "note": "元の形: because／聞こえ方: ビコズ／使う場面:理由を言う時"
      },
      {
       "sp": 0,
@@ -95,7 +101,7 @@
       "sp": 1,
       "en": "Deal. And if the violin survived, I'll play your cat a birthday song.",
       "jp": "決まりですね。バイオリンが無事なら、あなたの猫に誕生日の曲を弾いてあげますよ。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -125,12 +131,14 @@
      {
       "sp": 0,
       "en": "The honeymoon suite? For one person? That's a little sad, don't you think?",
-      "jp": "ハネムーンスイート? 一人で? ちょっと寂しくないですか?"
+      "jp": "ハネムーンスイート? 一人で? ちょっと寂しくないですか?",
+      "note": "元の形: don't you／聞こえ方: ドンチュ／使う場面:〜でしょと確かめる時"
      },
      {
       "sp": 1,
       "en": "There's a hot tub on the balcony, and I'll send up a free breakfast every morning. Sad people love breakfast.",
-      "jp": "バルコニーにジャグジーがありますし、毎朝朝食を無料でお届けします。寂しい方は朝食がお好きですから。"
+      "jp": "バルコニーにジャグジーがありますし、毎朝朝食を無料でお届けします。寂しい方は朝食がお好きですから。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -145,8 +153,7 @@
      {
       "sp": 0,
       "en": "Then I'll even tag the hotel. Don't make me regret it.",
-      "jp": "それならホテルのタグもつけてあげる。後悔させないでね。",
-      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+      "jp": "それならホテルのタグもつけてあげる。後悔させないでね。"
      }
     ]
    },
@@ -156,12 +163,14 @@
      {
       "sp": 0,
       "en": "I'm so sorry to bother you, but I've walked past this same blue door three times. Do you know the way to the main square?",
-      "jp": "お邪魔してすみません、この青いドアの前をもう3回も通ってるんです。広場への道をご存じですか?"
+      "jp": "お邪魔してすみません、この青いドアの前をもう3回も通ってるんです。広場への道をご存じですか?",
+      "note": "元の形: You know／聞こえ方: ユノウ／使う場面:間をつなぐ・念を押す時"
      },
      {
       "sp": 1,
       "en": "Three times? That's nothing. Tourists usually go five or six before they ask. Come, sit, have some mint tea first.",
-      "jp": "3回? 大したことないですよ。観光客は5、6回は回ってから聞きますから。まずはミントティーでもどうぞ、座って。"
+      "jp": "3回? 大したことないですよ。観光客は5、6回は回ってから聞きますから。まずはミントティーでもどうぞ、座って。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -191,8 +200,7 @@
      {
       "sp": 1,
       "en": "The red one is the best one. You didn't get lost, my friend. You were just brought here.",
-      "jp": "赤いのが一番いいものです。あなたは迷ったんじゃない、ここに導かれたんですよ。",
-      "note": "元の形: What if／聞こえ方: ワッティフ／使う場面: 提案や仮定の会話"
+      "jp": "赤いのが一番いいものです。あなたは迷ったんじゃない、ここに導かれたんですよ。"
      }
     ]
    },
@@ -217,7 +225,8 @@
      {
       "sp": 1,
       "en": "You did. I just needed ten days to believe you. Can I ask you something? Why did you stay in the hostel so long?",
-      "jp": "言われたね。信じるのに10日かかったんだ。ひとつ聞いていい? どうして君はそんなに長くこのホステルにいたの?"
+      "jp": "言われたね。信じるのに10日かかったんだ。ひとつ聞いていい? どうして君はそんなに長くこのホステルにいたの?",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
@@ -243,7 +252,7 @@
       "sp": 0,
       "en": "I'll save you the corner table by the window.",
       "jp": "窓際の角のテーブルを取っておくわね。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -283,13 +292,13 @@
      {
       "sp": 0,
       "en": "It did sound strange. But I'll forgive you if you tell the front desk about the lock. And return my chocolate.",
-      "jp": "確かに変だったわ。でも、フロントに鍵のことを伝えてくれて、チョコを返してくれたら許してあげる。"
+      "jp": "確かに変だったわ。でも、フロントに鍵のことを伝えてくれて、チョコを返してくれたら許してあげる。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 1,
       "en": "I only ate one. Here, take the rest. And tomorrow, I'll buy you coffee at the right hotel.",
-      "jp": "食べたのは1個だけだよ。残りをどうぞ。明日、正しいホテルでコーヒーをおごらせて。",
-      "note": "元の形: I haven't／聞こえ方: アイ ハヴン／使う場面: 日常会話"
+      "jp": "食べたのは1個だけだよ。残りをどうぞ。明日、正しいホテルでコーヒーをおごらせて。"
      }
     ]
    },
@@ -314,7 +323,8 @@
      {
       "sp": 1,
       "en": "Great, so I stole your window for ten minutes. Let me make it up to you. Do you like cheese? I have a lot of cheese.",
-      "jp": "よかった、じゃあ10分間窓を盗んでたわけだ。お詫びさせて。チーズは好き? たくさん持ってるんだ。"
+      "jp": "よかった、じゃあ10分間窓を盗んでたわけだ。お詫びさせて。チーズは好き? たくさん持ってるんだ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 0,
@@ -324,7 +334,8 @@
      {
       "sp": 1,
       "en": "I'm a cheese maker. I'm going to a contest. If I win, I'll tell everyone it was because of you.",
-      "jp": "チーズ職人なんだ。コンテストに行く途中でね。優勝したら、君のおかげだってみんなに言うよ。"
+      "jp": "チーズ職人なんだ。コンテストに行く途中でね。優勝したら、君のおかげだってみんなに言うよ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
@@ -339,8 +350,7 @@
      {
       "sp": 0,
       "en": "Mmm. Okay, this is incredible. Honestly, you should have the window seat. You've earned it.",
-      "jp": "んー、おいしい、すごいわ。正直、窓側はあなたが座るべきね。その資格があるわ。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "jp": "んー、おいしい、すごいわ。正直、窓側はあなたが座るべきね。その資格があるわ。"
      }
     ]
    },
@@ -360,12 +370,14 @@
      {
       "sp": 0,
       "en": "Last year? My guidebook says it's right here. I should have known better than to trust it.",
-      "jp": "去年? ガイドブックにはここって書いてあるのに。信じた私がバカだったわ。"
+      "jp": "去年? ガイドブックにはここって書いてあるのに。信じた私がバカだったわ。",
+      "note": "元の形: should have／聞こえ方: シュダヴ／使う場面:〜すべきだったと後悔する時"
      },
      {
       "sp": 1,
       "en": "I'm headed that way. I can drop you at the lighthouse, but you'll have to ride with the cod.",
-      "jp": "僕もそっちへ行くんです。灯台まで送れますよ、ただしタラと一緒に乗ってもらいますが。"
+      "jp": "僕もそっちへ行くんです。灯台まで送れますよ、ただしタラと一緒に乗ってもらいますが。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -385,8 +397,7 @@
      {
       "sp": 1,
       "en": "Hop in, Emily. Close the window if you get cold. Or if you get smelly.",
-      "jp": "乗って、エミリー。寒くなったら窓を閉めてね。においが気になったらでもいいけど。",
-      "note": "元の形: have to／聞こえ方: hafta／使う場面: 日常会話"
+      "jp": "乗って、エミリー。寒くなったら窓を閉めてね。においが気になったらでもいいけど。"
      }
     ]
    },
@@ -416,7 +427,8 @@
      {
       "sp": 0,
       "en": "I see you! Wait, all my cash is still in here. Even the money I forgot I had. Why did you do this?",
-      "jp": "見えたわ! 待って、現金が全部そのまま入ってる。あることを忘れてたお金まで。どうしてここまでしてくれたの?"
+      "jp": "見えたわ! 待って、現金が全部そのまま入ってる。あることを忘れてたお金まで。どうしてここまでしてくれたの?",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
@@ -426,13 +438,13 @@
      {
       "sp": 0,
       "en": "Please, at least let me buy you lunch. I'll even pay for the simit.",
-      "jp": "せめてお昼をごちそうさせて。そのシミット代も払うわ。"
+      "jp": "せめてお昼をごちそうさせて。そのシミット代も払うわ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
      },
      {
       "sp": 1,
       "en": "Lunch, yes. The simit stays with me. A man has to have some rules.",
-      "jp": "お昼はぜひ。ただしシミットは僕のものです。男には守るルールがあるんで。",
-      "note": "元の形: have to／聞こえ方: hafta／使う場面: 日常会話"
+      "jp": "お昼はぜひ。ただしシミットは僕のものです。男には守るルールがあるんで。"
      }
     ]
    },
@@ -472,18 +484,19 @@
      {
       "sp": 0,
       "en": "Is that allowed? I don't want to get anyone in trouble. But I really want to go.",
-      "jp": "いいのかしら? 誰かが怒られたら困るけど。でも本当に行きたい。"
+      "jp": "いいのかしら? 誰かが怒られたら困るけど。でも本当に行きたい。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 1,
       "en": "He's smiling. I think he's done this before. Come on, the girl with the umbrella is waiting.",
-      "jp": "笑ってるよ。前にもやったことがあるんじゃないかな。行こう、傘の少女が待ってる。"
+      "jp": "笑ってるよ。前にもやったことがあるんじゃないかな。行こう、傘の少女が待ってる。",
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す・励ます時"
      },
      {
       "sp": 0,
       "en": "Five minutes. Then I'm buying you a coffee for your grandfather.",
-      "jp": "5分間ね。そのあとは、お祖父さんのためにコーヒーをおごるわ。",
-      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+      "jp": "5分間ね。そのあとは、お祖父さんのためにコーヒーをおごるわ。"
      }
     ]
    }

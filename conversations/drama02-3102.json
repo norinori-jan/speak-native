@@ -5,7 +5,11 @@
   "n": "ドラマ100・別れ・再会・やり直し",
   "hint": "Ten short two-person dramas about breakups, reunions, unsent apologies, and second chances.",
   "level": 3,
-  "keywords": "breakup, reunion, second chance",
+  "keywords": [
+   "breakup",
+   "reunion",
+   "second chance"
+  ],
   "d": [
    {
     "t": "💔 011｜別れ話は火曜日に：Tuesday Talk",
@@ -38,13 +42,13 @@
      {
       "sp": 1,
       "en": "No. I just feel like we've been living next to each other, not with each other.",
-      "jp": "いない。ただ、僕らは一緒に暮らしてるんじゃなくて、隣り合って暮らしてるだけな気がするんだ。",
-      "note": "元の形: have been／聞こえ方: ブン（'ve beenが短くなる）／使う場面: ずっと続いている状態を話すとき"
+      "jp": "いない。ただ、僕らは一緒に暮らしてるんじゃなくて、隣り合って暮らしてるだけな気がするんだ。"
      },
      {
       "sp": 0,
       "en": "You could have said that in March, when it started. I would have listened.",
-      "jp": "それを始まった3月に言ってくれればよかったのに。ちゃんと聞いたわ。"
+      "jp": "それを始まった3月に言ってくれればよかったのに。ちゃんと聞いたわ。",
+      "note": "元の形: would have／聞こえ方: ウダヴ／使う場面:〜だったのにと言う時"
      },
      {
       "sp": 1,
@@ -54,7 +58,8 @@
      {
       "sp": 0,
       "en": "Okay. Then I'll make tea, and you'll tell me everything. At least do that properly.",
-      "jp": "わかった。じゃあお茶を入れるから、全部話して。せめてそれくらいはきちんとして。"
+      "jp": "わかった。じゃあお茶を入れるから、全部話して。せめてそれくらいはきちんとして。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -70,7 +75,7 @@
       "sp": 1,
       "en": "Thanks, Grace. You didn't have to pack it all. I could've done it myself.",
       "jp": "ありがとう、グレース。全部詰めてくれなくてもよかったのに。自分でやれたよ。",
-      "note": "元の形: could have／聞こえ方: クダヴ／使う場面: 過去にできたはずのことを言うとき"
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
      },
      {
       "sp": 0,
@@ -105,7 +110,8 @@
      {
       "sp": 0,
       "en": "There you go. That's the man I'm going to miss. Take the stairs carefully.",
-      "jp": "それそれ。それが私の恋しくなるあなたよ。階段、気をつけてね。"
+      "jp": "それそれ。それが私の恋しくなるあなたよ。階段、気をつけてね。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -125,7 +131,8 @@
      {
       "sp": 0,
       "en": "Seven years, and you end up on the same train. That's ridiculous.",
-      "jp": "7年もたって、同じ電車に乗り合わせるなんて。ばかげてるわ。"
+      "jp": "7年もたって、同じ電車に乗り合わせるなんて。ばかげてるわ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -150,13 +157,13 @@
      {
       "sp": 1,
       "en": "My hand knew your face. My brain was just following along.",
-      "jp": "手が君の顔を知ってたんだ。頭はただついていっただけさ。",
-      "note": "元の形: following along／聞こえ方: フォロウィン アロング（ingのgが弱くなる）／使う場面: 流れに合わせて動くことを言うとき"
+      "jp": "手が君の顔を知ってたんだ。頭はただついていっただけさ。"
      },
      {
       "sp": 0,
       "en": "My train's here. Give me your number. Don't draw anything until I call.",
-      "jp": "電車が来たわ。番号を教えて。私が電話するまで、何も描かないでね。"
+      "jp": "電車が来たわ。番号を教えて。私が電話するまで、何も描かないでね。",
+      "note": "元の形: give me／聞こえ方: ギミ／使う場面:ちょうだいと頼む時"
      }
     ]
    },
@@ -181,7 +188,8 @@
      {
       "sp": 1,
       "en": "I know. I'm just trying to say something, and I don't know how to start.",
-      "jp": "わかってる。何か言おうとしてるんだけど、どう切り出せばいいかわからなくて。"
+      "jp": "わかってる。何か言おうとしてるんだけど、どう切り出せばいいかわからなくて。",
+      "note": "元の形: don't know／聞こえ方: ドンノウ／使う場面:知らないと答える時"
      },
      {
       "sp": 0,
@@ -196,8 +204,7 @@
      {
       "sp": 0,
       "en": "That wasn't so hard, was it?",
-      "jp": "そんなに難しくなかったでしょ？",
-      "note": "元の形: was it?／聞こえ方: ウォズィット（つながって一語のように聞こえる）／使う場面: 付加疑問で相手に確認するとき"
+      "jp": "そんなに難しくなかったでしょ？"
      },
      {
       "sp": 1,
@@ -207,7 +214,8 @@
      {
       "sp": 0,
       "en": "Only if you peel the oranges. I'll find the plates.",
-      "jp": "オレンジの皮をむいてくれるなら。私はお皿を探すわ。"
+      "jp": "オレンジの皮をむいてくれるなら。私はお皿を探すわ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -248,12 +256,13 @@
       "sp": 0,
       "en": "When did you get so wise?",
       "jp": "いつからそんなに賢くなったの？",
-      "note": "元の形: When did you／聞こえ方: ウェン ディジュ（didとyouがつながる）／使う場面: 驚きや冗談まじりの質問"
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
       "en": "About three minutes ago. I'll forget it by morning, so write it down.",
-      "jp": "3分くらい前からさ。朝には忘れてるから、書き留めておいてくれ。"
+      "jp": "3分くらい前からさ。朝には忘れてるから、書き留めておいてくれ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -268,7 +277,8 @@
      {
       "sp": 0,
       "en": "Daddy, I was cleaning the shelf, and a letter fell out of your old atlas.",
-      "jp": "ねえ、棚を掃除してたら、あなたの古い地図帳から手紙が落ちてきたの。"
+      "jp": "ねえ、棚を掃除してたら、あなたの古い地図帳から手紙が落ちてきたの。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ、〜切れと言う時"
      },
      {
       "sp": 1,
@@ -293,8 +303,7 @@
      {
       "sp": 1,
       "en": "I came home early. I never changed the letter. I was too embarrassed to throw it away.",
-      "jp": "早く帰れたんだ。手紙は書き直さなかった。恥ずかしくて捨てることもできなかったんだよ。",
-      "note": "元の形: too embarrassed／聞こえ方: トゥー インバレスト／使う場面: 恥ずかしくて何かできなかったと言うとき"
+      "jp": "早く帰れたんだ。手紙は書き直さなかった。恥ずかしくて捨てることもできなかったんだよ。"
      },
      {
       "sp": 0,
@@ -309,7 +318,8 @@
      {
       "sp": 0,
       "en": "I'll keep it. And now I'll write you one back. You're going to read it out loud.",
-      "jp": "取っておくわ。それで今度は私が返事を書く。あなたは声に出して読むのよ。"
+      "jp": "取っておくわ。それで今度は私が返事を書く。あなたは声に出して読むのよ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -329,8 +339,7 @@
      {
       "sp": 0,
       "en": "You didn't tell me! I was about to call you and say I wanted to stop.",
-      "jp": "言ってくれなかったじゃない！ 私、もう終わりにしたいって電話しようとしてたのよ。",
-      "note": "元の形: about to／聞こえ方: アバウトゥ／使う場面: まさにこれから何かをするとき"
+      "jp": "言ってくれなかったじゃない！ 私、もう終わりにしたいって電話しようとしてたのよ。"
      },
      {
       "sp": 1,
@@ -350,7 +359,8 @@
      {
       "sp": 0,
       "en": "Ten minutes? Carlos, that's crazy. That's too close.",
-      "jp": "10分？ カルロス、それはおかしいわ。近すぎる。"
+      "jp": "10分？ カルロス、それはおかしいわ。近すぎる。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -360,7 +370,8 @@
      {
       "sp": 0,
       "en": "I'm joking. Kiss me before they call my flight. I'll cancel it.",
-      "jp": "冗談よ。搭乗案内が流れる前にキスして。この便はキャンセルするから。"
+      "jp": "冗談よ。搭乗案内が流れる前にキスして。この便はキャンセルするから。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      }
     ]
    },
@@ -386,7 +397,7 @@
       "sp": 1,
       "en": "I know. I'm a slow man. But I'm done making promises I don't keep.",
       "jp": "わかってる。僕は遅い男なんだ。でももう、守らない約束はしない。",
-      "note": "元の形: promises that I don't keep／聞こえ方: プロミセズ アイ ドンキープ（thatを省略）／使う場面: 関係代名詞 that を省くくだけた言い方"
+      "note": "元の形: I'm／聞こえ方: アイム／使う場面:自分の状態を言う時"
      },
      {
       "sp": 0,
@@ -421,12 +432,14 @@
      {
       "sp": 0,
       "en": "I found a camera in the attic. There's still film inside, twelve shots left.",
-      "jp": "屋根裏でカメラを見つけたの。まだフィルムが入ってて、残り12枚よ。"
+      "jp": "屋根裏でカメラを見つけたの。まだフィルムが入ってて、残り12枚よ。",
+      "note": "元の形: there's／聞こえ方: ゼアズ／使う場面:〜があると言う時"
      },
      {
       "sp": 1,
       "en": "That's the camera from our trip to Lisbon. I forgot it existed.",
-      "jp": "それ、リスボン旅行のときのカメラだ。存在を忘れてたよ。"
+      "jp": "それ、リスボン旅行のときのカメラだ。存在を忘れてたよ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -446,8 +459,7 @@
      {
       "sp": 1,
       "en": "Then let's do it together. Meet me at the shop on Monday, at noon.",
-      "jp": "じゃあ一緒にやろう。月曜のお昼に、あの店で会おう。",
-      "note": "元の形: let us／聞こえ方: レッツ／使う場面: 一緒に行動しようと誘うとき"
+      "jp": "じゃあ一緒にやろう。月曜のお昼に、あの店で会おう。"
      },
      {
       "sp": 0,
@@ -498,12 +510,13 @@
       "sp": 1,
       "en": "No. I called because for two years I've wanted to hear your voice, and tonight I ran out of reasons not to.",
       "jp": "違う。2年間ずっと君の声が聞きたくて、今夜やっと、かけない理由がなくなったからだ。",
-      "note": "元の形: ran out of／聞こえ方: ラナウダヴ（つながって一語のように聞こえる）／使う場面: 何かを使い果たしたと言うとき"
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ、〜切れと言う時"
      },
      {
       "sp": 0,
       "en": "That's the nicest thing you've said to me in years.",
-      "jp": "ここ何年かで、あなたが言ってくれた一番素敵な言葉ね。"
+      "jp": "ここ何年かで、あなたが言ってくれた一番素敵な言葉ね。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,

@@ -5,7 +5,11 @@
   "n": "ドラマ100・夢と挑戦",
   "hint": "Ten short two-person dramas about chasing dreams, from bands and chefs to athletes, writers and scientists facing a big decision.",
   "level": 3,
-  "keywords": "dreams, challenge, drama",
+  "keywords": [
+   "dreams",
+   "challenge",
+   "drama"
+  ],
   "d": [
    {
     "t": "🎸 051｜解散前の最後の曲：Last Song Before the End",
@@ -23,7 +27,8 @@
      {
       "sp": 0,
       "en": "Eight years. We played in garages, bus stations, and that wedding where the groom cried. And you want to quit over a van?",
-      "jp": "八年よ。ガレージも、バスターミナルも、新郎が泣いた結婚式でも演奏したのに。バンのせいでやめるっていうの？"
+      "jp": "八年よ。ガレージも、バスターミナルも、新郎が泣いた結婚式でも演奏したのに。バンのせいでやめるっていうの？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 1,
@@ -34,7 +39,7 @@
       "sp": 0,
       "en": "Then play for the seven. Play like it's the Garden. I'm gonna hit those drums like they owe me money.",
       "jp": "じゃあ七人のために演奏して。ガーデンみたいにやるの。私はドラムを、借金取りみたいに叩いてやる。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 1,
@@ -79,7 +84,8 @@
      {
       "sp": 1,
       "en": "I supply half the restaurants on this street. I'll give you the same prices I give the big guys.",
-      "jp": "この通りの店の半分に、僕は卸してる。大手と同じ値段で出すよ。"
+      "jp": "この通りの店の半分に、僕は卸してる。大手と同じ値段で出すよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -89,8 +95,7 @@
      {
       "sp": 1,
       "en": "Remember the night you fed me when my truck got stuck in the snow? A bowl of soup and no questions asked.",
-      "jp": "僕のトラックが雪で動けなくなった夜、君がスープを出してくれたの覚えてる？ 何も聞かずに。",
-      "note": "元の形: no questions asked／聞こえ方: ノー・クエスチョンズ・アスクト／使う場面: 理由を聞かずに助ける"
+      "jp": "僕のトラックが雪で動けなくなった夜、君がスープを出してくれたの覚えてる？ 何も聞かずに。"
      },
      {
       "sp": 0,
@@ -105,7 +110,8 @@
      {
       "sp": 0,
       "en": "Just my grandmother's braised beef, a good loaf of bread, and a pie. That's the whole menu.",
-      "jp": "祖母のビーフ煮込みと、おいしいパンと、パイだけ。それがメニューのすべてよ。"
+      "jp": "祖母のビーフ煮込みと、おいしいパンと、パイだけ。それがメニューのすべてよ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -136,7 +142,7 @@
       "sp": 1,
       "en": "I don't wanna be the guy who comes in last at his own farewell.",
       "jp": "自分の引退試合でビリになる男には、なりたくないんです。",
-      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+      "note": "元の形: wanna／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -146,7 +152,8 @@
      {
       "sp": 1,
       "en": "What if I get out of the water and there's nothing left? No goal, no schedule, no you yelling at me at five a.m.?",
-      "jp": "もし水から上がって、何も残ってなかったらどうします？ 目標も、予定も、朝五時に怒鳴るコーチもいなくなったら。"
+      "jp": "もし水から上がって、何も残ってなかったらどうします？ 目標も、予定も、朝五時に怒鳴るコーチもいなくなったら。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ、〜切れと言う時"
      },
      {
       "sp": 0,
@@ -177,12 +184,13 @@
       "sp": 1,
       "en": "Because I wanted to show it to you before I hand it in. Amy, I'm gonna quit and build the app full time.",
       "jp": "出す前に君に見せたかったんだ。エイミー、僕は会社を辞めて、アプリに専念したい。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      },
      {
       "sp": 0,
       "en": "You have a mortgage and a baby on the way. You want to quit a stable job for an app nobody's used?",
-      "jp": "ローンもあって、赤ちゃんももうすぐ生まれるのよ。誰も使ったことのないアプリのために、安定した仕事を辞めるの？"
+      "jp": "ローンもあって、赤ちゃんももうすぐ生まれるのよ。誰も使ったことのないアプリのために、安定した仕事を辞めるの？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 1,
@@ -227,7 +235,8 @@
      {
       "sp": 1,
       "en": "Claire, that's wonderful! Send it over. I'm dying to read how it ends.",
-      "jp": "クレア、素晴らしいじゃないか！ 送ってくれ。結末が読みたくてたまらないよ。"
+      "jp": "クレア、素晴らしいじゃないか！ 送ってくれ。結末が読みたくてたまらないよ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 0,
@@ -247,8 +256,7 @@
      {
       "sp": 1,
       "en": "You start the next one. That's what writers do. But first, you let this one go.",
-      "jp": "次を書き始めるのさ。作家ってそういうものだ。でもまず、この作品を手放すんだ。",
-      "note": "元の形: let go／聞こえ方: レット・ゴー／使う場面: 手放す・区切りをつける"
+      "jp": "次を書き始めるのさ。作家ってそういうものだ。でもまず、この作品を手放すんだ。"
      },
      {
       "sp": 0,
@@ -258,7 +266,8 @@
      {
       "sp": 1,
       "en": "Then I'll tell you, like I always have. But I've read the first three hundred pages twice, and I couldn't stop crying at page two-ten.",
-      "jp": "そのときは、いつも通りはっきり言うよ。でも最初の三百ページは二回読んだし、二百十ページでは涙が止まらなかった。"
+      "jp": "そのときは、いつも通りはっきり言うよ。でも最初の三百ページは二回読んだし、二百十ページでは涙が止まらなかった。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -303,13 +312,13 @@
      {
       "sp": 1,
       "en": "I'll survive. Hana, when did you last do something just for you?",
-      "jp": "耐えるよ。ハナ、最後に自分だけのために何かしたのはいつだ？"
+      "jp": "耐えるよ。ハナ、最後に自分だけのために何かしたのはいつだ？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 0,
       "en": "I don't know. Maybe when I picked my own major. And then I came home and worked at the bank for six years.",
-      "jp": "分からない。たぶん専攻を自分で決めたときかな。そのあと帰ってきて、六年も銀行で働いた。",
-      "note": "元の形: I don't know／聞こえ方: I dunno／使う場面: くだけた会話"
+      "jp": "分からない。たぶん専攻を自分で決めたときかな。そのあと帰ってきて、六年も銀行で働いた。"
      },
      {
       "sp": 1,
@@ -320,7 +329,7 @@
       "sp": 0,
       "en": "She said that? Then I'm gonna book the ticket tonight. One way.",
       "jp": "そんなこと言ってたの？ じゃあ今夜、航空券を取る。片道でね。",
-      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+      "note": "元の形: gonna／聞こえ方: ガナ／使う場面:これからの予定を言う時"
      }
     ]
    },
@@ -360,12 +369,14 @@
      {
       "sp": 0,
       "en": "That's disgusting, and it really helps.",
-      "jp": "気持ち悪い話だけど、すごく助かるわ。"
+      "jp": "気持ち悪い話だけど、すごく助かるわ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
       "en": "Here's a trick. Pick one person in the dark and tell the story only to them. I'll be at the back, in the booth, and it'll be me.",
-      "jp": "コツがある。暗闇の中で一人を決めて、その人だけに話すんだ。後ろの調光室に僕がいる。それは僕だってことにして。"
+      "jp": "コツがある。暗闇の中で一人を決めて、その人だけに話すんだ。後ろの調光室に僕がいる。それは僕だってことにして。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 0,
@@ -375,8 +386,7 @@
      {
       "sp": 1,
       "en": "I'll hold my breath till you finish. Break a leg, Zoe.",
-      "jp": "君が終わるまで息を止めておく。成功を祈ってる、ゾーイ。",
-      "note": "元の形: Break a leg／聞こえ方: ブレイク・ア・レッグ／使う場面: 本番前に幸運を祈る"
+      "jp": "君が終わるまで息を止めておく。成功を祈ってる、ゾーイ。"
      }
     ]
    },
@@ -406,8 +416,7 @@
      {
       "sp": 0,
       "en": "I was nine. And I've been reading about planes since then. It's the only thing I've ever wanted.",
-      "jp": "九歳だったのよ。それからずっと飛行機の本を読んできた。ほしいと思ったのは、これだけなの。",
-      "note": "元の形: I'm listening／聞こえ方: アイム・リスニング／使う場面: 話をちゃんと聞くと伝える"
+      "jp": "九歳だったのよ。それからずっと飛行機の本を読んできた。ほしいと思ったのは、これだけなの。"
      },
      {
       "sp": 1,
@@ -417,7 +426,8 @@
      {
       "sp": 0,
       "en": "This is my future, Dad. Come with me on Saturday. Just one lesson. If you hate it, I'll stop.",
-      "jp": "これが私の将来なの、お父さん。土曜日に一緒に来て。一回だけ。もし嫌だったら、やめる。"
+      "jp": "これが私の将来なの、お父さん。土曜日に一緒に来て。一回だけ。もし嫌だったら、やめる。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
      },
      {
       "sp": 1,
@@ -427,7 +437,8 @@
      {
       "sp": 0,
       "en": "No. But I'd listen to why you hate it. That's a promise.",
-      "jp": "ううん。でも、なぜ嫌なのかはちゃんと聞く。それは約束するわ。"
+      "jp": "ううん。でも、なぜ嫌なのかはちゃんと聞く。それは約束するわ。",
+      "note": "元の形: that's／聞こえ方: ザッツ／使う場面:それは〜だと言う時"
      },
      {
       "sp": 1,
@@ -457,7 +468,8 @@
      {
       "sp": 1,
       "en": "Then you can tell your grandkids about it. Come on, walk with me. Twenty steps, then we run again.",
-      "jp": "なら孫に自慢できるな。さあ、一緒に歩こう。二十歩歩いて、そしたらまた走る。"
+      "jp": "なら孫に自慢できるな。さあ、一緒に歩こう。二十歩歩いて、そしたらまた走る。",
+      "note": "元の形: come on／聞こえ方: カモン／使う場面:促す・励ます時"
      },
      {
       "sp": 0,
@@ -468,7 +480,7 @@
       "sp": 1,
       "en": "Because when your doctor told you to quit three years ago, you said you'd run a marathon instead. I wanna see it.",
       "jp": "三年前に医者にやめろと言われたとき、君は代わりにマラソンを走るって言った。それが見たいんだ。",
-      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+      "note": "元の形: wanna／聞こえ方: ワナ／使う場面:したいと伝える時"
      },
      {
       "sp": 0,
@@ -498,7 +510,8 @@
      {
       "sp": 1,
       "en": "Yuki, that's no surprise. Your paper last spring is why they called. Why don't you look happy?",
-      "jp": "ユキ、驚くことじゃない。去年の春の論文が理由で連絡が来たんだ。どうして嬉しそうじゃないんだい？"
+      "jp": "ユキ、驚くことじゃない。去年の春の論文が理由で連絡が来たんだ。どうして嬉しそうじゃないんだい？",
+      "note": "元の形: don't you／聞こえ方: ドンチュ／使う場面:〜でしょと確かめる時"
      },
      {
       "sp": 0,
@@ -513,7 +526,8 @@
      {
       "sp": 0,
       "en": "Then why did you stay in science?",
-      "jp": "それなのに、どうして科学を続けたんですか？"
+      "jp": "それなのに、どうして科学を続けたんですか？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
      },
      {
       "sp": 1,
@@ -533,8 +547,7 @@
      {
       "sp": 0,
       "en": "I will. I promise. I'll send it even if you're sitting right next to me.",
-      "jp": "必ず送ります。約束します。教授が隣に座っていても、送りますから。",
-      "note": "元の形: I promise／聞こえ方: アイ・プロミス／使う場面: 約束する"
+      "jp": "必ず送ります。約束します。教授が隣に座っていても、送りますから。"
      }
     ]
    }
