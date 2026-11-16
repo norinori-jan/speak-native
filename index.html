@@ -1067,7 +1067,7 @@
       <button class="mic-btn" id="micBtn" onclick="toggleMic()">🎤</button>
       <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
     </div>
-    <button type="button" class="instant-btn" style="width:100%;margin-top:6px;" onclick="sendLatestEnglishToMusicSuite()">🎼 入力した英語を music-suite へ送る</button>
+    <button type="button" class="instant-btn" style="width:100%;margin-top:6px;" onclick="sendLatestEnglishToMusicSuite()">🎼 この会話を曲にする（Composition Canvas）</button>
   </div>
 </div>
 
@@ -1938,14 +1938,37 @@ function handleEnter(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 }
 function sendLatestEnglishToMusicSuite() {
-  const latest = [...(STATE.history || [])].reverse().find(m => m && m.role === 'user' && String(m.content || '').trim());
-  if (!latest) { showToast('先に英語で会話してください'); return; }
-  const params = new URLSearchParams();
-  params.set('note', String(latest.content).trim().slice(0, 3000));
-  params.set('source', 'speak-native');
-  const url = 'https://norinori-jan.github.io/music-suite/apps/vocal-lab-v3.html#' + params.toString();
-  window.open(url, '_blank', 'noopener,noreferrer');
-  showToast('入力した英語を music-suite に送りました');
+  const dialogue = (STATE.history || [])
+    .filter(m => m && (m.role === 'user' || m.role === 'assistant') && String(m.content || '').trim())
+    .slice(-10)
+    .map((m, index) => ({
+      turn: index + 1,
+      speaker: m.role === 'user' ? 'A' : 'B',
+      role: m.role,
+      text: String(m.content).trim().slice(0, 1800)
+    }));
+  if (!dialogue.length) { showToast('先に英会話をしてください'); return; }
+  const payload = {
+    version: 1,
+    source: 'speak-native-dialogue',
+    sourceApp: 'speak-native',
+    projectId: 'conversation-' + Date.now(),
+    title: '会話から作る曲',
+    conversationMode: convMode,
+    topic: currentTopic || '',
+    dialogue,
+    original: dialogue.map(line => (line.speaker === 'A' ? 'A' : 'B') + ': ' + line.text).join('\\n'),
+    createdAt: new Date().toISOString()
+  };
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  const url = 'https://norinori-jan.github.io/music-suite/apps/composition-canvas.html#import=' + encodeURIComponent(encoded);
+  const opened = window.open(url, '_blank');
+  if (!opened) {
+    showToast('新しいタブが開けません。ポップアップを許可してもう一度押してください');
+    return;
+  }
+  opened.opener = null;
+  showToast('二人の会話 ' + dialogue.length + '発言をComposition Canvasへ送りました');
 }
 function autoResize(el) {
   el.style.height = 'auto';
