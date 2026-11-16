@@ -1,0 +1,522 @@
+[
+ {
+  "id": "drama02",
+  "ic": "💔",
+  "n": "ドラマ100・別れ・再会・やり直し",
+  "hint": "Ten short two-person dramas about breakups, reunions, unsent apologies, and second chances.",
+  "level": 3,
+  "keywords": "breakup, reunion, second chance",
+  "d": [
+   {
+    "t": "💔 011｜別れ話は火曜日に：Tuesday Talk",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You said we needed to talk. You never say that unless it's bad.",
+      "jp": "話があるって言ったわよね。悪い話のときしかそんなこと言わないじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Sit down, Hannah. Please. I've been trying to say this for three weeks.",
+      "jp": "座って、ハンナ。お願いだ。3週間前からずっと言おうとしてたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Three weeks? So the trip to Portland, the birthday dinner, all of that was...",
+      "jp": "3週間？ じゃあポートランドの旅行も、誕生日のディナーも、全部……"
+     },
+     {
+      "sp": 1,
+      "en": "Real. All of it was real. That's what makes this so hard.",
+      "jp": "本物だった。全部ね。だからこそつらいんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then why? Is there someone else?",
+      "jp": "じゃあどうして？ ほかに誰かいるの？"
+     },
+     {
+      "sp": 1,
+      "en": "No. I just feel like we've been living next to each other, not with each other.",
+      "jp": "いない。ただ、僕らは一緒に暮らしてるんじゃなくて、隣り合って暮らしてるだけな気がするんだ。",
+      "note": "元の形: have been／聞こえ方: ブン（'ve beenが短くなる）／使う場面: ずっと続いている状態を話すとき"
+     },
+     {
+      "sp": 0,
+      "en": "You could have said that in March, when it started. I would have listened.",
+      "jp": "それを始まった3月に言ってくれればよかったのに。ちゃんと聞いたわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I'm sorry I waited until I was sure.",
+      "jp": "わかってる。確信が持てるまで待ってしまってごめん。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Then I'll make tea, and you'll tell me everything. At least do that properly.",
+      "jp": "わかった。じゃあお茶を入れるから、全部話して。せめてそれくらいはきちんとして。"
+     }
+    ]
+   },
+   {
+    "t": "📦 012｜荷物を取りに来た日：Boxes by the Door",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I put your things in four boxes. The books are in the blue one.",
+      "jp": "あなたの荷物を4つの箱に詰めたわ。本は青い箱よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks, Grace. You didn't have to pack it all. I could've done it myself.",
+      "jp": "ありがとう、グレース。全部詰めてくれなくてもよかったのに。自分でやれたよ。",
+      "note": "元の形: could have／聞こえ方: クダヴ／使う場面: 過去にできたはずのことを言うとき"
+     },
+     {
+      "sp": 0,
+      "en": "I wanted to. It's easier than seeing you walk around the apartment.",
+      "jp": "私がやりたかったの。あなたが部屋の中を歩き回るのを見るよりは楽だから。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait. This sweater. I thought I lost it two years ago.",
+      "jp": "待って。このセーター。2年前になくしたと思ってた。"
+     },
+     {
+      "sp": 0,
+      "en": "I know. It was under the bed. I kept it because it still smells like you.",
+      "jp": "知ってる。ベッドの下にあったの。まだあなたの匂いがするから取っておいたのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then keep it. I mean it. Keep it.",
+      "jp": "じゃあ持っていて。本気だよ。持っていて。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't be nice to me today. If you're nice, I'll start crying, and I promised myself I wouldn't.",
+      "jp": "今日は優しくしないで。優しくされたら泣いちゃうし、泣かないって自分に約束したの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Then I'll be rude. These boxes are terrible, and the blue one is heavy.",
+      "jp": "わかった。じゃあ失礼なことを言うよ。この箱はひどいし、青いのは重すぎる。"
+     },
+     {
+      "sp": 0,
+      "en": "There you go. That's the man I'm going to miss. Take the stairs carefully.",
+      "jp": "それそれ。それが私の恋しくなるあなたよ。階段、気をつけてね。"
+     }
+    ]
+   },
+   {
+    "t": "🚉 013｜七年ぶりの再会：Seven Years Later",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Adam? Is that really you? You're standing on my platform.",
+      "jp": "アダム？ 本当にあなた？ 私のホームに立ってるじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Your platform? I moved to this city in June. I take this train every morning.",
+      "jp": "君のホーム？ 僕は6月にこの街に引っ越したんだ。毎朝この電車に乗ってるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Seven years, and you end up on the same train. That's ridiculous.",
+      "jp": "7年もたって、同じ電車に乗り合わせるなんて。ばかげてるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "You cut your hair. It looks good. I mean, it looked good before, too.",
+      "jp": "髪を切ったんだね。似合ってる。いや、前も似合ってたけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Still bad at compliments, I see. Are you still drawing?",
+      "jp": "褒めるのは相変わらず下手ね。まだ絵は描いてるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Only when I can't sleep. I drew you once last year. By accident.",
+      "jp": "眠れないときだけね。去年一度、君を描いたよ。偶然だけど。"
+     },
+     {
+      "sp": 0,
+      "en": "By accident? How do you draw someone by accident?",
+      "jp": "偶然？ どうやったら偶然、人を描くのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "My hand knew your face. My brain was just following along.",
+      "jp": "手が君の顔を知ってたんだ。頭はただついていっただけさ。",
+      "note": "元の形: following along／聞こえ方: フォロウィン アロング（ingのgが弱くなる）／使う場面: 流れに合わせて動くことを言うとき"
+     },
+     {
+      "sp": 0,
+      "en": "My train's here. Give me your number. Don't draw anything until I call.",
+      "jp": "電車が来たわ。番号を教えて。私が電話するまで、何も描かないでね。"
+     }
+    ]
+   },
+   {
+    "t": "🥀 014｜言えないごめん：The Sorry I Couldn't Say",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You're standing outside my door at ten at night with a bag of oranges. Why?",
+      "jp": "夜10時に、オレンジの袋を持って私の家の前に立ってるのはどうして？"
+     },
+     {
+      "sp": 1,
+      "en": "You said once that oranges fix everything. So I bought nine.",
+      "jp": "前に、オレンジは何でも直すって言ったよね。だから9個買ってきた。"
+     },
+     {
+      "sp": 0,
+      "en": "That was a joke, Leo. I was seven years old when I said it.",
+      "jp": "あれは冗談よ、レオ。言ったのは私が7歳のときの話でしょ。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I'm just trying to say something, and I don't know how to start.",
+      "jp": "わかってる。何か言おうとしてるんだけど、どう切り出せばいいかわからなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "You could start with, I'm sorry I forgot your sister's wedding.",
+      "jp": "「君の妹の結婚式を忘れてごめん」から始めたらどう？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry I forgot your sister's wedding. I'm sorry I said it wasn't a big deal.",
+      "jp": "君の妹の結婚式を忘れてごめん。大したことじゃないなんて言ってごめん。"
+     },
+     {
+      "sp": 0,
+      "en": "That wasn't so hard, was it?",
+      "jp": "そんなに難しくなかったでしょ？",
+      "note": "元の形: was it?／聞こえ方: ウォズィット（つながって一語のように聞こえる）／使う場面: 付加疑問で相手に確認するとき"
+     },
+     {
+      "sp": 1,
+      "en": "It was the hardest thing I've done all year. Can I come in?",
+      "jp": "今年やったことの中で一番難しかったよ。入ってもいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Only if you peel the oranges. I'll find the plates.",
+      "jp": "オレンジの皮をむいてくれるなら。私はお皿を探すわ。"
+     }
+    ]
+   },
+   {
+    "t": "💍 015｜結婚式の前夜：The Night Before the Wedding",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, I can't sleep. It's two in the morning, and my dress is hanging on the door like a ghost.",
+      "jp": "お父さん、眠れないの。もう夜中の2時で、ドレスがドアにお化けみたいに掛かってる。"
+     },
+     {
+      "sp": 1,
+      "en": "I can't sleep either. I've practiced my speech forty times in the garage.",
+      "jp": "お父さんも眠れないよ。ガレージでスピーチを40回も練習した。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I'm making a mistake? What if I'm not ready?",
+      "jp": "もし間違いだったら？ もし私に心の準備ができてなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Emily, when you were six, you jumped off the diving board without asking anyone.",
+      "jp": "エミリー、6歳のとき、誰にも聞かずに飛び込み台から飛び降りたろう。"
+     },
+     {
+      "sp": 0,
+      "en": "And I swallowed half the pool.",
+      "jp": "それでプールの水を半分飲んだのよね。"
+     },
+     {
+      "sp": 1,
+      "en": "But you came up laughing. You're not scared of him. You're scared of how much you love him.",
+      "jp": "でも笑いながら浮かんできた。怖いのは彼じゃない。彼をどれだけ愛してるかが怖いんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "When did you get so wise?",
+      "jp": "いつからそんなに賢くなったの？",
+      "note": "元の形: When did you／聞こえ方: ウェン ディジュ（didとyouがつながる）／使う場面: 驚きや冗談まじりの質問"
+     },
+     {
+      "sp": 1,
+      "en": "About three minutes ago. I'll forget it by morning, so write it down.",
+      "jp": "3分くらい前からさ。朝には忘れてるから、書き留めておいてくれ。"
+     },
+     {
+      "sp": 0,
+      "en": "Come here, Dad. Don't cry before tomorrow. Save some for the ceremony.",
+      "jp": "こっちに来て、お父さん。明日の前に泣かないで。式のために少し取っておいてね。"
+     }
+    ]
+   },
+   {
+    "t": "✉️ 016｜見つけた手紙：The Letter in the Book",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Daddy, I was cleaning the shelf, and a letter fell out of your old atlas.",
+      "jp": "ねえ、棚を掃除してたら、あなたの古い地図帳から手紙が落ちてきたの。"
+     },
+     {
+      "sp": 1,
+      "en": "Don't read that. Please, Nancy. Give it to me.",
+      "jp": "それは読まないで。頼むよ、ナンシー。こっちに渡して。"
+     },
+     {
+      "sp": 0,
+      "en": "It's from 1998. It's addressed to me, but it was never sent. Why?",
+      "jp": "1998年のよ。宛名は私なのに、一度も出されてない。どうして？"
+     },
+     {
+      "sp": 1,
+      "en": "I wrote it the night before I left for the army. You were just two.",
+      "jp": "軍隊に行く前の晩に書いたんだ。君はまだ2歳だった。"
+     },
+     {
+      "sp": 0,
+      "en": "It says, I'm sorry I won't see you walk. You saw me walk. You were there.",
+      "jp": "「君が歩くのを見られなくてごめん」って書いてある。見てたじゃない。ちゃんといたわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I came home early. I never changed the letter. I was too embarrassed to throw it away.",
+      "jp": "早く帰れたんだ。手紙は書き直さなかった。恥ずかしくて捨てることもできなかったんだよ。",
+      "note": "元の形: too embarrassed／聞こえ方: トゥー インバレスト／使う場面: 恥ずかしくて何かできなかったと言うとき"
+     },
+     {
+      "sp": 0,
+      "en": "Twenty-eight years in a book. And you never told me.",
+      "jp": "28年も本の中に。しかも一度も話してくれなかったのね。"
+     },
+     {
+      "sp": 1,
+      "en": "Some things are easier to write than to say. Can you keep it?",
+      "jp": "言うより書くほうが楽なことってあるんだ。それ、持っていてくれるかい？"
+     },
+     {
+      "sp": 0,
+      "en": "I'll keep it. And now I'll write you one back. You're going to read it out loud.",
+      "jp": "取っておくわ。それで今度は私が返事を書く。あなたは声に出して読むのよ。"
+     }
+    ]
+   },
+   {
+    "t": "✈️ 017｜遠距離の終わり：Long Distance Ends",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Four hundred and twelve days. I counted. And tonight you're standing at my gate.",
+      "jp": "412日。数えてたの。それで今夜、あなたが私の搭乗口に立ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "I quit my job in Seattle on Friday. I got a transfer to the Boston office.",
+      "jp": "金曜日にシアトルの仕事を辞めたんだ。ボストンの支社への異動が決まった。"
+     },
+     {
+      "sp": 0,
+      "en": "You didn't tell me! I was about to call you and say I wanted to stop.",
+      "jp": "言ってくれなかったじゃない！ 私、もう終わりにしたいって電話しようとしてたのよ。",
+      "note": "元の形: about to／聞こえ方: アバウトゥ／使う場面: まさにこれから何かをするとき"
+     },
+     {
+      "sp": 1,
+      "en": "I know. Your last message sounded tired. So I got on a plane instead of a phone call.",
+      "jp": "わかってる。最後のメッセージが疲れた感じだったから。電話じゃなくて飛行機に乗ることにしたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "I wasn't tired of you. I was tired of saying goodnight to a screen.",
+      "jp": "あなたに疲れたんじゃないの。画面におやすみを言うのに疲れたのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then no more screens. I found a place ten minutes from your school.",
+      "jp": "じゃあもう画面はなしだ。君の学校から10分の部屋を見つけたよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Ten minutes? Carlos, that's crazy. That's too close.",
+      "jp": "10分？ カルロス、それはおかしいわ。近すぎる。"
+     },
+     {
+      "sp": 1,
+      "en": "Too close? After four hundred and twelve days?",
+      "jp": "近すぎる？ 412日もたったあとで？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm joking. Kiss me before they call my flight. I'll cancel it.",
+      "jp": "冗談よ。搭乗案内が流れる前にキスして。この便はキャンセルするから。"
+     }
+    ]
+   },
+   {
+    "t": "🔧 018｜やり直したい：Let Me Try Again",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Why is my bike in the middle of the hallway? And why does it have new brakes?",
+      "jp": "どうして私の自転車が廊下の真ん中にあるの？ しかも新しいブレーキがついてる。"
+     },
+     {
+      "sp": 1,
+      "en": "I fixed it. You said the old ones squeaked, and I said I'd do it. In May.",
+      "jp": "直したんだ。前のブレーキがきしむって言ってたのに、僕は直すと言った。5月にね。"
+     },
+     {
+      "sp": 0,
+      "en": "It's October. We broke up in July.",
+      "jp": "今は10月よ。私たちは7月に別れたのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I'm a slow man. But I'm done making promises I don't keep.",
+      "jp": "わかってる。僕は遅い男なんだ。でももう、守らない約束はしない。",
+      "note": "元の形: promises that I don't keep／聞こえ方: プロミセズ アイ ドンキープ（thatを省略）／使う場面: 関係代名詞 that を省くくだけた言い方"
+     },
+     {
+      "sp": 0,
+      "en": "Brakes don't fix what happened, Ryan. You stopped listening to me.",
+      "jp": "ブレーキを直しても、起きたことは直らないわ、ライアン。あなたは私の話を聞かなくなったのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "You're right. So here's me, listening. Tell me everything I missed.",
+      "jp": "その通りだ。だから今、聞いてるよ。僕が聞き逃したことを全部話して。"
+     },
+     {
+      "sp": 0,
+      "en": "That could take hours.",
+      "jp": "何時間もかかるかもしれないわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I cleared my whole Sunday. I even turned my phone off.",
+      "jp": "日曜日は丸ごと空けた。スマホの電源も切ったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Start the kettle. And first, ring the bell on the bike to make sure it works.",
+      "jp": "わかった。お湯を沸かして。それと、まず自転車のベルを鳴らして、ちゃんと動くか確かめてね。"
+     }
+    ]
+   },
+   {
+    "t": "📷 019｜古いフィルム：The Unfinished Roll",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I found a camera in the attic. There's still film inside, twelve shots left.",
+      "jp": "屋根裏でカメラを見つけたの。まだフィルムが入ってて、残り12枚よ。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the camera from our trip to Lisbon. I forgot it existed.",
+      "jp": "それ、リスボン旅行のときのカメラだ。存在を忘れてたよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I develop it? It's been nine years. They might be ruined.",
+      "jp": "現像してみる？ 9年もたってるのよ。ダメになってるかも。"
+     },
+     {
+      "sp": 1,
+      "en": "Or they might be perfect. Honestly, I'm afraid to see us that happy.",
+      "jp": "それとも完璧かもしれない。正直、あの頃の幸せそうな僕らを見るのが怖いんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm afraid too. But I'm more afraid of never knowing.",
+      "jp": "私も怖いわ。でも、一生知らないままのほうがもっと怖い。"
+     },
+     {
+      "sp": 1,
+      "en": "Then let's do it together. Meet me at the shop on Monday, at noon.",
+      "jp": "じゃあ一緒にやろう。月曜のお昼に、あの店で会おう。",
+      "note": "元の形: let us／聞こえ方: レッツ／使う場面: 一緒に行動しようと誘うとき"
+     },
+     {
+      "sp": 0,
+      "en": "Together? We haven't been in the same room since the divorce.",
+      "jp": "一緒に？ 離婚してから同じ部屋にいたことなんてないのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. But this roll has been waiting nine years. It deserves two people.",
+      "jp": "わかってる。でもこのフィルムは9年も待ってたんだ。ふたりで開けるに値するよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Fine. Monday at noon. If the photos are bad, you're buying lunch.",
+      "jp": "いいわ。月曜のお昼ね。写真がひどかったら、お昼はあなたのおごりよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎄 020｜クリスマスの電話：One Call on Christmas Eve",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? Jason? It's Christmas Eve. It's almost midnight. Is everything okay?",
+      "jp": "もしもし？ ジェイソン？ クリスマスイブよ。もうすぐ真夜中。何かあったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Everything's fine. I just walked past the little cafe where we had our first date.",
+      "jp": "大丈夫だよ。ただ、僕らが初デートをしたあの小さなカフェの前を通りかかったんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "The one with the broken piano? They closed it down last spring.",
+      "jp": "壊れたピアノがあったところ？ 去年の春に閉店したわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I saw. There's a sign in the window now. For sale. And I thought of you.",
+      "jp": "見たよ。窓に看板が出てた。売り出し中って。それで君のことを思い出したんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "You called me at midnight to talk about a building?",
+      "jp": "真夜中に電話してきたのは、建物の話をするため？"
+     },
+     {
+      "sp": 1,
+      "en": "No. I called because for two years I've wanted to hear your voice, and tonight I ran out of reasons not to.",
+      "jp": "違う。2年間ずっと君の声が聞きたくて、今夜やっと、かけない理由がなくなったからだ。",
+      "note": "元の形: ran out of／聞こえ方: ラナウダヴ（つながって一語のように聞こえる）／使う場面: 何かを使い果たしたと言うとき"
+     },
+     {
+      "sp": 0,
+      "en": "That's the nicest thing you've said to me in years.",
+      "jp": "ここ何年かで、あなたが言ってくれた一番素敵な言葉ね。"
+     },
+     {
+      "sp": 1,
+      "en": "Are you at your mother's house? I can hear the carols.",
+      "jp": "お母さんの家にいるの？ 聖歌が聞こえるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. And Mom just said, Is that Jason? Merry Christmas, honey. Come by tomorrow.",
+      "jp": "ええ。それで母が今、「ジェイソンなの？ メリークリスマス。明日おいで」って言ったわ。"
+     }
+    ]
+   }
+  ]
+ }
+]

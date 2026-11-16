@@ -1,0 +1,518 @@
+[
+ {
+  "id": "drama04",
+  "ic": "🏢",
+  "n": "ドラマ100・職場の人間ドラマ",
+  "hint": "Ten short two-person workplace dramas about promotions, rivals, mistakes, resignations and the quiet moments that change a career.",
+  "level": 3,
+  "keywords": "workplace, career, drama",
+  "d": [
+   {
+    "t": "🏢 031｜昇進の裏側：Behind the Promotion",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Daniel, I need to tell you something before the announcement at three. They picked me for the regional manager job.",
+      "jp": "ダニエル、三時の発表の前に言っておきたいことがあるの。地域マネージャーに、私が選ばれたわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh. Well, congratulations. I mean it. I just didn't think it'd happen this fast.",
+      "jp": "そうか。おめでとう、本心だよ。ただ、こんなに早いとは思ってなかった。"
+     },
+     {
+      "sp": 0,
+      "en": "You're upset. You've been staring at that spreadsheet for ten minutes without scrolling.",
+      "jp": "ショックなのね。そのスプレッドシート、十分間スクロールもせずに見つめてるわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I trained you on the Harper account six years ago, Maya. I'm allowed to be a little stunned.",
+      "jp": "六年前、ハーパー社の担当を教えたのは僕だぞ、マヤ。少しぐらい呆然としてもいいだろ。",
+      "note": "元の形: allowed to／聞こえ方: allowed ta／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "That's exactly why I asked them to keep you on my team. I want you as my deputy.",
+      "jp": "だからこそ、あなたを私のチームに残してほしいと頼んだの。副官になってほしい。"
+     },
+     {
+      "sp": 1,
+      "en": "You asked for me? Before you even told me you got the job?",
+      "jp": "僕を指名したって？ 昇進のことを僕に話す前に？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm gonna need someone who'll tell me when I'm wrong. You've never once been shy about that.",
+      "jp": "間違ってるときに指摘してくれる人が必要なの。あなたはそういうの、一度も遠慮したことがないでしょ。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Fine. But Monday morning, I'm telling you your forecast is a mess. Deal?",
+      "jp": "分かった。でも月曜の朝、君の予測は穴だらけだって言うからな。いいか？"
+     },
+     {
+      "sp": 0,
+      "en": "Deal. And Daniel? Thanks for not walking out the door.",
+      "jp": "約束ね。それとダニエル、席を立って出て行かないでくれてありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🤝 032｜ライバルの握手：The Rival's Handshake",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Priya, the client just called. They want our campaign, not yours. Sorry, but I thought you should hear it from me.",
+      "jp": "プリヤ、クライアントから電話があったの。選ばれたのはうちの案で、あなたのじゃない。悪いけど、私から直接伝えたくて。"
+     },
+     {
+      "sp": 1,
+      "en": "Wow. Three months of work, and you walk over here to tell me yourself? That's either very kind or very smug.",
+      "jp": "へえ。三か月分の仕事なのに、わざわざ自分で伝えに来たの？ すごく親切か、すごく嫌味かのどっちかね。"
+     },
+     {
+      "sp": 0,
+      "en": "Honestly? A little of both. I've lost to you four times in a row, so this feels strange.",
+      "jp": "正直？ 半々かな。四回連続で君に負けてきたから、変な気分なんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Four times. You kept count. That's very you, Tom.",
+      "jp": "四回ね。数えてたんだ。いかにもあなたらしいわ、トム。"
+     },
+     {
+      "sp": 0,
+      "en": "Your slogan was better, though. The client even said so. They just needed a cheaper budget.",
+      "jp": "でも君のスローガンの方が良かった。クライアントもそう言ってた。ただ予算が安い方が必要だっただけで。"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'm gonna steal your budget spreadsheet and win next time. You wouldn't mind, right?",
+      "jp": "じゃあ次は、あなたの予算表を盗んで勝つわ。構わないでしょ？",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Take it. Take the whole folder. Just promise you'll let me read your slogans first.",
+      "jp": "持っていっていいよ。フォルダごとでも。その代わり、君のスローガンを先に読ませてくれ。"
+     },
+     {
+      "sp": 1,
+      "en": "Deal. Maybe we should pitch together next quarter. Two rivals, one team.",
+      "jp": "決まりね。次の四半期は一緒にプレゼンしようか。ライバル二人、一つのチーム。"
+     }
+    ]
+   },
+   {
+    "t": "💊 033｜ミスの責任：Whose Mistake Is It?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Greg, I found it. The wrong dose on bed twelve. It was my label, and I didn't double-check it.",
+      "jp": "グレッグ、見つけました。十二番ベッドの薬の量が違っていたんです。私のラベルで、再確認もしていませんでした。"
+     },
+     {
+      "sp": 1,
+      "en": "Hannah, sit down. Has the patient been told? Is he okay?",
+      "jp": "ハンナ、座って。患者さんには伝えたか？ 無事なのか？"
+     },
+     {
+      "sp": 0,
+      "en": "The nurse caught it before the second dose. He's fine. But I've been awake since four a.m., thinking about what could've happened.",
+      "jp": "二回目の投与の前に看護師さんが気づいてくれました。無事です。でも午前四時から眠れなくて、何が起きていたかと考えてしまって。",
+      "note": "元の形: could have／聞こえ方: could've／使う場面: 仮定の話をするとき"
+     },
+     {
+      "sp": 1,
+      "en": "Listen. Our system let you print that label with no second check. That's my failure, not just yours.",
+      "jp": "聞いてくれ。うちのシステムは二重確認なしでそのラベルを印刷できた。それは君だけじゃなく、僕の落ち度でもある。"
+     },
+     {
+      "sp": 0,
+      "en": "But the report says my name. I should resign. I don't deserve to work here after this.",
+      "jp": "でも報告書には私の名前が書いてあります。辞めるべきです。今回のことで、ここで働く資格なんてありません。"
+     },
+     {
+      "sp": 1,
+      "en": "No. You came to me before anyone found out. That's the hardest thing in this job, and you did it.",
+      "jp": "だめだ。誰かに見つかる前に自分から来てくれた。それがこの仕事でいちばん難しいことで、君はやり遂げたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "So what happens now?",
+      "jp": "じゃあ、これからどうなるんですか。"
+     },
+     {
+      "sp": 1,
+      "en": "We write the report together. We add a second check to every label. And your name goes on the fix, too.",
+      "jp": "一緒に報告書を書く。全部のラベルに二重確認を足す。そしてその改善策にも、君の名前を載せよう。"
+     }
+    ]
+   },
+   {
+    "t": "📨 034｜退職届：The Resignation Letter",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mark, do you have five minutes? I've got something I need to hand you.",
+      "jp": "マーク、五分いいですか？ お渡ししたいものがあるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Kelly, you've never asked for five minutes in your life. You just walk in. What's wrong?",
+      "jp": "ケリー、君が五分くれなんて言ったこと、今まで一度もないぞ。いつもずかずか入ってくるのに。何かあったのか？"
+     },
+     {
+      "sp": 0,
+      "en": "It's my resignation. Effective the thirtieth. I'm moving back to Portland to take care of my dad.",
+      "jp": "辞表です。三十日付で。父の世話をするために、ポートランドに戻ります。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh. I'm sorry about your dad. Have you told the team?",
+      "jp": "そうか。お父さんのこと、気の毒に。チームには話したのか？"
+     },
+     {
+      "sp": 0,
+      "en": "Not yet. I wanted you to hear it first. You gave me this job when nobody else would hire a self-taught coder.",
+      "jp": "まだです。最初にマークさんに聞いてほしくて。独学のプログラマーを誰も雇ってくれなかったときに、この仕事をくれたのはあなたでした。"
+     },
+     {
+      "sp": 1,
+      "en": "And you repaid me by rebuilding our whole payment system. Honestly, I'm gonna miss you more than I can say.",
+      "jp": "そして君は恩返しに、うちの決済システムを丸ごと作り直してくれた。正直、言葉にできないくらい寂しくなるよ。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Please don't. I'll cry, and I look terrible when I cry.",
+      "jp": "やめてください。泣いちゃうし、泣くとひどい顔になるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Tell you what. Work remotely from Portland. Half time. The door stays open.",
+      "jp": "こうしよう。ポートランドからリモートで働いてくれ。半分の時間でいい。ドアはずっと開けておく。"
+     },
+     {
+      "sp": 0,
+      "en": "Mark... I didn't know I could ask for that. Thank you.",
+      "jp": "マーク……そんなお願いができるなんて、思ってもみませんでした。ありがとうございます。"
+     }
+    ]
+   },
+   {
+    "t": "🔔 035｜内部告発の前夜：Before the Whistle",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ben, I can't sleep. I photographed the inspection logs again. The numbers don't match the shipment dates.",
+      "jp": "ベン、眠れないの。検査記録をまた撮影したわ。数字が出荷日と合わないのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Nora, how many batches are we talking about? Give me the real number.",
+      "jp": "ノラ、何ロット分の話なんだ？ 本当の数字を教えてくれ。"
+     },
+     {
+      "sp": 0,
+      "en": "Forty-one since March. Cans that went out with the cooling test skipped.",
+      "jp": "三月から四十一ロット。冷却テストを飛ばしたまま出荷された缶詰よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Forty-one. And our boss knows? Because if he knows, this isn't a mistake anymore.",
+      "jp": "四十一か。しかも上司は知ってるのか？ 知ってるなら、もうミスじゃなくなるぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "He signed the waiver himself. I saw the signature. I'm gonna take this to the state food agency tomorrow.",
+      "jp": "本人が免除書類にサインしてた。この目で見たの。明日、州の食品当局に持っていくつもり。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "You know what happens to people who do that. You could lose your job. Your whole career.",
+      "jp": "そんなことをした人間がどうなるか、分かってるだろ。仕事を失うかもしれない。キャリアが全部だめになるかも。"
+     },
+     {
+      "sp": 0,
+      "en": "I know. But my niece eats those peas every Sunday. I can't look at her and say nothing.",
+      "jp": "分かってる。でも姪っ子は毎週日曜にあのエンドウ豆を食べるの。あの子の顔を見て、黙ってなんかいられない。"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'm coming with you. Two witnesses are better than one. I'll bring my own copies.",
+      "jp": "なら僕も一緒に行く。証人は二人の方が一人より強い。自分の分のコピーも持っていくよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Ben, are you sure?",
+      "jp": "ベン、本当にいいの？"
+     },
+     {
+      "sp": 1,
+      "en": "No. But I'd rather be scared and right than comfortable and quiet.",
+      "jp": "いや。でも、安全で黙っているより、怖くても正しい方を選びたい。"
+     }
+    ]
+   },
+   {
+    "t": "✈️ 036｜新人の初日：The Rookie's Rescue",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Josh, you're shaking. Breathe. The plane's not going to leave without its bags, no matter how fast you load them.",
+      "jp": "ジョシュ、手が震えてるわよ。深呼吸して。どんなに急いで積んでも、荷物なしで飛行機は出ないんだから。"
+     },
+     {
+      "sp": 1,
+      "en": "Sorry, Carla. It's my first day, and the sign says thirty-minute turnaround. I'm so slow.",
+      "jp": "すみません、カーラさん。初日なのに、看板には折り返し三十分って書いてあって。僕、遅すぎますよね。"
+     },
+     {
+      "sp": 0,
+      "en": "I put six months of bag-loading on my first day's resume, kid. I dropped a suitcase down the belt and it opened in front of a whole family.",
+      "jp": "私なんて初日に、スーツケースをベルトから落として、家族連れの目の前で開いちゃったのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Seriously? What did you do?",
+      "jp": "本当ですか？ どうしたんです？"
+     },
+     {
+      "sp": 0,
+      "en": "I knelt down and helped them pick up every sock. Then I got a thank-you card from the mom. It's still on my locker.",
+      "jp": "しゃがんで靴下を全部一緒に拾ったわ。そのあとお母さんからお礼のカードが来たの。今もロッカーに貼ってある。"
+     },
+     {
+      "sp": 1,
+      "en": "So being slow isn't the problem. Being careful is the job.",
+      "jp": "遅いことが問題じゃなくて、丁寧にやるのが仕事ってことですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Speed comes in about three weeks. Now, lemme show you how to stack the heavy ones first.",
+      "jp": "その通り。スピードは三週間もすれば付いてくる。さあ、重いものを先に積むコツを見せてあげる。",
+      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Can I ask a weird question? Do you ever get tired of seeing everyone else leave?",
+      "jp": "ありがとうございます。変な質問いいですか？ 他の人がみんな飛び立っていくのを見て、疲れたりしません？"
+     },
+     {
+      "sp": 0,
+      "en": "Every day. Then I remember I'm the reason they leave with their luggage. Come on, gate seven's waiting.",
+      "jp": "毎日ね。でも、荷物を持って飛び立てるのは私たちのおかげだって思い出すの。さあ、七番ゲートが待ってるわ。"
+     }
+    ]
+   },
+   {
+    "t": "📰 037｜締め切り前夜：Midnight Deadline",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Sam, the story is due at midnight, and it's eleven-forty. Where's the mayor's quote?",
+      "jp": "サム、記事の締め切りは零時で、今は十一時四十分よ。市長のコメントはどこ？"
+     },
+     {
+      "sp": 1,
+      "en": "Elena, he won't call me back. I've left four messages and knocked on his door twice.",
+      "jp": "エレナ、市長は折り返してくれないんです。留守電を四回入れて、玄関も二回ノックしました。"
+     },
+     {
+      "sp": 0,
+      "en": "Then print what we have. The permit records, the emails, the photos. We don't need his quote to prove it.",
+      "jp": "じゃあ、手元にあるものを載せましょう。許可証の記録、メール、写真。裏付けに彼のコメントはいらない。"
+     },
+     {
+      "sp": 1,
+      "en": "But the paper's rule says we have to give him a chance to answer. If we skip it, we could get sued.",
+      "jp": "でも新聞の規則では、反論の機会を与えなきゃいけないんですよね。飛ばしたら訴えられるかも。"
+     },
+     {
+      "sp": 0,
+      "en": "We gave him the chance. Four times. Write that line: The mayor did not respond to four requests for comment.",
+      "jp": "機会は与えた、四回も。その一文を書いて。市長は四度のコメント要請に応じなかった、と。"
+     },
+     {
+      "sp": 1,
+      "en": "That's gonna hit hard. Okay. Typing it now.",
+      "jp": "それは強烈ですね。分かりました、今打ちます。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "And Sam, breathe. Your hands are shaking over the keys.",
+      "jp": "それとサム、息をして。キーの上で手が震えてるわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Twelve years you've been doing this. Does it ever get easier?",
+      "jp": "エレナさんは十二年もやってますよね。楽になることってあるんですか？"
+     },
+     {
+      "sp": 0,
+      "en": "No. You just get better at being scared. Send it. Eleven fifty-eight, you made it.",
+      "jp": "ないわ。怖さに慣れるのが上手になるだけ。送って。十一時五十八分、間に合ったわね。"
+     }
+    ]
+   },
+   {
+    "t": "🏭 038｜リストラの噂：The Layoff Rumor",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Carlos, did you hear? They're saying the second shift is getting cut. Eighty people.",
+      "jp": "カルロス、聞いた？ 二交代目が削減されるって。八十人も。"
+     },
+     {
+      "sp": 1,
+      "en": "I heard it too, Wendy. But rumors in this plant spread faster than the forklifts. Who told you?",
+      "jp": "僕も聞いたよ、ウェンディ。でもこの工場の噂はフォークリフトより速く広まる。誰が言ってた？"
+     },
+     {
+      "sp": 0,
+      "en": "The guy from payroll. He saw a list. He said my name was on page two.",
+      "jp": "経理の人よ。リストを見たって。二ページ目に私の名前があったって言うの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, that's not nothing. But I work in HR, and I haven't seen any list. Don't panic yet.",
+      "jp": "まあ、ただの噂とは言えないな。でも僕は人事にいるけど、そんなリストは見てない。まだ慌てないで。",
+      "note": "元の形: That's not nothing／聞こえ方: ザッツ・ナット・ナッシング／使う場面: 小さくない・無視できないと言う"
+     },
+     {
+      "sp": 0,
+      "en": "You're in HR? Then you'd know. Carlos, please. I've got two kids and a mortgage.",
+      "jp": "人事にいるの？ じゃあ知ってるはずでしょ。お願い、カルロス。子どもが二人いて、住宅ローンもあるのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm not allowed to share anything. But I can tell you this: nobody's signed anything. Nobody.",
+      "jp": "何も話しちゃいけないんだ。でもこれだけは言える。まだ誰もサインしてない。誰ひとりね。"
+     },
+     {
+      "sp": 0,
+      "en": "That's not the same as no.",
+      "jp": "それは、ないって意味とは違うわよね。"
+     },
+     {
+      "sp": 1,
+      "en": "No, it isn't. So update your resume this weekend, just in case. And I'll tell you the second I can.",
+      "jp": "そうだね、違う。だから念のため、週末に履歴書を更新しておいて。話せるようになったら、すぐ伝える。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you for not lying to me. That's more than most managers would do.",
+      "jp": "嘘をつかないでくれてありがとう。たいていの管理職より、ずっと誠実よ。"
+     }
+    ]
+   },
+   {
+    "t": "🎮 039｜同僚の裏切り：The Stolen Idea",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Alex, I saw the pitch deck for the new puzzle game. Slide six is my idea. My exact sketch, my exact levels.",
+      "jp": "アレックス、新作パズルゲームの企画書を見たわ。六枚目、私のアイデアよ。私のスケッチ、私のステージそのまま。"
+     },
+     {
+      "sp": 1,
+      "en": "Jess, listen. I can explain. I was gonna put your name on it. I just ran out of time before the meeting.",
+      "jp": "ジェス、聞いてくれ。説明できる。君の名前を入れるつもりだったんだ。会議の前に時間がなくなっただけで。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "You presented it as yours to the director. For two hours. And I sat there next to you, smiling.",
+      "jp": "あなたはディレクターに自分の案として発表した。二時間も。私は隣に座って、ずっと笑ってたのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I panicked. My review is next month, and I'm the one who hasn't shipped anything this year.",
+      "jp": "分かってる。焦ったんだ。来月は僕の評価面談で、今年は僕だけ何もリリースしてない。"
+     },
+     {
+      "sp": 0,
+      "en": "So you used me. Do you understand how that feels after I helped you debug your last project all night?",
+      "jp": "つまり私を利用したのね。あなたの前のプロジェクトのバグ取りを徹夜で手伝ったあとで、これがどんな気持ちか分かる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yeah. Terrible. I'll go to the director right now and tell him the truth.",
+      "jp": "ああ、最低だ。今すぐディレクターのところに行って、本当のことを話す。"
+     },
+     {
+      "sp": 0,
+      "en": "I don't want an apology to the director. I want a credit line with my name, and I want you to say it out loud in front of the team.",
+      "jp": "ディレクターへの謝罪なんかいらない。クレジットに私の名前を入れて、チームの前で自分の口から言って。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. Tomorrow's stand-up. And Jess, I'm really sorry.",
+      "jp": "分かった。明日の朝会で。それとジェス、本当にごめん。"
+     },
+     {
+      "sp": 0,
+      "en": "Say it tomorrow. Then maybe I'll believe it.",
+      "jp": "明日言って。そうしたら信じるかもしれない。"
+     }
+    ]
+   },
+   {
+    "t": "🍎 040｜感謝の言葉：A Word of Thanks",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Walker, I heard Friday's your last day after thirty-one years. I can't let you leave without saying something.",
+      "jp": "ウォーカーさん、金曜が三十一年目の最後の日だと聞きました。何か言わずにお別れなんてできません。"
+     },
+     {
+      "sp": 1,
+      "en": "Ms. Lopez, you don't have to do that. I just mop floors. Nobody needs a speech for that.",
+      "jp": "ロペス先生、そんなことしなくていいんですよ。私はただ床を拭いてるだけです。そんなことで挨拶なんか。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you remember my first week here? I was crying in classroom twelve after a rough lesson, and you brought me a cup of tea.",
+      "jp": "私が赴任した最初の週を覚えてますか？ 十二教室で、授業がうまくいかなくて泣いていたら、お茶を持ってきてくれましたよね。"
+     },
+     {
+      "sp": 1,
+      "en": "I remember. You'd run out of chalk, too. I left a box on your desk.",
+      "jp": "覚えてますよ。チョークも切らしてましたね。机に一箱置いておきました。"
+     },
+     {
+      "sp": 0,
+      "en": "That box is still in my drawer. I never used the last piece. It reminds me that someone notices.",
+      "jp": "その箱、まだ引き出しにあるんです。最後の一本は使ってません。誰かが気づいてくれてるって思い出させてくれるから。"
+     },
+     {
+      "sp": 1,
+      "en": "Well. I didn't know that. I'm not very good at this kind of thing.",
+      "jp": "そうですか。知りませんでした。こういうの、あまり得意じゃなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "Then let me do it for both of us. Thank you. For the clean halls, the warm tea, and every single morning you said hello to the kids by name.",
+      "jp": "なら、二人分、私が言わせてください。ありがとう。きれいな廊下も、温かいお茶も、毎朝子どもたちを名前で呼んで挨拶してくれたことも。",
+      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Ms. Lopez, thirty-one years, and nobody ever said that. I think I need to sit down.",
+      "jp": "ロペス先生、三十一年間、誰もそんなこと言ってくれませんでした。ちょっと座らせてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Take the chair. I'll go get the tea this time.",
+      "jp": "椅子にどうぞ。今度は私がお茶を持ってきます。"
+     }
+    ]
+   }
+  ]
+ }
+]

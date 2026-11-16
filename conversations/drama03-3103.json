@@ -1,0 +1,567 @@
+[
+ {
+  "id": "drama03",
+  "ic": "🕵️",
+  "n": "ドラマ100・ミステリー・秘密",
+  "hint": "Ten short two-person mystery dramas about missing objects, broken alibis, hidden letters, strange calls and secrets that change everything.",
+  "level": 4,
+  "keywords": "mystery, secret, drama",
+  "d": [
+   {
+    "t": "🗝️ 021｜消えた鍵：The Missing Key",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Tom, the spare key to room 412 is gone. It was in the safe at nine last night.",
+      "jp": "トム、412号室の合鍵がないの。昨夜九時には金庫にあったのに。"
+     },
+     {
+      "sp": 1,
+      "en": "That's strange. I checked the safe at midnight, and it was still there.",
+      "jp": "おかしいですね。零時に金庫を確認したときは、まだありましたよ。"
+     },
+     {
+      "sp": 0,
+      "en": "So somebody took it between midnight and six. Who knows the code?",
+      "jp": "じゃあ零時から六時の間に誰かが持ち出したのね。暗証番号を知ってるのは誰?"
+     },
+     {
+      "sp": 1,
+      "en": "Just you, me, and Mr. Hayes from security.",
+      "jp": "支配人と僕、それに警備のヘイズさんだけです。"
+     },
+     {
+      "sp": 0,
+      "en": "Mr. Hayes is on vacation in Spain. I called him this morning.",
+      "jp": "ヘイズさんならスペインで休暇中よ。今朝電話したわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then maybe you moved it and just forgot?",
+      "jp": "じゃあ、支配人が動かして忘れてるだけでは?"
+     },
+     {
+      "sp": 0,
+      "en": "I don't forget keys, Tom. Look at the safe. There are fresh scratches around the lock.",
+      "jp": "私は鍵は忘れないわ、トム。金庫を見て。鍵穴のまわりに新しい傷がある。"
+     },
+     {
+      "sp": 1,
+      "en": "Scratches? So whoever did this didn't even know the code.",
+      "jp": "傷、ですか。じゃあ犯人は暗証番号すら知らなかったんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. And the guest in 412 checked out an hour ago. We've gotta find out who he really is.",
+      "jp": "そうよ。しかも412のお客は一時間前に出ていった。正体を突き止めなきゃ。",
+      "note": "元の形: got to／聞こえ方: gotta／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Claire, he lost his own key twice this week. Twice! He wasn't losing them. He was collecting them.",
+      "jp": "支配人、あの人、今週自分の鍵を二回もなくしてるんです。二回ですよ。なくしてたんじゃない。集めてたんだ。"
+     }
+    ]
+   },
+   {
+    "t": "🕵️ 022｜崩れたアリバイ：The Perfect Alibi",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Doyle, you told us you were at the cinema from eight to ten on Friday.",
+      "jp": "ドイルさん、金曜の八時から十時まで映画館にいたとおっしゃいましたね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's right, Detective. I saw the whole movie. The one about the submarine.",
+      "jp": "その通りです、刑事さん。映画は最後まで見ました。潜水艦の話のやつです。"
+     },
+     {
+      "sp": 0,
+      "en": "Funny. The cinema was closed that night because of a power failure.",
+      "jp": "妙ね。あの夜、映画館は停電で休館だったのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, uh, I meant I went to the one on Fifth Street, not the one on Main.",
+      "jp": "ああ、その、メイン通りじゃなくて、五番街の映画館のことです。"
+     },
+     {
+      "sp": 0,
+      "en": "There's no cinema on Fifth Street, Mr. Doyle. It's a bakery now.",
+      "jp": "五番街に映画館はないわ、ドイルさん。今はパン屋よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, okay. I'm gonna be honest. I wasn't at the cinema, but I never touched that safe, I swear.",
+      "jp": "わかりました、正直に言います。映画館にはいませんでした。でも、その金庫には触ってません、誓います。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Funny. I only said the shop was robbed. I never said anything about a safe.",
+      "jp": "おかしいわね。私は店が荒らされたとしか言ってない。金庫の話なんて一言もしてないわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I... I just assumed. Everybody's talking about it.",
+      "jp": "私は、ただ、そう思っただけで。みんな噂してますし。"
+     },
+     {
+      "sp": 0,
+      "en": "Not yet they aren't. The owner found it twenty minutes ago, and you're the first person we've told.",
+      "jp": "まだよ。店主が見つけたのは二十分前で、話したのはあなたが最初なの。"
+     }
+    ]
+   },
+   {
+    "t": "✉️ 023｜屋根裏の手紙：The Letter in the Attic",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, look what I found behind the old trunk in the attic. A letter, still sealed.",
+      "jp": "お父さん、屋根裏の古いトランクの裏でこれを見つけたの。まだ封がされたままの手紙よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Put it down, Emma. That's not yours to open.",
+      "jp": "置きなさい、エマ。それはお前が開けるものじゃない。"
+     },
+     {
+      "sp": 0,
+      "en": "It's addressed to Grandma, dated June 1974. Fifty years, and she never got it?",
+      "jp": "おばあちゃん宛てで、日付は一九七四年の六月。五十年も、おばあちゃんは受け取ってなかったの?"
+     },
+     {
+      "sp": 1,
+      "en": "Your grandfather hid it, I think. They had a terrible fight that summer.",
+      "jp": "おじいさんが隠したんだと思う。あの夏、二人はひどい喧嘩をしたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Who's it from? There's no name, just a drawing of a little lighthouse.",
+      "jp": "誰からなの?名前はなくて、小さな灯台の絵だけ。"
+     },
+     {
+      "sp": 1,
+      "en": "A lighthouse? ...Let me see that.",
+      "jp": "灯台?ちょっと見せてくれ。",
+      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Dad, your hands are shaking. What is it?",
+      "jp": "お父さん、手が震えてるわよ。どうしたの?"
+     },
+     {
+      "sp": 1,
+      "en": "Your grandma used to draw that same lighthouse on every birthday card she gave me.",
+      "jp": "おばあちゃんは、僕にくれる誕生日カードに、いつもこれと同じ灯台を描いてたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "So she wrote it herself? To who?",
+      "jp": "じゃあ自分で書いたの?誰に?"
+     },
+     {
+      "sp": 1,
+      "en": "Not to anyone. Look at the envelope again. It says, 'To my future son.' She wrote it before I was born.",
+      "jp": "誰かにじゃない。もう一度封筒を見てごらん。『未来の息子へ』と書いてある。僕が生まれる前に書いたんだ。"
+     }
+    ]
+   },
+   {
+    "t": "📞 024｜知らない番号：Unknown Caller",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ben, a number I don't know has called me nine times since midnight.",
+      "jp": "ベン、零時から知らない番号に九回も電話されてるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Did they leave a voicemail?",
+      "jp": "留守電は入ってた?"
+     },
+     {
+      "sp": 0,
+      "en": "One. It's just breathing, and then a woman's voice says, 'Don't go home tonight.'",
+      "jp": "一件だけ。息づかいがして、そのあと女の人の声が『今夜は家に帰らないで』って。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, that's creepy. Play it for me.",
+      "jp": "それは不気味だな。聞かせて。"
+     },
+     {
+      "sp": 0,
+      "en": "Hear that? Listen to the background. There's a church bell, and it's ringing eleven times.",
+      "jp": "ほら、背景を聞いて。教会の鐘が十一回鳴ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "Eleven o'clock. But it's almost two in the afternoon right now.",
+      "jp": "十一時か。でも今はもうすぐ午後二時だよ。"
+     },
+     {
+      "sp": 0,
+      "en": "So she called from a different time zone. Or she recorded it last night.",
+      "jp": "ってことは、別の時間帯から電話してきたのね。それか昨夜のうちに録音したか。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait. Check the area code on that number. It's the same as your sister's old apartment, isn't it?",
+      "jp": "待って。その番号の市外局番を見て。君のお姉さんの昔のアパートと同じじゃないか?"
+     },
+     {
+      "sp": 0,
+      "en": "It is. But Lily moved to Chicago in March... Ben, I think she's warning me about something.",
+      "jp": "そうよ。でもリリーは三月にシカゴへ引っ越したのに。ベン、お姉ちゃんが何か警告してるんだと思う。"
+     },
+     {
+      "sp": 1,
+      "en": "Then don't go home. I'm gonna drive over and check your door first.",
+      "jp": "じゃあ家には帰らないで。僕が先に君の家のドアを見に行ってくる。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🤫 025｜見てしまった秘密：What I Saw in the Parking Lot",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Jake, can I tell you something? You have to promise it stays between us.",
+      "jp": "ジェイク、ちょっと話していい?私たちだけの秘密にするって約束してね。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure, Mia. What's wrong? You look like you've seen a ghost.",
+      "jp": "もちろん、ミア。どうしたの?幽霊でも見たような顔してる。"
+     },
+     {
+      "sp": 0,
+      "en": "Last night I stayed late, and I saw Mr. Grant in the parking lot. He was putting boxes into his trunk.",
+      "jp": "昨夜残業してたら、駐車場でグラントさんを見たの。トランクに箱を積んでた。"
+     },
+     {
+      "sp": 1,
+      "en": "Boxes of what? Office supplies?",
+      "jp": "何の箱?事務用品?"
+     },
+     {
+      "sp": 0,
+      "en": "They said 'Property of Harbor Bank' on the side. Dozens of them.",
+      "jp": "横に『ハーバー銀行所有』って書いてあったの。何十個も。"
+     },
+     {
+      "sp": 1,
+      "en": "Harbor Bank? That's our biggest client. Why would our boss have their files?",
+      "jp": "ハーバー銀行?うちの一番の取引先じゃないか。なんで上司が先方の書類を?"
+     },
+     {
+      "sp": 0,
+      "en": "I don't know. And when he saw me, he smiled and said, 'Don't worry, I'm just taking out the trash.'",
+      "jp": "わからない。それに私に気づいたら、笑って『心配ないよ、ゴミを出してるだけだ』って。",
+      "note": "元の形: I don't know／聞こえ方: I dunno／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, that's weird, but you can't prove anything yet.",
+      "jp": "確かに変だけど、まだ何も証明できないよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I took a photo of his license plate. Should I send it to the auditors?",
+      "jp": "ナンバープレートを撮っておいたの。監査部に送るべきかな?"
+     },
+     {
+      "sp": 1,
+      "en": "Mia... Mr. Grant is standing right behind you.",
+      "jp": "ミア、グラントさんが君の真後ろに立ってる。"
+     }
+    ]
+   },
+   {
+    "t": "🏚️ 026｜家の中の違和感：Something Is Off",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Daniel, come here. Does the living room look different to you?",
+      "jp": "ダニエル、ちょっと来て。リビング、何か違って見えない?"
+     },
+     {
+      "sp": 1,
+      "en": "Different how? It looks the same to me.",
+      "jp": "どう違うの?僕には同じに見えるけど。"
+     },
+     {
+      "sp": 0,
+      "en": "The family photo on the shelf. It was on the left side this morning, and now it's on the right.",
+      "jp": "棚の家族写真よ。今朝は左側にあったのに、今は右側にあるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe the cleaner moved it. She came on Thursday.",
+      "jp": "掃除の人が動かしたんじゃない?木曜日に来てたし。"
+     },
+     {
+      "sp": 0,
+      "en": "She comes on Tuesdays. And look, the clock is ten minutes slow, but I set it last night.",
+      "jp": "来るのは火曜日よ。それに見て、時計が十分遅れてる。昨夜合わせたばかりなのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, now I'm kinda worried. Did you hear any noise last night?",
+      "jp": "さすがに僕もちょっと心配になってきた。昨夜、何か物音は聞いた?",
+      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Just the dog barking at about three. But he stopped suddenly, like someone gave him a treat.",
+      "jp": "午前三時ごろ犬が吠えたくらい。でも急に止まったの、誰かがおやつをあげたみたいに。"
+     },
+     {
+      "sp": 1,
+      "en": "Hold on. Where is the dog now?",
+      "jp": "待って。犬は今どこにいる?"
+     },
+     {
+      "sp": 0,
+      "en": "In the garden, I think. Why do you look so pale?",
+      "jp": "庭だと思うけど。どうしてそんなに青い顔をしてるの?"
+     },
+     {
+      "sp": 1,
+      "en": "Because I just found his bowl in the kitchen. It's full of food I never bought.",
+      "jp": "だって、台所で犬の皿を見つけたんだ。僕が買った覚えのない餌が山盛りになってる。"
+     }
+    ]
+   },
+   {
+    "t": "📚 027｜図書館の暗号：The Library Code",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Reed, I found something odd in this old book. Someone underlined random letters on page 42.",
+      "jp": "リードさん、この古い本に変なものを見つけました。42ページのあちこちの文字に下線が引いてあるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me see. Hmm, that's a cipher. Write down the letters in order.",
+      "jp": "どれどれ。ふむ、暗号だな。下線の文字を順番に書き出してごらん。",
+      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "T... H... E... K... E... Y... I... S... It spells 'The key is.' Then it stops.",
+      "jp": "T、H、E、K、E、Y、I、S。『鍵は』で終わってます。"
+     },
+     {
+      "sp": 1,
+      "en": "It must continue in another book. Which section did you find it in?",
+      "jp": "続きは別の本にあるんだろう。それはどの棚にあった?"
+     },
+     {
+      "sp": 0,
+      "en": "History, shelf nine. The next book is probably next to it.",
+      "jp": "歴史の棚の九番です。次の本はたぶんその隣ですよね。"
+     },
+     {
+      "sp": 1,
+      "en": "Try the one on the left. If I'm right, page 42 again.",
+      "jp": "左のを試してごらん。僕の読みが正しければ、また42ページだ。"
+     },
+     {
+      "sp": 0,
+      "en": "It works! 'Under the clock.' But there's no clock in the library.",
+      "jp": "当たりです!『時計の下』。でも図書館に時計なんてないですよ。"
+     },
+     {
+      "sp": 1,
+      "en": "There used to be one, a big brass clock, until the renovation in 1998.",
+      "jp": "昔はあったんだ。大きな真鍮の時計がね、一九九八年の改装までは。"
+     },
+     {
+      "sp": 0,
+      "en": "So where did it go?",
+      "jp": "じゃあどこへ行ったんですか?"
+     },
+     {
+      "sp": 1,
+      "en": "It's hanging in my office, Lena. I've been looking at it for twenty-five years, and I never knew.",
+      "jp": "僕の部屋に掛かってるよ、レナ。二十五年も眺めてきたのに、ずっと知らなかったんだ。"
+     }
+    ]
+   },
+   {
+    "t": "👛 028｜二つの財布：Two Wallets",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, why do you have two wallets? One brown, one black.",
+      "jp": "お父さん、どうして財布を二つ持ってるの?茶色と黒。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, that. The black one is old. I just keep it for luck.",
+      "jp": "ああ、それか。黒いのは古いやつだ。お守りみたいに持ってるだけさ。"
+     },
+     {
+      "sp": 0,
+      "en": "But it's kinda heavy. It's full of receipts and little notes.",
+      "jp": "でも、ちょっと重いよ。レシートとか小さなメモでいっぱい。",
+      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Don't open that, Nina. Please.",
+      "jp": "開けないでくれ、ニーナ。頼む。"
+     },
+     {
+      "sp": 0,
+      "en": "Too late. There's a photo of a baby, and a hospital bracelet with 'Baby Girl Walsh' on it.",
+      "jp": "もう遅いわ。赤ちゃんの写真と、『ウォルシュさんの女の子』って書かれた病院のバンドがある。"
+     },
+     {
+      "sp": 1,
+      "en": "That's... that's you, Nina. The day you were born.",
+      "jp": "それは、お前だよ、ニーナ。生まれた日のね。"
+     },
+     {
+      "sp": 0,
+      "en": "Then why are there train tickets to a town I've never been to, one every month for twenty years?",
+      "jp": "じゃあなんで、私が行ったことのない町への電車の切符が、二十年間、毎月一枚ずつあるの?"
+     },
+     {
+      "sp": 1,
+      "en": "Because your mother lives there. She's the reason I had to hide this wallet.",
+      "jp": "お前のお母さんがそこに住んでるからだ。この財布を隠す必要があった理由はそれなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Mom lives with us. I mean, Aunt Carol raised me... Dad, what are you saying?",
+      "jp": "お母さんは一緒に住んでるでしょ。叔母さんのキャロルが私を育てて…お父さん、何を言ってるの?"
+     },
+     {
+      "sp": 1,
+      "en": "I'm saying the woman you call Mom wanted you to be safe. And the one in that town never stopped writing to you.",
+      "jp": "お前がお母さんと呼ぶ人は、お前の安全を一番に考えたってことだ。そして、あの町の人は、お前に手紙を書き続けてきたんだよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎂 029｜消えたケーキの謎：The Vanishing Cake",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Grandpa, somebody ate the whole chocolate cake. I left it on the counter at six.",
+      "jp": "おじいちゃん、誰かがチョコレートケーキを丸ごと食べちゃったの。六時にカウンターに置いといたのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Hmm. A serious crime. Let's investigate, Katie. Any clues?",
+      "jp": "ふむ、重大事件だな。捜査しよう、ケイティ。手がかりは?"
+     },
+     {
+      "sp": 0,
+      "en": "There are small crumbs on the floor, leading to the sofa.",
+      "jp": "床に小さなくずが落ちてて、ソファまで続いてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. And what did you find on the sofa?",
+      "jp": "いいぞ。で、ソファには何があった?"
+     },
+     {
+      "sp": 0,
+      "en": "A fork, a blue napkin, and... a tiny chocolate fingerprint.",
+      "jp": "フォークと、青いナプキンと、あと小さなチョコレートの指紋。"
+     },
+     {
+      "sp": 1,
+      "en": "A tiny one, you say? Whose fingers are tiny in this house?",
+      "jp": "小さい指紋だって?この家で指が小さいのは誰かな?"
+     },
+     {
+      "sp": 0,
+      "en": "Mine are tiny. But I didn't do it, I swear! Whaddaya think, was it Max?",
+      "jp": "私の指も小さいけど、やってないよ、本当に!マックスかな、どう思う?",
+      "note": "元の形: what do you／聞こえ方: whaddaya／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Max is a dog, sweetheart. Dogs don't use forks.",
+      "jp": "マックスは犬だよ。犬はフォークを使わない。"
+     },
+     {
+      "sp": 0,
+      "en": "Then it's the cat! ...No, wait. Cats don't use napkins either.",
+      "jp": "じゃあ猫だ!…あ、待って。猫もナプキンは使わないね。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. So let me check something. Katie, hold out your hands.",
+      "jp": "そうだ。ちょっと確かめさせてくれ。ケイティ、手を出してごらん。"
+     }
+    ]
+   },
+   {
+    "t": "💡 030｜真夜中の明かり：The Midnight Light",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Cole, I know it's late, but your garage light has been on every night at midnight for a week.",
+      "jp": "コールさん、遅い時間にすみません。でもここ一週間、毎晩零時にお宅のガレージの明かりがついてるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is that a problem, Ms. Hart?",
+      "jp": "それが何か問題ですか、ハートさん?"
+     },
+     {
+      "sp": 0,
+      "en": "Not a problem, exactly. I'm just curious. My bedroom faces your house, and I can't sleep.",
+      "jp": "問題というほどでは。ただ気になって。寝室がお宅の方を向いていて、眠れないんです。"
+     },
+     {
+      "sp": 1,
+      "en": "I see. Well, I'm working on a project.",
+      "jp": "なるほど。実は、ある作りものをしてましてね。"
+     },
+     {
+      "sp": 0,
+      "en": "What kind of project needs a hammer at midnight? I hear it every night.",
+      "jp": "真夜中にハンマーが要る作りものって?毎晩聞こえますよ。"
+     },
+     {
+      "sp": 1,
+      "en": "It's... a surprise. For someone in this neighborhood.",
+      "jp": "それは、その、サプライズなんです。この近所の誰かへの。"
+     },
+     {
+      "sp": 0,
+      "en": "Someone on this street? Who?",
+      "jp": "この通りの誰か?誰ですか?"
+     },
+     {
+      "sp": 1,
+      "en": "I can't say. But I gotta ask you a favor. Could you please stop closing your curtains at night?",
+      "jp": "言えません。でも一つお願いしなきゃ。夜にカーテンを閉めるのをやめてもらえませんか?",
+      "note": "元の形: got to／聞こえ方: gotta／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "Why on earth would I do that?",
+      "jp": "いったいどうして私がそんなことを?"
+     },
+     {
+      "sp": 1,
+      "en": "Because the surprise is a telescope, and the shed I'm building has a window pointed at the stars above your roof. Your old one broke, remember? Happy birthday, Ms. Hart.",
+      "jp": "だって贈り物は望遠鏡で、小屋の窓があなたの屋根の上の星に向いてるんです。古いのは壊れたでしょう?誕生日おめでとう、ハートさん。"
+     }
+    ]
+   }
+  ]
+ }
+]

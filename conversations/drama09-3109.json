@@ -1,0 +1,482 @@
+[
+ {
+  "id": "drama09",
+  "ic": "🏙",
+  "n": "ドラマ100・ご近所・友情・ちょっとコメディ",
+  "hint": "Ten light, funny two-person dramas about noisy neighbors, borrowed things, failed surprises and mix-ups, each ending with a small warm moment.",
+  "level": 3,
+  "keywords": "neighbors, friendship, comedy, drama",
+  "d": [
+   {
+    "t": "🥁 081｜真夜中のドラマー：The Midnight Drummer",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi. I'm Carla from 3B, right below you. I hate to say this, but it's midnight, and somebody is playing drums.",
+      "jp": "こんにちは。真下の3BのカーラLです。言いにくいんですけど、夜中の12時にドラムの音がして。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no. That's me. I'm so sorry. I'm practicing for my first concert on Saturday, and I lost track of time.",
+      "jp": "うわ、それ僕です。すみません。土曜の初ライブの練習で、時間を忘れてました。"
+     },
+     {
+      "sp": 0,
+      "en": "Saturday? Okay, that's a good reason. But I have a big exam at eight tomorrow morning.",
+      "jp": "土曜日? それならいい理由ね。でも私、明日の朝8時に大事な試験があるの。"
+     },
+     {
+      "sp": 1,
+      "en": "I feel terrible. What if I use these soft practice pads? They sound like someone tapping a pillow.",
+      "jp": "本当に申し訳ない。この練習用のやわらかいパッドを使うのはどうですか? 枕を叩くくらいの音ですよ。"
+     },
+     {
+      "sp": 0,
+      "en": "That would be perfect. Honestly, you're pretty good. I could hear every beat through my ceiling.",
+      "jp": "それなら助かるわ。正直、あなたかなり上手よ。天井ごしに全部のリズムが聞こえたもの。"
+     },
+     {
+      "sp": 1,
+      "en": "Really? Thank you! I'll give you two free tickets to the show to say sorry.",
+      "jp": "本当に? ありがとう! お詫びに、ライブのチケットを2枚あげますよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Tickets? Now I feel bad for complaining. What's the band called?",
+      "jp": "チケット? 文句を言ったのが申し訳なくなってきた。バンド名は何ていうの?"
+     },
+     {
+      "sp": 1,
+      "en": "The Quiet Neighbors. I swear, we picked the name before tonight.",
+      "jp": "『ザ・クワイエット・ネイバーズ』。誓って、今夜より前に決めた名前なんです。",
+      "note": "元の形: What if／聞こえ方: ワッティフ／使う場面: 提案の会話"
+     }
+    ]
+   },
+   {
+    "t": "🔧 082｜消えた電動ドリル：The Borrowed Drill",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Tom, I lent you my drill in March. It's now October. I think my drill misses me.",
+      "jp": "トム、3月に電動ドリルを貸したわよね。もう10月よ。ドリルが私を恋しがってると思うの。"
+     },
+     {
+      "sp": 1,
+      "en": "Your drill? Right. The orange one. Okay, I have to be honest with you. I'm not sure where it is.",
+      "jp": "君のドリル? ああ、オレンジの。正直に言うよ。どこにあるのか分からないんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Not sure? It's a drill, not a sock! It doesn't just vanish.",
+      "jp": "分からない? ドリルよ、靴下じゃないの! 勝手に消えたりしないわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I think I lent it to Mr. Park in 2C when he built his bookshelf. Let's go ask him.",
+      "jp": "パークさんが本棚を作ったとき、2Cの彼に貸したと思う。聞きに行こう。"
+     },
+     {
+      "sp": 0,
+      "en": "Mr. Park says he gave it to the woman upstairs. She says she gave it to her brother. This is ridiculous.",
+      "jp": "パークさんは上の階の女性に渡したって。その人は弟に渡したって。馬鹿げてるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "A drill that travels from person to person. It's like a very tiny adventure story.",
+      "jp": "人から人へ旅するドリルか。すごく小さな冒険物語みたいだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't make it cute. Wait, someone's coming down the stairs. Is that my drill?",
+      "jp": "かわいい話にしないで。待って、誰か階段を下りてくる。あれ私のドリルじゃない?"
+     },
+     {
+      "sp": 1,
+      "en": "Yes! And he's carrying a cake. Maybe the drill came back with a thank-you present.",
+      "jp": "そうだ! しかもケーキを持ってる。ドリルがお礼つきで帰ってきたのかも。"
+     },
+     {
+      "sp": 0,
+      "en": "Fine, I forgive everyone. But from now on, I'm writing my name on everything I lend.",
+      "jp": "いいわ、みんなを許す。でも今後は貸すもの全部に名前を書くことにする。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🎂 083｜失敗したサプライズ：Surprise, Wrong Day",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Shh! Everyone, get down! Dave's coming up the stairs. When he opens the door, we all yell surprise.",
+      "jp": "しーっ! みんな隠れて! デイブが階段を上がってくる。ドアを開けたら、みんなでサプライズって叫ぶのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Hold on, Maria. Are you sure his birthday is today? Because I just got a text from him.",
+      "jp": "ちょっと待って、マリア。彼の誕生日、本当に今日? だって今、彼からメッセージが来たんだけど。"
+     },
+     {
+      "sp": 0,
+      "en": "What does it say? Don't tell me he's working late.",
+      "jp": "何て書いてあるの? 残業だなんて言わないでよ。"
+     },
+     {
+      "sp": 1,
+      "en": "It says, see you at my birthday dinner next Friday. Next Friday, Maria.",
+      "jp": "『来週の金曜の誕生日ディナーで会おう』だって。来週の金曜だよ、マリア。"
+     },
+     {
+      "sp": 0,
+      "en": "No way. I wrote the wrong date on my calendar. Twelve people, a cake, forty balloons. All a week early!",
+      "jp": "うそでしょ。カレンダーの日付を間違えて書いてた。12人にケーキに風船40個。全部1週間早いなんて!"
+     },
+     {
+      "sp": 1,
+      "en": "The door's opening. Maybe we can just say it's an early surprise. Very early.",
+      "jp": "ドアが開くよ。早めのサプライズってことにしちゃおう。すごく早めの。"
+     },
+     {
+      "sp": 0,
+      "en": "Surprise! Happy early birthday, Dave! You have seven days to be surprised again.",
+      "jp": "サプライズ! 早めのお誕生日おめでとう、デイブ! あと7日間、もう一度驚く時間があるわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Wow. You guys are the worst. And the best. Is that chocolate cake? Then I'm happy to be surprised twice.",
+      "jp": "うわあ。君たち最悪だ。で、最高だ。それチョコケーキ? なら2回驚くのも大歓迎だよ。",
+      "note": "元の形: you guys／聞こえ方: ユーガイズ／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🐈 084｜取り違えた猫：The Wrong Cat",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, this is going to sound weird, but is your cat gray with a white nose? He's been sleeping on my sofa all week.",
+      "jp": "すみません、変なお話なんですけど、お宅の猫は鼻の白い灰色ですか? 一週間ずっと私のソファで寝ているんです。"
+     },
+     {
+      "sp": 1,
+      "en": "My cat, Biscuit? He's brown! Wait. Is your cat a gray one called Mochi? Because I've been feeding a gray cat for a week.",
+      "jp": "うちのビスケット? 茶色ですよ! ……待って、お宅の猫は『モチ』って灰色の子ですか? 一週間灰色の猫に餌をあげてたんです。"
+     },
+     {
+      "sp": 0,
+      "en": "Mochi is brown! Oh no. I think our cats traded houses, and we both fell in love with the wrong cat.",
+      "jp": "モチは茶色なんです! まさか。猫同士が家を交換して、私たち二人とも違う猫を好きになっちゃったのね。"
+     },
+     {
+      "sp": 1,
+      "en": "Biscuit never looked this fluffy in the old days. I thought he was just eating well.",
+      "jp": "ビスケットは前、こんなにふわふわじゃなかったんだ。いいものを食べてるのかと思ってた。"
+     },
+     {
+      "sp": 0,
+      "en": "Mochi always loved my sofa, and I thought he'd just grown a gray coat. I'm a terrible cat owner.",
+      "jp": "モチは前から私のソファが好きだったから、灰色の毛が生えたのかと思ってた。私、ひどい飼い主ね。"
+     },
+     {
+      "sp": 1,
+      "en": "Not at all. We both just wanted our cats to be happy. Should we swap them back right now?",
+      "jp": "そんなことないですよ。僕らはただ猫が幸せならいいと思っていただけです。今すぐ交換しましょうか?"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. But the gray one has been so sweet. Could he come visit sometimes?",
+      "jp": "ええ。でも灰色の子がすごく可愛くて。ときどき遊びに来てもらえますか?"
+     },
+     {
+      "sp": 1,
+      "en": "Only if the brown one can visit you. Honestly, I think they planned this.",
+      "jp": "そちらの茶色の子も遊びに行っていいなら。正直、猫たちが仕組んだ気がしますよ。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🛋 085｜階段を通らないソファ：The Sofa Won't Fit",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Okay, we've been stuck on this staircase for forty minutes. Are you sure we measured the sofa?",
+      "jp": "はい、もうこの階段で40分も止まってるのよ。本当にソファのサイズ測ったの?"
+     },
+     {
+      "sp": 1,
+      "en": "I measured the sofa. I just didn't measure the stairs. Or the door. Or the corner.",
+      "jp": "ソファは測ったよ。階段は測ってないけど。ドアも、曲がり角も。"
+     },
+     {
+      "sp": 0,
+      "en": "So you measured the one thing that was never the problem. Brilliant, Jake.",
+      "jp": "つまり問題じゃなかった唯一のものを測ったのね。さすがだわ、ジェイク。"
+     },
+     {
+      "sp": 1,
+      "en": "Hey, I came to help. I took the day off work, and I brought pizza. Tilt your side. A little more.",
+      "jp": "おいおい、手伝いに来たんだぞ。仕事も休んだし、ピザも持ってきた。そっち側を傾けて。もう少し。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm tilting! My arms are shaking. If we drop this, I'm moving back to my old apartment.",
+      "jp": "傾けてるわよ! 腕が震えてる。落としたら、前のアパートに戻るからね。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, it's moving. It's moving! It's through the corner. We did it!",
+      "jp": "よし、動いてる。動いてるぞ! 角を抜けた。やった!"
+     },
+     {
+      "sp": 0,
+      "en": "Wait. Jake, the sofa is in the hallway, but your pizza is now under the sofa.",
+      "jp": "ちょっと待って。ジェイク、ソファは廊下に入ったけど、ピザがソファの下になってるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Flat pizza. Honestly, that's the best thing that's happened all day. Let's eat it on the new sofa.",
+      "jp": "ぺしゃんこのピザか。正直、今日一番いいことだよ。新しいソファで食べよう。",
+      "note": "元の形: Let us／聞こえ方: レッツ／使う場面: 誘うとき"
+     }
+    ]
+   },
+   {
+    "t": "📞 086｜間違い電話の友情：Wrong Number",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? Is this Gary? I'm calling about the big chicken. Is it ready?",
+      "jp": "もしもし? ゲイリーさん? 大きなチキンの件でお電話しました。できてますか?"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry, you have the wrong number. But now I'm curious. What big chicken?",
+      "jp": "すみません、番号が違いますよ。でも気になってきました。大きなチキンって?"
+     },
+     {
+      "sp": 0,
+      "en": "It's for my daughter's school play on Friday. She's the chicken. I ordered a giant costume.",
+      "jp": "金曜の娘の学芸会用なんです。娘がチキン役で。特大の衣装を注文して。"
+     },
+     {
+      "sp": 1,
+      "en": "A giant chicken costume! That's the best phone call I've had in months. Do you want me to help you find Gary?",
+      "jp": "特大のチキン衣装! ここ数か月で最高の電話ですよ。ゲイリーさん探しを手伝いましょうか?"
+     },
+     {
+      "sp": 0,
+      "en": "Would you? I wrote his number on a napkin, and the napkin got wet. I may have dialed three wrong numbers.",
+      "jp": "いいんですか? ナプキンに番号を書いたんですけど、濡れちゃって。もう3回間違えてかけてるかも。"
+     },
+     {
+      "sp": 1,
+      "en": "Read me the numbers. If one digit is a blur, I can try each one. I love puzzles.",
+      "jp": "数字を読んでください。ぼやけた桁があれば、一つずつ試せますよ。パズルは大好きなんです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's so kind. You know, you sound like a real friend, and I don't even know your name.",
+      "jp": "ご親切に。本当の友達みたいな話し方で、お名前もまだ知らないのに。"
+     },
+     {
+      "sp": 1,
+      "en": "It's Ben. Tell your daughter the chicken is going to be a star on Friday.",
+      "jp": "ベンです。娘さんに、金曜はチキンが主役になるよって伝えてあげて。",
+      "note": "元の形: Do you want to／聞こえ方: ジュワナ／使う場面: 日常会話"
+     }
+    ]
+   },
+   {
+    "t": "🗑 087｜ごみの日の誤解：Trash Day Mix-up",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Evans, you put your trash out on Tuesday again. Trash day is Wednesday. A raccoon opened it again.",
+      "jp": "エバンスさん、またごみを火曜に出しましたね。ごみの日は水曜です。またアライグマが開けちゃって。"
+     },
+     {
+      "sp": 1,
+      "en": "Tuesday? I thought it was Tuesday. Wait, is that why there's been a raccoon on my porch every night?",
+      "jp": "火曜? 火曜だと思ってたよ。……待って、だから毎晩ポーチにアライグマがいたのかい?"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. I think he knows your schedule better than you do. I found a pizza box on my lawn, too.",
+      "jp": "そうです。たぶんあなたよりスケジュールをよく知ってますよ。うちの芝生にもピザの箱がありました。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry. My wife usually handles the trash, and she's away at her sister's all month.",
+      "jp": "申し訳ない。いつもはうちの妻がごみ出しをしてて、今月ずっと妹さんの家に行ってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then let me help. I'll knock on your door every Tuesday night. You put it out Wednesday morning.",
+      "jp": "じゃあ手伝いますよ。毎週火曜の夜にドアをノックします。水曜の朝に出してください。"
+     },
+     {
+      "sp": 1,
+      "en": "That's very kind. I'll make you my famous lemon cookies. The raccoon can't have those.",
+      "jp": "ご親切に。お礼に自慢のレモンクッキーを焼くよ。アライグマにはあげないけどね。"
+     },
+     {
+      "sp": 0,
+      "en": "Deal. Oh, look. He's sitting right there on your fence, watching us.",
+      "jp": "決まりね。あ、見て。あそこのフェンスに座って、こっちを見てる。"
+     },
+     {
+      "sp": 1,
+      "en": "Hello, my friend. Sorry, your free dinner is over. Maybe I'll leave you one cookie.",
+      "jp": "やあ、友よ。残念ながらただの夕食はおしまいだ。クッキーを1枚くらいは置いておこうかな。",
+      "note": "元の形: let me／聞こえ方: lemme／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🍞 088｜バナナブレッド戦争：The Banana Bread War",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Rob, I smell banana bread. Again. That's the fifth loaf this week, and you leave it at my door every time.",
+      "jp": "ロブ、バナナブレッドのにおいがする。また。今週5本目よ、しかも毎回うちのドアの前に置いていくでしょ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm trying to be a good neighbor. I bought too many bananas, and I don't know how to stop baking.",
+      "jp": "いい隣人になろうとしてるんだよ。バナナを買いすぎて、焼くのをやめられなくなった。"
+     },
+     {
+      "sp": 0,
+      "en": "I love your bread, but my freezer is full. I now have banana bread in every shape and size.",
+      "jp": "あなたのパンは好きだけど、冷凍庫がいっぱいなの。今や大小いろんなバナナブレッドがあるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you have too much, and I have too many bananas. I think we need a business plan.",
+      "jp": "じゃあ君はパンが多すぎで、僕はバナナが多すぎる。ビジネスプランが必要だな。"
+     },
+     {
+      "sp": 0,
+      "en": "A business plan? Rob, we could sell it at the farmers market on Saturday.",
+      "jp": "ビジネスプラン? ロブ、土曜のファーマーズマーケットで売れるかもしれないわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Whoa, you're serious. Okay, I'll bake, you do the signs. Your handwriting is much nicer than mine.",
+      "jp": "おお、本気だね。分かった、僕が焼いて、君が看板担当。君の字は僕よりずっときれいだし。"
+     },
+     {
+      "sp": 0,
+      "en": "Deal. We'll call it Rob's Rescue Bread, because it rescues bananas and neighbors from boredom.",
+      "jp": "決まり。『ロブの救出ブレッド』って名前にしましょ。バナナと、退屈してる隣人を救うから。"
+     },
+     {
+      "sp": 1,
+      "en": "I love it. And you get the first loaf free. Wait, you already have forty.",
+      "jp": "いいね。最初の1本は君に無料だ。……いや、もう40本あるんだっけ。",
+      "note": "元の形: you are going to／聞こえ方: ユアゴナ／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "📦 089｜謎の荷物：The Mystery Package",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, you must be my new neighbor. I think a package for you ended up at my place. It's huge, and it's ticking.",
+      "jp": "こんにちは、新しいお隣さんですよね。お宅宛ての荷物がうちに届いてて。巨大で、しかもカチカチ音がするの。"
+     },
+     {
+      "sp": 1,
+      "en": "Ticking? Oh, wow. That's my grandfather clock. I ordered it three weeks ago. I'm Sam, by the way.",
+      "jp": "カチカチ? ああ、それ祖父の大時計だ。3週間前に注文したんだ。ちなみに僕はサム。"
+     },
+     {
+      "sp": 0,
+      "en": "A grandfather clock? It struck midnight in my living room, and I almost called the police. I'm Priya.",
+      "jp": "大時計? うちのリビングで夜中の12時を鳴らして、危うく警察を呼ぶところだったわ。私はプリヤ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm so sorry. It's a gift for my dad. He's turning seventy, and he's always wanted one.",
+      "jp": "本当にごめん。父への贈り物なんだ。70歳になるし、前からずっと欲しがってて。"
+     },
+     {
+      "sp": 0,
+      "en": "That's sweet. Honestly, I've gotten used to it. It's kind of like a roommate who's very punctual.",
+      "jp": "素敵ね。正直、もう慣れちゃったわ。すごく時間に正確なルームメイトみたい。"
+     },
+     {
+      "sp": 1,
+      "en": "Come over to carry it with me. Then my dad can invite you to the party. He loves meeting new people.",
+      "jp": "運ぶのを手伝いに来てくれないか。そのあと父がパーティーに招待してくれるよ。新しい人に会うのが大好きなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "A party with a grandfather clock? Okay. But I want to hear it chime one last time.",
+      "jp": "大時計つきのパーティー? いいわ。でも最後にもう一度、鐘を聞きたいの。"
+     },
+     {
+      "sp": 1,
+      "en": "It's six o'clock in ten minutes. Perfect timing. Pun intended.",
+      "jp": "あと10分で6時だ。ちょうどいいタイミングだね。ダジャレのつもりだよ。",
+      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🍅 090｜トマト泥棒の正体：The Tomato Thief",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Someone is stealing my tomatoes, Leo. Three this week, from my balcony garden. I'm going to find out who.",
+      "jp": "誰かが私のトマトを盗んでるの、レオ。今週だけで3つ、ベランダ菜園から。犯人を見つけてやるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe it's a bird. Or Mr. Kim from upstairs. He always looks at your plants.",
+      "jp": "鳥かもしれないよ。それか上のキムさんか。いつも君の植物を見てるから。"
+     },
+     {
+      "sp": 0,
+      "en": "Mr. Kim is eighty. He can't climb a balcony. Besides, I set up a camera last night.",
+      "jp": "キムさんは80歳よ。ベランダは登れないわ。それに、昨夜カメラを置いたの。"
+     },
+     {
+      "sp": 1,
+      "en": "You set up a camera? That's serious. Okay, let's look at it. What do you see?",
+      "jp": "カメラを置いたの? 本格的だな。見てみよう。何が映ってる?"
+     },
+     {
+      "sp": 0,
+      "en": "A figure in the dark. Two ears. A tail. It's... it's a squirrel in a tiny red hat?",
+      "jp": "暗闇に人影。耳が2つ。しっぽ。これって……小さな赤い帽子をかぶったリス?"
+     },
+     {
+      "sp": 1,
+      "en": "Ha! That's my squirrel costume from last year's party. I left it on the balcony. Wait, I did that. Sorry.",
+      "jp": "ははっ! 去年のパーティーのリスの衣装だ。ベランダに置きっぱなしだった。……待って、犯人は僕だ。ごめん。"
+     },
+     {
+      "sp": 0,
+      "en": "You? You're the tomato thief? In a squirrel costume? Leo!",
+      "jp": "あなたが? トマト泥棒? リスの衣装で? レオ!"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, okay. The tomatoes are just so good. I couldn't help it. I'll buy you a whole bag of seeds.",
+      "jp": "分かった分かった。だってトマトがすごくおいしくてさ。我慢できなかったんだ。種を一袋まるごと買うよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Seeds, and you're helping me water everything all summer. Squirrel boy.",
+      "jp": "種と、夏じゅう水やりを手伝うこと。リス男さん。",
+      "note": "元の形: couldn't have／聞こえ方: クドゥントヘルプ／使う場面: 日常会話"
+     }
+    ]
+   }
+  ]
+ }
+]

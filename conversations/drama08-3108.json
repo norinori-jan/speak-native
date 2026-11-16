@@ -1,0 +1,522 @@
+[
+ {
+  "id": "drama08",
+  "ic": "🌃",
+  "n": "ドラマ100・真夜中の電話・メッセージ",
+  "hint": "Ten short two-person dramas told through late-night calls, wrong numbers, voicemails and urgent messages.",
+  "level": 3,
+  "keywords": "midnight, phone call, message",
+  "d": [
+   {
+    "t": "📲 071｜間違いメッセージの行方：The Wrong Number Text",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, sorry. I just texted you by mistake, and then I called to say sorry. It's almost midnight.",
+      "jp": "もしもし、ごめんなさい。間違ってメッセージを送ってしまって、謝りたくて電話したの。もう真夜中なのに。"
+     },
+     {
+      "sp": 1,
+      "en": "No problem. Though I'm curious. The text said, 'I'm outside your door with the cake.'",
+      "jp": "大丈夫ですよ。ちょっと気になるけど。『ケーキ持ってドアの外にいるよ』って書いてありました。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh no. That was for my sister. I saved her number wrong. I'm standing outside her apartment right now.",
+      "jp": "うわ、それ妹宛てなの。番号を間違えて登録してて。今、妹のアパートの前にいるのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "In the cold, holding a cake? Is it her birthday?",
+      "jp": "寒い中、ケーキを持って?誕生日なんですか?"
+     },
+     {
+      "sp": 0,
+      "en": "In ten minutes, yes. I wanted to be the first one to say happy birthday.",
+      "jp": "あと10分でね。誰よりも先におめでとうを言いたかったの。"
+     },
+     {
+      "sp": 1,
+      "en": "Then knock. I'll stay on the line. You can count down with me.",
+      "jp": "じゃあノックして。僕は電話をつないでおくから。一緒にカウントダウンしましょう。",
+      "note": "元の形: I'll stay on the line／聞こえ方: アイル・ステイ・オン・ザ・ライン／使う場面: 電話を切らずにいる"
+     },
+     {
+      "sp": 0,
+      "en": "You'd do that for a total stranger?",
+      "jp": "見ず知らずの私のために、そこまでしてくれるの?"
+     },
+     {
+      "sp": 1,
+      "en": "It's a great story. Ten, nine, eight...",
+      "jp": "素敵な話ですから。10、9、8…"
+     },
+     {
+      "sp": 0,
+      "en": "Three, two, one... Hold on, she's opening the door! Thank you, whoever you are!",
+      "jp": "3、2、1…待って、妹がドアを開けた!ありがとう、どこの誰か知らないけど!"
+     }
+    ]
+   },
+   {
+    "t": "🏥 072｜午前2時の電話：The 2 a.m. Call",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mark, it's me. I know it's two in the morning. Are you awake?",
+      "jp": "マーク、私よ。夜中の2時なのは分かってる。起きてる?"
+     },
+     {
+      "sp": 1,
+      "en": "I am now. Lisa, your voice sounds strange. What's wrong?",
+      "jp": "今起きた。リサ、声がおかしいぞ。何かあったのか?"
+     },
+     {
+      "sp": 0,
+      "en": "It's Dad. He fell in the kitchen. The ambulance took him to St. Mary's an hour ago.",
+      "jp": "お父さんが台所で倒れたの。1時間前に救急車でセント・メアリー病院に運ばれた。"
+     },
+     {
+      "sp": 1,
+      "en": "Is he conscious? What did the doctor say?",
+      "jp": "意識はあるのか?医者は何て?"
+     },
+     {
+      "sp": 0,
+      "en": "He's awake. They think it's his blood pressure. They want to keep him overnight.",
+      "jp": "目は覚めてる。血圧のせいだろうって。一晩入院させたいって。",
+      "note": "元の形: I know it's late／聞こえ方: アイ・ノウ・イッツ・レイト／使う場面: 夜遅い電話のお詫び"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. I'm getting dressed. I can be there in forty minutes.",
+      "jp": "分かった。今着替えてる。40分で着くよ。"
+     },
+     {
+      "sp": 0,
+      "en": "You don't have to come tonight. You have that big presentation at nine.",
+      "jp": "今夜来なくていいのよ。朝9時に大事なプレゼンがあるでしょ。"
+     },
+     {
+      "sp": 1,
+      "en": "Forget the presentation. He's our dad. Stay with him until I get there.",
+      "jp": "プレゼンなんかどうでもいい。俺たちの親父だぞ。着くまで一緒にいてやってくれ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm holding his hand right now. Drive carefully, okay?",
+      "jp": "今、手を握ってるわ。気をつけて運転してね。"
+     }
+    ]
+   },
+   {
+    "t": "📚 073｜眠れない夜の勉強会：Can't Sleep Study Call",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Are you still up? It's three a.m., and my exam is at eight.",
+      "jp": "まだ起きてる?夜の3時で、試験は朝8時なの。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course I'm up. I've read chapter six four times and I remember nothing.",
+      "jp": "もちろん起きてるよ。6章を4回読んだけど、何も覚えてない。",
+      "note": "元の形: I'm getting dressed／聞こえ方: アイム・ゲッティング・ドレスト／使う場面: すぐ行くと伝える"
+     },
+     {
+      "sp": 0,
+      "en": "Same. My brain is just fog. Can you quiz me on the vocabulary?",
+      "jp": "私も。頭が霧みたいなの。単語を出題してくれない?"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. What does 'ambiguous' mean?",
+      "jp": "いいよ。『ambiguous』の意味は?"
+     },
+     {
+      "sp": 0,
+      "en": "Um... unclear? Having more than one meaning?",
+      "jp": "えっと…はっきりしない?意味が2つ以上ある?"
+     },
+     {
+      "sp": 1,
+      "en": "Correct! See, you know more than you think. Next one: 'reluctant.'",
+      "jp": "正解!ほら、思ってるより覚えてるよ。次、『reluctant』。"
+     },
+     {
+      "sp": 0,
+      "en": "Unwilling to do something. Like how I'm reluctant to hang up and be alone with my panic.",
+      "jp": "気が進まないこと。今の私みたいに、電話を切ってパニックとふたりきりになるのが嫌ってこと。"
+     },
+     {
+      "sp": 1,
+      "en": "Then don't hang up. I'll stay on until the sun comes up.",
+      "jp": "なら切らなくていい。朝日が昇るまでつないでおくよ。"
+     },
+     {
+      "sp": 0,
+      "en": "You're a lifesaver. Okay, hit me with another word.",
+      "jp": "命の恩人だわ。よし、次の単語をお願い。"
+     }
+    ]
+   },
+   {
+    "t": "🎙️ 074｜消せなかった留守電：The Voicemail I Kept",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? Jason? I know it's late. I found your old voicemail while cleaning my phone.",
+      "jp": "もしもし?ジェイソン?遅いのは分かってる。携帯を整理してたら、昔のあなたの留守電が出てきたの。"
+     },
+     {
+      "sp": 1,
+      "en": "Nora? Wow. It's been two years. Which voicemail?",
+      "jp": "ノラ?驚いたな。2年ぶりだ。どの留守電?"
+     },
+     {
+      "sp": 0,
+      "en": "The one from my birthday. You sang badly. Really badly.",
+      "jp": "私の誕生日のやつ。あなた、ひどい歌だったわ。本当にひどかった。"
+     },
+     {
+      "sp": 1,
+      "en": "I remember. I recorded it eleven times before I sent it.",
+      "jp": "覚えてるよ。送るまでに11回録り直したんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Eleven? That was the best one?",
+      "jp": "11回?それで一番ましなのがあれ?"
+     },
+     {
+      "sp": 1,
+      "en": "The other ten were worse. Why did you keep it?",
+      "jp": "ほかの10回はもっとひどかった。どうして残してたの?"
+     },
+     {
+      "sp": 0,
+      "en": "Because at the end you say you'll wait for me, whatever I decide.",
+      "jp": "最後に、僕は君がどう決めても待ってるって言ってたから。",
+      "note": "元の形: at the end／聞こえ方: アット・ジ・エンド／使う場面: 最後に・終わりに"
+     },
+     {
+      "sp": 1,
+      "en": "I meant it. I still do.",
+      "jp": "本気だった。今も本気だよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then come to the café on Maple Street tomorrow at ten. I'll buy the coffee.",
+      "jp": "じゃあ明日の10時、メープル通りのカフェに来て。コーヒーはおごるわ。"
+     }
+    ]
+   },
+   {
+    "t": "🍼 075｜シドニーからの知らせ：News from Sydney",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Alex! Did I wake you? It's lunchtime here, but it must be the middle of the night there.",
+      "jp": "アレックス!起こした?こっちはお昼だけど、そっちは真夜中のはずよね。"
+     },
+     {
+      "sp": 1,
+      "en": "It's one a.m., Mia. But you never call without a reason. What's going on?",
+      "jp": "午前1時だよ、ミア。でも理由なしに電話してこないだろ。どうしたの?"
+     },
+     {
+      "sp": 0,
+      "en": "Guess who became an aunt this morning? Seven pounds, two ounces. A little girl.",
+      "jp": "今朝、誰がおばさんになったでしょう?3,100グラムの女の子よ。"
+     },
+     {
+      "sp": 1,
+      "en": "No way! Is Hannah okay? Is the baby healthy?",
+      "jp": "うそだろ!ハンナは大丈夫か?赤ちゃんは元気?"
+     },
+     {
+      "sp": 0,
+      "en": "Both perfect. They named her Grace, after Grandma.",
+      "jp": "ふたりとも完璧。おばあちゃんにちなんで、グレースって名づけたの。",
+      "note": "元の形: after Grandma／聞こえ方: アフター・グランマ／使う場面: 〜にちなんで名づける"
+     },
+     {
+      "sp": 1,
+      "en": "That's beautiful. I wish I were there. Twenty hours of flying is just too far.",
+      "jp": "素敵だな。そこにいたかった。飛行機で20時間は遠すぎるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Hold on, I'm turning on the video. Look, she's yawning!",
+      "jp": "ちょっと待って、ビデオをつけるわ。見て、あくびしてる!"
+     },
+     {
+      "sp": 1,
+      "en": "She has Dad's nose. Oh man, I'm tearing up at one in the morning.",
+      "jp": "親父の鼻をしてる。やばい、夜中の1時に泣きそうだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Book a ticket, Alex. Grace needs her uncle.",
+      "jp": "チケットを取りなさいよ、アレックス。グレースにはおじさんが必要なの。"
+     }
+    ]
+   },
+   {
+    "t": "🔥 076｜隣人からの緊急連絡：Smoke Next Door",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Carter, it's Sandra from next door. Are you home right now?",
+      "jp": "カーターさん、隣のサンドラです。今、家にいらっしゃいますか?"
+     },
+     {
+      "sp": 1,
+      "en": "No, I'm at my sister's till tomorrow. Why? It's almost midnight.",
+      "jp": "いえ、明日まで姉の家です。どうしたんです?もうすぐ真夜中ですよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Your kitchen window is full of smoke. I can smell it from my bedroom.",
+      "jp": "お宅の台所の窓から煙が出てるんです。寝室まで臭いがします。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no. I left the oven on? I only made toast!",
+      "jp": "まさか。オーブンを消し忘れた?トーストを焼いただけなのに!"
+     },
+     {
+      "sp": 0,
+      "en": "I already called the fire department. They're on the way. Where's your spare key?",
+      "jp": "もう消防に電話しました。向かってます。合鍵はどこですか?",
+      "note": "元の形: Please don't go inside／聞こえ方: プリーズ・ドント・ゴー・インサイド／使う場面: 危険な行動を止める"
+     },
+     {
+      "sp": 1,
+      "en": "Under the blue flowerpot by the back door. Please don't go inside yourself!",
+      "jp": "裏口の青い植木鉢の下です。ご自分では絶対に入らないで!"
+     },
+     {
+      "sp": 0,
+      "en": "I won't. I can hear the sirens now. I'll tell them about the key.",
+      "jp": "入りません。サイレンが聞こえてきました。鍵のことは伝えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Sandra, thank you. I'm driving home right now.",
+      "jp": "サンドラさん、ありがとう。今すぐ車で戻ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Drive safely. The house is only a house. Come home in one piece.",
+      "jp": "安全運転で。家はただの家です。無事に帰ってきてください。"
+     }
+    ]
+   },
+   {
+    "t": "💗 077｜深夜の告白：Eleven Years Too Late",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Sam, you answered. I thought you'd be asleep. I'm sorry, it's one in the morning.",
+      "jp": "サム、出てくれたのね。寝てると思った。ごめん、夜中の1時なのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I was reading. Your name on my screen at this hour? Is something wrong?",
+      "jp": "本を読んでたよ。こんな時間に君の名前が出るなんて。何かあったの?"
+     },
+     {
+      "sp": 0,
+      "en": "No. Yes. I don't know. I've been sitting here for three hours, trying to write you a message.",
+      "jp": "ううん。あるの。分からない。3時間ここに座って、メッセージを書こうとしてたの。"
+     },
+     {
+      "sp": 1,
+      "en": "A message about what?",
+      "jp": "何についての?"
+     },
+     {
+      "sp": 0,
+      "en": "About the day we graduated. You asked me to dinner, and I said I was too busy.",
+      "jp": "卒業式の日のこと。あなたが食事に誘ってくれたのに、私は忙しいって断った。"
+     },
+     {
+      "sp": 1,
+      "en": "I remember. I thought you just weren't interested.",
+      "jp": "覚えてるよ。興味がないだけだと思ってた。"
+     },
+     {
+      "sp": 0,
+      "en": "I was terrified, Sam. I've regretted it for eleven years.",
+      "jp": "怖かったの、サム。11年間ずっと後悔してた。"
+     },
+     {
+      "sp": 1,
+      "en": "Well, I'm free this Saturday. Is the dinner offer still open?",
+      "jp": "なら、今度の土曜は空いてるよ。食事の誘いはまだ有効かな?"
+     },
+     {
+      "sp": 0,
+      "en": "It's more than open. I'll cook. Don't be late this time.",
+      "jp": "もちろんよ。私が作る。今度は遅れないでね。",
+      "note": "元の形: Don't be late／聞こえ方: ドント・ビー・レイト／使う場面: 遅れないでと念を押す"
+     }
+    ]
+   },
+   {
+    "t": "☎️ 078｜父の番号に出た声：Dad's Old Number",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? I'm sorry. I must have the wrong number. This number used to belong to my father.",
+      "jp": "もしもし?ごめんなさい、番号を間違えたかも。この番号は昔、父のものだったんです。"
+     },
+     {
+      "sp": 1,
+      "en": "I got this number last spring. The phone company said it was unused for two years.",
+      "jp": "去年の春にこの番号をもらったんです。会社は2年間使われてなかったと言ってました。"
+     },
+     {
+      "sp": 0,
+      "en": "He passed away two years ago. I keep calling it at night, just to hear his voicemail.",
+      "jp": "父は2年前に亡くなったんです。夜になると、留守電の声が聞きたくてかけてしまって。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh. I'm so sorry. There's no voicemail on it anymore. It's just my regular greeting.",
+      "jp": "そうでしたか。お気の毒に。もう留守電は残ってなくて、僕の普通の応答メッセージだけです。"
+     },
+     {
+      "sp": 0,
+      "en": "I know. I guess I'm just not ready to let go. Please forgive me for bothering you.",
+      "jp": "分かってます。まだ手放せないんだと思います。ご迷惑をおかけしてすみません。"
+     },
+     {
+      "sp": 1,
+      "en": "You're not bothering me. What was his name?",
+      "jp": "迷惑じゃないですよ。お父さんのお名前は?"
+     },
+     {
+      "sp": 0,
+      "en": "Walter. He told terrible jokes and always answered on the second ring.",
+      "jp": "ウォルター。ひどい冗談ばかり言って、いつも2コール目で出る人でした。"
+     },
+     {
+      "sp": 1,
+      "en": "Then from now on, I'll answer on the second ring. If you ever want to talk, call.",
+      "jp": "じゃあこれからは、僕も2コール目で出ます。話したくなったら、いつでもどうぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, stranger. That means more than you know.",
+      "jp": "ありがとう、見知らぬ方。あなたが思う以上に、救われます。",
+      "note": "元の形: That means more than you know／聞こえ方: ザット・ミーンズ・モア・ザン・ユー・ノウ／使う場面: 深く感謝する"
+     }
+    ]
+   },
+   {
+    "t": "🛄 079｜空港で財布をなくして：Stranded at Gate 14",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dave, it's me. I'm in Denver. My wallet is gone, and my phone is at two percent.",
+      "jp": "デイブ、私よ。デンバーにいるの。財布がなくなって、携帯の充電も2パーセント。"
+     },
+     {
+      "sp": 1,
+      "en": "Slow down, Karen. It's the middle of the night. Where exactly are you?",
+      "jp": "落ち着いて、カレン。真夜中だぞ。正確にはどこにいるんだ?"
+     },
+     {
+      "sp": 0,
+      "en": "Gate fourteen. My connection was cancelled, and the hotel desk wants a credit card.",
+      "jp": "14番ゲート。乗り継ぎが欠航になって、ホテルのカウンターはクレジットカードを求めてくるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Give me the hotel's name. I'll pay with my card over the phone.",
+      "jp": "分かった。ホテルの名前を教えて。電話で僕のカードで払うから。"
+     },
+     {
+      "sp": 0,
+      "en": "It's the Airport Inn. But, Dave, you and I haven't talked since the divorce.",
+      "jp": "エアポート・インよ。でもデイブ、離婚してから一度も話してなかったのに。"
+     },
+     {
+      "sp": 1,
+      "en": "And you called me anyway. That tells me something. Don't hang up, I'm calling them now.",
+      "jp": "それでも僕に電話をくれた。それが答えだよ。切らないで、今ホテルにかける。",
+      "note": "元の形: Don't hang up／聞こえ方: ドント・ハング・アップ／使う場面: 電話を切らないで"
+     },
+     {
+      "sp": 0,
+      "en": "My phone's going to die. I'll walk to the hotel and wait at the front desk.",
+      "jp": "携帯が切れそう。ホテルまで歩いて、フロントで待つわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. Room two-twelve is paid. Get some sleep, okay?",
+      "jp": "手配した。212号室は支払い済みだ。少し眠るんだぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Dave. I'll pay you back. Maybe with dinner.",
+      "jp": "ありがとう、デイブ。お金は返すわ。もしかしたら、夕食でね。"
+     }
+    ]
+   },
+   {
+    "t": "📻 080｜深夜ラジオの常連さん：Late Night Radio Caller",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? Am I on the air? I've listened to your show every night for six years.",
+      "jp": "もしもし?放送に出てますか?6年間、毎晩この番組を聴いてきました。"
+     },
+     {
+      "sp": 1,
+      "en": "You're on the air, caller. Welcome to Night Owls. What's your name, and what's keeping you up?",
+      "jp": "放送中ですよ。『ナイト・オウルズ』へようこそ。お名前と、眠れない理由を教えてください。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm Rita, and I can't sleep because tomorrow I'm retiring after forty years as a nurse.",
+      "jp": "リタです。眠れないのは、明日、看護師を40年勤めて退職するからなんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Forty years! That's a lot of night shifts. Are you nervous?",
+      "jp": "40年!夜勤がたくさんあったでしょう。緊張してますか?"
+     },
+     {
+      "sp": 0,
+      "en": "A little. Your voice kept me company on every night shift. I wanted to say thank you.",
+      "jp": "少しだけ。夜勤のたびに、あなたの声がそばにいてくれました。お礼が言いたくて。",
+      "note": "元の形: keep someone company／聞こえ方: キープ・サムワン・カンパニー／使う場面: そばにいて寂しさを紛らす"
+     },
+     {
+      "sp": 1,
+      "en": "Rita, you just made my whole week. I've talked to the dark for six years, wondering if anyone was listening.",
+      "jp": "リタさん、今週一番の言葉です。6年間、闇に向かって話しながら、誰か聴いてるのかと思ってました。"
+     },
+     {
+      "sp": 0,
+      "en": "Plenty of us are. Nurses, truck drivers, new parents. We're all listening.",
+      "jp": "たくさんいますよ。看護師も、トラック運転手も、新米パパやママも。みんな聴いてます。"
+     },
+     {
+      "sp": 1,
+      "en": "Then this next song is for you. Congratulations on your retirement, Rita.",
+      "jp": "では次の曲はあなたに贈ります。退職おめでとう、リタさん。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. Now I think I'll finally sleep. Good night, everyone.",
+      "jp": "ありがとう。やっと眠れそうです。みなさん、おやすみなさい。"
+     }
+    ]
+   }
+  ]
+ }
+]

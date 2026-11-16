@@ -1,0 +1,527 @@
+[
+ {
+  "id": "drama05",
+  "ic": "👨‍👩‍👧",
+  "n": "ドラマ100・家族の事件簿",
+  "hint": "Ten short two-person family dramas about hidden secrets, sibling fights, old letters, weddings and trips gone wrong.",
+  "level": 3,
+  "keywords": "family, secret, drama",
+  "d": [
+   {
+    "t": "🍲 041｜母の秘密のレシピ：Mom's Secret Recipe",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Danny, why are you digging through my recipe box at eleven at night?",
+      "jp": "ダニー、夜の11時に私のレシピ箱をあさって何してるの?"
+     },
+     {
+      "sp": 1,
+      "en": "Grandma's chili is on the menu at my restaurant tomorrow, Mom. I just need the last ingredient.",
+      "jp": "母さん、明日うちの店でおばあちゃんのチリを出すんだ。最後の材料だけ知りたくて。"
+     },
+     {
+      "sp": 0,
+      "en": "You know I never wrote that part down. It's a family secret.",
+      "jp": "その部分は書いたことないって知ってるでしょ。家族の秘密なの。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm your son! Come on, I won't tell anyone. Is it cinnamon? Coffee?",
+      "jp": "息子だよ?頼むよ、誰にも言わないから。シナモン?コーヒー?",
+      "note": "元の形: Come on／聞こえ方: カモン／使う場面: 頼み込む・促す"
+     },
+     {
+      "sp": 0,
+      "en": "Neither. Close your eyes and hold out your hand.",
+      "jp": "どっちも違う。目を閉じて、手を出しなさい。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay... wait, this is a chocolate bar. A chocolate bar?",
+      "jp": "はい…ってこれ、板チョコ?板チョコ?"
+     },
+     {
+      "sp": 0,
+      "en": "One square of dark chocolate, right at the end. Your grandmother learned it from a neighbor in 1962.",
+      "jp": "最後に、ダークチョコを一かけ。おばあちゃんが1962年にご近所さんから教わったの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's it? Thirty years of mystery, and it's a candy bar?",
+      "jp": "それだけ?30年も謎だったのに、お菓子だったの?"
+     },
+     {
+      "sp": 0,
+      "en": "The secret was never the chocolate, honey. It was standing in the kitchen with someone you love.",
+      "jp": "秘密はチョコじゃなかったのよ。大事な人と並んで台所に立つことだったの。"
+     }
+    ]
+   },
+   {
+    "t": "🚗 042｜へこんだバンパー：The Dented Bumper",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ben, come outside. Now. I want you to explain this bumper.",
+      "jp": "ベン、外に出て。今すぐ。このバンパーを説明して。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh. Yeah. That. It was like that when I borrowed it.",
+      "jp": "あー、それね。借りたときからそうだったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I washed this car on Saturday. It was perfect. I have a photo.",
+      "jp": "土曜に洗車したの。完璧だったわ。写真もあるし。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, fine. A shopping cart rolled into it at the grocery store. It's not my fault!",
+      "jp": "分かったよ。スーパーでカートが転がってきたんだ。俺のせいじゃない!",
+      "note": "元の形: Okay, fine／聞こえ方: オーケー・ファイン／使う場面: しぶしぶ認める"
+     },
+     {
+      "sp": 0,
+      "en": "Then why didn't you just tell me? You've been avoiding me for two days.",
+      "jp": "じゃあなんで言わなかったの?2日も私を避けてたよね。"
+     },
+     {
+      "sp": 1,
+      "en": "Because last time you didn't talk to me for a month over a scratch.",
+      "jp": "だって前は、傷ひとつで1か月口きいてくれなかったじゃん。"
+     },
+     {
+      "sp": 0,
+      "en": "That was different. That was Dad's old truck.",
+      "jp": "あれは別。お父さんの古いトラックだったんだから。"
+     },
+     {
+      "sp": 1,
+      "en": "Look, I'll pay for the repair. I've got four hundred dollars saved up.",
+      "jp": "修理代は俺が払うよ。400ドル貯めてあるから。"
+     },
+     {
+      "sp": 0,
+      "en": "Keep your money. Just tell me the truth next time, okay?",
+      "jp": "お金はいいわ。次からは本当のことを言って、いい?"
+     },
+     {
+      "sp": 1,
+      "en": "Deal. Hey, can I still borrow it Friday?",
+      "jp": "約束する。ところで、金曜もまた借りていい?"
+     }
+    ]
+   },
+   {
+    "t": "📦 043｜祖父の鍵のかかった箱：Grandpa's Locked Box",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Uncle Tom, I found a metal box in the attic. It's locked, and it's heavy.",
+      "jp": "トムおじさん、屋根裏で金属の箱を見つけたの。鍵がかかってて、重いの。"
+     },
+     {
+      "sp": 1,
+      "en": "Huh. Dad never mentioned that. We've been cleaning this house for three weeks.",
+      "jp": "へえ。親父は何も言ってなかったな。3週間もこの家を片づけてるのに。"
+     },
+     {
+      "sp": 0,
+      "en": "There's a tiny key taped under the lid of his old toolbox. I think it fits.",
+      "jp": "古い工具箱のふたの裏に、小さい鍵がテープで貼ってあったの。合うと思う。"
+     },
+     {
+      "sp": 1,
+      "en": "Try it. My hands are shaking a little, to be honest.",
+      "jp": "開けてみて。正直、ちょっと手が震えてるよ。",
+      "note": "元の形: to be honest／聞こえ方: トゥ・ビー・オネスト／使う場面: 本音を言う前置き"
+     },
+     {
+      "sp": 0,
+      "en": "It opened! Oh my gosh. It's full of train tickets. Hundreds of them.",
+      "jp": "開いた!うそ、列車の切符でいっぱい。何百枚も。"
+     },
+     {
+      "sp": 1,
+      "en": "They're all to the same town. Every year, on June twelfth. Why would he go there?",
+      "jp": "全部同じ町行きだ。毎年6月12日。なんでそこに行ったんだろう?"
+     },
+     {
+      "sp": 0,
+      "en": "June twelfth is Grandma's birthday. She passed away before I was born.",
+      "jp": "6月12日はおばあちゃんの誕生日よ。私が生まれる前に亡くなったけど。"
+     },
+     {
+      "sp": 1,
+      "en": "He never said a word. He just took the train to her hometown, every single year.",
+      "jp": "一言も言わずに、毎年、彼女の故郷まで電車で行ってたのか。"
+     },
+     {
+      "sp": 0,
+      "en": "Then let's go this June. Together. I'll buy the tickets.",
+      "jp": "じゃあ今年の6月、一緒に行きましょう。切符は私が買うわ。"
+     }
+    ]
+   },
+   {
+    "t": "⚽ 044｜サッカーをやめた日：The Day He Quit",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Coach called me, Jake. He says you haven't been to practice in two weeks.",
+      "jp": "コーチから電話があったの、ジェイク。2週間練習に来てないって。"
+     },
+     {
+      "sp": 1,
+      "en": "I quit, Mom. I was going to tell you this weekend.",
+      "jp": "やめたんだ、母さん。週末に話すつもりだった。"
+     },
+     {
+      "sp": 0,
+      "en": "You've played since you were six. What happened?",
+      "jp": "6歳からずっとやってきたのに。何があったの?"
+     },
+     {
+      "sp": 1,
+      "en": "Nothing happened. I'm just not good enough, and I'm tired of pretending I am.",
+      "jp": "何もないよ。ただ、俺はうまくない。うまいふりをするのに疲れたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Where have you been going every afternoon, then?",
+      "jp": "じゃあ毎日、放課後どこに行ってたの?",
+      "note": "元の形: Why didn't you just tell me／聞こえ方: ワイ・ディドゥンチュー・ジャス・テル・ミー／使う場面: どうして言わなかったのと責める"
+     },
+     {
+      "sp": 1,
+      "en": "The library. I'm learning to code. I built a little app for my class.",
+      "jp": "図書館。プログラミングを勉強してる。授業用に小さいアプリも作った。"
+     },
+     {
+      "sp": 0,
+      "en": "An app? You never showed me anything.",
+      "jp": "アプリ?何も見せてくれなかったじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "I thought you'd be disappointed. Dad always said sports build character.",
+      "jp": "がっかりすると思ったんだ。父さんはいつも、スポーツが人を育てるって言ってたし。"
+     },
+     {
+      "sp": 0,
+      "en": "Honey, I just want you to be happy. Show me the app. Please.",
+      "jp": "ジェイク、私はあなたが幸せならそれでいいの。そのアプリ、見せて。お願い。"
+     }
+    ]
+   },
+   {
+    "t": "💍 045｜アラスカで結婚します：Married in Alaska",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, sit down. Matt and I have news.",
+      "jp": "お父さん、座って。マットと私から報告があるの。"
+     },
+     {
+      "sp": 1,
+      "en": "You're pregnant? You're moving to Canada? Just say it, Emily.",
+      "jp": "妊娠したのか?カナダに引っ越すのか?早く言いなさい、エミリー。"
+     },
+     {
+      "sp": 0,
+      "en": "Neither! We're getting married. In September.",
+      "jp": "どっちも違う!結婚するの。9月に。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, thank goodness. Wait, September? That's only three months away!",
+      "jp": "ああ、よかった。ちょっと待て、9月?あと3か月しかないじゃないか!"
+     },
+     {
+      "sp": 0,
+      "en": "We want a small wedding. In Alaska, next to a glacier. Twelve guests.",
+      "jp": "小さな式にしたいの。アラスカの氷河のそばで。招待客は12人。"
+     },
+     {
+      "sp": 1,
+      "en": "A glacier? I've been saving for your wedding since you were born.",
+      "jp": "氷河?お前が生まれたときから結婚式のために貯金してきたんだぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then use it to fly the whole family there. That's all I want.",
+      "jp": "なら、そのお金で家族みんなの飛行機代を出して。それだけが望みよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Fine. But I'm warning you, I'm going to cry when I walk you down the aisle.",
+      "jp": "分かった。だが言っておくぞ、バージンロードを歩くとき、絶対泣くからな。",
+      "note": "元の形: Keep your money／聞こえ方: キープ・ヨア・マニー／使う場面: お金はいらないと断る"
+     },
+     {
+      "sp": 0,
+      "en": "Dad, I'm counting on it.",
+      "jp": "お父さん、それを楽しみにしてるわ。"
+     }
+    ]
+   },
+   {
+    "t": "💌 046｜引き出しの奥の手紙：The Letter in the Drawer",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, I found this in Mom's sewing drawer. It has my name on it.",
+      "jp": "お父さん、お母さんの裁縫の引き出しからこれが出てきたの。私の名前が書いてある。",
+      "note": "元の形: Dad, sit down／聞こえ方: ダッド・シット・ダウン／使う場面: 大事な話を切り出す"
+     },
+     {
+      "sp": 1,
+      "en": "Open it, Claire. I think she wrote it right before the surgery.",
+      "jp": "開けてごらん、クレア。手術の直前に書いたんだと思う。"
+     },
+     {
+      "sp": 0,
+      "en": "You knew about this? You never told me?",
+      "jp": "知ってたの?どうして教えてくれなかったの?"
+     },
+     {
+      "sp": 1,
+      "en": "She asked me to wait until you were ready. Five years felt like a good time.",
+      "jp": "お前の心の準備ができるまで待ってって頼まれた。5年は、ちょうどいい頃だと思ってね。"
+     },
+     {
+      "sp": 0,
+      "en": "She says... she says I should stop being so hard on myself. Oh, Dad.",
+      "jp": "『自分に厳しくしすぎないで』って…。ああ、お父さん。"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds like her. What else does it say?",
+      "jp": "母さんらしいな。ほかには何て?"
+     },
+     {
+      "sp": 0,
+      "en": "She says the blue scarf in the closet is for my daughter, someday.",
+      "jp": "クローゼットの青いスカーフは、いつか私の娘にあげてって。"
+     },
+     {
+      "sp": 1,
+      "en": "You don't have a daughter yet.",
+      "jp": "お前にはまだ娘はいないよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I know. But I'm going to keep the scarf safe anyway.",
+      "jp": "分かってる。でも、そのスカーフは大事にしまっておくわ。"
+     }
+    ]
+   },
+   {
+    "t": "✈️ 047｜家族旅行は大混乱：The Great Trip Disaster",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Rob, please tell me you packed the passports. We're at the airport.",
+      "jp": "ロブ、パスポートを入れたって言って。もう空港にいるのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I thought you packed them. They were on the kitchen table.",
+      "jp": "君が入れたと思ってた。台所のテーブルの上にあったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Our flight leaves in two hours! Mom and Dad are already waiting in Florida!",
+      "jp": "飛行機は2時間後よ!お父さんとお母さんはもうフロリダで待ってるのに!"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, calm down. The house is only forty minutes away. I can make it.",
+      "jp": "落ち着いて。家まで40分だ。間に合わせるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Forty minutes there and forty back? That's eighty minutes. Plus traffic!",
+      "jp": "往復で80分でしょ?それに渋滞もあるし!"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'll drive fast. Well, legally fast. You rebook us on the later flight.",
+      "jp": "じゃあ飛ばすよ。まあ、法定速度ぎりぎりでね。君は遅い便に変更しておいて。",
+      "note": "元の形: calm down／聞こえ方: カーム・ダウン／使う場面: 落ち着かせる"
+     },
+     {
+      "sp": 0,
+      "en": "There's a flight at nine tonight. It costs two hundred extra each.",
+      "jp": "夜9時の便があるわ。ひとり200ドル追加だけど。"
+     },
+     {
+      "sp": 1,
+      "en": "Take it. Next year, we're making a checklist and sticking it on the door.",
+      "jp": "取っておいて。来年は、チェックリストを作ってドアに貼ろう。"
+     },
+     {
+      "sp": 0,
+      "en": "Next year, I'm packing the passports first. Go, go, go!",
+      "jp": "来年は最初にパスポートを入れるわ。さあ、早く行って!"
+     }
+    ]
+   },
+   {
+    "t": "📱 048｜おばあちゃんの初メッセージ：Grandma's First Text",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Tommy, I think I broke my phone. It keeps making a little noise.",
+      "jp": "トミー、携帯を壊したみたい。ずっとピコピコ鳴ってるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Grandma, that's just a message. Somebody texted you.",
+      "jp": "おばあちゃん、それはメッセージが来ただけだよ。誰かが送ってきたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Nobody texts me. Oh, wait. It says, 'Happy birthday, Grandma. Love, Tommy.'",
+      "jp": "私に送る人なんていないわ。あら、『おばあちゃん、誕生日おめでとう。トミーより』って。"
+     },
+     {
+      "sp": 1,
+      "en": "Yeah, that was me. I sent it from the next room. I wanted to see if you'd find it.",
+      "jp": "うん、僕だよ。隣の部屋から送ったんだ。気づくか試したくて。"
+     },
+     {
+      "sp": 0,
+      "en": "Well, I found it. How do I answer? There are so many tiny letters.",
+      "jp": "ちゃんと気づいたわよ。どうやって返事するの?字がすごく小さいのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Just tap here and type. Or press the microphone and talk.",
+      "jp": "ここを押して打つだけ。マイクを押して話してもいいよ。",
+      "note": "元の形: Just tap here／聞こえ方: ジャスト・タップ・ヒア／使う場面: 簡単な操作を教える"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, my darling. You are the best gift I got this year.",
+      "jp": "ありがとう、いい子ね。今年いちばんの贈り物よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Grandma, you haven't even opened the presents yet.",
+      "jp": "おばあちゃん、まだプレゼント開けてもいないよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I don't need to. Now teach me how to send a heart.",
+      "jp": "開けなくても分かるの。さあ、ハートの送り方を教えて。"
+     }
+    ]
+   },
+   {
+    "t": "💼 049｜知っていたのよ：I Already Knew",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You left at seven again this morning, with your briefcase and everything.",
+      "jp": "今朝もまた7時に出かけたわね。書類かばんまで持って。"
+     },
+     {
+      "sp": 1,
+      "en": "Yeah, I had an early meeting. It went fine.",
+      "jp": "ああ、朝一の会議があってね。うまくいったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Richard, I ran into Linda from your office at the supermarket on Tuesday.",
+      "jp": "リチャード、火曜にスーパーで、あなたの会社のリンダさんに会ったの。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh. What did she say?",
+      "jp": "…何て言ってた?"
+     },
+     {
+      "sp": 0,
+      "en": "She said she was sorry about the layoffs. Three months ago.",
+      "jp": "人員整理のこと、お気の毒でしたって。3か月前の話よ。"
+     },
+     {
+      "sp": 1,
+      "en": "I was going to tell you. I just kept thinking I'd find something by Friday.",
+      "jp": "話すつもりだったんだ。金曜までには次が見つかると思い続けてた。"
+     },
+     {
+      "sp": 0,
+      "en": "So where have you been going every morning?",
+      "jp": "それで、毎朝どこに行ってたの?"
+     },
+     {
+      "sp": 1,
+      "en": "The public library. I read job listings and eat a sandwich in the park.",
+      "jp": "公立図書館。求人を見て、公園でサンドイッチを食べてた。"
+     },
+     {
+      "sp": 0,
+      "en": "Next time, eat it at home with me. I'd rather worry together than alone.",
+      "jp": "次からは、家で私と食べて。ひとりで悩むより、一緒に悩みたいの。",
+      "note": "元の形: I'd rather ... than ...／聞こえ方: アイド・ラザー／使う場面: 〜するほうがいいと言う"
+     }
+    ]
+   },
+   {
+    "t": "🎉 050｜サプライズ計画の穴：The Surprise Party Plot",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Okay, the guest list is final. Forty people for Mom and Dad's thirtieth anniversary.",
+      "jp": "よし、招待客リストは確定。両親の結婚30周年に40人よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Sis, we have a problem. Dad just asked me why I booked the restaurant.",
+      "jp": "姉さん、まずいよ。父さんに、なんで店を予約したのか聞かれた。"
+     },
+     {
+      "sp": 0,
+      "en": "What? How does he even know about the restaurant?",
+      "jp": "え?どうしてお店のことを知ってるの?"
+     },
+     {
+      "sp": 1,
+      "en": "The restaurant called the house phone to confirm the reservation. Dad answered.",
+      "jp": "店が予約確認で家の電話にかけてきて、父さんが出ちゃったんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Please tell me you came up with a good excuse.",
+      "jp": "ちゃんとした言い訳を考えたって言って。",
+      "note": "元の形: came up with／聞こえ方: ケイム・アップ・ウィズ／使う場面: 思いつく・考え出す"
+     },
+     {
+      "sp": 1,
+      "en": "I said it was for my own friend's birthday. He gave me this look, like he didn't believe me.",
+      "jp": "友達の誕生日だって言った。信じてないような目で見られたけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Fine. Then we'll make it a double surprise. Tell him you're taking him to dinner, just the two of you.",
+      "jp": "分かった。じゃあ二重のサプライズにしましょう。父さんに、ふたりで食事に行こうって誘って。"
+     },
+     {
+      "sp": 1,
+      "en": "And when we walk in, forty people yell surprise?",
+      "jp": "で、入ったら40人が『サプライズ!』って叫ぶんだ?"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. He'll be so busy being suspicious about you, he'll never see it coming.",
+      "jp": "そう。あなたを疑うのに忙しくて、本命には気づかないわ。"
+     }
+    ]
+   }
+  ]
+ }
+]

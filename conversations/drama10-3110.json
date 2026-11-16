@@ -1,0 +1,522 @@
+[
+ {
+  "id": "drama10",
+  "ic": "⚡",
+  "n": "ドラマ100・どんでん返し・ラストの一言",
+  "hint": "Ten two-person dramas where one last line, discovery or reveal turns everything around",
+  "level": 4,
+  "keywords": "twist, surprise, ending, drama",
+  "d": [
+   {
+    "t": "🎁 091｜二人のサプライズ：Double Surprise",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'd like to cancel a table for Saturday, eight o'clock. Name's Daniels.",
+      "jp": "もしもし、土曜の8時のテーブルをキャンセルしたいんです。名前はダニエルズです。"
+     },
+     {
+      "sp": 1,
+      "en": "Daniels? Funny, I've got two Daniels on Saturday. Which one's yours?",
+      "jp": "ダニエルズ？おかしいな、土曜にダニエルズさんが2件あります。どちらですか？"
+     },
+     {
+      "sp": 0,
+      "en": "Two? It's a surprise party for my husband, Ben. Twenty guests, under the name Daniels.",
+      "jp": "2件？夫のベンのサプライズパーティーです。20人で、ダニエルズの名前で。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the first one. The second is a surprise party for a woman named Hannah, also twenty guests.",
+      "jp": "それが1件目です。2件目は、ハンナさんという女性のサプライズパーティーで、同じく20人です。"
+     },
+     {
+      "sp": 0,
+      "en": "Hannah is me. Hold on, who booked that one?",
+      "jp": "ハンナは私です。待って、誰が予約したんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A man named Ben Daniels. He sounded so excited, he practically sang on the phone.",
+      "jp": "ベン・ダニエルズさんという男性です。とても嬉しそうで、電話で歌い出しそうでしたよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh no. We've been hiding the same secret from each other for a month.",
+      "jp": "うそでしょ。私たち、ひと月も同じ秘密を隠し合っていたのね。"
+     },
+     {
+      "sp": 1,
+      "en": "Well, ma'am, you're both booked at the same table. It's a nice big one.",
+      "jp": "さて奥様、お二人とも同じテーブルでご予約です。大きくて素敵な席ですよ。",
+      "note": "元の形: Well, ma'am／聞こえ方: ウェル・マーム／使う場面: 丁寧に話を切り出す"
+     },
+     {
+      "sp": 0,
+      "en": "Don't cancel anything. Honestly, I can't wait to see his face on Saturday.",
+      "jp": "何もキャンセルしないで。正直、土曜の彼の顔を見るのが待ちきれないわ。"
+     }
+    ]
+   },
+   {
+    "t": "📞 092｜間違い電話の先生：The Wrong Number Teacher",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, Mr. Brown? It's Clara. I'm calling to confirm my piano lesson on Thursday.",
+      "jp": "もしもし、ブラウン先生？クララです。木曜のピアノのレッスンの確認でお電話しました。"
+     },
+     {
+      "sp": 1,
+      "en": "Ah, Clara. Yes, Thursday at five. Don't forget to practice the left hand.",
+      "jp": "ああ、クララさん。はい、木曜の5時ですね。左手の練習を忘れずに。"
+     },
+     {
+      "sp": 0,
+      "en": "I will. Mr. Brown, your voice sounds a little different today. Are you okay?",
+      "jp": "はい。ブラウン先生、今日はお声が少し違いますね。大丈夫ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Just a cold. Ah, Clara, there's something I need to tell you before Thursday.",
+      "jp": "ただの風邪ですよ。ああ、クララさん、木曜の前に話しておくことがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "You're quitting? Please don't. You're the only teacher who's ever made me laugh.",
+      "jp": "やめちゃうんですか？お願い、やめないで。私を笑わせてくれた先生はあなただけなんです。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm not a piano teacher. You've had the wrong number since August.",
+      "jp": "僕はピアノの先生じゃないんです。8月からずっと、間違い電話だったんですよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Three months? Then why did you keep answering as Mr. Brown?",
+      "jp": "3か月も？なら、どうしてブラウン先生のふりを続けたんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because Thursday was the best part of my week. And I bought a piano. It's terrible.",
+      "jp": "木曜が1週間でいちばん楽しみだったからです。それにピアノを買いました。ひどい腕ですけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Then come on Thursday at five. I'm a real piano teacher, you know.",
+      "jp": "じゃあ木曜の5時に来て。実は私が本物のピアノの先生なのよ。",
+      "note": "元の形: come on／聞こえ方: カモン／使う場面: 気軽に誘う・促す"
+     }
+    ]
+   },
+   {
+    "t": "🕰️ 093｜止まった時計の中身：Inside the Stopped Clock",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Grandpa, the clock in the hall is stuck at 3:15 again. Let me take it to the repair shop.",
+      "jp": "おじいちゃん、廊下の時計がまた3時15分で止まってるよ。修理に持っていくね。"
+     },
+     {
+      "sp": 1,
+      "en": "No, leave it, Emma. It's been stuck at 3:15 for forty years, and that's how I like it.",
+      "jp": "いや、そのままにしておきなさい、エマ。40年間3時15分で止まってる。それがいいんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Forty years? Grandpa, you never told me that. Why 3:15?",
+      "jp": "40年？おじいちゃん、初めて聞いたよ。どうして3時15分なの？"
+     },
+     {
+      "sp": 1,
+      "en": "That's the minute I asked your grandmother to marry me, right under that clock.",
+      "jp": "その時間に、あの時計の下で、おばあさんにプロポーズしたんだよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Aww. So you stopped the clock because you never wanted to forget it?",
+      "jp": "えー、素敵。忘れたくなくて時計を止めたの？"
+     },
+     {
+      "sp": 1,
+      "en": "Not exactly. I stopped it because she hid something inside, and I never had the courage to look.",
+      "jp": "ちょっと違う。おばあさんが中に何か隠していて、見る勇気がなかったから止めたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Grandpa! Can I open the back? There's a little envelope taped in here.",
+      "jp": "おじいちゃん！後ろを開けていい？小さな封筒が貼ってあるよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Read it to me. My eyes aren't what they used to be.",
+      "jp": "読んでおくれ。目がむかしのようじゃなくてね。",
+      "note": "元の形: what they used to be／聞こえ方: ワット・ゼイ・ユースト・トゥ・ビー／使う場面: 昔と比べて衰えを言う"
+     },
+     {
+      "sp": 0,
+      "en": "It says, 'Fix the clock when you're ready to be happy again. Love, Rose.' Grandpa, are you crying?",
+      "jp": "『もう一度幸せになる準備ができたら、時計を直してね。愛を込めて、ローズ』。おじいちゃん、泣いてる？"
+     }
+    ]
+   },
+   {
+    "t": "🧳 094｜取り違えたカバン：Same Bag, Same Day",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, I think you have my bag. Mine had a red ribbon on the handle.",
+      "jp": "すみません、それは私のカバンだと思います。持ち手に赤いリボンがついていたんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Mine had a blue ribbon, and, oh no, this one's a red ribbon. Sorry, I grabbed the wrong one.",
+      "jp": "僕のは青いリボンで、うわ、これは赤いリボンだ。ごめんなさい、間違えて取っちゃった。"
+     },
+     {
+      "sp": 0,
+      "en": "It's okay. But I have to ask, why does your bag have a wedding ring box in it?",
+      "jp": "いいんです。でも聞かせて、どうしてあなたのカバンに結婚指輪の箱が入ってるの？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm the best man. And why does yours have a long white dress and a veil?",
+      "jp": "新郎の付き添い役なんだ。君のカバンこそ、長い白いドレスとベールが入ってるのはどうして？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm the maid of honor. I'm flying to Lisbon for my best friend's wedding tomorrow.",
+      "jp": "新婦の付き添い役よ。明日、親友の結婚式でリスボンに飛ぶの。"
+     },
+     {
+      "sp": 1,
+      "en": "Lisbon? Tomorrow? Is the groom named Marcus?",
+      "jp": "リスボン？明日？新郎の名前はマーカスかい？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes! And the bride is Lucy. Wait, are you telling me we're going to the same wedding?",
+      "jp": "そうよ！新婦はルーシー。待って、同じ結婚式に行くってこと？"
+     },
+     {
+      "sp": 1,
+      "en": "Looks like it. At least we won't have to explain why we're holding each other's luggage.",
+      "jp": "そうみたいだね。お互いの荷物を持ってる理由を、説明しなくて済むよ。",
+      "note": "元の形: Looks like it／聞こえ方: ルックス・ライク・イット／使う場面: どうやらそうらしいと言う"
+     },
+     {
+      "sp": 0,
+      "en": "Come on, partner. The bride needs her dress, and the groom needs his ring.",
+      "jp": "行きましょう、相棒さん。新婦にはドレスが、新郎には指輪が必要なんだから。"
+     }
+    ]
+   },
+   {
+    "t": "👻 095｜幽霊屋敷の声：The Voice in the House",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Kim, before you sign, I should be honest. People say this house is haunted.",
+      "jp": "キムさん、署名の前に正直にお話しします。この家には幽霊が出るという噂があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Haunted? I don't believe in ghosts, but what exactly do they say?",
+      "jp": "幽霊？信じてはいませんが、具体的に何と言われているんですか？"
+     },
+     {
+      "sp": 0,
+      "en": "Every night around ten, a voice from the attic says, 'Don't leave me.' The last two buyers ran away.",
+      "jp": "毎晩10時ごろ、屋根裏から『置いていかないで』という声が聞こえるそうです。前の買い手2人は逃げ出しました。"
+     },
+     {
+      "sp": 1,
+      "en": "That's creepy. Can we go up to the attic now? It's almost ten.",
+      "jp": "気味が悪いな。いま屋根裏に行ってみましょうか。もうすぐ10時ですし。"
+     },
+     {
+      "sp": 0,
+      "en": "Are you sure? My hands are shaking. Okay, listen... there it is. 'Don't leave me.'",
+      "jp": "本気ですか？手が震えてます。じゃあ、聞いて……ほら。『置いていかないで』。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait, that's not a ghost. Look at that cage in the corner. There's a parrot.",
+      "jp": "待って、幽霊じゃないですよ。隅のカゴを見て。オウムがいます。"
+     },
+     {
+      "sp": 0,
+      "en": "A parrot? Oh, there's a note on the cage. 'His name is Walter. He misses my husband.'",
+      "jp": "オウム？あ、カゴにメモがあります。『名前はウォルター。亡くなった主人を恋しがっています』。"
+     },
+     {
+      "sp": 1,
+      "en": "So the previous owner left him behind, and he's been repeating the last words he heard.",
+      "jp": "前の持ち主が置いていって、聞いた最後の言葉をずっと繰り返していたんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll take the house. And Walter comes with it. Nobody should be left behind.",
+      "jp": "この家を買います。ウォルターも一緒に。誰も置いていかれるべきじゃありませんから。",
+      "note": "元の形: I'll take it／聞こえ方: アイル・テイク・イット／使う場面: 買う・決めると伝える"
+     }
+    ]
+   },
+   {
+    "t": "🎭 096｜代役の初日：The Understudy's Opening Night",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mr. Reed, the star just called in sick. Please tell me you have a plan.",
+      "jp": "リードさん、主演の人が急に病欠だって。何か手を打ってくれてますよね？"
+     },
+     {
+      "sp": 1,
+      "en": "I do. Nora, you're going on tonight. You've been standing in the wings for six months.",
+      "jp": "ある。ノラ、今夜は君が出るんだ。君は6か月も舞台袖で待っていた。"
+     },
+     {
+      "sp": 0,
+      "en": "Me? I'm only the understudy. I've never performed in front of a real audience.",
+      "jp": "私が？ただの代役ですよ。本物のお客さんの前で演じたことなんてありません。"
+     },
+     {
+      "sp": 1,
+      "en": "You've rehearsed every line in the empty theater at midnight. I know, I've been listening.",
+      "jp": "夜中に誰もいない劇場で、全部のセリフを練習していたよね。知ってる、ずっと聞いていたから。"
+     },
+     {
+      "sp": 0,
+      "en": "You were watching me? That's why you kept the stage lights on?",
+      "jp": "見ていたんですか？だから舞台の照明をつけっぱなしにしていたの？"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. The lead role was never meant for the star. I wrote it for you.",
+      "jp": "もちろん。主役は最初から、あの主演のためじゃなかった。君のために書いたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Why didn't you say so before?",
+      "jp": "どうして、もっと早く言ってくれなかったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Because the producers wanted a famous name. Tonight, they don't have a choice.",
+      "jp": "プロデューサーが有名な名前を欲しがったからだ。今夜は、選びようがない。",
+      "note": "元の形: have a choice／聞こえ方: ハヴ・ア・チョイス／使う場面: 選択肢の有無を言う"
+     },
+     {
+      "sp": 0,
+      "en": "Then I'd better not forget my lines. Wish me luck.",
+      "jp": "なら、セリフを忘れないようにしなきゃ。幸運を祈ってて。"
+     }
+    ]
+   },
+   {
+    "t": "📜 097｜手を振る人への手紙：A Letter for the Woman Who Waves",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, Ms. Park. I have a letter for you, but the envelope looks strange.",
+      "jp": "おはようございます、パクさん。お手紙があるんですが、封筒が少し変わっているんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Strange? Who writes letters anymore? There's no name or address, only 'To the woman who always waves.'",
+      "jp": "変わってる？いまどき誰が手紙なんて。名前も住所もなくて、『いつも手を振ってくれる人へ』とだけ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's why it took me a week to find you. You're the only one on this street who waves at the mail truck.",
+      "jp": "だから探すのに1週間かかりました。この通りで郵便車に手を振るのは、あなただけですから。"
+     },
+     {
+      "sp": 1,
+      "en": "I just thought the old postman looked lonely. He was here every day for thirty years.",
+      "jp": "あの年配の郵便屋さんが寂しそうに見えたの。30年間、毎日ここに来ていたでしょう。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the one who wrote it. He retired last week, and he asked me to deliver this.",
+      "jp": "それを書いたのがその方です。先週退職されて、これを届けてほしいと頼まれました。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, he wrote, 'Your wave was the best part of my route. Thank you for seeing me.'",
+      "jp": "まあ、こう書いてあるわ。『あなたの手振りが、配達でいちばんの楽しみでした。見てくれてありがとう』。"
+     },
+     {
+      "sp": 0,
+      "en": "Funny thing, ma'am. I started waving back last month, and I never knew why.",
+      "jp": "不思議なものですね。僕も先月から手を振り返し始めたんですが、理由は分からなかったんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Now you know. It's a tradition, apparently. Would you like some coffee?",
+      "jp": "いまは分かるでしょう。どうやら伝統みたい。コーヒーはいかが？",
+      "note": "元の形: Would you like／聞こえ方: ウッジュー・ライク／使う場面: 丁寧に勧める"
+     },
+     {
+      "sp": 0,
+      "en": "I'd love to. And Ms. Park, I'll keep waving, I promise.",
+      "jp": "喜んで。それにパクさん、これからも手を振ります。約束します。"
+     }
+    ]
+   },
+   {
+    "t": "🧪 098｜失敗した実験：The Failed Experiment",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dr. Moreno, the experiment failed again. The samples are covered in green mold.",
+      "jp": "モレノ博士、また実験は失敗です。サンプルが緑のカビだらけになりました。"
+     },
+     {
+      "sp": 1,
+      "en": "Again? That's the tenth time this month. I'm starting to think I'm wasting everyone's money.",
+      "jp": "また？今月10回目よ。みんなのお金を無駄にしている気がしてきたわ。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait, before I throw them away. Look at the dish. There's a clear circle around the mold.",
+      "jp": "待ってください、捨てる前に。このシャーレを見てください。カビのまわりに透明な輪があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Clear? The bacteria aren't growing near it. Ethan, are you thinking what I'm thinking?",
+      "jp": "透明？カビの近くだけ菌が育ってない。イーサン、私と同じことを考えてる？"
+     },
+     {
+      "sp": 0,
+      "en": "That the mold is killing the bacteria. We've been trying to remove the very thing we need.",
+      "jp": "カビが菌を殺している、ということです。探していたものを、ずっと取り除こうとしていたんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "We have to test it again, carefully this time. Don't touch anything and don't tell anyone yet.",
+      "jp": "今度は慎重に、もう一度試すわよ。何にも触らないで、まだ誰にも言わないでね。"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. Should I cancel the funding meeting tomorrow?",
+      "jp": "分かりました。明日の予算の会議は、中止にしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "No, we'll go. And we'll start with, 'We have good news about our failure.'",
+      "jp": "いいえ、出るわ。『失敗について、いいお知らせがあります』から始めましょう。",
+      "note": "元の形: start with／聞こえ方: スタート・ウィズ／使う場面: 話の切り出しを言う"
+     },
+     {
+      "sp": 0,
+      "en": "That's the best opening line I've ever heard.",
+      "jp": "いままで聞いた中で、いちばんいい切り出しですね。"
+     }
+    ]
+   },
+   {
+    "t": "🎤 099｜切り忘れたマイク：The Mic Was On",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Oh, thank goodness that's over. Honestly, the CEO's speech was so boring I almost fell asleep.",
+      "jp": "ああ、やっと終わった。正直、社長のスピーチは退屈で、寝そうだったわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Ms. Lee, I hate to interrupt, but do you know the microphone is still on?",
+      "jp": "リーさん、遮りたくないんですが、マイクがまだ入っているのをご存じですか？"
+     },
+     {
+      "sp": 0,
+      "en": "What? Everyone heard me? Oh no. Please tell me the CEO had already left the room.",
+      "jp": "え？みんなに聞こえたの？どうしよう。社長はもう部屋を出ていたって言って。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm afraid not. He's standing right behind you.",
+      "jp": "残念ながら。社長はあなたのすぐ後ろに立っています。"
+     },
+     {
+      "sp": 0,
+      "en": "Sir, I'm so sorry. I didn't mean it. I'll clean out my desk right now.",
+      "jp": "社長、本当に申し訳ありません。そんなつもりでは。いますぐ机を片付けます。"
+     },
+     {
+      "sp": 1,
+      "en": "Don't. Everything you said was true. I've been thinking about it for years.",
+      "jp": "やめなさい。君が言ったことは全部本当だ。私も何年も前から思っていたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "You're not angry?",
+      "jp": "怒っていないんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "I wanted one person who'd tell me the truth. Starting Monday, you're head of communications.",
+      "jp": "本当のことを言ってくれる人が欲しかったんだ。月曜から、君は広報部長だ。",
+      "note": "元の形: wanted one person who'd／聞こえ方: ワンテッド・ワン・パーソン・フーッド／使う場面: who would の短縮"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, sir. And may I suggest we make the next speech shorter?",
+      "jp": "ありがとうございます。それと、次のスピーチは短くしませんか？"
+     }
+    ]
+   },
+   {
+    "t": "🌟 100｜最後の乗客：The Last Passenger",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Evening. Airport, please. I'm sorry to ask this late. I know it's your last shift.",
+      "jp": "こんばんは。空港までお願いします。こんな遅くにすみません。今夜が最後の勤務だと聞きました。"
+     },
+     {
+      "sp": 1,
+      "en": "Not a problem, miss. Forty years behind the wheel, and tonight is my final ride.",
+      "jp": "いいんですよ、お嬢さん。40年ハンドルを握って、今夜が最後の乗車です。"
+     },
+     {
+      "sp": 0,
+      "en": "Forty years. That's longer than I've been alive. Do you remember your first passenger?",
+      "jp": "40年。私が生きてきた年数より長いですね。最初のお客さんは覚えていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Like it was yesterday. A young father rushed his wife to the hospital on a snowy night.",
+      "jp": "昨日のことのように。雪の夜に、若い父親が奥さんを病院へ急いで運んだんです。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait. Which hospital? And what year was that?",
+      "jp": "待って。どこの病院ですか？それは何年のことですか？"
+     },
+     {
+      "sp": 1,
+      "en": "St. Mary's, the winter of 1986. The baby arrived in the back seat, ten minutes before we got there.",
+      "jp": "セント・メアリー病院、1986年の冬です。着く10分前に、赤ちゃんが後部座席で生まれたんです。"
+     },
+     {
+      "sp": 0,
+      "en": "I was born in the back seat of a taxi. My parents always told me about the driver, and they never knew his name.",
+      "jp": "私、タクシーの後部座席で生まれたんです。両親はその運転手のことをいつも話していたけど、名前は知らなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you were my first passenger, and now you're my last. What are the odds?",
+      "jp": "なら、君は私の最初のお客さんで、いまは最後のお客さんだ。こんな偶然があるかね？",
+      "note": "元の形: What are the odds／聞こえ方: ワット・アー・ジ・オッズ／使う場面: すごい偶然に驚く"
+     },
+     {
+      "sp": 0,
+      "en": "Tonight the ride is free, and I'm paying with a thank-you. Please keep the meter running.",
+      "jp": "今夜の運賃は、お礼の気持ちで払わせてください。メーターは回したままで。"
+     }
+    ]
+   }
+  ]
+ }
+]

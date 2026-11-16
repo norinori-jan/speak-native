@@ -1,0 +1,543 @@
+[
+ {
+  "id": "drama06",
+  "ic": "🎬",
+  "n": "ドラマ100・夢と挑戦",
+  "hint": "Ten short two-person dramas about chasing dreams, from bands and chefs to athletes, writers and scientists facing a big decision.",
+  "level": 3,
+  "keywords": "dreams, challenge, drama",
+  "d": [
+   {
+    "t": "🎸 051｜解散前の最後の曲：Last Song Before the End",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Jake, put the guitar down for a second. We need to talk about Saturday. Is it really our last show?",
+      "jp": "ジェイク、ちょっとギターを置いて。土曜のことを話さなきゃ。あれ、本当に最後のライブなの？"
+     },
+     {
+      "sp": 1,
+      "en": "Tessa, the van broke down again. We owe the club two hundred bucks. I think it's time.",
+      "jp": "テッサ、バンがまた壊れたんだ。クラブに二百ドル借りてる。もう潮時だと思う。"
+     },
+     {
+      "sp": 0,
+      "en": "Eight years. We played in garages, bus stations, and that wedding where the groom cried. And you want to quit over a van?",
+      "jp": "八年よ。ガレージも、バスターミナルも、新郎が泣いた結婚式でも演奏したのに。バンのせいでやめるっていうの？"
+     },
+     {
+      "sp": 1,
+      "en": "It's not the van. It's that nobody's coming to the shows. Last month we played for eleven people. Four were the staff.",
+      "jp": "バンのせいじゃない。誰もライブに来ないんだ。先月は十一人。そのうち四人は店のスタッフだった。"
+     },
+     {
+      "sp": 0,
+      "en": "Then play for the seven. Play like it's the Garden. I'm gonna hit those drums like they owe me money.",
+      "jp": "じゃあ七人のために演奏して。ガーデンみたいにやるの。私はドラムを、借金取りみたいに叩いてやる。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "You're serious. You really want to go out loud?",
+      "jp": "本気なんだな。本当に派手に終わらせたいのか。"
+     },
+     {
+      "sp": 0,
+      "en": "I want to go out with the new song. The one you wrote on the bus and never showed anyone.",
+      "jp": "新曲と一緒に終わりたい。あなたがバスの中で書いて、誰にも見せなかった曲で。"
+     },
+     {
+      "sp": 1,
+      "en": "How do you know about that?",
+      "jp": "なんでそれを知ってるんだ？"
+     },
+     {
+      "sp": 0,
+      "en": "You hum it in your sleep. Saturday, Jake. One more time, with feeling.",
+      "jp": "寝てるときに鼻歌で歌ってるもの。土曜日よ、ジェイク。もう一回、心を込めて。"
+     }
+    ]
+   },
+   {
+    "t": "🍳 052｜自分の店を持つ日：My Own Kitchen",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Owen, I signed the lease this morning. Twelve tables, one oven, and a leaky roof. It's mine.",
+      "jp": "オーウェン、今朝リース契約にサインしたの。十二テーブル、オーブン一台、雨漏りする屋根。全部私のものよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Marisol! After ten years of cooking for other people's names. How do you feel?",
+      "jp": "マリソル！ 十年間、他人の看板のために料理してきて、今どんな気分？"
+     },
+     {
+      "sp": 0,
+      "en": "Sick. I almost threw up in the parking lot. My savings are gone, and I've never ordered ingredients for my own place.",
+      "jp": "最悪。駐車場で吐きそうだったわ。貯金は空っぽだし、自分の店の食材なんて発注したことないのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I supply half the restaurants on this street. I'll give you the same prices I give the big guys.",
+      "jp": "この通りの店の半分に、僕は卸してる。大手と同じ値段で出すよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Owen, you can't do that. You'd lose money on me.",
+      "jp": "オーウェン、そんなのだめよ。私のせいで赤字になっちゃう。"
+     },
+     {
+      "sp": 1,
+      "en": "Remember the night you fed me when my truck got stuck in the snow? A bowl of soup and no questions asked.",
+      "jp": "僕のトラックが雪で動けなくなった夜、君がスープを出してくれたの覚えてる？ 何も聞かずに。",
+      "note": "元の形: no questions asked／聞こえ方: ノー・クエスチョンズ・アスクト／使う場面: 理由を聞かずに助ける"
+     },
+     {
+      "sp": 0,
+      "en": "That was one bowl of soup.",
+      "jp": "あれはスープ一杯よ。"
+     },
+     {
+      "sp": 1,
+      "en": "To me, it was a lot more. So what's on the menu? And please don't say fancy foam.",
+      "jp": "僕には、それ以上のものだったんだ。で、メニューは何にするの？ 頼むから、おしゃれな泡はなしで。"
+     },
+     {
+      "sp": 0,
+      "en": "Just my grandmother's braised beef, a good loaf of bread, and a pie. That's the whole menu.",
+      "jp": "祖母のビーフ煮込みと、おいしいパンと、パイだけ。それがメニューのすべてよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'll be your first customer. Save me the corner table.",
+      "jp": "じゃあ最初のお客は僕だ。角の席を取っておいて。"
+     }
+    ]
+   },
+   {
+    "t": "🏅 053｜最後の競技会：The Final Race",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ryan, you've been staring at the water for twenty minutes. The finals start in an hour.",
+      "jp": "ライアン、二十分も水面を見つめてるわよ。決勝は一時間後。"
+     },
+     {
+      "sp": 1,
+      "en": "I know, Coach. This is the last time I'll ever stand on this block. Eighteen years of swimming, and I don't feel anything.",
+      "jp": "分かってます、コーチ。このスタート台に立つのも、これが最後です。十八年泳いできたのに、何も感じないんです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's fear wearing a mask. You felt it at fourteen, too. You threw up on the bus.",
+      "jp": "それは恐怖が仮面をかぶってるのよ。十四歳のときも同じだった。バスで吐いたでしょ。"
+     },
+     {
+      "sp": 1,
+      "en": "I don't wanna be the guy who comes in last at his own farewell.",
+      "jp": "自分の引退試合でビリになる男には、なりたくないんです。",
+      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "You won't be. And even if you are, they'll still stand and clap. Your name's on that wall, Ryan.",
+      "jp": "ならないわ。たとえなっても、みんな立って拍手する。あの壁にはあなたの名前があるのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "What if I get out of the water and there's nothing left? No goal, no schedule, no you yelling at me at five a.m.?",
+      "jp": "もし水から上がって、何も残ってなかったらどうします？ 目標も、予定も、朝五時に怒鳴るコーチもいなくなったら。"
+     },
+     {
+      "sp": 0,
+      "en": "Then you'll finally sleep in. And I'll still call you at five, just to annoy you.",
+      "jp": "そのときは、やっと朝寝坊できるわね。それでも五時に電話してあげる、嫌がらせのためにね。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Okay. Lane four. One more time.",
+      "jp": "分かりました。第四レーン。もう一回だけ。"
+     },
+     {
+      "sp": 0,
+      "en": "Go. And Ryan? Don't look at the clock. Just swim like you did at fourteen.",
+      "jp": "行きなさい。それとライアン、時計は見ないで。十四歳のときみたいに泳ぐのよ。"
+     }
+    ]
+   },
+   {
+    "t": "🚀 054｜起業の決断：Quitting to Build",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dan, why is there a resignation letter on the kitchen table? And why is my name on the envelope?",
+      "jp": "ダン、どうしてキッチンのテーブルに辞表があるの？ しかも封筒に私の名前が書いてあるのはなぜ？"
+     },
+     {
+      "sp": 1,
+      "en": "Because I wanted to show it to you before I hand it in. Amy, I'm gonna quit and build the app full time.",
+      "jp": "出す前に君に見せたかったんだ。エイミー、僕は会社を辞めて、アプリに専念したい。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "You have a mortgage and a baby on the way. You want to quit a stable job for an app nobody's used?",
+      "jp": "ローンもあって、赤ちゃんももうすぐ生まれるのよ。誰も使ったことのないアプリのために、安定した仕事を辞めるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Two hundred people are using it. For free. Last week a nurse wrote to say it saved her an hour every shift.",
+      "jp": "二百人が使ってるんだ。無料でね。先週、看護師さんが毎回のシフトで一時間節約できるってメールをくれた。"
+     },
+     {
+      "sp": 0,
+      "en": "That's wonderful. It's also not rent money.",
+      "jp": "それは素晴らしいわ。でも家賃にはならない。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. So here's the plan. Twelve months of savings, and if I haven't made a salary by then, I go back to a regular job.",
+      "jp": "分かってる。だから計画がある。貯金で十二か月。それまでに給料分を稼げなければ、普通の仕事に戻る。"
+     },
+     {
+      "sp": 0,
+      "en": "You wrote a plan. A real plan, with a date.",
+      "jp": "計画を書いたのね。日付まで入った、ちゃんとしたのを。"
+     },
+     {
+      "sp": 1,
+      "en": "I wrote it last night. I didn't want you to think I was being reckless.",
+      "jp": "昨夜書いたんだ。無謀だと思われたくなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Twelve months. But I read every report, and the baby gets your Sundays. Deal?",
+      "jp": "分かった。十二か月ね。でも報告は全部私が読むし、日曜日は赤ちゃんのためにあけておくこと。いい？"
+     }
+    ]
+   },
+   {
+    "t": "✍️ 055｜最後の一行：The Last Line",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Paul, I finished it. Four hundred pages, and I've been staring at the last line for three days.",
+      "jp": "ポール、書き終えたわ。四百ページ。それなのに、最後の一行を三日間も見つめてるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Claire, that's wonderful! Send it over. I'm dying to read how it ends.",
+      "jp": "クレア、素晴らしいじゃないか！ 送ってくれ。結末が読みたくてたまらないよ。"
+     },
+     {
+      "sp": 0,
+      "en": "It's not that simple. Every ending I write feels like I'm saying goodbye to her. The main character.",
+      "jp": "そんなに簡単じゃないの。どの結末を書いても、あの子にさよならを言ってる気がするのよ。主人公にね。"
+     },
+     {
+      "sp": 1,
+      "en": "Seven years you've been living with her. Of course it's hard.",
+      "jp": "七年間、彼女と暮らしてきたんだ。つらいのは当然だよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Seven years, three publishers who said no, and one divorce. If I finish it, what do I do with my mornings?",
+      "jp": "七年、断ってきた出版社が三社、それに離婚が一回。これを終えたら、朝の時間をどうすればいいの？"
+     },
+     {
+      "sp": 1,
+      "en": "You start the next one. That's what writers do. But first, you let this one go.",
+      "jp": "次を書き始めるのさ。作家ってそういうものだ。でもまず、この作品を手放すんだ。",
+      "note": "元の形: let go／聞こえ方: レット・ゴー／使う場面: 手放す・区切りをつける"
+     },
+     {
+      "sp": 0,
+      "en": "What if it's not good enough?",
+      "jp": "もし、これがまだ良くなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'll tell you, like I always have. But I've read the first three hundred pages twice, and I couldn't stop crying at page two-ten.",
+      "jp": "そのときは、いつも通りはっきり言うよ。でも最初の三百ページは二回読んだし、二百十ページでは涙が止まらなかった。"
+     },
+     {
+      "sp": 0,
+      "en": "Really? Page two-ten is where she finds the letter.",
+      "jp": "本当に？ 二百十ページは彼女が手紙を見つけるところよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Now write her a good last line. She's earned it.",
+      "jp": "そう。さあ、彼女にふさわしい最後の一行を書いて。それだけの価値がある子だ。"
+     }
+    ]
+   },
+   {
+    "t": "🛫 056｜片道の切符：One Way Ticket",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I got in. The master's program in Toronto. They sent the letter an hour ago.",
+      "jp": "ケン、合格したの。トロントの修士課程。一時間前に通知が来たわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Hana! That's incredible. You've been working on that application since last spring.",
+      "jp": "ハナ！ すごいじゃないか。去年の春からずっと、その出願準備をしてたよな。"
+     },
+     {
+      "sp": 0,
+      "en": "Two years, though. Away from Mom. She's getting older, and her knees are bad.",
+      "jp": "でも二年間よ。お母さんから離れることになる。年を取ってきてるし、膝も悪いのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Hey, I live twenty minutes from her. I'll take her to the doctor, and I'll shovel her steps.",
+      "jp": "おい、僕は母さんの家から二十分のところに住んでるんだぞ。病院にも連れていくし、雪かきもする。"
+     },
+     {
+      "sp": 0,
+      "en": "You hate the doctor's waiting room. You said it smells like old magazines.",
+      "jp": "病院の待合室、嫌いでしょ。古い雑誌の匂いがするって言ってたじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll survive. Hana, when did you last do something just for you?",
+      "jp": "耐えるよ。ハナ、最後に自分だけのために何かしたのはいつだ？"
+     },
+     {
+      "sp": 0,
+      "en": "I don't know. Maybe when I picked my own major. And then I came home and worked at the bank for six years.",
+      "jp": "分からない。たぶん専攻を自分で決めたときかな。そのあと帰ってきて、六年も銀行で働いた。",
+      "note": "元の形: I don't know／聞こえ方: I dunno／使う場面: くだけた会話"
+     },
+     {
+      "sp": 1,
+      "en": "Then go. Mom told me last month she wishes she'd gone abroad when she was young. She'll never say it to you.",
+      "jp": "なら行け。先月、母さんが言ってたんだ。若いころ海外に行けばよかったって。お前には絶対言わないだろうけど。"
+     },
+     {
+      "sp": 0,
+      "en": "She said that? Then I'm gonna book the ticket tonight. One way.",
+      "jp": "そんなこと言ってたの？ じゃあ今夜、航空券を取る。片道でね。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🎭 057｜開演前の震え：Backstage Nerves",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mike, where's my script? I swear I left it right here on the prop table. The audition is in ten minutes.",
+      "jp": "マイク、私の台本どこ？ 確かにこの小道具テーブルに置いたの。オーディションは十分後なのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Zoe, it's in your hand. You're holding it. Look.",
+      "jp": "ゾーイ、君の手の中だよ。持ってるじゃないか。ほら。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh no. I'm losing it. I know all the lines, and now I can't remember my own name.",
+      "jp": "どうしよう。おかしくなってきた。台詞は全部頭に入ってるのに、自分の名前も思い出せない。"
+     },
+     {
+      "sp": 1,
+      "en": "Hey, look at me. I've been running lights for this theater for nine years. Everybody who walks out there is scared.",
+      "jp": "ほら、僕を見て。この劇場で九年、照明をやってる。あそこに出ていく人は、みんな怖がってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Even the famous ones?",
+      "jp": "有名な人でも？"
+     },
+     {
+      "sp": 1,
+      "en": "Especially them. One actor threw up in the sink, and then won an award for that exact show.",
+      "jp": "有名な人ほどね。ある俳優は洗面台で吐いて、そのまま同じ舞台で賞を取った。"
+     },
+     {
+      "sp": 0,
+      "en": "That's disgusting, and it really helps.",
+      "jp": "気持ち悪い話だけど、すごく助かるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Here's a trick. Pick one person in the dark and tell the story only to them. I'll be at the back, in the booth, and it'll be me.",
+      "jp": "コツがある。暗闇の中で一人を決めて、その人だけに話すんだ。後ろの調光室に僕がいる。それは僕だってことにして。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. You're my person. Don't blink at the wrong moment.",
+      "jp": "分かった。あなたが私の相手役ね。大事な場面でまばたきしないでよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll hold my breath till you finish. Break a leg, Zoe.",
+      "jp": "君が終わるまで息を止めておく。成功を祈ってる、ゾーイ。",
+      "note": "元の形: Break a leg／聞こえ方: ブレイク・ア・レッグ／使う場面: 本番前に幸運を祈る"
+     }
+    ]
+   },
+   {
+    "t": "🛩️ 058｜反対された夢：Dad Says No",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, I need to say something, and please don't interrupt me this time.",
+      "jp": "お父さん、話したいことがあるの。今度は最後まで遮らないで。"
+     },
+     {
+      "sp": 1,
+      "en": "Go ahead, Mia. I'm listening. I'm even putting down the newspaper.",
+      "jp": "いいよ、ミア。聞いてる。新聞も置いたぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "I didn't take the accounting job. I signed up for flight school. The first class is on Monday.",
+      "jp": "経理の仕事は断ったの。フライトスクールに申し込んだわ。最初の授業は月曜日。"
+     },
+     {
+      "sp": 1,
+      "en": "Flight school. You get sick on the ferry, Mia. You cried on the Ferris wheel when you were nine.",
+      "jp": "フライトスクール。お前はフェリーでも酔うだろう、ミア。九歳のときは観覧車で泣いたじゃないか。"
+     },
+     {
+      "sp": 0,
+      "en": "I was nine. And I've been reading about planes since then. It's the only thing I've ever wanted.",
+      "jp": "九歳だったのよ。それからずっと飛行機の本を読んできた。ほしいと思ったのは、これだけなの。",
+      "note": "元の形: I'm listening／聞こえ方: アイム・リスニング／使う場面: 話をちゃんと聞くと伝える"
+     },
+     {
+      "sp": 1,
+      "en": "It's dangerous, and it's expensive. Your mother and I, we saved that money for your future.",
+      "jp": "危険だし、金もかかる。母さんと私は、お前の将来のためにあの金を貯めたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "This is my future, Dad. Come with me on Saturday. Just one lesson. If you hate it, I'll stop.",
+      "jp": "これが私の将来なの、お父さん。土曜日に一緒に来て。一回だけ。もし嫌だったら、やめる。"
+     },
+     {
+      "sp": 1,
+      "en": "You'd really stop?",
+      "jp": "本当にやめるのか？"
+     },
+     {
+      "sp": 0,
+      "en": "No. But I'd listen to why you hate it. That's a promise.",
+      "jp": "ううん。でも、なぜ嫌なのかはちゃんと聞く。それは約束するわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Fine. Saturday. But I'm bringing my own seat belt.",
+      "jp": "分かった。土曜日だな。ただし、シートベルトは自分の分を持っていくぞ。"
+     }
+    ]
+   },
+   {
+    "t": "🏃 059｜四十二キロの夜明け：Sunrise at Mile Twenty-Six",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Pete, my legs are shaking. I can't do this. I've got six miles to go, and I'm done.",
+      "jp": "ピート、足が震えてる。もう無理。あと十キロもあるのに、限界よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Nina, look at me. You trained for fourteen months. You ran twenty miles in the rain, in January. This is just the same road.",
+      "jp": "ニーナ、俺を見ろ。十四か月も練習したんだ。一月の雨の中でも三十キロ走った。ここはそれと同じ道だ。"
+     },
+     {
+      "sp": 0,
+      "en": "In January, I wasn't bleeding from my toes.",
+      "jp": "一月は、足の指から血なんか出てなかったわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you can tell your grandkids about it. Come on, walk with me. Twenty steps, then we run again.",
+      "jp": "なら孫に自慢できるな。さあ、一緒に歩こう。二十歩歩いて、そしたらまた走る。"
+     },
+     {
+      "sp": 0,
+      "en": "Why are you even here? You said you hate running.",
+      "jp": "どうしてあなたがここにいるの？ 走るの嫌いって言ってたのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Because when your doctor told you to quit three years ago, you said you'd run a marathon instead. I wanna see it.",
+      "jp": "三年前に医者にやめろと言われたとき、君は代わりにマラソンを走るって言った。それが見たいんだ。",
+      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+     },
+     {
+      "sp": 0,
+      "en": "I said that to make him mad.",
+      "jp": "あれは、お医者さんを怒らせたくて言っただけよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Well, it worked. Look, the sun's coming up. Eight hundred more meters. You can hear the crowd?",
+      "jp": "効いたよ。見ろ、日が昇ってきた。あと八百メートル。歓声が聞こえるか？"
+     },
+     {
+      "sp": 0,
+      "en": "I hear them. Pete, don't let go of my hand till the line.",
+      "jp": "聞こえる。ピート、ゴールまで手を離さないでね。"
+     }
+    ]
+   },
+   {
+    "t": "🔭 060｜星に手を伸ばす：Reaching for the Stars",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Professor Allen, the committee emailed me. They want me to lead the telescope proposal. Me. A second-year researcher.",
+      "jp": "アレン教授、委員会からメールが来ました。望遠鏡の計画を私に率いてほしいと。二年目の研究員の私に。"
+     },
+     {
+      "sp": 1,
+      "en": "Yuki, that's no surprise. Your paper last spring is why they called. Why don't you look happy?",
+      "jp": "ユキ、驚くことじゃない。去年の春の論文が理由で連絡が来たんだ。どうして嬉しそうじゃないんだい？"
+     },
+     {
+      "sp": 0,
+      "en": "Because I'm scared. If I say yes, I could be here for ten years. And if the funding gets cut, ten years vanish.",
+      "jp": "怖いからです。引き受けたら、十年はここに縛られるかもしれません。資金が打ち切られたら、十年が消えます。"
+     },
+     {
+      "sp": 1,
+      "en": "I spent twenty-two years on a mission that was canceled the week before launch. I won't tell you it didn't hurt.",
+      "jp": "私は二十二年かけた計画が、打ち上げの一週間前に中止になった。傷つかなかったとは言わないよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then why did you stay in science?",
+      "jp": "それなのに、どうして科学を続けたんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because the data from the failed mission found a planet nobody expected. You'd be amazed what you find when you stop expecting.",
+      "jp": "中止になった計画のデータが、誰も予想しなかった惑星を見つけたからだ。期待をやめたとき、何が見つかるか驚くよ。"
+     },
+     {
+      "sp": 0,
+      "en": "So even a failure could be a discovery.",
+      "jp": "失敗でさえ、発見になりうるんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Sometimes. Yuki, say yes. And when you stand in that dome in a decade, send me a photograph of the first image.",
+      "jp": "ときにはね。ユキ、引き受けなさい。十年後にあのドームに立ったら、最初の画像の写真を私に送ってくれ。"
+     },
+     {
+      "sp": 0,
+      "en": "I will. I promise. I'll send it even if you're sitting right next to me.",
+      "jp": "必ず送ります。約束します。教授が隣に座っていても、送りますから。",
+      "note": "元の形: I promise／聞こえ方: アイ・プロミス／使う場面: 約束する"
+     }
+    ]
+   }
+  ]
+ }
+]

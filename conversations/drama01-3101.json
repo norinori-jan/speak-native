@@ -1,0 +1,517 @@
+[
+ {
+  "id": "drama01",
+  "ic": "💘",
+  "n": "ドラマ100・恋のはじまり・すれ違い",
+  "hint": "Ten short two-person dramas about the start of love: crushes, misunderstandings, awkward dates, and almost-confessions.",
+  "level": 3,
+  "keywords": "romance, misunderstanding, drama",
+  "d": [
+   {
+    "t": "💘 001｜既読スルーの理由：Left on Read",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Daniel, you read my message at 9:15 last night. It's noon now.",
+      "jp": "ダニエル、昨日の夜9時15分に私のメッセージ読んだよね。もうお昼なんだけど。"
+     },
+     {
+      "sp": 1,
+      "en": "I know, I know. I started typing like five times, and then I deleted everything.",
+      "jp": "わかってる、わかってるよ。5回くらい打ち始めて、そのたびに全部消したんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Why? It was just a question about Saturday.",
+      "jp": "どうして？ 土曜日のことを聞いただけじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Because I wanted my answer to sound cool. And every version sounded desperate.",
+      "jp": "だって、かっこよく返したかったんだ。でもどれも必死な感じになっちゃってさ。"
+     },
+     {
+      "sp": 0,
+      "en": "You spent fourteen hours trying to sound cool?",
+      "jp": "かっこよく見せるのに14時間もかけたの？"
+     },
+     {
+      "sp": 1,
+      "en": "Thirteen and a half. I fell asleep for a while.",
+      "jp": "13時間半。ちょっと寝たから。",
+      "note": "元の形: a while／聞こえ方: ア ワイル（つなげて発音）／使う場面: 短い時間を表す日常会話"
+     },
+     {
+      "sp": 0,
+      "en": "Okay, so what was the answer you couldn't send?",
+      "jp": "で、送れなかった返事って何だったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Yes, I want to go to the concert with you. Is that cool enough?",
+      "jp": "うん。うん、君とコンサートに行きたい。これでかっこいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Honestly? It's perfect. Now put your phone down and say it again, out loud.",
+      "jp": "正直？ 完璧よ。スマホを置いて、もう一度声に出して言って。"
+     }
+    ]
+   },
+   {
+    "t": "🌂 002｜バス停の傘：One Umbrella, Two Strangers",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, you're standing in the rain. There's room under my umbrella.",
+      "jp": "あの、雨に濡れてますよ。私の傘に入ってください。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks, but I'm already soaked. My bus was supposed to come twenty minutes ago.",
+      "jp": "ありがとう、でももうずぶ濡れで。バスは20分前に来るはずだったんです。"
+     },
+     {
+      "sp": 0,
+      "en": "The 42? That bus never comes on time. I take it every morning.",
+      "jp": "42番ですか？ あのバスは時間通りに来ませんよ。毎朝乗ってるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Every morning? Then how have I never seen you before?",
+      "jp": "毎朝？ じゃあどうして今まで会ったことがないんだろう。"
+     },
+     {
+      "sp": 0,
+      "en": "Maybe you never looked up from your phone.",
+      "jp": "あなたがスマホから顔を上げなかっただけかも。"
+     },
+     {
+      "sp": 1,
+      "en": "Ouch. Okay, that's fair. I'm Ethan, by the way.",
+      "jp": "痛いな。まあ、その通りだ。僕はイーサン。",
+      "note": "元の形: that is fair／聞こえ方: ザッツ フェア／使う場面: 相手の指摘を素直に認めるとき"
+     },
+     {
+      "sp": 0,
+      "en": "Nora. Look, here comes your bus. Finally.",
+      "jp": "ノラよ。ほら、バスが来たわ。やっと。"
+     },
+     {
+      "sp": 1,
+      "en": "Actually, I think I'll wait for the next one. If you don't mind sharing the umbrella.",
+      "jp": "実は、次のに乗ることにするよ。傘を一緒に使わせてもらえるなら。"
+     },
+     {
+      "sp": 0,
+      "en": "Then you'd better hold it. You're taller, and my arm hurts.",
+      "jp": "じゃあ、あなたが持って。背が高いし、私の腕がもう疲れたの。"
+     }
+    ]
+   },
+   {
+    "t": "☕ 003｜間違えたコーヒー：The Wrong Latte",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Sorry, I think you took my coffee. Mine has oat milk and an extra shot.",
+      "jp": "ごめんなさい、それ私のコーヒーだと思います。オーツミルクでエスプレッソ追加なんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no. I've already taken three sips. Mine was black. This is way too sweet.",
+      "jp": "うわ、もう3口飲んじゃった。僕のはブラックだったのに。これは甘すぎる。"
+     },
+     {
+      "sp": 0,
+      "en": "It's not sweet. It's just not burnt, like whatever you drink.",
+      "jp": "甘くないわよ。あなたが飲んでるみたいに焦げてないだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Ha. Fine. Let me buy you a new one. It's the least I can do.",
+      "jp": "はは。わかった。新しいのをおごらせて。せめてもの償いに。",
+      "note": "元の形: the least I can do／聞こえ方: ザ リースト アイ キャン ドゥ／使う場面: お詫びやお礼を申し出るとき"
+     },
+     {
+      "sp": 0,
+      "en": "You don't have to. I'm late for work anyway.",
+      "jp": "いいのに。どうせ仕事に遅刻しそうだし。"
+     },
+     {
+      "sp": 1,
+      "en": "Then take mine, the one with sips missing, and give me your number. I'll owe you a coffee.",
+      "jp": "じゃあ、僕のを持っていって。それと番号を教えて。コーヒー1杯の借りにするから。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait, which cup is mine again?",
+      "jp": "待って、結局どっちが私のカップ？"
+     },
+     {
+      "sp": 1,
+      "en": "The one with a heart drawn on it. The barista drew it for you. I was jealous.",
+      "jp": "ハートが描いてあるやつ。バリスタが君のために描いたんだ。ちょっと嫉妬したよ。"
+     }
+    ]
+   },
+   {
+    "t": "📱 004｜誤送信：Sent to the Wrong Person",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Marcus, please tell me you didn't just send me a message that says, I can't stop thinking about you.",
+      "jp": "マーカス、今送ってきた「君のことが頭から離れない」ってメッセージ、違うって言ってよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, that was supposed to go to my sister's friend. I mean, no. I mean...",
+      "jp": "えっと、あれは妹の友達に送るはずだったんだ。いや、違う。つまり……"
+     },
+     {
+      "sp": 0,
+      "en": "Your sister's friend? Wow. I'm your coworker. We sit next to each other.",
+      "jp": "妹さんの友達？ へえ。私はあなたの同僚よ。隣の席なんだけど。"
+     },
+     {
+      "sp": 1,
+      "en": "I know! That's why I typed it in the wrong chat. My thumb slipped.",
+      "jp": "わかってる！ だから間違えたんだ。親指が滑って、違うチャットに打っちゃって。"
+     },
+     {
+      "sp": 0,
+      "en": "So you're saying you meant to send it to someone else?",
+      "jp": "つまり、ほかの人に送るつもりだったってこと？"
+     },
+     {
+      "sp": 1,
+      "en": "No. I mean, yes, I wrote it for you. But I was going to send it next month, after the project.",
+      "jp": "いや、その、君宛てに書いたのは本当。でも来月、プロジェクトが終わってから送るつもりだったんだ。",
+      "note": "元の形: I was going to／聞こえ方: アイ ワズ ゴナ／使う場面: 実行しなかった予定を話すとき"
+     },
+     {
+      "sp": 0,
+      "en": "Next month? You were going to make me wait a whole month?",
+      "jp": "来月？ まるまる1か月も私を待たせるつもりだったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Is that a bad thing? Wait, are you smiling?",
+      "jp": "それってまずかった？ ていうか、笑ってる？"
+     },
+     {
+      "sp": 0,
+      "en": "Delete the rest of that chat. And buy me lunch. Today.",
+      "jp": "そのチャットの残りは消して。それと今日のお昼をおごって。"
+     }
+    ]
+   },
+   {
+    "t": "🌙 005｜告白前夜：The Night Before",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Tomorrow's the last day of school, Ben. And I still haven't told Jake how I feel.",
+      "jp": "明日で卒業よ、ベン。それなのにまだジェイクに気持ちを伝えてない。"
+     },
+     {
+      "sp": 1,
+      "en": "So tell him. You've liked him since ninth grade. That's four years.",
+      "jp": "なら言えばいい。9年生のときからずっと好きだろ。もう4年だぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "What if he laughs? What if things get weird and we can't even be friends?",
+      "jp": "もし笑われたら？ 気まずくなって、友達でもいられなくなったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then you'll never see him again anyway. What do you have to lose?",
+      "jp": "どうせ明日からは会わなくなるんだ。失うものなんてないだろ。",
+      "note": "元の形: What do you have to lose?／聞こえ方: ワット ドゥ ヤ ハフ トゥ ルーズ／使う場面: 背中を押すとき"
+     },
+     {
+      "sp": 0,
+      "en": "My dignity. My whole summer. My last good memory of this place.",
+      "jp": "プライド。夏休みまるごと。この町での最後のいい思い出。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Then write it down. A short note. Give it to him at the party.",
+      "jp": "わかった。じゃあ書けよ。短いメモでいい。パーティーで渡すんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "I already wrote it. It's in my bag. Seven drafts.",
+      "jp": "もう書いたの。かばんに入ってる。下書き7枚目。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you're done thinking. Just don't read it to him. Hand it over and run.",
+      "jp": "なら、もう悩む必要はないな。読み上げちゃだめだぞ。渡して、走って逃げろ。"
+     },
+     {
+      "sp": 0,
+      "en": "Ben? Why do you sound sad?",
+      "jp": "ベン？ どうして悲しそうなの？"
+     }
+    ]
+   },
+   {
+    "t": "🍝 006｜初デートの大惨事：The Worst First Date",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Well, that was the worst first date of my life. In the best possible way.",
+      "jp": "いやあ、人生で最悪の初デートだったわ。いい意味でね。"
+     },
+     {
+      "sp": 1,
+      "en": "I spilled red sauce on your white dress, and the waiter slipped on my napkin.",
+      "jp": "君の白いワンピースにトマトソースをこぼして、ウェイターは僕のナプキンで滑った。"
+     },
+     {
+      "sp": 0,
+      "en": "And you called him sir, then sorry, then sir again. He looked so confused.",
+      "jp": "しかも「サー」って呼んで、「ごめん」って言って、また「サー」って。彼、すごく混乱してたわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I was nervous. I'd been planning this for two weeks. I even practiced my jokes.",
+      "jp": "緊張してたんだ。2週間も前から計画してたのに。冗談まで練習したんだよ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's why they all sounded so strange. I wondered about that.",
+      "jp": "だからどれも変な感じだったのね。不思議に思ってたの。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. So you won't go out with me again.",
+      "jp": "最高だ。じゃあもう二度と僕とは出かけてくれないね。"
+     },
+     {
+      "sp": 0,
+      "en": "I didn't say that. I said it was the worst. I didn't say it wasn't fun.",
+      "jp": "そんなこと言ってないわ。最悪だったとは言ったけど、楽しくなかったとは言ってない。",
+      "note": "元の形: didn't say that／聞こえ方: ディドゥン セイ ザッ（tをほぼ発音しない）／使う場面: 相手の誤解を正すとき"
+     },
+     {
+      "sp": 1,
+      "en": "So there's a second date?",
+      "jp": "じゃあ、2回目はあるの？"
+     },
+     {
+      "sp": 0,
+      "en": "Saturday. But I'm picking the restaurant, and I'm wearing something dark.",
+      "jp": "土曜日ね。でもお店は私が選ぶし、着ていくのは暗い色の服にするわ。"
+     }
+    ]
+   },
+   {
+    "t": "🎂 007｜サプライズの誤解：A Surprise Gone Wrong",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Why is your phone face down? And why did you hide it when I walked in?",
+      "jp": "どうしてスマホを伏せてるの？ 私が入ってきたとき、どうして隠したの？"
+     },
+     {
+      "sp": 1,
+      "en": "It's nothing. Just work stuff. Boring. You don't want to see it.",
+      "jp": "何でもないよ。仕事のことさ。つまらないよ。見たくないでしょ。"
+     },
+     {
+      "sp": 0,
+      "en": "You've been whispering on the phone for a week. And last night you said, She can't know.",
+      "jp": "1週間ずっと電話でひそひそ話してたわよね。昨日の夜は「彼女には知られちゃだめだ」って言ってた。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait, you heard that? Okay, this looks bad. But it's not what you think.",
+      "jp": "待って、聞いてたの？ まあ、怪しく見えるよね。でも君が思ってるようなことじゃないんだ。",
+      "note": "元の形: what you think／聞こえ方: ワッチュ シンク／使う場面: 誤解を解こうとするとき"
+     },
+     {
+      "sp": 0,
+      "en": "Then tell me what it is. Because I've been crying in the bathroom since Tuesday.",
+      "jp": "じゃあ何なのか教えて。私、火曜日からお風呂場で泣いてたのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, Lily. I'm planning your thirtieth birthday party. Forty people. It's on Saturday.",
+      "jp": "ああ、リリー。君の30歳の誕生日パーティーを計画してたんだ。40人も呼んで。土曜日にね。"
+     },
+     {
+      "sp": 0,
+      "en": "A party? With forty people? You hate parties.",
+      "jp": "パーティー？ 40人も？ あなた、パーティー嫌いじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "I hate them. But you love them. So I've learned to make a spreadsheet.",
+      "jp": "大嫌いだよ。でも君は大好きだろ。だから表計算ソフトの使い方まで覚えたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm so sorry. And I'm also pretending I know nothing on Saturday.",
+      "jp": "本当にごめんなさい。それと、土曜日は何も知らないふりをするわね。"
+     }
+    ]
+   },
+   {
+    "t": "📚 008｜図書館の付箋：Sticky Note Love",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Someone left another sticky note in my chemistry book. It says, Page 112 is a lie.",
+      "jp": "また誰かが私の化学の教科書に付箋を貼ったの。「112ページは嘘」ですって。"
+     },
+     {
+      "sp": 1,
+      "en": "Well, is it? Page 112 has a mistake. The formula is wrong.",
+      "jp": "で、そうなの？ 112ページは間違ってるよ。公式が違ってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait. How do you know what page it's on?",
+      "jp": "待って。どうしてそのページのことを知ってるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Because I, uh, borrowed the book first. In October. I read it twice.",
+      "jp": "えっと、僕が先にその本を借りたからさ。10月に。2回も読んだんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "So you're the one writing the notes? There are twelve of them!",
+      "jp": "じゃあ、付箋を書いてたのはあなたなの？ 12枚もあるのよ！"
+     },
+     {
+      "sp": 1,
+      "en": "I thought whoever borrowed it next would laugh. I didn't think she'd write back.",
+      "jp": "次に借りた人が笑ってくれればいいと思ってた。まさか返事をくれるなんて思わなかったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I wrote back eleven times. You never answered the last one.",
+      "jp": "11回も返事を書いたわ。最後の1枚には、あなた返事をくれなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "The last one said, Want to get coffee? I panicked. I'm shy in person.",
+      "jp": "最後のは「コーヒー飲みに行かない？」だった。パニックになったんだ。実際に会うと人見知りでさ。",
+      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた誘い・質問"
+     },
+     {
+      "sp": 0,
+      "en": "Then answer it now. I'm sitting right here, and I'm buying.",
+      "jp": "なら今答えて。私はここにいるし、おごるわよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎡 009｜友達以上：More Than Friends",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You've been quiet since we got on the Ferris wheel. Are you scared of heights?",
+      "jp": "観覧車に乗ってから静かね。高いところが怖いの？"
+     },
+     {
+      "sp": 1,
+      "en": "No, I'm scared of something else. Maya, can I ask you a weird question?",
+      "jp": "いや、別のものが怖いんだ。マヤ、変なこと聞いてもいい？"
+     },
+     {
+      "sp": 0,
+      "en": "You've known me for ten years. Nothing you ask can be weird.",
+      "jp": "10年の付き合いでしょ。あなたが聞くことなんて、変なわけないわ。"
+     },
+     {
+      "sp": 1,
+      "en": "When your last boyfriend left, I was relieved. I never told you that. Is that terrible?",
+      "jp": "君の前の彼氏がいなくなったとき、僕はほっとしたんだ。今まで言わなかったけど。ひどいかな？"
+     },
+     {
+      "sp": 0,
+      "en": "Relieved? Why would you be relieved?",
+      "jp": "ほっとした？ どうしてほっとするの？"
+     },
+     {
+      "sp": 1,
+      "en": "Because every time you were with him, I wished it was me.",
+      "jp": "君が彼といるたびに、それが僕だったらって思ってたからだよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Sam, we're at the very top. You really picked the moment.",
+      "jp": "サム、今ちょうど一番上よ。ほんとにタイミング選んだわね。",
+      "note": "元の形: picked the moment／聞こえ方: ピックト ザ モーメント（kとtが続いて短く切れる）／使う場面: 皮肉まじりの冗談"
+     },
+     {
+      "sp": 1,
+      "en": "I couldn't escape if you said no. That was the plan.",
+      "jp": "もし君が断っても逃げられないだろ。それが作戦だったんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the worst plan I've ever heard. My answer's yes, by the way.",
+      "jp": "今まで聞いた中で最悪の作戦ね。ちなみに、答えはイエスよ。"
+     }
+    ]
+   },
+   {
+    "t": "🥂 010｜鉢合わせの前に：Before We Run Into Him",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Oh no. That gray car just pulled in. That's Ryan's car. My ex is coming to this party.",
+      "jp": "どうしよう。あの灰色の車が入ってきたわ。ライアンの車よ。元カレがこのパーティーに来るの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, breathe. Do you want to leave, or do you want to look amazing in front of him?",
+      "jp": "よし、深呼吸して。帰りたい？ それとも彼の前で最高に素敵に見せたい？"
+     },
+     {
+      "sp": 0,
+      "en": "Honestly? The second one. But I'm wearing a sweater with a cat on it.",
+      "jp": "正直に言うと後者。でも私、猫の絵がついたセーターなのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "It's a good cat. Listen, I'll pretend to be your boyfriend. Just for ten minutes.",
+      "jp": "いい猫だよ。聞いて、僕が君の彼氏のふりをする。ほんの10分だけ。"
+     },
+     {
+      "sp": 0,
+      "en": "Tom, you're my neighbor. You don't even know my middle name.",
+      "jp": "トム、あなたはお隣さんでしょ。私のミドルネームも知らないじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Claire Elizabeth Hart. I read it on a package once. See? I'm very convincing.",
+      "jp": "クレア・エリザベス・ハート。前に荷物の伝票で見たんだ。ほらね？ 僕はすごく説得力があるだろ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a little creepy, but fine. He's walking over. Hold my hand.",
+      "jp": "ちょっと気味悪いけど、まあいいわ。彼がこっちに来る。手をつないで。",
+      "note": "元の形: a little／聞こえ方: ア リルル（tがラ行のように聞こえる）／使う場面: 「少し」をやわらかく言うとき"
+     },
+     {
+      "sp": 1,
+      "en": "Done. And for the record, I wasn't pretending about the cat. I really like it.",
+      "jp": "つないだよ。それと言っておくけど、猫のことは演技じゃない。本当に気に入ってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait, Tom, is your hand shaking? Is this still pretend?",
+      "jp": "待って、トム、手が震えてない？ これってまだ演技なの？"
+     }
+    ]
+   }
+  ]
+ }
+]

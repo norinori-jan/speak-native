@@ -1,0 +1,492 @@
+[
+ {
+  "id": "drama07",
+  "ic": "✈️",
+  "n": "ドラマ100・旅先のハプニング・出会い",
+  "hint": "Ten short two-person dramas about travel mishaps and chance meetings, from missed flights and swapped suitcases to surprise encounters on trains and in foreign cities.",
+  "level": 3,
+  "keywords": "travel, encounter, drama",
+  "d": [
+   {
+    "t": "✈️ 061｜乗り遅れた最終便：The Last Flight",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, the gate just closed. I'm on the 9:40 flight to Boston. I was only two minutes late!",
+      "jp": "すみません、搭乗口が閉まったばかりで。9時40分のボストン行きなんです。たった2分遅れただけなのに!"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry, ma'am. The doors are locked, and the plane is already backing out. That was the last flight tonight.",
+      "jp": "申し訳ありません、お客様。ドアはもう閉まって、機体も動き出しています。今夜はあれが最終便でした。"
+     },
+     {
+      "sp": 0,
+      "en": "You're kidding. My sister's wedding is tomorrow at noon. I'm the maid of honor!",
+      "jp": "うそでしょう。姉の結婚式が明日のお昼なの。私、付き添い役なのよ!"
+     },
+     {
+      "sp": 1,
+      "en": "Hold on. Let me check something. There's a night flight to New York at 11:55, and a train to Boston from there.",
+      "jp": "少しお待ちを。調べてみます。11時55分発のニューヨーク行きがあります。そこからボストンへは電車です。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait, really? Would I make it by morning?",
+      "jp": "えっ、本当に? 朝までに着けますか?"
+     },
+     {
+      "sp": 1,
+      "en": "You'd land at six, take the 7:15 train, and be in Boston by eleven. It's tight, but it works.",
+      "jp": "6時に着いて、7時15分の電車に乗れば、11時にはボストンです。ぎりぎりですが、間に合います。"
+     },
+     {
+      "sp": 0,
+      "en": "I could hug you right now. Why are you being so nice to me?",
+      "jp": "今すぐ抱きしめたいくらい。どうしてそんなに親切にしてくれるんですか?"
+     },
+     {
+      "sp": 1,
+      "en": "Because I missed my own brother's wedding once. Go, run! Gate 22. And next time, set two alarms.",
+      "jp": "僕も昔、兄の結婚式に出られなかったことがあるんです。さあ走って! 22番ゲートです。次は目覚ましを2つかけてくださいね。",
+      "note": "元の形: Let me／聞こえ方: lemme／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🧳 062｜入れ替わったスーツケース：The Wrong Suitcase",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Um, I think this suitcase is mine. It has the green ribbon on the handle. I tied that ribbon myself.",
+      "jp": "あの、このスーツケース、私のだと思うんですけど。持ち手に緑のリボンがついてるでしょう。私が結んだんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Funny, because I tied the same ribbon on mine. Mine is in Prague, though. This one's in Lisbon, apparently.",
+      "jp": "不思議ですね、僕も同じリボンを結んでいたんです。僕のはプラハに行ってしまったみたいですが。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait. You mean we both grabbed the wrong bag? Oh no. My cat's birthday present is in there!",
+      "jp": "待って。二人とも間違ったバッグを取ったってこと? やだ。うちの猫の誕生日プレゼントが入ってるのに!"
+     },
+     {
+      "sp": 1,
+      "en": "A birthday present for a cat? Okay, now I'm worried. Mine has a very expensive violin in it.",
+      "jp": "猫への誕生日プレゼント? それは心配ですね。僕のにはすごく高いバイオリンが入ってるんです。"
+     },
+     {
+      "sp": 0,
+      "en": "A violin! Then I opened your suitcase on the plane by mistake. Sorry, I borrowed your sweater. It was freezing.",
+      "jp": "バイオリン! じゃあ私、機内で間違えてあなたの荷物を開けちゃった。ごめんなさい、セーターを借りたの。寒くて。"
+     },
+     {
+      "sp": 1,
+      "en": "Keep it. Honestly, my mother knitted it, and she picked the ugliest color. I'm glad someone's wearing it.",
+      "jp": "どうぞ着ていてください。母が編んだんですが、一番ひどい色を選んでね。誰かが着てくれて嬉しいですよ。"
+     },
+     {
+      "sp": 0,
+      "en": "It's mustard yellow, and I love it. Let's go to the lost luggage desk together.",
+      "jp": "からし色でしょ、私は好きよ。一緒に手荷物の窓口へ行きましょう。"
+     },
+     {
+      "sp": 1,
+      "en": "Deal. And if the violin survived, I'll play your cat a birthday song.",
+      "jp": "決まりですね。バイオリンが無事なら、あなたの猫に誕生日の曲を弾いてあげますよ。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🏨 063｜ダブルブッキング：Double Booked",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I have a reservation under Reyes, three nights, ocean view. I booked it back in March.",
+      "jp": "こんにちは、レイエスで予約しています。3泊、オーシャンビューで。3月に取りました。"
+     },
+     {
+      "sp": 1,
+      "en": "Ah. Ms. Reyes. Yes. Um, we seem to have a small problem. Your room has been given to another guest.",
+      "jp": "ああ、レイエス様。はい。ええと、ちょっとした問題がありまして。お部屋が別のお客様に割り当てられてしまっておりまして。"
+     },
+     {
+      "sp": 0,
+      "en": "A small problem? I've been traveling for fourteen hours. I just want a bed.",
+      "jp": "ちょっとした問題? 私、14時間も移動してきたんです。ベッドが欲しいだけなのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I completely understand. The only room left is the honeymoon suite. It's twice the size, and it's yours for the same price.",
+      "jp": "お気持ちはよく分かります。残っているのはハネムーンスイートだけです。広さは倍で、お値段は同じにいたします。"
+     },
+     {
+      "sp": 0,
+      "en": "The honeymoon suite? For one person? That's a little sad, don't you think?",
+      "jp": "ハネムーンスイート? 一人で? ちょっと寂しくないですか?"
+     },
+     {
+      "sp": 1,
+      "en": "There's a hot tub on the balcony, and I'll send up a free breakfast every morning. Sad people love breakfast.",
+      "jp": "バルコニーにジャグジーがありますし、毎朝朝食を無料でお届けします。寂しい方は朝食がお好きですから。"
+     },
+     {
+      "sp": 0,
+      "en": "Ha! Okay, you win. But if there are rose petals on the bed, I'm taking a picture for my friends.",
+      "jp": "ふふ! 分かったわ、あなたの勝ち。でもベッドにバラの花びらがあったら、友達に写真を送るわよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Please do. Honestly, that would be the best advertisement we've had all year.",
+      "jp": "ぜひどうぞ。正直、今年一番の宣伝になりますよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I'll even tag the hotel. Don't make me regret it.",
+      "jp": "それならホテルのタグもつけてあげる。後悔させないでね。",
+      "note": "元の形: kind of／聞こえ方: kinda／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🧭 064｜迷路の奥の出会い：Lost in the Medina",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I'm so sorry to bother you, but I've walked past this same blue door three times. Do you know the way to the main square?",
+      "jp": "お邪魔してすみません、この青いドアの前をもう3回も通ってるんです。広場への道をご存じですか?"
+     },
+     {
+      "sp": 1,
+      "en": "Three times? That's nothing. Tourists usually go five or six before they ask. Come, sit, have some mint tea first.",
+      "jp": "3回? 大したことないですよ。観光客は5、6回は回ってから聞きますから。まずはミントティーでもどうぞ、座って。"
+     },
+     {
+      "sp": 0,
+      "en": "I really should find the square before it gets dark. My phone died an hour ago.",
+      "jp": "暗くなる前に広場を見つけないと。携帯は1時間前に切れちゃって。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you are in luck. My shop is on the old street, and my nephew will walk you there. But tea first. It's the rule.",
+      "jp": "それは運がいい。うちの店は古い通りにあって、甥が広場まで案内しますよ。でもまずお茶。それが決まりです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is that a real rule, or are you just trying to sell me a carpet?",
+      "jp": "それって本当に決まりなの? それとも絨毯を売りつけたいだけ?"
+     },
+     {
+      "sp": 1,
+      "en": "Both, honestly. But the tea is free, and the carpet is optional. My grandmother wove this one, forty years ago.",
+      "jp": "正直、両方です。でもお茶は無料で、絨毯は任意です。これは祖母が40年前に織ったものでね。"
+     },
+     {
+      "sp": 0,
+      "en": "It's beautiful. I don't have room in my backpack, though. What if I buy the small one, the red one?",
+      "jp": "きれい。でもリュックに入らないの。小さい赤いのを買うのはどうかしら?"
+     },
+     {
+      "sp": 1,
+      "en": "The red one is the best one. You didn't get lost, my friend. You were just brought here.",
+      "jp": "赤いのが一番いいものです。あなたは迷ったんじゃない、ここに導かれたんですよ。",
+      "note": "元の形: What if／聞こえ方: ワッティフ／使う場面: 提案や仮定の会話"
+     }
+    ]
+   },
+   {
+    "t": "🌙 065｜帰国前夜：The Night Before Home",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You're still up? It's two in the morning. Your flight leaves at nine, Kenji.",
+      "jp": "まだ起きてるの? 朝の2時よ。フライトは9時でしょ、ケンジ。"
+     },
+     {
+      "sp": 1,
+      "en": "I can't sleep. Ten days in Hanoi, and tonight I finally understand how to cross the street.",
+      "jp": "眠れなくてさ。ハノイに10日もいて、今夜やっと道の渡り方が分かったよ。"
+     },
+     {
+      "sp": 0,
+      "en": "You just walk slowly and don't stop. I told you that on day one.",
+      "jp": "ゆっくり歩いて止まらない、それだけよ。初日に教えたじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "You did. I just needed ten days to believe you. Can I ask you something? Why did you stay in the hostel so long?",
+      "jp": "言われたね。信じるのに10日かかったんだ。ひとつ聞いていい? どうして君はそんなに長くこのホステルにいたの?"
+     },
+     {
+      "sp": 0,
+      "en": "I came for a week, three months ago. I kept saying, just one more day. Then I got a job at the coffee shop downstairs.",
+      "jp": "1週間のつもりで3か月前に来たの。あと1日だけ、って言い続けてね。そのうち階下のカフェで働き始めたのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "So you're not going home at all? Wow. I'm jealous, and a little scared for you.",
+      "jp": "じゃあ帰らないの? すごいな。うらやましいし、ちょっと君が心配でもある。"
+     },
+     {
+      "sp": 0,
+      "en": "Scared is normal. Here, I made you an egg coffee. A going-away present.",
+      "jp": "怖いのは普通よ。はい、エッグコーヒー作っておいたわ。お別れのプレゼント。"
+     },
+     {
+      "sp": 1,
+      "en": "It's sweet. Like this whole trip. Next year, I'm coming back, and I'm staying longer than a week.",
+      "jp": "甘いね。この旅みたいだ。来年また来るよ、1週間よりもっと長くいる。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll save you the corner table by the window.",
+      "jp": "窓際の角のテーブルを取っておくわね。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🚪 066｜部屋を間違えた：Wrong Room",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Aaah! Who are you? Why is there a man in my room, eating my chocolates?",
+      "jp": "きゃあ! あなた誰? どうして私の部屋に男の人がいて、私のチョコを食べてるの?"
+     },
+     {
+      "sp": 1,
+      "en": "Your room? This is room 412. My key worked, and my suitcase is on the bed. These chocolates were on the pillow!",
+      "jp": "君の部屋? ここは412号室だよ。鍵も使えたし、スーツケースもベッドの上だ。このチョコは枕の上にあったんだ!"
+     },
+     {
+      "sp": 0,
+      "en": "Room 412? Mine is 412 too. Look, here's my key card. Wait, it says Hotel Aurora.",
+      "jp": "412号室? 私も412よ。ほら、カードキー。……待って、ホテル・オーロラって書いてある。"
+     },
+     {
+      "sp": 1,
+      "en": "This is the Hotel Aurelia. Two letters different. We're next door to each other, I guess.",
+      "jp": "ここはホテル・アウレリアだよ。2文字違い。つまり、お隣同士ってことだね。"
+     },
+     {
+      "sp": 0,
+      "en": "That explains why my key opened this door, too. Weird. The lock must be old.",
+      "jp": "だから私のカードでもこのドアが開いたのね。変なの。鍵が古いんだわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Or the universe wants us to meet. Okay, that sounded strange. Sorry. I haven't slept in two days.",
+      "jp": "それか、宇宙が僕らを会わせたかったのかも。……変なこと言ったね、ごめん。2日寝てなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "It did sound strange. But I'll forgive you if you tell the front desk about the lock. And return my chocolate.",
+      "jp": "確かに変だったわ。でも、フロントに鍵のことを伝えてくれて、チョコを返してくれたら許してあげる。"
+     },
+     {
+      "sp": 1,
+      "en": "I only ate one. Here, take the rest. And tomorrow, I'll buy you coffee at the right hotel.",
+      "jp": "食べたのは1個だけだよ。残りをどうぞ。明日、正しいホテルでコーヒーをおごらせて。",
+      "note": "元の形: I haven't／聞こえ方: アイ ハヴン／使う場面: 日常会話"
+     }
+    ]
+   },
+   {
+    "t": "🚆 067｜14A席の隣人：Seat 14A",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, I think you're in my seat. This is 14A, by the window.",
+      "jp": "すみません、そこ私の席だと思うんですけど。14A、窓側です。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no, you're right. I sat down in the dark and didn't check. I'll move. Is 14B free?",
+      "jp": "あっ、本当だ。暗い中で座って確認しなかった。どきますよ。14Bは空いてますか?"
+     },
+     {
+      "sp": 0,
+      "en": "That's your seat. You're right next to me. So you weren't even wrong, just very close.",
+      "jp": "それがあなたの席よ。私の隣。だから間違いってほどでもなくて、ただすごく近かっただけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Great, so I stole your window for ten minutes. Let me make it up to you. Do you like cheese? I have a lot of cheese.",
+      "jp": "よかった、じゃあ10分間窓を盗んでたわけだ。お詫びさせて。チーズは好き? たくさん持ってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do you have a lot of cheese on a train to Zurich?",
+      "jp": "どうしてチューリッヒ行きの電車にたくさんチーズを持ってるの?"
+     },
+     {
+      "sp": 1,
+      "en": "I'm a cheese maker. I'm going to a contest. If I win, I'll tell everyone it was because of you.",
+      "jp": "チーズ職人なんだ。コンテストに行く途中でね。優勝したら、君のおかげだってみんなに言うよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Because I took my seat back? That's a strange way to win a prize.",
+      "jp": "私が席を取り返したから? 変な優勝の仕方ね。"
+     },
+     {
+      "sp": 1,
+      "en": "Because you were nice about it. Try this one. It's the one I'm entering.",
+      "jp": "君が優しく言ってくれたからだよ。これを食べてみて。出品するやつなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Mmm. Okay, this is incredible. Honestly, you should have the window seat. You've earned it.",
+      "jp": "んー、おいしい、すごいわ。正直、窓側はあなたが座るべきね。その資格があるわ。",
+      "note": "元の形: going to／聞こえ方: gonna／使う場面: くだけた会話"
+     }
+    ]
+   },
+   {
+    "t": "🚌 068｜来なかった最終バス：The Bus That Never Came",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, is this the bus stop for the lighthouse? I've been waiting for an hour, and it's getting dark.",
+      "jp": "すみません、ここは灯台行きのバス停ですか? 1時間待っていて、暗くなってきて。"
+     },
+     {
+      "sp": 1,
+      "en": "It was, until last year. They moved the stop. I'm Jon, by the way. I drive the fish truck.",
+      "jp": "去年まではそうでしたよ。停留所が移ったんです。僕はジョン。魚のトラックを運転してます。"
+     },
+     {
+      "sp": 0,
+      "en": "Last year? My guidebook says it's right here. I should have known better than to trust it.",
+      "jp": "去年? ガイドブックにはここって書いてあるのに。信じた私がバカだったわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm headed that way. I can drop you at the lighthouse, but you'll have to ride with the cod.",
+      "jp": "僕もそっちへ行くんです。灯台まで送れますよ、ただしタラと一緒に乗ってもらいますが。"
+     },
+     {
+      "sp": 0,
+      "en": "With the fish? Is that safe? And will I smell like fish tomorrow?",
+      "jp": "魚と一緒に? 大丈夫なの? 明日、魚くさくならない?"
+     },
+     {
+      "sp": 1,
+      "en": "Probably, yes. But the lighthouse sunset is worth it. You can sit up front. The fish go in the back.",
+      "jp": "たぶんなりますね。でも灯台の夕焼けはそれだけの価値がありますよ。前の席に座ってください。魚は後ろです。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay, fine. It's the best offer I've had all day. Thank you, Jon. I'm Emily.",
+      "jp": "分かったわ。今日一番のいい話だもの。ありがとう、ジョン。私はエミリー。"
+     },
+     {
+      "sp": 1,
+      "en": "Hop in, Emily. Close the window if you get cold. Or if you get smelly.",
+      "jp": "乗って、エミリー。寒くなったら窓を閉めてね。においが気になったらでもいいけど。",
+      "note": "元の形: have to／聞こえ方: hafta／使う場面: 日常会話"
+     }
+    ]
+   },
+   {
+    "t": "👛 069｜届けられた財布：The Lost Wallet",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? Is this the Hotel Sahil? Somebody called my room and said they have my wallet. I'm so confused.",
+      "jp": "もしもし? ホテル・サヒルですか? 誰かが部屋に電話をくれて、私の財布があるって。何が何だか。"
+     },
+     {
+      "sp": 1,
+      "en": "That was me, miss. I found it near the ferry dock this morning. Your hotel card was inside, so I came here.",
+      "jp": "それは僕です。今朝フェリー乗り場の近くで見つけました。ホテルのカードが入っていたので、ここへ来ました。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh my goodness. I thought I lost it forever. Please, come to the lobby. I'm on my way down.",
+      "jp": "まあ、なんてこと。もう二度と戻らないと思ってたわ。ロビーで待っててください。今降ります。"
+     },
+     {
+      "sp": 1,
+      "en": "Take your time. I'm the one in the blue jacket holding a wallet and a very large simit.",
+      "jp": "ゆっくりでいいですよ。青いジャケットで、財布と特大のシミットを持ってる男です。"
+     },
+     {
+      "sp": 0,
+      "en": "I see you! Wait, all my cash is still in here. Even the money I forgot I had. Why did you do this?",
+      "jp": "見えたわ! 待って、現金が全部そのまま入ってる。あることを忘れてたお金まで。どうしてここまでしてくれたの?"
+     },
+     {
+      "sp": 1,
+      "en": "Last year, I lost my phone in Berlin. A stranger brought it to my hotel. Now it's my turn.",
+      "jp": "去年ベルリンで携帯をなくしたんです。見知らぬ人がホテルまで届けてくれました。今度は僕の番です。"
+     },
+     {
+      "sp": 0,
+      "en": "Please, at least let me buy you lunch. I'll even pay for the simit.",
+      "jp": "せめてお昼をごちそうさせて。そのシミット代も払うわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Lunch, yes. The simit stays with me. A man has to have some rules.",
+      "jp": "お昼はぜひ。ただしシミットは僕のものです。男には守るルールがあるんで。",
+      "note": "元の形: have to／聞こえ方: hafta／使う場面: 日常会話"
+     }
+    ]
+   },
+   {
+    "t": "🏛 070｜月曜休館の美術館：Closed on Mondays",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Closed? It says closed on Mondays. I flew all the way from Osaka just to see this museum!",
+      "jp": "閉まってる? 月曜休館って書いてある。大阪からわざわざこの美術館を見に飛んできたのに!"
+     },
+     {
+      "sp": 1,
+      "en": "Same here. I took the night bus from Prague, and I only have today. Looks like we both made a mistake.",
+      "jp": "僕もだよ。プラハから夜行バスで来て、今日しか時間がないんだ。二人とも間違えたみたいだね。"
+     },
+     {
+      "sp": 0,
+      "en": "A mistake with a very expensive ticket. I wanted to see the painting with the girl and the red umbrella.",
+      "jp": "高くついた間違いだわ。赤い傘を持った少女の絵が見たかったのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I know that one! It's why I came. My grandfather talked about it all his life but never saw it.",
+      "jp": "その絵、知ってるよ! だから僕も来たんだ。祖父が一生その絵の話をしていたのに、見ることはなかった。"
+     },
+     {
+      "sp": 0,
+      "en": "That's so sad. Hold on. There's a guard waving at us through the glass door.",
+      "jp": "切ないわね。……待って、ガラスのドアの向こうで警備員さんが手を振ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "He's saying something. Oh, he's holding up a sign. Staff entrance, five minutes, don't tell anyone.",
+      "jp": "何か言ってるね。あ、看板を掲げてる。職員用入口、5分だけ、誰にも内緒、だって。"
+     },
+     {
+      "sp": 0,
+      "en": "Is that allowed? I don't want to get anyone in trouble. But I really want to go.",
+      "jp": "いいのかしら? 誰かが怒られたら困るけど。でも本当に行きたい。"
+     },
+     {
+      "sp": 1,
+      "en": "He's smiling. I think he's done this before. Come on, the girl with the umbrella is waiting.",
+      "jp": "笑ってるよ。前にもやったことがあるんじゃないかな。行こう、傘の少女が待ってる。"
+     },
+     {
+      "sp": 0,
+      "en": "Five minutes. Then I'm buying you a coffee for your grandfather.",
+      "jp": "5分間ね。そのあとは、お祖父さんのためにコーヒーをおごるわ。",
+      "note": "元の形: want to／聞こえ方: wanna／使う場面: くだけた会話"
+     }
+    ]
+   }
+  ]
+ }
+]
