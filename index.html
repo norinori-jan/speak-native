@@ -1945,7 +1945,7 @@ function sendLatestEnglishToMusicSuite() {
       turn: index + 1,
       speaker: m.role === 'user' ? 'A' : 'B',
       role: m.role,
-      text: String(m.content).trim().slice(0, 1800)
+      text: String(m.content).replace(/\\[Tip:.*?\\]/s, '').trim().slice(0, 1800)
     }));
   if (!dialogue.length) { showToast('先に英会話をしてください'); return; }
   const payload = {
