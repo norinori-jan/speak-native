@@ -3652,7 +3652,8 @@ function loadPackagedConversation(){
   {id:'net03',file:'net03-3203.json'},
   {id:'net04',file:'net04-3204.json'},
   {id:'net05',file:'net05-3205.json'},
-  {id:'net06',file:'net06-3206.json'}
+  {id:'net06',file:'net06-3206.json'},
+  {id:'song01',file:'song01-3301.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

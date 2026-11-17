@@ -1,0 +1,536 @@
+[
+ {
+  "id": "song01",
+  "ic": "🎶",
+  "n": "ソングドラマ1・曲名つき二人の会話",
+  "hint": "Ten two-person scenes with song-title names, each built around a hook line you could turn into a chorus: missed messages, last trains, summer promises, paper planes, goodbyes and last dances",
+  "level": 3,
+  "keywords": [
+   "song",
+   "hook",
+   "emotion"
+  ],
+  "d": [
+   {
+    "t": "🎵 101｜Left on Read",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You saw my message at nine o'clock. It's two in the morning now.",
+      "jp": "9時にメッセージを見たでしょ。もう夜中の2時よ。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I started typing about ten times, and I deleted every one.",
+      "jp": "分かってる。10回くらい打ち始めて、全部消したんだ。",
+      "note": "フック: I started typing ten times／ためらいが歌詞の中心になる"
+     },
+     {
+      "sp": 0,
+      "en": "Ten times? Then why not send just one?",
+      "jp": "10回も？なら1つ送ればよかったのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Because everything I wrote sounded wrong. I didn't want to lose you with the wrong words.",
+      "jp": "どれも間違った言葉に思えたから。間違った言葉で君を失いたくなかった。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 0,
+      "en": "Silence is the wrong words, too. Silence says, 'I don't care.'",
+      "jp": "沈黙だって間違った言葉よ。沈黙は『気にしてない』って言うの。"
+     },
+     {
+      "sp": 1,
+      "en": "But I do care. I care so much that I couldn't move my hands.",
+      "jp": "でも気にしてる。手が動かなくなるほど気にしてる。"
+     },
+     {
+      "sp": 0,
+      "en": "Then say it now. Say it out loud, not in a message.",
+      "jp": "なら今言って。メッセージじゃなくて、声に出して。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry I left you on read. I'm here, and I'm not going anywhere.",
+      "jp": "既読のまま放っておいてごめん。僕はここにいて、どこにも行かない。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Then next time, send me one word, even if it's wrong.",
+      "jp": "分かった。じゃあ次は、間違っていてもいいから、1言だけ送って。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 102｜Midnight Train Home",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The last train leaves in four minutes, and you're still standing here.",
+      "jp": "終電はあと4分で出るのに、あなたはまだここに立ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "I know. I keep thinking I should say something before I go.",
+      "jp": "分かってる。帰る前に何か言うべきだと、ずっと思ってるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "You've had the whole night to say it.",
+      "jp": "夜じゅう、言う時間はあったでしょ。",
+      "note": "フック: let the train go／サビになりそうな決め台詞"
+     },
+     {
+      "sp": 1,
+      "en": "I wanted the perfect moment, and I think this is it.",
+      "jp": "完璧な瞬間を待っていた。たぶん、いまがそうだ。"
+     },
+     {
+      "sp": 0,
+      "en": "The doors are closing. Hurry up, please.",
+      "jp": "ドアが閉まりかけてる。急いで。"
+     },
+     {
+      "sp": 1,
+      "en": "Stay with me tonight. I'll walk you home in the morning.",
+      "jp": "今夜は一緒にいて。朝になったら家まで送るよ。"
+     },
+     {
+      "sp": 0,
+      "en": "You'd miss your train for me?",
+      "jp": "私のために、電車を逃すの？"
+     },
+     {
+      "sp": 1,
+      "en": "There'll be another train. There won't be another night like this.",
+      "jp": "電車はまた来る。こんな夜は、もう来ない。"
+     },
+     {
+      "sp": 0,
+      "en": "Then let it go. Let the midnight train go home without us.",
+      "jp": "じゃあ行かせましょう。真夜中の電車は、私たちを置いて帰ればいい。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 103｜One More Summer",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The beach looks the same as it did ten years ago.",
+      "jp": "砂浜は10年前と変わらないわね。"
+     },
+     {
+      "sp": 1,
+      "en": "Everything looks the same. Only we are different.",
+      "jp": "すべて変わらないのに、僕たちだけ違う。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you remember the night we promised to come back every summer?",
+      "jp": "毎年夏に戻ってくると約束した夜を覚えてる？",
+      "note": "元の形: do you／聞こえ方: ドゥユー／使う場面:相手にたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "I remember. And I broke that promise for nine years.",
+      "jp": "覚えてる。そして9年間、その約束を破った。"
+     },
+     {
+      "sp": 0,
+      "en": "Why did you stop coming?",
+      "jp": "どうして来なくなったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Because coming here without you felt like walking through a house after everyone's gone.",
+      "jp": "君なしでここに来るのは、誰もいなくなった家を歩くようだったから。"
+     },
+     {
+      "sp": 0,
+      "en": "But you're here now.",
+      "jp": "でも、いまここにいる。"
+     },
+     {
+      "sp": 1,
+      "en": "Give me one more summer. Just one, and I'll show you I can keep my word.",
+      "jp": "もう1回夏をちょうだい。1回だけ。約束を守れると見せるから。",
+      "note": "フック: one more summer／くり返しに向くフレーズ"
+     },
+     {
+      "sp": 0,
+      "en": "One more summer. And after that, we'll see.",
+      "jp": "もう1回の夏ね。そのあとのことは、そのとき考えましょう。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 104｜Paper Planes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, why are you folding paper in the middle of the night?",
+      "jp": "パパ、どうして夜中に紙を折ってるの？"
+     },
+     {
+      "sp": 1,
+      "en": "I couldn't sleep. And I remembered how we used to make paper planes every Sunday.",
+      "jp": "眠れなくてね。毎週日曜に、紙飛行機を作ってたのを思い出したんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "I was six. You made the best ones. They flew across the whole yard.",
+      "jp": "私は6歳だった。パパのがいちばんよく飛んだ。庭の端から端まで飛んだよね。"
+     },
+     {
+      "sp": 1,
+      "en": "The secret is a sharp fold at the front. Here, try one.",
+      "jp": "コツは、前をきつく折ること。ほら、1つやってごらん。"
+     },
+     {
+      "sp": 0,
+      "en": "Look, it's flying! It goes right out of the window!",
+      "jp": "見て、飛んでる！窓から外へ出ていく！"
+     },
+     {
+      "sp": 1,
+      "en": "Some things don't need to come back. They just need to fly.",
+      "jp": "戻ってこなくていいものもあるんだ。飛べばそれでいい。",
+      "note": "フック: They just need to fly／親から子への別れの歌詞向き"
+     },
+     {
+      "sp": 0,
+      "en": "Is that about the plane, or about me? I'm leaving for college tomorrow.",
+      "jp": "それは飛行機のこと？それとも私のこと？明日、大学に出発するのに。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe both. Go as far as you can. I'll be standing in the yard.",
+      "jp": "両方かもね。行けるところまで遠くへ行きなさい。パパは庭で待ってるから。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll write to you every week. And I'll fold the letters like planes.",
+      "jp": "毎週手紙を書くね。それを紙飛行機みたいに折って。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 105｜Don't Look Back",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I got the job in Seattle. I leave on Friday.",
+      "jp": "アナ、シアトルの仕事が決まったの。金曜に出発する。"
+     },
+     {
+      "sp": 1,
+      "en": "Congratulations. That's what you wanted, isn't it?",
+      "jp": "おめでとう。それが望みだったでしょ？"
+     },
+     {
+      "sp": 0,
+      "en": "It is. But now that it's real, I feel like I'm leaving a piece of myself here.",
+      "jp": "そう。でも現実になったら、自分のかけらをここに置いていく気がする。"
+     },
+     {
+      "sp": 1,
+      "en": "Everyone feels that. It means this place mattered to you.",
+      "jp": "みんなそう感じるの。ここが大事だった証拠よ。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I fail out there? What if I come back with nothing?",
+      "jp": "向こうで失敗したら？何も持たずに戻ってきたら？",
+      "note": "元の形: what if／聞こえ方: ワリフ／使う場面:もし〜ならとたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Then you come back, and we'll have dinner. The door is always open.",
+      "jp": "なら戻ってくればいい。夕食を食べましょう。ドアはいつも開いてるわ。"
+     },
+     {
+      "sp": 0,
+      "en": "You make it sound so easy.",
+      "jp": "あなたが言うと、とても簡単そうに聞こえる。"
+     },
+     {
+      "sp": 1,
+      "en": "It isn't easy. But if you look back at every step, you'll never reach the corner.",
+      "jp": "簡単じゃない。でも一歩ごとにふり返っていたら、角にもたどり着けないの。",
+      "note": "フック: Don't look back／前に進む歌のメッセージ"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I won't look back. Well, maybe once, at the airport.",
+      "jp": "分かった。ふり返らない。うーん、空港で1回だけはね。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 106｜Hold the Door",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hold the door, please! I'm running, I'm almost there!",
+      "jp": "ドアを押さえてください！走ってます、もうすぐです！"
+     },
+     {
+      "sp": 1,
+      "en": "Take your time. The elevator isn't going anywhere.",
+      "jp": "ゆっくりでいいですよ。エレベーターはどこにも行きません。",
+      "note": "フック: Hold the door／出会いのきっかけとして歌になる"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. I have an interview on the twelfth floor, and I'm already five minutes late.",
+      "jp": "ありがとう。12階で面接があるのに、もう5分遅れてるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Twelfth floor? That's my company. What's the position?",
+      "jp": "12階？うちの会社です。どのポジション？"
+     },
+     {
+      "sp": 0,
+      "en": "Network engineer. I'm so nervous, my hands are shaking.",
+      "jp": "ネットワークエンジニアです。緊張で手が震えてます。"
+     },
+     {
+      "sp": 1,
+      "en": "Take a deep breath. You held the door for a stranger yesterday, didn't you? I saw you.",
+      "jp": "深呼吸して。昨日、見知らぬ人のためにドアを押さえてたでしょ。見てたわ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's true. It was an older man with a lot of boxes.",
+      "jp": "そうです。荷物の多い年配の男性でした。"
+     },
+     {
+      "sp": 1,
+      "en": "That small thing is what we look for. Skills can be taught, but kindness can't.",
+      "jp": "そういう小さなことを、私たちは見るの。技術は教えられるけど、優しさは教えられない。"
+     },
+     {
+      "sp": 0,
+      "en": "Wait, are you the interviewer?",
+      "jp": "待って、あなたが面接官なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Come on, the door is open. Good luck.",
+      "jp": "さあ、ドアは開いてるわ。がんばって。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 107｜Borrowed Time",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The doctor says I should rest for three weeks. Can you believe it?",
+      "jp": "お医者さんが、3週間休めって。信じられる？"
+     },
+     {
+      "sp": 1,
+      "en": "I believe it. You haven't taken a day off in four years.",
+      "jp": "信じるよ。君は4年間、1日も休んでないんだから。"
+     },
+     {
+      "sp": 0,
+      "en": "But there's so much to do. The project, the team, the deadlines.",
+      "jp": "でもやることが山ほどあるの。プロジェクトも、チームも、締め切りも。"
+     },
+     {
+      "sp": 1,
+      "en": "Everything will wait. Your health won't.",
+      "jp": "全部は待ってくれる。君の体は待てない。"
+     },
+     {
+      "sp": 0,
+      "en": "I've been living on borrowed time, haven't I?",
+      "jp": "私、借り物の時間で生きてきたのね。",
+      "note": "フック: borrowed time／人生の歌のキーワード"
+     },
+     {
+      "sp": 1,
+      "en": "You have. Every night you said, 'Tomorrow I'll slow down.' And tomorrow never came.",
+      "jp": "そうだよ。毎晩『明日は少しペースを落とす』と言って、その明日は来なかった。"
+     },
+     {
+      "sp": 0,
+      "en": "What will I do with three weeks?",
+      "jp": "3週間、何をすればいいの？"
+     },
+     {
+      "sp": 1,
+      "en": "Sleep late. Walk by the river. Let me cook you dinner.",
+      "jp": "遅くまで寝て。川沿いを歩いて。僕に夕食を作らせて。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. For once, I'll let the world run without me.",
+      "jp": "分かった。たまには、私なしで世界を回してみるわ。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 108｜Faded Photographs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Grandma, I found a box of old photographs under your bed. Can I look at them?",
+      "jp": "おばあちゃん、ベッドの下に古い写真の箱を見つけたの。見てもいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Of course, dear. Be careful. They've faded so much, I can barely see the faces.",
+      "jp": "もちろんよ。気をつけてね。すっかり色が褪せて、顔もほとんど見えないの。"
+     },
+     {
+      "sp": 0,
+      "en": "Who's this young man standing beside you at the station?",
+      "jp": "駅で隣に立っている若い男の人は誰？"
+     },
+     {
+      "sp": 1,
+      "en": "That's your grandfather, the day he left for the army. I held his hand until the train moved.",
+      "jp": "おじいちゃんよ。出征の日の。電車が動くまで手を握っていたの。"
+     },
+     {
+      "sp": 0,
+      "en": "Did he come back?",
+      "jp": "帰ってきたの？"
+     },
+     {
+      "sp": 1,
+      "en": "He did, three years later. He walked into the kitchen, and I dropped the plate I was holding.",
+      "jp": "帰ってきたわ、3年後に。台所に入ってきて、持っていたお皿を落としたの。"
+     },
+     {
+      "sp": 0,
+      "en": "The photographs are fading, but the story isn't.",
+      "jp": "写真は褪せていくけど、物語は褪せないね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why I tell it again and again. Memory stays alive when someone listens.",
+      "jp": "だから何度も話すのよ。誰かが聞いてくれる限り、記憶は生き続けるの。",
+      "note": "フック: Memory stays alive when someone listens／回想の曲に向く一節"
+     },
+     {
+      "sp": 0,
+      "en": "I'll record you telling it, and I'll keep it forever.",
+      "jp": "話しているところを録音して、ずっと取っておくね。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 109｜Run to Me",
+    "l": [
+     {
+      "sp": 0,
+      "en": "It's three in the morning. Why are you calling me? Is everything okay?",
+      "jp": "朝の3時よ。どうして電話してきたの？何かあった？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm at the bus station. I left home tonight, and I don't know where to go.",
+      "jp": "バスターミナルにいるんだ。今夜、家を出て、どこへ行けばいいか分からない。"
+     },
+     {
+      "sp": 0,
+      "en": "Stay right there. Don't move. I'm putting on my coat.",
+      "jp": "そこにいて。動かないで。コートを着るから。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "You don't have to come. It's far, and it's so late.",
+      "jp": "来なくていいよ。遠いし、こんなに遅いし。"
+     },
+     {
+      "sp": 0,
+      "en": "Nothing is too far. Whenever you can't run anywhere else, run to me.",
+      "jp": "遠すぎるものなんてない。どこにも逃げられなくなったら、私のところへ走ってきて。",
+      "note": "フック: run to me／逃げ場所を歌うバラード向き"
+     },
+     {
+      "sp": 1,
+      "en": "I don't deserve a friend like you.",
+      "jp": "君みたいな友達に、僕はふさわしくない。"
+     },
+     {
+      "sp": 0,
+      "en": "Stop that. Keep the phone on, and talk to me until I get there.",
+      "jp": "やめて。電話は切らずに、着くまで私と話してて。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Tell me something, anything. Tell me about your day.",
+      "jp": "分かった。何か話して、何でもいい。君の1日のことを。"
+     },
+     {
+      "sp": 0,
+      "en": "My day was boring, until you called. Now I'm in a taxi, and I'm not afraid anymore.",
+      "jp": "退屈な1日だったわ、あなたが電話するまでは。いまタクシーの中で、もう怖くないわよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎵 110｜The Last Dance",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Everyone is leaving. The band is packing up, and the lights are coming on.",
+      "jp": "みんな帰っていく。バンドは片づけを始めて、照明がつき始めた。"
+     },
+     {
+      "sp": 1,
+      "en": "It was a beautiful wedding. I'm so happy for them.",
+      "jp": "素敵な結婚式だったね。あの二人のこと、本当にうれしい。"
+     },
+     {
+      "sp": 0,
+      "en": "Before we go, would you give me the last dance? There's no music, but I don't mind.",
+      "jp": "帰る前に、最後のダンスをくれない？音楽はないけど、構わないよ。",
+      "note": "フック: the last dance／締めくくりのラブソング向き"
+     },
+     {
+      "sp": 1,
+      "en": "No music? We'd look silly.",
+      "jp": "音楽なしで？変に見えるわよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Let them look. I've waited three years to ask you.",
+      "jp": "見させておけばいい。君に頼むために、3年待ったんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Three years? Why didn't you say something at the party last year?",
+      "jp": "3年？去年のパーティーで、どうして言わなかったの？"
+     },
+     {
+      "sp": 0,
+      "en": "I was afraid you'd say no, and I'd lose the little I had.",
+      "jp": "断られて、持っていたわずかなものまで失うのが怖かった。"
+     },
+     {
+      "sp": 1,
+      "en": "Take my hand. I'll hum the tune, and you lead.",
+      "jp": "手を取って。私が曲をハミングするから、リードして。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm still afraid. But it's the best fear I've ever had.",
+      "jp": "まだ怖いよ。でもいままで感じた中でいちばんいい怖さだ。"
+     }
+    ]
+   }
+  ]
+ }
+]
