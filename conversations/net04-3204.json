@@ -1,0 +1,535 @@
+[
+ {
+  "id": "net04",
+  "ic": "☁️",
+  "n": "ネットワーク英語4・クラウド（VPC・LB・IaC）",
+  "hint": "Ana teaches Ken cloud networking: VPCs, security groups, route tables, NAT, load balancers, DNS cutover, hybrid links, transit gateways, CDN, infrastructure as code and cost control",
+  "level": 4,
+  "keywords": [
+   "cloud",
+   "vpc",
+   "load balancer"
+  ],
+  "d": [
+   {
+    "t": "☁️ 031｜クラウドの自分の区画：Your Own Corner of the Cloud",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, my first cloud task is to build a VPC. Where do I even begin?",
+      "jp": "アナ、初めてのクラウドの仕事でVPCを作るの。どこから始めればいい？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "A VPC is your private network inside the cloud. First, choose an address range, like ten dot zero dot zero dot zero slash sixteen.",
+      "jp": "VPCはクラウドの中の自分専用ネットワーク。まずアドレス範囲を決めるの。たとえば10.0.0.0/16。"
+     },
+     {
+      "sp": 0,
+      "en": "It looks like the networks we built in the office.",
+      "jp": "オフィスで作ったネットワークとそっくりだね。"
+     },
+     {
+      "sp": 1,
+      "en": "It is the same idea. Then you divide it into subnets, usually across two availability zones.",
+      "jp": "同じ考え方よ。それをサブネットに分けて、たいてい2つのアベイラビリティゾーンにまたがらせる。",
+      "note": "用語: VPC = クラウド内の専用仮想ネットワーク／availability zone = 独立したデータセンター群"
+     },
+     {
+      "sp": 0,
+      "en": "Why two zones?",
+      "jp": "どうして2つのゾーン？"
+     },
+     {
+      "sp": 1,
+      "en": "If one data center has a problem, the other keeps working. It's the cloud version of a backup router.",
+      "jp": "1つのデータセンターに問題が起きても、もう一方が動き続けるの。クラウド版の予備のルーターよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Which subnets are public, and which are private?",
+      "jp": "どのサブネットがパブリックで、どれがプライベート？"
+     },
+     {
+      "sp": 1,
+      "en": "Web servers go in public subnets. Databases go in private ones, with no direct route from the internet.",
+      "jp": "ウェブサーバーはパブリック。データベースはプライベートで、インターネットから直接のルートはなし。"
+     },
+     {
+      "sp": 0,
+      "en": "Make a plan on paper first, and leave room to grow. Changing an address range later is painful.",
+      "jp": "先に紙で計画して、増える余裕を残して。アドレス範囲はあとから変えるのが大変なの。"
+     }
+    ]
+   },
+   {
+    "t": "🛂 032｜セキュリティグループ：Who Can Come In?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I launched a server, but I can't connect to it with SSH. The port looks closed.",
+      "jp": "アナ、サーバーを起動したのにSSHでつながらない。ポートが閉じてるみたい。"
+     },
+     {
+      "sp": 1,
+      "en": "Check the security group. It's a virtual firewall attached to the server.",
+      "jp": "セキュリティグループを確認して。サーバーに付いている仮想のファイアウォールよ。"
+     },
+     {
+      "sp": 0,
+      "en": "The inbound rules list is empty.",
+      "jp": "インバウンドルールの一覧が空だ。"
+     },
+     {
+      "sp": 1,
+      "en": "By default, everything inbound is denied. You have to allow what you need.",
+      "jp": "デフォルトでは、入ってくる通信は全部拒否。必要なものを許可するの。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "I'll allow port twenty-two from anywhere.",
+      "jp": "ポート22を、どこからでも許可するね。"
+     },
+     {
+      "sp": 1,
+      "en": "Please don't. Allow it only from our office address. 'Anywhere' invites every scanner on the internet.",
+      "jp": "やめて。うちのオフィスのアドレスからだけ許可して。『どこからでも』は、世界中のスキャンを招くだけよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the security group the same as a network ACL?",
+      "jp": "セキュリティグループとネットワークACLは同じもの？"
+     },
+     {
+      "sp": 1,
+      "en": "No. A security group is stateful, so replies are allowed automatically. An ACL is stateless, and it checks both directions.",
+      "jp": "違うわ。セキュリティグループはステートフルで、返事は自動で許可される。ACLはステートレスで、両方向を確認するの。",
+      "note": "用語: stateful = 行きの許可があれば帰りも自動で許可／stateless = 行き帰りを別々に判定"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. I'll start with the security group, and keep the ACL simple.",
+      "jp": "分かった。まずセキュリティグループから始めて、ACLはシンプルにしておく。"
+     }
+    ]
+   },
+   {
+    "t": "🚏 033｜出口の設計：Routes to the Outside",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the web server has a public address, but it still can't reach the internet. What's wrong?",
+      "jp": "アナ、ウェブサーバーにパブリックアドレスがあるのに、インターネットに出られない。何が悪いの？"
+     },
+     {
+      "sp": 1,
+      "en": "Open the route table of its subnet. Is there a route to an internet gateway?",
+      "jp": "そのサブネットのルートテーブルを開いて。インターネットゲートウェイへのルートはある？",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "No. There's only a local route.",
+      "jp": "ない。ローカルのルートだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why. Add zero dot zero dot zero dot zero slash zero, pointing to the internet gateway.",
+      "jp": "それが原因ね。0.0.0.0/0を足して、インターネットゲートウェイを指すようにして。",
+      "note": "用語: 0.0.0.0/0 = すべての宛先（デフォルトルート）／internet gateway = VPCの外への出入口"
+     },
+     {
+      "sp": 0,
+      "en": "Done. Now, the database in the private subnet needs software updates from the internet.",
+      "jp": "できた。次に、プライベートサブネットのデータベースが、インターネットからソフトの更新を取りたいんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Use a NAT gateway in a public subnet. The private server can go out, but nobody can come in.",
+      "jp": "パブリックサブネットにNATゲートウェイを置いて。プライベートのサーバーは出られるけど、外からは入れない。"
+     },
+     {
+      "sp": 0,
+      "en": "How much does that cost?",
+      "jp": "それはいくらかかる？"
+     },
+     {
+      "sp": 1,
+      "en": "It charges by the hour and by the data. In a test environment, delete it when you finish.",
+      "jp": "時間とデータ量で課金されるわ。テスト環境なら、終わったら消して。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll add a reminder. Cloud bills have a way of surprising people.",
+      "jp": "リマインダーを入れておくよ。クラウドの請求は、びっくりさせられがちだからね。"
+     }
+    ]
+   },
+   {
+    "t": "⚖️ 034｜ロードバランサー：Sharing the Load",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, our website slows down every Monday morning. One server can't handle all the visitors.",
+      "jp": "アナ、うちのサイトは毎週月曜の朝に遅くなる。1台のサーバーで全部の訪問者はさばけない。"
+     },
+     {
+      "sp": 1,
+      "en": "Add more servers, and put a load balancer in front. It spreads the requests among them.",
+      "jp": "サーバーを増やして、前にロードバランサーを置くの。リクエストを、みんなに振り分けてくれる。"
+     },
+     {
+      "sp": 0,
+      "en": "What if one server crashes?",
+      "jp": "1台が落ちたらどうなる？"
+     },
+     {
+      "sp": 1,
+      "en": "The load balancer runs a health check. If a server doesn't answer, it stops sending traffic there.",
+      "jp": "ロードバランサーがヘルスチェックをするの。サーバーが答えなければ、そこへの通信を止める。",
+      "note": "用語: health check = サーバーが正常か定期確認する仕組み／auto scaling = 負荷で台数を自動調整"
+     },
+     {
+      "sp": 0,
+      "en": "What should the health check look at?",
+      "jp": "ヘルスチェックは何を見ればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "A simple page, like slash health, that returns OK only when the application and database both work.",
+      "jp": "スラッシュhealthのような簡単なページよ。アプリとデータベースの両方が動いている時だけ、OKを返すの。"
+     },
+     {
+      "sp": 0,
+      "en": "Should the users stay on the same server during a session?",
+      "jp": "利用者はセッション中、同じサーバーに居続けるべき？"
+     },
+     {
+      "sp": 1,
+      "en": "Better to avoid it. Keep session data outside the server, so any server can answer any request.",
+      "jp": "できれば避けたいわ。セッションのデータをサーバーの外に置けば、どのサーバーでも対応できる。"
+     },
+     {
+      "sp": 0,
+      "en": "Then we can add servers automatically on busy days. That's what auto scaling is for.",
+      "jp": "そうすれば、忙しい日にサーバーを自動で増やせる。それがオートスケーリングだね。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 035｜DNSの切り替え：Switching DNS Safely",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, we're moving our website to a new load balancer on Friday. How do I switch the DNS without downtime?",
+      "jp": "アナ、金曜にサイトを新しいロードバランサーへ移すの。ダウンタイムなしでDNSを切り替えるには？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Lower the TTL first, a day or two before. TTL tells resolvers how long to remember the old answer.",
+      "jp": "数日前にTTLを先に短くして。TTLは、リゾルバが古い答えを覚えておく時間を決めるの。"
+     },
+     {
+      "sp": 0,
+      "en": "What's a good value?",
+      "jp": "いくつがいい？",
+      "note": "用語: TTL = DNSの答えをキャッシュしてよい時間（秒）／fail over = 障害時に予備へ切り替える"
+     },
+     {
+      "sp": 1,
+      "en": "Sixty seconds. Then on Friday, when you change the record, most users will see the new address within a minute.",
+      "jp": "60秒ね。金曜にレコードを変えれば、ほとんどの利用者が1分以内に新しいアドレスを見るわ。"
+     },
+     {
+      "sp": 0,
+      "en": "And if the new site has a problem?",
+      "jp": "もし新しいサイトに問題があったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Change it back, and the old address returns within a minute too. That's the safety net.",
+      "jp": "戻せば、古いアドレスも1分で復活する。それが安全網なのよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Can DNS also check if a server is healthy?",
+      "jp": "DNSでも、サーバーが健全か確認できる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Cloud DNS can use health checks and fail over to a backup site automatically.",
+      "jp": "できるわ。クラウドのDNSはヘルスチェックを使って、予備のサイトへ自動で切り替えられる。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll lower the TTL today and write a rollback plan for Friday.",
+      "jp": "今日TTLを下げて、金曜のための元に戻す手順を書いておくよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔌 036｜社内とクラウドをつなぐ：Linking the Office to the Cloud",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, our cloud servers need to talk to the old database in the office. How do we connect them?",
+      "jp": "アナ、クラウドのサーバーが、オフィスの古いデータベースと話す必要があるの。どうつなぐ？"
+     },
+     {
+      "sp": 1,
+      "en": "The quick way is a VPN over the internet. It's cheap, and you can build it in an hour.",
+      "jp": "手軽なのは、インターネット越しのVPN。安いし、1時間で作れる。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the other way?",
+      "jp": "もう1つの方法は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "A dedicated line, like Direct Connect or ExpressRoute. It's more stable and faster, but it takes weeks to set up.",
+      "jp": "専用線ね。Direct ConnectやExpressRouteのような。安定して速いけど、準備に数週間かかる。",
+      "note": "用語: Direct Connect / ExpressRoute = クラウドとの専用線サービス"
+     },
+     {
+      "sp": 0,
+      "en": "How much traffic do we have?",
+      "jp": "うちの通信量はどれくらい？"
+     },
+     {
+      "sp": 1,
+      "en": "About two hundred megabits at peak. A VPN is enough for now.",
+      "jp": "ピークで約200メガビット。いまはVPNで十分よ。"
+     },
+     {
+      "sp": 0,
+      "en": "And what if the VPN goes down? The database is important.",
+      "jp": "VPNが落ちたら？データベースは大事だよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Build two tunnels to two different endpoints, and alert on both. Single tunnels are a single point of failure.",
+      "jp": "2つの別々の終端に、2本のトンネルを作って、両方を監視して。1本だけだと、単一障害点になる。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Two tunnels now, and we'll plan the dedicated line for next year.",
+      "jp": "いいね。いまは2本のトンネルで、専用線は来年の計画にしよう。"
+     }
+    ]
+   },
+   {
+    "t": "🕸️ 037｜VPCをつなぐ：Connecting Many VPCs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, we have five VPCs now, and teams keep asking to connect them. Peering is getting messy.",
+      "jp": "アナ、VPCが5つになって、チームが次々つなぎたがる。ピアリングがごちゃごちゃしてきた。"
+     },
+     {
+      "sp": 1,
+      "en": "Peering connects two VPCs directly. With five, you need ten connections. With ten VPCs, forty-five.",
+      "jp": "ピアリングは2つのVPCを直接つなぐの。5つなら10本。10個なら45本よ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's too many to manage. Is there a better design?",
+      "jp": "管理しきれないね。もっといい設計はある？"
+     },
+     {
+      "sp": 1,
+      "en": "A transit gateway. It works like a central hub. Every VPC connects once, and the hub routes between them.",
+      "jp": "トランジットゲートウェイよ。中央のハブみたいに動く。各VPCは1回つなぐだけで、ハブが間を取り持つ。",
+      "note": "用語: transit gateway = 多数のVPCや拠点をつなぐ中継ハブ"
+     },
+     {
+      "sp": 0,
+      "en": "Can we control which VPCs can talk to each other?",
+      "jp": "どのVPC同士が話せるか、制御できる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with route tables on the hub. Production and test should never reach each other.",
+      "jp": "できるわ、ハブのルートテーブルで。本番とテストは、お互いに届かないようにしなきゃ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do we have to worry about overlapping addresses?",
+      "jp": "アドレスの重複は気にしないといけない？",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Very much. Two VPCs with the same range can't be connected. That's why we plan the ranges first.",
+      "jp": "とても。同じ範囲のVPC同士は、つなげられないの。だから範囲を最初に計画するのよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll make a spreadsheet of every range today and share it with all the teams.",
+      "jp": "今日、全部の範囲の表を作って、全チームに共有するよ。"
+     }
+    ]
+   },
+   {
+    "t": "⚡ 038｜キャッシュで速く：Making It Fast with a CDN",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, our customers in Europe say the website feels slow. Our servers are in Tokyo.",
+      "jp": "アナ、ヨーロッパのお客さんが、サイトが遅いと言ってる。うちのサーバーは東京。"
+     },
+     {
+      "sp": 1,
+      "en": "Distance matters. Data can't travel faster than light. Use a CDN, a content delivery network.",
+      "jp": "距離は効くのよ。データは光より速くは進めない。CDN、コンテンツ配信ネットワークを使って。"
+     },
+     {
+      "sp": 0,
+      "en": "What does it do?",
+      "jp": "それは何をするの？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "It keeps copies of your images and files on servers around the world, close to the users.",
+      "jp": "画像やファイルのコピーを、世界中の利用者の近くのサーバーに置いておくの。",
+      "note": "用語: CDN = 世界中にコピーを置いて配信を速くする仕組み／invalidation = キャッシュの無効化"
+     },
+     {
+      "sp": 0,
+      "en": "What if I update a file? Won't users see the old copy?",
+      "jp": "ファイルを更新したら？利用者は古いコピーを見ない？"
+     },
+     {
+      "sp": 1,
+      "en": "That's the cache problem. Either send an invalidation request, or put a version number in the file name.",
+      "jp": "それがキャッシュの問題ね。無効化のリクエストを送るか、ファイル名にバージョン番号を入れるの。"
+     },
+     {
+      "sp": 0,
+      "en": "Should we cache everything?",
+      "jp": "全部キャッシュしていい？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Cache static files like images and style sheets. Never cache personal pages, like an account page.",
+      "jp": "だめよ。画像やスタイルシートのような静的ファイルを。アカウントのページのような個人のページは、絶対にだめ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll set it up for the images first, and measure the difference.",
+      "jp": "まず画像で設定して、差を測ってみるよ。"
+     }
+    ]
+   },
+   {
+    "t": "🧩 039｜コードで作るネットワーク：Infrastructure as Code",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I built the test network by clicking in the console, and now I can't remember what I did.",
+      "jp": "アナ、テスト用ネットワークをコンソールをクリックして作ったんだけど、何をしたか思い出せない。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why we use infrastructure as code. You write the network as a text file, and a tool builds it.",
+      "jp": "だからインフラのコード化を使うの。ネットワークをテキストファイルで書いて、ツールが作る。"
+     },
+     {
+      "sp": 0,
+      "en": "Like Terraform?",
+      "jp": "Terraformみたいな？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. The file is the documentation, and you can keep it in Git with a full history.",
+      "jp": "その通り。ファイルがそのまま設計書になるし、Gitで履歴も全部残せる。",
+      "note": "用語: Infrastructure as Code (IaC) = インフラを設定ファイルで管理する手法／drift = 実際と設計のずれ"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if someone changes something by hand in the console?",
+      "jp": "誰かがコンソールで手作業で変更したら？"
+     },
+     {
+      "sp": 1,
+      "en": "The tool finds the difference, and it can show you a plan before it changes anything. We call that drift.",
+      "jp": "ツールが差を見つけて、変更の前に計画を表示してくれる。それをドリフトと呼ぶの。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I destroy the whole test network with one command?",
+      "jp": "テスト環境全体を、1コマンドで消せる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and rebuild it in ten minutes. Just be careful. The same command can destroy production, too.",
+      "jp": "できるし、10分で作り直せる。でも気をつけて。同じコマンドで本番も消せるから。"
+     },
+     {
+      "sp": 0,
+      "en": "So always read the plan before applying it. I'll turn that into a habit.",
+      "jp": "だから適用の前に必ず計画を読む。それを習慣にするよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "💰 040｜請求書の悲鳴：The Cloud Bill Surprise",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, this month's cloud bill is three times the usual. The boss wants an explanation by noon.",
+      "jp": "アナ、今月のクラウドの請求が、いつもの3倍なの。上司がお昼までに説明してほしいって。"
+     },
+     {
+      "sp": 1,
+      "en": "Open the cost explorer. Group the costs by service, and look at which one jumped.",
+      "jp": "コストエクスプローラーを開いて。サービスごとにまとめて、どれが跳ね上がったか見て。"
+     },
+     {
+      "sp": 0,
+      "en": "Data transfer. It's eight times higher than last month.",
+      "jp": "データ転送だ。先月の8倍になってる。"
+     },
+     {
+      "sp": 1,
+      "en": "Now group by resource. Which resource sent so much data out of the cloud?",
+      "jp": "次はリソースごとにまとめて。どのリソースが、そんなにクラウドの外へデータを送ったの？"
+     },
+     {
+      "sp": 0,
+      "en": "A test server that nobody remembers. It's copying a large backup to the internet every night.",
+      "jp": "誰も覚えてないテストサーバー。毎晩、大きなバックアップをインターネットへコピーしてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Stop it, and then tag every resource with an owner and a purpose. Untagged resources are the first to waste money.",
+      "jp": "止めて、それから全部のリソースに、担当者と目的のタグを付けて。タグのないリソースが、真っ先にお金を無駄にするの。",
+      "note": "用語: tag = リソースに付ける担当者・目的などのラベル／budget alert = 予算超過の通知"
+     },
+     {
+      "sp": 0,
+      "en": "Can we get a warning before the bill gets big?",
+      "jp": "請求が大きくなる前に、警告をもらえない？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 1,
+      "en": "Set a budget alert at eighty percent. And review the bill every week, not once a month.",
+      "jp": "予算の80パーセントでアラートを設定して。それと請求は月1回じゃなく、毎週見直して。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll send the boss a short report: what happened, what we fixed, and how we'll prevent it.",
+      "jp": "上司に短い報告を送るよ。何が起きて、何を直して、どう防ぐか。"
+     }
+    ]
+   }
+  ]
+ }
+]
