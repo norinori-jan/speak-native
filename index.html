@@ -3648,7 +3648,8 @@ function loadPackagedConversation(){
   {id:'drama09',file:'drama09-3109.json'},
   {id:'drama10',file:'drama10-3110.json'},
   {id:'net01',file:'net01-3201.json'},
-  {id:'net02',file:'net02-3202.json'}
+  {id:'net02',file:'net02-3202.json'},
+  {id:'net03',file:'net03-3203.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();

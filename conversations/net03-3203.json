@@ -1,0 +1,536 @@
+[
+ {
+  "id": "net03",
+  "ic": "🔐",
+  "n": "ネットワーク英語3・無線LAN・VPN・セキュリティ",
+  "hint": "Ana teaches Ken wireless LAN, WPA3, guest networks, IPsec VPN, split tunnels, TLS certificates, port security, phishing response, log analysis and zero trust",
+  "level": 4,
+  "keywords": [
+   "wireless",
+   "vpn",
+   "security"
+  ],
+  "d": [
+   {
+    "t": "📶 021｜Wi-Fiが遅い本当の理由：Why the Wi-Fi Is Slow",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the Wi-Fi on the third floor is terrible, but the signal shows full bars. Why?",
+      "jp": "アナ、3階のWi-Fiがひどいの。電波は満タンなのに。どうして？"
+     },
+     {
+      "sp": 1,
+      "en": "Full bars only mean the signal is strong. It doesn't mean the channel is clean.",
+      "jp": "アンテナ満タンは、電波が強いという意味だけ。チャネルがきれいという意味じゃないの。"
+     },
+     {
+      "sp": 0,
+      "en": "So maybe there's interference from other networks?",
+      "jp": "じゃあ、ほかのネットワークの干渉かな？"
+     },
+     {
+      "sp": 1,
+      "en": "Run a Wi-Fi scan. Count how many access points use the same channel as ours.",
+      "jp": "Wi-Fiのスキャンをして。うちと同じチャネルを使うアクセスポイントが何台あるか数えて。",
+      "note": "用語: access point = 無線LANの親機／channel = 無線の通り道"
+     },
+     {
+      "sp": 0,
+      "en": "Eleven of them are on channel six, including ours. That's crowded.",
+      "jp": "11台がチャネル6を使ってる。うちのも含めて。混んでるね。"
+     },
+     {
+      "sp": 1,
+      "en": "On two point four gigahertz, only channels one, six and eleven don't overlap. So it's always crowded.",
+      "jp": "2.4ギガヘルツでは、重ならないのは1、6、11だけ。だからいつも混むの。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "Should we move everyone to five gigahertz?",
+      "jp": "全員を5ギガヘルツに移した方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, there are more channels and less noise. Just keep the access points far enough apart.",
+      "jp": "ええ、チャネルが多くてノイズも少ない。アクセスポイントを十分離して置けばね。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll set the new channels tonight and measure again in the morning.",
+      "jp": "今夜新しいチャネルを設定して、朝にもう一度測るよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔐 022｜社内Wi-Fiの鍵：The Key to the Office Wi-Fi",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, an employee left the company, but he still knows our Wi-Fi password. Is that a problem?",
+      "jp": "アナ、社員が辞めたのに、まだうちのWi-Fiのパスワードを知ってる。問題かな？"
+     },
+     {
+      "sp": 1,
+      "en": "A big one. With one shared password, you'd have to change it for everyone, every time.",
+      "jp": "大問題よ。共通パスワード1つだと、辞めるたびに全員分を変えなきゃいけない。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a better way?",
+      "jp": "もっといい方法はある？"
+     },
+     {
+      "sp": 1,
+      "en": "Use 802.1X with WPA3-Enterprise. Each person logs in with their own account.",
+      "jp": "802.1XのWPA3エンタープライズを使うの。各自が自分のアカウントでログインする。",
+      "note": "用語: 802.1X = 利用者ごとに認証する仕組み／RADIUS = 認証を行うサーバー"
+     },
+     {
+      "sp": 0,
+      "en": "So when someone leaves, we just disable the account?",
+      "jp": "じゃあ辞めた人は、アカウントを無効にするだけ？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Nothing else changes. The authentication goes through a RADIUS server.",
+      "jp": "その通り。ほかは何も変わらない。認証はRADIUSサーバーを通るの。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the printers? They can't type a username.",
+      "jp": "プリンターは？ユーザー名を入力できないよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Put them on a separate network with a simple password, and limit what they can reach.",
+      "jp": "別のネットワークに入れて簡単なパスワードにして、届く範囲を制限するの。"
+     },
+     {
+      "sp": 0,
+      "en": "That makes sense. Different devices, different doors.",
+      "jp": "なるほど。機器ごとに、入口を変えるんだね。"
+     }
+    ]
+   },
+   {
+    "t": "🚧 023｜ゲストを隔離する：Keeping Guests Apart",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, a guest just asked for our Wi-Fi password. What should I give?",
+      "jp": "アナ、お客さんがうちのWi-Fiのパスワードを聞いてきた。何を教えればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Not the office one. Give the guest network. It's a different network with its own rules.",
+      "jp": "社内のじゃなくてゲスト用よ。別のネットワークで、専用のルールがあるの。"
+     },
+     {
+      "sp": 0,
+      "en": "What's different about it?",
+      "jp": "何が違うの？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Guests get internet only. They can't see printers, servers or other guests.",
+      "jp": "ゲストはインターネットだけ。プリンターもサーバーも、ほかのゲストも見えない。"
+     },
+     {
+      "sp": 0,
+      "en": "How do we stop guests from seeing each other?",
+      "jp": "ゲスト同士が見えないようにするには？"
+     },
+     {
+      "sp": 1,
+      "en": "Turn on client isolation. Each device can talk to the router, but not to its neighbors.",
+      "jp": "クライアント分離を有効にするの。各端末はルーターとは話せるけど、隣とは話せない。",
+      "note": "用語: client isolation = 同じ無線に繋がる端末同士の通信を禁止する機能"
+     },
+     {
+      "sp": 0,
+      "en": "Should the guest password change?",
+      "jp": "ゲストのパスワードは変えた方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, every month, or use a login page with a daily code. And limit the speed, so one person can't eat everything.",
+      "jp": "ええ、毎月か、毎日変わるコードのログインページにして。速度も制限して、1人が帯域を食い尽くさないようにね。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll set it up this afternoon and test from my own phone.",
+      "jp": "今日の午後に設定して、自分のスマホで試すよ。"
+     }
+    ]
+   },
+   {
+    "t": "🛤️ 024｜拠点をつなぐトンネル：A Tunnel Between Offices",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the new office in Osaka needs to reach our servers in Tokyo, safely. What are our options?",
+      "jp": "アナ、大阪の新しいオフィスから、東京のサーバーに安全につなぎたい。選択肢は？"
+     },
+     {
+      "sp": 1,
+      "en": "A site-to-site VPN. An encrypted tunnel goes over the internet and joins the two networks.",
+      "jp": "拠点間VPNよ。暗号化されたトンネルがインターネットを通って、2つのネットワークをつなぐの。",
+      "note": "用語: site-to-site VPN = 拠点どうしを暗号化トンネルでつなぐ／IPsec = その標準方式"
+     },
+     {
+      "sp": 0,
+      "en": "Which technology do we use? I keep hearing 'IPsec'.",
+      "jp": "どの技術を使うの？IPsecってよく聞くけど。"
+     },
+     {
+      "sp": 1,
+      "en": "IPsec is the standard. It works in two phases: first the devices agree on keys, then they send the data.",
+      "jp": "IPsecが標準よ。2段階で動くの。まず機器が鍵に合意して、それからデータを送る。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the tunnel is up, but nothing passes?",
+      "jp": "トンネルは上がってるのに、何も通らなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Check the traffic selectors. Both sides must agree on which networks go through the tunnel.",
+      "jp": "トラフィックセレクタを確認して。どのネットワークをトンネルに通すか、両側で一致している必要があるの。"
+     },
+     {
+      "sp": 0,
+      "en": "The Osaka side says ten dot two, and Tokyo expects ten dot three. A typo.",
+      "jp": "大阪側が10.2で、東京側は10.3を期待してる。打ち間違いだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Fix it, then watch the logs on both sides. Most VPN problems are a mismatch.",
+      "jp": "直したら、両側のログを見て。VPNの問題はほとんど設定の食い違いなの。"
+     },
+     {
+      "sp": 0,
+      "en": "Tunnel is passing traffic now. Next, I'll write the settings down for the team.",
+      "jp": "トンネルに通信が流れた。次に、設定をチーム向けに書き残すね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🏠 025｜在宅勤務のVPN：VPN for Working from Home",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, people working from home say the VPN makes their video calls choppy. What do we do?",
+      "jp": "アナ、在宅の人が、VPNだとビデオ会議がカクカクするって。どうしよう。"
+     },
+     {
+      "sp": 1,
+      "en": "Is all their traffic going through the VPN, even video calls and YouTube?",
+      "jp": "全部の通信がVPNを通ってるの？ビデオ会議もYouTubeも。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. The company sets it as a full tunnel.",
+      "jp": "うん。会社の設定は、フルトンネルなんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Consider a split tunnel. Only traffic to company servers goes through the VPN, and the rest goes straight out.",
+      "jp": "スプリットトンネルを検討して。会社のサーバー宛だけVPNを通して、残りは直接出るの。",
+      "note": "用語: split tunnel = 会社宛だけVPNを通す方式／full tunnel = 全通信をVPNに通す方式"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds faster. But is it less secure?",
+      "jp": "速くなりそうだね。でも安全性は下がらない？"
+     },
+     {
+      "sp": 1,
+      "en": "A little, yes. So we also require device checks and multi-factor authentication before anyone connects.",
+      "jp": "少しね。だから接続前に、端末の確認と多要素認証も必須にするの。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the people who travel and use public Wi-Fi?",
+      "jp": "出張で公共Wi-Fiを使う人は？"
+     },
+     {
+      "sp": 1,
+      "en": "For them, keep the full tunnel. Public Wi-Fi is a place where you don't trust anyone.",
+      "jp": "その人たちはフルトンネルのままで。公共Wi-Fiは、誰も信用できない場所だから。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Two profiles: one for home, one for travel.",
+      "jp": "いいね。プロファイルは2つ、自宅用と出張用だ。"
+     }
+    ]
+   },
+   {
+    "t": "📅 026｜期限切れの証明書：The Expired Certificate",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, customers see a big red warning on our website this morning. Our site is not working!",
+      "jp": "アナ、今朝お客さんが、うちのサイトで大きな赤い警告を見てる。サイトが使えない！"
+     },
+     {
+      "sp": 1,
+      "en": "Open it in a browser and click the warning. What does it say?",
+      "jp": "ブラウザで開いて、警告をクリックして。何て書いてある？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "It says the certificate expired yesterday at midnight.",
+      "jp": "証明書が昨日の夜中の0時に期限切れだって。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a classic. A TLS certificate proves who you are, and it has an end date.",
+      "jp": "よくあるやつよ。TLS証明書は身元を証明するもので、期限があるの。",
+      "note": "用語: TLS certificate = 通信相手の身元を証明するデジタル証明書（期限つき）"
+     },
+     {
+      "sp": 0,
+      "en": "I'll renew it right now. But why did nobody notice?",
+      "jp": "いますぐ更新する。でも、どうして誰も気づかなかったんだろう。"
+     },
+     {
+      "sp": 1,
+      "en": "Because nobody watched the date. A calendar reminder isn't enough. Set a monitoring alert at thirty days before.",
+      "jp": "誰も期限を見ていなかったから。カレンダーの通知では足りないの。30日前の監視アラートを設定して。"
+     },
+     {
+      "sp": 0,
+      "en": "Do we need to restart the server after the renewal?",
+      "jp": "更新したあと、サーバーの再起動は必要？"
+     },
+     {
+      "sp": 1,
+      "en": "Usually you reload the service, and check the chain too. A missing intermediate certificate causes new warnings.",
+      "jp": "たいていはサービスの再読み込みで足りるけど、チェーンも確認して。中間証明書が欠けると、新しい警告が出るの。"
+     },
+     {
+      "sp": 0,
+      "en": "The site is back. I'll add every certificate to a list with its owner and date.",
+      "jp": "サイトが復旧した。全部の証明書を、担当者と期限つきの一覧にしておくよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔌 027｜空いたポートの危険：The Open Port in the Corner",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I found a network jack in the meeting room that's active, but nobody uses it. Is that okay?",
+      "jp": "アナ、会議室に使われていないのに有効なネットワーク差込口を見つけた。大丈夫かな？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Anyone could walk in, plug in a laptop and get on our network.",
+      "jp": "だめよ。誰でも入ってきてノートパソコンを挿せば、ネットワークに入れてしまう。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I do? Disable every unused port?",
+      "jp": "どうすればいい？使っていないポートは全部無効にする？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, that's the first step. And on active ports, turn on port security. It limits which devices can connect.",
+      "jp": "ええ、それが最初の一歩。有効なポートではポートセキュリティをオンにして。接続できる機器を制限するの。",
+      "note": "用語: port security = 接続できる機器(MAC)をポートごとに制限する機能"
+     },
+     {
+      "sp": 0,
+      "en": "How does it know which device is allowed?",
+      "jp": "どの機器が許可されているか、どうやって分かるの？"
+     },
+     {
+      "sp": 1,
+      "en": "It remembers the MAC address. If a different device appears, the port shuts down and sends an alert.",
+      "jp": "MACアドレスを覚えるの。違う機器が現れたら、ポートが止まってアラートが出る。"
+     },
+     {
+      "sp": 0,
+      "en": "What if someone legitimately replaces their computer?",
+      "jp": "誰かが正当にパソコンを買い替えたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then they open a ticket, and you update the list. A small hassle is better than a big incident.",
+      "jp": "その時はチケットを出してもらって、一覧を更新するの。小さな手間の方が、大事故よりずっといいわ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll go through every floor tomorrow with a checklist.",
+      "jp": "明日、チェックリストを持って全フロアを回るよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🎣 028｜フィッシングの朝：A Phishing Morning",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I think I clicked a bad link in an email this morning. What do I do?",
+      "jp": "アナ、今朝メールの怪しいリンクを押してしまったかも。どうすればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "First, don't panic, and don't hide it. Tell the security team right now. Speed matters.",
+      "jp": "まず慌てないで、隠さないこと。いますぐセキュリティチームに連絡して。速さが大事なの。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "Did I enter a password on the page?",
+      "jp": "そのページにパスワードを入力した？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, I did. It looked exactly like our login page.",
+      "jp": "うん、入力した。うちのログインページそっくりだった。"
+     },
+     {
+      "sp": 0,
+      "en": "Then change the password immediately, and we'll check your account for strange logins.",
+      "jp": "なら、すぐパスワードを変えて。それから、あなたのアカウントに不審なログインがないか調べるわ。",
+      "note": "用語: multi-factor authentication (MFA) = パスワードに加え、別の要素(スマホ等)で本人確認"
+     },
+     {
+      "sp": 1,
+      "en": "Will multi-factor authentication help here?",
+      "jp": "多要素認証は、ここで役に立つ？"
+     },
+     {
+      "sp": 0,
+      "en": "A lot. Even with your password, the attacker still needs your phone. That's why we require it.",
+      "jp": "とても。パスワードを盗まれても、攻撃者はあなたのスマホが必要になる。だから必須にしているの。"
+     },
+     {
+      "sp": 1,
+      "en": "How can I recognize a fake page next time?",
+      "jp": "次は、偽のページをどう見分ければいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Check the address bar, not the design. And when in doubt, type the address yourself.",
+      "jp": "見た目じゃなくて、アドレスバーを見て。迷ったら自分でアドレスを入力するの。"
+     }
+    ]
+   },
+   {
+    "t": "🛡️ 029｜ログが語る侵入：What the Logs Told Us",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the firewall shows ten thousand failed logins from one address in the last hour.",
+      "jp": "アナ、ファイアウォールに、同じアドレスから1時間で1万回のログイン失敗が出てる。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a brute-force attack. Someone is trying thousands of passwords against our server.",
+      "jp": "ブルートフォース攻撃ね。誰かがサーバーに、何千通りものパスワードを試しているの。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I block that address?",
+      "jp": "そのアドレスをブロックした方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, block it now. But attackers change addresses, so also limit the number of attempts per minute.",
+      "jp": "ええ、すぐブロックして。でも攻撃者はアドレスを変えるから、1分あたりの試行回数も制限して。",
+      "note": "用語: brute-force attack = パスワードを総当たりで試す攻撃／isolate = 隔離する"
+     },
+     {
+      "sp": 0,
+      "en": "Did any of the logins succeed?",
+      "jp": "成功したログインはあった？"
+     },
+     {
+      "sp": 1,
+      "en": "Search the logs for a success from the same address. That's the most important question.",
+      "jp": "同じアドレスからの成功を、ログで探して。それがいちばん大事な質問よ。"
+     },
+     {
+      "sp": 0,
+      "en": "I found one success, two minutes ago, with the account named 'admin'.",
+      "jp": "1件、成功があった。2分前、『admin』というアカウントで。"
+     },
+     {
+      "sp": 1,
+      "en": "Disable that account, isolate the server and call the incident team. This is no longer a drill.",
+      "jp": "そのアカウントを無効にして、サーバーを隔離して、インシデントチームを呼んで。もう訓練じゃないわ。"
+     },
+     {
+      "sp": 0,
+      "en": "On it. I'll keep a timeline of everything I do, minute by minute.",
+      "jp": "やる。自分のやることを、分単位の時系列で全部記録しておくよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🧠 030｜信用しない設計：Trust No One",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, my manager keeps saying 'zero trust'. What does it actually mean?",
+      "jp": "アナ、上司がゼロトラストってよく言うんだ。実際どういう意味？"
+     },
+     {
+      "sp": 1,
+      "en": "The old idea was a strong wall: everyone inside is trusted. Zero trust says: trust nobody by default, even inside.",
+      "jp": "昔の考えは強い壁で、中にいる人は全員信用するというもの。ゼロトラストは、中でも誰も最初から信用しないという考え。"
+     },
+     {
+      "sp": 0,
+      "en": "So every request is checked, every time?",
+      "jp": "つまり、すべての要求を、毎回確認する？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Who are you, is your device healthy, and do you really need this resource?",
+      "jp": "そう。あなたは誰か、端末は健全か、本当にこの資源が必要か。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds like a lot of work for users.",
+      "jp": "利用者にはずいぶん手間が増えそうだね。",
+      "note": "元の形: a lot of／聞こえ方: ア ロタ／使う場面:たくさんと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Done well, it's invisible. Single sign-on and device checks happen in the background.",
+      "jp": "うまくやれば見えないの。シングルサインオンと端末確認は、裏で行われる。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do we start in our company?",
+      "jp": "うちの会社では、どこから始める？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with identity: multi-factor authentication for everyone, and least privilege, so each person gets only what they need.",
+      "jp": "ID から。全員に多要素認証と、最小権限、つまり必要な分だけの権限を渡すこと。",
+      "note": "用語: least privilege = 必要最小限の権限だけを与える原則／zero trust = 誰も最初から信用しない設計"
+     },
+     {
+      "sp": 0,
+      "en": "Small steps first. I'll bring a one-page plan to the meeting on Friday.",
+      "jp": "まず小さな一歩だね。金曜の会議に、1ページの計画を持っていくよ。"
+     }
+    ]
+   }
+  ]
+ }
+]
