@@ -1,0 +1,534 @@
+[
+ {
+  "id": "net02",
+  "ic": "🛰️",
+  "n": "ネットワーク英語2・ルーティング・スイッチング・運用",
+  "hint": "Ana teaches Ken routing and switching in real situations: static routes, OSPF, BGP, spanning tree, link aggregation, trunks, NAT, VRRP, logs and monitoring",
+  "level": 4,
+  "keywords": [
+   "routing",
+   "switching",
+   "operations"
+  ],
+  "d": [
+   {
+    "t": "🗺️ 011｜静的ルートの穴：The Missing Static Route",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the new branch can ping its own router, but not the head office. What am I missing?",
+      "jp": "アナ、新しい支社は自分のルーターには届くのに、本社に届かない。何が足りないの？"
+     },
+     {
+      "sp": 1,
+      "en": "Show me the routing table. Type show ip route.",
+      "jp": "ルーティングテーブルを見せて。show ip route と打って。"
+     },
+     {
+      "sp": 0,
+      "en": "There's a connected route for the branch, and nothing else. No route to the head office.",
+      "jp": "支社の直接接続ルートだけで、ほかに何もない。本社へのルートがない。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. A router only knows the networks it touches, unless you teach it more.",
+      "jp": "そう。ルーターは、つながっているネットワークしか知らないの。教えない限りね。"
+     },
+     {
+      "sp": 0,
+      "en": "So I add a static route: destination ten dot zero dot zero dot zero slash sixteen, next hop the WAN address.",
+      "jp": "じゃあスタティックルートを足す。宛先は10.0.0.0/16、ネクストホップはWANのアドレス。",
+      "note": "用語: next hop = 次に渡す先のルーターのアドレス"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Now what about the way back? Does the head office know the branch?",
+      "jp": "いいわね。じゃあ帰り道は？本社は支社を知ってる？"
+     },
+     {
+      "sp": 0,
+      "en": "Oh. No. It would drop the reply, and the ping would still fail.",
+      "jp": "あ、知らない。返事が捨てられて、pingはやっぱり失敗するね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the classic mistake. Routes must exist in both directions.",
+      "jp": "それが定番のミスよ。ルートは往復の両方に必要なの。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll add both, then test again. Both ends, every time.",
+      "jp": "両方に入れて、もう一度試す。いつでも両端、だね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🧭 012｜OSPFの隣人たち：Making Friends with OSPF",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I'm tired of typing static routes. Is there a smarter way?",
+      "jp": "アナ、スタティックルートを打つのに疲れたよ。もっと賢い方法はない？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, a routing protocol. For a company network, OSPF is the common choice.",
+      "jp": "あるわ、ルーティングプロトコル。社内ネットワークならOSPFが定番よ。"
+     },
+     {
+      "sp": 0,
+      "en": "How does it work? Do routers just share what they know?",
+      "jp": "どういう仕組み？ルーター同士が知っていることを共有するの？"
+     },
+     {
+      "sp": 1,
+      "en": "They first become neighbors by sending hello packets. Then they exchange link information.",
+      "jp": "まずhelloパケットを送り合って、隣人になるの。それからリンクの情報を交換する。",
+      "note": "用語: OSPF = 社内向けの経路制御プロトコル／neighbor = 情報を交換する隣のルーター"
+     },
+     {
+      "sp": 0,
+      "en": "And then each router builds a map of the whole area?",
+      "jp": "それから各ルーターが、エリア全体の地図を作るんだね？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Then it runs an algorithm and picks the shortest path, based on cost.",
+      "jp": "その通り。それからアルゴリズムを走らせて、コストをもとに最短経路を選ぶの。"
+     },
+     {
+      "sp": 0,
+      "en": "My two routers won't become neighbors. The status is stuck in Init.",
+      "jp": "僕の2台のルーターが隣人にならない。状態がInitで止まってる。"
+     },
+     {
+      "sp": 1,
+      "en": "Check the area number and the hello timers. They have to match on both sides.",
+      "jp": "エリア番号とhelloタイマーを確認して。両側で一致していないとだめなの。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Found it. One side is area zero, and the other is area one. Fixing it now.",
+      "jp": "見つけた。片方がエリア0で、もう片方がエリア1だった。いま直すよ。"
+     }
+    ]
+   },
+   {
+    "t": "🌍 013｜インターネットの地図 BGP：BGP Runs the Internet",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, our provider sent a note about BGP. Do I need to understand it?",
+      "jp": "アナ、プロバイダーからBGPの連絡が来た。理解しておく必要ある？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, at least the basics. BGP is how different companies' networks tell each other what they can reach.",
+      "jp": "ええ、せめて基本は。BGPは、別々の会社のネットワークが、自分の届く範囲を伝え合う仕組みよ。"
+     },
+     {
+      "sp": 0,
+      "en": "So OSPF is inside the company, and BGP is between companies?",
+      "jp": "じゃあOSPFは社内、BGPは会社どうしの間？"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Each company has an AS number, an autonomous system number, like an ID.",
+      "jp": "そう。各社がAS番号を持っているの。自律システム番号。IDみたいなものよ。",
+      "note": "用語: AS number = 自律システム番号。BGPで会社ごとのネットワークを区別するID"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if someone announces the wrong prefix by mistake?",
+      "jp": "誰かが間違ってプレフィックスを広告したら、どうなる？"
+     },
+     {
+      "sp": 1,
+      "en": "Traffic can go to the wrong place. That's happened to big companies, and whole services went down.",
+      "jp": "通信が違う場所に行くわ。大きな会社でも起きて、サービス全体が止まったことがあるの。"
+     },
+     {
+      "sp": 0,
+      "en": "That's scary. How do we protect ourselves?",
+      "jp": "怖いね。どうやって守る？"
+     },
+     {
+      "sp": 1,
+      "en": "We filter what we accept and what we announce. Never trust a route you didn't ask for.",
+      "jp": "受け取るものも、広告するものも、フィルターするの。頼んでいないルートは信用しない。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll read our provider's document tonight and make a list of questions.",
+      "jp": "今夜プロバイダーの資料を読んで、質問リストを作るよ。"
+     }
+    ]
+   },
+   {
+    "t": "🌀 014｜ループの嵐：The Loop Storm",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the whole network just crashed! Every light on the switch is blinking like crazy.",
+      "jp": "アナ、ネットワーク全体が落ちた！スイッチのランプが全部、狂ったように点滅してる。"
+     },
+     {
+      "sp": 1,
+      "en": "Calm down. Did anyone plug in a new cable in the last ten minutes?",
+      "jp": "落ち着いて。この10分の間に、誰かケーブルを新しく挿した？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Mike connected two wall ports in the meeting room with one cable.",
+      "jp": "うん。マイクが会議室の壁のポート2つを、1本のケーブルでつないだ。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a loop. Broadcast packets circle forever and eat all the bandwidth. We call it a broadcast storm.",
+      "jp": "ループね。ブロードキャストが永遠に回って、帯域を全部食べちゃう。ブロードキャストストームと呼ぶの。"
+     },
+     {
+      "sp": 0,
+      "en": "Isn't there a protection against that?",
+      "jp": "それを防ぐ仕組みはないの？"
+     },
+     {
+      "sp": 1,
+      "en": "Spanning Tree Protocol. It blocks one path so there's no loop. But someone may have turned it off.",
+      "jp": "スパニングツリー。1本の経路をブロックして、ループをなくすの。でも誰かが切ったのかもしれない。",
+      "note": "用語: STP = ループを防ぐためにポートをブロックする仕組み"
+     },
+     {
+      "sp": 0,
+      "en": "I unplugged the cable. The lights are calming down now.",
+      "jp": "ケーブルを抜いた。ランプが落ち着いてきた。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Now enable the protection on every access port, so one mistake can't take us down again.",
+      "jp": "よし。あとは全部のアクセスポートで保護機能を有効にして。1つのミスで二度と落ちないように。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll do that today, and I'll write a note for the team about the meeting room.",
+      "jp": "今日やるよ。会議室のことも、チーム向けにメモを書く。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🔗 015｜2本をまとめる：Two Cables, One Link",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the link between the two switches is always full. Users complain about slow file copies.",
+      "jp": "アナ、2台のスイッチ間のリンクがいつも満杯なの。ファイルコピーが遅いって苦情が来てる。"
+     },
+     {
+      "sp": 1,
+      "en": "What speed is it? Do you have a free port on both sides?",
+      "jp": "速度は？両側に空きポートはある？"
+     },
+     {
+      "sp": 0,
+      "en": "It's one gigabit, and yes, there are two free ports on each switch.",
+      "jp": "1ギガで、うん、両方のスイッチに空きポートが2つずつある。"
+     },
+     {
+      "sp": 1,
+      "en": "Then bundle them. Link aggregation puts several cables together into one logical link.",
+      "jp": "じゃあまとめましょう。リンクアグリゲーションは、複数のケーブルを1本の論理リンクにするの。"
+     },
+     {
+      "sp": 0,
+      "en": "So I'll get four gigabits?",
+      "jp": "じゃあ4ギガになるの？",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Not exactly. Each conversation still uses one cable, but many conversations share the load across all four.",
+      "jp": "ちょっと違う。1つの通信は1本を使うけど、たくさんの通信が4本に分散されるの。"
+     },
+     {
+      "sp": 0,
+      "en": "And if one cable fails, the others keep working?",
+      "jp": "それと1本が切れても、残りは動き続ける？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, that's the second benefit: redundancy. Use LACP, so both sides agree to form the bundle.",
+      "jp": "そう、それが2つ目の利点、冗長性よ。LACPを使って、両側で束ねることに合意させて。",
+      "note": "用語: LACP = 複数リンクを束ねる標準の合意プロトコル／redundancy = 冗長性"
+     },
+     {
+      "sp": 0,
+      "en": "Configured both sides. The link shows up as one channel. Nice.",
+      "jp": "両側を設定した。リンクが1本のチャネルとして見えてる。いいね。"
+     }
+    ]
+   },
+   {
+    "t": "🚪 016｜トランクポートの罠：The Trunk Port Trap",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I added VLAN thirty, but the new office still can't reach the server.",
+      "jp": "アナ、VLAN30を追加したのに、新しいオフィスはまだサーバーに届かない。"
+     },
+     {
+      "sp": 1,
+      "en": "Check the link between the switches. Is it a trunk, and does it allow VLAN thirty?",
+      "jp": "スイッチ間のリンクを確認して。トランクになってる？VLAN30は許可されてる？"
+     },
+     {
+      "sp": 0,
+      "en": "It's a trunk, but the allowed list only has ten and twenty.",
+      "jp": "トランクだけど、許可リストには10と20しかない。"
+     },
+     {
+      "sp": 1,
+      "en": "That's it. A trunk carries many VLANs over one cable, but only the ones you allow.",
+      "jp": "それよ。トランクは1本のケーブルで複数のVLANを運ぶけど、許可したものだけなの。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll add thirty. Should I use the command add, or replace the list?",
+      "jp": "30を追加するね。コマンドはaddにする？それとも一覧を置き換える？",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Always use add. If you replace the list, you'll delete ten and twenty, and the whole office goes down.",
+      "jp": "必ずaddよ。置き換えたら10と20が消えて、オフィス全体が落ちるわ。",
+      "note": "用語: trunk = 複数のVLANを1本で運ぶポート／rollback = 変更前に戻すこと"
+     },
+     {
+      "sp": 0,
+      "en": "Wow. I didn't know one word could be so dangerous.",
+      "jp": "うわ。たった1語がそんなに危険だなんて知らなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why we make changes in the maintenance window, with a rollback plan ready.",
+      "jp": "だから変更はメンテナンス時間に、元に戻す手順を用意してやるの。"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. Add, not replace. I'm writing it on a sticky note right now.",
+      "jp": "分かった。置き換えじゃなくてadd。いま付箋に書くよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔄 017｜NATで出ていく：Going Out Through NAT",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, we have two hundred computers, but only one public address. How can they all use the internet?",
+      "jp": "アナ、パソコンは200台あるのに、グローバルアドレスは1つだけ。どうやって全員がインターネットを使えるの？"
+     },
+     {
+      "sp": 1,
+      "en": "That's NAT. The router rewrites the source address of every outgoing packet.",
+      "jp": "それがNATよ。ルーターが、出ていくパケットの送信元アドレスを書き換えるの。"
+     },
+     {
+      "sp": 0,
+      "en": "But how does it know which reply belongs to which computer?",
+      "jp": "でも、どの返事がどのパソコンのものか、どうやって分かるの？"
+     },
+     {
+      "sp": 1,
+      "en": "It remembers the port number. We call it PAT, port address translation. It keeps a table.",
+      "jp": "ポート番号を覚えておくの。PAT、ポートアドレス変換と呼ぶわ。テーブルで管理してる。",
+      "note": "用語: PAT = ポート番号で多数の端末が1つのグローバルアドレスを共有する方式"
+     },
+     {
+      "sp": 0,
+      "en": "So the table is full of entries like, 'this port belongs to that laptop'?",
+      "jp": "じゃあテーブルには『このポートはあのノートパソコン』という記録が並んでるんだ？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. And when a connection ends, the entry expires after a while.",
+      "jp": "そう。接続が終わると、しばらくして記録は消えるの。"
+     },
+     {
+      "sp": 0,
+      "en": "What about a server inside, like a web server? People outside need to reach it.",
+      "jp": "中にあるサーバー、たとえばウェブサーバーは？外の人が届かないといけないよね。"
+     },
+     {
+      "sp": 1,
+      "en": "For that, you add a static NAT or a port forward. It maps one outside address to one inside server.",
+      "jp": "それにはスタティックNATか、ポート転送を足すの。外の1つのアドレスを、中の1台のサーバーに対応づける。"
+     },
+     {
+      "sp": 0,
+      "en": "I understand now. NAT is like a receptionist who forwards the calls.",
+      "jp": "やっと分かった。NATは電話を取り次ぐ受付係みたいなものだね。"
+     }
+    ]
+   },
+   {
+    "t": "🛟 018｜ゲートウェイの二重化：A Backup Gateway",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, last night our only router died, and the whole office lost the internet for three hours.",
+      "jp": "アナ、昨夜うちの1台きりのルーターが壊れて、オフィス全体が3時間ネットにつながらなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a single point of failure. We need a second router.",
+      "jp": "単一障害点ね。2台目のルーターが必要だわ。"
+     },
+     {
+      "sp": 0,
+      "en": "But every laptop has one gateway address. How can two routers share it?",
+      "jp": "でもパソコンにはゲートウェイのアドレスが1つしかない。2台でどうやって共有するの？"
+     },
+     {
+      "sp": 1,
+      "en": "With VRRP. The two routers share a virtual address, and one of them is the master.",
+      "jp": "VRRPでよ。2台が仮想アドレスを共有して、片方がマスターになるの。",
+      "note": "用語: VRRP = 2台のルーターで仮想ゲートウェイを共有する冗長化プロトコル"
+     },
+     {
+      "sp": 0,
+      "en": "And if the master dies, the backup takes over the same address?",
+      "jp": "マスターが死んだら、バックアップが同じアドレスを引き継ぐ？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, in about three seconds. The laptops don't even notice.",
+      "jp": "ええ、約3秒で。パソコンは気づきもしないわ。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "How do I choose which one is the master?",
+      "jp": "どっちをマスターにするかは、どう決める？"
+     },
+     {
+      "sp": 1,
+      "en": "By priority. The higher number wins. Give the stronger router the higher priority.",
+      "jp": "プライオリティで。数字が大きい方が勝つ。強いルーターに大きい値を付けるの。"
+     },
+     {
+      "sp": 0,
+      "en": "And test it. Unplug the master during lunch, and see if the backup really takes over.",
+      "jp": "それと必ずテストして。お昼にマスターを抜いて、バックアップが本当に引き継ぐか見るのよ。"
+     }
+    ]
+   },
+   {
+    "t": "📜 019｜ログを読む：Reading the Logs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the switch keeps rebooting at night, and I don't know why. Where do I look?",
+      "jp": "アナ、スイッチが夜中に何度も再起動するのに、理由が分からない。どこを見ればいい？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "The logs. Send them to a syslog server, so they survive even if the switch restarts.",
+      "jp": "ログよ。syslogサーバーに送っておけば、スイッチが再起動しても残るの。"
+     },
+     {
+      "sp": 0,
+      "en": "I found a message at two-fifteen: 'Power supply failure.' Is that it?",
+      "jp": "2時15分にメッセージがあった。『電源の障害』。これかな？"
+     },
+     {
+      "sp": 1,
+      "en": "Probably. Now look at the five minutes before that. The cause is usually just before the symptom.",
+      "jp": "たぶんね。その前の5分間も見て。原因は、たいてい症状の少し前にあるの。"
+     },
+     {
+      "sp": 0,
+      "en": "Five minutes earlier, the temperature warning appeared three times.",
+      "jp": "5分前に、温度の警告が3回出てる。"
+     },
+     {
+      "sp": 1,
+      "en": "So the room was too hot, and the power supply gave up?",
+      "jp": "つまり部屋が暑すぎて、電源が音を上げたの？"
+     },
+     {
+      "sp": 0,
+      "en": "That fits. Check the room's air conditioner, and make sure the clocks on all devices are synchronized.",
+      "jp": "つじつまが合うわね。部屋の空調を確認して。それと全部の機器の時計が同期しているかも。"
+     },
+     {
+      "sp": 1,
+      "en": "Why the clocks?",
+      "jp": "どうして時計を？"
+     },
+     {
+      "sp": 0,
+      "en": "If the times don't match, you can't line up events across devices. Use NTP on everything.",
+      "jp": "時刻がずれていたら、機器をまたいで出来事を並べられないの。全部にNTPを使いなさい。",
+      "note": "用語: syslog = 機器のログを集めるサーバーと仕組み／NTP = 時刻を同期するプロトコル"
+     }
+    ]
+   },
+   {
+    "t": "📊 020｜見える化の最初の一歩：Making the Network Visible",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the boss asks me, 'Is the network healthy right now?' And I can't answer. I just guess.",
+      "jp": "アナ、上司に『いまネットワークは健康か』と聞かれても、答えられない。勘で言ってるだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why we monitor. Use SNMP to collect numbers like traffic, errors and CPU from every device.",
+      "jp": "だから監視するの。SNMPで、通信量やエラー、CPUの数字を全部の機器から集める。",
+      "note": "用語: SNMP = 機器の状態を集める標準の監視プロトコル／monitor = 監視する"
+     },
+     {
+      "sp": 0,
+      "en": "And then I draw graphs?",
+      "jp": "それをグラフにするんだね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with a tool like Zabbix or Grafana. A graph shows you the normal level, so you can spot the strange one.",
+      "jp": "ええ、ZabbixやGrafanaのようなツールで。グラフで普段の水準が見えるから、変な動きに気づけるの。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I watch first?",
+      "jp": "まず何を見ればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with three things: link up or down, bandwidth use, and error counts. Those catch most problems.",
+      "jp": "まず3つ。リンクの上下、帯域の使用率、エラーの数。それでほとんどの問題が見つかるわ。"
+     },
+     {
+      "sp": 0,
+      "en": "Should the system send alerts to my phone?",
+      "jp": "システムから、スマホにアラートを送らせた方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but only for what needs action. Too many alerts, and people start to ignore all of them.",
+      "jp": "ええ、でも対応が必要なものだけ。アラートが多すぎると、みんな全部を無視し始めるから。"
+     },
+     {
+      "sp": 0,
+      "en": "Got it. A few clear alerts, and a graph for everything else.",
+      "jp": "分かった。少数のはっきりしたアラートと、残りはグラフだね。"
+     }
+    ]
+   }
+  ]
+ }
+]
