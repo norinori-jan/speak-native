@@ -1,0 +1,486 @@
+[
+ {
+  "id": "net08",
+  "ic": "🆘",
+  "n": "ネットワーク英語8・障害対応ロング（通しで追う）",
+  "hint": "Five long incident dialogues, each followed from alarm to report: a DNS outage, a dead core switch, a traffic flood, a change that went wrong and a fiber cut",
+  "level": 4,
+  "keywords": [
+   "incident",
+   "outage",
+   "long dialogue"
+  ],
+  "d": [
+   {
+    "t": "🆘 071｜全部が落ちた朝：DNS障害：Everything Is Down: A DNS Outage",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, it's eight-oh-five and my phone is exploding. Every department says 'the internet is down'. What do you see?",
+      "jp": "アナ、8時5分なのに、携帯が鳴りっぱなし。全部署が『インターネットが落ちた』と言ってる。そっちは何が見える？"
+     },
+     {
+      "sp": 1,
+      "en": "Wait, I'm checking. I can ping eight dot eight dot eight dot eight, so the internet link is fine. But I can't open any website by name.",
+      "jp": "待って、確認中。8.8.8.8にはpingが通るから、インターネット回線は無事。でも名前でウェブサイトが開けないの。"
+     },
+     {
+      "sp": 0,
+      "en": "That means DNS. Our internal DNS servers may be down. Let me check them.",
+      "jp": "つまりDNSね。社内のDNSサーバーが落ちているかも。確認するわ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Both DNS servers answer ping, but nslookup times out. The service is running, but it's not answering queries.",
+      "jp": "DNSサーバー2台ともpingは通るのに、nslookupはタイムアウト。サービスは動いているのに、問い合わせに答えていないの。"
+     },
+     {
+      "sp": 0,
+      "en": "Send the first report now. 'DNS resolution is failing. Internet access by name is affected. We are investigating.' Next update at eight-twenty.",
+      "jp": "第一報を出して。『DNSの名前解決が失敗しています。名前でのインターネット接続に影響があります。調査中です。次の更新は8時20分』。",
+      "note": "表現: DNS resolution is failing. = 名前解決が失敗しています／DNS障害の第一報の定番"
+     },
+     {
+      "sp": 1,
+      "en": "Sent. Meanwhile, here's a quick workaround: tell users that the public DNS addresses work. I'll push it through DHCP.",
+      "jp": "送った。その間の回避策として、公開DNSのアドレスなら使えると案内しよう。DHCPで配るよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do it. Careful, though: if we give out public DNS, internal server names won't resolve.",
+      "jp": "お願い。ただし、公開DNSを配ると、社内のサーバー名は引けなくなるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "True. So that's only a partial fix. Web and email will return, but the internal apps will not. I'll tell the director that.",
+      "jp": "確かに。だから部分的な対応だね。ウェブとメールは戻るけど、社内アプリは戻らない。部長にもそれを伝えるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Now the real cause. Look at the DNS server's log from seven-thirty onward.",
+      "jp": "じゃあ本当の原因を。DNSサーバーのログを、7時半以降で見て。"
+     },
+     {
+      "sp": 1,
+      "en": "At seven forty-five, the zone file failed to load: 'syntax error on line two hundred twelve'. Someone edited a record last night.",
+      "jp": "7時45分に、ゾーンファイルの読み込みに失敗してる。『212行目に構文エラー』。昨夜、誰かがレコードを編集したんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Show me line two hundred twelve.",
+      "jp": "212行目を見せて。"
+     },
+     {
+      "sp": 1,
+      "en": "A missing dot at the end of a name. One small dot, and the whole zone is rejected.",
+      "jp": "名前の末尾のドットが抜けてる。小さなドット1つで、ゾーン全体が拒否されたんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Fix it, and restore the zone from the version in Git. Then reload the service and test.",
+      "jp": "直して、Gitにある前のバージョンから復元して。それからサービスを再読み込みして、テストして。"
+     },
+     {
+      "sp": 1,
+      "en": "Reloaded. Nslookup answers in ten milliseconds. Internal and external names are both resolving.",
+      "jp": "再読み込み完了。nslookupが10ミリ秒で答える。社内も社外も名前が引けてる。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Remove the workaround from DHCP, so people go back to the internal DNS. And clear the DNS cache on a few test machines.",
+      "jp": "いいわね。DHCPの回避策を外して、みんなが社内DNSに戻るようにして。それと、数台のテスト端末でDNSキャッシュを消して。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. All users are back to normal. The outage lasted from seven forty-five to eight forty.",
+      "jp": "完了。全員、通常に戻った。障害は7時45分から8時40分まで。"
+     },
+     {
+      "sp": 0,
+      "en": "Now write the final report: what happened, the cause, the impact, the fix, and the prevention.",
+      "jp": "じゃあ最終報告を書いて。何が起きたか、原因、影響、対応、再発防止。"
+     },
+     {
+      "sp": 1,
+      "en": "For prevention: a syntax check before every DNS change, a second person to review, and an alert if the zone fails to load.",
+      "jp": "再発防止は、DNS変更前の構文チェック、2人目のレビュー、ゾーンの読み込み失敗時のアラート。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Add one more: schedule changes to critical systems outside business hours, with a rollback ready.",
+      "jp": "完璧。もう1つ足して。重要システムの変更は営業時間外に、元に戻す手順を用意して実施する。"
+     },
+     {
+      "sp": 1,
+      "en": "Agreed. I'll send the report by noon. And Ana, thanks for keeping calm during the chaos.",
+      "jp": "賛成。お昼までに報告を送るよ。それとアナ、混乱の中で落ち着いていてくれてありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🔥 072｜コアスイッチが止まった：The Core Switch Dies",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, all alarms are red. The core switch in the data center is not responding. What's our status?",
+      "jp": "ケン、アラームが全部赤い。データセンターのコアスイッチが応答しないの。状況は？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm connecting through the out-of-band console. The switch is in a boot loop. It restarts every ninety seconds.",
+      "jp": "帯域外のコンソールでつないでいます。スイッチが再起動をくり返していて、90秒ごとに再起動します。"
+     },
+     {
+      "sp": 0,
+      "en": "We have a second core switch. Did the traffic fail over to it?",
+      "jp": "2台目のコアスイッチがあるはず。通信はそちらに切り替わった？"
+     },
+     {
+      "sp": 1,
+      "en": "Partly. The servers with two connections are fine. But the servers with only one cable are down. About fifteen servers.",
+      "jp": "一部だけです。2本つないであるサーバーは無事。でも1本しかないサーバーが落ちています。約15台。"
+     },
+     {
+      "sp": 0,
+      "en": "Which services are on those fifteen?",
+      "jp": "その15台に載っているサービスは？"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check the list. The payment gateway and the customer database are among them.",
+      "jp": "一覧を確認します。決済ゲートウェイと顧客データベースが含まれています。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Those are critical. Declare a major incident, and call the vendor with the highest priority.",
+      "jp": "重要ね。重大インシデントを宣言して、ベンダーに最優先で電話して。",
+      "note": "表現: Declare a major incident. = 重大インシデントを宣言する／対応体制を切り替える合図"
+     },
+     {
+      "sp": 1,
+      "en": "Calling now. While I wait, I can move the cables of the critical servers to the second switch by hand.",
+      "jp": "いま電話してる。待つ間に、重要なサーバーのケーブルを、手で2台目のスイッチに差し替えられます。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you have enough free ports on the second switch?",
+      "jp": "2台目のスイッチに、空きポートは足りる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, twenty free ports. But we must keep the same VLAN settings. I'll copy the port configuration first.",
+      "jp": "はい、空きが20個あります。ただし同じVLAN設定にしないといけません。先にポートの設定をコピーします。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Be careful, one cable at a time, and test after each one. Someone from the data center will help you.",
+      "jp": "いいわ。慎重に、1本ずつ、そのたびにテストして。データセンターの人が手伝ってくれる。"
+     },
+     {
+      "sp": 1,
+      "en": "First server moved. Ping works, and the application responds. Moving the payment gateway next.",
+      "jp": "1台目を移しました。pingが通って、アプリも応答しています。次は決済ゲートウェイを移します。"
+     },
+     {
+      "sp": 0,
+      "en": "Update the director: 'Core switch failure. Critical services being restored by moving cables. The estimated recovery is thirty minutes.'",
+      "jp": "部長に報告して。『コアスイッチの故障。ケーブルの付け替えで重要サービスを復旧中。復旧見込みは30分』。"
+     },
+     {
+      "sp": 1,
+      "en": "Payment gateway is back, and the database too. The vendor engineer says the switch needs a replacement, arriving this afternoon.",
+      "jp": "決済ゲートウェイが復旧して、データベースも戻りました。ベンダーのエンジニアが、スイッチは交換が必要で、午後に届くと言っています。"
+     },
+     {
+      "sp": 0,
+      "en": "So we run on one core switch until this afternoon. That's a risk. What do we do about it?",
+      "jp": "じゃあ午後まで、コアスイッチ1台で動くのね。それはリスクよ。どうする？"
+     },
+     {
+      "sp": 1,
+      "en": "Freeze all changes today, and put an engineer on watch. If the second switch fails, we'd lose everything.",
+      "jp": "今日は全変更を凍結して、エンジニアを監視に付けます。2台目も壊れたら、全部失います。"
+     },
+     {
+      "sp": 0,
+      "en": "Agreed. And in the postmortem, we'll look at why fifteen servers had only one cable.",
+      "jp": "賛成。それと振り返りでは、なぜ15台が1本しかつながっていなかったのかを検討しましょう。"
+     },
+     {
+      "sp": 1,
+      "en": "I already have the list. Single-connected servers are our biggest hidden risk.",
+      "jp": "一覧はもうあります。1本しかつないでいないサーバーが、隠れた最大のリスクです。"
+     }
+    ]
+   },
+   {
+    "t": "🌊 073｜通信が急増した夜：The Traffic Flood",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I'm on call. The monitoring shows internet traffic at ten times normal. The website is crawling.",
+      "jp": "アナ、当番です。監視でインターネットの通信量が普段の10倍。ウェブサイトが這うように遅いです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it a marketing campaign? Check with the marketing team, or look at the sources of the traffic.",
+      "jp": "マーケティングのキャンペーン？マーケに確認するか、通信の発信元を見て。"
+     },
+     {
+      "sp": 0,
+      "en": "I checked. No campaign tonight. The traffic comes from thousands of different addresses, all asking for the same page.",
+      "jp": "確認しました。今夜はキャンペーンなし。通信は何千もの別々のアドレスから来て、全部が同じページを要求しています。",
+      "note": "表現: Check the sources of the traffic. = 通信の発信元を見る／攻撃の調査の最初"
+     },
+     {
+      "sp": 1,
+      "en": "That looks like a DDoS attack. Are the requests normal browser requests?",
+      "jp": "DDoS攻撃のようね。リクエストは普通のブラウザのものなの？"
+     },
+     {
+      "sp": 0,
+      "en": "They look strange. The same user agent, and no cookies. They hit the search page, which is the heaviest one.",
+      "jp": "変です。同じユーザーエージェントで、クッキーなし。いちばん重い検索ページを狙っています。"
+     },
+     {
+      "sp": 1,
+      "en": "Enable the protection in the CDN: rate limiting and the bot challenge. Start with the search page.",
+      "jp": "CDNの保護機能をオンにして。レート制限とボット判定。検索ページから始めて。"
+     },
+     {
+      "sp": 0,
+      "en": "Enabled. The traffic to our servers is dropping. Fifty percent less already.",
+      "jp": "有効にしました。サーバーへの通信が減っています。もう半分に。"
+     },
+     {
+      "sp": 1,
+      "en": "Keep going. Add a rule for the user agent, but don't block real customers. Watch the error rate for normal users.",
+      "jp": "続けて。ユーザーエージェントのルールを足して。ただし本物のお客さんを止めないこと。通常の利用者のエラー率を見て。"
+     },
+     {
+      "sp": 0,
+      "en": "The error rate is low, only one percent. The attack is nearly gone from our side.",
+      "jp": "エラー率は低くて、1%だけ。攻撃は、こちら側からほぼ消えました。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Now notify the security team and the director. Keep the timeline: when it started, what we did, and when it ended.",
+      "jp": "よし。セキュリティチームと部長に連絡して。時系列も残して。いつ始まり、何をして、いつ終わったか。"
+     },
+     {
+      "sp": 0,
+      "en": "Writing it now. Should I keep the new rules in place?",
+      "jp": "いま書いてます。新しいルールは、そのまま残しておく？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but review them tomorrow. Rules made in a panic can block good customers by accident.",
+      "jp": "ええ、でも明日見直して。慌てて作ったルールは、善良なお客さんを誤って止めることがあるから。"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. Tomorrow morning I'll check the logs for false blocks.",
+      "jp": "分かりました。明朝、誤ブロックがないかログを確認します。"
+     },
+     {
+      "sp": 1,
+      "en": "And for the future, we should prepare a runbook for this exact situation, so the next person doesn't have to think so hard at night.",
+      "jp": "将来のために、この状況専用の手順書を作りましょう。次の人が夜中にそんなに悩まなくて済むように。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "I'll draft it tomorrow. Thanks for the guidance, Ana. It helps to hear a calm voice at midnight.",
+      "jp": "明日下書きを作ります。ご指導ありがとう、アナ。真夜中に落ち着いた声が聞けると助かります。"
+     }
+    ]
+   },
+   {
+    "t": "⏪ 074｜変更が障害を呼んだ日：When a Change Goes Wrong",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, right after your firewall change at two a.m., the monitoring showed the Tokyo office offline. What happened?",
+      "jp": "ケン、午前2時のファイアウォール変更の直後から、監視で東京オフィスがオフラインになってる。何があったの？"
+     },
+     {
+      "sp": 1,
+      "en": "I think my change blocked the VPN. I added a deny rule at the top of the list, and it's too broad.",
+      "jp": "僕の変更がVPNをブロックしたと思います。リストの先頭に拒否ルールを足して、範囲が広すぎました。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. The decision is yours: roll back now, or try to fix the rule?",
+      "jp": "分かった。判断はあなたよ。いまロールバックする？それともルールを直してみる？"
+     },
+     {
+      "sp": 1,
+      "en": "Roll back. It's two-twenty in the morning, and I'd rather return to a known state than experiment.",
+      "jp": "ロールバックします。午前2時20分だし、実験するより、分かっている状態に戻したいです。"
+     },
+     {
+      "sp": 0,
+      "en": "Good call. Remember the rule: when in doubt, roll back first, and investigate later.",
+      "jp": "いい判断ね。覚えておいて。迷ったら、まず戻して、調べるのはあと。",
+      "note": "表現: When in doubt, roll back first. = 迷ったら、まず戻す／変更障害の基本方針"
+     },
+     {
+      "sp": 1,
+      "en": "Rolling back with the saved configuration. It takes about two minutes.",
+      "jp": "保存してある設定でロールバック中。2分くらいかかります。"
+     },
+     {
+      "sp": 0,
+      "en": "While you wait, tell me what you'll send to the people who were affected.",
+      "jp": "待つ間に、影響を受けた人たちに何を送るか教えて。"
+     },
+     {
+      "sp": 1,
+      "en": "'Tokyo office lost VPN access from two-oh-five to two twenty-three because of a configuration error. Service is restored. We apologize.'",
+      "jp": "『設定ミスにより、東京オフィスは2時5分から2時23分までVPNが使えませんでした。復旧済みです。お詫びします』。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the service restored? Test it yourself, not only the monitoring.",
+      "jp": "復旧したの？監視だけじゃなくて、自分でテストして。"
+     },
+     {
+      "sp": 1,
+      "en": "Tested. I connected from the Tokyo VPN, and I can reach the internal servers. The monitoring is green.",
+      "jp": "テストしました。東京のVPNからつないで、社内サーバーに届きます。監視も緑です。"
+     },
+     {
+      "sp": 0,
+      "en": "Now the lesson. What would have caught this error before it reached production?",
+      "jp": "じゃあ教訓ね。この間違いを本番の前に見つけられたのは、何だった？"
+     },
+     {
+      "sp": 1,
+      "en": "Testing in the lab with a copy of the rules, and a review by another person. I did neither.",
+      "jp": "検証環境でルールのコピーを試すことと、別の人のレビュー。僕はどちらもしませんでした。"
+     },
+     {
+      "sp": 0,
+      "en": "That's honest. And what about the timing?",
+      "jp": "正直ね。それと時間帯はどう？"
+     },
+     {
+      "sp": 1,
+      "en": "Two in the morning was right for the risk, but the rollback plan should have been written in the ticket before the change.",
+      "jp": "午前2時はリスクに合っていましたが、ロールバックの手順は、変更の前にチケットに書いておくべきでした。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Put these three lessons in your report. Nobody is blaming you. Eighteen minutes is a good recovery time.",
+      "jp": "いいわ。その3つの教訓を報告に入れて。誰もあなたを責めてない。18分は、いい復旧時間よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you, Ana. I'll write the report now, and I'll ask a colleague to review my next change in advance.",
+      "jp": "ありがとう、アナ。いま報告を書きます。次の変更は、事前に同僚にレビューしてもらいます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "✂️ 075｜光ファイバーが切れた：The Fiber Cut",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the main line to our data center is down. The provider says a construction crew cut the fiber.",
+      "jp": "アナ、データセンターへのメイン回線が落ちた。プロバイダーによると、工事の作業員が光ファイバーを切ったって。"
+     },
+     {
+      "sp": 1,
+      "en": "Do we have the backup line? It should have switched over automatically.",
+      "jp": "バックアップ回線があるでしょ。自動で切り替わっているはずだけど。"
+     },
+     {
+      "sp": 0,
+      "en": "The backup took over in four seconds, so most users didn't notice. But the backup is only one gigabit, and our normal traffic is three.",
+      "jp": "バックアップは4秒で引き継ぎました。だから大半の利用者は気づいていません。でもバックアップは1ギガしかなくて、普段の通信は3ギガです。"
+     },
+     {
+      "sp": 1,
+      "en": "So we have congestion. What's suffering the most?",
+      "jp": "つまり混雑してるのね。いちばん困っているのは何？"
+     },
+     {
+      "sp": 0,
+      "en": "The big backups and the video streaming. They fill the whole link, and the business apps slow down.",
+      "jp": "大きなバックアップと動画配信です。回線を埋めつくして、業務アプリが遅くなっています。"
+     },
+     {
+      "sp": 1,
+      "en": "Reduce the non-critical traffic. Pause the backups, and limit the streaming for now.",
+      "jp": "重要でない通信を減らして。バックアップを止めて、動画配信を一時的に制限して。"
+     },
+     {
+      "sp": 0,
+      "en": "Pausing the backup jobs, and applying a rate limit to streaming. The apps are recovering.",
+      "jp": "バックアップのジョブを止めて、動画配信にレート制限をかけています。アプリが回復してきました。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the provider's estimate for the repair?",
+      "jp": "プロバイダーの復旧見込みは？"
+     },
+     {
+      "sp": 0,
+      "en": "Twelve hours, because they must splice the fiber in the street. They'll update us every two hours.",
+      "jp": "12時間です。道路で光ファイバーをつなぎ直す必要があるので。2時間ごとに連絡をくれます。"
+     },
+     {
+      "sp": 1,
+      "en": "Twelve hours on one backup line. That's a long exposure. If the backup also fails, we're offline completely.",
+      "jp": "12時間、バックアップ1本で過ごすのね。長い危険の時間よ。バックアップも落ちたら、完全にオフラインになる。"
+     },
+     {
+      "sp": 0,
+      "en": "Can we get a temporary third line? Maybe a mobile or a satellite link?",
+      "jp": "一時的に3本目の回線を用意できない？モバイルか衛星のとか？"
+     },
+     {
+      "sp": 1,
+      "en": "Call our account manager. A mobile line for emergency use can be activated in a few hours.",
+      "jp": "アカウント担当に電話して。緊急用のモバイル回線なら、数時間で開通できるわ。"
+     },
+     {
+      "sp": 0,
+      "en": "I called. They'll activate it by six p.m., at a daily rate. I'll get approval for the cost.",
+      "jp": "電話しました。夕方6時までに、日額料金で開通してくれます。費用の承認をもらいます。",
+      "note": "表現: at a daily rate = 日額料金で／一時的な回線の契約でよく出る"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Tell the director that the cost is small compared with the risk of being offline.",
+      "jp": "いいわね。部長には、費用はオフラインになるリスクに比べれば小さいと伝えて。"
+     },
+     {
+      "sp": 0,
+      "en": "Will do. And let me draft the message for the staff: what is slower, what to avoid, and when we'll update them.",
+      "jp": "そうします。それと、社員向けのメッセージを下書きさせてください。何が遅いか、何を避けるか、いつ更新するか。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Include one more line: 'Please postpone large file transfers until the repair is complete.'",
+      "jp": "1行足して。『大きなファイルの転送は、復旧完了まで控えてください』。"
+     },
+     {
+      "sp": 0,
+      "en": "Added. After this, let's review whether our backup line is big enough. One gigabit for three gigabits of traffic is too thin.",
+      "jp": "足しました。これが終わったら、バックアップ回線が足りているか見直しましょう。3ギガの通信に1ギガは薄すぎます。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. A backup that can't carry the load is only half a backup. Put that in the proposal for next year's budget.",
+      "jp": "その通り。負荷を運べないバックアップは、半分しかバックアップじゃない。来年度の予算の提案に入れましょう。"
+     }
+    ]
+   }
+  ]
+ }
+]

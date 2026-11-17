@@ -1,0 +1,641 @@
+[
+ {
+  "id": "net09",
+  "ic": "🎧",
+  "n": "ネットワーク英語9・ヘルプデスクの仕事",
+  "hint": "Ten help desk calls: password reset, Wi-Fi, VPN from home, slow computer, printer, lost phone and MFA, an angry caller, prioritizing tickets, phishing reports and onboarding a new employee",
+  "level": 4,
+  "keywords": [
+   "help desk",
+   "support",
+   "customer service"
+  ],
+  "d": [
+   {
+    "t": "🔑 076｜パスワードのリセット：Resetting a Password",
+    "l": [
+     {
+      "sp": 0,
+      "en": "IT help desk, this is Ken. How can I help you today?",
+      "jp": "ITヘルプデスクのケンです。今日はどうされましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, I can't log in. It says my password is wrong, but I'm sure I typed it correctly. I have a client meeting in ten minutes.",
+      "jp": "もしもし、ログインできないんです。パスワードが違うと出るけど、確かに合っているはずで。10分後にお客さんとの会議があります。"
+     },
+     {
+      "sp": 0,
+      "en": "I understand. I'll get you back in quickly. First, may I have your employee number and your full name?",
+      "jp": "分かりました。すぐ入れるようにします。まず、社員番号とフルネームを教えていただけますか。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "It's four-two-seven-one, and my name is Sarah Mitchell, from sales.",
+      "jp": "4271で、名前はサラ・ミッチェル、営業です。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ms. Mitchell. For security, I need to verify your identity. What's your manager's name, and your office location?",
+      "jp": "ありがとうございます、ミッチェルさん。セキュリティのため、本人確認が必要です。上司のお名前と、勤務地を教えてください。",
+      "note": "表現: I need to verify your identity. = 本人確認が必要です／ヘルプデスクの定番"
+     },
+     {
+      "sp": 1,
+      "en": "My manager is David Chen, and I'm in the Chicago office.",
+      "jp": "上司はデビッド・チェンで、シカゴオフィスです。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks, that matches. I'll send a verification code to your registered phone. Please read it to me when it arrives.",
+      "jp": "ありがとうございます、一致しました。登録済みの電話に確認コードを送ります。届いたら、読み上げてください。"
+     },
+     {
+      "sp": 1,
+      "en": "I got it. It's eight, four, one, six, nine, two.",
+      "jp": "届きました。8、4、1、6、9、2です。"
+     },
+     {
+      "sp": 0,
+      "en": "That's correct. I've reset your password. You'll receive a temporary one by text, and you'll be asked to change it at the first login.",
+      "jp": "合っています。パスワードをリセットしました。仮のパスワードがテキストで届くので、最初のログインで変更を求められます。"
+     },
+     {
+      "sp": 1,
+      "en": "It worked! I'm in. Thank you so much. You saved my day.",
+      "jp": "入れました！ありがとうございます。助かりました。"
+     },
+     {
+      "sp": 0,
+      "en": "My pleasure. By the way, if you saved the old password in your browser, remove it, or it may lock your account again.",
+      "jp": "どういたしまして。ちなみに、古いパスワードをブラウザに保存していたら削除してください。またロックされることがあります。"
+     }
+    ]
+   },
+   {
+    "t": "📶 077｜Wi-Fiにつながらない：I Can't Connect to Wi-Fi",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Help desk, Ken speaking. What seems to be the problem?",
+      "jp": "ヘルプデスクのケンです。どのような問題でしょうか。"
+     },
+     {
+      "sp": 1,
+      "en": "My laptop won't connect to the office Wi-Fi. It shows the network, but it says 'can't connect'. Other people are fine.",
+      "jp": "ノートパソコンが、会社のWi-Fiにつながらないんです。ネットワークは見えるけど、『接続できません』と出ます。ほかの人は大丈夫で。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. Was it working before, and did anything change, like a software update or a new password?",
+      "jp": "ありがとうございます。以前はつながっていましたか。ソフトの更新や新しいパスワードなど、変わったことは？",
+      "note": "表現: What seems to be the problem? = どのような問題でしょうか／相談の最初の聞き方"
+     },
+     {
+      "sp": 1,
+      "en": "It worked yesterday. This morning, Windows asked me to restart for an update, and I did.",
+      "jp": "昨日は使えました。今朝、Windowsが更新で再起動を求めてきて、再起動しました。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay, that's useful. Could you click the Wi-Fi icon, and tell me exactly what the message says?",
+      "jp": "なるほど、参考になります。Wi-Fiのアイコンを押して、メッセージを正確に読み上げてもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "It says, 'The network settings saved on this computer don't match'.",
+      "jp": "『このコンピューターに保存されているネットワーク設定が一致しません』と出ています。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "That happens after some updates. Please click 'Forget this network', and then connect again with your company login.",
+      "jp": "一部の更新のあとに起きます。『このネットワークを削除』を押して、もう一度、会社のログインで接続してください。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, I forgot it, and I'm typing my login. Wait... it's connecting. It's connected!",
+      "jp": "削除しました。ログインを入力中です。待って、つながっています。つながりました！"
+     },
+     {
+      "sp": 0,
+      "en": "Wonderful. Please open a web page to confirm it works.",
+      "jp": "よかったです。ウェブページを開いて、使えるか確認してください。"
+     },
+     {
+      "sp": 1,
+      "en": "The page loads fast. Thank you! Should I do anything else?",
+      "jp": "ページが速く開きます。ありがとう！ほかにやることはありますか？"
+     },
+     {
+      "sp": 0,
+      "en": "No, that's all. If it happens again, please call us right away, so we can check whether the update is the cause.",
+      "jp": "いいえ、以上です。また起きたら、すぐ電話をください。更新が原因かどうか、調べますので。"
+     }
+    ]
+   },
+   {
+    "t": "🏡 078｜自宅からVPNにつながらない：VPN Won't Connect from Home",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, help desk. How can I help?",
+      "jp": "ヘルプデスクです。どのようなご用件でしょう。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm working from home, and the VPN won't connect. It keeps spinning, then gives an error code.",
+      "jp": "在宅勤務中で、VPNがつながらないんです。ずっとぐるぐる回って、エラーコードが出ます。"
+     },
+     {
+      "sp": 0,
+      "en": "Could you read the error code to me, please?",
+      "jp": "そのエラーコードを読み上げていただけますか。"
+     },
+     {
+      "sp": 1,
+      "en": "It says 'Error eight-one-two'.",
+      "jp": "『エラー812』と出ています。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. That usually means the connection is blocked before it reaches us. Are you using your home Wi-Fi, or a mobile hotspot?",
+      "jp": "ありがとうございます。それは通常、私たちに届く前に接続が遮られているという意味です。自宅のWi-Fiですか、それともモバイルのホットスポットですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Home Wi-Fi. Oh, and my internet provider changed my router last week.",
+      "jp": "自宅のWi-Fiです。あ、そういえば先週、プロバイダーがルーターを交換しました。"
+     },
+     {
+      "sp": 0,
+      "en": "That may be the cause. Some home routers block VPN traffic by default. Could you try the mobile hotspot from your phone?",
+      "jp": "それが原因かもしれません。一部の家庭用ルーターは、初期設定でVPNの通信を止めます。スマホのホットスポットで試してもらえますか。",
+      "note": "用語: VPN passthrough = ルーターがVPN通信を通す設定"
+     },
+     {
+      "sp": 1,
+      "en": "I'll try. Okay, it's connected on the hotspot!",
+      "jp": "試します。あ、ホットスポットだとつながりました！"
+     },
+     {
+      "sp": 0,
+      "en": "Good, so our VPN is fine. The problem is in your router. Look for a setting called 'VPN passthrough', and turn it on.",
+      "jp": "よかった。VPN側は問題ありません。原因はルーターです。『VPNパススルー』という設定を探して、オンにしてください。"
+     },
+     {
+      "sp": 1,
+      "en": "I don't know how to open the router settings.",
+      "jp": "ルーターの設定画面の開き方が分かりません。"
+     },
+     {
+      "sp": 0,
+      "en": "No problem. I'll send you a short guide with pictures. Until then, please work on the hotspot, and let me know how it goes.",
+      "jp": "大丈夫です。画像つきの短い手順書を送ります。それまでホットスポットで作業して、結果を教えてください。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     }
+    ]
+   },
+   {
+    "t": "🐌 079｜パソコンが遅い：My Computer Is So Slow",
+    "l": [
+     {
+      "sp": 0,
+      "en": "IT help desk. How can I assist you?",
+      "jp": "ITヘルプデスクです。どのようなご用件ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "My computer has been so slow all week. Everything takes forever to open. I can't work like this.",
+      "jp": "今週ずっと、パソコンがすごく遅いんです。何を開くのも時間がかかる。これでは仕事になりません。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm sorry to hear that. Let's find the cause. Is it slow only on the internet, or also for local things like Excel?",
+      "jp": "それは困りましたね。原因を探しましょう。インターネットだけが遅いですか、それともExcelなどの内部の作業も遅いですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Everything. Even opening a folder is slow.",
+      "jp": "全部です。フォルダを開くのも遅い。"
+     },
+     {
+      "sp": 0,
+      "en": "Then it's probably the computer, not the network. Could you open the Task Manager and tell me the CPU and memory usage?",
+      "jp": "それならネットワークじゃなくて、パソコン自体でしょう。タスクマネージャーを開いて、CPUとメモリの使用率を教えてください。",
+      "note": "表現: Let's find the cause. = 原因を探しましょう／一緒に調べる姿勢を示す"
+     },
+     {
+      "sp": 1,
+      "en": "The memory is at ninety-eight percent. The CPU is only at ten percent.",
+      "jp": "メモリが98%です。CPUは10%だけ。"
+     },
+     {
+      "sp": 0,
+      "en": "Memory is almost full. Which program uses the most? Click the memory column to sort.",
+      "jp": "メモリがほぼいっぱいですね。どのプログラムが一番使っていますか。メモリの列を押して並べ替えてください。"
+     },
+     {
+      "sp": 1,
+      "en": "The browser. I have, let me count, forty-two tabs open.",
+      "jp": "ブラウザです。タブが、数えると、42個開いてます。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "That's the cause. Please save your work, close most of the tabs, and restart the computer.",
+      "jp": "それが原因です。作業を保存して、ほとんどのタブを閉じて、パソコンを再起動してください。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, it's much faster after the restart. I feel a bit silly.",
+      "jp": "わあ、再起動したらずっと速い。ちょっと恥ずかしいです。"
+     },
+     {
+      "sp": 0,
+      "en": "Not at all. It's very common. If you need many tabs, we can look at adding more memory to your computer.",
+      "jp": "全然。よくあることです。たくさんのタブが必要なら、メモリの増設もご相談できますよ。"
+     }
+    ]
+   },
+   {
+    "t": "🖨️ 080｜印刷できない：The Printer Won't Print",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Help desk, this is Ken. How can I help?",
+      "jp": "ヘルプデスクのケンです。ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "I can't print. I click print, and nothing comes out. The document just sits in the queue.",
+      "jp": "印刷できません。印刷を押しても、何も出てこない。書類がキューに残ったままです。"
+     },
+     {
+      "sp": 0,
+      "en": "Which printer are you using, and is it the one near your desk?",
+      "jp": "どのプリンターを使っていますか。席の近くのものですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, the one on the third floor, the big gray one.",
+      "jp": "はい、3階の、大きな灰色のものです。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. Is anyone else on your floor having the same problem?",
+      "jp": "ありがとうございます。同じフロアの、ほかの人も同じ問題がありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I asked my neighbor, and she can't print either.",
+      "jp": "隣の人に聞いたら、彼女も印刷できないそうです。"
+     },
+     {
+      "sp": 0,
+      "en": "Then it's the printer or the print server, not your computer. Could you check the printer's screen for a message?",
+      "jp": "それなら、あなたのパソコンではなくて、プリンターか印刷サーバーですね。プリンターの画面にメッセージが出ていないか見てもらえますか。",
+      "note": "表現: It's the printer, not your computer. = 原因はあなたのパソコンではなく、プリンターです／切り分けの言い方"
+     },
+     {
+      "sp": 1,
+      "en": "It says 'Out of paper, tray two'. Oh, that's all?",
+      "jp": "『用紙切れ、トレイ2』と出てます。あ、それだけ？",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ"
+     },
+     {
+      "sp": 0,
+      "en": "It happens! Please load paper in tray two. The queue should start printing by itself.",
+      "jp": "ありますよね！トレイ2に紙を入れてください。キューは自動で印刷を始めるはずです。"
+     },
+     {
+      "sp": 1,
+      "en": "It's printing now. Everything came out at once. Thank you!",
+      "jp": "印刷が始まりました。全部いっぺんに出てきた。ありがとう！"
+     },
+     {
+      "sp": 0,
+      "en": "You're welcome. Next time, check the printer's screen first. It tells you most of the story.",
+      "jp": "どういたしまして。次回は、まずプリンターの画面を見てください。たいていのことは、そこに出ています。"
+     }
+    ]
+   },
+   {
+    "t": "📵 081｜スマホをなくした：多要素認証：Lost Phone, Locked Out of MFA",
+    "l": [
+     {
+      "sp": 0,
+      "en": "IT help desk. How can I help you?",
+      "jp": "ITヘルプデスクです。どうされましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I lost my phone last night, and now I can't log in. The system asks for a code from my authentication app.",
+      "jp": "昨夜スマホをなくして、ログインできなくなりました。システムが認証アプリのコードを求めてきます。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm sorry about your phone. First, did you report it as lost, and do you remember if it had a screen lock?",
+      "jp": "スマホは大変でしたね。まず、紛失の届けは出しましたか。画面ロックはかかっていましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I reported it this morning. Yes, it has a passcode and a fingerprint lock.",
+      "jp": "今朝届けました。はい、パスコードと指紋のロックがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Because the phone holds our authentication app, I'll remove it from your account now, so nobody else can use it.",
+      "jp": "よかった。そのスマホには認証アプリが入っているので、いまアカウントから外して、他の人が使えないようにします。",
+      "note": "用語: authentication app = ワンタイムのコードを出す認証アプリ"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. How do I log in without it?",
+      "jp": "ありがとうございます。それなしでどうやってログインしますか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "I need to verify your identity in another way. Could you join a video call with your manager, so she can confirm it's you?",
+      "jp": "別の方法で本人確認が必要です。上司とのビデオ通話に入って、あなたであることを確認してもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. She's in the office. I'll call her now.",
+      "jp": "もちろんです。上司は出社しています。いま呼びます。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. Once she confirms, I'll issue a temporary access code that works for twenty-four hours.",
+      "jp": "ありがとうございます。確認が取れたら、24時間有効の仮のアクセスコードを発行します。"
+     },
+     {
+      "sp": 1,
+      "en": "And my new phone? I'll buy one this afternoon.",
+      "jp": "新しいスマホは？午後に買う予定です。"
+     },
+     {
+      "sp": 0,
+      "en": "Install the authentication app, and call us. We'll register the new device. Meanwhile, please change your password, just in case.",
+      "jp": "認証アプリを入れて、ご連絡ください。新しい端末を登録します。その間に念のため、パスワードも変えてください。"
+     }
+    ]
+   },
+   {
+    "t": "😠 082｜怒っている利用者：An Angry Caller",
+    "l": [
+     {
+      "sp": 0,
+      "en": "This is the third time I'm calling about the same problem! Nobody fixes it, and I'm losing money!",
+      "jp": "同じ問題でもう3回目の電話です！誰も直してくれないし、損をしているんですよ！"
+     },
+     {
+      "sp": 1,
+      "en": "I'm very sorry, Mr. Baker. That must be really frustrating. Let me look at your history, and I'll take care of it today.",
+      "jp": "大変申し訳ありません、ベイカーさん。本当にいらだたしいですよね。履歴を確認して、今日中に私が対応します。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "You said that last time, too!",
+      "jp": "前回も同じことを言われました！"
+     },
+     {
+      "sp": 1,
+      "en": "I understand why you don't trust that. So here's what I'll do: I'll stay on the line, and I won't close this until it works.",
+      "jp": "信用できないお気持ちは分かります。だから、こうします。電話をつないだまま、直るまで、このケースを閉じません。",
+      "note": "表現: I'll stay on the line. = 電話をつないだままにします／怒っている相手を安心させる"
+     },
+     {
+      "sp": 0,
+      "en": "Fine. The shared drive is gone from my computer, and my whole team needs files from it.",
+      "jp": "分かりました。共有ドライブが私のパソコンから消えていて、チーム全員がそこのファイルを必要としています。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you for explaining. I can see the previous notes: someone restored the drive, but it disappeared again after a restart. Is that right?",
+      "jp": "説明をありがとうございます。前回のメモを見ました。誰かがドライブを復元したけど、再起動でまた消えた。合っていますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly! Every restart, it vanishes.",
+      "jp": "その通り！再起動のたびに消えるんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Then the earlier fix didn't last. The drive must be mapped for this session only. I'll make it permanent for your account now.",
+      "jp": "なら前回の対応は、続かなかったんですね。ドライブがこのセッションだけに割り当てられていたはずです。いまあなたのアカウントで恒久的にします。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Is it back? I see it in the list.",
+      "jp": "どうですか。戻りましたか。一覧に見えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Please restart your computer while I'm on the line, and tell me if it's still there.",
+      "jp": "よかった。私が電話をつないでいる間に再起動して、まだあるか教えてください。"
+     },
+     {
+      "sp": 0,
+      "en": "It's still there. Thank you. And sorry for shouting. It's been a hard week.",
+      "jp": "まだあります。ありがとう。それと、怒鳴ってすみません。大変な1週間で。"
+     },
+     {
+      "sp": 1,
+      "en": "No need to apologize. And I'll follow up tomorrow morning to make sure it's still working.",
+      "jp": "謝らなくて大丈夫です。明日の朝、改めて連絡して、まだ使えるか確認しますね。"
+     }
+    ]
+   },
+   {
+    "t": "🎫 083｜チケットの優先度を決める：Setting the Priority",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I have five tickets that came in at the same time. Can you help me decide the order?",
+      "jp": "ケン、同時に5件のチケットが来たの。順番を決めるのを手伝ってくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Read them to me. Remember, we decide by impact and urgency, not by who shouts loudest.",
+      "jp": "いいよ。読み上げて。覚えておいて、順番は影響と緊急度で決める。声が大きい人じゃなくて。",
+      "note": "表現: impact and urgency = 影響度と緊急度／チケットの優先度を決める2つの軸"
+     },
+     {
+      "sp": 0,
+      "en": "One: the CEO's laptop won't print. Two: the payment system is slow for all customers. Three: a new employee needs an account. Four: one user can't open a spreadsheet. Five: the file server is nearly full.",
+      "jp": "1つ目、社長のパソコンが印刷できない。2つ目、決済システムが全顧客で遅い。3つ目、新入社員のアカウントが必要。4つ目、1人がスプレッドシートを開けない。5つ目、ファイルサーバーがほぼ満杯。"
+     },
+     {
+      "sp": 1,
+      "en": "Number two is first. It affects every customer, and it affects revenue. That's the highest priority.",
+      "jp": "2つ目が最優先。全顧客に影響して、売上にも関わる。いちばん高い優先度だ。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the CEO? She's very important.",
+      "jp": "社長は？とても重要な人なんだけど。"
+     },
+     {
+      "sp": 1,
+      "en": "Important, yes, but it's only a printer. We can help her quickly, in five minutes, after the payment issue is assigned.",
+      "jp": "重要だけど、プリンターだけだ。決済の件を割り当てたあとに、5分で対応すればいい。"
+     },
+     {
+      "sp": 0,
+      "en": "And the file server? It says ninety-five percent.",
+      "jp": "ファイルサーバーは？95%と出てる。"
+     },
+     {
+      "sp": 1,
+      "en": "That one is not urgent yet, but it will be. Make a ticket with a deadline, before it reaches a hundred percent.",
+      "jp": "まだ緊急じゃないけど、そうなる。100%になる前の期限つきでチケットを作って。"
+     },
+     {
+      "sp": 0,
+      "en": "And the new employee? She starts tomorrow.",
+      "jp": "新入社員は？明日から出社なの。"
+     },
+     {
+      "sp": 1,
+      "en": "Do it today, so she can log in on day one. A bad first day is hard to repair.",
+      "jp": "今日やって。初日にログインできるように。最悪の初日は、取り返しがつかない。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. So the order is: payment, new employee, CEO, file server, and then the spreadsheet.",
+      "jp": "分かった。順番は、決済、新入社員、社長、ファイルサーバー、そしてスプレッドシート。"
+     }
+    ]
+   },
+   {
+    "t": "🎣 084｜フィッシング報告の受け付け：Taking a Phishing Report",
+    "l": [
+     {
+      "sp": 0,
+      "en": "IT help desk. How can I help?",
+      "jp": "ITヘルプデスクです。どうされましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I got a strange email from 'the HR department'. It asks me to confirm my salary details at a link. It doesn't feel right.",
+      "jp": "『人事部』から変なメールが来たんです。リンクで給与の詳細を確認するようにと。何かおかしい気がして。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you for calling instead of clicking. That's exactly the right move. Have you clicked the link or opened an attachment?",
+      "jp": "クリックせずに電話してくれて、ありがとう。それがまさに正しい対応です。リンクを押したり、添付ファイルを開いたりしましたか。",
+      "note": "表現: Thank you for calling instead of clicking. = クリックせず連絡してくれてありがとう／報告を歓迎する一言"
+     },
+     {
+      "sp": 1,
+      "en": "No, I haven't touched anything.",
+      "jp": "いいえ、何も触っていません。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Please don't forward the email to anyone. Instead, use the 'Report phishing' button in your email program.",
+      "jp": "よかった。そのメールを誰にも転送しないでください。代わりに、メールソフトの『フィッシングを報告』ボタンを使ってください。"
+     },
+     {
+      "sp": 1,
+      "en": "I see the button. I pressed it. Is that all?",
+      "jp": "ボタンがありました。押しました。それで終わりですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Our security team will analyze it and block the sender. Out of curiosity, did the sender's address look right?",
+      "jp": "はい。セキュリティチームが分析して、送信者をブロックします。念のため聞くと、送信者のアドレスは正しく見えましたか。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ"
+     },
+     {
+      "sp": 1,
+      "en": "It looked almost right, but there was one extra letter in the company name.",
+      "jp": "ほとんど正しく見えたけど、会社名の文字が1つ多かったんです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a typical trick. You noticed, and that's what protects us all. Did you notice similar emails from your colleagues?",
+      "jp": "典型的な手口です。気づいてくれたのが、みんなを守ります。同僚の方が、同じようなメールを受け取ったという話は？"
+     },
+     {
+      "sp": 1,
+      "en": "Two of them mentioned it at lunch.",
+      "jp": "ランチで2人が話してました。"
+     },
+     {
+      "sp": 0,
+      "en": "Please ask them to report it, too. And thank you again. Reports like yours stop real attacks.",
+      "jp": "その人たちにも報告するよう伝えてください。重ねてありがとう。あなたのような報告が、本物の攻撃を止めます。"
+     }
+    ]
+   },
+   {
+    "t": "🎉 085｜新入社員の初日セットアップ：Setting Up a New Employee",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, Emma. Welcome to the company! I'm Ken from IT. I'll set up your laptop and accounts today.",
+      "jp": "おはよう、エマ。入社おめでとう！ITのケンです。今日はパソコンとアカウントの設定をします。"
+     },
+     {
+      "sp": 1,
+      "en": "Good morning! Thank you. I'm a little nervous. I'm not very good with technology.",
+      "jp": "おはようございます！ありがとう。ちょっと緊張しています。技術はあまり得意じゃなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "No worries. We'll go step by step. First, please log in with the temporary password on this card, and set a new one.",
+      "jp": "心配ないよ。順番に進めよう。まず、このカードの仮パスワードでログインして、新しいのを設定してね。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. It asks me for a password with twelve characters, numbers, and symbols. Is that normal?",
+      "jp": "できました。12文字で、数字と記号を含むパスワードを求められます。普通のことですか？",
+      "note": "表現: We'll go step by step. = 順番に進めましょう／不安な人を安心させる"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, it's our rule. A tip: use three or four random words together. It's long, but easy to remember.",
+      "jp": "はい、会社のルールです。コツは、関係のない3、4個の単語をつなげること。長いけど覚えやすい。"
+     },
+     {
+      "sp": 1,
+      "en": "Smart idea. Next, it wants me to install an app on my phone for security codes.",
+      "jp": "いい考えですね。次に、セキュリティコード用のアプリをスマホに入れるように言われます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the second step of the login. Scan this code with your phone, and tell me the six numbers.",
+      "jp": "ログインの2段階目です。このコードをスマホで読み取って、6桁の数字を教えて。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, I got it. It's working. I'm in!",
+      "jp": "できました。動いています。入れました！"
+     },
+     {
+      "sp": 0,
+      "en": "Wonderful. Now let me show you where to get help: the chat, the phone number, and the self-service page. Please save them.",
+      "jp": "すばらしい。ヘルプの場所も案内するね。チャット、電話番号、セルフサービスのページ。保存しておいて。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "I've saved them. Thank you, Ken. This is much easier than I expected.",
+      "jp": "保存しました。ありがとう、ケン。思ったよりずっと簡単です。"
+     },
+     {
+      "sp": 0,
+      "en": "Good! If anything feels strange this week, just call us. We're happy to help, and no question is silly.",
+      "jp": "よかった！今週、何か変だと思ったら、電話してね。喜んで手伝うし、くだらない質問なんてないから。"
+     }
+    ]
+   }
+  ]
+ }
+]
