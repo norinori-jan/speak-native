@@ -1,0 +1,539 @@
+[
+ {
+  "id": "net06",
+  "ic": "🎯",
+  "n": "ネットワーク英語6・仕事編2（会議・交渉・面接）",
+  "hint": "Ana and Ken practice daily work and career English: stand-ups, clarifying questions, polite disagreement, explaining to non-engineers, price negotiation, interviews, a 3 a.m. call and feedback",
+  "level": 4,
+  "keywords": [
+   "meeting",
+   "interview",
+   "negotiation"
+  ],
+  "d": [
+   {
+    "t": "🌅 051｜朝のスタンドアップ：The Morning Stand-up",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, everyone. Let's do a quick stand-up. Ken, you first. What did you do yesterday?",
+      "jp": "おはよう、みなさん。さっとスタンドアップをしましょう。ケン、あなたからね。昨日は何をしたの？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Yesterday I finished the VLAN plan for the new floor, and I started testing the new access points.",
+      "jp": "昨日は、新フロアのVLAN計画を終えて、新しいアクセスポイントのテストを始めました。"
+     },
+     {
+      "sp": 0,
+      "en": "And what are you working on today?",
+      "jp": "今日は何をするの？"
+     },
+     {
+      "sp": 1,
+      "en": "Today I'll finish the Wi-Fi test and write up the results. I expect to be done by three.",
+      "jp": "今日はWi-Fiのテストを終えて、結果をまとめます。3時までには終わる見込みです。"
+     },
+     {
+      "sp": 0,
+      "en": "Any blockers? Anything stopping you from moving forward?",
+      "jp": "ブロッカーは？進むのを止めているものはある？",
+      "note": "表現: blocker = 作業を止めている障害／stand-up = 立ったまま行う短い朝会"
+     },
+     {
+      "sp": 1,
+      "en": "One. I'm waiting for the cable contractor to confirm the date. Without it, I can't schedule the final test.",
+      "jp": "1つあります。ケーブル業者の日程の確認待ちです。それがないと、最終テストを予定できません。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll call them this morning. Put the contractor's number in the chat.",
+      "jp": "今朝私が電話するわ。業者の電話番号をチャットに貼って。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. Thank you. That unblocks me.",
+      "jp": "貼りました。ありがとうございます。助かります。"
+     },
+     {
+      "sp": 0,
+      "en": "Great. Next person, please. Keep it short, and remember: yesterday, today, blockers.",
+      "jp": "いいわ。次の人どうぞ。短くね。昨日、今日、ブロッカー、を忘れずに。"
+     }
+    ]
+   },
+   {
+    "t": "❓ 052｜確認の質問をする：Asking the Right Question",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I need you to open the firewall for the new application by tomorrow. Here's the ticket.",
+      "jp": "ケン、明日までに新しいアプリ用にファイアウォールを開けてほしいの。これがチケットよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Before I start, may I ask a few questions? The ticket doesn't say the port number.",
+      "jp": "ありがとう。始める前に、いくつか質問していい？チケットにポート番号が書いてないんだ。",
+      "note": "表現: may I ask a few questions? = いくつか質問してよいですか／作業前の確認の切り出し"
+     },
+     {
+      "sp": 0,
+      "en": "Good catch. I think the application uses four-four-three, but let me double-check with the developer.",
+      "jp": "いい指摘ね。アプリは443を使うと思うけど、開発者に念のため確認するわ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Also, is the traffic coming in from the internet, or only from our office?",
+      "jp": "それと、通信はインターネットから入ってくるの？それともオフィスからだけ？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm not sure. If I guess wrong, it could be a security risk, so I'd like to confirm.",
+      "jp": "私も分からないわ。間違えるとセキュリティのリスクになるから、確認したいわね。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Could you tell me who the user of this application is? It helps me decide how strict the rule should be.",
+      "jp": "そうだね。このアプリの利用者が誰か、教えてもらえる？ルールをどこまで厳しくするか決める助けになるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Only the finance team, about twenty people. Does that help?",
+      "jp": "経理チームだけで、20人くらい。助けになる？"
+     },
+     {
+      "sp": 1,
+      "en": "A lot. Then I'll allow only the finance subnet. I'll send you the rule for review before I apply it.",
+      "jp": "とても。なら経理のサブネットだけ許可するよ。適用の前に、ルールを送ってレビューしてもらうね。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. And thank you for asking instead of guessing. That's exactly what I want from you.",
+      "jp": "完璧。推測しないで質問してくれて、ありがとう。まさにそれを期待しているの。"
+     }
+    ]
+   },
+   {
+    "t": "🤝 053｜丁寧に反対する：Disagreeing Politely",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I think we should replace the whole network next year. All the switches. It's the cleanest solution.",
+      "jp": "ケン、来年ネットワーク全体を入れ替えるべきだと思うの。スイッチ全部。いちばんすっきりした解決策よ。"
+     },
+     {
+      "sp": 1,
+      "en": "I see your point, and I agree the old switches are a problem. But I'm a little worried about the cost and the risk.",
+      "jp": "おっしゃることは分かります。古いスイッチが問題なのも同感です。でも、費用とリスクが少し心配です。",
+      "note": "表現: I see your point, but ... = おっしゃることは分かりますが〜／反対する時の柔らかい入り方"
+     },
+     {
+      "sp": 0,
+      "en": "What's your concern, exactly?",
+      "jp": "具体的に何が心配なの？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Replacing everything at once means one big risky weekend. If something fails, the whole company stops.",
+      "jp": "全部いっぺんに替えるのは、危険な週末が1回に集中するということです。失敗すれば、会社全体が止まります。"
+     },
+     {
+      "sp": 0,
+      "en": "Hmm. Do you have an alternative?",
+      "jp": "うーん。代わりの案はある？"
+     },
+     {
+      "sp": 1,
+      "en": "What about replacing floor by floor over six months? Each step is small, and we learn from the first one.",
+      "jp": "フロアごとに半年かけて替えるのはどうでしょう。1回が小さいし、最初の経験から学べます。"
+     },
+     {
+      "sp": 0,
+      "en": "It takes longer, though. Our budget year ends in March.",
+      "jp": "でも時間がかかるわよ。予算年度は3月で終わるの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's true. We could buy all the equipment before March, and install it in stages afterward.",
+      "jp": "確かに。機器は3月までに全部買って、設置はそのあと段階的にできます。"
+     },
+     {
+      "sp": 0,
+      "en": "That works. Thanks for pushing back politely. Write both options, and I'll take them to the director.",
+      "jp": "それならいけるわ。丁寧に反論してくれてありがとう。両案を書いて、部長に持っていくわ。"
+     }
+    ]
+   },
+   {
+    "t": "🗂️ 054｜非エンジニアに説明する：Explaining to Non-Engineers",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the sales team wants to know why the video calls are bad. Can you explain it in simple words?",
+      "jp": "ケン、営業チームが、なぜビデオ会議の質が悪いのか知りたがってるの。やさしい言葉で説明できる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Think of the network as a road. Video calls are big trucks, and the road has only two lanes.",
+      "jp": "いいよ。ネットワークを道路だと考えてください。ビデオ会議は大型トラックで、道は2車線しかありません。",
+      "note": "表現: Think of ... as ... = 〜を…だと考えてください／たとえ話を始める定番"
+     },
+     {
+      "sp": 0,
+      "en": "So when everyone calls at once, there's a traffic jam?",
+      "jp": "じゃあ、みんなが同時にかけると、渋滞になる？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. At ten o'clock, thirty people join meetings, and the road is full. The video freezes.",
+      "jp": "その通りです。10時に30人が会議に入って、道がいっぱいになる。映像が止まります。"
+     },
+     {
+      "sp": 0,
+      "en": "What can you do? Build a bigger road?",
+      "jp": "どうにかできる？もっと大きい道を作る？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, that's one way, but it costs money. A cheaper way is to give video calls their own priority lane.",
+      "jp": "はい、それも1つの方法ですが、お金がかかります。安い方法は、ビデオ会議に専用の優先レーンを作ることです。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds smart. How long would it take?",
+      "jp": "それは賢そうね。どれくらいかかる？"
+     },
+     {
+      "sp": 1,
+      "en": "About a week to test and one night to apply. Salespeople would notice the difference right away.",
+      "jp": "テストに1週間、適用は1晩です。営業の人たちは、すぐに違いに気づくはずです。"
+     },
+     {
+      "sp": 0,
+      "en": "Wonderful. May I use your road explanation in my message to them?",
+      "jp": "すばらしい。あなたの道路の例えを、私のメッセージに使ってもいい？"
+     }
+    ]
+   },
+   {
+    "t": "💴 055｜見積もりの交渉：Negotiating a Quote",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for sending the quote. I have a few questions about the price for the new switches.",
+      "jp": "お見積もりをありがとうございます。新しいスイッチの価格について、いくつか質問があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. The total is eighty thousand dollars for twenty switches, including three years of support.",
+      "jp": "どうぞ。20台で合計8万ドルで、3年間のサポートを含みます。"
+     },
+     {
+      "sp": 0,
+      "en": "We're also getting a quote from another vendor, and theirs is about ten percent lower.",
+      "jp": "実は別のベンダーからも見積もりを取っていて、そちらは約10パーセント安いんです。"
+     },
+     {
+      "sp": 1,
+      "en": "I understand. Could you tell me what they include? Our price covers installation and training.",
+      "jp": "分かりました。そちらに何が含まれているか、教えていただけますか。弊社の価格には、設置と研修が含まれています。",
+      "note": "表現: Could you tell me what ... include? = 〜に何が含まれるか教えてもらえますか／見積もりの比較で使う"
+     },
+     {
+      "sp": 0,
+      "en": "Their quote has installation, but no training. We don't really need training.",
+      "jp": "そちらは設置は込みですが、研修はありません。うちは研修はそれほど必要ないんです。"
+     },
+     {
+      "sp": 1,
+      "en": "If you remove the training, I can lower the price by five thousand dollars. Would that help?",
+      "jp": "研修を外せば、5千ドル下げられます。それなら助けになりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It helps. What if we sign a five-year support contract? Can you do better then?",
+      "jp": "助かります。5年のサポート契約にしたら、もっと下げられますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check with my manager. I think I can offer another three percent, but I need a decision by Friday.",
+      "jp": "上司に確認します。さらに3パーセントは出せると思いますが、金曜までに決めていただく必要があります。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "That works for me. Please send the revised quote in writing, and I'll respond by Thursday.",
+      "jp": "それで大丈夫です。改訂版の見積もりを書面でいただければ、木曜までに返答します。"
+     }
+    ]
+   },
+   {
+    "t": "🎙️ 056｜面接：自己紹介：Interview: Tell Me About Yourself",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for coming, Ken. Let's start simple. Please tell me about yourself.",
+      "jp": "来てくれてありがとう、ケン。簡単なところから始めましょう。自己紹介をお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you for having me. I have six years of experience in network operations, mostly in enterprise offices.",
+      "jp": "お招きいただきありがとうございます。ネットワーク運用の経験が6年あり、主に企業のオフィス環境です。",
+      "note": "表現: Thank you for having me. = お招きありがとうございます／面接の最初の一言"
+     },
+     {
+      "sp": 0,
+      "en": "What have you worked on recently?",
+      "jp": "最近は何に取り組んできましたか？"
+     },
+     {
+      "sp": 1,
+      "en": "Recently I led a project to move our Wi-Fi to a new design. We improved the speed by about forty percent.",
+      "jp": "最近は、無線LANを新しい設計に移すプロジェクトを主導しました。速度が約40パーセント改善しました。"
+     },
+     {
+      "sp": 0,
+      "en": "That's impressive. What was your role in the project, specifically?",
+      "jp": "印象的ですね。プロジェクトでの具体的な役割は？"
+     },
+     {
+      "sp": 1,
+      "en": "I made the design, tested it with a small group, and managed the rollout to two hundred users.",
+      "jp": "設計をして、少人数で試験して、200人への展開を管理しました。"
+     },
+     {
+      "sp": 0,
+      "en": "Why are you interested in this position?",
+      "jp": "この職に興味を持った理由は？"
+     },
+     {
+      "sp": 1,
+      "en": "I want to grow into cloud networking. Your team runs a large cloud environment, and I want to learn from it while I contribute my operations experience.",
+      "jp": "クラウドネットワークへ成長したいんです。御社のチームは大きなクラウド環境を運用していて、私の運用経験を生かしながら学びたいと思いました。"
+     },
+     {
+      "sp": 0,
+      "en": "Good answer. Now, let me ask you some technical questions.",
+      "jp": "いい答えです。では、技術的な質問をしていきましょう。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     }
+    ]
+   },
+   {
+    "t": "🧪 057｜面接：障害対応の質問：Interview: A Troubleshooting Question",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Here's a scenario. A user says, 'I can't open the company website.' Walk me through how you would troubleshoot it.",
+      "jp": "場面を出します。利用者が『社内のウェブサイトが開けません』と言っています。どう切り分けるか説明してください。"
+     },
+     {
+      "sp": 1,
+      "en": "First I'd ask questions. Is it only this user, or many? Did it work before? What error do they see?",
+      "jp": "まず質問します。この人だけか、多くの人か。以前は見られたのか。どんなエラーが出ているのか。"
+     },
+     {
+      "sp": 0,
+      "en": "Suppose it's many users, starting ten minutes ago.",
+      "jp": "多くの利用者で、10分前から、だとします。"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'd think about a recent change or a failure. I'd check the monitoring and the change log.",
+      "jp": "それなら最近の変更か障害を疑います。監視と変更履歴を確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "Everything looks normal. Then what?",
+      "jp": "どちらも正常です。それから？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd test from the bottom up. Can I ping the server? Does DNS return the right address? Does the port respond?",
+      "jp": "下の層から順に試します。サーバーにpingは通るか。DNSは正しいアドレスを返すか。ポートは応答するか。",
+      "note": "表現: Walk me through ... = 〜を順を追って説明して／面接でよく使う依頼"
+     },
+     {
+      "sp": 0,
+      "en": "DNS returns an address, but it's the old one.",
+      "jp": "DNSは返しますが、古いアドレスです。"
+     },
+     {
+      "sp": 1,
+      "en": "Then the problem is the DNS record, or the cache. I'd fix the record, and check the TTL so the fix spreads quickly.",
+      "jp": "なら原因はDNSの記録かキャッシュです。記録を直して、TTLを確認して、修正が早く広がるようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. What would you do after the problem is fixed?",
+      "jp": "いいですね。問題が直ったあとは、何をしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd confirm with the users, write a short report, and add an alert so we find out before they do.",
+      "jp": "利用者に確認して、短い報告を書いて、利用者より先に気づけるアラートを追加します。"
+     }
+    ]
+   },
+   {
+    "t": "🌱 058｜面接：失敗から学んだこと：Interview: A Mistake I Learned From",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Tell me about a time you made a mistake at work. What happened?",
+      "jp": "仕事で失敗した経験を教えてください。何がありましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "Two years ago, I changed a firewall rule in the afternoon, and I blocked access to the payment system for ten minutes.",
+      "jp": "2年前、午後にファイアウォールのルールを変更して、決済システムへのアクセスを10分間止めてしまいました。"
+     },
+     {
+      "sp": 0,
+      "en": "How did you react when you noticed?",
+      "jp": "気づいた時、どう対応しましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I immediately reversed the change, told my manager, and wrote a report that day. I didn't try to hide it.",
+      "jp": "すぐに変更を戻して、上司に伝え、その日のうちに報告を書きました。隠そうとはしませんでした。",
+      "note": "表現: I immediately ... = すぐに〜しました／失敗後の素早い行動を伝える"
+     },
+     {
+      "sp": 0,
+      "en": "What was the root cause?",
+      "jp": "根本原因は何でしたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I didn't test the rule first, and I didn't use the change process. I felt it was a small change.",
+      "jp": "事前にルールをテストせず、変更手順も踏みませんでした。小さな変更だと思ったんです。"
+     },
+     {
+      "sp": 0,
+      "en": "What did you change after that?",
+      "jp": "そのあと、何を変えましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I now test every change in a lab, I always write a rollback plan, and I never change production alone without a review.",
+      "jp": "いまは全ての変更をまず検証環境で試し、必ず元に戻す手順を書き、レビューなしでは本番を触りません。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you for being honest. That's the kind of answer we like to hear.",
+      "jp": "正直に話してくれてありがとう。そういう答えを聞きたかったんです。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     }
+    ]
+   },
+   {
+    "t": "🌙 059｜午前3時の呼び出し：The 3 A.M. Call",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, sorry to wake you. The monitoring says the main internet line is down, and the backup isn't working either.",
+      "jp": "ケン、起こしてごめん。監視で、メインのインターネット回線が落ちていて、バックアップも動いていないの。"
+     },
+     {
+      "sp": 1,
+      "en": "Both lines? That's unusual. Can you check if the router itself is alive?",
+      "jp": "両方？珍しいね。ルーター自体は生きているか、確認できる？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, I can reach it. The interfaces for both lines show 'down'. The cables seem fine.",
+      "jp": "ええ、つながるわ。両方の回線のインターフェースが『down』と出ている。ケーブルは問題なさそう。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it possible that both lines come into the same building, and a power problem hit the building?",
+      "jp": "両方の回線が同じ建物に入っていて、その建物の電源の問題かもしれない？",
+      "note": "表現: Is it possible that ...? = 〜の可能性はある？／原因を推理して提案する"
+     },
+     {
+      "sp": 0,
+      "en": "Hmm, they do share the same cable entrance. I'll call the provider's emergency line now.",
+      "jp": "うーん、確かに同じケーブル引き込み口を共有してる。プロバイダーの緊急番号に電話するわ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Do that. Meanwhile, I'll start the mobile backup, so at least the stores can process payments.",
+      "jp": "お願い。その間に、僕はモバイル回線を立ち上げて、せめて店舗が決済できるようにするよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Good thinking. Should I wake up the director?",
+      "jp": "いい判断ね。部長を起こした方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. Send a short message now, and call her if it's not fixed within thirty minutes.",
+      "jp": "まだいいよ。いま短いメッセージだけ送って、30分で直らなければ電話しよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Agreed. And in the morning, we need to talk about why both lines share one entrance.",
+      "jp": "賛成。それと朝に、なぜ両方の回線が同じ入口を共有しているのか、話し合わないとね。"
+     }
+    ]
+   },
+   {
+    "t": "🌟 060｜成長のためのフィードバック：Asking for Feedback",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you've been on the team for six months now. How do you feel about your progress?",
+      "jp": "ケン、チームに来て半年ね。自分の成長はどう感じてる？"
+     },
+     {
+      "sp": 1,
+      "en": "Honestly, I feel I've learned a lot, but I'm not sure what I should improve next. May I ask for your feedback?",
+      "jp": "正直、たくさん学べたと思うけど、次に何を伸ばすべきか分からないんだ。フィードバックをもらえる？",
+      "note": "表現: May I ask for your feedback? = フィードバックをいただけますか／成長のための聞き方"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. You're strong in troubleshooting, and your reports are very clear. Those are real strengths.",
+      "jp": "もちろん。障害の切り分けが得意で、報告も分かりやすい。それは本当の強みよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. What should I work on?",
+      "jp": "ありがとう。伸ばすべき点は？"
+     },
+     {
+      "sp": 0,
+      "en": "Design. You're excellent when something breaks, but I want you to think about how to prevent it before it breaks.",
+      "jp": "設計よ。壊れた時は優秀だけど、壊れる前に防ぐ方法も考えてほしいの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's fair. I've mostly been reacting. How can I practice designing?",
+      "jp": "その通りだね。僕はほとんど対応する側だった。設計の練習はどうすればいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Take the next small project, like the new branch office, and design the whole network yourself. I'll review it.",
+      "jp": "次の小さなプロジェクト、たとえば新しい支店で、ネットワーク全体を自分で設計してみて。私がレビューするわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd love that. And in a year, I want to be able to design a cloud environment on my own.",
+      "jp": "ぜひやりたい。1年後には、クラウド環境を1人で設計できるようになりたいんだ。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 0,
+      "en": "That's a great goal. Let's write it down, and check your progress every three months.",
+      "jp": "いい目標ね。書き留めて、3か月ごとに進み具合を確認しましょう。"
+     }
+    ]
+   }
+  ]
+ }
+]

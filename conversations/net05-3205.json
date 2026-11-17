@@ -1,0 +1,546 @@
+[
+ {
+  "id": "net05",
+  "ic": "💼",
+  "n": "ネットワーク英語5・仕事編1（障害・ベンダー・変更）",
+  "hint": "Ana and Ken handle real work situations: first outage reports, manager updates, vendor support calls, escalations, root cause explanations, postmortems, customer apologies, handovers, change approvals and maintenance notices",
+  "level": 4,
+  "keywords": [
+   "incident",
+   "vendor",
+   "change"
+  ],
+  "d": [
+   {
+    "t": "🚨 041｜障害の第一報：First Report of an Outage",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the monitoring shows the Osaka office is offline. Can you confirm and send the first report?",
+      "jp": "ケン、監視でも大阪オフィスがオフラインになってる。確認して、第一報を送れる？"
+     },
+     {
+      "sp": 1,
+      "en": "Confirmed. I can't ping the router, and the VPN tunnel is down since nine fourteen.",
+      "jp": "確認した。ルーターにpingが通らなくて、VPNトンネルが9時14分から落ちてる。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Keep the first report short: what, since when, who is affected, and what you're doing now.",
+      "jp": "いいわ。第一報は短く。何が、いつから、誰に影響して、いま何をしているか。"
+     },
+     {
+      "sp": 1,
+      "en": "Here's my draft: 'The Osaka office has lost network access since nine fourteen. About forty users are affected. We are investigating.'",
+      "jp": "下書きだよ。『大阪オフィスは9時14分からネットワークにつながっていません。約40人に影響があります。調査中です。』"
+     },
+     {
+      "sp": 0,
+      "en": "Add the next update time. People relax when they know when they'll hear from you again.",
+      "jp": "次の連絡の時刻も足して。次にいつ連絡が来るか分かると、みんな安心するの。",
+      "note": "表現: Next update at ... = 次の連絡は〇時／障害報告の定番の締め"
+     },
+     {
+      "sp": 1,
+      "en": "I'll say, 'Next update at nine forty-five.' Should I guess the cause?",
+      "jp": "『次の更新は9時45分』と書くよ。原因は推測して書く？",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "No. Write only the facts you've confirmed. A wrong guess in the first report causes more trouble later.",
+      "jp": "だめよ。確認できた事実だけ書いて。第一報の間違った推測は、あとで余計な混乱を生むの。"
+     },
+     {
+      "sp": 1,
+      "en": "Understood. Facts first, guesses later, and always a time for the next update.",
+      "jp": "分かった。事実が先、推測はあと、そして必ず次の更新時刻。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Send it now. I'll call the provider while you keep checking the router.",
+      "jp": "その通り。いま送って。私はプロバイダーに電話するから、あなたはルーターの確認を続けて。"
+     }
+    ]
+   },
+   {
+    "t": "📣 042｜上司への経過報告：Updating the Manager",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the director just asked me, 'How long until it's fixed?' What can I tell her?",
+      "jp": "ケン、部長がいま『復旧までどれくらい？』と聞いてきたの。何て答えればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "We have found the cause. A power failure at the provider's building took down the line.",
+      "jp": "原因は分かりました。プロバイダーのビルの停電で、回線が落ちています。"
+     },
+     {
+      "sp": 0,
+      "en": "Do they have an estimate for the repair?",
+      "jp": "向こうは復旧の見込みを言っている？"
+     },
+     {
+      "sp": 1,
+      "en": "They said two hours, but they also said that about the last incident, and it took five.",
+      "jp": "2時間と言っていますが、前回の障害でもそう言って、結局5時間かかりました。"
+     },
+     {
+      "sp": 0,
+      "en": "So we shouldn't promise two hours. What can we do on our side right now?",
+      "jp": "じゃあ2時間とは約束できないわね。こちらで、いまできることは？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 1,
+      "en": "We can switch the Osaka office to the mobile backup line. It's slower, but email and chat will work.",
+      "jp": "大阪オフィスをモバイルのバックアップ回線に切り替えられます。遅いですが、メールとチャットは使えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Do it, and tell the director: 'Cause identified, provider estimates two hours, we are switching to backup, and I'll update you every thirty minutes.'",
+      "jp": "やって。部長にはこう伝えるわ。『原因は特定済み、プロバイダーの見込みは2時間、バックアップへ切り替え中、30分ごとに報告します』。",
+      "note": "表現: Cause identified = 原因は特定済み／状況報告で最初に伝えたい一言"
+     },
+     {
+      "sp": 1,
+      "en": "That's clear. Should I mention that the last repair took longer?",
+      "jp": "分かりやすいです。前回は長引いたことも伝えた方がいいですか？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, as a risk. 'It may take longer, so we are preparing for that.' Honest and calm is the best tone.",
+      "jp": "ええ、リスクとして。『長引く可能性があるので、備えています』。正直で落ち着いた調子がいちばんよ。"
+     }
+    ]
+   },
+   {
+    "t": "☎️ 043｜ベンダーサポートへの電話：Calling Vendor Support",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for calling support. Can I have your contract number and a short description of the problem?",
+      "jp": "サポートにお電話ありがとうございます。契約番号と、問題の簡単な説明をお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. The number is A-four-four-one-two. Our main firewall rebooted by itself twice today, and now the VPN is unstable.",
+      "jp": "はい。番号はA-4412です。メインのファイアウォールが今日2回勝手に再起動して、VPNが不安定です。"
+     },
+     {
+      "sp": 0,
+      "en": "I see. What's the model and the software version?",
+      "jp": "分かりました。機種とソフトウェアのバージョンは？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "It's the five-hundred series, running version nine point one. We updated it last Friday.",
+      "jp": "500シリーズで、バージョン9.1です。先週の金曜に更新しました。"
+     },
+     {
+      "sp": 0,
+      "en": "Was there anything in the logs before the reboot? A crash message or a memory warning?",
+      "jp": "再起動の前にログに何かありましたか。クラッシュのメッセージとか、メモリの警告とか？",
+      "note": "表現: What's the model and the version? = 機種とバージョンは？／サポートへ必ず聞かれる質問"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, a memory warning appeared about ten minutes before each reboot. I can send you the logs now.",
+      "jp": "はい、再起動の約10分前に、メモリの警告が出ていました。ログをいま送れます。"
+     },
+     {
+      "sp": 0,
+      "en": "Please do. Also, can you generate a technical support file and attach it to the case?",
+      "jp": "お願いします。それと、技術サポート用のファイルを作って、ケースに添付してもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. How soon can an engineer look at it? Our business hours start in one hour.",
+      "jp": "もちろんです。エンジニアはどれくらいで見てもらえますか。うちの営業時間があと1時間で始まります。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm marking this as high priority. You'll hear from an engineer within thirty minutes. Your case number is on the screen now.",
+      "jp": "優先度を高にします。30分以内にエンジニアから連絡が入ります。ケース番号はいま画面に出ています。"
+     }
+    ]
+   },
+   {
+    "t": "📈 044｜チケットのエスカレーション：Escalating a Stuck Ticket",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, our ticket with the vendor has been open for three days, and nothing has moved. What now?",
+      "jp": "ケン、ベンダーとのチケットが3日も開いたままで、何も進まないの。どうする？"
+     },
+     {
+      "sp": 1,
+      "en": "I'll escalate it. First I write to the support engineer, and I copy his manager.",
+      "jp": "エスカレーションします。まずサポート担当に書いて、上司にもコピーを入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "What do you say? We don't want to sound angry.",
+      "jp": "何て書くの？怒っているように聞こえたくないわ。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "'We are still seeing the issue, and the business impact is growing. Could you please escalate this case to a senior engineer?'",
+      "jp": "『問題は続いており、業務への影響が大きくなっています。このケースを上級エンジニアにエスカレーションしていただけますか』。",
+      "note": "表現: escalate = 上位の担当者に引き上げる／さらに上へ話を持っていく"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Be firm, but polite. Do you give them a deadline?",
+      "jp": "いいわね。毅然と、でも丁寧に。期限は伝える？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. 'We need a plan by tomorrow noon.' A specific time is easier to act on than 'as soon as possible.'",
+      "jp": "はい。『明日の正午までに対応計画が必要です』。『できるだけ早く』より、具体的な時刻の方が動きやすいので。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the impact? Should I add numbers?",
+      "jp": "影響はどう書く？数字を入れた方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Definitely. 'Two hundred users lose access twice a day.' Numbers make people take it seriously.",
+      "jp": "もちろん。『200人が1日2回つながらなくなります』。数字があると、真剣に受け止めてもらえます。"
+     },
+     {
+      "sp": 0,
+      "en": "And if they still don't reply?",
+      "jp": "それでも返事がなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then I call our account manager. A good relationship with the sales side often moves things faster.",
+      "jp": "その時はアカウント担当に電話します。営業側と良い関係があると、早く動くことが多いので。"
+     }
+    ]
+   },
+   {
+    "t": "🧬 045｜原因を説明する：Explaining the Root Cause",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the director wants to know why the outage happened. Explain it to me like I'm not an engineer.",
+      "jp": "ケン、部長が、どうして障害が起きたのかを知りたいの。私がエンジニアじゃない前提で説明して。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Our main switch has a table that stores which device is on which port. That table became full.",
+      "jp": "分かりました。メインのスイッチには、どの機器がどのポートにあるかを覚える表があります。その表がいっぱいになりました。"
+     },
+     {
+      "sp": 0,
+      "en": "Why did it become full?",
+      "jp": "どうしていっぱいになったの？"
+     },
+     {
+      "sp": 1,
+      "en": "A faulty device sent thousands of fake addresses. The switch tried to remember every one, and it ran out of space.",
+      "jp": "壊れた機器が、偽のアドレスを何千も送りました。スイッチは全部覚えようとして、容量が尽きたんです。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ"
+     },
+     {
+      "sp": 0,
+      "en": "And when the table was full, what happened to the network?",
+      "jp": "表がいっぱいになったら、ネットワークはどうなったの？"
+     },
+     {
+      "sp": 1,
+      "en": "The switch started sending all traffic to every port. It slowed everything down until it stopped.",
+      "jp": "スイッチが、すべての通信を全部のポートへ送り始めました。全体が遅くなって、最後は止まりました。"
+     },
+     {
+      "sp": 0,
+      "en": "That's clear. Why didn't we notice before it stopped?",
+      "jp": "分かりやすいわ。止まる前に、どうして気づけなかったの？"
+     },
+     {
+      "sp": 1,
+      "en": "We didn't monitor that table. That's the real root cause: a missing alert, not just a faulty device.",
+      "jp": "その表を監視していませんでした。それが本当の根本原因です。壊れた機器だけでなく、アラートの不足です。",
+      "note": "表現: root cause = 根本原因／直接の原因の、さらに奥にある本当の原因"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Now tell me three things: the fix we did, the fix we will do, and how we prevent it.",
+      "jp": "いいわ。じゃあ3つ教えて。実施した対応、これから行う対応、再発防止。"
+     }
+    ]
+   },
+   {
+    "t": "🗣️ 046｜振り返りの会議：The Postmortem Meeting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thanks, everyone, for joining the postmortem. Remember, this is not about blaming anyone. It's about learning.",
+      "jp": "みなさん、ふり返り会議への参加をありがとう。思い出して、これは誰かを責める場じゃなく、学ぶ場よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me start with the timeline. The first alert fired at nine fourteen, and we confirmed the outage at nine twenty.",
+      "jp": "時系列から始めます。最初のアラートは9時14分で、障害の確認が9時20分でした。",
+      "note": "表現: Let me start with ... = 〜から始めます／説明の口火を切る"
+     },
+     {
+      "sp": 0,
+      "en": "Six minutes is a long time. Why did it take us six minutes to confirm?",
+      "jp": "6分は長いわね。確認になぜ6分もかかったの？"
+     },
+     {
+      "sp": 1,
+      "en": "The alert went to one person who was in a meeting. We had no backup person on call.",
+      "jp": "アラートが、会議中の1人にだけ届いていました。控えの当番がいませんでした。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a process gap, not a personal mistake. What should we change?",
+      "jp": "それは個人のミスじゃなく、運用の穴ね。何を変えるべき？"
+     },
+     {
+      "sp": 1,
+      "en": "Two people per alert, and an automatic phone call if nobody responds within three minutes.",
+      "jp": "アラートは2人に送って、3分以内に誰も反応しなければ、自動で電話が鳴るようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "I like it. Who owns that action, and by when?",
+      "jp": "いいわね。その対応の担当者は誰で、期限はいつ？"
+     },
+     {
+      "sp": 1,
+      "en": "I'll take it, and finish by next Friday. I'll report the result at the weekly meeting.",
+      "jp": "私が担当して、来週の金曜までに終えます。結果は週次の会議で報告します。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Every action needs one owner and one date. Otherwise, it only lives in the meeting notes.",
+      "jp": "よし。すべての対応に、担当者1人と期限1つ。そうでないと、議事録の中にしか存在しないから。"
+     }
+    ]
+   },
+   {
+    "t": "🙏 047｜お客様へのお詫びと説明：Apologizing to a Customer",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, this is Ken from the network team. I'm calling about the outage that affected your service yesterday.",
+      "jp": "もしもし、ネットワークチームのケンです。昨日のサービスに影響した障害の件でお電話しました。"
+     },
+     {
+      "sp": 1,
+      "en": "Finally. We lost orders for three hours, and nobody told us anything. What happened?",
+      "jp": "やっとですか。3時間も注文が止まったのに、誰も何も教えてくれなかった。何があったんですか？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm very sorry for the trouble. A failure in our core equipment stopped your connection from nine fourteen to twelve ten.",
+      "jp": "ご迷惑をおかけして、大変申し訳ありません。基幹の機器の故障で、9時14分から12時10分まで接続が止まりました。"
+     },
+     {
+      "sp": 1,
+      "en": "Why wasn't there any announcement during the outage?",
+      "jp": "障害の間、なぜお知らせがなかったんですか？"
+     },
+     {
+      "sp": 0,
+      "en": "You're right, and that's our mistake. We should have contacted you within thirty minutes. We have changed our process.",
+      "jp": "おっしゃる通りで、私どもの落ち度です。30分以内にご連絡すべきでした。手順を変更しました。",
+      "note": "表現: That's our mistake. = こちらの落ち度です／言い訳せずに認める誠実な言い方"
+     },
+     {
+      "sp": 1,
+      "en": "How do I know this won't happen again?",
+      "jp": "二度と起きないと、どう信じればいいですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "I can't promise that nothing will ever fail. But I can promise a faster notice, and I'll send you the full report by Friday.",
+      "jp": "何も壊れないとは約束できません。ただ、お知らせを早くすること、金曜までに詳細な報告書をお送りすることはお約束します。"
+     },
+     {
+      "sp": 1,
+      "en": "Please include the compensation details in that report.",
+      "jp": "その報告書に、補償の内容も入れてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. I'll make sure the contract team reviews that, and I'll call you again on Friday.",
+      "jp": "承知しました。契約担当に確認させ、金曜にもう一度お電話します。"
+     }
+    ]
+   },
+   {
+    "t": "🔁 048｜夜勤への引き継ぎ：Handing Over to the Night Shift",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, before you leave, give me the handover. I'm taking the night shift, and I want no surprises.",
+      "jp": "ケン、帰る前に引き継ぎをお願い。私が夜勤に入るから、驚くことがないようにしたいの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. First, the open issue: the Osaka VPN is running on the backup line, and the provider promised a fix by eight tonight.",
+      "jp": "はい。まず未解決の件。大阪のVPNはバックアップ回線で動いていて、プロバイダーは今夜8時までに直すと約束しています。",
+      "note": "表現: handover = 引き継ぎ／起きている件・次の予定・注意点の3点で渡す"
+     },
+     {
+      "sp": 0,
+      "en": "What should I do if it's not fixed by eight?",
+      "jp": "8時までに直らなかったら、どうすればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Call the provider's emergency number. It's in the shared document, with the case number.",
+      "jp": "プロバイダーの緊急番号に電話してください。ケース番号と一緒に、共有ドキュメントに書いてあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Anything scheduled for tonight?",
+      "jp": "今夜の予定作業は？"
+     },
+     {
+      "sp": 1,
+      "en": "A firmware update on the guest Wi-Fi at eleven. It's low risk, and the rollback steps are in the change ticket.",
+      "jp": "11時にゲストWi-Fiのファームウェア更新があります。リスクは低くて、元に戻す手順は変更チケットにあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything that looks strange but isn't a problem? I hate chasing false alarms.",
+      "jp": "変に見えるけど問題じゃないもの、ある？空振りの調査は嫌なの。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. The disk alert on the log server is a known issue. It repeats every night, and it's already ticketed.",
+      "jp": "あります。ログサーバーのディスク警告は既知の件です。毎晩繰り返しますが、チケット化済みです。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. That's the best handover I've had. Go home and rest.",
+      "jp": "完璧ね。いままでで最高の引き継ぎよ。帰ってゆっくり休んで。"
+     }
+    ]
+   },
+   {
+    "t": "📝 049｜変更申請の承認：Getting a Change Approved",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I read your change request for the core switch upgrade. I have a few questions before I approve it.",
+      "jp": "ケン、コアスイッチ更新の変更申請を読んだわ。承認の前に、いくつか質問があるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. Please go ahead.",
+      "jp": "もちろんです。どうぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "First, what is the business reason? Why do we need this upgrade now?",
+      "jp": "まず、業務上の理由は？どうしていま更新が必要なの？"
+     },
+     {
+      "sp": 1,
+      "en": "The current software has a known security flaw, and the vendor will stop supporting it next month.",
+      "jp": "現在のソフトには既知の脆弱性があって、ベンダーが来月でサポートを終了するからです。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. What's the risk if something goes wrong, and how long would the outage be?",
+      "jp": "分かったわ。失敗した時のリスクと、停止時間はどれくらい？"
+     },
+     {
+      "sp": 1,
+      "en": "Worst case, thirty minutes of downtime. We'll do it on Sunday at two a.m., when almost nobody works.",
+      "jp": "最悪で30分の停止です。ほとんど誰も働いていない、日曜の午前2時に行います。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "And the rollback plan? How long does it take to go back?",
+      "jp": "元に戻す手順は？戻すのにどれくらいかかる？",
+      "note": "表現: rollback plan = 元に戻す手順／変更申請で必ず聞かれる"
+     },
+     {
+      "sp": 1,
+      "en": "About fifteen minutes. We keep the old software on the switch, so we can reboot into it. We tested it last week.",
+      "jp": "約15分です。古いソフトをスイッチに残すので、そちらで再起動できます。先週テストしました。"
+     },
+     {
+      "sp": 0,
+      "en": "That's what I wanted to hear. Approved. Please send a notice to all departments by Thursday.",
+      "jp": "それが聞きたかったの。承認します。木曜までに、全部署に通知を出して。"
+     }
+    ]
+   },
+   {
+    "t": "🔧 050｜メンテナンス作業のお知らせ：Announcing Planned Maintenance",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I have to write the maintenance announcement for Sunday. Can you check my draft?",
+      "jp": "アナ、日曜のメンテナンスのお知らせを書かなきゃ。下書きを見てくれる？",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Read it to me.",
+      "jp": "いいわよ。読んで聞かせて。"
+     },
+     {
+      "sp": 0,
+      "en": "'Dear all, we will upgrade the core network on Sunday from two to four a.m. The network may be unavailable for up to thirty minutes.'",
+      "jp": "『みなさまへ。日曜の午前2時から4時にかけて、基幹ネットワークを更新します。最大30分、ネットワークが使えなくなる可能性があります。』"
+     },
+     {
+      "sp": 1,
+      "en": "Good start. Add what it means for the readers: 'Remote workers will lose VPN access during that time.'",
+      "jp": "いい出だしね。読む人にとっての意味を足して。『その間、在宅の方はVPNを使えません』。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I explain the technical details?",
+      "jp": "技術的な詳細は説明した方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Most people only want three things: when, what's affected, and what they need to do.",
+      "jp": "いらないわ。ほとんどの人が知りたいのは3つだけ。いつ、何に影響するか、自分は何をすべきか。"
+     },
+     {
+      "sp": 0,
+      "en": "What they need to do? Nothing, really.",
+      "jp": "自分が何をすべきか？特に何もないんだけど。"
+     },
+     {
+      "sp": 1,
+      "en": "Then say so: 'No action is required.' That sentence saves you twenty questions.",
+      "jp": "なら、そう書いて。『対応は不要です』。その1文で、20件の問い合わせが減るわ。",
+      "note": "表現: No action is required. = 対応は不要です／お知らせの定番文"
+     },
+     {
+      "sp": 0,
+      "en": "I'll also add a contact: 'If you see problems on Monday, please call the help desk.'",
+      "jp": "連絡先も足すよ。『月曜に問題があれば、ヘルプデスクへお電話ください』。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. Send it a week ahead, and a reminder the day before.",
+      "jp": "完璧。1週間前に送って、前日にもう一度リマインドを送ってね。"
+     }
+    ]
+   }
+  ]
+ }
+]
