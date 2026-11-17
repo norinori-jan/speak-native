@@ -1,0 +1,534 @@
+[
+ {
+  "id": "net07",
+  "ic": "🔬",
+  "n": "ネットワーク英語7・実技トラブルシュート事例",
+  "hint": "Ana and Ken solve real network problems: reading show commands, OSPF MTU mismatch, asymmetric routing, MTU and MSS, duplicate IPs, Wireshark captures, TCP retransmissions, BGP flapping, QoS and flapping links",
+  "level": 4,
+  "keywords": [
+   "troubleshooting",
+   "ospf",
+   "packet capture"
+  ],
+  "d": [
+   {
+    "t": "🖥️ 061｜showコマンドを読む：Reading the Show Commands",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the branch router has a problem. Log in and tell me what you see. Start with show interfaces.",
+      "jp": "ケン、支社のルーターに問題があるの。ログインして、何が見えるか教えて。まずshow interfacesから。"
+     },
+     {
+      "sp": 1,
+      "en": "The WAN interface says 'up, line protocol up', but the input errors counter is climbing. It's at four thousand.",
+      "jp": "WANインターフェースは『up、line protocol up』ですが、入力エラーのカウンターが増え続けています。4000です。"
+     },
+     {
+      "sp": 0,
+      "en": "Clear the counters, wait one minute, and check again. A big old number doesn't tell you what's happening now.",
+      "jp": "カウンターをクリアして、1分待ってもう一度見て。古い大きな数字は、いま何が起きているかを教えてくれないの。",
+      "note": "表現: Clear the counters and check again. = カウンターを消してもう一度見る／いまの状況を知るための基本"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. After one minute, there are sixty new CRC errors. So it's still happening.",
+      "jp": "クリアして1分後、CRCエラーが新しく60件。まだ起きています。"
+     },
+     {
+      "sp": 0,
+      "en": "What do CRC errors usually point to?",
+      "jp": "CRCエラーは、たいてい何を示すの？"
+     },
+     {
+      "sp": 1,
+      "en": "A physical problem: a bad cable, a dirty connector, or a mismatch of speed and duplex on the two sides.",
+      "jp": "物理的な問題です。ケーブル不良、コネクタの汚れ、あるいは両側の速度とデュプレックスの不一致。"
+     },
+     {
+      "sp": 0,
+      "en": "Check the duplex setting. What does it say on your side, and on the switch side?",
+      "jp": "デュプレックスの設定を確認して。こちら側とスイッチ側、それぞれ何て出てる？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Our side says full, but the switch side is stuck at half. It's an auto-negotiation failure.",
+      "jp": "こちらはfull、スイッチ側はhalfのままです。自動ネゴシエーションの失敗ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Set both sides to the same fixed values, then clear the counters again. If the errors stop, you've found it.",
+      "jp": "両側を同じ固定値にして、またカウンターをクリアして。エラーが止まれば、原因はそれよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔎 062｜OSPFが隣人にならない：The OSPF Neighbor That Never Came Up",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the new core router won't form an OSPF neighbor with the old one. It's been stuck in ExStart for an hour.",
+      "jp": "アナ、新しいコアルーターが、古いほうとOSPFの隣人にならないの。1時間ずっとExStartで止まってる。"
+     },
+     {
+      "sp": 1,
+      "en": "ExStart or Exchange stuck is a classic. The usual suspect is an MTU mismatch. What's the MTU on both interfaces?",
+      "jp": "ExStartやExchangeで止まるのは定番ね。よくある犯人はMTUの不一致。両側のインターフェースのMTUはいくつ？",
+      "note": "表現: The usual suspect is ... = よくある犯人は〜／原因の見当をつける言い方"
+     },
+     {
+      "sp": 0,
+      "en": "The old one is fifteen hundred. The new one is nine thousand, because it's set for jumbo frames.",
+      "jp": "古い方は1500。新しい方は9000です。ジャンボフレーム用の設定なので。"
+     },
+     {
+      "sp": 1,
+      "en": "There it is. They can't agree on the size of the database packets, so the exchange never finishes.",
+      "jp": "それよ。データベースのパケットの大きさで合意できなくて、交換が終わらないの。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I change the new one to fifteen hundred?",
+      "jp": "新しい方を1500に変えた方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "On this link, yes. Or make both sides nine thousand, if every device in the path supports it.",
+      "jp": "このリンクでは、そうね。経路上の全機器が対応しているなら、両側を9000にする手もあるわ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll change the new one to fifteen hundred. It's the safer choice.",
+      "jp": "新しい方を1500に変えます。その方が安全です。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Now watch the state. It should go through Exchange, Loading, and then Full.",
+      "jp": "じゃあ状態を見てて。ExchangeからLoading、そしてFullへ進むはずよ。"
+     },
+     {
+      "sp": 0,
+      "en": "It says Full. The neighbor is up, and the routes are appearing in the table.",
+      "jp": "Fullになりました。隣人が上がって、ルートがテーブルに現れています。"
+     }
+    ]
+   },
+   {
+    "t": "↩️ 063｜行きと帰りが違う道：The Asymmetric Route",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, users in Osaka can reach the server, but the connection drops after a few seconds. Pings work fine.",
+      "jp": "ケン、大阪の利用者はサーバーに届くのに、数秒で接続が切れる。pingは問題なく通るの。"
+     },
+     {
+      "sp": 1,
+      "en": "Pings work, but the real connection fails. That smells like a stateful firewall in the middle.",
+      "jp": "pingは通るのに、実際の接続は失敗する。途中のステートフルなファイアウォールの匂いがするな。"
+     },
+     {
+      "sp": 0,
+      "en": "Why would a firewall cause that?",
+      "jp": "どうしてファイアウォールが原因になるの？"
+     },
+     {
+      "sp": 1,
+      "en": "It remembers the connection when it sees the first packet. If the reply comes back through a different firewall, that one has never seen the connection, so it drops the reply.",
+      "jp": "最初のパケットを見た時に、接続を記録するんだ。返事が別のファイアウォールを通って戻ると、そちらは接続を見ていないから、返事を捨てる。",
+      "note": "表現: That smells like ... = 〜の匂いがする／当たりをつける時のくだけた言い方"
+     },
+     {
+      "sp": 0,
+      "en": "So the traffic goes out one way and comes back another way?",
+      "jp": "つまり、通信が行きと帰りで別の道を通っている？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, an asymmetric path. Run a traceroute from both ends and compare the routes.",
+      "jp": "そう、非対称な経路だ。両端からtracerouteをして、経路を比べよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Going out, it passes firewall A. Coming back, it passes firewall B. You're right.",
+      "jp": "行きはファイアウォールAを通る。帰りはB。当たりね。"
+     },
+     {
+      "sp": 1,
+      "en": "We can fix it by adjusting the routing preference, so both directions use the same firewall.",
+      "jp": "ルーティングの優先度を調整して、両方向が同じファイアウォールを通るようにすれば直せる。"
+     },
+     {
+      "sp": 0,
+      "en": "Do it in the maintenance window. And add this to our troubleshooting guide: 'Pings work, sessions fail. Check for asymmetry.'",
+      "jp": "メンテナンス時間にやって。それとこれを手順書に足して。『pingは通るがセッションが切れる。非対称を疑え』。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     }
+    ]
+   },
+   {
+    "t": "📏 064｜大きいデータだけ通らない：Big Packets, Small Packets",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the intranet loads, but when someone uploads a big file, it just hangs. Small files work fine.",
+      "jp": "アナ、イントラネットは開けるのに、大きなファイルをアップロードすると固まるの。小さいファイルなら問題ない。"
+     },
+     {
+      "sp": 1,
+      "en": "Small works, big fails. Think about packet size. Has anything changed on that path recently?",
+      "jp": "小さいのは通って、大きいのは失敗。パケットの大きさを考えて。その経路で最近変わったことは？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, the new VPN tunnel. A tunnel adds extra headers, so packets get bigger.",
+      "jp": "あるわ、新しいVPNトンネル。トンネルは余分なヘッダーを足すから、パケットが大きくなるの。"
+     },
+     {
+      "sp": 1,
+      "en": "And if the packet becomes larger than the MTU of the path, it has to be broken into pieces, or it's dropped.",
+      "jp": "それでパケットが経路のMTUより大きくなると、分割されるか、捨てられる。"
+     },
+     {
+      "sp": 0,
+      "en": "Let's test. Ping the server with a large size and the don't-fragment flag.",
+      "jp": "試してみましょう。大きいサイズで、分割禁止のフラグをつけてpingして。",
+      "note": "表現: Small works, big fails. = 小さいのは通るが、大きいのは失敗する／MTU問題の合言葉"
+     },
+     {
+      "sp": 1,
+      "en": "At fourteen hundred and seventy-two bytes, it fails. At fourteen hundred, it works.",
+      "jp": "1472バイトだと失敗します。1400だと通ります。"
+     },
+     {
+      "sp": 0,
+      "en": "So the real MTU is a bit below fifteen hundred. Set the TCP MSS on the tunnel to fourteen hundred and sixty.",
+      "jp": "つまり実際のMTUは1500を少し下回るのね。トンネルのTCP MSSを1460に設定して。"
+     },
+     {
+      "sp": 1,
+      "en": "Why MSS and not MTU?",
+      "jp": "どうしてMTUじゃなくてMSSなの？"
+     },
+     {
+      "sp": 0,
+      "en": "MSS tells both sides to send smaller TCP segments from the start, so nothing is dropped. It's a clean fix.",
+      "jp": "MSSなら、最初から両側が小さいTCPセグメントを送るから、何も捨てられないの。きれいな直し方よ。"
+     }
+    ]
+   },
+   {
+    "t": "🧱 065｜同じIPアドレスが2台：Two Devices, One Address",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the printer on the second floor keeps losing connection every few minutes. Then it comes back by itself.",
+      "jp": "ケン、2階のプリンターが数分おきに接続を失うの。そのあと勝手に戻る。"
+     },
+     {
+      "sp": 1,
+      "en": "Intermittent problem with a pattern. I suspect a duplicate IP address. Another device may be using the same address.",
+      "jp": "一定のパターンがある不安定さですね。IPアドレスの重複を疑います。別の機器が同じアドレスを使っているのかも。"
+     },
+     {
+      "sp": 0,
+      "en": "How can we find out?",
+      "jp": "どうやって調べる？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 1,
+      "en": "Check the ARP table on the switch. If the same IP address shows two different MAC addresses, we have a conflict.",
+      "jp": "スイッチのARPテーブルを見ます。同じIPに2つの別のMACアドレスが出ていれば、衝突です。",
+      "note": "表現: I suspect ... = 〜を疑っています／原因を絞る時"
+     },
+     {
+      "sp": 0,
+      "en": "I see two. One MAC is the printer, and the other is unknown. Its vendor code says it's a laptop.",
+      "jp": "2つ出てる。1つはプリンターで、もう1つは不明。ベンダーコードでは、ノートパソコンみたい。"
+     },
+     {
+      "sp": 1,
+      "en": "Someone probably typed a fixed address into a laptop, and it's the printer's address.",
+      "jp": "誰かがノートパソコンに固定のアドレスを入力して、それがプリンターのアドレスだったんでしょう。"
+     },
+     {
+      "sp": 0,
+      "en": "Find which switch port the unknown MAC is on, and we'll find the person.",
+      "jp": "その不明なMACがどのスイッチポートにいるか調べて。持ち主が分かるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "It's in the meeting room on the second floor. I'll go and ask them to switch to DHCP.",
+      "jp": "2階の会議室です。行って、DHCPに戻してもらいます。"
+     },
+     {
+      "sp": 0,
+      "en": "To prevent this, we'll keep the printer addresses outside the DHCP pool, and document them on the network sheet.",
+      "jp": "再発防止に、プリンターのアドレスはDHCPの範囲の外に置いて、ネットワーク一覧に書いておきましょう。"
+     }
+    ]
+   },
+   {
+    "t": "🦈 066｜パケットを捕まえる：Catching Packets with Wireshark",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I'm stuck. The application says 'connection timed out', and the firewall logs show nothing wrong.",
+      "jp": "アナ、行き詰まったよ。アプリは『接続がタイムアウトした』と言うのに、ファイアウォールのログには問題がない。"
+     },
+     {
+      "sp": 1,
+      "en": "Time to look at the packets. Capture on the server's interface, and filter by the client's address.",
+      "jp": "パケットを見る時ね。サーバーのインターフェースでキャプチャして、クライアントのアドレスで絞り込んで。"
+     },
+     {
+      "sp": 0,
+      "en": "Started. I see the client's SYN packet arriving, again and again, every second.",
+      "jp": "開始した。クライアントのSYNパケットが、1秒ごとに何度も届いてる。"
+     },
+     {
+      "sp": 1,
+      "en": "But no SYN-ACK from the server? That means the server never answered.",
+      "jp": "でもサーバーからのSYN-ACKはない？つまりサーバーが答えていないのね。",
+      "note": "用語: SYN / SYN-ACK = TCP接続の最初のやり取り（要求と応答）"
+     },
+     {
+      "sp": 0,
+      "en": "Right. The packet arrives, but nothing leaves. Something on the server is dropping it.",
+      "jp": "そう。パケットは届くのに、何も出ていかない。サーバーの中の何かが捨ててる。"
+     },
+     {
+      "sp": 1,
+      "en": "The server's own firewall, maybe? Check the host firewall rules.",
+      "jp": "サーバー自身のファイアウォールかも。ホストのファイアウォールのルールを確認して。"
+     },
+     {
+      "sp": 0,
+      "en": "There it is. A rule blocks the port for everything except the old subnet. The new office isn't in it.",
+      "jp": "あった。古いサブネット以外にはそのポートを塞ぐルールがある。新しいオフィスは含まれてない。"
+     },
+     {
+      "sp": 1,
+      "en": "See? The network was fine. The logs were silent because the block was inside the server.",
+      "jp": "ね？ネットワークは正常だった。ブロックがサーバーの中だったから、ログが静かだったのよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Lesson learned: when the network looks innocent, capture on both ends and find where the packet disappears.",
+      "jp": "教訓だね。ネットワークが無実に見える時は、両端でキャプチャして、パケットがどこで消えるかを見つける。"
+     }
+    ]
+   },
+   {
+    "t": "🔄 067｜TCPの再送：Reading TCP Retransmissions",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, a customer says the file transfer is very slow, but the link isn't full. Where do we look?",
+      "jp": "ケン、お客さんがファイル転送がすごく遅いと言うの。でもリンクは満杯じゃない。どこを見る？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd capture some traffic and look at TCP retransmissions. Slow transfers with a free link often mean packet loss.",
+      "jp": "通信をキャプチャして、TCPの再送を見ます。リンクが空いているのに遅い時は、パケットの損失が多いんです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does packet loss slow it down so much?",
+      "jp": "どうしてパケットの損失で、そんなに遅くなるの？"
+     },
+     {
+      "sp": 1,
+      "en": "TCP thinks loss means congestion, so it cuts its speed in half. After a few losses, it's crawling.",
+      "jp": "TCPは損失を混雑のサインと考えて、速度を半分にします。損失が数回続けば、這うような速度になるんです。",
+      "note": "表現: retransmission = 再送／届かなかったパケットをもう一度送ること"
+     },
+     {
+      "sp": 0,
+      "en": "I captured it. Two percent of the packets are retransmitted, and they all start after the same router.",
+      "jp": "取れました。パケットの2%が再送されていて、全部同じルーターのあとから始まっています。"
+     },
+     {
+      "sp": 1,
+      "en": "Two percent sounds small, but it's huge for TCP. What's on that router?",
+      "jp": "2%は小さく聞こえるけど、TCPには大きいのよ。そのルーターには何がある？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "The interface counters show output drops. The queue is full during bursts, even though the average is low.",
+      "jp": "インターフェースのカウンターに、出力のドロップがあります。平均は低いのに、バーストの時にキューがいっぱいになっています。"
+     },
+     {
+      "sp": 1,
+      "en": "So the average hides the spikes. What's the fix?",
+      "jp": "平均がスパイクを隠していたのね。どう直す？"
+     },
+     {
+      "sp": 0,
+      "en": "A bigger buffer or traffic shaping before the router. And I'll set the monitoring to look at drops, not only the average.",
+      "jp": "バッファを大きくするか、ルーターの前でトラフィックシェーピングを。それと監視は、平均だけじゃなくドロップも見るようにします。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 068｜BGPが揺れる：The Flapping BGP Session",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the BGP session with our provider keeps going up and down. Every few minutes, we lose the internet for thirty seconds.",
+      "jp": "アナ、プロバイダーとのBGPセッションが上がったり下がったりするの。数分おきに、30秒インターネットが切れる。"
+     },
+     {
+      "sp": 1,
+      "en": "That's flapping. Show me the BGP log. What reason does it give when the session drops?",
+      "jp": "フラッピングね。BGPのログを見せて。セッションが落ちる時、どんな理由が出てる？"
+     },
+     {
+      "sp": 0,
+      "en": "'Hold timer expired.' We didn't hear from the neighbor for ninety seconds.",
+      "jp": "『ホールドタイマーの期限切れ』。隣から90秒間、何も聞こえなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "The keepalives are not arriving. Either the link is dropping packets, or the router's CPU is too busy to process them.",
+      "jp": "キープアライブが届いていないのね。リンクがパケットを落としているか、ルーターのCPUが忙しすぎて処理できないか。",
+      "note": "用語: flapping = 状態が上がり下がりを繰り返すこと／hold timer = 相手の無応答を許す時間"
+     },
+     {
+      "sp": 0,
+      "en": "The CPU is at ninety-five percent during the drops. A big process is running.",
+      "jp": "落ちている間、CPUが95%です。大きな処理が動いています。"
+     },
+     {
+      "sp": 1,
+      "en": "Which process? Check the process list sorted by CPU.",
+      "jp": "どの処理？CPU順でプロセス一覧を見て。"
+     },
+     {
+      "sp": 0,
+      "en": "It's a logging process. Someone turned on a very detailed debug level last night, and forgot to turn it off.",
+      "jp": "ログ処理です。誰かが昨夜、とても詳細なデバッグレベルをオンにして、消し忘れたんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Turn it off. A forgotten debug setting can bring down a production router. We'll add a check for it in the weekly review.",
+      "jp": "消して。消し忘れたデバッグ設定は、本番のルーターを落とせるの。週次の点検に確認項目を足しましょう。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. The session has been stable for ten minutes. I'll write it up and share it with the team.",
+      "jp": "完了。10分間、セッションは安定しています。まとめて、チームに共有します。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🚦 069｜通信の優先順位 QoS：Giving Voice Calls Priority",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the phone calls sound robotic whenever someone downloads a big file. The sales team is furious.",
+      "jp": "ケン、誰かが大きなファイルをダウンロードするたびに、電話の声がロボットみたいになるの。営業チームが怒ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a QoS problem. Voice and big downloads share the same queue, and voice needs low delay.",
+      "jp": "QoSの問題です。音声と大きなダウンロードが同じ待ち行列を共有していて、音声は低い遅延が必要なんです。"
+     },
+     {
+      "sp": 0,
+      "en": "What does QoS do exactly?",
+      "jp": "QoSは具体的に何をするの？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "It sorts traffic into classes. Voice goes into a priority queue and leaves first. Downloads wait their turn.",
+      "jp": "通信をクラスに分けます。音声は優先キューに入って先に出る。ダウンロードは順番を待ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "How does the network know which packets are voice?",
+      "jp": "ネットワークは、どのパケットが音声か、どうやって分かるの？"
+     },
+     {
+      "sp": 1,
+      "en": "The phones mark their packets with a DSCP value. We trust that mark on the access switch and match it on the router.",
+      "jp": "電話機がパケットにDSCP値で印をつけます。アクセススイッチでその印を信頼して、ルーターで照合します。",
+      "note": "用語: QoS = 通信の優先制御／DSCP = パケットに付ける優先度の印"
+     },
+     {
+      "sp": 0,
+      "en": "What if someone marks their download as high priority?",
+      "jp": "誰かが自分のダウンロードに高い優先度の印をつけたら？"
+     },
+     {
+      "sp": 1,
+      "en": "That's why we don't trust marks from laptops. We only trust them from the phones, and reset all the others.",
+      "jp": "だからノートパソコンの印は信用しません。電話機のものだけ信用して、ほかは全部リセットします。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. And limit the priority queue to thirty percent, so voice can't starve everything else.",
+      "jp": "いいわね。それと優先キューは30%に制限して。音声がほかを飢えさせないように。"
+     }
+    ]
+   },
+   {
+    "t": "🔌 070｜たまに切れる回線：The Link That Drops Sometimes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, a user on the fourth floor says the network disconnects for a few seconds, maybe twice a day. I can't reproduce it.",
+      "jp": "アナ、4階の利用者が、1日に2回くらい数秒ネットワークが切れると言うの。再現できない。"
+     },
+     {
+      "sp": 1,
+      "en": "Intermittent problems are the hardest. Start with the logs. What does the switch log say for that port?",
+      "jp": "断続的な問題がいちばん難しいわ。ログから始めて。そのポートのスイッチのログは？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "'Interface down' and 'interface up', thirty-one times this week, always a few seconds apart.",
+      "jp": "『インターフェースdown』と『up』が、今週31回。いつも数秒の間隔です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thirty-one flaps. The cable or the port is suspect. Has anything been moved near the cable recently?",
+      "jp": "31回のフラップね。ケーブルかポートが怪しい。最近、ケーブルの近くで何か動かした？"
+     },
+     {
+      "sp": 0,
+      "en": "Facilities moved a desk last week. The cable runs under it, and maybe it's pinched.",
+      "jp": "先週、総務が机を動かしました。ケーブルはその下を通っていて、はさまれたのかも。",
+      "note": "表現: intermittent = 断続的な／再現しにくい不具合を言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Swap the patch cable first. It's the cheapest test. Then test the wall cable with a cable tester.",
+      "jp": "まずパッチケーブルを交換して。いちばん安い検査よ。次に、壁のケーブルをケーブルテスターで調べて。"
+     },
+     {
+      "sp": 0,
+      "en": "The tester shows a fault at four meters from the wall. That's right at the desk.",
+      "jp": "テスターが、壁から4メートルの所に不良を示しています。ちょうど机の位置です。"
+     },
+     {
+      "sp": 1,
+      "en": "There's your answer. Replace the cable, and label both ends, so the next person can trace it fast.",
+      "jp": "それが答えね。ケーブルを交換して、両端にラベルを貼って。次の人がすぐ追えるように。"
+     },
+     {
+      "sp": 0,
+      "en": "Replaced. I'll watch the logs for a week and close the ticket if there are no more flaps.",
+      "jp": "交換しました。1週間ログを見て、フラップがなければチケットを閉じます。"
+     }
+    ]
+   }
+  ]
+ }
+]
