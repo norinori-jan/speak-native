@@ -1,0 +1,546 @@
+[
+ {
+  "id": "net01",
+  "ic": "🌐",
+  "n": "ネットワーク英語1・基礎からトラブル対応",
+  "hint": "Ana, a senior network engineer, teaches Ken the basics: OSI layers, IP addresses, subnetting, switches, routers, VLANs, DNS, DHCP, ping, traceroute and firewall rules",
+  "level": 3,
+  "keywords": [
+   "network",
+   "engineer",
+   "troubleshooting"
+  ],
+  "d": [
+   {
+    "t": "🧱 001｜7つの層の話：Seven Layers, One Packet",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you look lost. Is it the network diagram again?",
+      "jp": "ケン、迷子みたいな顔ね。またネットワーク図？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, Ana. Everyone says 'layer two' or 'layer three', and I just nod.",
+      "jp": "うん、アナ。みんな『レイヤー2』とか『3』って言うけど、僕はうなずくだけなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay, let's fix that. The OSI model has seven layers, and each one has one job.",
+      "jp": "じゃあ直しましょう。OSI参照モデルには7つの層があって、それぞれ役割は1つよ。",
+      "note": "用語: layer 2 = データリンク層（スイッチ・MACアドレス）／layer 3 = ネットワーク層（ルーター・IPアドレス）"
+     },
+     {
+      "sp": 1,
+      "en": "Seven jobs. Which ones do I need to know first?",
+      "jp": "7つの役割か。まずどれを知るべき？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Layer one is cables and signals. Layer two is switches and MAC addresses. Layer three is routers and IP addresses.",
+      "jp": "第1層はケーブルと信号。第2層はスイッチとMACアドレス。第3層はルーターとIPアドレス。"
+     },
+     {
+      "sp": 1,
+      "en": "So when a cable is unplugged, that's a layer one problem.",
+      "jp": "じゃあケーブルが抜けていたら、第1層の問題だね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. And when the IP address is wrong, it's layer three. Always start at the bottom and work up.",
+      "jp": "その通り。IPアドレスが違えば第3層。いつも下から順に調べていくの。"
+     },
+     {
+      "sp": 1,
+      "en": "Layer four is TCP and UDP, right? The ports?",
+      "jp": "第4層はTCPとUDPで、ポート番号だよね？"
+     },
+     {
+      "sp": 0,
+      "en": "Right. And layer seven is the application, like a web browser. You already know more than you think.",
+      "jp": "そう。第7層はウェブブラウザのようなアプリ。もう思っているより知ってるわよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔢 002｜IPアドレスの読み方：Reading an IP Address",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what's the IP address of this laptop?",
+      "jp": "ケン、このノートパソコンのIPアドレスは？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "It says one-nine-two dot one-six-eight dot one dot forty-two.",
+      "jp": "192.168.1.42 って出てる。",
+      "note": "用語: octet = IPアドレスの8ビット区切り（0〜255）"
+     },
+     {
+      "sp": 0,
+      "en": "Good. That's four numbers, called octets. Each one goes from zero to two fifty-five.",
+      "jp": "いいわね。4つの数字で、オクテットと呼ぶの。それぞれ0から255まで。"
+     },
+     {
+      "sp": 1,
+      "en": "Why two fifty-five? That seems like a strange limit.",
+      "jp": "どうして255なの？変な上限だね。"
+     },
+     {
+      "sp": 0,
+      "en": "Because each octet is eight bits. Eight bits can make two hundred fifty-six values, from zero up.",
+      "jp": "1オクテットは8ビットだから。8ビットで256通りの値、0から数えて作れるのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "So the whole address is thirty-two bits long.",
+      "jp": "じゃあアドレス全体で32ビットなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. And those one-nine-two addresses are private. You can't reach them directly from the internet.",
+      "jp": "そう。それと192で始まるのはプライベートアドレス。インターネットから直接は届かないの。"
+     },
+     {
+      "sp": 1,
+      "en": "So my home router uses private addresses inside, and one public address outside?",
+      "jp": "つまり家のルーターは、中でプライベート、外で1つのグローバルアドレスを使うの？"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Remember that. We'll use it when we talk about NAT.",
+      "jp": "その通り。覚えておいて。NATの話で使うから。"
+     }
+    ]
+   },
+   {
+    "t": "✂️ 003｜サブネットマスクの謎：The Mystery of the Subnet Mask",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, look at this setting. Subnet mask: two fifty-five, two fifty-five, two fifty-five, zero. What does it do?",
+      "jp": "ケン、この設定を見て。サブネットマスク 255.255.255.0。何をするものだと思う？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Honestly, I've always left it alone. I thought it was a magic number.",
+      "jp": "正直、ずっといじらなかった。おまじないの数字だと思ってた。"
+     },
+     {
+      "sp": 0,
+      "en": "It tells the computer which part of the address is the network, and which part is the host.",
+      "jp": "アドレスのどこまでがネットワーク部で、どこからがホスト部かを、パソコンに伝えるものよ。"
+     },
+     {
+      "sp": 1,
+      "en": "So the first three octets are the network, and the last one is the host?",
+      "jp": "じゃあ最初の3つがネットワークで、最後の1つがホスト？"
+     },
+     {
+      "sp": 0,
+      "en": "Right. We write that as slash twenty-four, because twenty-four bits are ones.",
+      "jp": "そう。それをスラッシュ24と書くの。24ビットが1だから。"
+     },
+     {
+      "sp": 1,
+      "en": "Then how many computers can I put in a slash twenty-four network?",
+      "jp": "じゃあ/24のネットワークには、何台つなげられる？"
+     },
+     {
+      "sp": 0,
+      "en": "Two hundred fifty-four. You lose two addresses, one for the network and one for broadcast.",
+      "jp": "254台。2つのアドレスは使えないの。ネットワーク用と、ブロードキャスト用。",
+      "note": "用語: /24 = サブネットマスク 255.255.255.0／使えるホスト数 = 2^n − 2"
+     },
+     {
+      "sp": 1,
+      "en": "Two fifty-six minus two. That's easy to remember.",
+      "jp": "256引く2か。覚えやすいね。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Next time, I'll show you how to split a network in half.",
+      "jp": "いいわね。次は、ネットワークを半分に分ける方法を見せるわ。"
+     }
+    ]
+   },
+   {
+    "t": "🍰 004｜ネットワークを半分に：Cutting the Network in Half",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the sales team needs its own network, and so does the lab. We only have one slash twenty-four.",
+      "jp": "ケン、営業チームと実験室、それぞれ専用のネットワークが必要なの。/24は1つしかないわ。"
+     },
+     {
+      "sp": 1,
+      "en": "Can we just split it in two?",
+      "jp": "2つに分けられないかな？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. We borrow one bit from the host part. Slash twenty-four becomes slash twenty-five.",
+      "jp": "できるわ。ホスト部から1ビット借りるの。/24が/25になる。"
+     },
+     {
+      "sp": 1,
+      "en": "So the mask changes to two fifty-five, two fifty-five, two fifty-five, one twenty-eight.",
+      "jp": "じゃあマスクは255.255.255.128になるんだね。"
+     },
+     {
+      "sp": 0,
+      "en": "Correct. The first network is dot zero to dot one twenty-seven. The second starts at dot one twenty-eight.",
+      "jp": "正解。1つ目は.0から.127、2つ目は.128から始まる。",
+      "note": "用語: /25 = 255.255.255.128／1ブロック128アドレス"
+     },
+     {
+      "sp": 1,
+      "en": "How many hosts in each one?",
+      "jp": "それぞれ何台つなげられる？"
+     },
+     {
+      "sp": 0,
+      "en": "One hundred twenty-six. Half of two fifty-four, roughly, because each half loses its own two addresses.",
+      "jp": "126台よ。254のほぼ半分。それぞれが2つずつアドレスを失うから。"
+     },
+     {
+      "sp": 1,
+      "en": "Got it. And if sales grows, we need a bigger block.",
+      "jp": "分かった。営業が増えたら、もっと大きいブロックが必要になるね。"
+     },
+     {
+      "sp": 0,
+      "en": "That's why we plan first. Draw it on paper before you touch the switch.",
+      "jp": "だから先に計画するの。スイッチを触る前に、紙に書いてみなさい。"
+     }
+    ]
+   },
+   {
+    "t": "🔀 005｜スイッチとルーター：Switch or Router?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the printer and the laptops can talk to each other, but nobody can reach the internet. Why?",
+      "jp": "ケン、プリンターとノートパソコン同士は話せるのに、誰もインターネットに出られない。どうして？"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe the switch is broken?",
+      "jp": "スイッチが壊れたのかな？"
+     },
+     {
+      "sp": 0,
+      "en": "A switch only moves traffic inside one network. It reads MAC addresses.",
+      "jp": "スイッチは1つのネットワークの中だけでデータを運ぶの。MACアドレスを読んでね。"
+     },
+     {
+      "sp": 1,
+      "en": "And a router connects different networks together?",
+      "jp": "ルーターは、別々のネットワークをつなぐんだよね？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. It reads IP addresses and picks the best path. Is there a default gateway on the laptops?",
+      "jp": "そう。IPアドレスを読んで、いちばんいい道を選ぶ。ノートパソコンにデフォルトゲートウェイはある？",
+      "note": "用語: default gateway = 外のネットワークへ出る時の出口ルーター"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check. Oh, it's empty. There's nothing there.",
+      "jp": "確認するね。あ、空っぽだ。何も入ってない。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "That's your problem. The laptop doesn't know where to send traffic for the outside world.",
+      "jp": "それが原因よ。外の世界宛てのデータを、どこへ送ればいいかパソコンが知らないの。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll type in the router's address. One-nine-two dot one-six-eight dot one dot one.",
+      "jp": "ルーターのアドレスを入れるね。192.168.1.1。"
+     },
+     {
+      "sp": 0,
+      "en": "Now try a web page. See? One small setting, and the whole office is back online.",
+      "jp": "ウェブページを開いてみて。ほら。小さな設定1つで、オフィス全体が復活したでしょ。"
+     }
+    ]
+   },
+   {
+    "t": "🏷️ 006｜VLANで部署を分ける：Splitting the Office with VLANs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the finance team is complaining. They say guests in the lobby can see their printers.",
+      "jp": "アナ、経理チームが怒ってる。ロビーのお客さんに、自分たちのプリンターが見えるって。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a security problem. We need to separate them, but we only have one switch.",
+      "jp": "セキュリティの問題ね。分けなきゃいけないけど、スイッチは1台しかない。"
+     },
+     {
+      "sp": 0,
+      "en": "Can one switch act like two?",
+      "jp": "1台のスイッチを、2台みたいに使えるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with VLANs. A VLAN is a virtual network inside the switch. Each port belongs to one VLAN.",
+      "jp": "できるわ、VLANで。VLANはスイッチの中の仮想ネットワーク。各ポートは1つのVLANに属するの。",
+      "note": "用語: VLAN = スイッチ内の仮想ネットワーク。ポートごとに所属を決める"
+     },
+     {
+      "sp": 0,
+      "en": "So finance goes in VLAN ten, and guests go in VLAN twenty?",
+      "jp": "じゃあ経理はVLAN10、ゲストはVLAN20にする？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Devices in different VLANs can't talk directly, even on the same switch.",
+      "jp": "その通り。違うVLAN同士は、同じスイッチでも直接話せないの。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the two teams really need to share something?",
+      "jp": "もし2つのチームが本当に何か共有する必要があったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then the traffic goes through a router, and we can add rules to control it.",
+      "jp": "その時は通信をルーターに通して、ルールで制御するの。"
+     },
+     {
+      "sp": 0,
+      "en": "That makes sense. I'll draw the port map first, like you said.",
+      "jp": "納得。言われたとおり、先にポート割り当て表を書くよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "📖 007｜DNSは電話帳：DNS Is the Phone Book",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, I can ping the server by its IP address, but the name doesn't work. What's going on?",
+      "jp": "アナ、IPアドレスでならサーバーにpingが通るのに、名前だとだめなの。どうなってる？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "That smells like DNS. DNS turns names into IP addresses, like a phone book.",
+      "jp": "DNSの匂いがするわね。DNSは名前をIPアドレスに変えるの。電話帳みたいに。"
+     },
+     {
+      "sp": 0,
+      "en": "So my laptop asks a DNS server, 'What's the address for this name?'",
+      "jp": "じゃあパソコンがDNSサーバーに『この名前のアドレスは？』と聞くんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Try this command: nslookup, then the name.",
+      "jp": "そう。このコマンドを試して。nslookup、そのあとに名前。",
+      "note": "用語: nslookup = 名前からIPアドレスを調べるコマンド"
+     },
+     {
+      "sp": 0,
+      "en": "It says, 'Server failed.' So the DNS server isn't answering.",
+      "jp": "『Server failed』って出た。つまりDNSサーバーが答えてない。"
+     },
+     {
+      "sp": 1,
+      "en": "Check which DNS server the laptop is using. Is it the right one?",
+      "jp": "ノートパソコンがどのDNSサーバーを使っているか確認して。正しいもの？"
+     },
+     {
+      "sp": 0,
+      "en": "It's pointing to an old address from the previous office.",
+      "jp": "前のオフィスの古いアドレスを指してた。"
+     },
+     {
+      "sp": 1,
+      "en": "There's your answer. Change it, and flush the cache so it forgets the old record.",
+      "jp": "それが答えね。直して、キャッシュも消して、古い記録を忘れさせて。"
+     },
+     {
+      "sp": 0,
+      "en": "It works! Thanks, Ana. I'll write 'always check DNS' on my wall.",
+      "jp": "つながった！ありがとう、アナ。『まずDNSを疑え』って壁に書いておくよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎫 008｜DHCPの貸し出し：DHCP Hands Out the Addresses",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, new laptops keep getting addresses that start with one-six-nine dot two-five-four. That's weird.",
+      "jp": "アナ、新しいノートパソコンが、169.254で始まるアドレスばかりもらってる。変だよね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's an APIPA address. The laptop gave itself an address because it couldn't find a DHCP server.",
+      "jp": "それはAPIPAアドレス。DHCPサーバーが見つからないから、パソコンが自分で自分に付けたの。"
+     },
+     {
+      "sp": 0,
+      "en": "So DHCP is the thing that hands out addresses automatically?",
+      "jp": "じゃあDHCPが、自動でアドレスを配ってくれるものなんだ？",
+      "note": "用語: DHCP = IPアドレス等を自動で貸し出す仕組み／lease = 貸し出し期間"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. It gives the IP address, the subnet mask, the gateway, and the DNS server. All in one lease.",
+      "jp": "そう。IPアドレス、サブネットマスク、ゲートウェイ、DNSサーバー。全部まとめて貸し出すの。"
+     },
+     {
+      "sp": 0,
+      "en": "Why can't the laptops reach it? Is it down?",
+      "jp": "どうしてパソコンが届かないんだろう。落ちてる？",
+      "note": "元の形: why can't／聞こえ方: ワイ キャン／使う場面:できない理由を聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Check the pool. Maybe all the addresses are already leased.",
+      "jp": "プールを確認して。全部のアドレスがもう貸し出し済みかもしれない。"
+     },
+     {
+      "sp": 0,
+      "en": "You're right. The pool has fifty addresses, and we have sixty devices now.",
+      "jp": "当たり。プールは50個なのに、いま機器が60台ある。"
+     },
+     {
+      "sp": 1,
+      "en": "Make the pool bigger and shorten the lease time. Then old devices free up their addresses faster.",
+      "jp": "プールを広げて、リース時間を短くして。そうすれば古い機器がアドレスを早く手放すわ。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. Every new laptop got a proper address in seconds.",
+      "jp": "完了。新しいパソコンが、数秒でちゃんとしたアドレスをもらえた。"
+     }
+    ]
+   },
+   {
+    "t": "🔍 009｜pingとtraceroute：Ping First, Then Traceroute",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the app is slow for the Tokyo office. Where do I even start?",
+      "jp": "アナ、東京オフィスのアプリが遅いの。何から始めればいい？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Start with ping. Ping the server and look at the time and the packet loss.",
+      "jp": "まずpingよ。サーバーにpingを打って、時間とパケットロスを見て。"
+     },
+     {
+      "sp": 0,
+      "en": "Average time is two hundred milliseconds, and three percent loss. That's bad.",
+      "jp": "平均200ミリ秒で、ロスが3パーセント。悪いね。"
+     },
+     {
+      "sp": 1,
+      "en": "Now run traceroute. It shows every router between you and the server.",
+      "jp": "次にtraceroute。あなたとサーバーの間にあるルーターを、全部表示してくれる。",
+      "note": "用語: traceroute = 経路上のルーターを順に表示するコマンド／hop = 経由するルーター1台"
+     },
+     {
+      "sp": 0,
+      "en": "Hop four jumps from twenty milliseconds to one hundred eighty. Something is slow there.",
+      "jp": "4番目で20ミリ秒から180ミリ秒に跳ね上がってる。そこが遅い。"
+     },
+     {
+      "sp": 1,
+      "en": "That hop belongs to the provider. So the problem isn't in our building.",
+      "jp": "そのホップはプロバイダーのもの。つまり原因はうちの建物の中じゃないわ。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I call them?",
+      "jp": "向こうに電話した方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and send them the traceroute output. Evidence makes the call five times shorter.",
+      "jp": "ええ、tracerouteの結果も送って。証拠があれば、電話が5分の1で済むわ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll save the results with the time. Good habit?",
+      "jp": "結果を時刻つきで保存しておくね。いい習慣かな？"
+     },
+     {
+      "sp": 1,
+      "en": "The best one. In this job, a good note is worth more than a fast guess.",
+      "jp": "最高の習慣よ。この仕事では、いいメモは早い勘より価値があるの。"
+     }
+    ]
+   },
+   {
+    "t": "🛡️ 010｜ファイアウォールのルール：Writing a Firewall Rule",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, a vendor needs access to our test server on port four-four-three. Can I just open it?",
+      "jp": "アナ、取引先がテストサーバーのポート443にアクセスしたいんだって。開けちゃっていい？"
+     },
+     {
+      "sp": 1,
+      "en": "Not so fast. A firewall rule needs four things: source, destination, port, and a reason.",
+      "jp": "ちょっと待って。ファイアウォールのルールには4つ必要よ。送信元、宛先、ポート、そして理由。"
+     },
+     {
+      "sp": 0,
+      "en": "Source is the vendor's address, destination is the test server, port four-four-three, TCP.",
+      "jp": "送信元は取引先のアドレス、宛先はテストサーバー、ポート443、TCP。"
+     },
+     {
+      "sp": 1,
+      "en": "And the reason?",
+      "jp": "理由は？"
+     },
+     {
+      "sp": 0,
+      "en": "Um, the vendor is testing our new API. It's for two weeks.",
+      "jp": "えっと、取引先が新しいAPIをテストするから。期間は2週間。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Write the end date in the comment, so nobody forgets to close it.",
+      "jp": "いいわね。終了日をコメントに書いて。閉じ忘れを防ぐためよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do I put the rule at the top or the bottom of the list?",
+      "jp": "ルールはリストの上と下、どっちに置く？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Firewalls read from the top, and the first match wins. So a specific allow goes above the general deny.",
+      "jp": "ファイアウォールは上から読んで、最初に合ったものが勝つ。だから具体的な許可は、全体の拒否より上に置くの。",
+      "note": "用語: first match = 最初に合ったルールが適用される（上から順に評価）"
+     },
+     {
+      "sp": 0,
+      "en": "I understand. And the last rule should deny everything else.",
+      "jp": "分かった。最後のルールは、それ以外を全部拒否だね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Allow what you need, deny the rest. That's the whole philosophy.",
+      "jp": "その通り。必要なものを許可して、残りは拒否。それが基本の考え方よ。"
+     }
+    ]
+   }
+  ]
+ }
+]
