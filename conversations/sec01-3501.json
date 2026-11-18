@@ -1,0 +1,632 @@
+[
+ {
+  "id": "sec01",
+  "ic": "🛡️",
+  "n": "セキュリティ講義1・攻撃者の考え方と脅威モデル（講義1〜10）",
+  "hint": "Ten lecture-style conversations for the white-hat path: permission and law, who attacks and why, threat modeling with STRIDE, the stages of an attack, attack surface, vulnerability families, social engineering, password attacks, network threats and threat modeling a password vault",
+  "level": 4,
+  "keywords": [
+   "security",
+   "threat model",
+   "white hat"
+  ],
+  "d": [
+   {
+    "t": "⚖️ 301｜講義1：許可がすべての出発点：Lecture 1: Permission Comes First",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Welcome to the security track. Before any technique, I want you to learn the most important rule of this course: permission.",
+      "jp": "セキュリティの講座へようこそ。どんな技術よりも先に、この講座でいちばん大事な決まりを覚えてください。許可です。"
+     },
+     {
+      "sp": 1,
+      "en": "What do you mean by permission? If I only test my own ideas, is that a problem?",
+      "jp": "許可とは何を指しますか。自分のアイデアを試すだけなら、問題ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "What separates a security professional from a criminal is not the skill. It's written authorization from the owner of the system.",
+      "jp": "セキュリティの専門家と犯罪者を分けるのは、技術ではありません。システムの所有者からの、書面による許可です。",
+      "note": "用語: authorization = 所有者からの許可／rules of engagement = 診断の範囲・方法・連絡先を決めた取り決め"
+     },
+     {
+      "sp": 1,
+      "en": "So even a harmless test on a company's website is illegal without a permission?",
+      "jp": "じゃあ会社のウェブサイトへの無害なテストでも、許可なしなら違法ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "In most countries, yes. Access without authorization can be a crime, even if you cause no damage and you mean well.",
+      "jp": "ほとんどの国で、はい。許可のないアクセスは、被害を出さず、善意であっても、犯罪になりえます。"
+     },
+     {
+      "sp": 1,
+      "en": "Then how do professionals test safely?",
+      "jp": "じゃあ専門家は、どうやって安全に試すんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "With a contract that defines the scope: which systems, which methods, which dates, and who to call if something breaks. We call it rules of engagement.",
+      "jp": "対象範囲を定めた契約でです。どのシステム、どの方法、どの日時、何かが壊れたら誰に連絡するか。それを交戦規則と呼びます。"
+     },
+     {
+      "sp": 1,
+      "en": "And where can a beginner practice, if not on real systems?",
+      "jp": "じゃあ初心者は、本物のシステムでなければ、どこで練習するんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "In your own lab, on virtual machines you control, and on training sites built for practice. Also, many companies run bug bounty programs that invite testing within clear rules.",
+      "jp": "自分のラボ、自分が管理する仮想マシン、練習用に作られた学習サイトです。それと、明確なルールの中でテストを歓迎する、バグバウンティを運営する会社も多いです。"
+     },
+     {
+      "sp": 1,
+      "en": "Understood. Permission first, scope second, skill third.",
+      "jp": "分かりました。許可が最初、範囲が2番目、技術が3番目。"
+     },
+     {
+      "sp": 0,
+      "en": "Remember that order for your whole career. It protects you, your employer and the people whose data you touch.",
+      "jp": "その順番を、キャリア全体で覚えておいて。あなたと、雇い主と、あなたが触れるデータの持ち主を守ります。"
+     }
+    ]
+   },
+   {
+    "t": "🎯 302｜講義2：誰が、何を狙うのか：Lecture 2: Who Attacks, and What Do They Want?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "To defend something, first ask: who would attack it, and why? Today we study the attackers, not the attacks.",
+      "jp": "守るには、まず問います。誰が、なぜ攻撃するのか。今日は攻撃の手口ではなく、攻撃者を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "I imagine a hacker in a dark room. Is that wrong?",
+      "jp": "暗い部屋の中のハッカーを想像します。間違いですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Mostly. The most common attackers are criminal groups who want money, and they work like businesses. They choose easy targets.",
+      "jp": "ほとんどそうです。最も多い攻撃者は、お金が目的の犯罪グループで、事業のように動きます。簡単な標的を選びます。"
+     },
+     {
+      "sp": 1,
+      "en": "So most attackers are not looking for me specifically?",
+      "jp": "じゃあほとんどの攻撃者は、私個人を狙っているわけじゃない？"
+     },
+     {
+      "sp": 0,
+      "en": "Usually not. They scan for weak targets: old software, weak passwords, open services. If you're harder than the next target, they move on.",
+      "jp": "たいていは違います。弱い標的を探します。古いソフト、弱いパスワード、開いたままのサービス。ほかの標的より手強ければ、彼らは移ります。",
+      "note": "用語: asset = 守る対象（データ・システム）／insider = 内部の関係者"
+     },
+     {
+      "sp": 1,
+      "en": "Are there other kinds of attackers?",
+      "jp": "ほかの種類の攻撃者はいますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes: insiders with legitimate access, activists with a message, competitors who want secrets, and well-funded groups linked to governments, who are patient and skilled.",
+      "jp": "います。正当なアクセス権を持つ内部の人、主張を訴える活動家、秘密を狙う競合、そして政府と関係する潤沢な資金のグループ。後者は辛抱強く、高い技術を持ちます。"
+     },
+     {
+      "sp": 1,
+      "en": "How do I decide which attacker to prepare for?",
+      "jp": "どの攻撃者に備えるか、どう決めますか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "By asking what you protect, and who wants it. A small shop faces criminals who want payment data. A research lab faces someone who wants its ideas.",
+      "jp": "何を守っているか、誰がそれを欲しがるかを問うことです。小さな店は決済データを狙う犯罪者に、研究所はアイデアを狙う人に直面します。"
+     },
+     {
+      "sp": 1,
+      "en": "So the defense depends on the value of the asset and the likely attacker.",
+      "jp": "つまり防御は、守る資産の価値と、ありうる攻撃者によって決まるんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Security is not 'make everything perfect'. It's 'make the likely attacks too expensive'.",
+      "jp": "その通り。セキュリティは『すべてを完璧にする』ことではありません。『ありうる攻撃を、割に合わなくする』ことです。"
+     }
+    ]
+   },
+   {
+    "t": "🗺️ 303｜講義3：脅威モデリング：Lecture 3: Threat Modeling",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we learn the skill that separates thoughtful engineers from the rest: threat modeling. It means thinking about what can go wrong before it does.",
+      "jp": "今日は、考える技術者とそうでない人を分ける技術を学びます。脅威モデリングです。何かがうまくいかなくなる前に、何が起きうるかを考えること。"
+     },
+     {
+      "sp": 1,
+      "en": "Is there a simple method? Where do I start?",
+      "jp": "簡単な方法はありますか。どこから始めますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Ask four questions. What are we building? What can go wrong? What will we do about it? Did we do a good job?",
+      "jp": "4つの質問をします。何を作っているか。何がうまくいかなくなるか。それにどう対処するか。ちゃんとできたか。"
+     },
+     {
+      "sp": 1,
+      "en": "For the second question, 'what can go wrong', is there a checklist?",
+      "jp": "2つ目の『何がうまくいかなくなるか』には、チェックリストがありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, STRIDE. Six types of threats: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege.",
+      "jp": "あります、STRIDEです。6種類の脅威。なりすまし、改ざん、否認、情報漏えい、サービス拒否、権限昇格。",
+      "note": "用語: STRIDE = 脅威の6分類（なりすまし・改ざん・否認・漏えい・拒否・昇格）／trust boundary = 信頼が変わる境界"
+     },
+     {
+      "sp": 1,
+      "en": "Could you give a simple example for each?",
+      "jp": "それぞれ、簡単な例を挙げてもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Spoofing: pretending to be someone else. Tampering: changing data. Repudiation: denying that you did something. Disclosure: secrets leaking. Denial: making the service unavailable. Elevation: gaining powers you shouldn't have.",
+      "jp": "なりすまし、他人のふり。改ざん、データを変える。否認、やったことをやっていないと言う。漏えい、秘密が漏れる。拒否、サービスを使えなくする。昇格、持つべきでない権限を得る。"
+     },
+     {
+      "sp": 1,
+      "en": "Those match what we learned about confidentiality, integrity and availability.",
+      "jp": "機密性、完全性、可用性で学んだことと対応していますね。"
+     },
+     {
+      "sp": 0,
+      "en": "Good connection. Draw the system as a diagram, mark where data crosses a boundary, and ask the six questions at each boundary.",
+      "jp": "いい気づきです。システムを図に描いて、データが境界をまたぐ所に印をつけ、各境界で6つの問いをします。"
+     },
+     {
+      "sp": 1,
+      "en": "Why the boundaries?",
+      "jp": "なぜ境界なんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because attackers enter where trust changes: from the internet to your server, from a user to an administrator. Most vulnerabilities live at a boundary.",
+      "jp": "攻撃者は、信頼が変わる所から入るからです。インターネットからサーバーへ、利用者から管理者へ。ほとんどの脆弱性は、境界にあります。"
+     }
+    ]
+   },
+   {
+    "t": "⛓️ 304｜講義4：攻撃の流れを知る：Lecture 4: The Anatomy of an Attack",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Attackers rarely win in one move. Today we study the stages of an attack, so defenders know where to stop it.",
+      "jp": "攻撃者は、ほとんど1手では勝てません。今日は、攻撃の段階を学びます。守る側が、どこで止めるかを知るために。"
+     },
+     {
+      "sp": 1,
+      "en": "What are the stages?",
+      "jp": "段階にはどんなものがありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "A common model has several: reconnaissance, getting initial access, gaining more privileges, moving to other systems, and finally reaching the goal, like stealing data.",
+      "jp": "よくあるモデルでは、いくつかあります。下調べ、最初の侵入、権限の拡大、ほかのシステムへの移動、そして最後に目的、たとえばデータを盗むこと。"
+     },
+     {
+      "sp": 1,
+      "en": "So the attacker starts by collecting information?",
+      "jp": "じゃあ攻撃者は、まず情報を集めるんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Public information: a company's websites, staff names on social networks, job advertisements that reveal which technology they use.",
+      "jp": "はい。公開情報です。会社のウェブサイト、SNSの社員の名前、使っている技術が分かる求人広告。"
+     },
+     {
+      "sp": 1,
+      "en": "Why is it important for defenders to know the stages?",
+      "jp": "守る側がその段階を知るのは、なぜ重要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because the attacker must succeed at every stage, and you only have to stop one. Each stage gives you a chance to detect and block.",
+      "jp": "攻撃者はすべての段階で成功しなければいけませんが、守る側は1つ止めればいいからです。各段階が、検知して防ぐ機会になります。",
+      "note": "用語: reconnaissance = 下調べ（情報収集）／assume breach = 侵入されることを前提に設計する考え方"
+     },
+     {
+      "sp": 1,
+      "en": "Where is the best place to stop them?",
+      "jp": "どこで止めるのがいちばんいいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Early, if possible: reduce what's public, fix the entry points, and detect unusual behavior. But assume that sometimes they get in, and prepare to limit the damage.",
+      "jp": "できれば早い段階で。公開情報を減らし、入口を直し、普段と違う動きを検知する。でも、ときには侵入されると考えて、被害を限る準備もします。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "That's the idea of 'assume breach'?",
+      "jp": "それが『侵害を前提にする』という考えですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Defenders who assume breach ask, 'If this one machine is taken over, what can the attacker reach next?' And they design so the answer is: very little.",
+      "jp": "その通り。侵害を前提にする守る側は、こう問います。『このマシン1台を乗っ取られたら、次に何に届くか』。そして答えが『ほとんど何もない』になるよう設計します。"
+     }
+    ]
+   },
+   {
+    "t": "🚪 305｜講義5：攻撃面を減らす：Lecture 5: Reducing the Attack Surface",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Every service, every open port, every user account is a door. The sum of all doors is the attack surface. Today we learn to count and close them.",
+      "jp": "すべてのサービス、すべての開いたポート、すべてのアカウントが、ドアです。ドアの総数が攻撃面。今日は、それを数えて閉じることを学びます。",
+      "note": "用語: attack surface = 攻撃を受けうる入口の総量／defense in depth = 多層防御"
+     },
+     {
+      "sp": 1,
+      "en": "How do we count the doors?",
+      "jp": "ドアをどう数えるんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Make an inventory: which servers, which services listen on which ports, which accounts exist, which software versions are installed.",
+      "jp": "一覧を作ります。どのサーバー、どのサービスがどのポートで待ち受けるか、どのアカウントがあるか、どのソフトの版が入っているか。"
+     },
+     {
+      "sp": 1,
+      "en": "We did something like that with the 'ss' command on Linux.",
+      "jp": "Linuxの『ss』コマンドで、似たことをしましたね。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. And for each item, ask: do we really need this? If not, turn it off. Unused things are not harmless, because nobody is watching them.",
+      "jp": "そうです。そして各項目に問います。本当に必要か。必要なければ止めます。使われていないものは無害ではありません。誰も見ていないからです。"
+     },
+     {
+      "sp": 1,
+      "en": "What about the things we do need?",
+      "jp": "必要なものは、どうしますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Restrict them. Allow access only from the networks that need it, use the least privilege, and keep the software updated.",
+      "jp": "制限します。必要なネットワークからのアクセスだけを許可して、最小権限にして、ソフトを更新し続ける。"
+     },
+     {
+      "sp": 1,
+      "en": "Is the internet-facing part more dangerous than the internal part?",
+      "jp": "インターネットに面した部分は、内部より危険ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It gets attacked much more, so it deserves more attention. But internal systems matter too, because once an attacker is inside, internal weaknesses decide how far they go.",
+      "jp": "ずっと多く攻撃されるので、より注意が必要です。でも内部も大事です。いったん侵入されると、内部の弱点が、どこまで行かれるかを決めるからです。"
+     },
+     {
+      "sp": 1,
+      "en": "So the goal is: fewer doors, stronger doors, and a camera at each one.",
+      "jp": "つまり目標は、ドアを減らして、ドアを強くして、それぞれに監視カメラを付けること。"
+     },
+     {
+      "sp": 0,
+      "en": "A perfect summary. We call it defense in depth: several independent layers, so one failure is not a disaster.",
+      "jp": "完璧な要約です。それを多層防御と呼びます。独立した何層もの守りで、1つの失敗が大惨事にならないようにする。"
+     }
+    ]
+   },
+   {
+    "t": "🐛 306｜講義6：脆弱性の種類（原理）：Lecture 6: Kinds of Vulnerabilities",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A vulnerability is a weakness that someone could misuse. Today we study the main families, to understand the principle behind each. We won't practice attacking anything.",
+      "jp": "脆弱性は、誰かに悪用されうる弱点です。今日は主な種類を、それぞれの原理を理解するために学びます。何かを攻撃する練習はしません。"
+     },
+     {
+      "sp": 1,
+      "en": "Which family is the most common?",
+      "jp": "どの種類がいちばん多いですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Mistakes in handling input. A program receives data from outside, and trusts it too much. Injection is the classic example.",
+      "jp": "入力の扱いの間違いです。プログラムが外部からのデータを受け取って、信用しすぎる。インジェクションが典型です。"
+     },
+     {
+      "sp": 1,
+      "en": "What does 'injection' mean in simple words?",
+      "jp": "インジェクションとは、やさしく言うと何ですか。",
+      "note": "用語: injection = データがコマンドとして解釈される弱点／broken access control = 権限確認の抜け"
+     },
+     {
+      "sp": 0,
+      "en": "The program mixes user data into a command, and the data is interpreted as part of the command. The defense is to keep data and commands strictly separate, using safe methods such as parameterized queries.",
+      "jp": "プログラムが、利用者のデータをコマンドに混ぜて、そのデータがコマンドの一部として解釈される。防御は、データとコマンドをきっちり分けること。パラメータ化されたクエリのような、安全な方法を使います。"
+     },
+     {
+      "sp": 1,
+      "en": "What's another family?",
+      "jp": "もう1つの種類は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Broken access control: a user can reach things they shouldn't, because the program forgets to check who is asking. For example, changing a number in the address to see another customer's record.",
+      "jp": "アクセス制御の不備です。プログラムが、誰が求めているかの確認を忘れて、利用者が見るべきでないものに届く。たとえばアドレスの数字を変えると、別のお客さんの記録が見える。"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds almost too simple.",
+      "jp": "それは簡単すぎるように聞こえます。"
+     },
+     {
+      "sp": 0,
+      "en": "It is simple, and that's why it's so common. The defense: check permissions on the server for every request, every time.",
+      "jp": "簡単だから、こんなに多いんです。防御は、リクエストのたびに、サーバー側で権限を確認すること。"
+     },
+     {
+      "sp": 1,
+      "en": "Are there others?",
+      "jp": "ほかにもありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Many. Weak authentication, misconfiguration, outdated components, leaking secrets in code, and poor logging. A good list to study is the OWASP Top Ten. Learn the defense for each item, not only the name.",
+      "jp": "たくさんあります。弱い認証、設定の不備、古い部品、コードに漏れた秘密、貧弱なログ。学ぶのに良い一覧は、OWASPトップ10です。名前だけでなく、各項目の防御を学んでください。"
+     }
+    ]
+   },
+   {
+    "t": "🎭 307｜講義7：人を狙う攻撃：Lecture 7: Attacks on People",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The strongest firewall cannot stop an employee who gives a password to a stranger. Today we study social engineering.",
+      "jp": "最強のファイアウォールでも、見知らぬ人にパスワードを教える社員は止められません。今日はソーシャルエンジニアリングを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What is social engineering, exactly?",
+      "jp": "ソーシャルエンジニアリングとは、具体的に何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Manipulating people into giving access or information. Phishing emails are the most common form. The attacker pretends to be someone trusted.",
+      "jp": "人を操って、アクセスや情報を渡させること。フィッシングのメールが最も多い形です。攻撃者は、信頼される人のふりをします。",
+      "note": "用語: social engineering = 人を操って情報やアクセスを得る手口／phishing = 偽のメッセージで騙す手口"
+     },
+     {
+      "sp": 1,
+      "en": "What tricks do the messages use?",
+      "jp": "メッセージはどんな手を使いますか。"
+     },
+     {
+      "sp": 0,
+      "en": "They use feelings: urgency, fear, curiosity, and authority. 'Your account will be closed in one hour.' 'The CEO needs this payment immediately.'",
+      "jp": "感情を使います。緊急、恐れ、好奇心、権威。『1時間後にアカウントが閉鎖されます』『社長がいますぐこの支払いを必要としています』。"
+     },
+     {
+      "sp": 1,
+      "en": "So the warning sign is the pressure to act quickly.",
+      "jp": "つまり警告のサインは、急がせる圧力ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. When you feel pressure, stop. Check through another channel, like a phone call to a known number, not the number in the message.",
+      "jp": "その通り。圧力を感じたら、止まる。別の経路で確認する。メッセージ内の番号ではなく、知っている番号に電話するなど。"
+     },
+     {
+      "sp": 1,
+      "en": "How do companies defend against it?",
+      "jp": "会社はどう防ぎますか。"
+     },
+     {
+      "sp": 0,
+      "en": "With training, with simple ways to report suspicious messages, and with technical controls like multi-factor authentication, so a stolen password alone is not enough.",
+      "jp": "研修、怪しいメッセージを簡単に報告できる仕組み、そして多要素認証のような技術的な対策で。盗まれたパスワードだけでは足りなくします。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it a failure when an employee clicks a bad link?",
+      "jp": "社員が悪いリンクを押したら、失敗ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No. A culture where people hide mistakes is the real failure. We want fast reporting, with no blame. Speed decides how much damage happens.",
+      "jp": "いいえ。人が間違いを隠す文化こそ、本当の失敗です。責めずに、早く報告してもらいたい。被害の大きさを決めるのは、速さです。"
+     }
+    ]
+   },
+   {
+    "t": "🔑 308｜講義8：パスワードへの攻撃と対策：Lecture 8: Attacks on Passwords, and Defenses",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Passwords are the most attacked part of any system. Today we learn how they fail, and how to make them fail less.",
+      "jp": "パスワードは、どんなシステムでも最も攻撃される部分です。今日は、どう破られるか、そして破られにくくする方法を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "I know the classic one: guessing many passwords.",
+      "jp": "よくあるのは知っています。たくさんのパスワードを推測することですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Right, brute force. But there's a smarter and much more common one: credential stuffing. Attackers take lists of passwords leaked from one site, and try them on other sites.",
+      "jp": "そうです、総当たりです。でも、もっと賢くて、ずっと多いものがあります。クレデンシャルスタッフィング。攻撃者は、あるサイトから漏れたパスワードの一覧を、ほかのサイトで試します。",
+      "note": "用語: credential stuffing = 漏れた認証情報を別のサイトで試す攻撃／passkey = パスワードの代わりになる鍵ベースの認証"
+     },
+     {
+      "sp": 1,
+      "en": "Because many people use the same password everywhere.",
+      "jp": "多くの人が、どこでも同じパスワードを使うからですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. That's why the best advice is: a unique password for every site. A password manager makes that possible.",
+      "jp": "その通り。だから最良の助言は、サイトごとに違うパスワードです。パスワード管理アプリがそれを可能にします。"
+     },
+     {
+      "sp": 1,
+      "en": "So a password manager is a security tool, not only a convenience.",
+      "jp": "じゃあパスワード管理アプリは、便利なだけじゃなくて、セキュリティの道具なんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, as long as its master password is long and unique, and its vault is encrypted well, as we learned in the cryptography lectures.",
+      "jp": "はい。マスターパスワードが長くて唯一のものであり、保管庫が、暗号の講義で学んだようにきちんと暗号化されている限りは。"
+     },
+     {
+      "sp": 1,
+      "en": "What can the website side do?",
+      "jp": "サイト側には、何ができますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Hash passwords with Argon2 and a salt, limit login attempts, detect logins from strange places, and offer multi-factor authentication.",
+      "jp": "Argon2とソルトでハッシュする、ログインの試行回数を制限する、変な場所からのログインを検知する、多要素認証を提供する。"
+     },
+     {
+      "sp": 1,
+      "en": "And which second factor is best?",
+      "jp": "2つ目の要素は、どれがいちばんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "A hardware security key or a passkey is strongest, because it can't be tricked by a fake site. Codes by text message are better than nothing, but they are the weakest of the options.",
+      "jp": "ハードウェアのセキュリティキーか、パスキーが最強です。偽サイトに騙されないからです。SMSのコードは、ないよりはいいけれど、選択肢の中では最も弱いです。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 309｜講義9：ネットワークへの脅威（原理）：Lecture 9: Threats on the Network",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You already know networks as an engineer. Today we look at them as a defender should: what weaknesses does the network layer have by design?",
+      "jp": "あなたはエンジニアとして、すでにネットワークを知っています。今日は、守る側の目で見ます。ネットワーク層には、設計上どんな弱点がありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Many protocols were designed in a friendlier time, when security was not a concern.",
+      "jp": "多くのプロトコルは、セキュリティが問題にならなかった、穏やかな時代に作られましたね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Early protocols often have no authentication and no encryption. Anyone who can see the traffic can read it.",
+      "jp": "その通り。初期のプロトコルは、認証も暗号化もないことが多い。通信が見える人は、誰でも読めます。"
+     },
+     {
+      "sp": 1,
+      "en": "Like the old web, before HTTPS?",
+      "jp": "HTTPSができる前の、昔のウェブのように？",
+      "note": "用語: spoofing = 他人になりすますこと／segment = ネットワークを区切って分ける"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. That's why we encrypt everything now. Other examples: some local network protocols simply trust whoever answers first, which allows spoofing.",
+      "jp": "はい。だから今は全部を暗号化します。ほかの例として、一部のローカルネットワークのプロトコルは、最初に答えた者を単純に信じるので、なりすましを許します。"
+     },
+     {
+      "sp": 1,
+      "en": "What does a defender do about weak local protocols?",
+      "jp": "弱いローカルのプロトコルに、守る側は何をしますか。",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Use switch features that check addresses, disable old protocols you don't need, separate networks with VLANs, and monitor for strange behavior.",
+      "jp": "アドレスを確認するスイッチの機能を使う、不要な古いプロトコルを止める、VLANでネットワークを分ける、変な動きを監視する。"
+     },
+     {
+      "sp": 1,
+      "en": "And what about denial of service? I saw it in the traffic flood incident.",
+      "jp": "サービス拒否は？通信が急増した障害事例で見ました。"
+     },
+     {
+      "sp": 0,
+      "en": "That attack tries to overload a service. The defense is capacity, filtering at the edge, a CDN, and a prepared plan. You can't prevent every attack, but you can survive it.",
+      "jp": "それはサービスを過負荷にする攻撃です。防御は、余力、入口でのフィルタリング、CDN、そして準備した計画です。すべての攻撃は防げませんが、耐えることはできます。"
+     },
+     {
+      "sp": 1,
+      "en": "So, again, the principles are: encrypt, authenticate, segment and monitor.",
+      "jp": "つまり、ここでも原則は、暗号化、認証、分離、監視ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "A good summary. If you remember only four words from this lecture, remember those.",
+      "jp": "いい要約です。この講義で4つの言葉だけ覚えるなら、それを覚えてください。"
+     }
+    ]
+   },
+   {
+    "t": "🔐 310｜講義10：暗号アプリの脅威モデル：Lecture 10: Threat Modeling a Password Vault",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's apply everything to one real example: a password vault app. It stores your most important secrets, so it must be designed carefully. First question: what are we protecting?",
+      "jp": "全部を1つの実例に当てはめましょう。パスワード保管庫のアプリです。最も大事な秘密を保管するので、慎重に設計する必要があります。最初の質問。何を守っていますか。"
+     },
+     {
+      "sp": 1,
+      "en": "The passwords inside the vault, and also the master password and the encryption key made from it.",
+      "jp": "保管庫の中のパスワードと、マスターパスワード、そしてそこから作る暗号の鍵です。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Second question: who might attack it, and how?",
+      "jp": "いいですね。2つ目の質問。誰が、どう攻撃するでしょうか。"
+     },
+     {
+      "sp": 1,
+      "en": "Someone who steals the device, someone who steals a backup file, malware on the computer, a fake copy of the app, or someone who guesses the master password.",
+      "jp": "端末を盗む人、バックアップのファイルを盗む人、パソコンのマルウェア、アプリの偽物、マスターパスワードを推測する人。"
+     },
+     {
+      "sp": 0,
+      "en": "Now the defenses. How should the vault protect a stolen backup file?",
+      "jp": "次に防御です。盗まれたバックアップのファイルを、保管庫はどう守りますか。"
+     },
+     {
+      "sp": 1,
+      "en": "The file must be encrypted with a strong key, and the key must come from the master password through a slow key derivation function, such as Argon2. Then guessing is very expensive.",
+      "jp": "ファイルを強い鍵で暗号化して、その鍵は、Argon2のような遅い鍵導出関数でマスターパスワードから作る。そうすれば、推測はとても高くつきます。"
+     },
+     {
+      "sp": 0,
+      "en": "Correct. And the master password itself? How should it be chosen, and where is it stored?",
+      "jp": "正解です。ではマスターパスワード自体は？どう選んで、どこに保存しますか。"
+     },
+     {
+      "sp": 1,
+      "en": "It should be long, like a passphrase of several random words, and never stored anywhere in plain form. Not even the app's developer should be able to read it.",
+      "jp": "パスフレーズのように、ランダムな単語を並べた長いもので、平文ではどこにも保存しない。アプリの開発者でさえ読めないようにします。",
+      "note": "用語: recovery key = マスターパスワードをなくした時のための復旧用の鍵／restore test = 復元できるか試すこと"
+     },
+     {
+      "sp": 0,
+      "en": "Now think about the user's own mistakes. What happens if the user loses the master password?",
+      "jp": "次に、利用者自身の失敗を考えましょう。利用者がマスターパスワードをなくしたら、どうなりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "The data is gone, unless there is a recovery design. I'd keep a printed recovery key in a secure place, and test the restore before putting real secrets in.",
+      "jp": "復旧の設計がなければ、データは失われます。印刷した復旧用の鍵を安全な場所に保管して、本物の秘密を入れる前に、復元をテストします。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Test the backup and the restore first, then trust the system. The same method works for any system you'll ever protect: ask what's valuable, who wants it, how they'd get it, and what stops them. That's the heart of white-hat thinking.",
+      "jp": "その通り。先にバックアップと復元をテストして、それからシステムを信頼する。同じ方法は、これから守るどんなシステムにも使えます。何に価値があって、誰がそれを欲しがり、どうやって手に入れ、何がそれを止めるか。それがホワイトハットの考え方の核心です。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     }
+    ]
+   }
+  ]
+ }
+]
