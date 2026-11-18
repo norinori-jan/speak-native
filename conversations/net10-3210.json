@@ -1,0 +1,545 @@
+[
+ {
+  "id": "net10",
+  "ic": "✍️",
+  "n": "ネットワーク英語10・技術英語の読み書き",
+  "hint": "Ana coaches Ken on technical English: direct emails, good tickets, reading logs and release notes, design notes, chat etiquette, SLAs, change requests, asking for repetition and writing runbooks",
+  "level": 4,
+  "keywords": [
+   "writing",
+   "reading",
+   "documentation"
+  ],
+  "d": [
+   {
+    "t": "✉️ 086｜丁寧すぎる英語のメール：Too Polite to Read",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I read your email to the vendor. It's very polite, but I'm not sure what you actually want.",
+      "jp": "ケン、ベンダーへのメールを読んだわ。とても丁寧だけど、結局何がほしいのか分からなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "Really? I wrote, 'I would be very grateful if you could kindly consider checking the possibility of a replacement.'",
+      "jp": "本当？『交換の可能性を確認することを、ご検討いただけますと幸いです』と書いたんだけど。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the problem. English emails should be direct. Say what you need and by when.",
+      "jp": "それが問題よ。英語のメールは、はっきり書くの。何が必要で、いつまでにか。"
+     },
+     {
+      "sp": 1,
+      "en": "So, 'Please send a replacement unit by Friday.' Isn't that rude?",
+      "jp": "じゃあ『金曜までに交換品を送ってください』と？失礼じゃない？"
+     },
+     {
+      "sp": 0,
+      "en": "No. 'Please' is enough. You can add 'Thank you', but too many soft words hide your request.",
+      "jp": "失礼じゃないわ。『Please』で十分。『Thank you』は添えていいけど、柔らかい言葉が多すぎると、依頼が隠れてしまう。",
+      "note": "表現: Please send ... by Friday. = 金曜までに〜を送ってください／丁寧で直接的な依頼"
+     },
+     {
+      "sp": 1,
+      "en": "What about the subject line? I wrote 'About the equipment'.",
+      "jp": "件名はどう？『機器について』と書いたけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Too vague. Try, 'Request: replacement of faulty switch, serial number 4412, needed by Friday'.",
+      "jp": "あいまいすぎる。『依頼：故障したスイッチの交換、シリアル番号4412、金曜までに必要』にしてみて。"
+     },
+     {
+      "sp": 1,
+      "en": "I see. Someone should understand the whole email from the subject alone.",
+      "jp": "なるほど。件名だけで、メール全体が分かるようにするんだね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. And put the key point in the first line, the details after that. Busy people stop reading after three lines.",
+      "jp": "その通り。要点は1行目に、詳細はその後に。忙しい人は、3行で読むのをやめるから。"
+     }
+    ]
+   },
+   {
+    "t": "🎫 087｜良いチケットの書き方：Writing a Ticket Others Can Use",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the engineer at the vendor says my ticket is unclear and asks for more information. It's embarrassing.",
+      "jp": "アナ、ベンダーのエンジニアが、私のチケットが分かりにくいから、情報を足してほしいって。恥ずかしい。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me read it. Title: 'Network is slow'. Description: 'Please check.' Ken, that tells me nothing.",
+      "jp": "読ませて。題名『ネットワークが遅い』。説明『確認してください』。ケン、それでは何も分からないわ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "What should a good ticket say?",
+      "jp": "良いチケットには何を書けばいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Five things. What happens, where, since when, how to reproduce it, and what you already tried.",
+      "jp": "5つ。何が起きているか、どこで、いつから、再現の手順、すでに試したこと。",
+      "note": "表現: since nine a.m. = 午前9時から（今も続いている）／since は継続の起点"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. 'Users in building B cannot reach the file server since nine a.m. today. Ping fails. We restarted the switch, with no change.'",
+      "jp": "分かった。『B棟の利用者が、今朝9時からファイルサーバーに届きません。pingが失敗します。スイッチを再起動しましたが、変化なし』。"
+     },
+     {
+      "sp": 1,
+      "en": "Much better. Add the impact: how many users, and how serious.",
+      "jp": "ずっといいわ。影響も足して。何人で、どれくらい深刻か。"
+     },
+     {
+      "sp": 0,
+      "en": "'Thirty users. They cannot work.' And attach the logs and a screenshot.",
+      "jp": "『30人。業務ができません』。それとログとスクリーンショットを添付する。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. One more thing: one problem per ticket. If you mix three problems, none of them gets solved.",
+      "jp": "完璧。もう1つ。チケットは1問題につき1枚。3つ混ぜると、どれも解決されないの。"
+     },
+     {
+      "sp": 0,
+      "en": "Understood. A good ticket saves a day of back-and-forth.",
+      "jp": "分かった。良いチケットは、やり取り1日分を節約してくれるね。"
+     }
+    ]
+   },
+   {
+    "t": "📜 088｜ログの英語を読む：Reading an English Log",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the router's log says, 'Neighbor down: dead timer expired'. Do you know what that means?",
+      "jp": "ケン、ルーターのログに『Neighbor down: dead timer expired』とあるわ。意味は分かる？"
+     },
+     {
+      "sp": 1,
+      "en": "Neighbor down means the connection to the other router was lost. And dead timer expired means we didn't hear from it for too long.",
+      "jp": "Neighbor down は、隣のルーターとの接続が失われたという意味。dead timer expired は、長い間何も聞こえなかったということ。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Now this one: 'Authentication failed for user admin from ten dot one dot one dot fifty.'",
+      "jp": "いいわね。じゃあこれは？『ユーザー admin の認証が、10.1.1.50から失敗しました』。"
+     },
+     {
+      "sp": 1,
+      "en": "Someone tried to log in as admin from that address, and the password was wrong.",
+      "jp": "誰かがそのアドレスからadminでログインしようとして、パスワードが間違っていた。"
+     },
+     {
+      "sp": 0,
+      "en": "How should we read the severity words? Warning, error, critical?",
+      "jp": "重大度の言葉はどう読む？warning、error、critical？"
+     },
+     {
+      "sp": 1,
+      "en": "Warning means look at it later. Error means something failed. Critical means act now.",
+      "jp": "warning は、あとで見る。error は、何かが失敗した。critical は、いますぐ対応。",
+      "note": "用語: warning / error / critical = ログの重大度（注意／失敗／即対応）"
+     },
+     {
+      "sp": 0,
+      "en": "And what if I don't understand a message at all?",
+      "jp": "もしメッセージがまったく分からなかったら？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "Copy the exact message, remove the addresses, and search for it. Most messages are in the vendor's documentation.",
+      "jp": "メッセージをそのままコピーして、アドレスを消して、検索して。ほとんどはベンダーの資料に載ってるわ。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it okay to use a translation tool?",
+      "jp": "翻訳ツールを使っていい？"
+     },
+     {
+      "sp": 1,
+      "en": "For understanding, yes. But when you write your own report, use the original English words. They're the words everybody searches for.",
+      "jp": "理解のためならいいわ。でも自分の報告を書く時は、元の英語の言葉を使って。みんながそれで検索するから。"
+     }
+    ]
+   },
+   {
+    "t": "📘 089｜ベンダー資料を読む：Reading the Release Notes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the vendor sent release notes for the new firmware. Forty pages. Where do I start?",
+      "jp": "アナ、ベンダーが新しいファームウェアのリリースノートを送ってきた。40ページ。どこから読めばいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't read from the top. First, search for 'known issues' and 'upgrade path'.",
+      "jp": "頭から読まないの。まず『known issues』と『upgrade path』を探して。"
+     },
+     {
+      "sp": 0,
+      "en": "Known issues, okay. It says, 'Devices with model X may reboot when jumbo frames are enabled.'",
+      "jp": "known issues、あった。『モデルXの機器は、ジャンボフレームが有効だと再起動する場合があります』。",
+      "note": "用語: known issues = 既知の不具合／upgrade path = 更新できる順番の道筋"
+     },
+     {
+      "sp": 1,
+      "en": "Do we use model X, and jumbo frames?",
+      "jp": "うちはモデルXで、ジャンボフレームを使ってる？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, the core switches. So this version is risky for us.",
+      "jp": "使ってます、コアスイッチで。つまりこの版は、うちにはリスクがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Good catch. Now look at the upgrade path. Can we go directly from our version?",
+      "jp": "いい発見ね。次にアップグレードパスを見て。いまの版から直接上げられる？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 0,
+      "en": "It says, 'Upgrade to eight point two first, and then to nine.' Two steps.",
+      "jp": "『まず8.2に上げて、それから9に上げてください』。2段階だ。"
+     },
+     {
+      "sp": 1,
+      "en": "So the plan needs two maintenance windows. Write it down, and ask the vendor if the known issue has a fix.",
+      "jp": "じゃあ計画にはメンテナンス時間が2回必要ね。書き留めて、既知の問題に修正があるか、ベンダーに聞いて。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll write: 'Is the jumbo frame issue fixed in nine point one?' That's a clear question.",
+      "jp": "『ジャンボフレームの問題は9.1で修正されていますか』と書きます。はっきりした質問だね。"
+     }
+    ]
+   },
+   {
+    "t": "🗒️ 090｜設計メモを書く：Writing a Design Note",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the director wants a one-page design note for the new branch network. Have you started?",
+      "jp": "ケン、部長が新しい支店ネットワークの設計メモを1ページで、と言ってるの。もう始めた？"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. I don't know how to organize it in English. Where do I begin?",
+      "jp": "まだ。英語でどう構成すればいいか分からない。どこから始める？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "Use a simple structure: Purpose, Design, Risks, and Next steps. Four headings.",
+      "jp": "簡単な構成を使って。目的、設計、リスク、次の手順。見出しは4つ。"
+     },
+     {
+      "sp": 1,
+      "en": "For the purpose, I'd write, 'Connect the new branch to headquarters with a secure and redundant link.'",
+      "jp": "目的は、『新しい支店を、安全で冗長なリンクで本社につなぐ』と書きます。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. In the design part, use short sentences and a diagram. Don't explain everything.",
+      "jp": "いいわね。設計の部分は、短い文と図を使って。全部を説明しなくていい。"
+     },
+     {
+      "sp": 1,
+      "en": "What about the risks? Is it okay to write what could go wrong?",
+      "jp": "リスクは？うまくいかない可能性を書いていい？"
+     },
+     {
+      "sp": 0,
+      "en": "It's required. A design note without risks is not trustworthy. Add how you will reduce each risk.",
+      "jp": "必須よ。リスクのない設計メモは、信用されないの。それぞれをどう減らすかも書いて。"
+     },
+     {
+      "sp": 1,
+      "en": "Like, 'Risk: the provider line may fail. Mitigation: a second line from a different provider.'",
+      "jp": "たとえば『リスク：プロバイダーの回線が落ちる可能性。対策：別のプロバイダーの2本目の回線』。",
+      "note": "用語: mitigation = リスクを減らす対策"
+     },
+     {
+      "sp": 0,
+      "en": "That's exactly the format. And end with the decision you need: 'Please approve the design by next Friday.'",
+      "jp": "まさにその形。最後に、必要な決定で締めて。『来週の金曜までに設計の承認をお願いします』。"
+     }
+    ]
+   },
+   {
+    "t": "💬 091｜チャットの書き方：Chat Etiquette at Work",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I noticed you sent me just 'Hi' in the chat yesterday, and then waited for an hour for my reply.",
+      "jp": "ケン、昨日チャットで『Hi』とだけ送って、1時間私の返事を待っていたでしょう。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. I wanted to make sure you were free before I asked.",
+      "jp": "うん。聞く前に、手が空いているか確認したかったんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "It's kind, but it wastes time. Send the whole question in the first message. I'll answer when I can.",
+      "jp": "優しいけど、時間の無駄になるの。最初のメッセージに質問を全部書いて。私は手が空いた時に答えるから。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "So, 'Hi Ana, could you check the firewall rule for the new server? I need it by three p.m.'",
+      "jp": "じゃあ『こんにちはアナ、新しいサーバーのファイアウォールのルールを確認してくれる？午後3時までに必要です』。",
+      "note": "表現: could you check ...? = 〜を確認してもらえますか／チャットでの丁寧な依頼"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. That's a great message. It has the request and the deadline.",
+      "jp": "そう。すばらしいメッセージよ。依頼と期限が入ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "What about urgent things? Should I write in capital letters?",
+      "jp": "緊急の時は？大文字で書く？"
+     },
+     {
+      "sp": 0,
+      "en": "No, capital letters feel like shouting. Write 'Urgent:' at the start, and explain why.",
+      "jp": "いいえ、大文字は怒鳴っているように感じるの。頭に『Urgent:』と書いて、理由を説明して。"
+     },
+     {
+      "sp": 1,
+      "en": "And when someone helps me, I should say thanks in the thread?",
+      "jp": "助けてもらったら、スレッドの中でお礼を言う？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and tell them the result. 'It worked, thank you.' People like to know their help mattered.",
+      "jp": "ええ、結果も伝えて。『うまくいきました、ありがとう』。自分の助けが役に立ったと知りたいものよ。"
+     }
+    ]
+   },
+   {
+    "t": "📑 092｜SLAを読む：Reading the SLA",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the vendor's contract has an SLA section. It says, 'availability of ninety-nine point nine percent'. Is that good?",
+      "jp": "アナ、ベンダーの契約にSLAの項目がある。『可用性99.9%』と書いてあるけど、これはいいの？"
+     },
+     {
+      "sp": 1,
+      "en": "Let's calculate. Ninety-nine point nine percent per month allows about forty-three minutes of downtime.",
+      "jp": "計算してみましょう。月99.9%なら、約43分の停止が許されるの。",
+      "note": "用語: SLA = サービス品質の保証契約／availability = 稼働率"
+     },
+     {
+      "sp": 0,
+      "en": "Forty-three minutes a month. Is that enough for our business?",
+      "jp": "月に43分。うちの業務には十分？"
+     },
+     {
+      "sp": 1,
+      "en": "For the payment system, no. A one-hour outage would cost us a lot. We need ninety-nine point ninety-five.",
+      "jp": "決済システムには足りないわ。1時間の停止は大きな損失になる。99.95%が必要よ。"
+     },
+     {
+      "sp": 0,
+      "en": "What does the contract say if they miss the target?",
+      "jp": "目標に届かなかった時、契約には何と書いてある？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "'Service credits of ten percent of the monthly fee.' That's very small compared with our loss.",
+      "jp": "『月額料金の10%のサービスクレジット』。私たちの損失に比べると、とても小さいわ。"
+     },
+     {
+      "sp": 0,
+      "en": "So the SLA doesn't really protect us. It only gives us a small discount.",
+      "jp": "つまりSLAは、私たちを守ってくれていないんだ。小さな割引になるだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Always read what 'availability' includes. Many contracts exclude planned maintenance.",
+      "jp": "そう。『可用性』に何が含まれるか、必ず読んで。多くの契約は、計画メンテナンスを除くのよ。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll ask them to clarify that, and to add a response time for critical issues: 'within thirty minutes'.",
+      "jp": "そこを明確にして、重大な問題の対応時間も足してもらうよ。『30分以内』と。"
+     }
+    ]
+   },
+   {
+    "t": "🧾 093｜変更申請書を書く：Writing a Change Request",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, my change request got rejected. The reviewer says it's missing information. Can you check it?",
+      "jp": "ケン、変更申請が却下されたの。レビュー担当が、情報が足りないって。見てくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. I see the title and the date, but there's no rollback plan, and no list of affected systems.",
+      "jp": "いいよ。題名と日付はあるけど、ロールバックの手順と、影響を受けるシステムの一覧がない。"
+     },
+     {
+      "sp": 0,
+      "en": "I thought it was a small change.",
+      "jp": "小さな変更だと思ってたの。"
+     },
+     {
+      "sp": 1,
+      "en": "Even small changes need the same five things: what, why, when, impact, and rollback.",
+      "jp": "小さな変更でも、必要な5つは同じだよ。何を、なぜ、いつ、影響、ロールバック。",
+      "note": "表現: what, why, when, impact, rollback = 変更申請の5要素"
+     },
+     {
+      "sp": 0,
+      "en": "Let me write the 'why': 'The current certificate expires in ten days, and we must replace it.'",
+      "jp": "『なぜ』を書くわ。『現在の証明書が10日後に期限切れになるため、交換が必要です』。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Now the impact: 'The web service restarts for about one minute. No other systems are affected.'",
+      "jp": "いいね。次に影響。『ウェブサービスが約1分再起動します。ほかのシステムへの影響はありません』。"
+     },
+     {
+      "sp": 0,
+      "en": "And the rollback: 'Restore the old certificate from the backup, which takes two minutes.'",
+      "jp": "ロールバックは、『バックアップから古い証明書を戻します。所要2分』。"
+     },
+     {
+      "sp": 1,
+      "en": "Add how you will verify the result: 'Open the site and confirm the new expiry date.'",
+      "jp": "結果の確認方法も足して。『サイトを開いて、新しい有効期限を確認する』。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a complete request. Reviewers approve quickly when they don't have to ask questions.",
+      "jp": "それで完全な申請になる。レビュー担当は、質問しなくて済めば、すぐ承認するよ。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 094｜英語の電話会議で聞き返す：Asking Someone to Repeat",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Okay, so the issue is in the BGP configuration on the edge router, and we need to clear the soft state.",
+      "jp": "では、問題はエッジルーターのBGP設定にあって、ソフトステートをクリアする必要があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Sorry, could you say that again? I missed the last part. Clear the what?",
+      "jp": "すみません、もう一度言ってもらえますか。最後の部分を聞き逃しました。何をクリア？",
+      "note": "表現: Could you say that again? = もう一度言ってもらえますか／聞き返しの基本"
+     },
+     {
+      "sp": 0,
+      "en": "The soft state. It means we refresh the routes without resetting the whole session.",
+      "jp": "ソフトステートです。セッション全体をリセットせずに、ルートを更新するという意味です。"
+     },
+     {
+      "sp": 1,
+      "en": "I see. Could you spell 'soft' and type it in the chat? The line is a bit noisy.",
+      "jp": "なるほど。『soft』のつづりを、チャットに入力してもらえますか。回線が少しノイズ気味で。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. It's S-O-F-T. And the command is in the chat now.",
+      "jp": "もちろん。S-O-F-Tです。コマンドはいまチャットにあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Let me confirm: you'll run that command at ten, and we'll watch the routes for five minutes?",
+      "jp": "ありがとう。確認させてください。10時にそのコマンドを実行して、5分間ルートを見る、ということですか。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. If the routes don't return, we'll roll back right away.",
+      "jp": "その通りです。ルートが戻らなければ、すぐロールバックします。"
+     },
+     {
+      "sp": 1,
+      "en": "Understood. Could you also send me a short summary by email after the call?",
+      "jp": "了解です。通話のあと、短いまとめをメールでも送ってもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, I'll send the summary within an hour. Anything else?",
+      "jp": "はい、1時間以内にまとめを送ります。ほかに何かありますか。"
+     }
+    ]
+   },
+   {
+    "t": "📚 095｜自分の手順書を英語で書く：Writing a Runbook in English",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the new team member in Dublin can't read our Japanese runbooks. Could you help me translate them?",
+      "jp": "アナ、ダブリンの新しいメンバーが、日本語の手順書を読めないの。翻訳を手伝ってくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't translate word for word. A runbook should be short steps with commands, not long explanations.",
+      "jp": "1語ずつ訳さないで。手順書は、長い説明じゃなくて、コマンドつきの短い手順にするの。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "So, start each step with a verb: 'Log in to the switch.' 'Run the following command.' 'Verify the output.'",
+      "jp": "じゃあ各手順を動詞で始める。『スイッチにログインする』『次のコマンドを実行する』『出力を確認する』。",
+      "note": "表現: Start each step with a verb. = 各手順は動詞で始める／手順書の英語の基本"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. And put the expected result under each step, so the reader knows if it worked.",
+      "jp": "そう。それと、各手順の下に期待する結果を書いて。読む人が、うまくいったか分かるように。"
+     },
+     {
+      "sp": 0,
+      "en": "What about warnings? We have an important one about not rebooting during business hours.",
+      "jp": "注意書きは？営業時間中に再起動してはいけない、という大事なのがあるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Put it at the top, in a box: 'Warning: Do not reboot during business hours.' Don't hide it in the middle.",
+      "jp": "一番上に、枠で囲んで書いて。『警告：営業時間中に再起動しないこと』。途中に埋めないで。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I add the contact person for emergencies?",
+      "jp": "緊急時の連絡先も足した方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Definitely. And the date of the last update, so people know whether it's current.",
+      "jp": "ぜひ。それと最終更新日も。最新かどうか分かるように。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll rewrite the first one tonight. Could you review it tomorrow?",
+      "jp": "今夜、最初の1つを書き直す。明日レビューしてもらえる？"
+     },
+     {
+      "sp": 1,
+      "en": "Gladly. Once we have a good pattern, the rest will go fast.",
+      "jp": "喜んで。いい型ができれば、残りは速く進むわ。"
+     }
+    ]
+   }
+  ]
+ }
+]
