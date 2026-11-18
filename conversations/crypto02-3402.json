@@ -1,0 +1,595 @@
+[
+ {
+  "id": "crypto02",
+  "ic": "🧰",
+  "n": "暗号の講義2・弱点と実践（講義11〜20）",
+  "hint": "Ten lecture-style conversations on how cryptography fails in practice: history, Kerckhoffs, randomness, key management, HMAC, key derivation, nonce reuse, never rolling your own crypto, side channels and post-quantum",
+  "level": 4,
+  "keywords": [
+   "cryptography",
+   "key management",
+   "lecture"
+  ],
+  "d": [
+   {
+    "t": "📜 211｜講義11：暗号の歴史と頻度分析：Lecture 11: Old Ciphers and Frequency Analysis",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we look back two thousand years. Julius Caesar protected his letters by shifting each letter three places in the alphabet.",
+      "jp": "今日は2000年前を振り返ります。ユリウス・カエサルは、手紙の各文字をアルファベットで3つずらして守りました。"
+     },
+     {
+      "sp": 1,
+      "en": "So A becomes D, B becomes E, and so on? That seems easy to break.",
+      "jp": "つまりAがD、BがEになる？簡単に破れそうですね。"
+     },
+     {
+      "sp": 0,
+      "en": "It is. There are only twenty-five possible shifts, so you can try them all in a minute. That's called a brute-force attack.",
+      "jp": "破れます。ずらし方は25通りしかないので、1分で全部試せます。それを総当たり攻撃と呼びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What about a cipher where every letter is replaced by a different random letter?",
+      "jp": "文字ごとに別のランダムな文字に置き換える暗号なら、どうでしょう。"
+     },
+     {
+      "sp": 0,
+      "en": "That has billions of keys, so brute force fails. But it has another weakness: frequency analysis.",
+      "jp": "鍵は何十億通りもあるので、総当たりは通用しません。でも別の弱点があります。頻度分析です。"
+     },
+     {
+      "sp": 1,
+      "en": "Because some letters appear more often than others?",
+      "jp": "ある文字が、ほかの文字より多く出るからですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. In English, the letter E is the most common. If one symbol appears most often in the secret message, it's probably E.",
+      "jp": "はい。英語ではEがいちばん多い。秘密のメッセージでいちばん多い記号は、たぶんEです。",
+      "note": "用語: frequency analysis = 文字の出現回数の偏りから暗号を破る方法／brute-force = 総当たり"
+     },
+     {
+      "sp": 1,
+      "en": "So the patterns of the language leak through the cipher.",
+      "jp": "つまり言語の模様が、暗号を通して漏れてしまう。"
+     },
+     {
+      "sp": 0,
+      "en": "That is the central lesson. A good cipher must hide every statistical pattern. Modern ciphers like AES do that on purpose.",
+      "jp": "それが中心的な教訓です。良い暗号は、統計的な模様をすべて隠さなければいけません。AESのような現代の暗号は、わざとそうしています。"
+     },
+     {
+      "sp": 1,
+      "en": "And the Enigma machine in the war? Was it also broken by patterns?",
+      "jp": "戦争中のエニグマ暗号機は？それも模様で破られたんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Partly. The Allies found habits in the operators' messages, and built machines to test the remaining possibilities. Human habits are often the weakest link.",
+      "jp": "一部は。連合国は、操作者のメッセージの癖を見つけて、残った可能性を試す機械を作りました。人間の癖は、しばしばいちばん弱い輪です。"
+     }
+    ]
+   },
+   {
+    "t": "📖 212｜講義12：ケルクホフスの原則：Lecture 12: Kerckhoffs's Principle",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's principle was written in 1883, and it's still the foundation of security: a system must be secure even if everything about it is public, except the key.",
+      "jp": "今日の原則は1883年に書かれ、いまもセキュリティの土台です。鍵以外のすべてが公開されていても、システムは安全でなければならない。"
+     },
+     {
+      "sp": 1,
+      "en": "But isn't it safer to keep the algorithm secret, too? More secrets, more safety.",
+      "jp": "でもアルゴリズムも秘密にした方が安全じゃないですか。秘密が多いほど安全では。"
+     },
+     {
+      "sp": 0,
+      "en": "It feels logical, but history says no. Secret algorithms are reviewed by few people, so mistakes remain hidden. This is called security through obscurity.",
+      "jp": "理屈に合うように感じますが、歴史は違うと言っています。秘密のアルゴリズムは、見る人が少なく、間違いが隠れたままになります。それが隠蔽によるセキュリティです。",
+      "note": "用語: Kerckhoffs's principle = 鍵以外が全部公開でも安全であるべきという原則／security through obscurity = 隠すことに頼る安全"
+     },
+     {
+      "sp": 1,
+      "en": "And public algorithms like AES are tested by thousands of experts.",
+      "jp": "そしてAESのような公開のアルゴリズムは、何千人もの専門家が検証する。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. AES was selected in a public competition, and researchers worldwide attacked it for years. Nobody found a practical weakness.",
+      "jp": "その通り。AESは公開コンペで選ばれて、世界中の研究者が何年も攻撃しました。実用的な弱点は見つかっていません。"
+     },
+     {
+      "sp": 1,
+      "en": "So the strength comes from public review, not secrecy.",
+      "jp": "つまり強さは、秘密ではなく、公開の検証から来る。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. If a company says, 'Our encryption is secret and unbreakable', be very suspicious.",
+      "jp": "そうです。会社が『うちの暗号は秘密で、破れません』と言ったら、強く疑いましょう。"
+     },
+     {
+      "sp": 1,
+      "en": "Does this apply outside cryptography? For example, hiding a server's real address?",
+      "jp": "暗号以外にも当てはまりますか。たとえばサーバーの本当のアドレスを隠すことには？"
+     },
+     {
+      "sp": 0,
+      "en": "Hiding it can add a small layer, but you can't rely on it. Assume the attacker knows your design, and protect it properly.",
+      "jp": "隠すことは小さな層にはなりますが、頼ってはいけません。攻撃者が設計を知っていると考えて、きちんと守りましょう。"
+     }
+    ]
+   },
+   {
+    "t": "🎲 213｜講義13：乱数の重要性：Lecture 13: Why Randomness Matters",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Every key, every salt, every starting value in cryptography comes from one source: random numbers. Today we study why that matters so much.",
+      "jp": "暗号の鍵、ソルト、開始値は、すべて乱数から作られます。今日は、それがなぜ重要かを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Can't a computer just pick a random number? Most programming languages have a random function.",
+      "jp": "コンピューターが乱数を選べばいいのでは。ほとんどのプログラミング言語に、乱数の関数があります。"
+     },
+     {
+      "sp": 0,
+      "en": "They do, but those are only pseudo-random. They follow a formula, and if you know the starting point, you can predict every number.",
+      "jp": "ありますが、それは疑似乱数にすぎません。式に従っていて、開始点が分かれば、全部の数が予測できます。",
+      "note": "用語: pseudo-random = 式で作る予測可能な乱数／CSPRNG = 暗号用の安全な乱数生成器"
+     },
+     {
+      "sp": 1,
+      "en": "So a key made from a predictable number is not secret at all.",
+      "jp": "つまり予測できる数で作った鍵は、まったく秘密じゃない。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. For security you need a cryptographically secure random number generator, which gets unpredictable data from the operating system.",
+      "jp": "そうです。セキュリティには、暗号用の安全な乱数生成器が必要です。OSから予測できないデータを取ります。"
+     },
+     {
+      "sp": 1,
+      "en": "Where does the operating system get unpredictable data?",
+      "jp": "OSは、予測できないデータをどこから得るんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "From physical events: the timing of keystrokes, disk activity, hardware noise, and special chips. These are hard for anyone to predict.",
+      "jp": "物理的な出来事からです。キー入力の間隔、ディスクの動き、ハードウェアのノイズ、専用のチップ。誰にも予測しにくいものです。"
+     },
+     {
+      "sp": 1,
+      "en": "Has a real system failed because of bad randomness?",
+      "jp": "悪い乱数で、実際のシステムが失敗した例はありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, many. In one famous case, a software bug reduced the random numbers to a few thousand possibilities, and thousands of keys could be guessed.",
+      "jp": "はい、たくさん。有名な例では、ソフトのバグで乱数が数千通りに減ってしまい、何千もの鍵が推測できました。"
+     },
+     {
+      "sp": 1,
+      "en": "So the rule for programmers is: never use the ordinary random function for secrets.",
+      "jp": "じゃあプログラマーへの決まりは、秘密にはふつうの乱数関数を使わない、ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Always use the secure one provided by your language's security library.",
+      "jp": "その通り。必ず、言語のセキュリティのライブラリが用意した、安全なものを使うことです。"
+     }
+    ]
+   },
+   {
+    "t": "🧰 214｜講義14：鍵の管理：Lecture 14: Key Management",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A famous saying: 'Cryptography is easy. Key management is hard.' Today we see why.",
+      "jp": "有名な言葉があります。『暗号は簡単。鍵の管理が難しい』。今日はその理由を見ます。"
+     },
+     {
+      "sp": 1,
+      "en": "What's difficult? If the key is strong, isn't the job done?",
+      "jp": "何が難しいんですか。鍵が強ければ、それで終わりでは？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "The key must be created, stored, used, replaced and finally destroyed. A mistake at any step can undo the strength of the cipher.",
+      "jp": "鍵は、作り、保管し、使い、交換し、最後に破棄しなければなりません。どの段階の間違いも、暗号の強さを無にできます。"
+     },
+     {
+      "sp": 1,
+      "en": "The most common mistake must be storing the key in a bad place.",
+      "jp": "最も多い間違いは、鍵を悪い場所に置くことでしょうね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Keys written inside source code, committed to a public repository, or sent by chat. Attackers search public code for exactly that.",
+      "jp": "はい。ソースコードに書かれた鍵、公開リポジトリに入れた鍵、チャットで送った鍵。攻撃者は、公開コードをまさにそれで検索します。",
+      "note": "用語: secret manager = 鍵やパスワードを安全に管理する仕組み／key rotation = 鍵を定期的に交換すること"
+     },
+     {
+      "sp": 1,
+      "en": "What's the safe way to store a key?",
+      "jp": "鍵を安全に保管する方法は？"
+     },
+     {
+      "sp": 0,
+      "en": "Use a dedicated secret manager or a hardware security module, with access limited to the programs that really need it.",
+      "jp": "専用のシークレット管理サービスか、ハードウェアセキュリティモジュールを使って、本当に必要なプログラムだけにアクセスを限ります。"
+     },
+     {
+      "sp": 1,
+      "en": "And what about replacing keys? Why change a key that works?",
+      "jp": "鍵の交換は？動いている鍵を、なぜ変えるんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Rotation limits the damage. If an old key leaks, it only protects data for a limited time. And you must be able to rotate without an outage.",
+      "jp": "ローテーションは被害を限ります。古い鍵が漏れても、守っているのは限られた期間のデータだけ。そして停止せずに交換できなければいけません。"
+     },
+     {
+      "sp": 1,
+      "en": "What if someone loses the only key? Is the data lost forever?",
+      "jp": "誰かが唯一の鍵をなくしたら？データは永久に失われますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and that's a real risk. That's why we plan recovery: backup keys in a safe place, and clear procedures. Security without recovery is a trap.",
+      "jp": "はい、それも現実のリスクです。だから復旧を計画します。安全な場所のバックアップ鍵と、明確な手順。復旧のないセキュリティは、罠です。"
+     }
+    ]
+   },
+   {
+    "t": "🔏 215｜講義15：メッセージ認証コード：Lecture 15: Message Authentication Codes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Encryption hides a message. But does it prove that the message wasn't changed? Today we study the MAC, the message authentication code.",
+      "jp": "暗号化はメッセージを隠します。でも、変更されていないことを証明するでしょうか。今日はMAC、メッセージ認証コードを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "I remember hashes check integrity. Why do we need something new?",
+      "jp": "ハッシュが完全性を確認すると覚えています。なぜ新しいものが必要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because a hash has no secret. An attacker can change the message, and simply compute a new hash.",
+      "jp": "ハッシュには秘密がないからです。攻撃者はメッセージを変えて、新しいハッシュを計算するだけでいい。"
+     },
+     {
+      "sp": 1,
+      "en": "So we need a hash that only the people with a secret key can compute.",
+      "jp": "じゃあ、秘密の鍵を持つ人にしか計算できないハッシュが必要なんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. That's the idea of HMAC: a hash combined with a secret key. The sender attaches the code, and the receiver recomputes it and compares.",
+      "jp": "その通り。それがHMACの考えです。ハッシュと秘密の鍵を組み合わせる。送信者がコードを付けて、受信者が再計算して比べます。",
+      "note": "用語: HMAC = 秘密の鍵を使ったハッシュによる改ざん検知／MAC = メッセージ認証コード"
+     },
+     {
+      "sp": 1,
+      "en": "If an attacker changes the message, the code won't match, and they can't create a new one without the key.",
+      "jp": "攻撃者がメッセージを変えると、コードが合わなくなって、鍵なしで新しいコードは作れない。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. Where do we see HMAC in daily work?",
+      "jp": "そうです。日常の仕事で、HMACはどこで見ますか。"
+     },
+     {
+      "sp": 1,
+      "en": "API requests, maybe? Some services ask us to sign requests with a secret.",
+      "jp": "APIのリクエストでしょうか。一部のサービスは、秘密で署名するよう求めます。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Webhooks and cloud APIs use HMAC to prove that a request really came from the right sender. One more tip: when you compare two codes in a program, use a constant-time comparison. A normal comparison can leak information through timing.",
+      "jp": "はい。ウェブフックやクラウドのAPIは、リクエストが本当に正しい送信元から来たと証明するために、HMACを使います。もう1つ助言です。プログラムで2つのコードを比べる時は、一定時間の比較を使います。ふつうの比較は、時間から情報が漏れることがあります。"
+     }
+    ]
+   },
+   {
+    "t": "🔨 216｜講義16：パスワードから鍵を作る：Lecture 16: Turning Passwords into Keys",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A person can't remember a random two-hundred-fifty-six-bit key. But a person can remember a password. How do we connect them?",
+      "jp": "人は、ランダムな256ビットの鍵を覚えられません。でもパスワードは覚えられる。この2つをどうつなぎますか。"
+     },
+     {
+      "sp": 1,
+      "en": "We could hash the password, and use the result as the key.",
+      "jp": "パスワードをハッシュして、その結果を鍵にすればいいのでは。"
+     },
+     {
+      "sp": 0,
+      "en": "A quick hash is dangerous here, because attackers can test billions of passwords per second. We need a key derivation function.",
+      "jp": "速いハッシュはここでは危険です。攻撃者は1秒に何十億ものパスワードを試せます。鍵導出関数が必要です。",
+      "note": "用語: key derivation function = パスワードから暗号の鍵を作る関数（PBKDF2・scrypt・Argon2）"
+     },
+     {
+      "sp": 1,
+      "en": "Is that like the slow hash we used to store passwords?",
+      "jp": "パスワードの保存で使った、遅いハッシュのようなものですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Very similar. Functions like PBKDF2, scrypt and Argon2 repeat the work many times, with a salt, so each guess costs the attacker real time and memory.",
+      "jp": "とてもよく似ています。PBKDF2、scrypt、Argon2のような関数は、ソルトつきで処理を何度もくり返して、推測1回ごとに攻撃者へ時間とメモリの負担をかけます。"
+     },
+     {
+      "sp": 1,
+      "en": "So the strength still depends on the password itself.",
+      "jp": "でも強さは、結局パスワード自体に左右される。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and that's the lesson. A perfect algorithm can't save 'password123'. Length and unpredictability matter most.",
+      "jp": "はい、それが教訓です。完璧なアルゴリズムでも、『password123』は救えません。長さと予測のしにくさがいちばん大事です。"
+     },
+     {
+      "sp": 1,
+      "en": "So a long passphrase made of several random words is the best choice.",
+      "jp": "だから、ランダムな単語をいくつか並べた長いパスフレーズが、最良の選択ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Four or five random words are easier to remember than a short, complex password, and much harder to crack.",
+      "jp": "その通り。4、5個のランダムな単語は、短くて複雑なパスワードより覚えやすくて、破るのはずっと難しいです。"
+     }
+    ]
+   },
+   {
+    "t": "♻️ 217｜講義17：使い回してはいけないもの：Lecture 17: Never Reuse a Nonce",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Last time, we learned the authenticated mode GCM. Today we study the one rule you must never break: never reuse a nonce.",
+      "jp": "前に、認証つきモードのGCMを学びました。今日は、絶対に破ってはいけない決まりを学びます。ナンスを使い回さないこと。"
+     },
+     {
+      "sp": 1,
+      "en": "What's a nonce? I've seen the word, but I never really understood it.",
+      "jp": "ナンスって何ですか。言葉は見たけど、ちゃんと理解していませんでした。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "It means 'number used once'. It's a value that must be different for every message encrypted with the same key.",
+      "jp": "『一度だけ使う数』です。同じ鍵で暗号化するメッセージごとに、必ず違わなければならない値です。",
+      "note": "用語: nonce = 一度だけ使う値（number used once）。同じ鍵で使い回し厳禁"
+     },
+     {
+      "sp": 1,
+      "en": "What happens if I use the same nonce twice?",
+      "jp": "同じナンスを2回使うと、どうなりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "In GCM, it's a disaster. An attacker who sees two messages with the same nonce can learn information about both, and can even forge new messages.",
+      "jp": "GCMでは大惨事です。同じナンスの2つのメッセージを見た攻撃者は、両方の情報を知り、新しいメッセージを偽造することさえできます。"
+     },
+     {
+      "sp": 1,
+      "en": "That's terrible. Is that a theoretical danger, or has it really happened?",
+      "jp": "ひどいですね。それは理論上の危険ですか、本当に起きたことですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It has happened in real products. A counter was reset after a restart, and the same numbers were used again.",
+      "jp": "実際の製品で起きています。再起動でカウンターがリセットされて、同じ数がもう一度使われました。"
+     },
+     {
+      "sp": 1,
+      "en": "How do we prevent it?",
+      "jp": "どう防ぎますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Generate the nonce with a secure random generator, in a long enough size, or use a counter that survives restarts. Test it, because this bug is invisible during normal use.",
+      "jp": "安全な乱数生成器で、十分な長さのナンスを作るか、再起動しても続くカウンターを使います。テストもしてください。このバグは、ふだんの使用では見えないからです。"
+     },
+     {
+      "sp": 1,
+      "en": "So the usual feeling that 'it works' proves nothing about security.",
+      "jp": "つまり『動いている』という普段の感覚は、安全性について何も証明しないんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. In security, a system can work perfectly and still be broken.",
+      "jp": "その通り。セキュリティでは、完璧に動いていても、壊れていることがあります。"
+     }
+    ]
+   },
+   {
+    "t": "🚫 218｜講義18：自分で暗号を作らない：Don't Roll Your Own Crypto",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's rule is short, and it's the most important advice in this whole course: don't invent your own cryptography.",
+      "jp": "今日の決まりは短くて、この講座全体でいちばん大事な助言です。自分で暗号を作ってはいけません。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "But what if my idea is clever, and nobody can guess it?",
+      "jp": "でも私の考えが巧みで、誰にも推測できなかったら？"
+     },
+     {
+      "sp": 0,
+      "en": "Everybody believes that about their own cipher. Even expert cryptographers break their own designs. That's why public review exists.",
+      "jp": "みんな自分の暗号についてそう信じます。専門の暗号学者でも、自分の設計を破られます。だから公開の検証があるんです。",
+      "note": "表現: Don't roll your own crypto. = 自分で暗号を作るな／セキュリティ界の定番の戒め"
+     },
+     {
+      "sp": 1,
+      "en": "So what should a programmer do instead?",
+      "jp": "じゃあプログラマーは、代わりに何をすべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Use well-tested libraries with safe defaults, such as libsodium. Choose the highest-level function that does what you need.",
+      "jp": "安全な初期設定を持つ、よく検証されたライブラリを使うこと。たとえばlibsodiumのように。必要なことをしてくれる、いちばん高水準の関数を選びます。"
+     },
+     {
+      "sp": 1,
+      "en": "High-level, because low-level functions give more chances to make mistakes?",
+      "jp": "高水準なのは、低水準の関数だと間違える機会が増えるからですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. With a low-level library, you must choose the mode, the nonce and the padding. With a high-level one, the library makes those choices for you.",
+      "jp": "その通り。低水準のライブラリでは、モード、ナンス、パディングを自分で選ばなければいけません。高水準なら、ライブラリがその選択をしてくれます。"
+     },
+     {
+      "sp": 1,
+      "en": "What about a quick custom trick, like reversing the text and adding a number?",
+      "jp": "文章を逆にして数を足すような、ちょっとした独自の工夫は？"
+     },
+     {
+      "sp": 0,
+      "en": "That's not encryption. It's an obstacle for a bored person, and it takes an analyst five minutes to see through.",
+      "jp": "それは暗号ではありません。退屈した人に対する障害物で、アナリストなら5分で見抜きます。"
+     },
+     {
+      "sp": 1,
+      "en": "So the best practice is humility: use standard tools, and update them.",
+      "jp": "つまり最良の実践は、謙虚さですね。標準の道具を使って、更新し続ける。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. In security, the person who admits what they don't know is safer than the one who trusts their own cleverness.",
+      "jp": "はい。セキュリティでは、自分の知らないことを認める人の方が、自分の賢さを信じる人より安全です。"
+     }
+    ]
+   },
+   {
+    "t": "⏱️ 219｜講義19：実装の弱点（サイドチャネル）：Lecture 19: Side Channels",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's topic is subtle. A cipher can be mathematically perfect, and still be attacked through the way the computer runs it.",
+      "jp": "今日の話題は微妙です。暗号が数学的には完璧でも、コンピューターがそれを動かす方法を通して攻撃されることがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "You mean the attack doesn't break the math, but watches something else?",
+      "jp": "数学を破るんじゃなくて、何か別のものを見る攻撃ということですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, that's a side-channel attack. The attacker watches things like time, power use, sound or electromagnetic signals.",
+      "jp": "はい、サイドチャネル攻撃です。攻撃者は、時間、消費電力、音、電磁波のようなものを観察します。",
+      "note": "用語: side-channel attack = 時間・電力などの「副産物」から秘密を探る攻撃／constant-time = 入力に関係なく同じ時間で処理"
+     },
+     {
+      "sp": 1,
+      "en": "How can time reveal a secret?",
+      "jp": "時間でどうやって秘密が分かるんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Imagine a program that checks a password one character at a time and stops at the first mistake. A wrong first letter returns faster than a wrong last letter.",
+      "jp": "パスワードを1文字ずつ確認して、最初の間違いで止まるプログラムを想像してください。最初の文字が違うと、最後の文字が違う時より、早く返ります。"
+     },
+     {
+      "sp": 1,
+      "en": "So by measuring the response time, an attacker learns how many characters are correct.",
+      "jp": "つまり応答時間を測ると、何文字が合っているか分かる。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the idea. The defense is to make the operation take the same time, whatever the input. We call it constant-time code.",
+      "jp": "それが考え方です。防御は、入力に関係なく同じ時間がかかるように作ることです。一定時間のコードと呼びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Should I worry about this as a network engineer?",
+      "jp": "ネットワークエンジニアとして、気にするべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "You should know it exists, and prefer well-maintained libraries and updated firmware. Defenders also use this knowledge to understand why a patch matters.",
+      "jp": "存在を知っておくこと。そして、よく保守されたライブラリと、更新されたファームウェアを選ぶことです。防御側は、この知識で、パッチがなぜ大事かも理解します。"
+     },
+     {
+      "sp": 1,
+      "en": "I understand. Security is not only the algorithm, but also the machine and the code around it.",
+      "jp": "分かりました。セキュリティはアルゴリズムだけじゃなくて、機械と、その周りのコードもなんですね。"
+     }
+    ]
+   },
+   {
+    "t": "⚛️ 220｜講義20：量子コンピューターと暗号：Lecture 20: Quantum Computers and the Future",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's lecture looks to the future. Large quantum computers may one day break some of the cryptography we use now.",
+      "jp": "今日の講義は未来を見ます。大きな量子コンピューターは、いつか、いま使っている暗号の一部を破るかもしれません。"
+     },
+     {
+      "sp": 1,
+      "en": "Which ones? Does it mean all encryption will be broken?",
+      "jp": "どの暗号ですか。すべての暗号が破られるという意味ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No. The danger is mainly for public-key systems like RSA and elliptic curves. A powerful quantum computer could solve their math problems quickly.",
+      "jp": "いいえ。危険は主に、RSAや楕円曲線のような公開鍵方式です。強力な量子コンピューターなら、その数学の問題を速く解けます。"
+     },
+     {
+      "sp": 1,
+      "en": "And symmetric encryption like AES?",
+      "jp": "AESのような共通鍵暗号は？"
+     },
+     {
+      "sp": 0,
+      "en": "It is affected less. We double the key size, for example by using AES with a two-hundred-fifty-six-bit key, and it stays safe.",
+      "jp": "影響はもっと小さいです。鍵の長さを2倍にします。たとえば256ビットのAESを使えば、安全なままです。"
+     },
+     {
+      "sp": 1,
+      "en": "But today's quantum computers aren't that powerful, right? Why worry now?",
+      "jp": "でもいまの量子コンピューターは、そんなに強力じゃないですよね。なぜいま心配するんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because of 'harvest now, decrypt later'. An attacker can record encrypted traffic today, and decrypt it in ten years. Long-lived secrets are at risk now.",
+      "jp": "『いま集めて、あとで解読』があるからです。攻撃者は、いまの暗号化された通信を記録して、10年後に解読できます。長く守るべき秘密は、いま危険です。",
+      "note": "用語: harvest now, decrypt later = いま記録して将来解読する攻撃／post-quantum = 量子コンピューターに耐える暗号"
+     },
+     {
+      "sp": 1,
+      "en": "What's the solution?",
+      "jp": "解決策は何ですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Post-quantum cryptography: new algorithms based on different math problems. Standards have already been published, and systems are starting to adopt them.",
+      "jp": "ポスト量子暗号です。別の数学の問題に基づく新しいアルゴリズム。標準はすでに公開されていて、システムが採用を始めています。"
+     },
+     {
+      "sp": 1,
+      "en": "As engineers, what should we do now?",
+      "jp": "エンジニアとして、いまは何をすべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Make an inventory of where you use cryptography, and design so that you can change algorithms later. We call that crypto-agility. It's the best preparation for any future surprise.",
+      "jp": "どこで暗号を使っているか一覧にして、あとでアルゴリズムを変えられるように設計すること。それをクリプトアジリティと呼びます。どんな未来の驚きにも備える、最良の準備です。"
+     }
+    ]
+   }
+  ]
+ }
+]
