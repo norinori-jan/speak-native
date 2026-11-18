@@ -1,0 +1,618 @@
+[
+ {
+  "id": "crypto01",
+  "ic": "🔐",
+  "n": "暗号の講義1・基礎（講義1〜10）",
+  "hint": "Ten lecture-style conversations from zero: CIA triad, symmetric encryption, modes, hashing, password storage, public keys, key exchange, digital signatures, TLS and certificates",
+  "level": 4,
+  "keywords": [
+   "cryptography",
+   "lecture",
+   "security"
+  ],
+  "d": [
+   {
+    "t": "🔐 201｜講義1：暗号はなぜ必要か：Lecture 1: Why Do We Need Cryptography?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Welcome to the first lecture. Today we answer one question: why do we need cryptography at all?",
+      "jp": "最初の講義へようこそ。今日は1つの問いに答えます。そもそも、なぜ暗号が必要なのか。"
+     },
+     {
+      "sp": 1,
+      "en": "Isn't it just for hiding secrets? That's what I always thought.",
+      "jp": "秘密を隠すためだけじゃないんですか。ずっとそう思っていました。"
+     },
+     {
+      "sp": 0,
+      "en": "Hiding secrets is one goal, called confidentiality. But there are three goals in total. Can you guess another one?",
+      "jp": "秘密を隠すのは1つの目的で、機密性と呼びます。でも目的は全部で3つあります。もう1つ、推測できますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe making sure nobody changes the message on the way?",
+      "jp": "途中で誰もメッセージを変えられないようにすること、でしょうか。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. That's integrity. The third is availability: the system must work when people need it.",
+      "jp": "その通り。それが完全性です。3つ目は可用性。必要な時にシステムが使えること。",
+      "note": "用語: confidentiality / integrity / availability = 機密性／完全性／可用性（CIA）"
+     },
+     {
+      "sp": 1,
+      "en": "Confidentiality, integrity, availability. Is that the famous triangle?",
+      "jp": "機密性、完全性、可用性。それが有名な三角形ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, the CIA triad. Every security decision is a balance among these three. Cryptography mainly protects the first two.",
+      "jp": "はい、CIAトライアドです。すべてのセキュリティの判断は、この3つのバランスです。暗号は主に最初の2つを守ります。"
+     },
+     {
+      "sp": 1,
+      "en": "Can you give a real example?",
+      "jp": "実際の例を挙げてもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "When you send a payment online, encryption keeps the card number secret, and integrity checks make sure nobody changes the amount.",
+      "jp": "ネットで支払う時、暗号がカード番号を秘密にして、完全性の確認が金額を誰も変えられないようにします。"
+     },
+     {
+      "sp": 1,
+      "en": "So even if someone listens to the network, they can't read or change anything.",
+      "jp": "つまり誰かがネットワークを盗み聞きしても、読むことも変えることもできない。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the idea. Next lecture, we'll start with the oldest tool: symmetric encryption.",
+      "jp": "それが考え方です。次の講義では、最も古い道具、共通鍵暗号から始めます。"
+     }
+    ]
+   },
+   {
+    "t": "🗝️ 202｜講義2：共通鍵暗号：Lecture 2: Symmetric Encryption",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's topic is symmetric encryption. 'Symmetric' means the same key locks and unlocks the data.",
+      "jp": "今日の話題は共通鍵暗号です。『共通』とは、同じ鍵でデータを閉じて開けるという意味です。"
+     },
+     {
+      "sp": 1,
+      "en": "Like a house key. I lock the door and open it with the same key.",
+      "jp": "家の鍵みたいですね。同じ鍵で閉めて、開ける。"
+     },
+     {
+      "sp": 0,
+      "en": "Good analogy. The most important algorithm today is AES, the Advanced Encryption Standard.",
+      "jp": "いい例えです。いま最も重要なアルゴリズムは、AES、高度暗号化標準です。",
+      "note": "用語: symmetric encryption = 共通鍵暗号（同じ鍵で暗号化と復号）／AES = 現在の標準的な共通鍵暗号"
+     },
+     {
+      "sp": 1,
+      "en": "How strong is AES? Can someone break it?",
+      "jp": "AESはどれくらい強いんですか。破れる人はいますか。"
+     },
+     {
+      "sp": 0,
+      "en": "With a two-hundred-fifty-six-bit key, there are more possible keys than atoms we can count. Nobody can try them all.",
+      "jp": "256ビットの鍵なら、鍵の数は数えられる原子の数より多いです。全部を試せる人はいません。"
+     },
+     {
+      "sp": 1,
+      "en": "Then what's the weakness? Why is security still a problem?",
+      "jp": "じゃあ弱点は何ですか。なぜまだセキュリティが問題になるんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "The key. If two people want to talk secretly, they must share the key first, and sharing it safely is very hard.",
+      "jp": "鍵です。2人が秘密に話したければ、先に鍵を共有する必要があって、安全に共有するのがとても難しい。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "If I send the key by email, an attacker could read it.",
+      "jp": "鍵をメールで送れば、攻撃者に読まれるかもしれない。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. That's the key distribution problem. In the next lectures, we'll see how modern systems solve it.",
+      "jp": "その通り。それが鍵配送問題です。次の講義で、現代のシステムがどう解決しているか見ます。"
+     },
+     {
+      "sp": 1,
+      "en": "So symmetric encryption is fast and strong, but the key must be shared first.",
+      "jp": "つまり共通鍵暗号は、速くて強いけど、先に鍵を共有しなければいけない。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect summary. Remember it: fast, strong, but a key sharing problem.",
+      "jp": "完璧な要約です。覚えておいて。速い、強い、でも鍵共有の問題がある。"
+     }
+    ]
+   },
+   {
+    "t": "🧱 203｜講義3：暗号の使い方（モード）：Lecture 3: Modes of Operation",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A strong cipher can still be used badly. Today we'll see why the way you use AES matters.",
+      "jp": "強い暗号でも、使い方が悪いことがあります。今日は、AESの使い方がなぜ大事かを見ます。"
+     },
+     {
+      "sp": 1,
+      "en": "But if AES is strong, how can the usage be a problem?",
+      "jp": "でもAESが強いなら、使い方がどうして問題になるんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "AES encrypts one block of sixteen bytes at a time. The question is how you handle a long message with many blocks.",
+      "jp": "AESは1回に16バイトの1ブロックを暗号化します。問題は、たくさんのブロックがある長いメッセージをどう扱うかです。"
+     },
+     {
+      "sp": 1,
+      "en": "The simplest way is to encrypt every block separately, with the same key.",
+      "jp": "いちばん簡単なのは、全ブロックを同じ鍵で別々に暗号化することですね。"
+     },
+     {
+      "sp": 0,
+      "en": "That's called ECB mode, and it's a famous mistake. Identical blocks give identical outputs, so patterns remain visible.",
+      "jp": "それはECBモードで、有名な間違いです。同じブロックは同じ出力になって、模様が見えてしまいます。",
+      "note": "用語: ECB mode = 同じ入力が同じ出力になる危険なモード／GCM = 暗号化と改ざん検知を同時に行うモード"
+     },
+     {
+      "sp": 1,
+      "en": "I've seen the picture of a penguin that stays recognizable after encryption.",
+      "jp": "暗号化したあとも、ペンギンの形がそのまま見える画像を見たことがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. The fix is to use a mode with a random starting value, called an initialization vector, so identical blocks look different.",
+      "jp": "はい。直し方は、初期化ベクトルというランダムな開始値を使うモードにして、同じブロックを違って見せることです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is there a mode that also checks integrity?",
+      "jp": "完全性も確認してくれるモードはありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Today we recommend GCM, an authenticated mode. It encrypts and detects any change at the same time.",
+      "jp": "あります。いまは認証つきモードのGCMを勧めます。暗号化と、改ざんの検知を同時にします。"
+     },
+     {
+      "sp": 1,
+      "en": "So the lesson is: don't only choose a strong algorithm. Choose the right mode, too.",
+      "jp": "つまり教訓は、強いアルゴリズムを選ぶだけじゃなくて、正しいモードも選ぶ、ですね。"
+     },
+     {
+      "sp": 0,
+      "en": "And never reuse the same starting value with the same key. That breaks the security completely.",
+      "jp": "そして同じ鍵で同じ開始値を使い回さないこと。それは安全性を完全に壊します。"
+     }
+    ]
+   },
+   {
+    "t": "🧮 204｜講義4：ハッシュ関数：Lecture 4: Hash Functions",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we leave encryption for a moment and study a different tool: the hash function.",
+      "jp": "今日は暗号化を少し離れて、別の道具を学びます。ハッシュ関数です。"
+     },
+     {
+      "sp": 1,
+      "en": "What does a hash function do, in simple words?",
+      "jp": "ハッシュ関数は、やさしく言うと何をするんですか。",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "It takes any input, a word or a whole movie, and produces a short fixed-size fingerprint.",
+      "jp": "どんな入力でも、1つの単語でも映画1本でも受け取って、短くて長さが決まった指紋を作ります。"
+     },
+     {
+      "sp": 1,
+      "en": "A fingerprint. So the same input always gives the same fingerprint?",
+      "jp": "指紋。じゃあ同じ入力は、いつも同じ指紋になる？"
+     },
+     {
+      "sp": 0,
+      "en": "Always. And a tiny change in the input, even one letter, changes the whole fingerprint completely.",
+      "jp": "いつもです。そして入力がほんの少し、1文字変わるだけで、指紋がまるごと変わります。",
+      "note": "用語: hash function = 入力から固定長の指紋を作る一方向の関数／SHA-256 = 現在広く使われる安全なハッシュ"
+     },
+     {
+      "sp": 1,
+      "en": "Can I get the original data back from the fingerprint?",
+      "jp": "指紋から元のデータを取り戻せますか。"
+     },
+     {
+      "sp": 0,
+      "en": "No, and that's the point. A hash is one-way. You can't reverse it. That's different from encryption.",
+      "jp": "いいえ、それが重要なところです。ハッシュは一方向で、元に戻せません。暗号化とは違います。"
+     },
+     {
+      "sp": 1,
+      "en": "Then what is it used for? If I can't get the data back, how is it useful?",
+      "jp": "じゃあ何に使うんですか。データを戻せないなら、どう役に立つんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Checking integrity. You download a file, compute its hash, and compare it with the published hash. If they match, the file is unchanged.",
+      "jp": "完全性の確認です。ファイルをダウンロードして、ハッシュを計算して、公開されたハッシュと比べる。一致すれば、変更されていません。"
+     },
+     {
+      "sp": 1,
+      "en": "Which hash functions are safe today?",
+      "jp": "いま安全なハッシュ関数はどれですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Use SHA-256 or SHA-3. Never use MD5 or SHA-1 for security. Researchers have found ways to make two different files with the same hash.",
+      "jp": "SHA-256かSHA-3を使います。セキュリティ目的でMD5やSHA-1は使わないこと。同じハッシュの2つの別ファイルを作る方法が、見つかっているからです。"
+     }
+    ]
+   },
+   {
+    "t": "🔑 205｜講義5：パスワードの保存：Lecture 5: Storing Passwords",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's lecture is practical. Suppose you build a website. How do you store users' passwords?",
+      "jp": "今日の講義は実践的です。あなたがウェブサイトを作るとします。利用者のパスワードを、どう保存しますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd encrypt them with AES, and keep the key somewhere safe.",
+      "jp": "AESで暗号化して、鍵をどこか安全な場所に置きます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a common first answer, but it's wrong. If the key is stolen, every password is exposed.",
+      "jp": "よくある最初の答えですが、間違いです。鍵が盗まれたら、全部のパスワードがばれます。"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'd use a hash. The website only needs to compare, not to read the password.",
+      "jp": "じゃあハッシュを使います。サイトは比べるだけでよくて、パスワードを読む必要はないので。"
+     },
+     {
+      "sp": 0,
+      "en": "Better. But a plain hash has a problem. Attackers pre-compute the hashes of millions of common passwords, and just look them up.",
+      "jp": "いい線です。でも単純なハッシュには問題があります。攻撃者は、よくある何百万ものパスワードのハッシュを事前に計算して、引くだけにします。"
+     },
+     {
+      "sp": 1,
+      "en": "How do we stop that?",
+      "jp": "どうやって防ぎますか。"
+     },
+     {
+      "sp": 0,
+      "en": "We add a salt: a random value, different for every user, mixed in before hashing. The pre-computed lists become useless.",
+      "jp": "ソルトを足します。利用者ごとに違うランダムな値を、ハッシュの前に混ぜる。事前計算の一覧は役に立たなくなります。",
+      "note": "用語: salt = ユーザーごとのランダムな値／Argon2・bcrypt = パスワード保存用のわざと遅いハッシュ"
+     },
+     {
+      "sp": 1,
+      "en": "And is the salt secret?",
+      "jp": "ソルトは秘密ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No. It's stored next to the hash. Its job is only to make every hash unique.",
+      "jp": "いいえ。ハッシュの隣に保存します。役目は、すべてのハッシュを一意にすることだけです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is SHA-256 with a salt enough?",
+      "jp": "ソルトつきのSHA-256で十分ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Not quite. Use a deliberately slow algorithm designed for passwords, such as Argon2 or bcrypt. Slowness makes mass guessing expensive.",
+      "jp": "まだ足りません。パスワード用に作られた、わざと遅いアルゴリズム、Argon2やbcryptを使います。遅いことが、大量の推測を高くつくものにします。"
+     }
+    ]
+   },
+   {
+    "t": "🔓 206｜講義6：公開鍵暗号：Lecture 6: Public-Key Cryptography",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Remember the problem from lecture two? Two people must share a key before they can talk secretly.",
+      "jp": "講義2の問題を覚えていますか。2人が秘密に話す前に、鍵を共有しなければならないという。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, the key distribution problem. Is there a solution?",
+      "jp": "はい、鍵配送問題です。解決策はあるんですか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "There is, and it's one of the greatest ideas in computer science: public-key cryptography. Each person has two keys.",
+      "jp": "あります。しかもコンピューターサイエンスで最も偉大な発想の1つ、公開鍵暗号です。各人が2つの鍵を持ちます。"
+     },
+     {
+      "sp": 1,
+      "en": "A public key and a private key, like SSH keys?",
+      "jp": "公開鍵と秘密鍵、SSHの鍵みたいに？"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Anyone can use your public key to lock a message. But only your private key can unlock it.",
+      "jp": "その通り。誰でも、あなたの公開鍵でメッセージを閉じられる。でも開けられるのは、あなたの秘密鍵だけ。",
+      "note": "用語: public key / private key = 公開鍵（閉じる用）／秘密鍵（開ける用）／RSA・楕円曲線暗号 = 代表的な方式"
+     },
+     {
+      "sp": 1,
+      "en": "So I can publish my public key everywhere, even on a billboard?",
+      "jp": "じゃあ公開鍵は、看板に貼ってもいい、どこに公開してもいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. It's a padlock that anyone can close, but only you have the key to open it.",
+      "jp": "はい。誰でも閉められる南京錠で、開ける鍵を持つのはあなただけです。"
+     },
+     {
+      "sp": 1,
+      "en": "Then why do we still use symmetric encryption?",
+      "jp": "じゃあなぜ、まだ共通鍵暗号を使うんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because public-key operations are slow. In practice, we use public-key cryptography to exchange a symmetric key, and then use fast AES for the data.",
+      "jp": "公開鍵の計算は遅いからです。実際には、公開鍵暗号で共通鍵を交換して、データには速いAESを使います。"
+     },
+     {
+      "sp": 1,
+      "en": "RSA is the famous algorithm, right?",
+      "jp": "有名なアルゴリズムはRSAですよね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and elliptic-curve cryptography is now popular, because it gives the same security with much shorter keys.",
+      "jp": "はい、そして楕円曲線暗号がいま人気です。同じ安全性が、ずっと短い鍵で得られるからです。"
+     }
+    ]
+   },
+   {
+    "t": "🎨 207｜講義7：鍵交換の発想：Lecture 7: Agreeing on a Secret in Public",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today I'll show you a magic trick. Two people can agree on a secret key while everybody is listening.",
+      "jp": "今日は魔法のような話をします。2人が、みんなに聞かれている中で、秘密の鍵に合意できます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds impossible. If everyone hears everything, how can anything remain secret?",
+      "jp": "不可能に聞こえます。全部が聞かれるなら、どうして秘密が残るんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Let's use paint. Alice and Bob both start with the same yellow paint, which is public.",
+      "jp": "絵の具で考えましょう。アリスとボブは、公開されている同じ黄色の絵の具から始めます。"
+     },
+     {
+      "sp": 1,
+      "en": "Each of them secretly mixes in a private color, and sends the mixture to the other.",
+      "jp": "それぞれが秘密の色を混ぜて、その混ざった色を相手に送ります。"
+     },
+     {
+      "sp": 0,
+      "en": "So the listener sees the yellow, and the two mixtures, but not the private colors.",
+      "jp": "盗み聞きする人は、黄色と2つの混ぜた色は見えるけど、秘密の色は見えない。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Now each person adds their own private color to the mixture they received.",
+      "jp": "そうです。次に、それぞれが、受け取った混ぜた色に、自分の秘密の色を足します。"
+     },
+     {
+      "sp": 0,
+      "en": "And both end up with the same final color: yellow plus Alice's color plus Bob's color!",
+      "jp": "それで、どちらも同じ最終的な色になる。黄色にアリスの色とボブの色を足した色！"
+     },
+     {
+      "sp": 1,
+      "en": "That's the Diffie-Hellman key exchange. In real life, it uses mathematics instead of paint, because mixing paint can't be reversed easily, and neither can the math.",
+      "jp": "それがディフィー・ヘルマン鍵交換です。現実では絵の具の代わりに数学を使います。絵の具の混色が簡単に戻せないように、その数学も戻せないからです。",
+      "note": "用語: Diffie-Hellman = 盗み聞きされても共通の鍵を作れる鍵交換方式／man-in-the-middle = 中間者攻撃"
+     },
+     {
+      "sp": 0,
+      "en": "Can an attacker still do something? For example, sit in the middle?",
+      "jp": "攻撃者に、まだできることはありますか。たとえば間に入るとか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, a man-in-the-middle attack, where the attacker talks to both sides pretending to be the other. That's why we need authentication, the topic of the next lecture.",
+      "jp": "はい、中間者攻撃です。攻撃者が双方に、相手のふりをして話す。だから認証が必要になります。次の講義のテーマです。"
+     }
+    ]
+   },
+   {
+    "t": "✍️ 208｜講義8：電子署名：Lecture 8: Digital Signatures",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Last time we saw that we need to know who we're talking to. Today we study digital signatures.",
+      "jp": "前回、話している相手が誰かを知る必要があると分かりました。今日は電子署名を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it like a handwritten signature, but for computers?",
+      "jp": "手書きの署名のコンピューター版ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "In purpose, yes. But it's stronger. It proves two things: who created the document, and that nobody changed it afterwards.",
+      "jp": "目的としては、はい。でももっと強いです。2つを証明します。誰が作ったか、そしてあとから誰も変えていないこと。"
+     },
+     {
+      "sp": 1,
+      "en": "How does it work? With the same keys as before?",
+      "jp": "どう動くんですか。さっきと同じ鍵で？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, but in reverse. You compute the hash of the document, and then you lock the hash with your private key. That's the signature.",
+      "jp": "はい、ただし逆向きです。文書のハッシュを計算して、そのハッシュを自分の秘密鍵で閉じます。それが署名です。",
+      "note": "用語: digital signature = 秘密鍵で署名し、公開鍵で確認する仕組み（作成者と改ざんなしを証明）"
+     },
+     {
+      "sp": 1,
+      "en": "And anyone can check it with my public key?",
+      "jp": "そして誰でも、私の公開鍵で確認できる？"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. They unlock the signature with your public key, compute the hash themselves, and compare. If they match, it's genuine.",
+      "jp": "その通り。署名を公開鍵で開き、自分でもハッシュを計算して、比べます。一致すれば本物です。"
+     },
+     {
+      "sp": 1,
+      "en": "What if someone changes a single letter in the document?",
+      "jp": "文書の1文字でも変えられたら？"
+     },
+     {
+      "sp": 0,
+      "en": "The hash changes completely, so the comparison fails. The signature is broken, and everyone knows.",
+      "jp": "ハッシュが完全に変わるので、比較は失敗します。署名が壊れて、全員が気づきます。"
+     },
+     {
+      "sp": 1,
+      "en": "Where do we see this in daily life?",
+      "jp": "日常のどこで見かけますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Software updates, secure email, and every website certificate. When your computer installs an update, it first checks the vendor's signature.",
+      "jp": "ソフトの更新、安全なメール、そしてすべてのウェブサイトの証明書です。パソコンが更新を入れる時、まずベンダーの署名を確認します。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 209｜講義9：TLSのつながり方：Lecture 9: How a TLS Connection Starts",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we put everything together. You type a website address, and a green lock appears. What happened behind the scenes?",
+      "jp": "今日は全部をまとめます。ウェブサイトのアドレスを打つと、鍵のマークが出る。その裏で何が起きたのか。"
+     },
+     {
+      "sp": 1,
+      "en": "First, my browser says hello to the server, and lists the encryption methods it supports.",
+      "jp": "まず、ブラウザがサーバーに挨拶して、対応している暗号の方式を並べます。"
+     },
+     {
+      "sp": 0,
+      "en": "Correct. This is the TLS handshake. The server chooses one method, and sends its certificate.",
+      "jp": "正解。これがTLSのハンドシェイクです。サーバーが方式を1つ選んで、証明書を送ります。"
+     },
+     {
+      "sp": 1,
+      "en": "The certificate contains the server's public key, and a signature from someone we trust.",
+      "jp": "証明書にはサーバーの公開鍵と、信頼できる人の署名が入っている。",
+      "note": "用語: TLS handshake = 暗号の方式と鍵を決める最初のやり取り／forward secrecy = 過去の通信を守る性質"
+     },
+     {
+      "sp": 0,
+      "en": "Good. The browser verifies the signature. Then the browser and the server do a key exchange, like the paint trick from lecture seven.",
+      "jp": "いいですね。ブラウザは署名を確認します。それからブラウザとサーバーが、講義7の絵の具の話のような鍵交換をします。"
+     },
+     {
+      "sp": 1,
+      "en": "And then both sides have the same secret key, and the rest of the conversation uses fast symmetric encryption.",
+      "jp": "それで双方が同じ秘密の鍵を持って、残りの会話は、速い共通鍵暗号を使う。"
+     },
+     {
+      "sp": 0,
+      "en": "You've got it. In modern TLS, the whole handshake takes only one round trip, about a tenth of a second.",
+      "jp": "分かっていますね。最近のTLSでは、ハンドシェイク全体が1往復、約0.1秒で済みます。"
+     },
+     {
+      "sp": 1,
+      "en": "What does 'forward secrecy' mean? I've seen that phrase.",
+      "jp": "『前方秘匿性』とは何ですか。その言葉を見たことがあります。",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "The key exchange uses fresh keys for every connection. So even if the server's long-term key is stolen later, old recorded conversations stay unreadable.",
+      "jp": "鍵交換は、接続ごとに新しい鍵を使います。だからサーバーの長期の鍵があとで盗まれても、記録された過去の会話は読めないままです。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a clever design. Each connection is protected separately.",
+      "jp": "賢い設計ですね。接続ごとに別々に守られている。"
+     }
+    ]
+   },
+   {
+    "t": "🏛️ 210｜講義10：証明書と信頼の仕組み：Lecture 10: Certificates and Trust",
+    "l": [
+     {
+      "sp": 0,
+      "en": "In the last lecture, the server sent a certificate. But why should I trust a certificate? Anyone can make one.",
+      "jp": "前回、サーバーが証明書を送りました。でもなぜ証明書を信用できるんですか。誰でも作れます。"
+     },
+     {
+      "sp": 1,
+      "en": "Excellent question. The answer is a chain of trust. A certificate authority, a CA, signs the certificate after checking the owner.",
+      "jp": "すばらしい質問です。答えは信頼の連鎖です。認証局、CAが、所有者を確認してから証明書に署名します。"
+     },
+     {
+      "sp": 0,
+      "en": "And why do I trust the CA?",
+      "jp": "じゃあなぜCAを信用するんですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Your computer comes with a list of trusted root CAs, installed by the operating system or the browser. Their certificates are the anchor.",
+      "jp": "パソコンには、OSやブラウザが入れた、信頼するルートCAの一覧があります。そのCAの証明書が起点です。",
+      "note": "用語: CA (certificate authority) = 認証局／PKI = 証明書で信頼を作る公開鍵基盤"
+     },
+     {
+      "sp": 0,
+      "en": "So there's a chain: my site's certificate, signed by an intermediate CA, signed by a root CA that my computer trusts.",
+      "jp": "つまり連鎖がある。私のサイトの証明書、中間CAの署名、そしてパソコンが信頼するルートCAの署名。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. If any link is broken, expired or untrusted, the browser shows a warning. That's the system we call PKI, public key infrastructure.",
+      "jp": "そうです。どこか1つの輪が壊れていたり、期限切れや信頼されていなければ、ブラウザが警告を出します。この仕組みをPKI、公開鍵基盤と呼びます。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if a CA makes a mistake, or is hacked?",
+      "jp": "CAが間違いをしたり、ハッキングされたら？"
+     },
+     {
+      "sp": 1,
+      "en": "That's a real danger. It has happened, and browsers removed those CAs. That's why transparency logs now record every certificate issued.",
+      "jp": "本当に危険です。実際に起きて、ブラウザはそのCAを外しました。だから今は、発行されたすべての証明書を、透明性ログに記録します。"
+     },
+     {
+      "sp": 0,
+      "en": "So the system is not perfect, but it can detect and repair its own failures.",
+      "jp": "つまり完璧じゃないけれど、自分の失敗を検知して直せる仕組みなんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. And that's the end of our foundation. With these ten lectures, you understand the building blocks. Next, we'll learn how attackers think, and how defenders respond.",
+      "jp": "その通り。これで基礎は終わりです。この10講で、部品を理解しました。次は、攻撃者がどう考えるか、そして防御側がどう対応するかを学びます。"
+     }
+    ]
+   }
+  ]
+ }
+]

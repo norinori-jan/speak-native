@@ -1,0 +1,538 @@
+[
+ {
+  "id": "net11",
+  "ic": "🛠️",
+  "n": "ネットワーク英語11・設計・IPv6・Linux・自動化",
+  "hint": "Ana teaches Ken network design, address plans, IPv6, dual stack, Linux network commands, log searching, SSH keys, tcpdump, Ansible automation and REST APIs",
+  "level": 4,
+  "keywords": [
+   "design",
+   "ipv6",
+   "automation"
+  ],
+  "d": [
+   {
+    "t": "📐 096｜設計は要件から：Design Starts with Requirements",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the director asked us to design the network for the new office. What's the first thing you do?",
+      "jp": "ケン、部長が新オフィスのネットワーク設計を頼んできたわ。最初に何をする？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Start drawing a diagram? I think I should choose the switches first.",
+      "jp": "図を描き始める？まずスイッチを選ぶべきかな。"
+     },
+     {
+      "sp": 0,
+      "en": "No. Never start with equipment. Start with requirements: how many users, which applications, and how much downtime is acceptable.",
+      "jp": "だめ。機器から始めないの。要件から始めるのよ。何人で、どのアプリで、どれだけの停止なら許されるか。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. So I ask: how many people, and what do they do all day?",
+      "jp": "分かった。じゃあ聞くよ。何人で、1日中何をしているのか。",
+      "note": "用語: requirements = 要件／constraint = 制約（予算・期限など）"
+     },
+     {
+      "sp": 0,
+      "en": "Right. Also ask about growth. If the office doubles in two years, the design must still work.",
+      "jp": "そう。成長も聞いて。2年でオフィスが2倍になっても、設計が通用しないと。"
+     },
+     {
+      "sp": 1,
+      "en": "What about money? I assume there's a budget.",
+      "jp": "お金は？予算があるはずだけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Always. And it's a constraint, not a requirement. Write it separately, so you can show the trade-offs.",
+      "jp": "いつもね。それは制約で、要件じゃない。別に書いて、トレードオフを示せるようにして。"
+     },
+     {
+      "sp": 1,
+      "en": "Trade-offs, like 'more redundancy costs more'?",
+      "jp": "トレードオフって、『冗長性を上げるとお金がかかる』みたいな？"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Give the director two or three options with the cost, the risk and the benefit of each, and recommend one.",
+      "jp": "その通り。部長に、費用、リスク、利点を添えた2〜3案を出して、1つを推薦するの。"
+     },
+     {
+      "sp": 1,
+      "en": "Understood. Requirements first, equipment last.",
+      "jp": "分かった。要件が先で、機器は最後だね。"
+     }
+    ]
+   },
+   {
+    "t": "🗃️ 097｜アドレス設計表：The Address Plan",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, here's our new address plan. Can you tell me why I chose ten dot twenty for the whole branch network?",
+      "jp": "ケン、新しいアドレス計画よ。支店全体に10.20を選んだ理由が分かる？"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe to avoid overlapping with headquarters? They use ten dot ten.",
+      "jp": "本社と重ならないためかな。本社は10.10を使っているから。"
+     },
+     {
+      "sp": 0,
+      "en": "Correct. If two sites overlap, you can't route between them without ugly tricks. Now look at the next level.",
+      "jp": "正解。2つの拠点が重なると、見苦しい工夫なしには、間でルーティングできないの。次の階層を見て。"
+     },
+     {
+      "sp": 1,
+      "en": "Each floor gets its own block. Floor one is ten dot twenty dot one dot zero slash twenty-four, and so on.",
+      "jp": "各フロアが専用のブロックだね。1階は10.20.1.0/24、以降も同じ。",
+      "note": "用語: address plan = アドレス設計表／overlap = 範囲の重複"
+     },
+     {
+      "sp": 0,
+      "en": "And inside each floor, we keep a pattern: dot one is the gateway, dot two to dot nine are network devices.",
+      "jp": "それと各フロアの中でも型を決めるの。.1がゲートウェイ、.2から.9がネットワーク機器。"
+     },
+     {
+      "sp": 1,
+      "en": "Why keep a pattern? Isn't it easier to assign addresses randomly?",
+      "jp": "どうして型を決めるの？適当に割り当てた方が楽じゃない？"
+     },
+     {
+      "sp": 0,
+      "en": "A pattern saves you at three a.m. When you see ten dot twenty dot three dot one, you immediately know it's the third-floor gateway.",
+      "jp": "型は午前3時に助けてくれるの。10.20.3.1を見れば、3階のゲートウェイだとすぐ分かる。"
+     },
+     {
+      "sp": 1,
+      "en": "And we leave empty blocks for growth, right?",
+      "jp": "それと、成長のために空きブロックを残すんだよね？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, at least thirty percent. Changing an address plan later is one of the most painful jobs in networking.",
+      "jp": "ええ、最低30%は。あとからアドレス計画を変えるのは、ネットワークの仕事で最も大変な部類よ。"
+     }
+    ]
+   },
+   {
+    "t": "🆕 098｜IPv6の基本：Meet IPv6",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, our provider will give us IPv6 next month. Do you know how long an IPv6 address is?",
+      "jp": "ケン、来月プロバイダーからIPv6が来るの。IPv6アドレスの長さは分かる？"
+     },
+     {
+      "sp": 1,
+      "en": "One hundred twenty-eight bits, compared with thirty-two for IPv4. It's written in hexadecimal, with colons.",
+      "jp": "128ビット。IPv4の32ビットと比べて。16進数で、コロンで区切って書く。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. Here's one: two-zero-zero-one, colon, d-b-eight, colon, colon, one. What does the double colon mean?",
+      "jp": "そう。これがその1つ。2001:db8::1。ダブルコロンは何を意味する？",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "It replaces a long run of zeros. You can use it only once in an address.",
+      "jp": "ゼロが続く長い部分を省略するもの。1つのアドレスで1回しか使えない。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. And how many addresses can one subnet have in IPv6?",
+      "jp": "いいわね。IPv6では、1つのサブネットに何個のアドレスがある？"
+     },
+     {
+      "sp": 1,
+      "en": "The standard subnet is slash sixty-four, so eighteen quintillion addresses. We'll never run out.",
+      "jp": "標準のサブネットは/64で、1800京個のアドレス。尽きることはない。",
+      "note": "用語: /64 = IPv6の標準的なサブネットの大きさ／hexadecimal = 16進数"
+     },
+     {
+      "sp": 0,
+      "en": "Because there are so many addresses, NAT is not needed. Every device can have a global address.",
+      "jp": "アドレスが多いから、NATは必要ない。どの機器もグローバルなアドレスを持てる。"
+     },
+     {
+      "sp": 1,
+      "en": "Does that mean every device is exposed to the internet? That sounds dangerous.",
+      "jp": "つまり全部の機器がインターネットに丸見え？危なそうだけど。"
+     },
+     {
+      "sp": 0,
+      "en": "Not if you use a firewall. NAT was never a security tool. A firewall with a deny-by-default rule is.",
+      "jp": "ファイアウォールがあれば大丈夫。NATは最初からセキュリティ機能じゃないの。初期拒否のファイアウォールがそれよ。"
+     }
+    ]
+   },
+   {
+    "t": "🔀 099｜IPv4とIPv6を共存させる：Living with Both: Dual Stack",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, we can't switch to IPv6 overnight. Some of our old systems only speak IPv4. What do we do?",
+      "jp": "アナ、IPv6に一晩では移れない。古いシステムにはIPv4しか話せないものがある。どうする？"
+     },
+     {
+      "sp": 1,
+      "en": "Use dual stack. Every device and router speaks both IPv4 and IPv6 at the same time.",
+      "jp": "デュアルスタックを使うの。全部の機器とルーターが、IPv4とIPv6を同時に話す。"
+     },
+     {
+      "sp": 0,
+      "en": "So a laptop has two addresses, one of each type?",
+      "jp": "じゃあノートパソコンには、2種類のアドレスが1つずつ付くの？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. When it connects to a website, it prefers IPv6, and falls back to IPv4 if IPv6 doesn't work.",
+      "jp": "そう。ウェブサイトにつなぐ時は、IPv6を優先して、IPv6が使えなければIPv4に戻る。",
+      "note": "用語: dual stack = IPv4とIPv6を同時に使う方式"
+     },
+     {
+      "sp": 0,
+      "en": "What if the IPv6 path is broken, but the laptop doesn't know?",
+      "jp": "IPv6の経路が壊れているのに、パソコンが気づかなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then you see a delay before it falls back. That's a common complaint: 'the site is slow only sometimes'.",
+      "jp": "その場合は、戻るまでに遅延が出る。よくある苦情よ。『たまにだけサイトが遅い』。"
+     },
+     {
+      "sp": 0,
+      "en": "So I should test both IPv4 and IPv6 every time I check a service.",
+      "jp": "じゃあサービスを確認する時は、毎回IPv4とIPv6の両方をテストしないといけないね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Use the ping with a minus four and minus six option, and compare the results.",
+      "jp": "その通り。pingの-4と-6オプションを使って、結果を比べて。"
+     },
+     {
+      "sp": 0,
+      "en": "Good tip. I'll add both tests to our checklist.",
+      "jp": "いい助言だ。チェックリストに両方のテストを足すよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🐧 100｜Linuxでネットワークを見る：Reading the Network on Linux",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the new server doesn't answer. You have a terminal open. What's the first command you type?",
+      "jp": "ケン、新しいサーバーが応答しないの。ターミナルが開いてる。最初に打つコマンドは？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "I'd check the address with 'ip address show', to see whether the interface is up and has the right IP.",
+      "jp": "『ip address show』でアドレスを確認する。インターフェースが上がっていて、正しいIPがあるか見るために。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. The interface is up, but there's no default route. Which command shows the routing table?",
+      "jp": "いいわね。インターフェースは上がっているけど、デフォルトルートがない。ルーティングテーブルを見るコマンドは？"
+     },
+     {
+      "sp": 1,
+      "en": "'ip route show'. I see it's empty, except for the local network.",
+      "jp": "『ip route show』。ローカルのネットワーク以外は空だ。"
+     },
+     {
+      "sp": 0,
+      "en": "Add a default route. Then check which ports the server is listening on, with 'ss' and the options minus t, l, n.",
+      "jp": "デフォルトルートを足して。次に、サーバーがどのポートで待ち受けているか、『ss』のオプション-tlnで見て。",
+      "note": "用語: ip route / ss / dig = ルーティング表／待ち受けポート／DNS問い合わせを見るLinuxコマンド"
+     },
+     {
+      "sp": 1,
+      "en": "The web server listens on port eighty. And SSH listens on twenty-two.",
+      "jp": "ウェブサーバーが80番で待ち受けてる。SSHは22番。"
+     },
+     {
+      "sp": 0,
+      "en": "Now test the name resolution. What do you type?",
+      "jp": "次に名前解決をテストして。何を打つ？"
+     },
+     {
+      "sp": 1,
+      "en": "'dig' and the name. Or 'resolvectl status' to see which DNS servers the system uses.",
+      "jp": "『dig』と名前。または『resolvectl status』で、システムが使っているDNSサーバーを見る。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Four commands: ip address, ip route, ss, dig. They solve most Linux network problems.",
+      "jp": "完璧。4つのコマンド、ip address、ip route、ss、dig。Linuxのネットワーク問題の大半は、これで解ける。"
+     }
+    ]
+   },
+   {
+    "t": "🔍 101｜ログを検索する：Searching the Logs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the web server had errors last night, but there are millions of lines in the log. How do I find them?",
+      "jp": "アナ、ウェブサーバーが昨夜エラーを出したのに、ログは何百万行もある。どうやって探すの？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Use grep. Type grep, then the word 'error', then the log file name.",
+      "jp": "grepを使って。grepと打って、『error』という単語、それからログのファイル名。",
+      "note": "用語: grep = 文字列で検索するコマンド／journalctl = システムのログを見るコマンド"
+     },
+     {
+      "sp": 0,
+      "en": "It found twelve thousand lines. That's still too many.",
+      "jp": "1万2千行も見つかった。まだ多すぎる。"
+     },
+     {
+      "sp": 1,
+      "en": "Narrow it down. Add the time: search only for lines that contain 'two a.m.' to 'three a.m.'.",
+      "jp": "絞り込むの。時刻を足して。午前2時から3時を含む行だけを探して。"
+     },
+     {
+      "sp": 0,
+      "en": "Better. Now there are forty lines, and I see the same message repeated: 'connection refused to database'.",
+      "jp": "よくなった。40行になって、同じメッセージがくり返されてる。『データベースへの接続が拒否された』。"
+     },
+     {
+      "sp": 1,
+      "en": "Now check the database log at the same time. Use journalctl with the since and until options.",
+      "jp": "次にデータベースのログを同じ時間帯で確認して。journalctlの、sinceとuntilのオプションを使って。"
+     },
+     {
+      "sp": 0,
+      "en": "I found it. The database restarted at two-oh-five, because of an automatic update.",
+      "jp": "見つけた。データベースが2時5分に再起動してる。自動更新のせいで。"
+     },
+     {
+      "sp": 1,
+      "en": "There's the cause. Now count how many errors there were, using grep with the count option.",
+      "jp": "それが原因ね。次に、grepのカウントオプションで、エラーが何件あったか数えて。"
+     },
+     {
+      "sp": 0,
+      "en": "Three hundred and fifty. Good, now I can write: 'Three hundred fifty errors in six minutes, caused by an automatic database update.'",
+      "jp": "350件。よし、これで書ける。『6分間で350件のエラー、原因はデータベースの自動更新』。"
+     }
+    ]
+   },
+   {
+    "t": "🗝️ 102｜SSH鍵でログインする：Logging In with SSH Keys",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I see you're typing a password every time you log in to the servers. There's a better way.",
+      "jp": "ケン、サーバーにログインするたびにパスワードを打ってるわね。もっといい方法があるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "SSH keys, right? I've heard of them, but I've never set one up.",
+      "jp": "SSH鍵だよね？聞いたことはあるけど、設定したことはない。"
+     },
+     {
+      "sp": 0,
+      "en": "You create a pair of keys: a private key that stays on your laptop, and a public key that you put on the servers.",
+      "jp": "鍵を2つ作るの。自分のノートパソコンに残す秘密鍵と、サーバーに置く公開鍵。",
+      "note": "用語: private key / public key = 秘密鍵（手元に保管）／公開鍵（相手に渡す）"
+     },
+     {
+      "sp": 1,
+      "en": "So the server only knows my public key. If it's stolen, nothing bad happens?",
+      "jp": "つまりサーバーは公開鍵しか知らない。それが盗まれても、何も起きない？"
+     },
+     {
+      "sp": 0,
+      "en": "Correct. The public key is safe to share. But the private key must never leave your laptop, and it needs a passphrase.",
+      "jp": "その通り。公開鍵は共有して安全。でも秘密鍵は絶対にノートパソコンから出さず、パスフレーズも付けて。"
+     },
+     {
+      "sp": 1,
+      "en": "What happens if someone gets my private key and my passphrase?",
+      "jp": "もし誰かが秘密鍵とパスフレーズを手に入れたら？"
+     },
+     {
+      "sp": 0,
+      "en": "Then they are you. That's why we protect the laptop with disk encryption, and remove keys when someone leaves.",
+      "jp": "その人があなたになる。だからノートパソコンをディスク暗号化で守って、人が辞めたら鍵を消すの。"
+     },
+     {
+      "sp": 1,
+      "en": "And after the setup, I can disable password login on the server?",
+      "jp": "設定が終わったら、サーバー側でパスワードログインを無効にできる？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and you should. Attackers love password logins, because they can guess them a million times.",
+      "jp": "ええ、そうすべき。攻撃者はパスワードログインが大好きなの。100万回でも推測できるから。"
+     }
+    ]
+   },
+   {
+    "t": "📡 103｜tcpdumpで確かめる：Checking with tcpdump",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the monitoring says our server is fine, but the customer says they never receive the response. How can I check?",
+      "jp": "アナ、監視ではサーバーは正常なのに、お客さんは応答が届かないと言う。どうやって確かめる？"
+     },
+     {
+      "sp": 1,
+      "en": "Capture the packets on the server with tcpdump. Filter by the customer's address, and by port four-four-three.",
+      "jp": "サーバーでtcpdumpでパケットを取って。お客さんのアドレスと、443番ポートで絞り込んで。",
+      "note": "用語: tcpdump = パケットを取得して中身を見るコマンド／filter = 条件で絞り込む"
+     },
+     {
+      "sp": 0,
+      "en": "I see the customer's request come in. And I see our response going out. So the server did answer.",
+      "jp": "お客さんの要求が入ってくるのが見える。そして、こちらの応答が出ていくのも見える。つまりサーバーは答えたんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Check the details. What's the size of the response packets, and is there anything unusual?",
+      "jp": "詳細を見て。応答パケットの大きさは？何かおかしな点は？",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "They're big, around fourteen hundred bytes, and the same ones are sent again and again.",
+      "jp": "大きいね、1400バイトくらいで、同じものが何度も送り直されてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Retransmissions. The customer's side isn't acknowledging them. Something between us is dropping the big packets.",
+      "jp": "再送ね。お客さん側が受け取りを返していない。間のどこかで、大きいパケットが捨てられてる。"
+     },
+     {
+      "sp": 0,
+      "en": "Probably an MTU problem on the customer's VPN. Should I tell them?",
+      "jp": "たぶんお客さんのVPNのMTUの問題だ。伝えた方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, send the capture as evidence. 'Our server responded, and the packets left. Please check the MTU on your side.'",
+      "jp": "ええ、証拠としてキャプチャを送って。『こちらのサーバーは応答し、パケットは出ています。そちら側のMTUを確認してください』。"
+     },
+     {
+      "sp": 0,
+      "en": "Sent. It's much easier to talk to a customer when you have the proof.",
+      "jp": "送ったよ。証拠があると、お客さんとの話がずっとしやすい。"
+     }
+    ]
+   },
+   {
+    "t": "🤖 104｜手作業をやめる：Stop Doing It by Hand",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you changed the same setting on forty switches by hand yesterday. How long did it take?",
+      "jp": "ケン、昨日、同じ設定を40台のスイッチに手作業で変えたでしょう。どれくらいかかった？"
+     },
+     {
+      "sp": 1,
+      "en": "Six hours. And I made one typo on the thirty-first switch, and I had to fix it later.",
+      "jp": "6時間。それに31台目で打ち間違えて、あとで直さなきゃいけなかった。"
+     },
+     {
+      "sp": 0,
+      "en": "That's why we automate. With a tool like Ansible, you describe the setting once, and it applies it to all forty.",
+      "jp": "だから自動化するの。Ansibleのようなツールなら、設定を1回書いて、40台全部に適用できる。",
+      "note": "用語: Ansible / playbook / inventory = 設定を自動で配るツール／手順書／対象一覧"
+     },
+     {
+      "sp": 1,
+      "en": "How does it connect to the switches?",
+      "jp": "スイッチにはどうやってつながるの？"
+     },
+     {
+      "sp": 0,
+      "en": "Over SSH, using the keys we set up. You list the switches in an inventory file, and write the steps in a playbook.",
+      "jp": "SSHで、設定したあの鍵を使って。インベントリファイルにスイッチを並べて、手順をプレイブックに書く。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it safe? What if the playbook has a mistake? It would break forty switches at once.",
+      "jp": "安全なの？プレイブックに間違いがあったら、40台が一度に壊れる。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the risk. So you first run it in check mode, which shows what would change, and then on one test switch.",
+      "jp": "それがリスクね。だから最初に、変更される内容だけを見せるチェックモードで動かして、次にテスト用の1台で試すの。"
+     },
+     {
+      "sp": 1,
+      "en": "And we keep the playbook in Git, so every change is reviewed and recorded.",
+      "jp": "それとプレイブックはGitに置いて、変更を全部レビューして記録する。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Automation doesn't remove mistakes. It makes them visible, repeatable and fixable.",
+      "jp": "その通り。自動化はミスをなくさない。ミスを、見えて、再現できて、直せるものにするの。"
+     }
+    ]
+   },
+   {
+    "t": "🔗 105｜APIでネットワークを動かす：Talking to the Network by API",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ana, the new firewall has a REST API. The vendor says we can manage it with a script. Where do I start?",
+      "jp": "アナ、新しいファイアウォールにはREST APIがあるの。ベンダーは、スクリプトで管理できると言う。どこから始めればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "First read the API documentation. Find out how to log in, and which endpoints exist.",
+      "jp": "まずAPIの資料を読んで。ログインの方法と、どんなエンドポイントがあるかを調べて。"
+     },
+     {
+      "sp": 0,
+      "en": "It says I get a token by sending my username and password, and then I send the token in every request.",
+      "jp": "ユーザー名とパスワードを送ってトークンをもらって、以降は全リクエストにトークンを付ける、と書いてある。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Keep the token out of your script. Read it from an environment variable, and never commit it to Git.",
+      "jp": "いいわね。トークンはスクリプトに書かないで。環境変数から読んで、絶対にGitに入れないこと。",
+      "note": "用語: token = APIを使うための認証の札／environment variable = 環境変数"
+     },
+     {
+      "sp": 0,
+      "en": "I want to list the firewall rules. That's a GET request, right?",
+      "jp": "ファイアウォールのルールを一覧にしたい。それはGETリクエストだよね？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. GET reads, POST creates, PUT or PATCH changes, DELETE removes. Start with GET, because it can't break anything.",
+      "jp": "そう。GETは読む、POSTは作る、PUTやPATCHは変える、DELETEは消す。GETから始めて。何も壊せないから。"
+     },
+     {
+      "sp": 0,
+      "en": "I got the list as JSON. Forty rules. Now I can check which ones haven't been used for a year.",
+      "jp": "JSON形式で一覧が取れた。40個のルール。1年間使われていないものを調べられる。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the power of an API. A script can audit in a minute what a person needs a day to review.",
+      "jp": "それがAPIの力よ。人が1日かけて見直すものを、スクリプトは1分で監査できる。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll write the script, test it on the lab firewall, and then ask you to review it before I run it on production.",
+      "jp": "スクリプトを書いて、検証用のファイアウォールで試して、本番で動かす前にレビューをお願いするよ。"
+     }
+    ]
+   }
+  ]
+ }
+]
