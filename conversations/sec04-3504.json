@@ -1,0 +1,640 @@
+[
+ {
+  "id": "sec04",
+  "ic": "🕶️",
+  "n": "攻める側の会議・なぜハッキングするのか（341〜350）",
+  "hint": "Ten realistic conversations from the attackers' side about motives, group structure, target choice, mistakes and quitting, with the vocabulary people use",
+  "level": 4,
+  "keywords": [
+   "attacker mindset",
+   "motives",
+   "slang"
+  ],
+  "d": [
+   {
+    "t": "💰 341｜カネが動機：犯罪グループの定例：Crew Meeting: It's About the Money",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Alright, quick sync. Last month's numbers are in. We're up, but not by much.",
+      "jp": "よし、手短に共有する。先月の数字が出た。増えたけど、たいしてじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Why's that? We hit more targets than ever.",
+      "jp": "なんでだ？ 今までで一番多くの標的を狙ったのに。"
+     },
+     {
+      "sp": 0,
+      "en": "More targets doesn't mean more payouts. Half of them had decent backups, so nobody paid.",
+      "jp": "標的が多い＝支払いが多い、じゃない。半分はまともなバックアップがあって、誰も払わなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "So we pick better marks. Companies that can't afford downtime.",
+      "jp": "じゃあ、もっといい鴨を選べばいい。止まったら困る会社を。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the whole business model. Hospitals, schools, logistics. Pressure sells.",
+      "jp": "それがビジネスモデルの全部だ。病院、学校、物流。プレッシャーが売れる。",
+      "note": "用語: mark = カモ（標的）／payout = 支払われる身代金"
+     },
+     {
+      "sp": 1,
+      "en": "Honestly, I don't love the hospital part.",
+      "jp": "正直、病院のところは気が進まない。"
+     },
+     {
+      "sp": 0,
+      "en": "Feelings don't pay rent. But you're right about one thing: that kind of target brings the heat. Police, press, everyone.",
+      "jp": "感情じゃ家賃は払えない。でも一つ正しい。ああいう標的は、騒ぎを呼ぶ。警察も、報道も、全員が来る。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     },
+     {
+      "sp": 1,
+      "en": "Right. The bigger the noise, the shorter our runway.",
+      "jp": "だろ。騒ぎが大きいほど、俺たちの逃げ切れる期間は短くなる。"
+     },
+     {
+      "sp": 0,
+      "en": "So here's the rule. Steady money, low noise. Nobody gets greedy.",
+      "jp": "だからルールはこうだ。安定した稼ぎ、小さな騒ぎ。誰も欲張らない。"
+     },
+     {
+      "sp": 1,
+      "en": "And if someone wants out?",
+      "jp": "抜けたいやつが出たら？",
+      "note": "表現: Nobody gets greedy. = 誰も欲張らない／目立たないための掟"
+     },
+     {
+      "sp": 0,
+      "en": "Nobody leaves clean. That's the part they don't tell new guys. The money is real, but so is the clock.",
+      "jp": "きれいに抜けられるやつはいない。それが新人に言わない部分だ。金は本物だが、時計も本物なんだ。"
+     }
+    ]
+   },
+   {
+    "t": "🏭 342｜分業：犯罪も組織で動く：Division of Labor in a Criminal Group",
+    "l": [
+     {
+      "sp": 0,
+      "en": "New guy, let me explain how this really works. It's not one genius in a hoodie. It's a supply chain.",
+      "jp": "新入り、本当の仕組みを説明する。パーカーを着た天才が1人でやるんじゃない。サプライチェーンなんだ。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "A supply chain? Like a company?",
+      "jp": "サプライチェーン？ 会社みたいに？"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. One group just sells access, the way a locksmith sells keys. Another group builds the tools. Another handles negotiations. Another handles the money.",
+      "jp": "その通り。あるグループは、鍵屋みたいに侵入口だけを売る。別のグループは道具を作る。別のグループは交渉をする。別のグループは金を扱う。",
+      "note": "用語: access broker = 侵入口を売る役／supply chain = 分業の連鎖"
+     },
+     {
+      "sp": 1,
+      "en": "So nobody does everything.",
+      "jp": "つまり、誰も全部はやらない。"
+     },
+     {
+      "sp": 0,
+      "en": "Right, and that's by design. If one person gets caught, they only know their own piece.",
+      "jp": "そう、わざとだ。1人が捕まっても、自分の持ち場しか知らない。"
+     },
+     {
+      "sp": 1,
+      "en": "What's my piece?",
+      "jp": "俺の持ち場は？"
+     },
+     {
+      "sp": 0,
+      "en": "You'll start in support: you answer the victims' questions in the chat. Calm, polite, professional. Believe it or not, that's a job.",
+      "jp": "最初はサポート。被害者のチャットの質問に答える。落ち着いて、丁寧に、プロらしく。信じられないだろうが、それが仕事だ。",
+      "note": "用語: affiliate = 手を組む実行役／support = 被害者対応の係"
+     },
+     {
+      "sp": 1,
+      "en": "That feels strange. Being polite to someone we're hurting.",
+      "jp": "変な感じだな。傷つけている相手に丁寧にするなんて。"
+     },
+     {
+      "sp": 0,
+      "en": "It's called customer service. They run it like a startup, with reviews and bonuses. That's why it's so hard to shut down.",
+      "jp": "カスタマーサービスと言う。スタートアップみたいに、評価もボーナスもある。だから潰すのが難しい。"
+     },
+     {
+      "sp": 1,
+      "en": "Do the groups trust each other?",
+      "jp": "グループ同士は信用し合ってるのか。"
+     },
+     {
+      "sp": 0,
+      "en": "Never fully. Everyone worries about being betrayed, or about someone working with the police. That fear is the real glue.",
+      "jp": "完全には、絶対にない。みんな、裏切りや、誰かが警察と組むことを恐れてる。その恐怖が本当の接着剤だ。"
+     }
+    ]
+   },
+   {
+    "t": "📣 343｜主張のために：ハクティビストの議論：Hacktivists: A Cause and Its Limits",
+    "l": [
+     {
+      "sp": 0,
+      "en": "We're not criminals. We're making a statement. People ignore protests, but they can't ignore this.",
+      "jp": "俺たちは犯罪者じゃない。主張をしてるんだ。デモは無視されても、これは無視できない。",
+      "note": "用語: hacktivist = 主張のために攻撃する人／statement = 意思表示"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, but who actually gets hurt? The company? Or the customers whose data we leak?",
+      "jp": "でも実際に傷つくのは誰だ？ 会社か？ それとも、データが漏れる顧客か？"
+     },
+     {
+      "sp": 0,
+      "en": "The customers are collateral. It's regrettable.",
+      "jp": "顧客は巻き添えだ。残念だが。",
+      "note": "用語: collateral = 巻き添え・副次的な被害"
+     },
+     {
+      "sp": 1,
+      "en": "That's the part that bothers me. If we leak ordinary people's information, we're no better than the ones we hate.",
+      "jp": "そこが引っかかるんだ。普通の人の情報を漏らしたら、俺たちが憎む連中と変わらない。"
+     },
+     {
+      "sp": 0,
+      "en": "You're getting soft. Every movement has costs.",
+      "jp": "弱気になったな。どんな運動にも犠牲はある。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe. But think about the results. When we take a site down for a day, the news runs for an hour, and then everyone forgets.",
+      "jp": "かもな。でも結果を考えろ。サイトを1日止めても、報道は1時間で、そのあとみんな忘れる。"
+     },
+     {
+      "sp": 0,
+      "en": "And the company just restores from backup.",
+      "jp": "そして会社はバックアップから戻すだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Meanwhile, our names get on a list, and the law doesn't care about our reasons.",
+      "jp": "そう。一方で、俺たちの名前は名簿に載って、法律は動機なんて気にしない。"
+     },
+     {
+      "sp": 0,
+      "en": "So what would actually work?",
+      "jp": "じゃあ、実際に効くのは何だ？"
+     },
+     {
+      "sp": 1,
+      "en": "Honestly? Telling the story in public, with evidence, to journalists and regulators. Slower, but it changes things and nobody goes to prison.",
+      "jp": "正直？ 証拠を持って、記者や規制当局に公に伝えること。遅いが、変化は起きるし、誰も刑務所に行かない。"
+     }
+    ]
+   },
+   {
+    "t": "🧩 344｜好奇心から犯罪へ：線はどこか：Curiosity vs. Crime: Where Is the Line?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "When I was a kid, I took apart everything. Radios, game consoles, phone lines. I just wanted to see how it worked.",
+      "jp": "子供のころ、何でも分解した。ラジオ、ゲーム機、電話回線。ただ、仕組みが見たかったんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the old hacker spirit. Curiosity. So when did it turn into something else?",
+      "jp": "それが昔のハッカーの精神だな。好奇心。じゃあ、いつ別のものになった？"
+     },
+     {
+      "sp": 0,
+      "en": "When someone offered me money. Suddenly the question wasn't 'how does it work?' but 'what is it worth?'",
+      "jp": "金を出すと言われた時だ。突然、問いが『どう動くのか』じゃなくて、『いくらになるのか』に変わった。"
+     },
+     {
+      "sp": 1,
+      "en": "And the thrill? Be honest.",
+      "jp": "スリルは？ 正直に言って。"
+     },
+     {
+      "sp": 0,
+      "en": "The thrill is real. Getting in feels like solving a puzzle. But a puzzle doesn't have a victim, and this does.",
+      "jp": "スリルは本物だ。入れた瞬間はパズルを解いた感じがする。でもパズルに被害者はいない。これにはいる。"
+     },
+     {
+      "sp": 1,
+      "en": "Then what's the difference between you and a security researcher?",
+      "jp": "じゃあ、あなたとセキュリティ研究者の違いは？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Permission. That's it. Same curiosity, same skills. The researcher asks first, and tells the owner what they found.",
+      "jp": "許可だ。それだけ。同じ好奇心、同じ技術。研究者は先に許可を取って、見つけたことを持ち主に伝える。",
+      "note": "表現: Permission. That's it. = 許可。それだけ／研究者と犯罪者を分ける線"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds too simple.",
+      "jp": "簡単すぎる気がする。"
+     },
+     {
+      "sp": 0,
+      "en": "It is simple. It's just hard to do when you're nineteen and nobody's paying you to ask first.",
+      "jp": "簡単なんだ。ただ、19歳で、先に聞くことで誰も金をくれない時には、難しいだけで。"
+     },
+     {
+      "sp": 1,
+      "en": "If someone had offered you a legal way back then?",
+      "jp": "もしあの頃、合法の道を示してくれた人がいたら？"
+     },
+     {
+      "sp": 0,
+      "en": "I'd have taken it in a heartbeat. Most people like me would have.",
+      "jp": "即座に選んでたよ。俺みたいな人間の多くがそうしたはずだ。"
+     }
+    ]
+   },
+   {
+    "t": "😠 345｜内部の不満：内部犯の動機：An Insider's Grievance",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thanks for meeting me. I'll be straight: I'm angry. Eleven years at this company, and they passed me over again.",
+      "jp": "会ってくれてありがとう。率直に言う。腹が立ってる。この会社で11年、また飛ばされた。"
+     },
+     {
+      "sp": 1,
+      "en": "I understand. I hear that a lot. But let's be careful here. What are you thinking about doing?",
+      "jp": "分かるよ。よく聞く話だ。でも慎重にいこう。何をしようと考えてる？"
+     },
+     {
+      "sp": 0,
+      "en": "I have access to things nobody checks. Customer files. I could make them regret it.",
+      "jp": "誰も確認しないものにアクセスできる。顧客のファイル。後悔させてやれる。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me ask you something. Who actually pays for that? The company, or the people whose data is in those files?",
+      "jp": "1つ聞かせて。それで実際に代償を払うのは誰？ 会社？ それとも、そのファイルに載ってる人たち？",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "...The people, I guess.",
+      "jp": "…人たち、だろうな。"
+     },
+     {
+      "sp": 1,
+      "en": "And here's the practical side. Insiders are the easiest to catch. Logs show exactly who opened what, and when.",
+      "jp": "現実的な面もある。内部犯は最も捕まりやすい。ログに、誰が、いつ、何を開いたか、正確に残る。"
+     },
+     {
+      "sp": 0,
+      "en": "I hadn't thought about that.",
+      "jp": "そこまで考えてなかった。"
+     },
+     {
+      "sp": 1,
+      "en": "Anger makes a short plan. It rarely thinks about the logs, or about the family at home.",
+      "jp": "怒りは、短い計画しか作らない。ログのことも、家で待つ家族のことも、めったに考えない。",
+      "note": "用語: insider threat = 内部の人間による脅威／grievance = 恨み・不満"
+     },
+     {
+      "sp": 0,
+      "en": "So what do I do with this anger?",
+      "jp": "じゃあ、この怒りをどうすればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Talk to a lawyer about the promotion, or find a better job. Use those eleven years as leverage, not as a weapon.",
+      "jp": "昇進のことは弁護士に相談するか、もっといい仕事を探して。その11年は、武器じゃなくて、交渉材料に使うの。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. That's... a better idea. Thank you.",
+      "jp": "そうか。それは…いい考えだ。ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🕰️ 346｜国家が背後にいる：長期の作戦：State-Backed Operators: Patience as a Weapon",
+    "l": [
+     {
+      "sp": 0,
+      "en": "This team has one rule: we are not in a hurry. Criminals want money this week. We want information over years.",
+      "jp": "このチームの掟は1つ。急がないこと。犯罪者は今週の金が欲しい。我々は何年もかけて情報が欲しい。"
+     },
+     {
+      "sp": 1,
+      "en": "And the objective? Because it's not money.",
+      "jp": "目的は？ 金じゃないんだろう。",
+      "note": "用語: state-backed = 国家が後ろ盾の／objective = 目的"
+     },
+     {
+      "sp": 0,
+      "en": "Intelligence. Policy plans, research, negotiation positions. Information that gives our side an advantage.",
+      "jp": "情報だ。政策の計画、研究、交渉の立場。こちらに優位を与える情報。"
+     },
+     {
+      "sp": 1,
+      "en": "What worries you most?",
+      "jp": "いちばん心配なのは？"
+     },
+     {
+      "sp": 0,
+      "en": "Being noticed. If the target knows we're there, the value drops and diplomacy gets complicated.",
+      "jp": "気づかれること。標的が我々の存在を知れば、価値は下がるし、外交も複雑になる。"
+     },
+     {
+      "sp": 1,
+      "en": "Do we think about the people we're watching?",
+      "jp": "監視している相手のことは考える？"
+     },
+     {
+      "sp": 0,
+      "en": "We're given a mission, and we follow the mission. That's the part nobody likes to talk about.",
+      "jp": "我々は任務を与えられ、任務に従う。それが、誰も語りたがらない部分だ。"
+     },
+     {
+      "sp": 1,
+      "en": "And what happens if the government denies everything?",
+      "jp": "もし政府が全部否定したら？"
+     },
+     {
+      "sp": 0,
+      "en": "That's the point of the structure. Deniability. If it's exposed, we're individuals, not officials.",
+      "jp": "そのための仕組みだ。否認できること。露見したら、我々は役人ではなく個人になる。",
+      "note": "用語: deniability = 関与を否定できる状態"
+     },
+     {
+      "sp": 1,
+      "en": "So the protection only goes one way.",
+      "jp": "つまり、守りは一方通行ってことか。"
+     },
+     {
+      "sp": 0,
+      "en": "Think about that before you sign anything. People in this work often find out too late who the plan protects.",
+      "jp": "何かに署名する前に、それを考えておけ。この仕事の人間は、その計画が誰を守るのかを、たいてい遅れて知る。"
+     }
+    ]
+   },
+   {
+    "t": "🎯 347｜なぜそこが狙われる：楽な所が選ばれる：Why You? Attackers Choose the Easy Door",
+    "l": [
+     {
+      "sp": 0,
+      "en": "People always ask why they were picked. The honest answer is: they weren't. They were just easy.",
+      "jp": "みんな、なぜ自分が選ばれたのかと聞く。正直な答えは、選ばれてない、だ。ただ、楽だっただけ。"
+     },
+     {
+      "sp": 1,
+      "en": "So it's not personal?",
+      "jp": "つまり、個人的な恨みじゃない？"
+     },
+     {
+      "sp": 0,
+      "en": "Almost never. It's economics. We look for the lowest effort for the highest return.",
+      "jp": "ほとんどそうじゃない。経済の話だ。最小の手間で、最大の見返りを探す。"
+     },
+     {
+      "sp": 1,
+      "en": "What makes a target easy?",
+      "jp": "どんな標的が楽なんだ？"
+     },
+     {
+      "sp": 0,
+      "en": "Old software nobody updates. Reused passwords. Accounts without a second step. People who are busy and trust a message that looks normal.",
+      "jp": "誰も更新しない古いソフト。使い回しのパスワード。2段階目のない口座。忙しくて、普通に見えるメッセージを信じる人たち。"
+     },
+     {
+      "sp": 1,
+      "en": "That's... all basic stuff.",
+      "jp": "それは…どれも基本的なことばかりだ。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the uncomfortable truth. The majority of our success comes from basics that defenders haven't done.",
+      "jp": "それが不都合な真実だ。我々の成功の大半は、守る側がやっていない基本から来てる。"
+     },
+     {
+      "sp": 1,
+      "en": "And what makes you walk away from a target?",
+      "jp": "じゃあ、どんな時に標的をあきらめる？"
+     },
+     {
+      "sp": 0,
+      "en": "When it costs too much. If we hit a wall, we move to the next one. Extra layers of defense don't have to be perfect, they only have to make us pick someone else.",
+      "jp": "手間がかかりすぎる時。壁に当たれば、次へ行く。守りの層は、完璧である必要はなく、我々に別の誰かを選ばせれば十分だ。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "So being slightly harder than your neighbor already helps.",
+      "jp": "つまり、隣より少し硬いだけでも効果があるのか。",
+      "note": "表現: harder than your neighbor = 隣より少し守りが固い／狙われにくくなる考え方"
+     },
+     {
+      "sp": 0,
+      "en": "It helps a lot. That sentence is the best advice I could give to any defender.",
+      "jp": "大いに効く。その一文が、守る側に贈れる最高の助言だ。"
+     }
+    ]
+   },
+   {
+    "t": "🚔 348｜なぜ捕まるのか：逮捕後の反省会：Why Crews Get Caught",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I've had a lot of time to think. Want to know what actually got us arrested? It wasn't a genius detective.",
+      "jp": "考える時間はたっぷりあった。何で俺たちが捕まったか知りたいか。天才刑事じゃなかった。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Then what was it?",
+      "jp": "じゃあ、何だったんだ？"
+     },
+     {
+      "sp": 0,
+      "en": "Small human mistakes. One guy used the same nickname on two forums. Another bragged to his girlfriend.",
+      "jp": "小さな人間のミスだ。1人は2つのフォーラムで同じニックネームを使った。もう1人は、彼女に自慢した。"
+     },
+     {
+      "sp": 1,
+      "en": "That's it?",
+      "jp": "それだけか？"
+     },
+     {
+      "sp": 0,
+      "en": "That's most of it. And money. Cashing out is the hardest part, because real banks leave real records.",
+      "jp": "ほとんどそれだ。それと金。現金化がいちばん難しい。本物の銀行は、本物の記録を残すから。",
+      "note": "用語: cash out = 稼いだものを現金に換える／traces = 足跡"
+     },
+     {
+      "sp": 1,
+      "en": "But we were so careful about the technical side.",
+      "jp": "でも、技術面ではすごく慎重だったのに。"
+     },
+     {
+      "sp": 0,
+      "en": "Technology was never the weak point. People were. Boredom, ego, greed, and carelessness.",
+      "jp": "技術は弱点じゃなかった。人間が弱点だった。退屈、うぬぼれ、欲、そして不注意。"
+     },
+     {
+      "sp": 1,
+      "en": "Did anyone talk to the police?",
+      "jp": "誰か警察に話したのか。"
+     },
+     {
+      "sp": 0,
+      "en": "Eventually everyone did. When the sentences got long, loyalty got short.",
+      "jp": "結局、全員が話した。刑が長くなると、忠誠は短くなる。"
+     },
+     {
+      "sp": 1,
+      "en": "What do you tell young people who think they can stay hidden forever?",
+      "jp": "ずっと隠れていられると思ってる若者に、何て言う？"
+     },
+     {
+      "sp": 0,
+      "en": "Time is on the investigators' side. You have to be perfect every day. They only need you to be wrong once.",
+      "jp": "時間は捜査する側の味方だ。お前は毎日完璧でなきゃいけない。向こうは、お前が一度間違えればいい。",
+      "note": "表現: You have to be perfect every day. = 毎日完璧でなきゃいけない／逃げる側の不利"
+     }
+    ]
+   },
+   {
+    "t": "📞 349｜脅しの交渉：被害者との会話（攻める側から見る）：The Ransom Chat from the Other Side",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let me show you how a negotiation works, so you understand why defenders should never be scared by it.",
+      "jp": "交渉がどう進むか見せよう。守る側が、なぜそれを怖がらなくていいか、分かるように。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Go ahead.",
+      "jp": "どうぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "First, the victim is shocked. We keep our tone calm and businesslike. Panic works for us, so we try to create it.",
+      "jp": "まず、被害者はショックを受ける。我々は穏やかで事務的な口調を保つ。パニックは我々に有利だから、それを作ろうとする。",
+      "note": "表現: Panic works for us. = パニックは我々に有利／攻撃側が焦りを狙う"
+     },
+     {
+      "sp": 1,
+      "en": "Then we put a deadline on it.",
+      "jp": "そして期限をつける。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, a deadline. Deadlines make people skip the careful steps: checking, calling lawyers, calling the police.",
+      "jp": "そう、期限だ。期限は、人に慎重な手順を飛ばさせる。確認、弁護士への連絡、警察への連絡。",
+      "note": "用語: deadline = 期限／pressure tactic = 相手を焦らせる手法"
+     },
+     {
+      "sp": 1,
+      "en": "What makes our job harder?",
+      "jp": "我々の仕事を難しくするものは何だ？"
+     },
+     {
+      "sp": 0,
+      "en": "A prepared victim. When they say, 'We have a plan, and a team, and our backups work,' the price drops fast, or they walk away.",
+      "jp": "備えのある被害者。『計画も、チームも、動くバックアップもある』と言われると、値段は急に下がるか、相手が立ち去る。"
+     },
+     {
+      "sp": 1,
+      "en": "So the best defense is just being ready.",
+      "jp": "つまり最良の防御は、備えていること、それだけか。"
+     },
+     {
+      "sp": 0,
+      "en": "Ready, and slow. A victim who takes a breath, gets expert advice, and doesn't answer in a rush gives us nothing to work with.",
+      "jp": "備えていて、そして焦らないこと。息をついて、専門家に相談して、急いで返事をしない被害者は、我々に使える材料を与えない。"
+     },
+     {
+      "sp": 1,
+      "en": "Funny that our whole technique depends on the other person's fear.",
+      "jp": "笑えるな。我々の手口が全部、相手の恐怖に頼ってるなんて。"
+     },
+     {
+      "sp": 0,
+      "en": "It does. Remove the fear, and what's left is just a crime that was committed against them.",
+      "jp": "そうだ。恐怖を取り除けば、残るのは、ただ自分たちに対して行われた犯罪だけだ。"
+     }
+    ]
+   },
+   {
+    "t": "🚪 350｜足を洗った男が語る：なぜやめたか：The Man Who Walked Away",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You were one of the best. Why did you stop?",
+      "jp": "あなたは最高の一人だったのに。なぜやめたんですか。",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Because one day I read a letter from a victim. A small shop owner. She lost everything she'd built over twenty years.",
+      "jp": "ある日、被害者の手紙を読んだからだ。小さな店の店主。20年かけて築いたものを全部失った人だった。"
+     },
+     {
+      "sp": 0,
+      "en": "But you didn't target her personally.",
+      "jp": "でもあなたは、彼女を個人的に狙ったわけじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "That's exactly the problem. I never thought of her as a person. She was just a number on a screen.",
+      "jp": "そこが問題なんだ。彼女を人間として考えたことがなかった。画面の上の、ただの数字だった。"
+     },
+     {
+      "sp": 0,
+      "en": "What did you do?",
+      "jp": "どうしたんですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I turned myself in, and I cooperated. I told investigators everything I could. It cost me years, but I could finally sleep.",
+      "jp": "自首して、協力した。話せることは全部、捜査官に話した。何年も失ったが、やっと眠れるようになった。"
+     },
+     {
+      "sp": 0,
+      "en": "And now?",
+      "jp": "そして今は？"
+     },
+     {
+      "sp": 1,
+      "en": "I teach. I show companies how the other side thinks, so they can protect their people. Same knowledge, opposite direction.",
+      "jp": "教えている。向こう側がどう考えるかを会社に見せて、そこの人たちを守れるようにする。同じ知識、逆の方向。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you ever miss it?",
+      "jp": "懐かしくなることは？"
+     },
+     {
+      "sp": 1,
+      "en": "The puzzle, yes. The feeling that comes after, never. And here's what I want you to remember: the skill isn't the problem. The question is whose side you use it for.",
+      "jp": "パズルは、ある。そのあとの気持ちは、決してない。覚えておいてほしい。問題は技術じゃない。誰の側のために使うか、だ。",
+      "note": "表現: whose side you use it for = 誰の側のために使うか／技術より大事な問い"
+     },
+     {
+      "sp": 0,
+      "en": "I understand. Thank you for telling me honestly.",
+      "jp": "分かりました。正直に話してくれてありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "Honesty is the only thing I have left that's worth anything. Use it well.",
+      "jp": "正直さは、いま残っている中で価値のある、唯一のものだ。うまく使ってくれ。"
+     }
+    ]
+   }
+  ]
+ }
+]
