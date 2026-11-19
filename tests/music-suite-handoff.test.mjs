@@ -21,3 +21,20 @@ test("album provides a direct Canvas handoff carrying lyrics and chord data", ()
   assert.match(album, /sections:\[\{role:'A',label:'Mia \/ A verse'/);
   assert.match(album, /chords:t\.data\.chords/);
 });
+
+
+test("chat handoff sends the latest user English to Composition Canvas with the receiver's import schema", async () => {
+  const app = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const start = app.indexOf("function sendLatestEnglishToMusicSuite()");
+  const end = app.indexOf("\nfunction ", start + 10);
+  assert.ok(start >= 0 && end > start, "handoff function must exist");
+  const handoff = app.slice(start, end);
+  assert.match(handoff, /message\.role === 'user'/);
+  assert.match(handoff, /source: 'composition-canvas-lyrics'/);
+  assert.match(handoff, /lyrics,/);
+  assert.match(handoff, /dialogue/);
+  assert.match(handoff, /apps\/composition-canvas\.html#import=/);
+  assert.match(handoff, /http:\/\/localhost:8000\/music-suite/);
+  assert.match(handoff, /https:\/\/norinori-jan\.github\.io\/music-suite/);
+  assert.doesNotMatch(handoff, /vocal-lab-v3\.html/);
+});
