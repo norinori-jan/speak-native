@@ -1938,14 +1938,43 @@ function handleEnter(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 }
 function sendLatestEnglishToMusicSuite() {
-  const latest = [...(STATE.history || [])].reverse().find(m => m && m.role === 'user' && String(m.content || '').trim());
-  if (!latest) { showToast('先に英語で会話してください'); return; }
-  const params = new URLSearchParams();
-  params.set('note', String(latest.content).trim().slice(0, 3000));
-  params.set('source', 'speak-native');
-  const url = 'https://norinori-jan.github.io/music-suite/apps/vocal-lab-v3.html#' + params.toString();
+  const history = Array.isArray(STATE.history) ? STATE.history : [];
+  const latest = [...history].reverse().find(message =>
+    message && message.role === 'user' && String(message.content || '').trim()
+  );
+  if (!latest) { showToast('先に英語の文章を入力してください'); return; }
+
+  const lyrics = String(latest.content).trim().slice(0, 3000);
+  const dialogue = history
+    .filter(message => message && (message.role === 'user' || message.role === 'assistant') && String(message.content || '').trim())
+    .slice(-10)
+    .map(message => ({
+      role: message.role,
+      speaker: message.role === 'user' ? 'A' : 'B',
+      text: String(message.content).trim().slice(0, 3000)
+    }));
+
+  const payload = {
+    version: 1,
+    schemaVersion: 'music-suite-project-v1',
+    projectId: 'speak-native-' + Date.now(),
+    source: 'composition-canvas-lyrics',
+    kind: 'single',
+    title: 'speak-nativeから受け取った英語',
+    lyrics,
+    original: lyrics,
+    emotion: 'neutral',
+    bpm: 120,
+    dialogue
+  };
+  const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify(payload)))));
+  const localPreview = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  const musicSuiteBase = localPreview
+    ? 'http://localhost:8000/music-suite'
+    : 'https://norinori-jan.github.io/music-suite';
+  const url = musicSuiteBase + '/apps/composition-canvas.html#import=' + encoded;
   window.open(url, '_blank', 'noopener,noreferrer');
-  showToast('入力した英語を music-suite に送りました');
+  showToast('英語の文章をComposition Canvasへ送りました');
 }
 function autoResize(el) {
   el.style.height = 'auto';
