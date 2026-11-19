@@ -1,0 +1,635 @@
+[
+ {
+  "id": "sec02",
+  "ic": "📋",
+  "n": "セキュリティ講義2・診断の進め方（講義11〜20）",
+  "hint": "Ten lecture-style conversations on how a professional security assessment works: scoping, phases, reading discovery and scanner results, web testing method, password audits, safe testing, building a lab, writing reports, presenting and retesting",
+  "level": 4,
+  "keywords": [
+   "assessment",
+   "report",
+   "method"
+  ],
+  "d": [
+   {
+    "t": "📋 311｜講義11：診断の前の打ち合わせ：Lecture 11: The Scoping Meeting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A security assessment begins long before any tool is opened. It begins with a meeting. Today we learn what to agree on in that meeting.",
+      "jp": "セキュリティ診断は、道具を開くずっと前に始まります。打ち合わせから始まります。今日は、その打ち合わせで何を合意するかを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the first thing to clarify?",
+      "jp": "最初に何を明確にしますか。"
+     },
+     {
+      "sp": 0,
+      "en": "The goal. Does the client want to find as many weaknesses as possible, test one new application, or prove compliance with a standard? The goal decides everything else.",
+      "jp": "目的です。依頼主は、できるだけ多くの弱点を見つけたいのか、新しいアプリを1つ試したいのか、規格への適合を示したいのか。目的がほかのすべてを決めます。",
+      "note": "用語: scope = 診断してよい対象の範囲／goal = 診断の目的"
+     },
+     {
+      "sp": 1,
+      "en": "Then the scope, right? Which systems we may test.",
+      "jp": "次が範囲ですよね。どのシステムを試してよいか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and also which we must not touch. Write exact addresses and names. 'The internal network' is too vague. A vague scope is how accidents happen.",
+      "jp": "はい、そして触ってはいけないものも。正確なアドレスと名前を書きます。『内部ネットワーク』ではあいまいすぎます。あいまいな範囲が、事故のもとです。"
+     },
+     {
+      "sp": 1,
+      "en": "What else belongs in the agreement?",
+      "jp": "ほかに合意書に入れるものは？"
+     },
+     {
+      "sp": 0,
+      "en": "The dates and times, the allowed methods, a contact person who is available at any hour, and what to do if you find something critical. In that case, you stop and report at once.",
+      "jp": "日時、許される方法、いつでも連絡がつく担当者、そして重大なものを見つけた時の対応。その場合は、すぐ手を止めて報告します。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Is the client's approval enough? What if the systems belong to a provider?",
+      "jp": "依頼主の承認だけで十分ですか。システムが業者のものだったら？"
+     },
+     {
+      "sp": 0,
+      "en": "Excellent point. You need permission from the real owner. A client can't authorize testing of a cloud provider's or a partner's systems. Always ask: who owns this?",
+      "jp": "いい指摘です。本当の所有者の許可が必要です。依頼主は、クラウド業者や取引先のシステムの診断を許可できません。いつも問います。これは誰のものか。"
+     },
+     {
+      "sp": 1,
+      "en": "So the meeting protects both sides.",
+      "jp": "つまり打ち合わせは、両者を守るんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Clear agreements protect the client from surprises, and protect you from legal trouble.",
+      "jp": "その通り。明確な合意が、依頼主を驚きから、あなたを法的な問題から守ります。"
+     }
+    ]
+   },
+   {
+    "t": "🔄 312｜講義12：診断の流れ全体：Lecture 12: The Phases of an Assessment",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we see the whole journey on one page. A professional assessment has phases, and each has a purpose.",
+      "jp": "今日は旅の全体を1ページで見ます。専門的な診断には段階があり、それぞれに目的があります。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the first phase after the agreement?",
+      "jp": "合意のあとの最初の段階は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Information gathering: learning what exists. Which systems, which services, which technologies. You can't protect or test what you don't know about.",
+      "jp": "情報収集です。何があるかを知る。どのシステム、どのサービス、どの技術か。知らないものは、守ることも試すこともできません。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "And after that?",
+      "jp": "その次は？"
+     },
+     {
+      "sp": 0,
+      "en": "Vulnerability analysis: finding which of those things have known weaknesses. Then, if the agreement allows it, careful validation: confirming that a weakness is real, with the least possible impact.",
+      "jp": "脆弱性の分析です。それらのうち、どれに既知の弱点があるかを見つける。次に、合意で許されていれば、慎重な検証。弱点が本物か、できるだけ影響を小さくして確かめます。",
+      "note": "用語: validation = 弱点が本物か最小の影響で確認すること／false positive = 誤検知"
+     },
+     {
+      "sp": 1,
+      "en": "Why validate? Isn't it enough to find it?",
+      "jp": "なぜ検証するんですか。見つけるだけでは足りませんか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because tools make mistakes. A report full of false alarms wastes the client's time. A confirmed finding gets fixed.",
+      "jp": "道具は間違えるからです。誤検知だらけの報告書は、依頼主の時間を無駄にします。確認された指摘は、直されます。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the final phase?",
+      "jp": "最後の段階は？"
+     },
+     {
+      "sp": 0,
+      "en": "Reporting. Honestly, it's the most important phase, because a finding that nobody understands is a finding that nobody fixes. And then a retest, to confirm the fixes work.",
+      "jp": "報告です。正直、いちばん大事な段階です。誰も理解できない指摘は、誰も直さない指摘だから。そのあとに再テストで、修正が効いたことを確認します。"
+     },
+     {
+      "sp": 1,
+      "en": "So the skill is not only in the tools. It's in planning, validating and communicating.",
+      "jp": "つまり腕は道具だけじゃなくて、計画、検証、伝えることにあるんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Many strong technicians fail as consultants because they can't write a clear report. Practice that skill as hard as the technical ones.",
+      "jp": "はい。腕の立つ技術者の多くが、分かりやすい報告書を書けずに、コンサルタントとして失敗します。技術と同じくらい、その力も鍛えてください。"
+     }
+    ]
+   },
+   {
+    "t": "🔭 313｜講義13：何があるかを調べる道具：Lecture 13: Tools That Discover What Exists",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today we learn what a discovery tool does, and how to read its results. We won't practice on anybody's systems. We'll work from sample output.",
+      "jp": "今日は、探索の道具が何をするか、そしてその結果の読み方を学びます。誰かのシステムでは練習しません。見本の出力で学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What does a port scanner do?",
+      "jp": "ポートスキャナーは何をするんですか。",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "It asks a system, 'Which doors are open?' For each port it reports a state: open, closed, or filtered, which means a firewall is hiding the answer. Here's a sample result: port twenty-two open, port eighty open, port three-three-eight-nine open. How do you read it?",
+      "jp": "システムに問いかけます。『どのドアが開いていますか』。各ポートについて、状態を報告します。開いている、閉じている、フィルタされている。後者は、ファイアウォールが答えを隠しているという意味です。見本の結果です。22番が開いている、80番が開いている、3389番が開いている。どう読みますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Twenty-two is SSH, eighty is a web server, and three-three-eight-nine is remote desktop. The last one worries me if this server faces the internet.",
+      "jp": "22番はSSH、80番はウェブサーバー、3389番はリモートデスクトップ。最後のは、このサーバーがインターネットに面しているなら、心配です。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. A finding is not 'port open'. It's 'a remote administration service is exposed to the internet, which increases the risk of password guessing'. See the difference?",
+      "jp": "いいですね。指摘は『ポートが開いている』じゃありません。『遠隔管理のサービスがインターネットに公開されていて、パスワード推測のリスクが高まる』です。違いが分かりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "A finding explains why it matters. Does the tool also show the software version?",
+      "jp": "指摘は、なぜ重要かを説明する。道具はソフトの版も表示しますか。",
+      "note": "用語: port scanner = 開いているポートを調べる道具／banner = サービスが名乗るソフト名と版"
+     },
+     {
+      "sp": 0,
+      "en": "Often, yes, through what we call banner detection. The version matters, because old versions have known vulnerabilities. But the tool can be wrong, so verify.",
+      "jp": "よくします。バナー検出と呼ぶものを通して。版は重要です。古い版には既知の脆弱性があるから。でも道具が間違うこともあるので、確認します。"
+     },
+     {
+      "sp": 1,
+      "en": "And what are the rules for using these tools?",
+      "jp": "そしてそれらの道具を使う時のルールは？"
+     },
+     {
+      "sp": 0,
+      "en": "Only on systems in scope, with the intensity agreed, at the agreed time. A scan is traffic, and aggressive scans can slow or even crash fragile systems.",
+      "jp": "範囲内のシステムだけに、合意した強さで、合意した時間に。スキャンは通信で、強いスキャンは弱いシステムを遅くしたり、落としたりすることさえあります。"
+     }
+    ]
+   },
+   {
+    "t": "📊 314｜講義14：脆弱性スキャナーの結果を読む：Lecture 14: Reading Scanner Results",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A vulnerability scanner can produce a report with five hundred items. Today we learn how to decide what really matters.",
+      "jp": "脆弱性スキャナーは、500項目の報告書を出せます。今日は、本当に重要なものをどう決めるかを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Is the severity rating enough? I see 'critical', 'high', 'medium' and 'low'.",
+      "jp": "重大度の評価で足りますか。『critical』『high』『medium』『low』とあります。"
+     },
+     {
+      "sp": 0,
+      "en": "It's a start. Those ratings usually come from CVSS, a standard score from zero to ten. But the score describes the weakness in general, not your situation.",
+      "jp": "出発点です。その評価は、たいていCVSSから来ます。0から10の標準の点数。でもその点数は、一般的な弱点を表すもので、あなたの状況ではありません。",
+      "note": "用語: CVSS = 脆弱性の深刻度を0〜10で表す標準の点数／CVE = 脆弱性の識別番号"
+     },
+     {
+      "sp": 1,
+      "en": "So a 'critical' on a test server nobody uses may matter less than a 'medium' on the payment system.",
+      "jp": "じゃあ誰も使わないテストサーバーの『critical』は、決済システムの『medium』より重要度が低いかもしれない。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Add context: is the system exposed to the internet? Does it hold sensitive data? Is there a known way to misuse the weakness in the wild?",
+      "jp": "その通り。状況を足します。システムはインターネットに公開されているか。機微なデータがあるか。実際にその弱点が悪用された例があるか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Where can I check whether a weakness is actively misused?",
+      "jp": "弱点が実際に悪用されているか、どこで確認できますか。"
+     },
+     {
+      "sp": 0,
+      "en": "There are public lists of known exploited vulnerabilities, kept by security agencies. If your finding is on such a list, raise its priority immediately.",
+      "jp": "セキュリティ機関が管理する、悪用が確認された脆弱性の公開一覧があります。指摘がその一覧にあれば、すぐに優先度を上げます。"
+     },
+     {
+      "sp": 1,
+      "en": "What about false positives?",
+      "jp": "誤検知は？"
+     },
+     {
+      "sp": 0,
+      "en": "Always check a sample. If the scanner says a patch is missing, look at the actual version. Remove the false alarms before the client sees them, and note them honestly.",
+      "jp": "必ず一部を確認します。スキャナーがパッチの不足を言うなら、実際の版を見る。依頼主が見る前に誤検知を除いて、正直に記録しておきます。"
+     },
+     {
+      "sp": 1,
+      "en": "So my job is to turn five hundred items into ten that matter, with reasons.",
+      "jp": "つまり私の仕事は、500項目を、理由つきで、重要な10項目にすること。"
+     },
+     {
+      "sp": 0,
+      "en": "A perfect description of a good analyst's job.",
+      "jp": "優れたアナリストの仕事の、完璧な説明です。"
+     }
+    ]
+   },
+   {
+    "t": "🌍 315｜講義15：ウェブアプリ診断の考え方：Lecture 15: Thinking About Web Application Testing",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Web applications are the most common target. Today we study the method, not the tricks. A method makes your work complete and repeatable.",
+      "jp": "ウェブアプリは、最も多い標的です。今日は、小技ではなく、方法を学びます。方法があれば、仕事が漏れなく、再現できるものになります。"
+     },
+     {
+      "sp": 1,
+      "en": "Is there a standard method I can follow?",
+      "jp": "従える標準の方法はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, the OWASP Web Security Testing Guide. It organizes tests into categories: authentication, session management, access control, input handling, business logic, and more.",
+      "jp": "はい、OWASPのウェブセキュリティ診断ガイドです。テストを分類しています。認証、セッション管理、アクセス制御、入力の扱い、業務ロジックなど。",
+      "note": "用語: OWASP WSTG = ウェブ診断の標準的な手引き／business logic = アプリ固有の業務ルール"
+     },
+     {
+      "sp": 1,
+      "en": "What's business logic? That's new to me.",
+      "jp": "業務ロジックとは何ですか。初めて聞きます。"
+     },
+     {
+      "sp": 0,
+      "en": "It's the rules of the application itself. For example, can someone apply a discount code twice? A scanner can't understand that, because it's not a technical bug. It takes a thinking human.",
+      "jp": "アプリ自体の決まりごとです。たとえば、割引コードを2回使えるか。スキャナーには分かりません。技術的なバグではないからです。考える人間が必要です。"
+     },
+     {
+      "sp": 1,
+      "en": "So human testing finds what tools can't.",
+      "jp": "つまり人間の診断は、道具に見つけられないものを見つけるんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Tools are good at breadth and speed. Humans are good at understanding intent. A professional uses both.",
+      "jp": "はい。道具は幅と速さが得意で、人間は意図の理解が得意です。専門家は、両方を使います。"
+     },
+     {
+      "sp": 1,
+      "en": "What should I be careful about when testing a live site?",
+      "jp": "本番のサイトを診断する時、何に注意しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Avoid anything that can damage or delete data. Use test accounts. Agree on stop conditions in advance, for example, if the site slows down, you pause and call the contact.",
+      "jp": "データを壊したり消したりしうることは避けます。テスト用のアカウントを使う。止める条件を事前に合意しておきます。たとえばサイトが遅くなったら、手を止めて担当者に電話する。"
+     },
+     {
+      "sp": 1,
+      "en": "So safety is part of the method.",
+      "jp": "つまり安全も、方法の一部なんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "It is the most important part. A test that takes down the client's business is a failure, however clever it was.",
+      "jp": "いちばん大事な部分です。依頼主の事業を止めてしまう診断は、どんなに巧みでも、失敗です。"
+     }
+    ]
+   },
+   {
+    "t": "🔑 316｜講義16：パスワード強度の監査：Lecture 16: Auditing Password Strength",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Passwords are a weak point in most organizations. Today we study how a defender audits them, with authorization and with care.",
+      "jp": "パスワードは、多くの組織の弱点です。今日は、守る側が許可を得て、注意深く、どう監査するかを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What is the goal of a password audit?",
+      "jp": "パスワード監査の目的は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "To measure how easy it would be for an attacker to guess the organization's passwords, and to fix the policy before a real attacker tests it.",
+      "jp": "攻撃者が組織のパスワードを推測するのが、どれくらい簡単かを測ること。本物の攻撃者が試す前に、方針を直すことです。",
+      "note": "用語: password audit = パスワードの弱さを測る監査／password policy = パスワードの決まり"
+     },
+     {
+      "sp": 1,
+      "en": "Do auditors see the real passwords?",
+      "jp": "監査する人は、本物のパスワードを見るんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "A good process avoids it. Passwords are stored as hashes, so the audit works on hashes inside a protected environment, and reports only statistics: how many are weak, how many are reused.",
+      "jp": "良い手順では避けます。パスワードはハッシュで保存されているので、保護された環境でハッシュに対して監査して、統計だけを報告します。弱いのが何件、使い回しが何件。"
+     },
+     {
+      "sp": 1,
+      "en": "Why is it important to protect the audit data?",
+      "jp": "なぜ監査データを守ることが重要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because it's as sensitive as the passwords. Limit who can access it, encrypt it, and delete it after the project, as agreed in the contract.",
+      "jp": "パスワードと同じくらい機微だからです。見られる人を限り、暗号化して、契約で合意したとおりプロジェクト後に消します。"
+     },
+     {
+      "sp": 1,
+      "en": "What do typical results teach us?",
+      "jp": "典型的な結果から、何が分かりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "That people choose predictable passwords, like a season and a year. The lesson for the organization is: allow long passphrases, block known leaked passwords, and require multi-factor authentication.",
+      "jp": "人は、季節と年のような、予測できるパスワードを選ぶということ。組織への教訓は、長いパスフレーズを許し、漏えい済みのパスワードを禁止して、多要素認証を必須にすることです。"
+     },
+     {
+      "sp": 1,
+      "en": "So the audit leads to better rules, not to blaming individuals.",
+      "jp": "つまり監査は、個人を責めるのではなく、よりよい決まりにつながるんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "That's right. A mature organization treats weak passwords as a design problem, not a user problem.",
+      "jp": "その通り。成熟した組織は、弱いパスワードを利用者の問題ではなく、設計の問題として扱います。"
+     }
+    ]
+   },
+   {
+    "t": "🛑 317｜講義17：安全に診断するための決まり：Lecture 17: Testing Safely",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today's lecture is about the habits that keep an assessment safe. These habits matter more than any clever technique.",
+      "jp": "今日の講義は、診断を安全に保つ習慣についてです。この習慣は、どんな巧みな技術よりも重要です。"
+     },
+     {
+      "sp": 1,
+      "en": "What is the first habit?",
+      "jp": "最初の習慣は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Keep a log of everything you do: the time, the target, the action. If something goes wrong, you can prove what happened, and the client can fix it quickly.",
+      "jp": "やったことを全部記録することです。時刻、対象、操作。何か起きた時に、何があったか証明できて、依頼主がすぐ直せます。",
+      "note": "表現: Keep a log of everything you do. = やったことを全部記録する／診断の基本の習慣"
+     },
+     {
+      "sp": 1,
+      "en": "Do we tell the client's security team when we start testing?",
+      "jp": "診断を始める時に、依頼主のセキュリティチームに知らせますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It depends on the agreement. In some tests, a small trusted group knows, so the real detection can be measured. But someone with authority must always know, so a real emergency isn't confused with your test.",
+      "jp": "合意によります。テストによっては、本当の検知を測るため、信頼できる少人数だけが知っています。でも権限のある誰かは、必ず知っていなければいけません。本物の緊急事態と、あなたのテストが混同されないように。"
+     },
+     {
+      "sp": 1,
+      "en": "What if I accidentally reach a system outside the scope?",
+      "jp": "もし誤って、範囲外のシステムに届いてしまったら？"
+     },
+     {
+      "sp": 0,
+      "en": "Stop immediately, don't explore, write down exactly what happened, and tell the contact right away. Honesty here protects your reputation for the rest of your career.",
+      "jp": "すぐに止めて、探らず、起きたことを正確に書き留めて、すぐ担当者に伝えます。ここでの正直さが、残りのキャリアでのあなたの評判を守ります。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "And the data I see during testing?",
+      "jp": "診断中に目にしたデータは？"
+     },
+     {
+      "sp": 0,
+      "en": "Treat it as confidential. Collect the minimum needed to prove a finding, never copy more, and protect it like the client's own secrets. A screenshot with the sensitive parts hidden is better than a full copy.",
+      "jp": "機密として扱います。指摘を証明するのに必要な最小限だけを集めて、それ以上は絶対にコピーせず、依頼主自身の秘密のように守ります。機微な部分を隠したスクリーンショットは、全体のコピーよりよいです。"
+     },
+     {
+      "sp": 1,
+      "en": "So trust is the real product we sell.",
+      "jp": "つまり私たちが売っている本当の商品は、信頼なんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. Clients let you into their most sensitive systems. If you ever break that trust once, it's very hard to rebuild.",
+      "jp": "その通り。依頼主は、最も機微なシステムに入ることを許してくれます。一度でもその信頼を壊せば、築き直すのはとても難しいです。"
+     }
+    ]
+   },
+   {
+    "t": "🧪 318｜講義18：練習用のラボを作る：Lecture 18: Building a Safe Lab",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You can't practice on real systems without permission. So you need a lab: a safe place that belongs to you. Today we design one.",
+      "jp": "許可なしに、本物のシステムで練習はできません。だから、自分のものである安全な場所、ラボが必要です。今日はそれを設計します。"
+     },
+     {
+      "sp": 1,
+      "en": "Do I need expensive equipment?",
+      "jp": "高価な機器が必要ですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "No. One reasonably modern computer with enough memory is enough, running virtual machines. Virtual machines are computers inside your computer.",
+      "jp": "いいえ。メモリが十分にある、そこそこ新しいパソコン1台で足ります。仮想マシンを動かします。仮想マシンは、パソコンの中のパソコンです。"
+     },
+     {
+      "sp": 1,
+      "en": "What should the lab contain?",
+      "jp": "ラボには何を入れますか。"
+     },
+     {
+      "sp": 0,
+      "en": "A few systems to defend and examine, such as a small web server and a database, plus a machine for your tools. Use software made for practice, which has intentional weaknesses and is legal to study.",
+      "jp": "守って調べるシステムをいくつか。小さなウェブサーバーとデータベースなど。それに道具用のマシン。練習用に作られた、意図的に弱点のあるソフトを使います。それは調べても合法です。",
+      "note": "用語: virtual machine = パソコンの中で動く仮想のパソコン／snapshot = ある時点の状態を保存して戻せる機能"
+     },
+     {
+      "sp": 1,
+      "en": "How do I keep the lab from touching my home network?",
+      "jp": "ラボが家のネットワークに触れないようにするには？"
+     },
+     {
+      "sp": 0,
+      "en": "Use an isolated virtual network with no connection to your real network, or at least with strict firewall rules. An intentionally weak system must never be reachable from the internet.",
+      "jp": "本物のネットワークとつながっていない、隔離した仮想ネットワークを使います。少なくとも厳しいファイアウォールのルールを入れる。意図的に弱いシステムは、インターネットから届いてはいけません。"
+     },
+     {
+      "sp": 1,
+      "en": "What about snapshots?",
+      "jp": "スナップショットは？"
+     },
+     {
+      "sp": 0,
+      "en": "Very useful. Take one before each experiment, and you can return to a clean state in seconds. That makes mistakes cheap.",
+      "jp": "とても便利です。実験の前に1つ取れば、数秒できれいな状態に戻れます。間違いが安くなります。"
+     },
+     {
+      "sp": 1,
+      "en": "And how should I record what I learn?",
+      "jp": "学んだことは、どう記録しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Keep a notebook, like a lab journal: what you tried, what you expected, what happened. Writing a clear note is training for writing a clear report.",
+      "jp": "実験日誌のようなノートを書きます。何を試し、何を期待し、何が起きたか。分かりやすいメモを書くことは、分かりやすい報告書を書く訓練になります。"
+     }
+    ]
+   },
+   {
+    "t": "📝 319｜講義19：報告書の書き方：Lecture 19: Writing the Report",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Everything you did is worth nothing if the report is weak. Today we learn the structure of a report that gets fixes done.",
+      "jp": "報告書が弱ければ、やったことのすべてが無価値になります。今日は、修正につながる報告書の構造を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What are the main parts?",
+      "jp": "主な部分は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "An executive summary, a method section, the detailed findings, and a recommendations list. Different readers read different parts.",
+      "jp": "経営向けの要約、方法の説明、詳細な指摘、そして推奨事項の一覧。読む人によって、読む部分が違います。",
+      "note": "用語: executive summary = 経営向けの要約／finding = 診断で見つかった指摘事項"
+     },
+     {
+      "sp": 1,
+      "en": "What goes in the executive summary?",
+      "jp": "経営向けの要約には何を書きますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Three or four paragraphs, with no jargon: what we tested, the overall risk level, the most important findings in business terms, and what to do first.",
+      "jp": "専門用語なしで、3、4段落。何を診断したか、全体のリスクの水準、事業の言葉での最重要の指摘、最初にやること。"
+     },
+     {
+      "sp": 1,
+      "en": "And each finding in the detailed part?",
+      "jp": "詳細部分の、各指摘は？"
+     },
+     {
+      "sp": 0,
+      "en": "A clear title, the severity, where it was found, a description of the problem, the impact in plain words, the evidence, and the recommended fix. A developer must be able to act without calling you.",
+      "jp": "分かりやすい題名、重大度、見つかった場所、問題の説明、平易な言葉での影響、証拠、推奨する修正。開発者があなたに電話せずに、行動できなければいけません。"
+     },
+     {
+      "sp": 1,
+      "en": "Should I include good news, too?",
+      "jp": "よかったことも書くべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Mention what's working well. It shows balance, it's honest, and people accept criticism more easily when they also see progress.",
+      "jp": "はい。うまくいっていることも書きます。偏りのなさを示して、正直で、進歩も見えると、人は指摘を受け入れやすくなります。"
+     },
+     {
+      "sp": 1,
+      "en": "What tone do I use?",
+      "jp": "どんな口調を使いますか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Factual and calm. Describe the system, not the people. 'The password policy allows short passwords', not 'the administrators were careless'.",
+      "jp": "事実を、落ち着いて。人ではなくシステムを描きます。『パスワードの方針が短いパスワードを許している』であって、『管理者が不注意だった』ではありません。"
+     },
+     {
+      "sp": 1,
+      "en": "A report is for fixing, not for blaming.",
+      "jp": "報告書は直すためのもので、責めるためのものじゃない。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. A good report is a gift: it tells the client how to become safer.",
+      "jp": "その通り。良い報告書は贈り物です。依頼主がより安全になる方法を教えてくれます。"
+     }
+    ]
+   },
+   {
+    "t": "🎤 320｜講義20：報告会と再テスト：Lecture 20: Presenting and Retesting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The report is delivered. Now comes a meeting. Today we learn how to present findings, and how to make sure they're fixed.",
+      "jp": "報告書は提出されました。次は会議です。今日は、指摘をどう説明するか、そして確実に直されるようにする方法を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "How do I begin the presentation?",
+      "jp": "発表はどう始めますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Start with what's good, then the overall picture, and then the top three issues. Don't read the whole report aloud. People remember three things, not thirty.",
+      "jp": "まず良い点、次に全体像、そして上位3つの問題。報告書を全部読み上げないこと。人は30個ではなく、3個を覚えます。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "What if someone gets defensive?",
+      "jp": "誰かが防御的になったら？"
+     },
+     {
+      "sp": 0,
+      "en": "Stay calm and curious. Say, 'Let's look at the evidence together.' You're not their opponent. You're on the same team: the team that wants a safer system.",
+      "jp": "落ち着いて、興味を持って。『一緒に証拠を見ましょう』と言います。あなたは相手の敵ではありません。同じチーム、より安全なシステムを望むチームです。"
+     },
+     {
+      "sp": 1,
+      "en": "And when they ask, 'How urgent is this?'",
+      "jp": "『どれくらい急ぎですか』と聞かれたら？"
+     },
+     {
+      "sp": 0,
+      "en": "Answer with the risk and a time frame. 'This should be fixed within thirty days, because the system is exposed to the internet and the fix is simple.'",
+      "jp": "リスクと期間で答えます。『30日以内に直すべきです。システムがインターネットに公開されていて、直し方が簡単だからです』。"
+     },
+     {
+      "sp": 1,
+      "en": "What happens after the meeting?",
+      "jp": "会議のあとは、どうなりますか。",
+      "note": "用語: remediation plan = 是正計画／retest = 直した項目の再確認"
+     },
+     {
+      "sp": 0,
+      "en": "The client makes a remediation plan with owners and dates. Later, you perform a retest: you check only the fixed items, and update the report with the new status.",
+      "jp": "依頼主が、担当者と期限つきの是正計画を作ります。あとで再テストをします。直された項目だけを確認して、報告書を新しい状態に更新します。"
+     },
+     {
+      "sp": 1,
+      "en": "Why is the retest so important?",
+      "jp": "再テストはなぜ重要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because a 'fixed' item is sometimes not fixed, or the fix creates a new problem. Verification closes the loop. And that's the end of this track. Next, we'll learn how defenders detect and respond.",
+      "jp": "『直した』が、実は直っていなかったり、修正が新しい問題を作ったりするからです。確認が輪を閉じます。そしてこれでこの章は終わりです。次は、守る側がどう検知して対応するかを学びます。"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,606 @@
+[
+ {
+  "id": "career01",
+  "ic": "🎯",
+  "n": "セキュリティの仕事・英会話（資格・面接・倫理・当番）",
+  "hint": "Ten mentor conversations for starting a security career: certifications, interviews, ethical dilemmas, responsible disclosure, showing lab work, working with developers and international teams, on-call, career planning and the white-hat mindset",
+  "level": 4,
+  "keywords": [
+   "career",
+   "interview",
+   "ethics"
+  ],
+  "d": [
+   {
+    "t": "🛣️ 331｜資格と学び方の地図：Certifications and a Learning Path",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you told me you want to move from network operations into security. Where do you want to start?",
+      "jp": "ケン、ネットワーク運用からセキュリティへ移りたいと言っていたわね。どこから始めたい？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "I don't know. There are so many certifications. CompTIA, CEH, OSCP. It's confusing.",
+      "jp": "分からないんだ。資格がたくさんあって。CompTIA、CEH、OSCP。混乱するよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Think of them as steps. First, build a base: networking and system fundamentals, and a general security certification such as Security Plus.",
+      "jp": "段階として考えて。まず土台を作る。ネットワークとシステムの基礎、それとSecurity Plusのような、総合的なセキュリティの資格。",
+      "note": "用語: certification = 資格／base = 土台となる基礎"
+     },
+     {
+      "sp": 1,
+      "en": "And after the base?",
+      "jp": "土台のあとは？"
+     },
+     {
+      "sp": 0,
+      "en": "Choose a direction. Defense, such as analysis and incident response. Or offensive testing, where practical exams like OSCP prove that you can actually do the work.",
+      "jp": "方向を選ぶの。防御、たとえば分析やインシデント対応。または攻撃側の診断。OSCPのような実技試験が、実際に仕事ができることを証明するの。"
+     },
+     {
+      "sp": 1,
+      "en": "Do certifications matter more than experience?",
+      "jp": "資格は、経験より大事なの？"
+     },
+     {
+      "sp": 0,
+      "en": "No. They open the door for an interview, but experience and clear thinking win the job. Build both: a lab, projects, and written notes you can show.",
+      "jp": "いいえ。資格は面接への扉を開くけど、仕事を取るのは経験と明確な考え方よ。両方を作って。ラボ、プロジェクト、見せられる文章のメモ。"
+     },
+     {
+      "sp": 1,
+      "en": "How should I study each week?",
+      "jp": "毎週どう勉強すればいいかな。"
+     },
+     {
+      "sp": 0,
+      "en": "A little, often. Five hours a week, steady, beats a weekend of twelve hours once a month. And always connect study with practice in your lab.",
+      "jp": "少しずつ、頻繁に。毎週5時間を続ける方が、月に1回の12時間の週末に勝つの。そして勉強は、いつもラボでの実践とつなげて。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. A base first, then a direction, and a lab all the time.",
+      "jp": "分かった。まず土台、次に方向、そして常にラボ。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. And write about what you learn. Explaining something clearly is the best test of understanding it.",
+      "jp": "その通り。学んだことを書くこと。はっきり説明できるかどうかが、理解の最良のテストよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎙️ 332｜面接：なぜセキュリティなのか：Interview: Why Security?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for coming in, Ken. Let's begin with a simple question. Why do you want to work in security?",
+      "jp": "来てくれてありがとう、ケン。簡単な質問から始めましょう。なぜセキュリティの仕事をしたいのですか。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Because I've seen both sides of the network. For six years, I kept systems running, and I saw how a small mistake can stop a whole company.",
+      "jp": "ネットワークの両面を見てきたからです。6年間、システムを動かし続けて、小さなミスが会社全体を止めうるのを見ました。"
+     },
+     {
+      "sp": 0,
+      "en": "What do you bring from network operations that helps in security?",
+      "jp": "ネットワーク運用から、セキュリティで役立つものは何ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "A strong understanding of how traffic really flows, and experience in incidents at three a.m. I know what normal looks like, so I can recognize what's strange.",
+      "jp": "通信が実際にどう流れるかの深い理解と、午前3時のインシデントの経験です。普通がどう見えるかを知っているので、変なものに気づけます。"
+     },
+     {
+      "sp": 0,
+      "en": "What have you done on your own to build security skills?",
+      "jp": "セキュリティの技術を身につけるために、自分で何をしましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I built a home lab with virtual machines on an isolated network. I practice defense and analysis there, and I write a short note after every exercise.",
+      "jp": "隔離したネットワークの上に、仮想マシンで自宅ラボを作りました。そこで防御と分析を練習して、毎回の練習のあとに短いメモを書いています。"
+     },
+     {
+      "sp": 0,
+      "en": "Interesting. What's one thing you don't know yet, and how are you learning it?",
+      "jp": "興味深いですね。まだ知らないことを1つ挙げて、どう学んでいるか教えてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Cloud security. I know the networking part, but not the identity and permission model. I'm following a course and building a small environment to test it.",
+      "jp": "クラウドのセキュリティです。ネットワークの部分は知っていますが、IDと権限の仕組みは知りません。講座を受けて、小さな環境を作って試しています。",
+      "note": "表現: I appreciate honesty about gaps. = 足りない所を正直に話してくれてありがたい／面接官の評価の言葉"
+     },
+     {
+      "sp": 0,
+      "en": "I appreciate honesty about gaps. Do you have any questions for us?",
+      "jp": "足りない所を正直に話してくれて、ありがたいです。こちらに質問はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. How does the team support new members who are learning? And what does a typical first six months look like?",
+      "jp": "はい。チームは、学んでいる新メンバーをどう支えていますか。それと、最初の6か月は、どんな様子ですか。"
+     }
+    ]
+   },
+   {
+    "t": "⚖️ 333｜倫理のジレンマ：An Ethical Dilemma",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I need your opinion. During a test, our colleague found customer data that was open to everyone. The client's contract says nothing about it. What should we do?",
+      "jp": "ケン、意見を聞かせて。診断の最中に、同僚が、誰にでも見られる状態のお客さんのデータを見つけたの。依頼主の契約には、それについて何も書かれていない。どうすべき？"
+     },
+     {
+      "sp": 1,
+      "en": "Stop looking at the data immediately. Looking more would go beyond what we were authorized to do.",
+      "jp": "すぐにそのデータを見るのをやめます。それ以上見るのは、許された範囲を超えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. And then?",
+      "jp": "いいわね。それから？"
+     },
+     {
+      "sp": 1,
+      "en": "Tell the client's contact right away, through the agreed secure channel. A serious exposure should not wait for the final report.",
+      "jp": "合意した安全な連絡経路で、すぐ依頼主の担当者に伝えます。重大な露出は、最終報告書を待つべきじゃありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the client says, 'Don't tell anyone, and don't put it in the report'?",
+      "jp": "もし依頼主が、『誰にも言わないで、報告書にも入れないで』と言ったら？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I'd explain that I can't hide a finding, because the report must be honest. I'd offer to help them fix it quickly, and ask my manager to join the conversation.",
+      "jp": "報告書は正直でなければならないので、指摘を隠せないと説明します。早く直す手伝いを申し出て、上司にも会話に加わってもらいます。",
+      "note": "用語: integrity = 誠実さ（暗号の完全性とは別の意味）／professional duty = 職業上の義務"
+     },
+     {
+      "sp": 0,
+      "en": "And if people's personal data is at serious risk?",
+      "jp": "もし、人々の個人データが深刻な危険にさらされていたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then the law and our professional duty become even more important, and we involve legal advisers. Our guideline is: protect the people whose data it is.",
+      "jp": "それなら法律と、私たちの職業上の義務が、さらに重要になります。法務の専門家にも入ってもらいます。指針は、データの持ち主の人たちを守ることです。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm proud of that answer. In this field, your integrity is the foundation of your career.",
+      "jp": "その答えを誇りに思うわ。この分野では、誠実さがキャリアの土台よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. It's reassuring to know there's a clear principle when the situation is uncomfortable.",
+      "jp": "ありがとう。居心地の悪い場面でも、はっきりした原則があると知ると、安心します。"
+     }
+    ]
+   },
+   {
+    "t": "📬 334｜脆弱性を見つけた時の連絡：Responsible Disclosure",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, imagine you're using a company's public website, and you notice something that looks like a security weakness. What do you do?",
+      "jp": "ケン、ある会社の公開ウェブサイトを使っていて、セキュリティの弱点に見えるものに気づいたとします。どうする？"
+     },
+     {
+      "sp": 1,
+      "en": "I don't test it further. Even checking more could be against the law without permission.",
+      "jp": "それ以上は試しません。許可なく、さらに確かめるだけでも、法律に反する可能性があるので。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "Right. Then how do you report it?",
+      "jp": "そうね。じゃあ、どうやって報告する？"
+     },
+     {
+      "sp": 1,
+      "en": "I look for the company's security contact: a security page, an email address for reports, or a bug bounty program. Many companies publish a file with those details.",
+      "jp": "その会社のセキュリティ窓口を探します。セキュリティのページ、報告用のメールアドレス、バグバウンティのプログラム。多くの会社が、そういう情報を書いたファイルを公開しています。"
+     },
+     {
+      "sp": 0,
+      "en": "What do you write in the report?",
+      "jp": "報告には何を書く？"
+     },
+     {
+      "sp": 1,
+      "en": "A short, clear description of what I saw, where, and why it could matter, with the steps to see it again. And I don't include anyone's personal data.",
+      "jp": "見たもの、場所、なぜ問題になりうるか、再現できる手順を、短く分かりやすく。それと、誰かの個人データは含めません。"
+     },
+     {
+      "sp": 0,
+      "en": "And after you send it?",
+      "jp": "送ったあとは？"
+     },
+     {
+      "sp": 1,
+      "en": "I give them reasonable time to fix it, and I don't publish details until it's fixed, or until we agree on a date. That's called responsible disclosure.",
+      "jp": "直すための妥当な時間を渡して、直るまで、または合意した日付まで、詳細を公開しません。それを責任ある開示と呼びます。",
+      "note": "用語: responsible disclosure = 直るまで公開せず、関係者に先に知らせる報告の作法／bug bounty = 弱点の報告に報奨金が出る制度"
+     },
+     {
+      "sp": 0,
+      "en": "What if the company doesn't answer?",
+      "jp": "もし会社が返事をしなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "I try again politely, and I may ask a coordination organization to help. I never threaten, and I never demand money. Those turn a report into something that looks like extortion.",
+      "jp": "丁寧にもう一度連絡して、調整機関に助けを求めることもあります。脅したり、お金を要求したりは決してしません。それは報告を、恐喝のようなものに変えてしまうからです。"
+     }
+    ]
+   },
+   {
+    "t": "🧱 335｜ホームラボの成果を見せる：Showing Your Lab Work",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, a hiring manager once told me, 'Show me, don't tell me.' How can you show your lab work in an interview?",
+      "jp": "ケン、採用担当に昔言われたの。『言うんじゃなくて、見せて』。面接でラボの成果を、どう見せる？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I have a notebook of my exercises. Each entry has the goal, the setup, what I did, what I learned, and how a defender could prevent the problem.",
+      "jp": "練習のノートがあります。各項目に、目的、環境、やったこと、学んだこと、守る側がその問題をどう防げるかが書いてあります。"
+     },
+     {
+      "sp": 0,
+      "en": "That last part is the strongest. Anything else?",
+      "jp": "最後の部分がいちばん強いわ。ほかには？"
+     },
+     {
+      "sp": 1,
+      "en": "A sample report, written as if for a client, with an executive summary and findings. It's based on my lab, never on a real company.",
+      "jp": "依頼主向けに書いた形の、見本の報告書です。経営向けの要約と、指摘つき。私のラボをもとにしていて、実在の会社のものではありません。",
+      "note": "表現: Show me, don't tell me. = 言うんじゃなくて、見せて／成果で示す大切さ"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Do you share it publicly?",
+      "jp": "いいわね。それは公開してる？"
+     },
+     {
+      "sp": 1,
+      "en": "A cleaned version, on a personal page, with no secrets and no real addresses. I check it carefully before publishing.",
+      "jp": "きれいにした版を、個人のページで。秘密も本物のアドレスもなしで。公開する前に慎重に確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "What about scripts you wrote?",
+      "jp": "書いたスクリプトは？"
+     },
+     {
+      "sp": 1,
+      "en": "A few small tools for my lab, in a public repository, with a clear description and a note that they're for authorized testing and learning only.",
+      "jp": "ラボ用の小さな道具がいくつか、公開リポジトリにあります。明確な説明と、許可された診断と学習のためだけのものだという注意書きつきで。"
+     },
+     {
+      "sp": 0,
+      "en": "That tells me a lot about your character: curious, careful and ethical. Those matter as much as your skills.",
+      "jp": "あなたの人柄がよく分かるわ。好奇心があって、慎重で、倫理的。それは技術と同じくらい大事よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. I want people to trust me before they hire me.",
+      "jp": "ありがとう。雇ってもらう前に、信頼してもらいたいんです。"
+     }
+    ]
+   },
+   {
+    "t": "🤝 336｜開発者と一緒に直す：Working with Developers",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, the developers are upset. They say the security team only sends long lists of problems, and never helps. How should we respond?",
+      "jp": "ケン、開発者たちが不満なの。セキュリティチームは、問題の長い一覧を送るだけで、手伝ってくれないって。どう応えればいい？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd start by listening. They have a point. A list without guidance is not help.",
+      "jp": "まず話を聞きます。彼らの言い分にも一理あります。助言のない一覧は、助けじゃありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What would you change?",
+      "jp": "何を変える？"
+     },
+     {
+      "sp": 1,
+      "en": "Prioritize: send the three that matter most, with the reason and a clear example of the fix, instead of a hundred items.",
+      "jp": "優先順位をつける。100項目じゃなくて、最重要の3つを、理由と修正の具体例つきで送ります。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do you build a good relationship?",
+      "jp": "良い関係は、どう作る？"
+     },
+     {
+      "sp": 1,
+      "en": "Join their planning meetings, and talk about security early in the design, not after the release. Fixing a design problem on paper is a hundred times cheaper than fixing it in production.",
+      "jp": "彼らの計画の会議に参加して、リリースのあとじゃなくて、設計の早い段階でセキュリティを話します。設計の問題を紙の上で直す方が、本番で直すより100倍安いです。"
+     },
+     {
+      "sp": 0,
+      "en": "What if a developer says, 'We don't have time to fix this'?",
+      "jp": "もし開発者が『直す時間がない』と言ったら？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I'd ask about the schedule, explain the risk in business terms, and offer options: a quick temporary protection now, and the full fix next sprint.",
+      "jp": "日程を聞いて、リスクを事業の言葉で説明して、選択肢を出します。いまの簡易な暫定対策と、次のスプリントでの本格修正。",
+      "note": "表現: Yes, and here's how to do it safely. = いいですよ、安全にやる方法はこれです／協力的な伝え方"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Security people who say 'no' all the time get ignored. Those who say 'yes, and here's how to do it safely' get invited early.",
+      "jp": "いいわね。いつも『だめ』と言うセキュリティの人は、無視されるの。『いいですよ、安全にやる方法はこれです』と言う人は、早い段階から呼ばれるわ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll remember that. The goal is not to win an argument. The goal is a safer product.",
+      "jp": "覚えておきます。目的は議論に勝つことじゃなくて、より安全な製品です。"
+     }
+    ]
+   },
+   {
+    "t": "🌍 337｜国際チームで働く：Working in an International Team",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you'll work with colleagues in Dublin, Toronto and Singapore. Does that worry you?",
+      "jp": "ケン、ダブリン、トロント、シンガポールの同僚と働くことになるわ。不安？"
+     },
+     {
+      "sp": 1,
+      "en": "A little, mostly about English. I understand well, but sometimes I'm slow to answer in meetings.",
+      "jp": "少し、主に英語のことで。理解はできるけど、会議で答えるのが遅れることがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "That's very common. A few habits help. Prepare two or three points before each meeting, and send notes in writing afterward.",
+      "jp": "とてもよくあることよ。いくつかの習慣が役に立つわ。会議の前に2、3点を用意して、終わったあとに文書でメモを送るの。"
+     },
+     {
+      "sp": 1,
+      "en": "What if I don't understand what someone said?",
+      "jp": "誰かの言ったことが分からなかったら？",
+      "note": "表現: Could you say that once more? = もう一度言ってもらえますか／聞き返しの丁寧な言い方"
+     },
+     {
+      "sp": 0,
+      "en": "Ask. 'Could you say that once more?' or 'Do you mean this?' and repeat it in your own words. Nobody minds. Confusion left unspoken causes real mistakes.",
+      "jp": "聞くの。『もう一度言ってもらえますか』とか、『こういう意味ですか』と、自分の言葉で言い直して。誰も気にしないわ。口に出さない分からなさが、本当のミスを生むのよ。"
+     },
+     {
+      "sp": 1,
+      "en": "And time zones? Meetings are sometimes at night in Japan.",
+      "jp": "時差は？日本では、会議が夜になることがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Rotate the inconvenient times fairly, and write decisions down, so people who couldn't attend can follow. Good written communication is the real superpower of remote teams.",
+      "jp": "不便な時間を公平に回して、決定は文書に残して、出席できなかった人が追えるようにするの。分かりやすい文章でのやり取りが、リモートチームの本当の強みよ。"
+     },
+     {
+      "sp": 1,
+      "en": "What about different communication styles?",
+      "jp": "コミュニケーションの流儀の違いは？"
+     },
+     {
+      "sp": 0,
+      "en": "Some cultures are direct, others indirect. Don't assume bad intent. If a message feels harsh, ask a clarifying question before you react.",
+      "jp": "直接的な文化も、間接的な文化もあるわ。悪意を想定しないで。メッセージがきつく感じたら、反応する前に、確認の質問をして。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I feel more prepared. Short notes, clear questions, and patience.",
+      "jp": "準備ができた気がします。短いメモ、はっきりした質問、そして忍耐。"
+     }
+    ]
+   },
+   {
+    "t": "🌙 338｜夜勤の当番を乗り切る：Surviving On-Call",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, next week you'll take the on-call shift for the first time. Are you ready?",
+      "jp": "ケン、来週、初めて当番を担当するわね。準備はできてる？"
+     },
+     {
+      "sp": 1,
+      "en": "I have the runbooks and the contact list. But I'm nervous about the first alert at night.",
+      "jp": "手順書と連絡先の一覧はあります。でも、夜の最初のアラートが不安です。"
+     },
+     {
+      "sp": 0,
+      "en": "Normal. Remember, you're not alone. If you're unsure, call the senior on-call. Calling for help early is a sign of good judgment.",
+      "jp": "普通のことよ。覚えておいて、あなたは1人じゃない。自信がなければ、上位の当番に電話して。早く助けを求めるのは、いい判断のしるしよ。",
+      "note": "表現: Calling for help early is good judgment. = 早く助けを求めるのは良い判断／当番の心得"
+     },
+     {
+      "sp": 1,
+      "en": "What should I do first when an alert wakes me up?",
+      "jp": "アラートで起こされたら、最初に何をすればいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Don't act yet. Read the alert carefully, check whether it's real, and decide the impact. Then follow the runbook. Panic makes small incidents big.",
+      "jp": "まだ動かないで。アラートをよく読んで、本物か確認して、影響を判断する。それから手順書に従う。パニックは、小さなインシデントを大きくするの。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "And how do I take care of myself?",
+      "jp": "自分のケアは、どうすればいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Sleep before your shift if you can, keep water and food ready, and write notes during the incident, because your memory at three a.m. is not reliable.",
+      "jp": "できれば当番の前に眠って、水と食べ物を用意して、インシデントの間はメモを取って。午前3時の記憶は、当てにならないから。"
+     },
+     {
+      "sp": 1,
+      "en": "What do I do after the incident?",
+      "jp": "インシデントのあとは、何をする？"
+     },
+     {
+      "sp": 0,
+      "en": "Write a short handover note: what happened, what you did, and what remains. Then rest. A tired engineer makes mistakes, so rest is part of the job.",
+      "jp": "短い引き継ぎのメモを書く。何が起きて、何をして、何が残っているか。そのあと休む。疲れたエンジニアはミスをするから、休むことも仕事の一部よ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you, Ana. It's good to hear that asking for help is allowed.",
+      "jp": "ありがとう、アナ。助けを求めていいと聞けて、よかったです。"
+     },
+     {
+      "sp": 0,
+      "en": "Always. A team that's honest about limits is a team that survives.",
+      "jp": "いつでもよ。限界に正直なチームが、生き残るチームなの。"
+     }
+    ]
+   },
+   {
+    "t": "📈 339｜キャリアを設計する：Planning Your Career",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, let's talk about the next three years. Where do you see yourself?",
+      "jp": "ケン、これからの3年について話しましょう。自分をどこに見ている？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd like to become a security engineer who understands networks and cloud deeply, and who can design safe systems, not only find problems.",
+      "jp": "ネットワークとクラウドを深く理解して、問題を見つけるだけじゃなく、安全なシステムを設計できる、セキュリティエンジニアになりたいです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a strong goal. What are the steps?",
+      "jp": "いい目標ね。段階は？"
+     },
+     {
+      "sp": 1,
+      "en": "Year one: finish a general certification, and join the incident response rotation. Year two: lead the review of one system's design. Year three: choose a specialty, like cloud security.",
+      "jp": "1年目は、総合的な資格を取って、インシデント対応の当番に加わる。2年目は、1つのシステムの設計レビューを主導する。3年目は、クラウドセキュリティのような専門を選ぶ。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. How will you measure progress?",
+      "jp": "いいわね。進み具合は、どう測る？"
+     },
+     {
+      "sp": 1,
+      "en": "Every quarter, I'll review what I learned, what I built, and what feedback I got. I'll ask you and one more mentor for honest feedback.",
+      "jp": "四半期ごとに、学んだこと、作ったもの、もらったフィードバックを見直します。あなたと、もう1人のメンターに、率直な意見をもらいます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "And what about the risks, like burnout?",
+      "jp": "燃え尽きのようなリスクは？"
+     },
+     {
+      "sp": 1,
+      "en": "I'll protect my time: limited study hours, real days off, and hobbies that have nothing to do with computers. A long career needs energy.",
+      "jp": "時間を守ります。勉強の時間に上限を決めて、本当の休日を取って、コンピューターと関係ない趣味も持つ。長いキャリアには、エネルギーが必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "Wise. Remember that the field changes quickly. The skill that lasts is learning how to learn.",
+      "jp": "賢いわね。この分野は変化が速いことを忘れないで。長続きする技術は、学び方を学ぶことよ。",
+      "note": "表現: learning how to learn = 学び方を学ぶこと／変化の速い分野で長続きする力"
+     },
+     {
+      "sp": 1,
+      "en": "I'll write that on my wall, next to 'always check DNS'.",
+      "jp": "それを、『まずDNSを疑え』の隣の壁に書いておきます。"
+     },
+     {
+      "sp": 0,
+      "en": "Ha! Good. Both are true.",
+      "jp": "ふふ！いいわね。どちらも本当よ。"
+     }
+    ]
+   },
+   {
+    "t": "🎓 340｜最終講義：ホワイトハットの心得：Final Lecture: The White-Hat Mindset",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Welcome to the final lecture of this series. Over many lectures, we've covered cryptography, threats, assessments and defense. Today, I want to give you the mindset behind all of it.",
+      "jp": "このシリーズの最終講義へようこそ。たくさんの講義で、暗号、脅威、診断、防御を学びました。今日は、そのすべての裏にある心構えをお話しします。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "What is the white-hat mindset, in one sentence?",
+      "jp": "ホワイトハットの心構えを、1文で言うと何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Use your understanding of how things break in order to make them stronger, with permission, with honesty, and with care for the people affected.",
+      "jp": "物がどう壊れるかの理解を、物をより強くするために使うこと。許可を得て、正直に、影響を受ける人たちを思いやって。",
+      "note": "表現: with permission, with honesty, with care = 許可を得て、正直に、思いやりを持って／ホワイトハットの心得"
+     },
+     {
+      "sp": 1,
+      "en": "It sounds simple, but I imagine it's hard to keep in difficult situations.",
+      "jp": "簡単に聞こえますが、難しい状況で守り続けるのは大変でしょうね。"
+     },
+     {
+      "sp": 0,
+      "en": "It is. There will be moments when a shortcut looks tempting, or when a client pressures you. In those moments, return to the three rules: permission, honesty and protecting people.",
+      "jp": "そうです。近道が魅力的に見えたり、依頼主に圧力をかけられたりする時があります。そのたびに、3つの決まりに戻ってください。許可、正直さ、人を守ること。"
+     },
+     {
+      "sp": 1,
+      "en": "What should a beginner do first, starting tomorrow?",
+      "jp": "初心者は、明日から何をすべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Build your lab, write about what you learn, and take small steps every week. Protect your own accounts first: a unique passphrase for each service, a password manager, and multi-factor authentication. Practice on yourself what you'd teach others.",
+      "jp": "ラボを作って、学んだことを書いて、毎週小さな一歩を重ねる。まず自分のアカウントを守る。サービスごとに別のパスフレーズ、パスワード管理アプリ、多要素認証。人に教えることを、自分で実践するのです。"
+     },
+     {
+      "sp": 1,
+      "en": "And how do we keep learning when everything changes so fast?",
+      "jp": "そして、すべてがこんなに速く変わる中で、どう学び続けますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Stay curious, read the original sources, join communities of honest practitioners, and teach what you know. Teaching is the fastest way to learn.",
+      "jp": "好奇心を持ち続けて、一次情報を読んで、誠実な実践者のコミュニティに入って、知っていることを教える。教えることが、いちばん速い学び方です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you for all the lectures. I feel I've learned not only techniques, but also how to think.",
+      "jp": "すべての講義をありがとうございました。技術だけでなく、考え方も学べた気がします。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the best result I could hope for. The tools will change, and the threats will change, but a careful, honest and curious mind will always be needed. Go and build a safer world.",
+      "jp": "それが、私の望める最高の結果です。道具も脅威も変わっていきますが、慎重で、誠実で、好奇心のある心は、いつの時代も必要とされます。さあ、より安全な世界を作りに行ってください。"
+     }
+    ]
+   }
+  ]
+ }
+]

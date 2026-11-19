@@ -1,0 +1,645 @@
+[
+ {
+  "id": "sec03",
+  "ic": "🛡️",
+  "n": "セキュリティ講義3・防御と対応（講義21〜30）",
+  "hint": "Ten lecture-style conversations on defense: what to log, alert triage, incident response phases, containment, forensics basics, vulnerability management, ransomware resilience, awareness programs, explaining risk and a tabletop exercise",
+  "level": 4,
+  "keywords": [
+   "defense",
+   "incident response",
+   "lecture"
+  ],
+  "d": [
+   {
+    "t": "🗂️ 321｜講義21：何を記録するか：Lecture 21: What to Log",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Detection starts with logs. If you don't record something, you can never investigate it. Today we decide what to record.",
+      "jp": "検知はログから始まります。記録しなかったことは、調べることもできません。今日は、何を記録するかを決めます。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "Should we log everything?",
+      "jp": "全部を記録するべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No. Too much data hides the important parts and costs money. Start with the events that matter most for security.",
+      "jp": "いいえ。多すぎるデータは重要な部分を隠して、お金もかかります。まず、セキュリティで最も大事な出来事から始めます。"
+     },
+     {
+      "sp": 1,
+      "en": "Which events are those?",
+      "jp": "それはどの出来事ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Logins, successes and failures. Changes to permissions. Administrator actions. Changes to firewall rules. And access to the most sensitive data.",
+      "jp": "ログインの成功と失敗。権限の変更。管理者の操作。ファイアウォールのルールの変更。そして最も機微なデータへのアクセス。",
+      "note": "用語: log = 出来事の記録／retention = ログを保管する期間"
+     },
+     {
+      "sp": 1,
+      "en": "What information should each log entry contain?",
+      "jp": "各ログには、どんな情報が必要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Who, what, when, where, and the result. And the time must be accurate, so all your systems need synchronized clocks.",
+      "jp": "誰が、何を、いつ、どこで、結果は。そして時刻が正確でなければいけません。だから全部のシステムの時計を同期させる必要があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Where should the logs be stored?",
+      "jp": "ログはどこに保管しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "On a separate central system. If the logs stay on the machine that was attacked, an intruder can erase them. Protect the central logs with strict access.",
+      "jp": "別の中央のシステムにです。攻撃された機械にログが残っていると、侵入者に消されます。中央のログは、厳しいアクセス制限で守ります。"
+     },
+     {
+      "sp": 1,
+      "en": "And how long should we keep them?",
+      "jp": "そしてどれくらい保管しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Long enough to investigate, which is often months. Many intrusions are discovered long after they begin, so short retention can leave you blind.",
+      "jp": "調査できるだけの長さ、たいてい数か月です。侵入の多くは、始まってからずっとあとに発見されるので、保管が短いと、何も見えなくなります。"
+     },
+     {
+      "sp": 1,
+      "en": "Also, never put passwords or secrets into logs by mistake.",
+      "jp": "それと、パスワードや秘密を、誤ってログに入れないことも大事です。"
+     },
+     {
+      "sp": 0,
+      "en": "Very true. Logs are a common place where secrets leak. Review what your applications write.",
+      "jp": "まったくその通り。ログは、秘密が漏れやすい場所です。アプリが何を書き出すか、見直してください。"
+     }
+    ]
+   },
+   {
+    "t": "🚨 322｜講義22：アラートを仕分ける：Lecture 22: Triage of Alerts",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A security monitoring system produces many alerts. Today we learn triage: deciding which alert to look at first.",
+      "jp": "セキュリティの監視システムは、たくさんのアラートを出します。今日はトリアージを学びます。どのアラートを先に見るかを決めること。"
+     },
+     {
+      "sp": 1,
+      "en": "Isn't that what the severity label is for?",
+      "jp": "それが重大度のラベルの役目ではないですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It helps, but you must add context. A failed login is normal. A hundred failed logins from one address, followed by a success, is a story.",
+      "jp": "役には立ちますが、状況を足さなければいけません。ログインの失敗は普通です。1つのアドレスからの100回の失敗と、そのあとの成功は、物語になります。"
+     },
+     {
+      "sp": 1,
+      "en": "So I look for patterns across several events.",
+      "jp": "つまり、複数の出来事にわたる模様を探すんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Ask: does this match the usual behavior of this user or system? Is the asset important? Are there other alerts about the same thing?",
+      "jp": "はい。問います。これは、この利用者やシステムの普段の動きと合うか。資産は重要か。同じことについて、ほかのアラートはあるか。",
+      "note": "用語: triage = 優先順位をつけて仕分けること／alert fatigue = アラートが多すぎて無視してしまう状態"
+     },
+     {
+      "sp": 1,
+      "en": "What if there are too many alerts to read them all?",
+      "jp": "全部を読みきれないほど、アラートが多かったら？"
+     },
+     {
+      "sp": 0,
+      "en": "That's alert fatigue, and it's dangerous. People start ignoring everything. The fix is to tune: remove rules that produce only noise, and improve the important ones.",
+      "jp": "それがアラート疲れで、危険です。人は全部を無視し始めます。直し方は調整です。ノイズしか出さないルールを外して、重要なルールを改善します。"
+     },
+     {
+      "sp": 1,
+      "en": "How do I decide that an alert is a false positive?",
+      "jp": "アラートが誤検知だと、どう判断しますか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Verify with evidence, not a feeling. Check the logs, ask the user, and write down your reasoning. Then you can improve the rule, instead of just closing the ticket.",
+      "jp": "感覚ではなく、証拠で確認します。ログを見て、利用者に聞いて、理由を書き留める。そうすれば、チケットを閉じるだけでなく、ルールを改善できます。"
+     },
+     {
+      "sp": 1,
+      "en": "And if I'm not sure?",
+      "jp": "自信がなかったら？"
+     },
+     {
+      "sp": 0,
+      "en": "Escalate. A quick question to a senior colleague costs five minutes. A missed incident can cost millions.",
+      "jp": "エスカレーションします。先輩への質問は5分で済みます。見逃したインシデントは、何百万もの損失になりえます。"
+     }
+    ]
+   },
+   {
+    "t": "🔥 323｜講義23：インシデント対応の6段階：Lecture 23: The Phases of Incident Response",
+    "l": [
+     {
+      "sp": 0,
+      "en": "An incident will happen to every organization. What matters is how well you respond. Today we study the standard phases.",
+      "jp": "インシデントは、どの組織にも起きます。大事なのは、どれだけうまく対応するかです。今日は、標準的な段階を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the first phase?",
+      "jp": "最初の段階は何ですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Preparation. Before anything happens: a team, contact lists, procedures, tools, and practice. The best response is the one you already rehearsed.",
+      "jp": "準備です。何か起きる前に。チーム、連絡先、手順、道具、そして練習。最良の対応は、すでに練習したものです。"
+     },
+     {
+      "sp": 1,
+      "en": "Then detection?",
+      "jp": "次が検知ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Detection and analysis: recognizing that something is wrong, and understanding what. Then containment, eradication and recovery.",
+      "jp": "検知と分析。何かがおかしいと気づいて、それが何かを理解する。次に封じ込め、根絶、復旧です。",
+      "note": "用語: containment / eradication / recovery = 封じ込め／根絶／復旧"
+     },
+     {
+      "sp": 1,
+      "en": "Can you explain containment and eradication in simple words?",
+      "jp": "封じ込めと根絶を、やさしく説明してもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Containment stops the problem from spreading, like closing the doors in a burning building. Eradication removes the cause, like putting out the fire and removing the thing that started it.",
+      "jp": "封じ込めは、問題の広がりを止めること。燃える建物の扉を閉めるように。根絶は、原因を取り除くこと。火を消して、火元を片づけるように。"
+     },
+     {
+      "sp": 1,
+      "en": "And recovery means returning to normal operation?",
+      "jp": "そして復旧は、通常の運用に戻ることですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, carefully, with monitoring, to make sure the problem doesn't return. The last phase is lessons learned: a blameless review within a few days, while memories are fresh.",
+      "jp": "はい、問題が戻らないよう、監視しながら慎重に。最後の段階は、教訓の振り返り。記憶が新しいうちに、数日以内に責めない形で行います。"
+     },
+     {
+      "sp": 1,
+      "en": "What is the most common mistake in response?",
+      "jp": "対応でいちばん多い間違いは何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Acting too fast, without understanding. For example, wiping a machine immediately destroys the evidence you need to learn what happened. Slow down enough to think.",
+      "jp": "理解せずに、速く動きすぎることです。たとえば機械をすぐ初期化すると、何が起きたか知るための証拠を壊してしまいます。考えられるくらいには、落ち着いてください。"
+     }
+    ]
+   },
+   {
+    "t": "🧯 324｜講義24：封じ込めの判断：Lecture 24: Deciding How to Contain",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Containment is a decision with trade-offs. Today we practice the thinking, using one scenario.",
+      "jp": "封じ込めは、トレードオフのある判断です。今日は、1つの場面を使って、考え方を練習します。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the scenario?",
+      "jp": "どんな場面ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "At nine a.m., a monitoring system shows that one employee's laptop is sending large amounts of data to an unknown address. What do you do first?",
+      "jp": "午前9時、監視システムが、ある社員のノートパソコンが、見知らぬアドレスに大量のデータを送っていると示します。最初に何をしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd disconnect it from the network immediately.",
+      "jp": "すぐにネットワークから切り離します。"
+     },
+     {
+      "sp": 0,
+      "en": "Good instinct, because it stops the data leaving. But don't turn it off, because the memory contains evidence. Isolate the network, but keep the power on.",
+      "jp": "いい直感です。データの流出を止めるから。でも電源は切らないで。メモリには証拠があります。ネットワークは隔離して、電源は入れたままにします。",
+      "note": "表現: Isolate the network, but keep the power on. = ネットワークは隔離し、電源は入れたまま／証拠を守る封じ込め"
+     },
+     {
+      "sp": 1,
+      "en": "Should I tell the employee?",
+      "jp": "その社員に伝えますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, but carefully, and without blame. They may have clicked something without knowing. Ask what they did, and don't use their account for now.",
+      "jp": "はい、ただし慎重に、責めずに。知らずに何かを押したのかもしれません。何をしたか聞いて、当面そのアカウントは使わせません。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "What about the other computers?",
+      "jp": "ほかのパソコンはどうしますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Check whether the same address appears in other logs. If so, isolate those too. Also reset the employee's passwords, and look at what the account could access.",
+      "jp": "同じアドレスがほかのログにもないか確認します。あれば、それらも隔離する。さらにその社員のパスワードをリセットして、そのアカウントが何にアクセスできたかを調べます。"
+     },
+     {
+      "sp": 1,
+      "en": "When do we tell management?",
+      "jp": "いつ経営層に伝えますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Early, with facts and a clear statement of what's still unknown. Executives dislike surprises more than bad news.",
+      "jp": "早く、事実と、まだ分かっていないことの明確な説明をつけて。経営層は、悪い知らせより、不意打ちを嫌います。"
+     }
+    ]
+   },
+   {
+    "t": "🔍 325｜講義25：証拠を守る（デジタルフォレンジック）：Lecture 25: Preserving Evidence",
+    "l": [
+     {
+      "sp": 0,
+      "en": "After an incident, you want to know exactly what happened. That's digital forensics. Today we learn the basic principles.",
+      "jp": "インシデントのあと、正確に何が起きたかを知りたくなります。それがデジタルフォレンジックです。今日は、基本の原則を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the most important principle?",
+      "jp": "最も重要な原則は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't change the evidence. Work on a copy, never on the original. Every action on the original risks destroying information.",
+      "jp": "証拠を変えないこと。コピーで作業して、元には絶対に触れない。元への操作は、情報を壊す危険があります。"
+     },
+     {
+      "sp": 1,
+      "en": "How do we make a copy that's trustworthy?",
+      "jp": "信頼できるコピーを、どう作りますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Make an exact image, and compute its hash. Later, anyone can compute the hash again and confirm that the copy hasn't changed. It's the use of hashing we studied in the cryptography lectures.",
+      "jp": "正確なイメージを作って、そのハッシュを計算します。あとで誰でももう一度ハッシュを計算して、コピーが変わっていないことを確認できます。暗号の講義で学んだ、ハッシュの使い道です。"
+     },
+     {
+      "sp": 1,
+      "en": "What is the chain of custody?",
+      "jp": "証拠の保管の連鎖とは何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "A written record of who held the evidence, when, and why. Without it, a court or an auditor may not accept the evidence.",
+      "jp": "誰が、いつ、なぜ証拠を持っていたかの記録です。それがなければ、裁判所や監査人は、その証拠を認めないかもしれません。",
+      "note": "用語: chain of custody = 証拠の取り扱い記録／order of volatility = 消えやすい順に証拠を集める原則"
+     },
+     {
+      "sp": 1,
+      "en": "What kind of evidence do we collect first?",
+      "jp": "最初に集める証拠は、どんな種類ですか。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     },
+     {
+      "sp": 0,
+      "en": "The most fragile first: memory and running processes, then network connections, then disk contents. This is called the order of volatility.",
+      "jp": "最も壊れやすいものから。メモリと実行中のプロセス、次にネットワーク接続、次にディスクの中身。それを揮発性の順序と呼びます。"
+     },
+     {
+      "sp": 1,
+      "en": "And what do we do with what we find?",
+      "jp": "そして見つけたものは、どうしますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Build a timeline: put all the events in order. A clear timeline turns a pile of logs into a story that everyone can understand.",
+      "jp": "時系列を作ります。すべての出来事を順番に並べる。分かりやすい時系列が、ログの山を、誰もが理解できる物語に変えます。"
+     }
+    ]
+   },
+   {
+    "t": "🩹 326｜講義26：脆弱性管理とパッチ：Lecture 26: Managing Vulnerabilities",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Most successful attacks use weaknesses that already have a fix. Today we learn how to manage updates in a realistic way.",
+      "jp": "成功した攻撃の多くは、すでに修正のある弱点を使います。今日は、現実的に更新を管理する方法を学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Why don't organizations simply install every update immediately?",
+      "jp": "なぜ組織は、全部の更新をすぐに入れないんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Because updates can break things. A system that is down because of an update is also a problem. So we need a process, not a panic.",
+      "jp": "更新が何かを壊すことがあるからです。更新で止まったシステムも、問題です。だからパニックではなく、手順が必要です。"
+     },
+     {
+      "sp": 1,
+      "en": "What does the process look like?",
+      "jp": "その手順は、どんなものですか。",
+      "note": "元の形: what does／聞こえ方: ワダズ／使う場面:何をするかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Keep an inventory of everything you run. Watch for new vulnerabilities that affect it. Rate each one by risk. Test the fix. Deploy it. Then verify.",
+      "jp": "動かしているものすべての一覧を持つ。それに影響する新しい脆弱性を見張る。リスクで評価する。修正をテストする。展開する。そして確認する。"
+     },
+     {
+      "sp": 1,
+      "en": "How fast should we patch?",
+      "jp": "どれくらい速く適用すべきですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It depends on risk. A critical weakness that is already being exploited and exposed to the internet: within days, or even hours. A low risk on an internal system: during the next regular window.",
+      "jp": "リスクによります。すでに悪用されていて、インターネットに公開されている重大な弱点は、数日、あるいは数時間以内。内部のシステムの低リスクは、次の定期の時間に。",
+      "note": "用語: patch = 修正プログラム／compensating control = 直せない時の代わりの対策"
+     },
+     {
+      "sp": 1,
+      "en": "What if we can't patch, for example an old system that must keep running?",
+      "jp": "もしパッチを当てられなかったら？たとえば動かし続けなければならない古いシステムなら。"
+     },
+     {
+      "sp": 0,
+      "en": "Then use compensating controls: isolate it on its own network, restrict who can reach it, monitor it closely, and document the risk and a plan to replace it.",
+      "jp": "そうしたら代替の対策を使います。専用のネットワークに隔離して、届く人を制限して、厳しく監視して、リスクと置き換えの計画を記録します。"
+     },
+     {
+      "sp": 1,
+      "en": "So the inventory is the foundation.",
+      "jp": "つまり一覧が土台なんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Always. You cannot patch what you don't know you have.",
+      "jp": "いつもそうです。持っていると知らないものには、パッチを当てられません。"
+     }
+    ]
+   },
+   {
+    "t": "💾 327｜講義27：バックアップとランサムウェア対策：Lecture 27: Backups and Ransomware Resilience",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ransomware locks an organization's data and demands payment. Today we study how to be ready, and the central answer is backups.",
+      "jp": "ランサムウェアは、組織のデータをロックして、支払いを要求します。今日は、備え方を学びます。中心の答えは、バックアップです。"
+     },
+     {
+      "sp": 1,
+      "en": "If we have backups, can't we just restore?",
+      "jp": "バックアップがあれば、復元するだけでいいのでは。"
+     },
+     {
+      "sp": 0,
+      "en": "Only if the backups survive. Modern ransomware looks for backups and encrypts or deletes them first. So the backups must be protected too.",
+      "jp": "バックアップが無事なら、です。最近のランサムウェアは、まずバックアップを探して、暗号化したり消したりします。だからバックアップも守らなければいけません。"
+     },
+     {
+      "sp": 1,
+      "en": "How do we protect them?",
+      "jp": "どう守りますか。"
+     },
+     {
+      "sp": 0,
+      "en": "The three-two-one rule: three copies, on two different kinds of storage, with one copy offline or unchangeable. Offline means an attacker on your network can't reach it.",
+      "jp": "3-2-1の決まりです。3つのコピー、2種類の保管先、1つはオフライン、または変更できない状態。オフラインとは、ネットワーク上の攻撃者が届かないという意味です。"
+     },
+     {
+      "sp": 1,
+      "en": "Is making a backup enough?",
+      "jp": "バックアップを作れば十分ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No. A backup you have never restored is only a hope. Practice the restore regularly, and measure how long it takes. The time to recover is what the business actually feels.",
+      "jp": "いいえ。一度も復元していないバックアップは、希望にすぎません。定期的に復元を練習して、かかる時間を測ります。復旧の時間こそ、事業が実際に感じるものです。",
+      "note": "用語: 3-2-1 rule = 3つのコピー・2種類の保管先・1つはオフライン／ransomware = データを人質にして金銭を要求するマルウェア"
+     },
+     {
+      "sp": 1,
+      "en": "What else reduces the damage?",
+      "jp": "ほかに被害を減らすものは？"
+     },
+     {
+      "sp": 0,
+      "en": "Keep systems patched, limit privileges, segment the network, use multi-factor authentication, and train people. And have a plan for the day it happens, including who decides about any payment.",
+      "jp": "システムの更新、権限の制限、ネットワークの分離、多要素認証、人への教育。そして起きた日のための計画。支払いについて誰が決めるかも含めて。"
+     },
+     {
+      "sp": 1,
+      "en": "Do experts recommend paying?",
+      "jp": "専門家は、支払いを勧めますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Generally not. Payment doesn't guarantee that you get your data back, and it funds more attacks. It may also have legal consequences. That's why preparation matters so much.",
+      "jp": "一般的には勧めません。支払っても、データが戻る保証はなく、さらなる攻撃の資金になります。法的な問題もありえます。だから準備がとても大切なのです。"
+     }
+    ]
+   },
+   {
+    "t": "🎓 328｜講義28：人を育てる防御：Lecture 28: Security Awareness That Works",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Technology alone cannot protect an organization. People are the largest part of the attack surface, and also the best sensors. Today we study awareness programs.",
+      "jp": "技術だけでは、組織は守れません。人は攻撃面の最大の部分で、最高のセンサーでもあります。今日は、意識向上の取り組みを学びます。"
+     },
+     {
+      "sp": 1,
+      "en": "Do the annual training videos work?",
+      "jp": "毎年の研修ビデオは、効果がありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Rarely, on their own. People forget a long video within a week. Short, frequent, practical lessons work better.",
+      "jp": "それだけでは、ほとんどありません。長いビデオは、1週間で忘れられます。短く、頻繁で、実践的な学びの方が効きます。"
+     },
+     {
+      "sp": 1,
+      "en": "What about the fake phishing emails some companies send?",
+      "jp": "一部の会社が送る、偽のフィッシングメールは？"
+     },
+     {
+      "sp": 0,
+      "en": "Simulations can help if they're used to teach, not to punish. Employees who fail should get a friendly explanation, not a warning letter.",
+      "jp": "罰するためでなく、教えるために使えば、役に立ちます。引っかかった社員には、警告状ではなく、親切な説明をします。",
+      "note": "用語: awareness program = 社員の安全意識を高める取り組み／simulation = 訓練用の偽メール"
+     },
+     {
+      "sp": 1,
+      "en": "What's the most important message to teach?",
+      "jp": "教えるべき最重要のメッセージは何ですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Report quickly. Make it easy: one button, no fear. The employee who reports a suspicious message in two minutes might prevent a breach.",
+      "jp": "すぐに報告すること。簡単にします。ボタン1つで、恐れなしに。怪しいメッセージを2分で報告した社員が、侵害を防ぐかもしれません。"
+     },
+     {
+      "sp": 1,
+      "en": "How do we know if the program is working?",
+      "jp": "取り組みが効いているか、どう分かりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Measure: the report rate, the time to report, and the click rate. A rising report rate is a better sign than a falling click rate.",
+      "jp": "測ります。報告率、報告までの時間、クリック率。報告率の上昇は、クリック率の低下より良いしるしです。"
+     },
+     {
+      "sp": 1,
+      "en": "And what role does leadership play?",
+      "jp": "経営層の役割は何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Huge. If leaders follow the rules, people follow. If leaders ask for exceptions, nobody takes the rules seriously.",
+      "jp": "とても大きいです。リーダーが決まりを守れば、人も守ります。リーダーが例外を求めれば、誰も決まりを真剣に受け取りません。"
+     }
+    ]
+   },
+   {
+    "t": "🧭 329｜講義29：リスクを説明して決める：Lecture 29: Explaining Risk to Decision Makers",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Security engineers often fail not because they are wrong, but because they can't explain risk to the people who decide. Today we fix that.",
+      "jp": "セキュリティ技術者が失敗するのは、間違っているからではなく、決める人にリスクを説明できないからのことが多いです。今日はそれを直します。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the simplest way to describe risk?",
+      "jp": "リスクを説明する、いちばん簡単な方法は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Risk is the likelihood of something bad happening, multiplied by the impact if it does. Both parts matter.",
+      "jp": "リスクは、悪いことが起きる可能性と、起きた時の影響の掛け算です。両方が大事です。"
+     },
+     {
+      "sp": 1,
+      "en": "And how do we talk about impact to executives?",
+      "jp": "そして経営層には、影響をどう話しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "In business terms: money, time, customers, reputation, legal trouble. Not 'a buffer overflow in the library', but 'customers cannot pay for two days'.",
+      "jp": "事業の言葉で。お金、時間、顧客、評判、法的な問題。『ライブラリのバッファオーバーフロー』ではなく、『顧客が2日間、支払いできない』です。",
+      "note": "用語: risk = 可能性×影響／accept a risk = 承知の上でリスクを受け入れる"
+     },
+     {
+      "sp": 1,
+      "en": "What if the executives ask for a simple yes or no? 'Are we secure?'",
+      "jp": "経営層が、簡単なイエスかノーを求めたら？『うちは安全か』と。"
+     },
+     {
+      "sp": 0,
+      "en": "Be honest: 'No system is perfectly secure. Our biggest risks are these three, and with this budget we can reduce them like this.' Give options, with costs.",
+      "jp": "正直に。『完璧に安全なシステムはありません。最大のリスクは、この3つで、この予算でこう減らせます』。費用つきの選択肢を示します。"
+     },
+     {
+      "sp": 1,
+      "en": "What are the options for dealing with a risk?",
+      "jp": "リスクへの対処には、どんな選択肢がありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Four: reduce it, transfer it, for example with insurance, avoid it by stopping the risky activity, or accept it knowingly. The decision belongs to the business, not to the security team.",
+      "jp": "4つです。減らす、保険などで移す、危険な活動をやめて避ける、承知の上で受け入れる。決定は、セキュリティチームではなく、事業のものです。"
+     },
+     {
+      "sp": 1,
+      "en": "So our job is to inform the decision, not to make it.",
+      "jp": "じゃあ私たちの仕事は、決めることではなく、決める材料を示すことなんですね。"
+     },
+     {
+      "sp": 0,
+      "en": "Exactly. And document the decision, so everyone remembers who accepted which risk, and why.",
+      "jp": "その通り。そして決定を記録して、誰がどのリスクを、なぜ受け入れたか、みんなが覚えているようにします。"
+     }
+    ]
+   },
+   {
+    "t": "🎲 330｜講義30：机上演習（防御の総仕上げ）：Lecture 30: A Tabletop Exercise",
+    "l": [
+     {
+      "sp": 0,
+      "en": "For the final lecture of this track, we practice together. A tabletop exercise is a discussion-based drill. No computers, only thinking.",
+      "jp": "この章の最後の講義では、一緒に練習します。机上演習は、話し合いで行う訓練です。コンピューターは使わず、考えるだけです。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the scenario?",
+      "jp": "どんな場面ですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Friday, six p.m. A message appears on the file server: 'Your files are encrypted.' Three departments report that they can't open documents. What's your first move?",
+      "jp": "金曜の午後6時。ファイルサーバーに『あなたのファイルは暗号化されました』というメッセージが出ます。3つの部署が、書類を開けないと報告してきます。最初の一手は？",
+      "note": "用語: tabletop exercise = 机上で行う、インシデント対応の話し合い訓練"
+     },
+     {
+      "sp": 1,
+      "en": "Confirm the report, and gather the facts. Which systems, since when? Then call the incident lead, and open an incident record.",
+      "jp": "報告を確認して、事実を集めます。どのシステムが、いつから。それからインシデントの責任者に電話して、インシデントの記録を開きます。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. The incident lead asks: do we disconnect the file server?",
+      "jp": "いいですね。責任者が問います。ファイルサーバーを切り離しますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, isolate it from the network to stop the spread, but keep it powered on to preserve evidence. And check whether the backup server is also affected.",
+      "jp": "はい、広がりを止めるためにネットワークから隔離して、証拠を守るために電源は入れたままにします。そしてバックアップのサーバーも影響を受けていないか確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "The backup server looks fine, and the last backup was last night. Now the CEO calls and asks, 'When will we be back?'",
+      "jp": "バックアップのサーバーは無事で、最後のバックアップは昨夜です。そこへ社長から電話が来ます。『いつ復旧する？』"
+     },
+     {
+      "sp": 1,
+      "en": "I'd say, 'We have a backup from last night. We're confirming it's clean and estimating the restore time. I'll update you in one hour.' I wouldn't promise a time I can't keep.",
+      "jp": "『昨夜のバックアップがあります。それが無事か確認して、復元時間を見積もっています。1時間後に報告します』。守れない時間は、約束しません。"
+     },
+     {
+      "sp": 0,
+      "en": "Excellent. A journalist calls the company. Who answers?",
+      "jp": "すばらしい。記者が会社に電話してきます。誰が答えますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Not the technical team. Only the designated communications person, with approved wording, and legal advice.",
+      "jp": "技術チームではありません。指名された広報担当だけが、承認された文面で、法務の助言のもとに答えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. You've just shown that defense is made of preparation, communication and calm. Together with the technical skills, that's what a professional looks like.",
+      "jp": "完璧です。いま、防御が、準備と連絡と落ち着きでできていることを示しました。技術と合わせて、それが専門家の姿です。"
+     }
+    ]
+   }
+  ]
+ }
+]
