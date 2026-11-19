@@ -1969,8 +1969,10 @@ function sendLatestEnglishToMusicSuite() {
   };
   const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify(payload)))));
   const localPreview = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  // music-suite のローカルサーバーはリポジトリ直下（localhost:8000）で起動する。
+  // speak-native 側を別ポートで起動しても、Canvas のローカル確認先は固定する。
   const musicSuiteBase = localPreview
-    ? 'http://localhost:8000/music-suite'
+    ? 'http://localhost:8000'
     : 'https://norinori-jan.github.io/music-suite';
   const url = musicSuiteBase + '/apps/composition-canvas.html#import=' + encoded;
   window.open(url, '_blank', 'noopener,noreferrer');
