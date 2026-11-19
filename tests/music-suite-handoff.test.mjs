@@ -34,7 +34,8 @@ test("chat handoff sends the latest user English to Composition Canvas with the 
   assert.match(handoff, /lyrics,/);
   assert.match(handoff, /dialogue/);
   assert.match(handoff, /apps\/composition-canvas\.html#import=/);
-  assert.match(handoff, /http:\/\/localhost:8000\/music-suite/);
+  assert.match(handoff, /http:\/\/localhost:8000\/apps\/composition-canvas\.html#import=/);
+  assert.doesNotMatch(handoff, /localhost:8000\/music-suite/);
   assert.match(handoff, /https:\/\/norinori-jan\.github\.io\/music-suite/);
   assert.doesNotMatch(handoff, /vocal-lab-v3\.html/);
 });
