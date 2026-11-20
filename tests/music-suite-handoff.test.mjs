@@ -30,7 +30,12 @@ test("chat handoff sends the complete Free Talk transcript to Canvas as editable
   assert.ok(start >= 0 && end > start, "handoff function must exist");
   const handoff = app.slice(start, end);
   assert.match(app, /transcript: \[\]/);
-  assert.match(app, /STATE\.transcript\.push\(\{ role, content \}\)/);
+  assert.match(app, /function pushTranscript\(role, content\)/);
+  assert.match(app, /STATE\.transcript\.push\(entry\)/);
+  assert.match(app, /FREETALK_TRANSCRIPT_STORAGE_KEY/);
+  assert.match(app, /function saveFreeTalkTranscript\(\)/);
+  assert.match(app, /function loadFreeTalkTranscript\(\)/);
+  assert.match(app, /rollbackFailedUserTurn\(userHistoryEntry\)/);
   assert.match(app, /STATE\.transcript = \[\]/);
   assert.match(handoff, /STATE\.transcript/);
   assert.match(handoff, /source: 'speak-native-dialogue'/);
