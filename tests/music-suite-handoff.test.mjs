@@ -23,16 +23,19 @@ test("album provides a direct Canvas handoff carrying lyrics and chord data", ()
 });
 
 
-test("chat handoff sends the latest user English to Composition Canvas with the receiver's import schema", async () => {
+test("chat handoff sends the complete Free Talk transcript to Canvas as editable source material", async () => {
   const app = await readFile(new URL("../index.html", import.meta.url), "utf8");
   const start = app.indexOf("function sendLatestEnglishToMusicSuite()");
   const end = app.indexOf("\nfunction ", start + 10);
   assert.ok(start >= 0 && end > start, "handoff function must exist");
   const handoff = app.slice(start, end);
-  assert.match(handoff, /message\.role === 'user'/);
-  assert.match(handoff, /source: 'composition-canvas-lyrics'/);
-  assert.match(handoff, /lyrics,/);
+  assert.match(app, /transcript: \[\]/);
+  assert.match(app, /STATE\.transcript\.push\(\{ role, content \}\)/);
+  assert.match(app, /STATE\.transcript = \[\]/);
+  assert.match(handoff, /STATE\.transcript/);
+  assert.match(handoff, /source: 'speak-native-dialogue'/);
   assert.match(handoff, /dialogue/);
+  assert.match(handoff, /turnId: index \+ 1/);
   assert.match(handoff, /apps\/composition-canvas\.html#import=/);
   assert.match(handoff, /http:\/\/localhost:8000\/apps\/composition-canvas\.html#import=/);
   assert.doesNotMatch(handoff, /localhost:8000\/music-suite/);
