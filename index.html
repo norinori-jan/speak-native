@@ -1288,6 +1288,8 @@ function setConvMode(mode) {
   document.querySelectorAll('.topic-chip[data-topic]').forEach(c =>
     c.classList.toggle('active', c.dataset.topic === currentTopic));
   STATE.history = [];
+  STATE.transcript = [];
+  clearSavedFreeTalkTranscript();
   const chatArea = document.getElementById('chatArea');
   if (chatArea) chatArea.innerHTML = '';
   if (document.getElementById('freetalk').classList.contains('active')) initChat();
@@ -1339,6 +1341,8 @@ document.getElementById('topicBar').addEventListener('click', (e) => {
   chip.classList.add('active');
   currentTopic = chip.dataset.topic;
   STATE.history = [];
+  STATE.transcript = [];
+  clearSavedFreeTalkTranscript();
   document.getElementById('chatArea').innerHTML = '';
   initChat();
 });
@@ -1630,16 +1634,23 @@ function showScreen(id) {
 function initChat() {
   const area = document.getElementById('chatArea');
   area.innerHTML = '';
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  const restoredTurns = loadFreeTalkTranscript();
+  if (restoredTurns) {
+    STATE.transcript = restoredTurns;
+    STATE.history = restoredTurns.slice(-10).map(turn => ({ role: turn.role, content: turn.content }));
+    restoredTurns.forEach(turn => addBubble(turn.role === 'user' ? 'user' : 'ai', turn.content));
+    return;
+  }
   STATE.history = [];
   STATE.transcript = [];
-  window.speechSynthesis && window.speechSynthesis.cancel();
   const set = TOPIC_SETS[convMode];
   const t = set.find(t => t.key === currentTopic) || set[0];
   const opener = convMode === 'business'
     ? `Hi! Let's talk about **${t.label}** today. What's on your plate lately? 😊`
     : `Hey! Let's chat about **${t.label}** today. What's new with you? 😄`;
   addBubble('ai', opener);
-  STATE.transcript.push({ role: 'assistant', content: opener.replace(/\*\*(.*?)\*\*/g, '$1') });
+  pushTranscript('assistant', opener.replace(/\*\*(.*?)\*\*/g, '$1'));
 }
 
 function addBubble(role, text, feedback) {
@@ -1748,15 +1759,68 @@ function hideTyping() {
   if (el) el.remove();
 }
 
-function pushHistory(role, content) {
+const FREETALK_TRANSCRIPT_STORAGE_KEY = 'dei_freetalk_transcript_v1';
+
+function saveFreeTalkTranscript() {
+  try {
+    localStorage.setItem(FREETALK_TRANSCRIPT_STORAGE_KEY, JSON.stringify({
+      version: 1,
+      mode: convMode,
+      topic: currentTopic,
+      turns: Array.isArray(STATE.transcript) ? STATE.transcript : []
+    }));
+    return true;
+  } catch (error) {
+    console.warn('Free Talk transcript save failed', error);
+    return false;
+  }
+}
+
+function loadFreeTalkTranscript() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(FREETALK_TRANSCRIPT_STORAGE_KEY) || 'null');
+    if (!saved || saved.version !== 1 || saved.mode !== convMode || !Array.isArray(saved.turns)) return null;
+    const validTurns = saved.turns.filter(turn =>
+      turn && (turn.role === 'user' || turn.role === 'assistant') &&
+      typeof turn.content === 'string' && turn.content.trim()
+    );
+    if (!validTurns.length) return null;
+    if (TOPIC_SETS[convMode].some(topic => topic.key === saved.topic)) currentTopic = saved.topic;
+    return validTurns;
+  } catch (error) {
+    console.warn('Free Talk transcript restore failed', error);
+    return null;
+  }
+}
+
+function clearSavedFreeTalkTranscript() {
+  try { localStorage.removeItem(FREETALK_TRANSCRIPT_STORAGE_KEY); }
+  catch (error) { console.warn('Free Talk transcript clear failed', error); }
+}
+
+function pushTranscript(role, content) {
+  if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
+  STATE.transcript.push({ role, content });
+  saveFreeTalkTranscript();
+}
+
+function pushHistory(role, content, transcriptContent = content) {
   const entry = { role, content };
   STATE.history.push(entry);
   // AIへの文脈は直近10件に限定するが、作曲素材用の会話記録は全件保持する。
-  if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
-  STATE.transcript.push({ role, content });
+  pushTranscript(role, transcriptContent);
   if (STATE.history.length > 10) {
     STATE.history = STATE.history.slice(-10);
   }
+  return entry;
+}
+
+function rollbackFailedUserTurn(historyEntry, content) {
+  const historyIndex = STATE.history.lastIndexOf(historyEntry);
+  if (historyIndex >= 0) STATE.history.splice(historyIndex, 1);
+  const transcriptIndex = STATE.transcript.findIndex(turn => turn.role === 'user' && turn.content === content);
+  if (transcriptIndex >= 0) STATE.transcript.splice(transcriptIndex, 1);
+  saveFreeTalkTranscript();
 }
 
 function getHistoryForGemini() {
@@ -1901,7 +1965,7 @@ async function sendMessage() {
   showTyping();
   document.getElementById('talkStatus').textContent = 'Thinking...';
 
-  pushHistory('user', text);
+  const userHistoryEntry = pushHistory('user', text);
 
   const order = [STATE.aiProvider, ...Object.keys(PROVIDER_SENDERS).filter(p => p !== STATE.aiProvider)];
   let result = null;
@@ -1921,17 +1985,16 @@ async function sendMessage() {
   hideTyping();
 
   if (!result || result.error) {
-    STATE.history.pop();
+    rollbackFailedUserTurn(userHistoryEntry, text);
     addBubble('ai', `❌ Connection Error. ${result ? result.error : 'Please verify keys.'}`);
     document.getElementById('talkStatus').textContent = 'Error';
     return;
   }
 
   const reply = result.reply;
-  pushHistory('assistant', reply);
-
   const tipMatch = reply.match(/\[Tip:(.*?)\]/s);
   const cleanReply = reply.replace(/\[Tip:.*?\]/s, '').trim();
+  pushHistory('assistant', reply, cleanReply);
 
   addBubble('ai', cleanReply);
   if (tipMatch) {
