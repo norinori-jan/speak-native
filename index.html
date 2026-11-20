@@ -1800,25 +1800,27 @@ function clearSavedFreeTalkTranscript() {
 
 function pushTranscript(role, content) {
   if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
-  STATE.transcript.push({ role, content });
+  const entry = { role, content };
+  STATE.transcript.push(entry);
   saveFreeTalkTranscript();
+  return entry;
 }
 
 function pushHistory(role, content, transcriptContent = content) {
   const entry = { role, content };
   STATE.history.push(entry);
   // AIへの文脈は直近10件に限定するが、作曲素材用の会話記録は全件保持する。
-  pushTranscript(role, transcriptContent);
+  const transcriptEntry = pushTranscript(role, transcriptContent);
   if (STATE.history.length > 10) {
     STATE.history = STATE.history.slice(-10);
   }
-  return entry;
+  return { historyEntry: entry, transcriptEntry };
 }
 
-function rollbackFailedUserTurn(historyEntry, content) {
-  const historyIndex = STATE.history.lastIndexOf(historyEntry);
+function rollbackFailedUserTurn(pendingTurn) {
+  const historyIndex = STATE.history.lastIndexOf(pendingTurn.historyEntry);
   if (historyIndex >= 0) STATE.history.splice(historyIndex, 1);
-  const transcriptIndex = STATE.transcript.findIndex(turn => turn.role === 'user' && turn.content === content);
+  const transcriptIndex = STATE.transcript.lastIndexOf(pendingTurn.transcriptEntry);
   if (transcriptIndex >= 0) STATE.transcript.splice(transcriptIndex, 1);
   saveFreeTalkTranscript();
 }
@@ -1985,7 +1987,7 @@ async function sendMessage() {
   hideTyping();
 
   if (!result || result.error) {
-    rollbackFailedUserTurn(userHistoryEntry, text);
+    rollbackFailedUserTurn(userHistoryEntry);
     addBubble('ai', `❌ Connection Error. ${result ? result.error : 'Please verify keys.'}`);
     document.getElementById('talkStatus').textContent = 'Error';
     return;
