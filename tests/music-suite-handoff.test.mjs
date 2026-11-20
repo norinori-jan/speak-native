@@ -121,4 +121,7 @@ test("failed Free Talk turn rolls back its exact transcript entry without removi
   assert.equal(h.STATE.history.length, 1);
   assert.equal(h.STATE.transcript.length, 1);
   assert.equal(h.STATE.transcript[0].content, "same text");
+  const persisted = h.loadFreeTalkTranscript();
+  assert.equal(persisted.length, 1);
+  assert.equal(persisted[0].content, "same text");
 });
