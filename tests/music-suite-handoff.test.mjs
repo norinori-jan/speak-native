@@ -1,4 +1,5 @@
 import test from "node:test";
+import vm from "node:vm";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
@@ -46,4 +47,115 @@ test("chat handoff sends the complete Free Talk transcript to Canvas as editable
   assert.doesNotMatch(handoff, /localhost:8000\/music-suite/);
   assert.match(handoff, /https:\/\/norinori-jan\.github\.io\/music-suite/);
   assert.doesNotMatch(handoff, /vocal-lab-v3\.html/);
+});
+
+
+function createTranscriptHarness({ stored = null, storageThrows = false } = {}) {
+  const values = new Map();
+  if (stored !== null) values.set("dei_freetalk_transcript_v1", stored);
+  const localStorage = {
+    getItem(key) { if (storageThrows) throw new Error("storage unavailable"); return values.get(key) ?? null; },
+    setItem(key, value) { if (storageThrows) throw new Error("storage unavailable"); values.set(key, value); },
+    removeItem(key) { if (storageThrows) throw new Error("storage unavailable"); values.delete(key); }
+  };
+  const context = {
+    localStorage,
+    console: { warn() {} },
+    convMode: "casual",
+    currentTopic: "daily",
+    TOPIC_SETS: { casual: [{ key: "daily" }, { key: "travel" }], business: [{ key: "work" }] },
+    STATE: { history: [], transcript: [] }
+  };
+  const source = appSourceForTranscriptHarness;
+  return vm.runInNewContext(source + ";({saveFreeTalkTranscript,loadFreeTalkTranscript,clearSavedFreeTalkTranscript,pushTranscript,pushHistory,rollbackFailedUserTurn,STATE})", context);
+}
+
+const appSourceForTranscriptHarness = `
+const FREETALK_TRANSCRIPT_STORAGE_KEY = 'dei_freetalk_transcript_v1';
+function saveFreeTalkTranscript() {
+  try {
+    localStorage.setItem(FREETALK_TRANSCRIPT_STORAGE_KEY, JSON.stringify({
+      version: 1, mode: convMode, topic: currentTopic,
+      turns: Array.isArray(STATE.transcript) ? STATE.transcript : []
+    }));
+    return true;
+  } catch (error) { console.warn('save failed', error); return false; }
+}
+function loadFreeTalkTranscript() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(FREETALK_TRANSCRIPT_STORAGE_KEY) || 'null');
+    if (!saved || saved.version !== 1 || saved.mode !== convMode || !Array.isArray(saved.turns)) return null;
+    const validTurns = saved.turns.filter(turn => turn && (turn.role === 'user' || turn.role === 'assistant') && typeof turn.content === 'string' && turn.content.trim());
+    if (!validTurns.length) return null;
+    if (TOPIC_SETS[convMode].some(topic => topic.key === saved.topic)) currentTopic = saved.topic;
+    return validTurns;
+  } catch (error) { console.warn('restore failed', error); return null; }
+}
+function clearSavedFreeTalkTranscript() {
+  try { localStorage.removeItem(FREETALK_TRANSCRIPT_STORAGE_KEY); } catch (error) { console.warn('clear failed', error); }
+}
+function pushTranscript(role, content) {
+  if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
+  const entry = { role, content }; STATE.transcript.push(entry); saveFreeTalkTranscript(); return entry;
+}
+function pushHistory(role, content, transcriptContent = content) {
+  const entry = { role, content }; STATE.history.push(entry);
+  const transcriptEntry = pushTranscript(role, transcriptContent);
+  if (STATE.history.length > 10) STATE.history = STATE.history.slice(-10);
+  return { historyEntry: entry, transcriptEntry };
+}
+function rollbackFailedUserTurn(pendingTurn) {
+  const historyIndex = STATE.history.lastIndexOf(pendingTurn.historyEntry);
+  if (historyIndex >= 0) STATE.history.splice(historyIndex, 1);
+  const transcriptIndex = STATE.transcript.lastIndexOf(pendingTurn.transcriptEntry);
+  if (transcriptIndex >= 0) STATE.transcript.splice(transcriptIndex, 1);
+  saveFreeTalkTranscript();
+}
+`;
+
+test("Free Talk transcript persists all turns while AI history is capped at ten", () => {
+  const h = createTranscriptHarness();
+  for (let i = 0; i < 12; i++) h.pushHistory(i % 2 ? "assistant" : "user", "turn " + i);
+  assert.equal(h.STATE.history.length, 10);
+  assert.equal(h.STATE.transcript.length, 12);
+  const restored = h.loadFreeTalkTranscript();
+  assert.equal(restored.length, 12);
+  assert.equal(restored[0].content, "turn 0");
+  assert.equal(restored[11].content, "turn 11");
+});
+
+test("Free Talk transcript restore rejects corrupt, incompatible, and empty records", () => {
+  for (const stored of ["{broken", JSON.stringify({ version: 2, mode: "casual", turns: [{ role: "user", content: "hello" }] }), JSON.stringify({ version: 1, mode: "business", turns: [{ role: "user", content: "hello" }] }), JSON.stringify({ version: 1, mode: "casual", turns: [] })]) {
+    assert.equal(createTranscriptHarness({ stored }).loadFreeTalkTranscript(), null);
+  }
+});
+
+test("Free Talk transcript restore filters invalid turns and restores only a known topic", () => {
+  const stored = JSON.stringify({ version: 1, mode: "casual", topic: "travel", turns: [
+    { role: "user", content: "  " }, { role: "system", content: "ignore" },
+    { role: "assistant", content: "Let's travel." }, { role: "user", content: 42 }
+  ] });
+  const h = createTranscriptHarness({ stored });
+  const turns = h.loadFreeTalkTranscript();
+  assert.equal(turns.length, 1);
+  assert.equal(turns[0].content, "Let's travel.");
+});
+
+test("Free Talk transcript storage failures do not crash chat operations", () => {
+  const h = createTranscriptHarness({ storageThrows: true });
+  assert.equal(h.saveFreeTalkTranscript(), false);
+  h.pushTranscript("user", "still in memory");
+  assert.equal(h.STATE.transcript.length, 1);
+  assert.equal(h.loadFreeTalkTranscript(), null);
+  assert.doesNotThrow(() => h.clearSavedFreeTalkTranscript());
+});
+
+test("failed Free Talk turn rolls back its exact transcript entry without removing earlier duplicate text", () => {
+  const h = createTranscriptHarness();
+  h.pushHistory("user", "same text");
+  const pending = h.pushHistory("user", "same text");
+  h.rollbackFailedUserTurn(pending);
+  assert.equal(h.STATE.history.length, 1);
+  assert.equal(h.STATE.transcript.length, 1);
+  assert.equal(h.STATE.transcript[0].content, "same text");
 });
