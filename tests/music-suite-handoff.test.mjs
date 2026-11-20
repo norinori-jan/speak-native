@@ -70,48 +70,11 @@ function createTranscriptHarness({ stored = null, storageThrows = false } = {}) 
   return vm.runInNewContext(source + ";({saveFreeTalkTranscript,loadFreeTalkTranscript,clearSavedFreeTalkTranscript,pushTranscript,pushHistory,rollbackFailedUserTurn,STATE})", context);
 }
 
-const appSourceForTranscriptHarness = `
-const FREETALK_TRANSCRIPT_STORAGE_KEY = 'dei_freetalk_transcript_v1';
-function saveFreeTalkTranscript() {
-  try {
-    localStorage.setItem(FREETALK_TRANSCRIPT_STORAGE_KEY, JSON.stringify({
-      version: 1, mode: convMode, topic: currentTopic,
-      turns: Array.isArray(STATE.transcript) ? STATE.transcript : []
-    }));
-    return true;
-  } catch (error) { console.warn('save failed', error); return false; }
-}
-function loadFreeTalkTranscript() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(FREETALK_TRANSCRIPT_STORAGE_KEY) || 'null');
-    if (!saved || saved.version !== 1 || saved.mode !== convMode || !Array.isArray(saved.turns)) return null;
-    const validTurns = saved.turns.filter(turn => turn && (turn.role === 'user' || turn.role === 'assistant') && typeof turn.content === 'string' && turn.content.trim());
-    if (!validTurns.length) return null;
-    if (TOPIC_SETS[convMode].some(topic => topic.key === saved.topic)) currentTopic = saved.topic;
-    return validTurns;
-  } catch (error) { console.warn('restore failed', error); return null; }
-}
-function clearSavedFreeTalkTranscript() {
-  try { localStorage.removeItem(FREETALK_TRANSCRIPT_STORAGE_KEY); } catch (error) { console.warn('clear failed', error); }
-}
-function pushTranscript(role, content) {
-  if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
-  const entry = { role, content }; STATE.transcript.push(entry); saveFreeTalkTranscript(); return entry;
-}
-function pushHistory(role, content, transcriptContent = content) {
-  const entry = { role, content }; STATE.history.push(entry);
-  const transcriptEntry = pushTranscript(role, transcriptContent);
-  if (STATE.history.length > 10) STATE.history = STATE.history.slice(-10);
-  return { historyEntry: entry, transcriptEntry };
-}
-function rollbackFailedUserTurn(pendingTurn) {
-  const historyIndex = STATE.history.lastIndexOf(pendingTurn.historyEntry);
-  if (historyIndex >= 0) STATE.history.splice(historyIndex, 1);
-  const transcriptIndex = STATE.transcript.lastIndexOf(pendingTurn.transcriptEntry);
-  if (transcriptIndex >= 0) STATE.transcript.splice(transcriptIndex, 1);
-  saveFreeTalkTranscript();
-}
-`;
+const transcriptApp = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const transcriptFunctionsStart = transcriptApp.indexOf("const FREETALK_TRANSCRIPT_STORAGE_KEY");
+const transcriptFunctionsEnd = transcriptApp.indexOf("function getHistoryForGemini()", transcriptFunctionsStart);
+assert.ok(transcriptFunctionsStart >= 0 && transcriptFunctionsEnd > transcriptFunctionsStart, "transcript functions exist in app source");
+const appSourceForTranscriptHarness = transcriptApp.slice(transcriptFunctionsStart, transcriptFunctionsEnd);
 
 test("Free Talk transcript persists all turns while AI history is capped at ten", () => {
   const h = createTranscriptHarness();
