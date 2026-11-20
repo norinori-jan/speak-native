@@ -1067,7 +1067,7 @@
       <button class="mic-btn" id="micBtn" onclick="toggleMic()">🎤</button>
       <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
     </div>
-    <button type="button" class="instant-btn" style="width:100%;margin-top:6px;" onclick="sendLatestEnglishToMusicSuite()">🎼 入力した英語を music-suite へ送る</button>
+    <button type="button" class="instant-btn" style="width:100%;margin-top:6px;" onclick="sendLatestEnglishToMusicSuite()">🎼 会話全体を music-suite へ送る</button>
   </div>
 </div>
 
@@ -1237,7 +1237,8 @@
 let STATE = {
   aiProvider: localStorage.getItem('dei_aiProvider') || 'gemini',
   appToken: '',   // 起動時に暗号化ストア(KeyVault)から復号して入る
-  history: []
+  history: [],
+  transcript: []
 };
 
 let conversationHistory = [];
@@ -1630,6 +1631,7 @@ function initChat() {
   const area = document.getElementById('chatArea');
   area.innerHTML = '';
   STATE.history = [];
+  STATE.transcript = [];
   window.speechSynthesis && window.speechSynthesis.cancel();
   const set = TOPIC_SETS[convMode];
   const t = set.find(t => t.key === currentTopic) || set[0];
@@ -1637,6 +1639,7 @@ function initChat() {
     ? `Hi! Let's talk about **${t.label}** today. What's on your plate lately? 😊`
     : `Hey! Let's chat about **${t.label}** today. What's new with you? 😄`;
   addBubble('ai', opener);
+  STATE.transcript.push({ role: 'assistant', content: opener.replace(/\*\*(.*?)\*\*/g, '$1') });
 }
 
 function addBubble(role, text, feedback) {
@@ -1746,7 +1749,11 @@ function hideTyping() {
 }
 
 function pushHistory(role, content) {
-  STATE.history.push({ role, content });
+  const entry = { role, content };
+  STATE.history.push(entry);
+  // AIへの文脈は直近10件に限定するが、作曲素材用の会話記録は全件保持する。
+  if (!Array.isArray(STATE.transcript)) STATE.transcript = [];
+  STATE.transcript.push({ role, content });
   if (STATE.history.length > 10) {
     STATE.history = STATE.history.slice(-10);
   }
@@ -1938,33 +1945,30 @@ function handleEnter(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 }
 function sendLatestEnglishToMusicSuite() {
-  const history = Array.isArray(STATE.history) ? STATE.history : [];
-  const latest = [...history].reverse().find(message =>
-    message && message.role === 'user' && String(message.content || '').trim()
-  );
-  if (!latest) { showToast('先に英語の文章を入力してください'); return; }
-
-  const lyrics = String(latest.content).trim().slice(0, 3000);
-  const dialogue = history
+  const transcript = Array.isArray(STATE.transcript) ? STATE.transcript : [];
+  const dialogue = transcript
     .filter(message => message && (message.role === 'user' || message.role === 'assistant') && String(message.content || '').trim())
-    .slice(-10)
-    .map(message => ({
+    .map((message, index) => ({
+      turnId: index + 1,
       role: message.role,
       speaker: message.role === 'user' ? 'A' : 'B',
-      text: String(message.content).trim().slice(0, 3000)
+      text: String(message.content).trim()
     }));
+
+  if (!dialogue.length) {
+    showToast('先にFree Talkで会話してください');
+    return;
+  }
 
   const payload = {
     version: 1,
     schemaVersion: 'music-suite-project-v1',
     projectId: 'speak-native-' + Date.now(),
-    source: 'composition-canvas-lyrics',
-    kind: 'single',
-    title: 'speak-nativeから受け取った英語',
-    lyrics,
-    original: lyrics,
-    emotion: 'neutral',
-    bpm: 120,
+    source: 'speak-native-dialogue',
+    kind: 'dialogue',
+    title: 'speak-native会話素材',
+    topic: currentTopic || '',
+    conversationMode: convMode,
     dialogue
   };
   const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify(payload)))));
@@ -1976,7 +1980,7 @@ function sendLatestEnglishToMusicSuite() {
     : 'https://norinori-jan.github.io/music-suite';
   const url = musicSuiteBase + '/apps/composition-canvas.html#import=' + encoded;
   window.open(url, '_blank', 'noopener,noreferrer');
-  showToast('英語の文章をComposition Canvasへ送りました');
+  showToast('会話全体をComposition Canvasへ送りました');
 }
 function autoResize(el) {
   el.style.height = 'auto';
