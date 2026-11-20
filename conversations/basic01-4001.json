@@ -1,0 +1,642 @@
+[
+ {
+  "id": "basic01",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本1（日常会話 401〜410）",
+  "hint": "Ten everyday conversations at a natural but calm pace: greetings, cafe, plans, being late, directions, shopping, restaurant, reunions, asking to repeat and cooking, with common sound changes",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "☀️ 401｜朝のあいさつ：Good Morning",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Morning! How'd you sleep?",
+      "jp": "おはよう！ よく眠れた？",
+      "note": "元の形: How did you／聞こえ方: ハウジュ（How'd you）／使う場面:朝のあいさつ"
+     },
+     {
+      "sp": 1,
+      "en": "Not great, to be honest. I woke up twice.",
+      "jp": "正直あまり。2回起きちゃった。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh no. Do you want some coffee?",
+      "jp": "あら。コーヒー飲む？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, please. I really need it.",
+      "jp": "うん、お願い。本当に必要。"
+     },
+     {
+      "sp": 0,
+      "en": "Black or with milk?",
+      "jp": "ブラック？ ミルク入り？"
+     },
+     {
+      "sp": 1,
+      "en": "With milk, please. And a little sugar.",
+      "jp": "ミルク入りで。砂糖も少し。"
+     },
+     {
+      "sp": 0,
+      "en": "Here you go. Careful, it's hot.",
+      "jp": "はい、どうぞ。気をつけて、熱いよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. What are you doing today?",
+      "jp": "ありがとう。今日は何するの？"
+     },
+     {
+      "sp": 0,
+      "en": "I've got a meeting at ten, and then I'm free.",
+      "jp": "10時に会議があって、そのあとは空いてる。",
+      "note": "元の形: I have got／聞こえ方: アイヴガット（I've got）／使う場面:予定を言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Nice. Let's have lunch together.",
+      "jp": "いいね。一緒にお昼を食べよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Sounds good. See you at noon.",
+      "jp": "いいね。正午に会おう。"
+     }
+    ]
+   },
+   {
+    "t": "☕ 402｜カフェで注文：Ordering Coffee",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi! What can I get you?",
+      "jp": "いらっしゃい！ 何にしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Can I have a medium latte, please?",
+      "jp": "ミディアムのラテをお願いします。",
+      "note": "元の形: Can I／聞こえ方: キャナイ／使う場面:お願いする時"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. Hot or iced?",
+      "jp": "はい。ホットですか、アイスですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Iced, please. And one of those muffins.",
+      "jp": "アイスで。それとそのマフィンを1つ。"
+     },
+     {
+      "sp": 0,
+      "en": "Blueberry or chocolate?",
+      "jp": "ブルーベリーかチョコレートですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Blueberry. How much is that?",
+      "jp": "ブルーベリーで。いくらですか。"
+     },
+     {
+      "sp": 0,
+      "en": "That'll be seven fifty.",
+      "jp": "7ドル50セントです。",
+      "note": "元の形: That will／聞こえ方: ザッル（That'll）／使う場面:金額を言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Can I pay by card?",
+      "jp": "カードで払えますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. Just tap here.",
+      "jp": "もちろん。ここにタッチしてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Thank you.",
+      "jp": "よかった。ありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "Your name for the order?",
+      "jp": "ご注文のお名前は？"
+     }
+    ]
+   },
+   {
+    "t": "📅 403｜週末の予定：Weekend Plans",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What are you up to this weekend?",
+      "jp": "今週末は何するの？",
+      "note": "元の形: What are you／聞こえ方: ワッチャ（Whatcha）／使う場面:何するのと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Nothing much. Maybe I'll just relax at home.",
+      "jp": "特に何も。家でのんびりするかも。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "Do you wanna go hiking on Saturday?",
+      "jp": "土曜にハイキング行かない？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:誘う時"
+     },
+     {
+      "sp": 1,
+      "en": "Hiking? I haven't been in ages.",
+      "jp": "ハイキング？ 何年も行ってない。"
+     },
+     {
+      "sp": 0,
+      "en": "It's an easy trail. We'll be back by noon.",
+      "jp": "簡単なコースだよ。昼までには戻れる。"
+     },
+     {
+      "sp": 1,
+      "en": "What should I bring?",
+      "jp": "何を持って行けばいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Just water, a snack, and good shoes.",
+      "jp": "水とお菓子と、いい靴だけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, I'm in. What time?",
+      "jp": "分かった、行く。何時？"
+     },
+     {
+      "sp": 0,
+      "en": "Let's meet at eight at the station.",
+      "jp": "8時に駅で会おう。"
+     },
+     {
+      "sp": 1,
+      "en": "Eight? That's early. But fine.",
+      "jp": "8時？ 早いな。でもいいよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Trust me, the morning's the best time.",
+      "jp": "信じて、朝がいちばんいい時間だから。"
+     }
+    ]
+   },
+   {
+    "t": "🏃 404｜遅れそう：Running Late",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hey, where are you? We're about to start.",
+      "jp": "ねえ、どこ？ もう始まるよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Sorry, I'm running late. The train was delayed.",
+      "jp": "ごめん、遅れそう。電車が遅れてて。",
+      "note": "元の形: I am running／聞こえ方: アイムランニン／使う場面:遅れると伝える時"
+     },
+     {
+      "sp": 0,
+      "en": "How long will you be?",
+      "jp": "どれくらいかかる？"
+     },
+     {
+      "sp": 1,
+      "en": "About fifteen minutes. Maybe twenty.",
+      "jp": "15分くらい。20分かも。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Do you want us to wait?",
+      "jp": "分かった。待っててほしい？"
+     },
+     {
+      "sp": 1,
+      "en": "No, no. Go ahead and start without me.",
+      "jp": "いやいや。私抜きで始めて。"
+     },
+     {
+      "sp": 0,
+      "en": "Alright. We'll save you a seat.",
+      "jp": "了解。席を取っておくね。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. I'll text you when I get there.",
+      "jp": "ありがとう。着いたらメッセージする。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't rush. Be safe.",
+      "jp": "急がないで。気をつけて。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I owe you one.",
+      "jp": "借りができたね。",
+      "note": "表現: I owe you one. = 借りができたね／助けてもらったお礼"
+     },
+     {
+      "sp": 0,
+      "en": "No worries. See you soon.",
+      "jp": "気にしないで。またあとで。"
+     }
+    ]
+   },
+   {
+    "t": "🧭 405｜道をたずねる：Asking for Directions",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, could you help me?",
+      "jp": "すみません、助けてもらえますか。",
+      "note": "元の形: Could you／聞こえ方: クッジュ／使う場面:丁寧に頼む時"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. What are you looking for?",
+      "jp": "もちろん。何をお探しですか。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm trying to get to the post office.",
+      "jp": "郵便局に行きたいんです。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, it's close. Go straight for two blocks.",
+      "jp": "ああ、近いですよ。2ブロックまっすぐ行って。"
+     },
+     {
+      "sp": 0,
+      "en": "Two blocks. And then?",
+      "jp": "2ブロック。それから？"
+     },
+     {
+      "sp": 1,
+      "en": "Turn left at the bank. You'll see it on your right.",
+      "jp": "銀行を左に曲がる。右側に見えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it far from here?",
+      "jp": "ここから遠いですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Not at all. About five minutes on foot.",
+      "jp": "全然。歩いて5分くらい。",
+      "note": "元の形: Not at all／聞こえ方: ナラタール／使う場面:全然と答える時"
+     },
+     {
+      "sp": 0,
+      "en": "Great. Thank you so much.",
+      "jp": "よかった。本当にありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "You're welcome. Have a nice day!",
+      "jp": "どういたしまして。いい一日を！"
+     },
+     {
+      "sp": 0,
+      "en": "You too!",
+      "jp": "あなたも！"
+     }
+    ]
+   },
+   {
+    "t": "👕 406｜服を買う：Shopping for Clothes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, can I try this on?",
+      "jp": "すみません、これを試着できますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. The fitting rooms are over there.",
+      "jp": "もちろん。試着室はあちらです。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. Do you have this in a bigger size?",
+      "jp": "ありがとう。これの大きいサイズはありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check. What size are you looking for?",
+      "jp": "確認しますね。どのサイズをお探しですか。",
+      "note": "元の形: Let me／聞こえ方: レミ（Lemme）／使う場面:〜させてと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "A large, please.",
+      "jp": "Lをお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Here you go. It runs a little small.",
+      "jp": "どうぞ。少し小さめの作りです。"
+     },
+     {
+      "sp": 0,
+      "en": "How does it fit?",
+      "jp": "着心地はどう？"
+     },
+     {
+      "sp": 1,
+      "en": "It fits perfectly. How much is it?",
+      "jp": "ぴったり。いくらですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's forty dollars, but it's on sale today.",
+      "jp": "40ドルですが、今日はセール中です。"
+     },
+     {
+      "sp": 1,
+      "en": "Even better. I'll take it.",
+      "jp": "なおいい。それをください。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "Great. Would you like a bag?",
+      "jp": "よかった。袋はいりますか。",
+      "note": "元の形: Would you／聞こえ方: ウッジュ／使う場面:丁寧に聞く時"
+     }
+    ]
+   },
+   {
+    "t": "🍝 407｜レストランで：At a Restaurant",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good evening. Do you have a reservation?",
+      "jp": "こんばんは。ご予約はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, we don't. Do you have a table for two?",
+      "jp": "いいえ。2人用のテーブルはありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, right this way.",
+      "jp": "はい、こちらへどうぞ。"
+     },
+     {
+      "sp": 1,
+      "en": "Can we see the menu, please?",
+      "jp": "メニューを見せてもらえますか。",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. Can I get you something to drink?",
+      "jp": "はい。お飲み物はいかがですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Just water for now. We need a minute.",
+      "jp": "今は水だけで。少し考えさせて。",
+      "note": "元の形: a minute／聞こえ方: ア ミニット／使う場面:考える時間がほしい時"
+     },
+     {
+      "sp": 0,
+      "en": "Take your time. I'll be back shortly.",
+      "jp": "ごゆっくり。すぐ戻ります。"
+     },
+     {
+      "sp": 1,
+      "en": "Are you ready to order?",
+      "jp": "ご注文はお決まりですか。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll have the pasta, and she'll have the salmon.",
+      "jp": "私はパスタを、彼女はサーモンを。",
+      "note": "元の形: I will have／聞こえ方: アイルハヴ（I'll have）／使う場面:注文する時"
+     },
+     {
+      "sp": 1,
+      "en": "Excellent choices. Anything else?",
+      "jp": "いいお選びです。ほかには？"
+     },
+     {
+      "sp": 0,
+      "en": "That's all, thanks.",
+      "jp": "以上です、ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "👋 408｜久しぶりの再会：Catching Up with a Friend",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Oh my gosh, is that you? It's been forever!",
+      "jp": "うそ、あなた？ 本当に久しぶり！"
+     },
+     {
+      "sp": 1,
+      "en": "I know! How have you been?",
+      "jp": "ほんとに！ 元気だった？",
+      "note": "元の形: How have you／聞こえ方: ハウヴュ／使う場面:久しぶりに聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Pretty good. I moved to a new city last year.",
+      "jp": "まあまあ。去年、新しい街に引っ越したの。"
+     },
+     {
+      "sp": 1,
+      "en": "Really? What made you decide that?",
+      "jp": "本当？ どうして決めたの？"
+     },
+     {
+      "sp": 0,
+      "en": "I got a new job, and I wanted a change.",
+      "jp": "新しい仕事が決まって、変化がほしかった。"
+     },
+     {
+      "sp": 1,
+      "en": "That's great. Do you like it there?",
+      "jp": "いいね。そこは気に入ってる？"
+     },
+     {
+      "sp": 0,
+      "en": "I love it. The people are so friendly.",
+      "jp": "大好き。人がすごく親切で。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm happy for you. We should catch up properly.",
+      "jp": "よかったね。ちゃんと近況を話さなきゃ。",
+      "note": "元の形: We should／聞こえ方: ウィシュッド／使う場面:やろうと誘う時"
+     },
+     {
+      "sp": 0,
+      "en": "Definitely. Are you free next week?",
+      "jp": "絶対。来週空いてる？"
+     },
+     {
+      "sp": 1,
+      "en": "I think so. Let me check my schedule.",
+      "jp": "たぶん。予定を確認するね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Text me. I'd love to hear everything.",
+      "jp": "連絡して。全部聞きたいな。"
+     }
+    ]
+   },
+   {
+    "t": "🙋 409｜聞き取れなかった時：When You Don't Understand",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Sorry, I didn't catch that. Could you say it again?",
+      "jp": "ごめん、聞き取れなかった。もう一度言ってくれる？",
+      "note": "元の形: I did not catch／聞こえ方: アイ ディドゥン キャッチ／使う場面:聞き取れなかった時"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. I said the meeting is at three.",
+      "jp": "いいよ。会議は3時だと言ったの。"
+     },
+     {
+      "sp": 0,
+      "en": "Three? Not four?",
+      "jp": "3時？ 4時じゃなくて？"
+     },
+     {
+      "sp": 1,
+      "en": "No, three. Could you write it down?",
+      "jp": "違う、3時。書いてもらえる？"
+     },
+     {
+      "sp": 0,
+      "en": "Sure thing. Here.",
+      "jp": "もちろん。はい。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. And what does 'postponed' mean?",
+      "jp": "ありがとう。それと『postponed』ってどういう意味？",
+      "note": "表現: What does ○○ mean? = ○○はどういう意味？／言葉の意味を聞く"
+     },
+     {
+      "sp": 0,
+      "en": "It means they moved it to a later time.",
+      "jp": "あとの時間に動かしたという意味。"
+     },
+     {
+      "sp": 1,
+      "en": "Ah, I see. So it's not canceled.",
+      "jp": "ああ、なるほど。じゃあ中止じゃないんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. It's just later.",
+      "jp": "そう。ただ遅くなっただけ。"
+     },
+     {
+      "sp": 1,
+      "en": "Could you speak a little slower, please?",
+      "jp": "もう少しゆっくり話してもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. No problem at all.",
+      "jp": "もちろん。全然問題ないよ。"
+     }
+    ]
+   },
+   {
+    "t": "🍳 410｜今夜の夕食：What's for Dinner?",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I'm starving. What's for dinner?",
+      "jp": "お腹ペコペコ。夕食は何？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "I was thinking about pasta. Is that okay?",
+      "jp": "パスタにしようと思ってた。いい？",
+      "note": "元の形: I was thinking／聞こえ方: アイワズ シンキン／使う場面:考えていたと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Can I help?",
+      "jp": "最高。手伝おうか。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Could you chop the onions?",
+      "jp": "うん。玉ねぎを切ってくれる？"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. How many do you need?",
+      "jp": "分かった。いくつ必要？"
+     },
+     {
+      "sp": 1,
+      "en": "Two should be enough.",
+      "jp": "2つで十分だと思う。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. What's next?",
+      "jp": "できた。次は？"
+     },
+     {
+      "sp": 1,
+      "en": "Now stir the sauce. Not too fast.",
+      "jp": "次はソースをかき混ぜて。速すぎないように。"
+     },
+     {
+      "sp": 0,
+      "en": "It smells amazing already.",
+      "jp": "もういい匂いがする。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait till you taste it.",
+      "jp": "食べてからのお楽しみ。",
+      "note": "元の形: Wait till／聞こえ方: ウェイティル／使う場面:もうすぐだよと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "I can't wait.",
+      "jp": "待ちきれない。"
+     }
+    ]
+   }
+  ]
+ }
+]

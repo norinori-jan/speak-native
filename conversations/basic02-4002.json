@@ -1,0 +1,645 @@
+[
+ {
+  "id": "basic02",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本2（日常会話 411〜420）",
+  "hint": "Ten more everyday conversations: office small talk, train, delivery, grocery, hobbies, movies, feeling unwell, apologies, hotel check-in and saying goodnight",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "💼 411｜職場の雑談：Office Small Talk",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Morning, Sarah. Did you have a good weekend?",
+      "jp": "おはよう、サラ。週末は楽しかった？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, it was lovely. We went to the beach.",
+      "jp": "うん、素敵だった。ビーチに行ったの。"
+     },
+     {
+      "sp": 0,
+      "en": "Nice. The weather was perfect.",
+      "jp": "いいね。天気も最高だったし。"
+     },
+     {
+      "sp": 1,
+      "en": "It really was. How about you?",
+      "jp": "本当に。あなたは？",
+      "note": "元の形: How about you／聞こえ方: ハウアバウチュ／使う場面:あなたは？と返す時"
+     },
+     {
+      "sp": 0,
+      "en": "I stayed home and cleaned. Not very exciting.",
+      "jp": "家で掃除してた。あまり面白くない。"
+     },
+     {
+      "sp": 1,
+      "en": "Sometimes that's what you need.",
+      "jp": "そういう時も必要だよ。"
+     },
+     {
+      "sp": 0,
+      "en": "True. By the way, are you coming to lunch?",
+      "jp": "確かに。ところで、お昼に来る？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd love to, but I have a deadline.",
+      "jp": "行きたいけど、締め切りがあって。"
+     },
+     {
+      "sp": 0,
+      "en": "No worries. Want me to bring you something?",
+      "jp": "気にしないで。何か持ってこようか。",
+      "note": "元の形: Want me to／聞こえ方: ワンミートゥ／使う場面:申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "That would be great. A sandwich, maybe?",
+      "jp": "助かる。サンドイッチとか？"
+     },
+     {
+      "sp": 0,
+      "en": "Sure thing. I'll be back in an hour.",
+      "jp": "了解。1時間で戻るよ。"
+     }
+    ]
+   },
+   {
+    "t": "🚆 412｜電車で：On the Train",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, is this seat taken?",
+      "jp": "すみません、この席は空いてますか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, go ahead.",
+      "jp": "いいえ、どうぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. Is this train going to the city center?",
+      "jp": "ありがとう。この電車は市の中心に行きますか。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but it doesn't stop at every station.",
+      "jp": "はい、でも全部の駅には止まりません。",
+      "note": "元の形: doesn't stop／聞こえ方: ダズンストップ／使う場面:止まらないと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "How many stops is it to Central?",
+      "jp": "セントラルまでいくつ駅ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Four. You'll hear an announcement.",
+      "jp": "4つ。アナウンスが聞こえます。"
+     },
+     {
+      "sp": 0,
+      "en": "Great. I'm a little nervous about missing it.",
+      "jp": "よかった。乗り過ごさないか少し不安で。",
+      "note": "元の形: a little／聞こえ方: ア リルル／使う場面:少しと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Don't worry. I'm getting off there too.",
+      "jp": "大丈夫。私もそこで降りるから。"
+     },
+     {
+      "sp": 0,
+      "en": "That's so kind of you.",
+      "jp": "ご親切にありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "It's no trouble. Here, I'll tell you when.",
+      "jp": "お安いご用。着いたら教えるね。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks a lot.",
+      "jp": "本当にありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "📦 413｜荷物の受け取り：A Delivery",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, delivery for Mr. Tanaka.",
+      "jp": "こんにちは、田中様に配達です。"
+     },
+     {
+      "sp": 1,
+      "en": "That's me. Thank you.",
+      "jp": "私です。ありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "Could you sign here, please?",
+      "jp": "ここにサインをお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Is it a big package?",
+      "jp": "いいよ。大きい荷物ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's a bit heavy. Do you need help?",
+      "jp": "少し重いです。手伝いましょうか。"
+     },
+     {
+      "sp": 1,
+      "en": "I can manage. Just leave it by the door.",
+      "jp": "大丈夫。ドアのそばに置いてください。",
+      "note": "元の形: I can manage／聞こえ方: アイ キャン マネッジ／使う場面:大丈夫と断る時"
+     },
+     {
+      "sp": 0,
+      "en": "Alright. Here's your receipt.",
+      "jp": "分かりました。こちらが受領書です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Sorry, can I ask something?",
+      "jp": "ありがとう。すみません、聞いてもいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Of course.",
+      "jp": "もちろん。"
+     },
+     {
+      "sp": 1,
+      "en": "Next time, could you ring the bell twice?",
+      "jp": "次回は、ベルを2回押してもらえますか。",
+      "note": "元の形: could you／聞こえ方: クッジュ／使う場面:お願いする時"
+     },
+     {
+      "sp": 0,
+      "en": "No problem. I'll make a note.",
+      "jp": "問題ないです。メモしておきます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🛒 414｜スーパーで：At the Grocery Store",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Do we need anything else?",
+      "jp": "ほかに必要なものある？"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check the list. Eggs, milk, bread.",
+      "jp": "リストを見るね。卵、牛乳、パン。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "We already got the bread.",
+      "jp": "パンはもう取ったよ。",
+      "note": "元の形: We have already got／聞こえ方: ウィ オーレディ ガット／使う場面:もう買ったと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, right. What about vegetables?",
+      "jp": "ああ、そうか。野菜は？"
+     },
+     {
+      "sp": 0,
+      "en": "We have a lot of carrots at home.",
+      "jp": "家に人参がたくさんある。",
+      "note": "元の形: a lot of／聞こえ方: ア ロッタ／使う場面:たくさんと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Then just tomatoes and lettuce.",
+      "jp": "じゃあ、トマトとレタスだけ。"
+     },
+     {
+      "sp": 0,
+      "en": "Are these tomatoes fresh?",
+      "jp": "このトマトは新鮮かな。"
+     },
+     {
+      "sp": 1,
+      "en": "They look good. Pick the red ones.",
+      "jp": "よさそう。赤いのを選んで。"
+     },
+     {
+      "sp": 0,
+      "en": "Got it. Do you want any fruit?",
+      "jp": "分かった。果物は要る？"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe some apples. They're on sale.",
+      "jp": "リンゴを少し。セール中だし。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Let's head to the checkout.",
+      "jp": "いいね。レジに行こう。"
+     }
+    ]
+   },
+   {
+    "t": "🎸 415｜趣味の話：Talking About Hobbies",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What do you do in your free time?",
+      "jp": "暇な時は何をしてるの？",
+      "note": "元の形: What do you／聞こえ方: ワッドゥユー／使う場面:何してるのと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "I play guitar, mostly. How about you?",
+      "jp": "主にギターを弾いてる。あなたは？"
+     },
+     {
+      "sp": 0,
+      "en": "I like cooking and watching old movies.",
+      "jp": "料理と、古い映画を見るのが好き。"
+     },
+     {
+      "sp": 1,
+      "en": "Cool. How long have you played?",
+      "jp": "いいね。どれくらい弾いてるの？"
+     },
+     {
+      "sp": 0,
+      "en": "About five years. I'm still not very good.",
+      "jp": "5年くらい。まだ全然うまくない。"
+     },
+     {
+      "sp": 1,
+      "en": "I bet you're better than you think.",
+      "jp": "きっと思ってるよりうまいよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. Do you cook every day?",
+      "jp": "ありがとう。毎日料理するの？"
+     },
+     {
+      "sp": 1,
+      "en": "Almost. It helps me relax after work.",
+      "jp": "ほぼね。仕事のあとのリラックスになる。"
+     },
+     {
+      "sp": 0,
+      "en": "I should try that. I always order takeout.",
+      "jp": "私もやってみようかな。いつもテイクアウトなんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Start simple. Eggs, rice, that kind of thing.",
+      "jp": "簡単なものから。卵、ご飯、そういうの。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:そういう感じと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Good idea. Maybe you can teach me.",
+      "jp": "いい考え。教えてくれてもいいよ。"
+     }
+    ]
+   },
+   {
+    "t": "🎬 416｜映画の感想：Talking About a Movie",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Did you see the new movie everyone's talking about?",
+      "jp": "みんなが話題にしてる新作の映画、見た？",
+      "note": "元の形: Did you／聞こえ方: ディジュ／使う場面:〜した？と聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. Is it any good?",
+      "jp": "まだ。おもしろい？"
+     },
+     {
+      "sp": 0,
+      "en": "I loved it. The ending really surprised me.",
+      "jp": "大好き。結末に本当に驚いた。"
+     },
+     {
+      "sp": 1,
+      "en": "Don't tell me! I hate spoilers.",
+      "jp": "言わないで！ ネタバレは嫌い。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "I won't. But you should go see it.",
+      "jp": "言わないよ。でも見に行った方がいい。",
+      "note": "元の形: you should／聞こえ方: ユーシュッド／使う場面:勧める時"
+     },
+     {
+      "sp": 1,
+      "en": "What's it about?",
+      "jp": "何についての話？"
+     },
+     {
+      "sp": 0,
+      "en": "It's about a family trying to save their farm.",
+      "jp": "農場を守ろうとする家族の話。"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds touching. Was it sad?",
+      "jp": "感動的だね。悲しかった？"
+     },
+     {
+      "sp": 0,
+      "en": "A little. But mostly hopeful.",
+      "jp": "少しね。でもほとんどは希望のある話。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, you've convinced me.",
+      "jp": "分かった、納得したよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Let's go this weekend.",
+      "jp": "今週末行こう。"
+     }
+    ]
+   },
+   {
+    "t": "🤒 417｜具合が悪い時：Not Feeling Well",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You don't look so good. Are you okay?",
+      "jp": "顔色がよくないよ。大丈夫？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I've got a headache, and I'm really tired.",
+      "jp": "頭が痛くて、すごく疲れてる。"
+     },
+     {
+      "sp": 0,
+      "en": "Did you sleep last night?",
+      "jp": "昨夜は眠った？"
+     },
+     {
+      "sp": 1,
+      "en": "Barely. I couldn't stop thinking about work.",
+      "jp": "ほとんど。仕事のことが頭から離れなくて。",
+      "note": "元の形: Barely／聞こえ方: ベアリー／使う場面:ほとんど〜ない時"
+     },
+     {
+      "sp": 0,
+      "en": "You should go home and rest.",
+      "jp": "家に帰って休んだ方がいいよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I can't. I have a report due today.",
+      "jp": "無理。今日が締め切りの報告書がある。"
+     },
+     {
+      "sp": 0,
+      "en": "It can wait. Your health is more important.",
+      "jp": "それは待てる。健康の方が大事だよ。"
+     },
+     {
+      "sp": 1,
+      "en": "You're right. Maybe I'll ask for an extension.",
+      "jp": "そうだね。延長をお願いしようかな。"
+     },
+     {
+      "sp": 0,
+      "en": "Good idea. Drink some water, too.",
+      "jp": "いい考え。水も飲んで。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks for looking out for me.",
+      "jp": "気にかけてくれてありがとう。",
+      "note": "表現: look out for me = 気にかける・面倒を見る"
+     },
+     {
+      "sp": 0,
+      "en": "Anytime. Take care of yourself.",
+      "jp": "いつでも。お大事に。"
+     }
+    ]
+   },
+   {
+    "t": "🙇 418｜謝る：Making an Apology",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hey, I owe you an apology.",
+      "jp": "ねえ、あなたに謝らなきゃ。"
+     },
+     {
+      "sp": 1,
+      "en": "For what?",
+      "jp": "何のこと？"
+     },
+     {
+      "sp": 0,
+      "en": "I forgot your birthday. I feel terrible.",
+      "jp": "誕生日を忘れた。ひどい気分なんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, don't worry about it.",
+      "jp": "ああ、気にしないで。"
+     },
+     {
+      "sp": 0,
+      "en": "No, it matters. I should've remembered.",
+      "jp": "いや、大事なことだ。覚えておくべきだった。",
+      "note": "元の形: should have／聞こえ方: シュダヴ（should've）／使う場面:〜すべきだったと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "I appreciate that. Really.",
+      "jp": "そう言ってくれてありがたい。本当に。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me make it up to you. Dinner on me?",
+      "jp": "埋め合わせさせて。夕食はおごる、どう？",
+      "note": "表現: make it up to you = 埋め合わせする"
+     },
+     {
+      "sp": 1,
+      "en": "You don't have to do that.",
+      "jp": "そんなことしなくていいのに。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "I want to. How about Friday?",
+      "jp": "したいんだ。金曜はどう？"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, Friday works.",
+      "jp": "分かった、金曜でいいよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Great. And again, I'm really sorry.",
+      "jp": "よかった。それと、改めて本当にごめん。"
+     }
+    ]
+   },
+   {
+    "t": "🏨 419｜ホテルのチェックイン：Checking In to a Hotel",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good afternoon. How can I help you?",
+      "jp": "こんにちは。どのようなご用件でしょうか。"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, I have a reservation under Smith.",
+      "jp": "こんにちは、スミスで予約しています。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me see. Yes, three nights, correct?",
+      "jp": "確認しますね。はい、3泊でよろしいですか。",
+      "note": "元の形: Let me／聞こえ方: レミ／使う場面:確認する時"
+     },
+     {
+      "sp": 1,
+      "en": "That's right. Is breakfast included?",
+      "jp": "そうです。朝食は含まれていますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, from seven to ten in the restaurant.",
+      "jp": "はい、7時から10時、レストランです。"
+     },
+     {
+      "sp": 1,
+      "en": "Wonderful. Could I have a quiet room?",
+      "jp": "よかった。静かな部屋にしてもらえますか。",
+      "note": "元の形: Could I／聞こえ方: クダイ／使う場面:丁寧に頼む時"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. I'll give you one on the top floor.",
+      "jp": "もちろん。最上階の部屋にします。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. What time is checkout?",
+      "jp": "ありがとう。チェックアウトは何時ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Eleven o'clock. Here's your key card.",
+      "jp": "11時です。こちらがキーカードです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is there Wi-Fi in the room?",
+      "jp": "部屋にWi-Fiはありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. The password's on the card.",
+      "jp": "はい。パスワードはカードに書いてあります。"
+     }
+    ]
+   },
+   {
+    "t": "🌙 420｜おやすみと感謝：Saying Goodnight and Thanks",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thanks for having me tonight. I had a great time.",
+      "jp": "今夜は招いてくれてありがとう。楽しかった。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm glad you came. We should do this more often.",
+      "jp": "来てくれて嬉しい。もっと頻繁にやろう。"
+     },
+     {
+      "sp": 0,
+      "en": "Definitely. Dinner was delicious.",
+      "jp": "絶対。夕食はおいしかった。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. I'll send you the recipe.",
+      "jp": "ありがとう。レシピを送るね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "Please do. I'd love to try making it.",
+      "jp": "ぜひ。作ってみたい。"
+     },
+     {
+      "sp": 1,
+      "en": "Do you need a ride home?",
+      "jp": "家まで送ろうか。"
+     },
+     {
+      "sp": 0,
+      "en": "No, I'm okay. I'll take a taxi.",
+      "jp": "いいえ、大丈夫。タクシーで帰る。"
+     },
+     {
+      "sp": 1,
+      "en": "Text me when you get home.",
+      "jp": "家に着いたらメッセージして。",
+      "note": "元の形: Text me／聞こえ方: テクスミー／使う場面:連絡してと頼む時"
+     },
+     {
+      "sp": 0,
+      "en": "Will do. Good night!",
+      "jp": "そうする。おやすみ！",
+      "note": "表現: Will do. = そうするよ／頼まれた時の軽い返事"
+     },
+     {
+      "sp": 1,
+      "en": "Good night. Sleep well!",
+      "jp": "おやすみ。ぐっすり眠って！"
+     },
+     {
+      "sp": 0,
+      "en": "You too. Bye!",
+      "jp": "あなたもね。じゃあね！"
+     }
+    ]
+   }
+  ]
+ }
+]
