@@ -1,0 +1,593 @@
+[
+ {
+  "id": "basic15",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本15（食べ物・料理 541〜550）",
+  "hint": "Ten conversations about food: breakfast, likes and dislikes, pizza, groceries, dessert, bar, recipes, foreign food, cooking together and thanking the host",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🍳 541｜朝ごはん：Breakfast",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What would you like for breakfast?",
+      "jp": "朝食は何がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Just toast and coffee, please.",
+      "jp": "トーストとコーヒーだけ。"
+     },
+     {
+      "sp": 0,
+      "en": "How about some eggs, too?",
+      "jp": "卵もどう？",
+      "note": "元の形: How about／聞こえ方: ハウアバウ／使う場面:提案する時"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, scrambled, please.",
+      "jp": "じゃあ、スクランブルで。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you want butter or jam?",
+      "jp": "バターとジャム、どっち？"
+     },
+     {
+      "sp": 1,
+      "en": "Both. And a little salt on the eggs.",
+      "jp": "両方。卵には少し塩も。"
+     },
+     {
+      "sp": 0,
+      "en": "Here you go. Careful, the plate is hot.",
+      "jp": "どうぞ。お皿が熱いから気をつけて。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. This smells amazing.",
+      "jp": "ありがとう。いい匂い。"
+     },
+     {
+      "sp": 0,
+      "en": "Eat up. You'll need energy today.",
+      "jp": "たくさん食べて。今日はエネルギーがいるから。",
+      "note": "表現: Eat up. = しっかり食べて"
+     },
+     {
+      "sp": 1,
+      "en": "Will do. This is the best breakfast.",
+      "jp": "そうする。最高の朝ごはんだ。"
+     }
+    ]
+   },
+   {
+    "t": "🥗 542｜食べ物の好みと苦手：Likes and Dislikes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Is there anything you don't eat?",
+      "jp": "食べられないものはある？",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "I don't eat shellfish. I'm allergic.",
+      "jp": "貝類は食べない。アレルギーなの。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks for telling me. Anything else?",
+      "jp": "教えてくれてありがとう。ほかには？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm not a fan of spicy food.",
+      "jp": "辛いものは得意じゃない。",
+      "note": "表現: I'm not a fan of ○○. = ○○はあまり好きじゃない"
+     },
+     {
+      "sp": 0,
+      "en": "Got it. What do you love?",
+      "jp": "分かった。好きなものは？"
+     },
+     {
+      "sp": 1,
+      "en": "Pasta, grilled vegetables, and anything with cheese.",
+      "jp": "パスタ、焼き野菜、チーズが入ったものなら何でも。"
+     },
+     {
+      "sp": 0,
+      "en": "Easy. I'll make a creamy pasta.",
+      "jp": "簡単だ。クリームパスタを作るね。"
+     },
+     {
+      "sp": 1,
+      "en": "That sounds perfect.",
+      "jp": "最高だね。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you want a salad on the side?",
+      "jp": "サイドにサラダはいる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, please. With a light dressing.",
+      "jp": "うん、お願い。軽いドレッシングで。",
+      "note": "用語: dressing = ドレッシング"
+     }
+    ]
+   },
+   {
+    "t": "🍕 543｜ピザを注文する：Ordering Pizza",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, I'd like to order a large pizza for delivery.",
+      "jp": "もしもし、Lサイズのピザをデリバリーで注文したいです。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. What toppings would you like?",
+      "jp": "はい。トッピングは何にしますか。",
+      "note": "用語: toppings = トッピング"
+     },
+     {
+      "sp": 0,
+      "en": "Half pepperoni, half mushroom.",
+      "jp": "半分ペパロニ、半分マッシュルームで。"
+     },
+     {
+      "sp": 1,
+      "en": "Anything else? Drinks or sides?",
+      "jp": "ほかには？ 飲み物やサイドは？"
+     },
+     {
+      "sp": 0,
+      "en": "Two sodas and garlic bread, please.",
+      "jp": "ソーダ2つとガーリックブレッドをお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Your address, please.",
+      "jp": "ご住所をお願いします。"
+     },
+     {
+      "sp": 0,
+      "en": "Twelve Elm Street, apartment three.",
+      "jp": "エルム通り12番地、3号室です。"
+     },
+     {
+      "sp": 1,
+      "en": "That'll be twenty-eight dollars. About thirty minutes.",
+      "jp": "28ドルです。30分くらいで届きます。",
+      "note": "元の形: That will be／聞こえ方: ザッルビー／使う場面:金額を言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Can I pay with a card when it arrives?",
+      "jp": "届いた時にカードで払えますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, the driver has a card machine.",
+      "jp": "はい、配達の者がカード端末を持っています。"
+     }
+    ]
+   },
+   {
+    "t": "🛒 544｜食材の選び方：Choosing Groceries",
+    "l": [
+     {
+      "sp": 0,
+      "en": "These peaches look ripe. Should we get some?",
+      "jp": "この桃、熟してそう。買う？",
+      "note": "用語: ripe = 熟した"
+     },
+     {
+      "sp": 1,
+      "en": "Smell them. If they smell sweet, they're good.",
+      "jp": "匂いを嗅いでみて。甘い匂いならおいしい。"
+     },
+     {
+      "sp": 0,
+      "en": "They smell wonderful.",
+      "jp": "すごくいい匂い。"
+     },
+     {
+      "sp": 1,
+      "en": "What about the bread? Fresh or day-old?",
+      "jp": "パンは？ 焼きたて、それとも昨日の？"
+     },
+     {
+      "sp": 0,
+      "en": "Fresh. It's a treat.",
+      "jp": "焼きたてで。ごほうびだから。"
+     },
+     {
+      "sp": 1,
+      "en": "Do we need milk?",
+      "jp": "牛乳は要る？"
+     },
+     {
+      "sp": 0,
+      "en": "We're almost out. Get the low-fat one.",
+      "jp": "ほとんどない。低脂肪のを取って。",
+      "note": "表現: We're almost out. = ほとんど切れかけている"
+     },
+     {
+      "sp": 1,
+      "en": "Anything for dinner?",
+      "jp": "夕食用のものは？"
+     },
+     {
+      "sp": 0,
+      "en": "Let's get some chicken and vegetables for stir-fry.",
+      "jp": "炒め物用に、鶏肉と野菜を買おう。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. I'll grab the rice.",
+      "jp": "完璧。私がお米を取るよ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🍰 545｜デザートとカフェ：Dessert Time",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Would you like to see the dessert menu?",
+      "jp": "デザートのメニューをご覧になりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, please. What do you recommend?",
+      "jp": "はい、お願いします。おすすめは？"
+     },
+     {
+      "sp": 0,
+      "en": "The chocolate cake is our most popular.",
+      "jp": "チョコレートケーキが一番人気です。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it very sweet?",
+      "jp": "とても甘いですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's rich, but not too sweet.",
+      "jp": "濃厚ですが、甘すぎません。",
+      "note": "用語: rich = 濃厚な"
+     },
+     {
+      "sp": 1,
+      "en": "Let's share one. And two coffees, please.",
+      "jp": "1つを分けよう。それとコーヒーを2つ。"
+     },
+     {
+      "sp": 0,
+      "en": "Would you like cream with that?",
+      "jp": "クリームはおつけしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Just a little, please.",
+      "jp": "少しだけお願いします。"
+     },
+     {
+      "sp": 0,
+      "en": "Coming right up.",
+      "jp": "すぐお持ちします。",
+      "note": "表現: Coming right up. = すぐお持ちします"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. I'm looking forward to it.",
+      "jp": "ありがとう。楽しみです。"
+     }
+    ]
+   },
+   {
+    "t": "🍻 546｜居酒屋・バーで：At a Bar",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What can I get you?",
+      "jp": "何にしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "A beer, please. What do you have on tap?",
+      "jp": "ビールをお願いします。生は何がありますか。",
+      "note": "表現: on tap = 生で（樽から出る）"
+     },
+     {
+      "sp": 0,
+      "en": "We have a lager and a pale ale.",
+      "jp": "ラガーとペールエールがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll have the pale ale.",
+      "jp": "ペールエールにします。"
+     },
+     {
+      "sp": 0,
+      "en": "Want something to eat?",
+      "jp": "何か食べますか。"
+     },
+     {
+      "sp": 1,
+      "en": "What's good here?",
+      "jp": "ここは何がおいしい？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "The fries are popular. And the wings.",
+      "jp": "フライドポテトが人気です。それとチキンウィング。"
+     },
+     {
+      "sp": 1,
+      "en": "A basket of fries, then.",
+      "jp": "じゃあ、フライドポテトを1皿。"
+     },
+     {
+      "sp": 0,
+      "en": "Would you like to start a tab?",
+      "jp": "お会計はあとでまとめますか。",
+      "note": "表現: start a tab = あとでまとめて払う"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, please. I'll close it later.",
+      "jp": "はい。あとで精算します。"
+     }
+    ]
+   },
+   {
+    "t": "🥘 547｜料理を教えてもらう：Learning a Recipe",
+    "l": [
+     {
+      "sp": 0,
+      "en": "This soup is delicious. What's in it?",
+      "jp": "このスープ、おいしい。何が入ってるの？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Onions, carrots, and a bit of ginger.",
+      "jp": "玉ねぎ、人参、少しの生姜。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the secret?",
+      "jp": "秘訣は？"
+     },
+     {
+      "sp": 1,
+      "en": "Cook the onions slowly. At least fifteen minutes.",
+      "jp": "玉ねぎをゆっくり炒めること。少なくとも15分。",
+      "note": "表現: at least fifteen minutes = 少なくとも15分"
+     },
+     {
+      "sp": 0,
+      "en": "And the seasoning?",
+      "jp": "味つけは？"
+     },
+     {
+      "sp": 1,
+      "en": "Just salt, pepper, and a splash of lemon at the end.",
+      "jp": "塩、こしょう、最後にレモンを少し。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you write down the recipe?",
+      "jp": "レシピを書いてもらえる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. I'll send it to you.",
+      "jp": "いいよ。送るね。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll try it this weekend.",
+      "jp": "今週末に作ってみる。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me know how it turns out.",
+      "jp": "どうなったか教えてね。",
+      "note": "表現: how it turns out = どう仕上がったか"
+     }
+    ]
+   },
+   {
+    "t": "🥢 548｜外国の料理を食べる：Trying Foreign Food",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I've never tried Japanese food before.",
+      "jp": "日本食は食べたことがないの。",
+      "note": "元の形: I have never tried／聞こえ方: アイヴ ネヴァー トライド／使う場面:経験がないと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Really? Let's start with sushi.",
+      "jp": "本当に？ お寿司から始めよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it raw fish?",
+      "jp": "生の魚？"
+     },
+     {
+      "sp": 1,
+      "en": "Some of it. But there are cooked options, too.",
+      "jp": "一部は。でも火を通したものもあるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "What's this one?",
+      "jp": "これは何？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "That's a tuna roll. Try it with a little soy sauce.",
+      "jp": "マグロの巻き寿司。醤油を少しつけて食べて。"
+     },
+     {
+      "sp": 0,
+      "en": "(after a bite) Mm, it's really good.",
+      "jp": "（食べて）うん、本当においしい。",
+      "note": "表現: a bite = ひと口"
+     },
+     {
+      "sp": 1,
+      "en": "I told you. Do you like it?",
+      "jp": "言ったでしょう。気に入った？"
+     },
+     {
+      "sp": 0,
+      "en": "I love it. What else do you recommend?",
+      "jp": "大好き。ほかに何かおすすめは？"
+     },
+     {
+      "sp": 1,
+      "en": "The miso soup. It's perfect with sushi.",
+      "jp": "お味噌汁。お寿司に合うよ。"
+     }
+    ]
+   },
+   {
+    "t": "🧂 549｜料理中の会話：Cooking Together",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can you pass me the salt?",
+      "jp": "塩を取ってくれる？",
+      "note": "表現: Can you pass me ○○? = ○○を取ってくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "Here. How much do you need?",
+      "jp": "はい。どれくらい要る？"
+     },
+     {
+      "sp": 0,
+      "en": "Just a pinch. Don't add too much.",
+      "jp": "ひとつまみだけ。入れすぎないで。",
+      "note": "表現: a pinch of salt = ひとつまみの塩"
+     },
+     {
+      "sp": 1,
+      "en": "Is the oven preheated?",
+      "jp": "オーブンは予熱してある？"
+     },
+     {
+      "sp": 0,
+      "en": "Not yet. It takes ten minutes to heat up.",
+      "jp": "まだ。温まるのに10分かかる。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me chop the vegetables meanwhile.",
+      "jp": "その間に野菜を切るね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Cut them into small pieces.",
+      "jp": "小さく切って。"
+     },
+     {
+      "sp": 1,
+      "en": "Like this?",
+      "jp": "こんな感じ？"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Now mix everything in the bowl.",
+      "jp": "完璧。次はボウルの中で全部混ぜて。"
+     },
+     {
+      "sp": 1,
+      "en": "Done. It smells so good already.",
+      "jp": "できた。もういい匂い。"
+     }
+    ]
+   },
+   {
+    "t": "🎉 550｜料理のお礼：Thanking the Host",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dinner was fantastic. Thank you for having us.",
+      "jp": "夕食は最高でした。招いてくれてありがとう。",
+      "note": "表現: Thank you for having us. = 招いてくれてありがとう"
+     },
+     {
+      "sp": 1,
+      "en": "I'm so glad you liked it.",
+      "jp": "気に入ってもらえて嬉しい。"
+     },
+     {
+      "sp": 0,
+      "en": "The chicken was perfectly cooked.",
+      "jp": "鶏肉の火の通りが完璧だった。"
+     },
+     {
+      "sp": 1,
+      "en": "Would you like some more?",
+      "jp": "もう少しいかが？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm full, but I'll have a little dessert.",
+      "jp": "お腹いっぱいだけど、デザートは少し食べる。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. Coffee or tea?",
+      "jp": "もちろん。コーヒーか紅茶は？"
+     },
+     {
+      "sp": 0,
+      "en": "Tea, please. Can I help clean up?",
+      "jp": "紅茶をお願い。片づけを手伝おうか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, no. You're our guest.",
+      "jp": "いえいえ。お客様なんだから。"
+     },
+     {
+      "sp": 0,
+      "en": "Then next time, dinner is at our place.",
+      "jp": "じゃあ次は、うちで夕食をしよう。"
+     },
+     {
+      "sp": 1,
+      "en": "It's a deal. We'd love that.",
+      "jp": "決まりね。ぜひ。",
+      "note": "表現: It's a deal. = 決まりだね"
+     }
+    ]
+   }
+  ]
+ }
+]
