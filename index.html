@@ -3698,7 +3698,8 @@ function loadPackagedConversation(){
   {id:'fortune01',file:'fortune01-4501.json'},
   {id:'acct01',file:'acct01-4503.json'},
   {id:'cad01',file:'cad01-4504.json'},
-  {id:'incense01',file:'incense01-4505.json'}
+  {id:'incense01',file:'incense01-4505.json'},
+  {id:'story01',file:'story01-4601.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
