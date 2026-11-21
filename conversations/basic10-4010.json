@@ -1,0 +1,592 @@
+[
+ {
+  "id": "basic10",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本10（家族・恋愛・お祝い 491〜500）",
+  "hint": "Ten conversations about family and relationships: siblings, a baby, asking someone out, after a date, engagement, grandma, pets, birthdays, holidays and condolences",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "👨‍👩‍👧 491｜家族の紹介：Talking About Your Family",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Do you have any brothers or sisters?",
+      "jp": "兄弟姉妹はいますか。",
+      "note": "表現: Do you have any brothers or sisters? = 兄弟姉妹はいますか"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, I have an older sister and a younger brother.",
+      "jp": "はい、姉が1人と弟が1人います。"
+     },
+     {
+      "sp": 0,
+      "en": "Are you close?",
+      "jp": "仲はいいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Very. We talk almost every day.",
+      "jp": "とても。ほぼ毎日話します。",
+      "note": "元の形: almost every day／聞こえ方: オルモウスト エヴリデイ／使う場面:ほぼ毎日と言う時"
+     },
+     {
+      "sp": 0,
+      "en": "What do your parents do?",
+      "jp": "ご両親は何をしていますか。"
+     },
+     {
+      "sp": 1,
+      "en": "My dad is a teacher, and my mom runs a small shop.",
+      "jp": "父は教師で、母は小さな店を経営しています。"
+     },
+     {
+      "sp": 0,
+      "en": "Do they live nearby?",
+      "jp": "近くに住んでいますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About an hour away, so I visit on weekends.",
+      "jp": "1時間くらい離れていて、週末に会いに行きます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's nice. Family is important.",
+      "jp": "いいですね。家族は大切です。"
+     },
+     {
+      "sp": 1,
+      "en": "It really is. How about yours?",
+      "jp": "本当に。あなたの家族は？"
+     }
+    ]
+   },
+   {
+    "t": "🍼 492｜赤ちゃんの話：Talking About a Baby",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Congratulations! I heard you had a baby.",
+      "jp": "おめでとう！ 赤ちゃんが生まれたって聞いた。",
+      "note": "表現: I heard you had a baby. = 赤ちゃんが生まれたと聞いた"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you! A baby girl, three weeks ago.",
+      "jp": "ありがとう！ 女の子、3週間前に。"
+     },
+     {
+      "sp": 0,
+      "en": "How's she doing?",
+      "jp": "どんな様子？"
+     },
+     {
+      "sp": 1,
+      "en": "She's perfect, but she wakes up every two hours.",
+      "jp": "完璧だけど、2時間おきに起きるの。"
+     },
+     {
+      "sp": 0,
+      "en": "You must be exhausted.",
+      "jp": "きっとくたくただね。"
+     },
+     {
+      "sp": 1,
+      "en": "I am. But she's so cute, it's worth it.",
+      "jp": "そう。でもすごく可愛いから、それだけの価値がある。",
+      "note": "表現: it's worth it = それだけの価値がある"
+     },
+     {
+      "sp": 0,
+      "en": "What's her name?",
+      "jp": "名前は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Lily. Would you like to see a photo?",
+      "jp": "リリー。写真、見る？"
+     },
+     {
+      "sp": 0,
+      "en": "Of course! Oh, she has your eyes.",
+      "jp": "もちろん！ あら、あなたの目にそっくり。"
+     },
+     {
+      "sp": 1,
+      "en": "Everyone says that. Come visit us soon.",
+      "jp": "みんなそう言う。近いうちに会いに来て。"
+     }
+    ]
+   },
+   {
+    "t": "💘 493｜デートに誘う：Asking Someone Out",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hey, are you busy this Friday?",
+      "jp": "ねえ、今週の金曜は忙しい？"
+     },
+     {
+      "sp": 1,
+      "en": "Not really. Why?",
+      "jp": "そうでもない。どうして？"
+     },
+     {
+      "sp": 0,
+      "en": "There's a new Italian place I'd like to try. Want to come with me?",
+      "jp": "新しいイタリアンに行ってみたくて。一緒に来ない？",
+      "note": "元の形: Want to／聞こえ方: ワナ／使う場面:誘う時"
+     },
+     {
+      "sp": 1,
+      "en": "Like a date?",
+      "jp": "デートみたいな？"
+     },
+     {
+      "sp": 0,
+      "en": "Yeah. If you're okay with that.",
+      "jp": "うん。あなたがよければ。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd love to. What time?",
+      "jp": "喜んで。何時？"
+     },
+     {
+      "sp": 0,
+      "en": "Seven o'clock? I'll pick you up.",
+      "jp": "7時は？ 迎えに行くよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Sounds perfect. I'm looking forward to it.",
+      "jp": "いいね。楽しみにしてる。",
+      "note": "表現: I'm looking forward to it. = 楽しみにしている"
+     },
+     {
+      "sp": 0,
+      "en": "Me too. I'm a little nervous, honestly.",
+      "jp": "私も。正直、少し緊張してる。"
+     },
+     {
+      "sp": 1,
+      "en": "Don't be. It'll be fun.",
+      "jp": "緊張しないで。きっと楽しいよ。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     }
+    ]
+   },
+   {
+    "t": "💬 494｜デートのあとで：After the Date",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I had a really great time tonight.",
+      "jp": "今夜は本当に楽しかった。",
+      "note": "表現: I had a great time. = 楽しかった"
+     },
+     {
+      "sp": 1,
+      "en": "Me too. Thanks for dinner.",
+      "jp": "私も。夕食ありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "The pasta was amazing, right?",
+      "jp": "パスタがすごくおいしかったよね。"
+     },
+     {
+      "sp": 1,
+      "en": "Best I've ever had. And the conversation was even better.",
+      "jp": "今までで最高。会話はもっとよかった。"
+     },
+     {
+      "sp": 0,
+      "en": "I'd like to see you again.",
+      "jp": "また会いたいな。",
+      "note": "表現: I'd like to see you again. = また会いたい"
+     },
+     {
+      "sp": 1,
+      "en": "I'd like that too. Call me tomorrow?",
+      "jp": "私もそうしたい。明日電話してくれる？"
+     },
+     {
+      "sp": 0,
+      "en": "I will. Are you free this weekend?",
+      "jp": "する。今週末は空いてる？"
+     },
+     {
+      "sp": 1,
+      "en": "I think so. Let's make a plan.",
+      "jp": "たぶん。計画を立てよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Good night. Get home safe.",
+      "jp": "おやすみ。気をつけて帰って。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Good night!",
+      "jp": "ありがとう。おやすみ！"
+     }
+    ]
+   },
+   {
+    "t": "💍 495｜結婚の報告：Announcing an Engagement",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Guess what? We're engaged!",
+      "jp": "聞いて！ 私たち婚約したの！"
+     },
+     {
+      "sp": 1,
+      "en": "No way! Congratulations! Let me see the ring.",
+      "jp": "うそ！ おめでとう！ 指輪を見せて。",
+      "note": "表現: We're engaged! = 婚約しました"
+     },
+     {
+      "sp": 0,
+      "en": "Here. He proposed last weekend, at the beach.",
+      "jp": "これ。先週末に、ビーチでプロポーズされたの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's so romantic. Did you cry?",
+      "jp": "すごくロマンチック。泣いた？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "A lot. And he was so nervous.",
+      "jp": "たくさん。それに彼、すごく緊張してた。"
+     },
+     {
+      "sp": 1,
+      "en": "When's the wedding?",
+      "jp": "結婚式はいつ？"
+     },
+     {
+      "sp": 0,
+      "en": "Next June. We're still planning.",
+      "jp": "来年の6月。まだ計画中。"
+     },
+     {
+      "sp": 1,
+      "en": "Do you need any help?",
+      "jp": "手伝うことはある？"
+     },
+     {
+      "sp": 0,
+      "en": "Maybe. Would you be a bridesmaid?",
+      "jp": "もしかして。ブライズメイドになってくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd be honored!",
+      "jp": "光栄です！",
+      "note": "表現: I'd be honored! = 光栄です"
+     }
+    ]
+   },
+   {
+    "t": "👵 496｜祖父母との電話：Calling Grandma",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, Grandma! It's me, Emily.",
+      "jp": "もしもし、おばあちゃん！ エミリーだよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Emily! What a lovely surprise. How are you?",
+      "jp": "エミリー！ うれしい驚きだわ。元気？",
+      "note": "表現: What a lovely surprise. = うれしい驚きだわ"
+     },
+     {
+      "sp": 0,
+      "en": "I'm good. How are you feeling?",
+      "jp": "元気だよ。おばあちゃんは調子どう？"
+     },
+     {
+      "sp": 1,
+      "en": "My knees hurt a bit, but I'm fine.",
+      "jp": "膝が少し痛いけど、大丈夫よ。"
+     },
+     {
+      "sp": 0,
+      "en": "Are you eating well?",
+      "jp": "ちゃんと食べてる？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, yes. Don't worry about me.",
+      "jp": "ええ、ええ。私のことは心配しないで。",
+      "note": "表現: Don't worry about me. = 私のことは心配しないで"
+     },
+     {
+      "sp": 0,
+      "en": "I'm coming to visit next month.",
+      "jp": "来月、会いに行くね。"
+     },
+     {
+      "sp": 1,
+      "en": "Wonderful! I'll bake your favorite cookies.",
+      "jp": "嬉しい！ あなたの好きなクッキーを焼くわ。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "I can't wait. I love you, Grandma.",
+      "jp": "待ちきれない。大好きだよ、おばあちゃん。"
+     },
+     {
+      "sp": 1,
+      "en": "I love you too, dear. Take care.",
+      "jp": "私もよ、いい子。体に気をつけて。"
+     }
+    ]
+   },
+   {
+    "t": "🐶 497｜ペットの話：Talking About Pets",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Is that your dog? He's adorable!",
+      "jp": "それ、あなたの犬？ かわいい！"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. His name is Max. He's two years old.",
+      "jp": "ありがとう。名前はマックス、2歳なの。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I pet him?",
+      "jp": "なでてもいい？",
+      "note": "表現: Can I pet him? = なでてもいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. He loves attention.",
+      "jp": "いいよ。かまわれるのが好きなの。",
+      "note": "表現: He loves attention. = かまってもらうのが好き"
+     },
+     {
+      "sp": 0,
+      "en": "What kind of dog is he?",
+      "jp": "どんな犬種？",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     },
+     {
+      "sp": 1,
+      "en": "A golden retriever. He's very friendly.",
+      "jp": "ゴールデンレトリバー。とても人懐っこい。"
+     },
+     {
+      "sp": 0,
+      "en": "Does he need a lot of exercise?",
+      "jp": "運動はたくさん必要？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, two long walks a day.",
+      "jp": "うん、1日に長い散歩を2回。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a lot of work.",
+      "jp": "大変だね。"
+     },
+     {
+      "sp": 1,
+      "en": "It is, but he makes me happy every day.",
+      "jp": "そう。でも毎日、幸せにしてくれる。"
+     }
+    ]
+   },
+   {
+    "t": "🎂 498｜誕生日パーティー：A Birthday Party",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Happy birthday! This is for you.",
+      "jp": "お誕生日おめでとう！ これ、あなたに。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, you shouldn't have! Can I open it?",
+      "jp": "まあ、そんな気を使わなくても！ 開けていい？",
+      "note": "表現: You shouldn't have! = そんなことしなくてよかったのに（贈り物をもらった時）"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. I hope you like it.",
+      "jp": "もちろん。気に入るといいな。"
+     },
+     {
+      "sp": 1,
+      "en": "A scarf! It's beautiful. Thank you so much.",
+      "jp": "スカーフ！ きれい。本当にありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "It matches your coat.",
+      "jp": "あなたのコートに合うと思って。"
+     },
+     {
+      "sp": 1,
+      "en": "You know me so well. Come, have some cake.",
+      "jp": "私のことをよく分かってるね。さあ、ケーキをどうぞ。",
+      "note": "表現: You know me so well. = 私のことをよく分かってる"
+     },
+     {
+      "sp": 0,
+      "en": "It looks delicious. Who made it?",
+      "jp": "おいしそう。誰が作ったの？"
+     },
+     {
+      "sp": 1,
+      "en": "My sister did. She's a great baker.",
+      "jp": "姉よ。お菓子づくりが上手なの。"
+     },
+     {
+      "sp": 0,
+      "en": "Let's sing happy birthday!",
+      "jp": "ハッピーバースデーを歌おう！"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no, please. I'm blushing already.",
+      "jp": "やめてよ。もう顔が赤い。"
+     }
+    ]
+   },
+   {
+    "t": "🎄 499｜お祝いの予定：Holiday Plans",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Are you doing anything for the holidays?",
+      "jp": "休暇は何か予定ある？",
+      "note": "表現: Are you doing anything for the holidays? = 休暇の予定は？"
+     },
+     {
+      "sp": 1,
+      "en": "We're driving to my parents' place.",
+      "jp": "両親の家に車で行くの。"
+     },
+     {
+      "sp": 0,
+      "en": "How long is the drive?",
+      "jp": "運転はどれくらい？"
+     },
+     {
+      "sp": 1,
+      "en": "About six hours, with the kids.",
+      "jp": "子供がいて、6時間くらい。"
+     },
+     {
+      "sp": 0,
+      "en": "Wow. Are you ready for that?",
+      "jp": "わあ。覚悟はできてる？"
+     },
+     {
+      "sp": 1,
+      "en": "Not really, but it's worth it.",
+      "jp": "あまり。でもそれだけの価値がある。"
+     },
+     {
+      "sp": 0,
+      "en": "What will you do there?",
+      "jp": "そこで何するの？"
+     },
+     {
+      "sp": 1,
+      "en": "Cook a big dinner and play games.",
+      "jp": "大きな夕食を作って、ゲームをする。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds lovely. Enjoy your time!",
+      "jp": "素敵だね。楽しんで！"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. You too, happy holidays!",
+      "jp": "ありがとう。あなたも、よい休暇を！",
+      "note": "表現: Happy holidays! = よい休暇を"
+     }
+    ]
+   },
+   {
+    "t": "🕊️ 500｜お悔やみを伝える：Offering Condolences",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I heard about your grandfather. I'm so sorry.",
+      "jp": "おじいさんのこと聞いた。本当に残念。",
+      "note": "表現: I'm so sorry for your loss. = ご愁傷さまです（お悔やみ）"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. It was sudden.",
+      "jp": "ありがとう。急だったの。"
+     },
+     {
+      "sp": 0,
+      "en": "How are you holding up?",
+      "jp": "どうしてる？ 大丈夫？",
+      "note": "表現: How are you holding up? = どうしてる？（つらい時に気づかう）"
+     },
+     {
+      "sp": 1,
+      "en": "Some moments are hard, but I'm okay.",
+      "jp": "つらい時もあるけど、大丈夫。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything I can do?",
+      "jp": "何か私にできることはある？",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Just being here helps.",
+      "jp": "そばにいてくれるだけで助かる。"
+     },
+     {
+      "sp": 0,
+      "en": "He was a wonderful man. I remember his stories.",
+      "jp": "素敵な方だった。あの人の話を覚えてる。"
+     },
+     {
+      "sp": 1,
+      "en": "He loved telling them. Thank you for saying that.",
+      "jp": "話すのが好きだった。そう言ってくれてありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "Take all the time you need.",
+      "jp": "必要なだけ、時間をかけて。"
+     },
+     {
+      "sp": 1,
+      "en": "I will. I'm lucky to have friends like you.",
+      "jp": "そうする。あなたのような友達がいて幸せ。"
+     }
+    ]
+   }
+  ]
+ }
+]

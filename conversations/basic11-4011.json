@@ -1,0 +1,595 @@
+[
+ {
+  "id": "basic11",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本11（学校・子ども 501〜510）",
+  "hint": "Ten conversations about school and children: first day, homework, tests, asking the teacher, presentations, talking with a child, parent-teacher meeting, school trip, future plans and graduation",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🏫 501｜学校の初日：The First Day of School",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, class. Please take your seats.",
+      "jp": "おはよう、みんな。席についてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Where should I sit, Ms. Clark?",
+      "jp": "どこに座ればいいですか、クラーク先生。",
+      "note": "表現: Please take your seats. = 席についてください"
+     },
+     {
+      "sp": 0,
+      "en": "You can sit by the window, next to Anna.",
+      "jp": "窓のそば、アンナの隣に座って。"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, I'm Anna. What's your name?",
+      "jp": "こんにちは、アンナよ。名前は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "I'm Leo. I just moved here.",
+      "jp": "レオです。引っ越してきたばかり。"
+     },
+     {
+      "sp": 1,
+      "en": "Welcome! Do you like soccer?",
+      "jp": "ようこそ！ サッカーは好き？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, I love it.",
+      "jp": "うん、大好き。"
+     },
+     {
+      "sp": 1,
+      "en": "We play at lunch. You can join us.",
+      "jp": "お昼に遊ぶの。入っていいよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Really? That would be great.",
+      "jp": "本当？ 嬉しいな。"
+     },
+     {
+      "sp": 1,
+      "en": "Cool. I'll show you around after class.",
+      "jp": "じゃあ。授業のあとで案内するね。",
+      "note": "表現: show you around = 案内して回る"
+     }
+    ]
+   },
+   {
+    "t": "📚 502｜宿題の相談：Talking About Homework",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Did you finish the math homework?",
+      "jp": "数学の宿題、終わった？"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. I got stuck on number five.",
+      "jp": "まだ。5番で詰まっちゃった。",
+      "note": "表現: I got stuck on ○○. = ○○で詰まった"
+     },
+     {
+      "sp": 0,
+      "en": "Which part is hard?",
+      "jp": "どこが難しい？"
+     },
+     {
+      "sp": 1,
+      "en": "I don't understand how to start.",
+      "jp": "どうやって始めるのか分からない。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me show you. First, draw the diagram.",
+      "jp": "見せるよ。まず図を描いて。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, I see. That makes it easier.",
+      "jp": "ああ、なるほど。簡単になる。"
+     },
+     {
+      "sp": 0,
+      "en": "Now write the equation underneath.",
+      "jp": "次に、その下に式を書いて。"
+     },
+     {
+      "sp": 1,
+      "en": "Got it. I think I can do the rest.",
+      "jp": "分かった。残りはできそう。"
+     },
+     {
+      "sp": 0,
+      "en": "Great. It's due tomorrow, right?",
+      "jp": "よかった。提出は明日だよね？",
+      "note": "表現: due tomorrow = 明日が締め切り"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, first thing in the morning.",
+      "jp": "うん、朝いちばんに。"
+     }
+    ]
+   },
+   {
+    "t": "📝 503｜テストの話：Before a Test",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I have a big test tomorrow, and I'm worried.",
+      "jp": "明日大きなテストがあって、心配。"
+     },
+     {
+      "sp": 1,
+      "en": "What subject is it?",
+      "jp": "何の科目？"
+     },
+     {
+      "sp": 0,
+      "en": "History. There's so much to remember.",
+      "jp": "歴史。覚えることがたくさん。"
+     },
+     {
+      "sp": 1,
+      "en": "Have you made flashcards?",
+      "jp": "単語カードは作った？",
+      "note": "用語: flashcards = 単語カード"
+     },
+     {
+      "sp": 0,
+      "en": "Not yet. Do they help?",
+      "jp": "まだ。効果ある？"
+     },
+     {
+      "sp": 1,
+      "en": "They do. Try testing yourself out loud.",
+      "jp": "あるよ。声に出して自分で試してみて。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Can you quiz me?",
+      "jp": "分かった。問題を出してくれる？",
+      "note": "表現: quiz me = 私に問題を出して"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. First question: when did the war end?",
+      "jp": "いいよ。最初の質問、戦争はいつ終わった？"
+     },
+     {
+      "sp": 0,
+      "en": "Nineteen forty-five!",
+      "jp": "1945年！"
+     },
+     {
+      "sp": 1,
+      "en": "Correct! See, you know more than you think.",
+      "jp": "正解！ ほら、思ってるより知ってる。"
+     }
+    ]
+   },
+   {
+    "t": "👩‍🏫 504｜先生に質問する：Asking the Teacher",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, Mr. Smith. Can I ask a question?",
+      "jp": "すみません、スミス先生。質問してもいいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. What is it?",
+      "jp": "もちろん。何ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "I didn't understand the last part of the lesson.",
+      "jp": "授業の最後の部分が分かりませんでした。",
+      "note": "表現: I didn't understand ○○. = ○○が分かりませんでした"
+     },
+     {
+      "sp": 1,
+      "en": "Which part exactly?",
+      "jp": "具体的にはどの部分？"
+     },
+     {
+      "sp": 0,
+      "en": "The difference between 'affect' and 'effect.'",
+      "jp": "affect と effect の違いです。"
+     },
+     {
+      "sp": 1,
+      "en": "Good question. 'Affect' is usually a verb, and 'effect' is a noun.",
+      "jp": "いい質問です。affect はふつう動詞で、effect は名詞です。"
+     },
+     {
+      "sp": 0,
+      "en": "Could you give me an example?",
+      "jp": "例を挙げてもらえますか。",
+      "note": "表現: Could you give me an example? = 例を挙げてもらえますか"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. The weather affects my mood. It has a big effect.",
+      "jp": "いいですよ。天気は私の気分に影響します。大きな効果があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Oh, that makes sense. Thank you.",
+      "jp": "ああ、納得しました。ありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "Anytime. Don't hesitate to ask.",
+      "jp": "いつでも。遠慮なく聞いて。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     }
+    ]
+   },
+   {
+    "t": "🧑‍🎓 505｜授業の発表：A Class Presentation",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Today I'm going to talk about renewable energy.",
+      "jp": "今日は再生可能エネルギーについて話します。",
+      "note": "表現: I'm going to talk about ○○. = ○○について話します"
+     },
+     {
+      "sp": 1,
+      "en": "(whispering) You look nervous.",
+      "jp": "（ささやいて）緊張してるね。"
+     },
+     {
+      "sp": 0,
+      "en": "(whispering) A little. My hands are shaking.",
+      "jp": "（ささやいて）少し。手が震えてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Take a deep breath. You'll be fine.",
+      "jp": "深呼吸して。大丈夫だよ。"
+     },
+     {
+      "sp": 0,
+      "en": "First, let me explain what it means.",
+      "jp": "まず、それが何を意味するか説明します。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Renewable energy comes from sources that don't run out.",
+      "jp": "再生可能エネルギーは、なくならない資源から得られます。",
+      "note": "用語: renewable = 再生可能な／run out = なくなる"
+     },
+     {
+      "sp": 0,
+      "en": "For example, sunlight and wind.",
+      "jp": "たとえば、日光と風です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. Does anyone have a question?",
+      "jp": "ありがとうございます。質問はありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes. Is it expensive?",
+      "jp": "はい。高いですか。"
+     },
+     {
+      "sp": 1,
+      "en": "It was, but the prices are dropping fast.",
+      "jp": "以前はそうでしたが、値段は急速に下がっています。"
+     }
+    ]
+   },
+   {
+    "t": "🧒 506｜子供と話す：Talking with a Child",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Mom, can I have a snack?",
+      "jp": "ママ、おやつ食べていい？"
+     },
+     {
+      "sp": 1,
+      "en": "Did you finish your homework?",
+      "jp": "宿題は終わった？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Almost. I have one page left.",
+      "jp": "ほとんど。あと1ページ。"
+     },
+     {
+      "sp": 1,
+      "en": "Finish it first, then you can have a snack.",
+      "jp": "先にそれを終えて、それからおやつね。",
+      "note": "表現: Finish it first, then ○○. = 先にそれを終えて、そのあとで○○"
+     },
+     {
+      "sp": 0,
+      "en": "But I'm hungry now.",
+      "jp": "でもいまお腹すいてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Here, have an apple while you work.",
+      "jp": "はい、やりながらリンゴを食べて。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Can I watch TV after?",
+      "jp": "分かった。そのあとテレビ見ていい？"
+     },
+     {
+      "sp": 1,
+      "en": "Thirty minutes, and then bath time.",
+      "jp": "30分ね。そのあとお風呂。"
+     },
+     {
+      "sp": 0,
+      "en": "Deal. Thanks, Mom.",
+      "jp": "約束ね。ありがとう、ママ。",
+      "note": "表現: Deal. = 決まり・約束だよ"
+     },
+     {
+      "sp": 1,
+      "en": "You're welcome, sweetheart.",
+      "jp": "どういたしまして、いい子ね。"
+     }
+    ]
+   },
+   {
+    "t": "🧸 507｜保護者面談：A Parent-Teacher Meeting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for coming. Let's talk about Sam.",
+      "jp": "来てくれてありがとう。サムについて話しましょう。"
+     },
+     {
+      "sp": 1,
+      "en": "How is he doing in class?",
+      "jp": "授業での様子はどうですか。"
+     },
+     {
+      "sp": 0,
+      "en": "He's doing well. He's kind and he works hard.",
+      "jp": "よくやっています。優しくて、よく頑張っています。",
+      "note": "表現: He's doing well. = うまくやっている"
+     },
+     {
+      "sp": 1,
+      "en": "That's good to hear. Is there anything we should work on?",
+      "jp": "それはよかった。取り組むべきことはありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "His reading could be a bit stronger.",
+      "jp": "読む力がもう少し伸びるといいですね。"
+     },
+     {
+      "sp": 1,
+      "en": "What can we do at home?",
+      "jp": "家で何ができますか。",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 0,
+      "en": "Read together for fifteen minutes every night.",
+      "jp": "毎晩15分、一緒に読んでください。"
+     },
+     {
+      "sp": 1,
+      "en": "We can do that. Anything else?",
+      "jp": "それならできます。ほかには？"
+     },
+     {
+      "sp": 0,
+      "en": "Just praise his effort. He'll keep improving.",
+      "jp": "努力をほめてあげてください。伸び続けます。",
+      "note": "表現: praise his effort = 努力をほめる"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. We really appreciate your help.",
+      "jp": "ありがとうございます。本当に助かります。"
+     }
+    ]
+   },
+   {
+    "t": "🎒 508｜遠足の準備：Getting Ready for a School Trip",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Dad, what do I need for the field trip tomorrow?",
+      "jp": "パパ、明日の遠足に何が要る？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Let's see the note from school.",
+      "jp": "学校のお知らせを見よう。"
+     },
+     {
+      "sp": 0,
+      "en": "It says, lunch, water, and a hat.",
+      "jp": "お弁当、水、帽子って。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Do you have a rain jacket, just in case?",
+      "jp": "分かった。念のため、レインジャケットはある？",
+      "note": "表現: just in case = 念のため"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, in my bag.",
+      "jp": "うん、カバンの中。"
+     },
+     {
+      "sp": 1,
+      "en": "What time does the bus leave?",
+      "jp": "バスは何時に出る？"
+     },
+     {
+      "sp": 0,
+      "en": "At eight o'clock sharp. Don't be late.",
+      "jp": "8時ちょうど。遅れないで。",
+      "note": "表現: eight o'clock sharp = 8時ちょうど"
+     },
+     {
+      "sp": 1,
+      "en": "I'll set my alarm for six thirty.",
+      "jp": "6時半に目覚ましをかける。"
+     },
+     {
+      "sp": 0,
+      "en": "Good. Now go and pack your bag.",
+      "jp": "いいね。さあ、カバンに詰めておいで。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, Dad. I'm so excited!",
+      "jp": "うん、パパ。すごく楽しみ！"
+     }
+    ]
+   },
+   {
+    "t": "🎓 509｜進路の相談：Talking About the Future",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Have you decided what to study at university?",
+      "jp": "大学で何を勉強するか決めた？",
+      "note": "表現: What to study = 何を勉強するか（疑問詞＋to不定詞）"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. I'm thinking about engineering.",
+      "jp": "まだ。工学を考えてる。"
+     },
+     {
+      "sp": 0,
+      "en": "What interests you about it?",
+      "jp": "何に興味があるの？"
+     },
+     {
+      "sp": 1,
+      "en": "I like building things and solving problems.",
+      "jp": "ものを作ったり、問題を解いたりするのが好き。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds like a good fit.",
+      "jp": "合ってそうだね。",
+      "note": "表現: a good fit = 合っている・ぴったり"
+     },
+     {
+      "sp": 1,
+      "en": "But my parents want me to study medicine.",
+      "jp": "でも両親は医学を勉強してほしいみたい。"
+     },
+     {
+      "sp": 0,
+      "en": "It's your life. Have you talked to them?",
+      "jp": "あなたの人生だよ。話した？"
+     },
+     {
+      "sp": 1,
+      "en": "Not honestly, not yet.",
+      "jp": "正直には、まだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Try. They only want you to be happy.",
+      "jp": "話してみて。彼らはあなたの幸せを望んでるだけ。"
+     },
+     {
+      "sp": 1,
+      "en": "You're right. I'll talk to them this weekend.",
+      "jp": "そうだね。今週末に話してみる。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🎤 510｜卒業式：Graduation Day",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Congratulations, graduates! You did it!",
+      "jp": "卒業生の皆さん、おめでとう！ やりましたね！"
+     },
+     {
+      "sp": 1,
+      "en": "I can't believe it's over.",
+      "jp": "終わったなんて信じられない。"
+     },
+     {
+      "sp": 0,
+      "en": "Four years went by so fast.",
+      "jp": "4年があっという間だった。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm going to miss everyone.",
+      "jp": "みんなに会えなくなるのが寂しい。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Let's keep in touch, okay?",
+      "jp": "連絡を取り合おうね。",
+      "note": "表現: keep in touch = 連絡を取り合う"
+     },
+     {
+      "sp": 1,
+      "en": "Definitely. Let's meet every year.",
+      "jp": "絶対。毎年会おう。"
+     },
+     {
+      "sp": 0,
+      "en": "What are you doing next?",
+      "jp": "次は何をするの？"
+     },
+     {
+      "sp": 1,
+      "en": "I start a new job in September.",
+      "jp": "9月から新しい仕事が始まる。",
+      "note": "表現: I start a new job. = 新しい仕事が始まる"
+     },
+     {
+      "sp": 0,
+      "en": "That's great. I'm so proud of you.",
+      "jp": "すばらしい。あなたを誇りに思う。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Now, let's take a group photo!",
+      "jp": "ありがとう。さあ、集合写真を撮ろう！"
+     }
+    ]
+   }
+  ]
+ }
+]

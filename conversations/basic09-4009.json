@@ -1,0 +1,596 @@
+[
+ {
+  "id": "basic09",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本9（仕事の基本 481〜490）",
+  "hint": "Ten basic workplace conversations: introductions, asking for help, scheduling, presentations, emails, disagreements, lunch, working late, reporting a mistake and an interview",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🧑‍💼 481｜自己紹介（仕事）：Introducing Yourself at Work",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'm new here. My name is Yuki.",
+      "jp": "こんにちは、新人です。ユキといいます。"
+     },
+     {
+      "sp": 1,
+      "en": "Welcome, Yuki! I'm David, from the sales team.",
+      "jp": "ようこそ、ユキ！ 営業チームのデビッドです。"
+     },
+     {
+      "sp": 0,
+      "en": "Nice to meet you. What do you do exactly?",
+      "jp": "はじめまして。具体的には何をしているんですか。",
+      "note": "表現: What do you do? = お仕事は何ですか"
+     },
+     {
+      "sp": 1,
+      "en": "I manage the accounts for our biggest clients.",
+      "jp": "大手のお客さんの担当をしています。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds busy. And what's your role?",
+      "jp": "忙しそうですね。あなたの役割は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "I'm joining the design team as a junior designer.",
+      "jp": "デザインチームに、新人デザイナーとして入ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Great. Have you met the team yet?",
+      "jp": "いいね。チームにはもう会いました？"
+     },
+     {
+      "sp": 1,
+      "en": "Only my manager so far.",
+      "jp": "いまのところ上司だけです。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me introduce you around.",
+      "jp": "みんなに紹介しますよ。",
+      "note": "表現: introduce you around = みんなに紹介して回る"
+     },
+     {
+      "sp": 1,
+      "en": "That would be wonderful. Thank you.",
+      "jp": "とても助かります。ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "📝 482｜仕事を頼む・引き受ける：Asking for and Accepting Work",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Do you have a minute? I need your help with something.",
+      "jp": "少しいい？ 手伝ってほしいことがある。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. What is it?",
+      "jp": "いいよ。何？"
+     },
+     {
+      "sp": 0,
+      "en": "Could you review this report before noon?",
+      "jp": "正午までに、この報告書を見直してもらえる？"
+     },
+     {
+      "sp": 1,
+      "en": "I'm in the middle of something. Can it wait until two?",
+      "jp": "いま作業の途中で。2時まで待てる？",
+      "note": "表現: in the middle of something = 作業の途中で"
+     },
+     {
+      "sp": 0,
+      "en": "Two is too late. The client needs it at one.",
+      "jp": "2時では遅い。お客さんが1時に必要なの。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, I'll make time. Send it over.",
+      "jp": "分かった、時間を作る。送って。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. Just check the numbers, please.",
+      "jp": "ありがとう。数字だけ確認してください。"
+     },
+     {
+      "sp": 1,
+      "en": "Got it. I'll let you know if I see any errors.",
+      "jp": "了解。間違いがあれば知らせるね。"
+     },
+     {
+      "sp": 0,
+      "en": "You're a lifesaver.",
+      "jp": "命の恩人だよ。",
+      "note": "表現: You're a lifesaver. = 命の恩人／とても助かった"
+     },
+     {
+      "sp": 1,
+      "en": "Happy to help. Send it now.",
+      "jp": "喜んで。いま送って。"
+     }
+    ]
+   },
+   {
+    "t": "🗓️ 483｜会議の日程調整：Scheduling a Meeting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "We need to set up a meeting about the new project.",
+      "jp": "新しいプロジェクトの会議を設定しなきゃ。"
+     },
+     {
+      "sp": 1,
+      "en": "Agreed. When is everyone free?",
+      "jp": "同感。みんなはいつ空いてる？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm free Tuesday afternoon or Wednesday morning.",
+      "jp": "私は火曜午後か水曜午前が空いてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Wednesday is full for me. How about Tuesday at three?",
+      "jp": "水曜は私が埋まってる。火曜の3時は？",
+      "note": "表現: ○○ is full. = ○○は予定が埋まっている"
+     },
+     {
+      "sp": 0,
+      "en": "Tuesday at three works. How long do we need?",
+      "jp": "火曜3時でOK。どれくらい必要？"
+     },
+     {
+      "sp": 1,
+      "en": "An hour should be enough.",
+      "jp": "1時間で十分なはず。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll send out the invitation now.",
+      "jp": "いま招待を送るね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Please add the agenda, too.",
+      "jp": "議題も付けておいて。",
+      "note": "用語: agenda = 議題"
+     },
+     {
+      "sp": 0,
+      "en": "Will do. See everyone on Tuesday.",
+      "jp": "そうする。では火曜に。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks for organizing this.",
+      "jp": "まとめてくれてありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "📊 484｜簡単な発表：A Short Presentation",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, everyone. Thank you for coming.",
+      "jp": "皆さん、おはようございます。お越しいただきありがとうございます。"
+     },
+     {
+      "sp": 1,
+      "en": "Today I'll talk about our sales results.",
+      "jp": "今日は、私たちの売上結果についてお話しします。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 0,
+      "en": "First, sales grew by ten percent this quarter.",
+      "jp": "まず、今期の売上は10パーセント伸びました。",
+      "note": "表現: grew by ten percent = 10パーセント伸びた"
+     },
+     {
+      "sp": 1,
+      "en": "The biggest increase came from online orders.",
+      "jp": "最大の伸びは、オンライン注文から来ました。"
+     },
+     {
+      "sp": 0,
+      "en": "However, costs also went up a little.",
+      "jp": "ただし、費用も少し増えました。"
+     },
+     {
+      "sp": 1,
+      "en": "So, for the next quarter, we'll focus on reducing costs.",
+      "jp": "そこで次の期は、費用の削減に注力します。"
+     },
+     {
+      "sp": 0,
+      "en": "Does anyone have a question so far?",
+      "jp": "ここまでで、質問はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, how will you reduce the costs?",
+      "jp": "はい、費用をどう減らすのですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Good question. We plan to negotiate with suppliers.",
+      "jp": "いい質問です。仕入れ先と交渉する予定です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. That's all from me.",
+      "jp": "ありがとうございます。私からは以上です。",
+      "note": "表現: That's all from me. = 私からは以上です"
+     }
+    ]
+   },
+   {
+    "t": "✉️ 485｜メールの書き方を相談：Talking About an Email",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can you look at this email before I send it?",
+      "jp": "送る前にこのメールを見てくれる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Who's it for?",
+      "jp": "いいよ。誰宛て？"
+     },
+     {
+      "sp": 0,
+      "en": "A client. I need to say we'll be late.",
+      "jp": "お客さん宛て。遅れると伝えなきゃ。"
+     },
+     {
+      "sp": 1,
+      "en": "Start with an apology, then give the new date.",
+      "jp": "まずお詫びから、そのあと新しい日付を。",
+      "note": "表現: Start with an apology = お詫びから始める"
+     },
+     {
+      "sp": 0,
+      "en": "Should I explain the reason?",
+      "jp": "理由は説明すべき？"
+     },
+     {
+      "sp": 1,
+      "en": "Briefly. Don't make excuses.",
+      "jp": "簡潔に。言い訳はしないで。",
+      "note": "表現: make excuses = 言い訳をする"
+     },
+     {
+      "sp": 0,
+      "en": "What about the ending?",
+      "jp": "結びはどうする？"
+     },
+     {
+      "sp": 1,
+      "en": "Thank them for their patience.",
+      "jp": "お待ちいただいたことに感謝を。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds good. Let me rewrite it.",
+      "jp": "いいね。書き直してみる。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Send it to me again, and I'll double-check.",
+      "jp": "もう一度送って。ダブルチェックするから。"
+     }
+    ]
+   },
+   {
+    "t": "🤝 486｜同僚と意見を調整：Working Things Out with a Colleague",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I think we should change the schedule.",
+      "jp": "日程を変えるべきだと思う。",
+      "note": "表現: I think we should ○○ = ○○すべきだと思う"
+     },
+     {
+      "sp": 1,
+      "en": "Why? We agreed on it last week.",
+      "jp": "なぜ？ 先週合意したよね。"
+     },
+     {
+      "sp": 0,
+      "en": "The client changed their request.",
+      "jp": "お客さんが要望を変えたの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a big change. How much more work is it?",
+      "jp": "大きな変更だね。仕事はどれくらい増える？"
+     },
+     {
+      "sp": 0,
+      "en": "About two extra days.",
+      "jp": "あと2日くらい。"
+     },
+     {
+      "sp": 1,
+      "en": "Can we ask them to extend the deadline?",
+      "jp": "期限を延ばしてもらえないか頼める？",
+      "note": "元の形: can we／聞こえ方: キャニー／使う場面:〜できるか提案する時"
+     },
+     {
+      "sp": 0,
+      "en": "Let's try. I'll call them this afternoon.",
+      "jp": "やってみよう。今日の午後に電話する。"
+     },
+     {
+      "sp": 1,
+      "en": "And if they say no?",
+      "jp": "もし断られたら？"
+     },
+     {
+      "sp": 0,
+      "en": "Then we'll work overtime this week.",
+      "jp": "その時は、今週は残業だ。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Let's hope for the best.",
+      "jp": "分かった。うまくいくことを祈ろう。",
+      "note": "表現: hope for the best = いい結果を祈る"
+     }
+    ]
+   },
+   {
+    "t": "🍱 487｜ランチの誘い：Going to Lunch",
+    "l": [
+     {
+      "sp": 0,
+      "en": "It's almost noon. Are you hungry?",
+      "jp": "もうすぐ正午。お腹すいた？",
+      "note": "表現: Starving. = お腹ペコペコ／I'm starving の省略"
+     },
+     {
+      "sp": 1,
+      "en": "Starving. Where should we go?",
+      "jp": "ペコペコ。どこに行く？"
+     },
+     {
+      "sp": 0,
+      "en": "There's a new sandwich place downstairs.",
+      "jp": "下に新しいサンドイッチ屋ができた。"
+     },
+     {
+      "sp": 1,
+      "en": "Let's try it. I need something quick.",
+      "jp": "行ってみよう。早く食べたいから。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you want to invite the others?",
+      "jp": "ほかの人も誘う？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. I'll ask Mia and Ben.",
+      "jp": "いいね。ミアとベンに聞いてみる。"
+     },
+     {
+      "sp": 0,
+      "en": "(at the shop) What are you getting?",
+      "jp": "（店で）何にする？"
+     },
+     {
+      "sp": 1,
+      "en": "I'll have the turkey sandwich and a soup.",
+      "jp": "ターキーのサンドイッチとスープにする。",
+      "note": "元の形: I will have／聞こえ方: アイルハヴ／使う場面:注文する時"
+     },
+     {
+      "sp": 0,
+      "en": "Same for me. Let's find a table.",
+      "jp": "私も同じ。席を探そう。"
+     },
+     {
+      "sp": 1,
+      "en": "Over there, by the window.",
+      "jp": "あそこ、窓際。"
+     }
+    ]
+   },
+   {
+    "t": "🏃 488｜残業と帰りのあいさつ：Working Late",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Are you still working? It's almost eight.",
+      "jp": "まだ仕事してるの？ もうすぐ8時だよ。"
+     },
+     {
+      "sp": 1,
+      "en": "I have a deadline tomorrow morning.",
+      "jp": "明日の朝が締め切りなんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you need any help?",
+      "jp": "手伝おうか。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks, but I'm almost done.",
+      "jp": "ありがとう、でももうすぐ終わる。",
+      "note": "表現: I'm almost done. = もうすぐ終わる"
+     },
+     {
+      "sp": 0,
+      "en": "Don't stay too late. Get some rest.",
+      "jp": "遅くならないでね。休んで。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I won't. I'll leave in thirty minutes.",
+      "jp": "大丈夫。30分で帰る。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I'm heading out now.",
+      "jp": "分かった。私はもう出るね。",
+      "note": "表現: I'm heading out. = 出ます・帰ります"
+     },
+     {
+      "sp": 1,
+      "en": "Have a good evening. See you tomorrow.",
+      "jp": "いい夜を。また明日。"
+     },
+     {
+      "sp": 0,
+      "en": "You too. Take care.",
+      "jp": "あなたも。気をつけて。"
+     },
+     {
+      "sp": 1,
+      "en": "Good night!",
+      "jp": "おやすみ！"
+     }
+    ]
+   },
+   {
+    "t": "📉 489｜ミスを報告する：Reporting a Mistake",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can I talk to you? I made a mistake.",
+      "jp": "話せますか。ミスをしました。",
+      "note": "表現: I made a mistake. = ミスをしました"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. What happened?",
+      "jp": "もちろん。何がありました？"
+     },
+     {
+      "sp": 0,
+      "en": "I sent the wrong file to a client.",
+      "jp": "お客さんに違うファイルを送ってしまいました。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Has the client opened it?",
+      "jp": "分かった。お客さんは開きましたか。"
+     },
+     {
+      "sp": 0,
+      "en": "I don't know yet. I just noticed.",
+      "jp": "まだ分かりません。いま気づいたところです。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "Call them right away and explain. Then send the correct one.",
+      "jp": "すぐ電話して説明を。そのあと正しいものを送って。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm so sorry. I'll fix it now.",
+      "jp": "本当にすみません。いま直します。"
+     },
+     {
+      "sp": 1,
+      "en": "It happens. What matters is how we fix it.",
+      "jp": "よくあること。大事なのは、どう直すかだ。",
+      "note": "表現: It happens. = よくあることだ"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you for being understanding.",
+      "jp": "理解してくれてありがとうございます。"
+     },
+     {
+      "sp": 1,
+      "en": "Next time, double-check before sending.",
+      "jp": "次は、送る前にダブルチェックを。"
+     }
+    ]
+   },
+   {
+    "t": "🎤 490｜面接の定番質問：A Job Interview",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for coming in. Please tell me about yourself.",
+      "jp": "お越しいただきありがとう。自己紹介をお願いします。",
+      "note": "表現: tell me about yourself = 自己紹介をしてください"
+     },
+     {
+      "sp": 1,
+      "en": "I have five years of experience in marketing.",
+      "jp": "マーケティングで5年の経験があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do you want to work here?",
+      "jp": "なぜ、ここで働きたいのですか。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "I admire your products, and I like the team culture.",
+      "jp": "御社の製品に感心していて、チームの雰囲気が好きです。"
+     },
+     {
+      "sp": 0,
+      "en": "What's your greatest strength?",
+      "jp": "あなたの最大の強みは何ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm good at listening, and I stay calm under pressure.",
+      "jp": "人の話を聞くのが得意で、プレッシャーの下でも冷静です。"
+     },
+     {
+      "sp": 0,
+      "en": "And a weakness?",
+      "jp": "では、弱みは？"
+     },
+     {
+      "sp": 1,
+      "en": "I sometimes take on too much, but I'm learning to ask for help.",
+      "jp": "抱え込みすぎることがありますが、助けを求めることを学んでいます。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you have any questions for us?",
+      "jp": "こちらに質問はありますか。",
+      "note": "表現: Do you have any questions for us? = 何か質問はありますか（面接の最後）"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. What does a typical day look like in this role?",
+      "jp": "はい。この役割の普通の1日はどんな感じですか。"
+     }
+    ]
+   }
+  ]
+ }
+]
