@@ -1,0 +1,595 @@
+[
+ {
+  "id": "basic05",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本5（相づち・感情 441〜450）",
+  "hint": "Ten everyday conversations of reactions and feelings: listening responses, good and bad news, annoyance, nerves, surprise, compliments, polite disagreement, agreeing and comforting a friend",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "😮 441｜相づちと驚き：Showing You're Listening",
+    "l": [
+     {
+      "sp": 0,
+      "en": "So I told my boss I wanted a raise.",
+      "jp": "それで上司に、昇給してほしいって言ったの。"
+     },
+     {
+      "sp": 1,
+      "en": "Really? What did he say?",
+      "jp": "本当？ 彼は何て言った？"
+     },
+     {
+      "sp": 0,
+      "en": "He said he'd think about it.",
+      "jp": "考えておくって。",
+      "note": "表現: Really? / No way! = 本当？／うそ！（驚きの相づち）"
+     },
+     {
+      "sp": 1,
+      "en": "Uh-huh. And then?",
+      "jp": "うんうん。それで？"
+     },
+     {
+      "sp": 0,
+      "en": "Then, the next day, he gave me a promotion!",
+      "jp": "そしたら翌日、昇進をくれたの！"
+     },
+     {
+      "sp": 1,
+      "en": "No way! That's amazing!",
+      "jp": "うそ！ すごいじゃない！"
+     },
+     {
+      "sp": 0,
+      "en": "I know, right? I was shocked.",
+      "jp": "ほんとにね。びっくりした。",
+      "note": "表現: I know, right? = そうなの、ほんとに（同感）"
+     },
+     {
+      "sp": 1,
+      "en": "I can imagine. How did you feel?",
+      "jp": "想像できる。どんな気持ちだった？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Honestly? Happy, and a little scared.",
+      "jp": "正直？ 嬉しくて、少し怖かった。"
+     },
+     {
+      "sp": 1,
+      "en": "That makes sense. You deserve it.",
+      "jp": "分かるよ。あなたにふさわしい。"
+     }
+    ]
+   },
+   {
+    "t": "🎉 442｜よい知らせ：Sharing Good News",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Guess what? I got the job!",
+      "jp": "聞いて！ 仕事が決まったの！",
+      "note": "表現: Guess what? = ねえ聞いて／ニュースを切り出す時"
+     },
+     {
+      "sp": 1,
+      "en": "Congratulations! That's fantastic!",
+      "jp": "おめでとう！ すばらしい！",
+      "note": "表現: Congratulations! = おめでとう"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. I start next month.",
+      "jp": "ありがとう。来月から始まる。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm so proud of you. You worked so hard.",
+      "jp": "本当に誇りに思う。すごく頑張ったもの。"
+     },
+     {
+      "sp": 0,
+      "en": "I almost gave up after the third interview.",
+      "jp": "3回目の面接のあと、あきらめかけた。"
+     },
+     {
+      "sp": 1,
+      "en": "But you didn't, and look at you now.",
+      "jp": "でもあきらめなかった。いまを見て。"
+     },
+     {
+      "sp": 0,
+      "en": "I have to celebrate. Dinner tonight?",
+      "jp": "お祝いしなきゃ。今夜、夕食は？",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Absolutely. My treat.",
+      "jp": "もちろん。私のおごりで。"
+     },
+     {
+      "sp": 0,
+      "en": "You don't have to.",
+      "jp": "そんなことしなくていいのに。"
+     },
+     {
+      "sp": 1,
+      "en": "I want to. This is a big moment!",
+      "jp": "したいの。大きな瞬間だもの！"
+     }
+    ]
+   },
+   {
+    "t": "😢 443｜悪い知らせと慰め：Sharing Bad News",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can I talk to you for a minute? I have some bad news.",
+      "jp": "少し話せる？ 悪い知らせがあるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. What happened?",
+      "jp": "もちろん。何があったの？"
+     },
+     {
+      "sp": 0,
+      "en": "I lost my job today. The company is closing.",
+      "jp": "今日、仕事を失った。会社が閉まるの。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no. I'm so sorry to hear that.",
+      "jp": "そんな。それを聞いて本当に残念。",
+      "note": "表現: I'm sorry to hear that. = それを聞いて残念です／相手の不幸を聞いた時"
+     },
+     {
+      "sp": 0,
+      "en": "I don't know what to do.",
+      "jp": "どうしたらいいか分からない。"
+     },
+     {
+      "sp": 1,
+      "en": "That's okay. You don't have to figure it out right now.",
+      "jp": "いいんだよ。いますぐ決めなくていい。",
+      "note": "元の形: have to／聞こえ方: ハフタ／使う場面:しなければと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "I'm scared about money.",
+      "jp": "お金のことが怖い。"
+     },
+     {
+      "sp": 1,
+      "en": "I understand. We'll find a way. I'm here for you.",
+      "jp": "分かるよ。方法は見つかる。そばにいるから。",
+      "note": "表現: I'm here for you. = そばにいるよ"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. That means a lot.",
+      "jp": "ありがとう。とても心強い。"
+     },
+     {
+      "sp": 1,
+      "en": "Let's take a walk. Fresh air might help.",
+      "jp": "散歩しよう。外の空気が助けになるかも。"
+     }
+    ]
+   },
+   {
+    "t": "😡 444｜イライラ・怒り：Feeling Annoyed",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ugh, I'm so annoyed right now.",
+      "jp": "もう、いますごくイライラしてる。",
+      "note": "表現: I'm so annoyed. = すごくイライラしてる"
+     },
+     {
+      "sp": 1,
+      "en": "What's wrong?",
+      "jp": "どうしたの？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "My neighbor keeps playing loud music late at night.",
+      "jp": "隣の人が、夜遅くまで大きな音で音楽をかけ続けるの。"
+     },
+     {
+      "sp": 1,
+      "en": "That's frustrating. Have you talked to him?",
+      "jp": "それはストレスだね。彼と話した？",
+      "note": "表現: That's frustrating. = それはイライラするね／共感の言い方"
+     },
+     {
+      "sp": 0,
+      "en": "Twice. He says sorry, and then does it again.",
+      "jp": "2回。謝るけど、またやる。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd be angry too. Maybe write a polite note?",
+      "jp": "私も怒るよ。丁寧なメモを書いたら？"
+     },
+     {
+      "sp": 0,
+      "en": "Or I could talk to the landlord.",
+      "jp": "または大家さんに話すとか。"
+     },
+     {
+      "sp": 1,
+      "en": "That might work better. Stay calm, though.",
+      "jp": "その方がうまくいくかも。ただ、落ち着いて。"
+     },
+     {
+      "sp": 0,
+      "en": "You're right. I shouldn't yell.",
+      "jp": "そうだね。怒鳴るべきじゃない。"
+     },
+     {
+      "sp": 1,
+      "en": "Take a deep breath. You'll handle it well.",
+      "jp": "深呼吸して。うまく対処できるよ。"
+     }
+    ]
+   },
+   {
+    "t": "😰 445｜不安と緊張：Feeling Nervous",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I have a job interview tomorrow, and I'm a nervous wreck.",
+      "jp": "明日、就職の面接があって、緊張で死にそう。",
+      "note": "表現: a nervous wreck = 緊張でぼろぼろの状態"
+     },
+     {
+      "sp": 1,
+      "en": "Take a breath. You've prepared a lot.",
+      "jp": "深呼吸して。たくさん準備したじゃない。"
+     },
+     {
+      "sp": 0,
+      "en": "I know, but my mind keeps going blank.",
+      "jp": "分かってるけど、頭が真っ白になり続ける。"
+     },
+     {
+      "sp": 1,
+      "en": "That's normal. Everyone gets nervous.",
+      "jp": "普通のことだよ。誰でも緊張する。"
+     },
+     {
+      "sp": 0,
+      "en": "What if they ask something I can't answer?",
+      "jp": "答えられないことを聞かれたらどうしよう。"
+     },
+     {
+      "sp": 1,
+      "en": "Then say, 'That's a good question. Let me think.'",
+      "jp": "そしたら『いい質問ですね。少し考えさせてください』って言えばいい。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "That actually helps.",
+      "jp": "それは実際に助かる。"
+     },
+     {
+      "sp": 1,
+      "en": "And get some sleep tonight. Don't stay up studying.",
+      "jp": "そして今夜は寝て。夜更かしで勉強しないで。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I'll try to relax.",
+      "jp": "分かった。リラックスしてみる。"
+     },
+     {
+      "sp": 1,
+      "en": "You'll do great. I believe in you.",
+      "jp": "うまくいくよ。あなたを信じてる。",
+      "note": "表現: I believe in you. = あなたを信じている"
+     }
+    ]
+   },
+   {
+    "t": "😲 446｜びっくりした時：Being Surprised",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Surprise! Happy birthday!",
+      "jp": "サプライズ！ お誕生日おめでとう！"
+     },
+     {
+      "sp": 1,
+      "en": "Oh my gosh! I had no idea!",
+      "jp": "うそ、信じられない！ 全然気づかなかった！",
+      "note": "表現: I had no idea! = 全然知らなかった／気づかなかった"
+     },
+     {
+      "sp": 0,
+      "en": "We've been planning this for weeks.",
+      "jp": "何週間も前から計画してたんだ。"
+     },
+     {
+      "sp": 1,
+      "en": "I can't believe you did all this.",
+      "jp": "みんながこれを全部やったなんて、信じられない。"
+     },
+     {
+      "sp": 0,
+      "en": "Everyone's here. Even your cousin from Chicago.",
+      "jp": "みんな来てるよ。シカゴのいとこまで。"
+     },
+     {
+      "sp": 1,
+      "en": "What? He flew all the way here?",
+      "jp": "えっ？ わざわざ飛行機で来たの？"
+     },
+     {
+      "sp": 0,
+      "en": "He wouldn't miss it. Look, he's waving.",
+      "jp": "見逃さないって。ほら、手を振ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm speechless. Thank you, everyone!",
+      "jp": "言葉が出ない。みんな、ありがとう！"
+     },
+     {
+      "sp": 0,
+      "en": "Make a wish and blow out the candles!",
+      "jp": "願い事をして、ろうそくを吹き消して！"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, here goes!",
+      "jp": "よし、いくよ！",
+      "note": "表現: Here goes! = いくぞ！／思い切ってやる時"
+     }
+    ]
+   },
+   {
+    "t": "🌟 447｜ほめる・ほめられる：Compliments",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I love your jacket. Where did you get it?",
+      "jp": "そのジャケット素敵。どこで買ったの？"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks! I found it at a small shop downtown.",
+      "jp": "ありがとう！ 街の小さな店で見つけたの。"
+     },
+     {
+      "sp": 0,
+      "en": "The color really suits you.",
+      "jp": "色がよく似合ってる。",
+      "note": "表現: It suits you. = あなたに似合っている"
+     },
+     {
+      "sp": 1,
+      "en": "That's so kind of you. I like your haircut too.",
+      "jp": "親切にありがとう。あなたの髪型もいいね。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     },
+     {
+      "sp": 0,
+      "en": "Oh, thank you. I just got it done yesterday.",
+      "jp": "ありがとう。昨日切ったばかりなの。"
+     },
+     {
+      "sp": 1,
+      "en": "It looks great. You look so fresh.",
+      "jp": "すごくいい。さっぱりして見える。"
+     },
+     {
+      "sp": 0,
+      "en": "You're making me blush.",
+      "jp": "照れちゃうよ。",
+      "note": "表現: You're making me blush. = 照れちゃう"
+     },
+     {
+      "sp": 1,
+      "en": "I mean it. Also, your presentation was excellent.",
+      "jp": "本心だよ。それに、あなたの発表は素晴らしかった。"
+     },
+     {
+      "sp": 0,
+      "en": "Really? I was so nervous.",
+      "jp": "本当？ すごく緊張してたのに。"
+     },
+     {
+      "sp": 1,
+      "en": "It didn't show. You were confident.",
+      "jp": "そう見えなかった。自信があったよ。"
+     }
+    ]
+   },
+   {
+    "t": "🙅 448｜やんわり反対する：Disagreeing Politely",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I think we should move the meeting to Friday.",
+      "jp": "会議を金曜に動かすべきだと思う。"
+     },
+     {
+      "sp": 1,
+      "en": "I see your point, but Friday is tricky for me.",
+      "jp": "言いたいことは分かるけど、金曜は私には難しい。",
+      "note": "表現: I see your point, but... = おっしゃることは分かりますが…（やんわり反対）"
+     },
+     {
+      "sp": 0,
+      "en": "Oh? Why is that?",
+      "jp": "おや？ どうして？"
+     },
+     {
+      "sp": 1,
+      "en": "I have a deadline that morning.",
+      "jp": "その朝に締め切りがあるの。"
+     },
+     {
+      "sp": 0,
+      "en": "Fair enough. What do you suggest?",
+      "jp": "もっともだね。どうしたらいい？",
+      "note": "表現: Fair enough. = もっともだね／納得"
+     },
+     {
+      "sp": 1,
+      "en": "How about Thursday afternoon instead?",
+      "jp": "代わりに木曜の午後はどう？"
+     },
+     {
+      "sp": 0,
+      "en": "I'm not sure everyone is free then.",
+      "jp": "みんなが空いてるか分からない。"
+     },
+     {
+      "sp": 1,
+      "en": "Good point. Let me check with the team.",
+      "jp": "いい指摘だね。チームに確認する。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. I don't want to cause trouble.",
+      "jp": "ありがとう。迷惑をかけたくない。"
+     },
+     {
+      "sp": 1,
+      "en": "You're not. We'll find a time that works.",
+      "jp": "かけてないよ。都合のつく時間を見つけよう。"
+     }
+    ]
+   },
+   {
+    "t": "🤝 449｜賛成して提案する：Agreeing and Suggesting",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I'm tired of eating out. Let's cook at home tonight.",
+      "jp": "外食に飽きた。今夜は家で作ろう。"
+     },
+     {
+      "sp": 1,
+      "en": "I couldn't agree more. What should we make?",
+      "jp": "大賛成。何を作ろうか。",
+      "note": "表現: I couldn't agree more. = まったく同感です"
+     },
+     {
+      "sp": 0,
+      "en": "How about tacos? They're easy.",
+      "jp": "タコスはどう？ 簡単だよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Sounds good. Do we have the ingredients?",
+      "jp": "いいね。材料はある？"
+     },
+     {
+      "sp": 0,
+      "en": "We need tomatoes and cheese. I can run to the store.",
+      "jp": "トマトとチーズが要る。店にひとっ走りしてくる。"
+     },
+     {
+      "sp": 1,
+      "en": "Why don't we go together? I could use the walk.",
+      "jp": "一緒に行かない？ 散歩にもなるし。",
+      "note": "元の形: Why don't we／聞こえ方: ワイドンウィー／使う場面:一緒にやろうと誘う時"
+     },
+     {
+      "sp": 0,
+      "en": "That's a plan. Let me grab my coat.",
+      "jp": "決まりだ。コートを取ってくるね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "And let's get dessert while we're there.",
+      "jp": "行ったついでにデザートも買おう。"
+     },
+     {
+      "sp": 0,
+      "en": "Now you're talking!",
+      "jp": "それこそいい考えだ！"
+     },
+     {
+      "sp": 1,
+      "en": "Ready when you are.",
+      "jp": "あなたの準備ができたらいつでも。"
+     }
+    ]
+   },
+   {
+    "t": "🫂 450｜友だちを励ます：Cheering Up a Friend",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You've been quiet lately. Is everything okay?",
+      "jp": "最近静かだね。何も問題ない？"
+     },
+     {
+      "sp": 1,
+      "en": "Honestly, I've been feeling kind of lonely.",
+      "jp": "正直、ちょっと寂しい気持ちなんだ。",
+      "note": "表現: kind of lonely = ちょっと寂しい／kind of = ちょっと"
+     },
+     {
+      "sp": 0,
+      "en": "I'm glad you told me. What's been going on?",
+      "jp": "話してくれて嬉しい。何があったの？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Since I moved, I haven't made many friends.",
+      "jp": "引っ越してから、友達があまりできてなくて。"
+     },
+     {
+      "sp": 0,
+      "en": "That's tough. Starting over is really hard.",
+      "jp": "それはつらいね。やり直すのは本当に大変。"
+     },
+     {
+      "sp": 1,
+      "en": "I miss my old friends, and my family.",
+      "jp": "前の友達と、家族が恋しい。"
+     },
+     {
+      "sp": 0,
+      "en": "It's okay to miss them. Have you tried joining a club?",
+      "jp": "恋しくていいんだよ。クラブに入ってみた？"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. I'm a bit shy.",
+      "jp": "まだ。ちょっと恥ずかしがり屋で。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll go with you the first time, if you want.",
+      "jp": "よければ、最初は私も一緒に行くよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Really? That would mean the world to me.",
+      "jp": "本当？ それはすごく嬉しい。",
+      "note": "表現: That would mean the world to me. = それは私にとって、とても大きなことだ"
+     }
+    ]
+   }
+  ]
+ }
+]

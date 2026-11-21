@@ -1,0 +1,601 @@
+[
+ {
+  "id": "basic03",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本3（体と健康 421〜430）",
+  "hint": "Ten everyday conversations about health: describing symptoms, booking and visiting the doctor, colds, stomach trouble, pharmacy, injuries, dentist, allergies and checking on a sick friend",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🤕 421｜症状を伝える：Describing Your Symptoms",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You don't look well. What's wrong?",
+      "jp": "具合が悪そうだね。どうしたの？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I've had a headache since yesterday, and now I feel dizzy.",
+      "jp": "昨日から頭が痛くて、いまはめまいもする。",
+      "note": "元の形: I have had／聞こえ方: アイヴハッド（I've had）／使う場面:症状が続いていると言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Do you have a fever?",
+      "jp": "熱はある？"
+     },
+     {
+      "sp": 1,
+      "en": "A little. I think it's about thirty-eight degrees.",
+      "jp": "少し。38度くらいだと思う。"
+     },
+     {
+      "sp": 0,
+      "en": "Any other symptoms? A cough, a sore throat?",
+      "jp": "ほかの症状は？ 咳とか、のどの痛みとか。"
+     },
+     {
+      "sp": 1,
+      "en": "My throat is a bit scratchy, and my body aches.",
+      "jp": "のどが少しイガイガして、体が痛い。",
+      "note": "表現: My body aches. = 体の節々が痛い／風邪やインフルの時"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds like the flu. Have you taken anything?",
+      "jp": "インフルエンザみたいだね。何か飲んだ？"
+     },
+     {
+      "sp": 1,
+      "en": "Just some painkillers, but they didn't help much.",
+      "jp": "痛み止めだけ。あまり効かなかった。"
+     },
+     {
+      "sp": 0,
+      "en": "You should see a doctor today.",
+      "jp": "今日、医者に行った方がいいよ。"
+     },
+     {
+      "sp": 1,
+      "en": "Yeah, I'll call the clinic right now.",
+      "jp": "うん、いますぐ診療所に電話する。"
+     }
+    ]
+   },
+   {
+    "t": "📞 422｜病院の予約：Making a Doctor's Appointment",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning, Greenfield Clinic. How can I help?",
+      "jp": "おはようございます、グリーンフィールド診療所です。ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, I'd like to make an appointment, please.",
+      "jp": "こんにちは、予約をお願いしたいのですが。",
+      "note": "元の形: I would like to／聞こえ方: アイドゥライクトゥ／使う場面:丁寧にお願いする時"
+     },
+     {
+      "sp": 0,
+      "en": "Is this your first visit?",
+      "jp": "初めてのご来院ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, it is. I have a fever and a bad cough.",
+      "jp": "はい。熱とひどい咳があります。"
+     },
+     {
+      "sp": 0,
+      "en": "We have an opening at two thirty today.",
+      "jp": "本日2時半に空きがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "That works. Do I need to bring anything?",
+      "jp": "大丈夫です。持っていくものはありますか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Please bring your ID and your insurance card.",
+      "jp": "身分証と保険証をお持ちください。",
+      "note": "表現: insurance card = 保険証／病院で必ず出すもの"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Can I arrive a little early to fill out the forms?",
+      "jp": "分かりました。書類を書くので、少し早く行ってもいいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, ten minutes early would be great.",
+      "jp": "はい、10分前だと助かります。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. See you at two thirty.",
+      "jp": "ありがとう。2時半に伺います。"
+     }
+    ]
+   },
+   {
+    "t": "🩺 423｜診察室で：At the Doctor's Office",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello. So, what brings you in today?",
+      "jp": "こんにちは。今日はどうされましたか。",
+      "note": "表現: What brings you in? = どうされましたか（来院の理由）"
+     },
+     {
+      "sp": 1,
+      "en": "I've had a fever and a cough for three days.",
+      "jp": "3日間、熱と咳が続いています。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me take a look. Open your mouth and say 'ah.'",
+      "jp": "診てみますね。口を開けて『あー』と言って。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Ah.",
+      "jp": "あー。"
+     },
+     {
+      "sp": 0,
+      "en": "Your throat is red. I'll listen to your chest now. Breathe in deeply.",
+      "jp": "のどが赤いですね。次に胸の音を聞きます。深く息を吸って。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it serious, doctor?",
+      "jp": "重いのですか、先生。"
+     },
+     {
+      "sp": 0,
+      "en": "It's probably a viral infection. Do you have any allergies?",
+      "jp": "たぶんウイルス感染です。アレルギーはありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, none that I know of.",
+      "jp": "いいえ、知る限りありません。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll prescribe some medicine. Rest, and drink plenty of fluids.",
+      "jp": "薬を出します。休んで、水分をたっぷり取ってください。",
+      "note": "表現: plenty of fluids = たっぷりの水分"
+     },
+     {
+      "sp": 1,
+      "en": "How long until I feel better?",
+      "jp": "よくなるまでどれくらいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Usually a few days. Come back if it gets worse.",
+      "jp": "たいてい数日です。悪化したらまた来てください。"
+     }
+    ]
+   },
+   {
+    "t": "🤧 424｜風邪の症状：A Bad Cold",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Achoo! Sorry. I have a runny nose and I can't stop sneezing.",
+      "jp": "はっくしょん！ ごめん。鼻水が出て、くしゃみが止まらない。"
+     },
+     {
+      "sp": 1,
+      "en": "Bless you. Is it a cold?",
+      "jp": "お大事に。風邪？",
+      "note": "表現: Bless you. = お大事に（くしゃみをした人に言う）"
+     },
+     {
+      "sp": 0,
+      "en": "I think so. My throat hurts when I swallow, too.",
+      "jp": "そう思う。飲み込むとのども痛い。"
+     },
+     {
+      "sp": 1,
+      "en": "Do you have a cough?",
+      "jp": "咳はある？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, a dry cough, mostly at night.",
+      "jp": "うん、からせきで、主に夜に。"
+     },
+     {
+      "sp": 1,
+      "en": "Have you been drinking warm tea with honey?",
+      "jp": "蜂蜜入りの温かいお茶を飲んでる？"
+     },
+     {
+      "sp": 0,
+      "en": "Not yet. Does it help?",
+      "jp": "まだ。効くの？"
+     },
+     {
+      "sp": 1,
+      "en": "It soothes the throat. Also, stay in bed and keep warm.",
+      "jp": "のどを楽にしてくれる。それと、寝ていて、体を温めて。",
+      "note": "元の形: Does it／聞こえ方: ダズィット／使う場面:効くかと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "I'm worried about giving it to you.",
+      "jp": "あなたにうつさないか心配。"
+     },
+     {
+      "sp": 1,
+      "en": "Don't be. Just wash your hands and cover your mouth.",
+      "jp": "大丈夫。手を洗って、口を覆ってくれれば。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     }
+    ]
+   },
+   {
+    "t": "🤢 425｜お腹をこわした：An Upset Stomach",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I feel terrible. My stomach hurts, and I feel nauseous.",
+      "jp": "最悪の気分。お腹が痛くて、吐き気がする。",
+      "note": "用語: nauseous = 吐き気がする／stomach = お腹・胃"
+     },
+     {
+      "sp": 1,
+      "en": "What did you eat last night?",
+      "jp": "昨夜は何を食べたの？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "Some leftover chicken. It smelled a little strange.",
+      "jp": "残り物の鶏肉。少し変なにおいがした。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh no. That might be food poisoning.",
+      "jp": "ああ。食中毒かもしれない。"
+     },
+     {
+      "sp": 0,
+      "en": "I've thrown up twice, and I have diarrhea.",
+      "jp": "2回吐いて、下痢もしてる。"
+     },
+     {
+      "sp": 1,
+      "en": "You need to stay hydrated. Sip water slowly.",
+      "jp": "水分を取らなきゃ。水をゆっくり少しずつ飲んで。",
+      "note": "用語: stay hydrated = 水分を保つ"
+     },
+     {
+      "sp": 0,
+      "en": "Should I take any medicine?",
+      "jp": "薬は飲んだ方がいい？"
+     },
+     {
+      "sp": 1,
+      "en": "Ask a pharmacist first. And if you can't keep water down, go to the hospital.",
+      "jp": "まず薬剤師に聞いて。水も飲めなければ、病院に行って。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I'll try to rest.",
+      "jp": "分かった。休んでみる。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll bring you some crackers later.",
+      "jp": "あとでクラッカーを持っていくね。"
+     }
+    ]
+   },
+   {
+    "t": "💊 426｜薬局で：At the Pharmacy",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I need something for a sore throat.",
+      "jp": "こんにちは、のどの痛みに効くものがほしいのですが。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Do you have any allergies to medication?",
+      "jp": "はい。薬のアレルギーはありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "No, but I'm already taking vitamins.",
+      "jp": "いいえ、でもビタミン剤はすでに飲んでいます。"
+     },
+     {
+      "sp": 1,
+      "en": "That's fine. These lozenges are good. Take one every three hours.",
+      "jp": "大丈夫です。このトローチがいいですよ。3時間ごとに1つ。",
+      "note": "表現: Take one every three hours. = 3時間ごとに1つ飲む"
+     },
+     {
+      "sp": 0,
+      "en": "Is it okay to take them on an empty stomach?",
+      "jp": "空腹の時に飲んでもいいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but not more than eight a day.",
+      "jp": "はい、ただし1日8個までです。"
+     },
+     {
+      "sp": 0,
+      "en": "And this prescription? How do I take it?",
+      "jp": "それとこの処方箋は？ どう飲めばいいですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Twice a day, after meals. Finish the whole course.",
+      "jp": "1日2回、食後に。最後まで飲みきってください。",
+      "note": "表現: after meals = 食後に／薬の飲み方"
+     },
+     {
+      "sp": 0,
+      "en": "Even if I feel better?",
+      "jp": "よくなっても？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, even then. Any side effects, call us.",
+      "jp": "はい、それでもです。副作用があれば連絡を。"
+     }
+    ]
+   },
+   {
+    "t": "🚑 427｜けがをした：An Injury",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ow! My ankle! I think I twisted it.",
+      "jp": "いたっ！ 足首が！ ひねったと思う。",
+      "note": "表現: I twisted my ankle. = 足首をひねった"
+     },
+     {
+      "sp": 1,
+      "en": "Don't move. Can you put any weight on it?",
+      "jp": "動かないで。体重をかけられる？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "No, it hurts too much. It's already swelling.",
+      "jp": "いや、痛すぎる。もう腫れてきてる。"
+     },
+     {
+      "sp": 1,
+      "en": "Let's get you to the emergency room.",
+      "jp": "救急に連れていこう。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it broken, do you think?",
+      "jp": "折れてると思う？"
+     },
+     {
+      "sp": 1,
+      "en": "I can't tell. They'll take an X-ray.",
+      "jp": "分からない。レントゲンを撮ってくれるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "(at the hospital) Where does it hurt exactly?",
+      "jp": "（病院で）正確にはどこが痛みますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Here, on the outside. It's a sharp pain.",
+      "jp": "ここ、外側です。鋭い痛みです。"
+     },
+     {
+      "sp": 0,
+      "en": "It's a bad sprain, not a fracture. Rest it, ice it, and keep it raised.",
+      "jp": "ひどい捻挫で、骨折ではありません。安静にして、冷やして、高くしておいてください。",
+      "note": "用語: sprain = 捻挫／fracture = 骨折"
+     },
+     {
+      "sp": 1,
+      "en": "Thank goodness it's not broken.",
+      "jp": "折れてなくてよかった。"
+     }
+    ]
+   },
+   {
+    "t": "🦷 428｜歯医者で：At the Dentist",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello. What seems to be the problem?",
+      "jp": "こんにちは。どうされましたか。"
+     },
+     {
+      "sp": 1,
+      "en": "I have a toothache on the left side. It hurts when I drink something cold.",
+      "jp": "左側の歯が痛くて。冷たいものを飲むと痛みます。",
+      "note": "用語: toothache = 歯の痛み／cavity = 虫歯"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Open wide, please. Let me take a look.",
+      "jp": "分かりました。大きく開けてください。見てみますね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Does this hurt?",
+      "jp": "これは痛いですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Ouch! Yes, right there.",
+      "jp": "いたっ！ はい、そこです。"
+     },
+     {
+      "sp": 1,
+      "en": "You have a cavity. I'll need to fill it.",
+      "jp": "虫歯がありますね。詰める必要があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Will it hurt?",
+      "jp": "痛いですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll numb the area first. You'll only feel pressure.",
+      "jp": "先に麻酔をします。圧迫感だけですよ。",
+      "note": "用語: numb = 麻酔で感覚をなくす"
+     },
+     {
+      "sp": 0,
+      "en": "How long will it take?",
+      "jp": "どれくらいかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About thirty minutes. Please don't eat for two hours afterward.",
+      "jp": "30分くらいです。終わってから2時間は食べないでください。"
+     }
+    ]
+   },
+   {
+    "t": "🌸 429｜アレルギーと花粉症：Allergies and Hay Fever",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Your eyes are red. Are you crying?",
+      "jp": "目が赤いよ。泣いてるの？"
+     },
+     {
+      "sp": 1,
+      "en": "No, it's my allergies. Spring is the worst.",
+      "jp": "違う、アレルギー。春が最悪なの。"
+     },
+     {
+      "sp": 0,
+      "en": "What are you allergic to?",
+      "jp": "何のアレルギー？",
+      "note": "用語: allergic to ○○ = ○○にアレルギーがある／pollen = 花粉"
+     },
+     {
+      "sp": 1,
+      "en": "Mostly pollen. My eyes itch, and my nose is blocked.",
+      "jp": "主に花粉。目がかゆくて、鼻が詰まる。"
+     },
+     {
+      "sp": 0,
+      "en": "Have you tried allergy medicine?",
+      "jp": "アレルギーの薬は試した？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but it makes me sleepy.",
+      "jp": "うん、でも眠くなる。"
+     },
+     {
+      "sp": 0,
+      "en": "There are non-drowsy ones. Ask the pharmacist.",
+      "jp": "眠くならないのもあるよ。薬剤師に聞いてみて。",
+      "note": "用語: non-drowsy = 眠くならない"
+     },
+     {
+      "sp": 1,
+      "en": "Good idea. Also, I wash my hair every night now.",
+      "jp": "いい考え。それと、いまは毎晩髪を洗ってる。"
+     },
+     {
+      "sp": 0,
+      "en": "That helps, too. And keep the windows closed.",
+      "jp": "それも効く。窓も閉めておいて。"
+     },
+     {
+      "sp": 1,
+      "en": "I will. I just want to breathe normally again.",
+      "jp": "そうする。普通に息ができるようになりたいだけ。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     }
+    ]
+   },
+   {
+    "t": "🛌 430｜休んでいる友人を気づかう：Checking on a Sick Friend",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hey, I heard you've been out sick. How are you feeling?",
+      "jp": "ねえ、病気で休んでたって聞いた。具合はどう？",
+      "note": "表現: out sick = 病気で休んでいる"
+     },
+     {
+      "sp": 1,
+      "en": "A bit better today. The fever finally went down.",
+      "jp": "今日は少しよくなった。やっと熱が下がった。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a relief. Have you been eating?",
+      "jp": "ほっとした。食べられてる？"
+     },
+     {
+      "sp": 1,
+      "en": "A little soup and toast. I don't have much of an appetite.",
+      "jp": "スープとトーストを少し。あまり食欲がなくて。",
+      "note": "表現: I don't have much of an appetite. = あまり食欲がない"
+     },
+     {
+      "sp": 0,
+      "en": "Do you need anything? Groceries, medicine?",
+      "jp": "何か必要？ 食料とか、薬とか。"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe some orange juice and tissues.",
+      "jp": "オレンジジュースとティッシュがあれば。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. I'll leave them at your door.",
+      "jp": "分かった。ドアの前に置いておくね。"
+     },
+     {
+      "sp": 1,
+      "en": "You're the best. When can I come back to work, do you think?",
+      "jp": "最高。いつ仕事に戻れるかな。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't rush it. Go back when you really feel ready.",
+      "jp": "急がないで。本当に戻れると感じたら戻って。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. I owe you lunch when I'm better.",
+      "jp": "ありがとう。治ったらお昼をおごるね。"
+     }
+    ]
+   }
+  ]
+ }
+]

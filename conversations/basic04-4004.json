@@ -1,0 +1,595 @@
+[
+ {
+  "id": "basic04",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本4（数字・時間・お金 431〜440）",
+  "hint": "Ten everyday conversations with numbers: time, prices and change, phone numbers and addresses, dates, splitting the bill, bank, measurements, schedules, returns and rent",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "⏰ 431｜時間と約束：Telling the Time",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, do you have the time?",
+      "jp": "すみません、いま何時ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "It's a quarter past three.",
+      "jp": "3時15分です。",
+      "note": "表現: a quarter past three = 3時15分"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. And what time does the museum close?",
+      "jp": "ありがとう。博物館は何時に閉まりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "At half past five, I think.",
+      "jp": "5時半だったと思います。"
+     },
+     {
+      "sp": 0,
+      "en": "So I have about two hours. Plenty of time.",
+      "jp": "じゃあ約2時間。十分ある。"
+     },
+     {
+      "sp": 1,
+      "en": "Are you meeting someone?",
+      "jp": "誰かと会うんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, a friend at four forty-five.",
+      "jp": "はい、友人と4時45分に。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you'd better hurry. It's ten to four.",
+      "jp": "じゃあ急いだ方がいい。4時10分前だよ。",
+      "note": "元の形: you had better／聞こえ方: ユードベター（you'd better）／使う場面:〜した方がいいと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Oh no, my watch is slow!",
+      "jp": "あっ、私の時計が遅れてる！"
+     },
+     {
+      "sp": 1,
+      "en": "Don't worry. It's only a five-minute walk.",
+      "jp": "心配しないで。歩いて5分だけだから。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     }
+    ]
+   },
+   {
+    "t": "💴 432｜値段とおつり：Prices and Change",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How much is this jacket?",
+      "jp": "このジャケットはいくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "It's one hundred and twenty dollars.",
+      "jp": "120ドルです。",
+      "note": "表現: one hundred and twenty = 120（アメリカでは and を省くことも多い）"
+     },
+     {
+      "sp": 0,
+      "en": "That's a little expensive. Is there a discount?",
+      "jp": "少し高いですね。割引はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "It's twenty percent off today, so ninety-six dollars.",
+      "jp": "今日は2割引なので、96ドルです。",
+      "note": "表現: twenty percent off = 2割引"
+     },
+     {
+      "sp": 0,
+      "en": "Okay, I'll take it. Here's a hundred.",
+      "jp": "分かりました、それをください。100ドルでお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "Your change is four dollars.",
+      "jp": "おつりは4ドルです。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you take credit cards?",
+      "jp": "クレジットカードは使えますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, we do. Cash or card is fine.",
+      "jp": "はい。現金でもカードでも大丈夫です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I get a receipt, please?",
+      "jp": "レシートをもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. Thank you for shopping with us.",
+      "jp": "もちろん。お買い上げありがとうございます。"
+     }
+    ]
+   },
+   {
+    "t": "🔢 433｜電話番号と住所を伝える：Giving Numbers and Addresses",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can I get your phone number?",
+      "jp": "電話番号を教えてもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. It's five five five, two three four, nine eight seven six.",
+      "jp": "はい。555、234、9876です。",
+      "note": "表現: five five five = 5を1つずつ読む（電話番号）"
+     },
+     {
+      "sp": 0,
+      "en": "Let me repeat that. Five five five, two three four, nine eight seven six.",
+      "jp": "繰り返しますね。555、234、9876。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "That's correct. And do you need my address?",
+      "jp": "合っています。住所も必要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, please. And how do you spell the street name?",
+      "jp": "はい、お願いします。通りの名前はどう綴りますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Maple Street. M, A, P, L, E.",
+      "jp": "メープル通り。M、A、P、L、E。"
+     },
+     {
+      "sp": 0,
+      "en": "Got it. And the house number?",
+      "jp": "分かりました。番号は？"
+     },
+     {
+      "sp": 1,
+      "en": "Twenty-two fifteen. Apartment four B.",
+      "jp": "2215。アパートの4Bです。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. And your email?",
+      "jp": "ありがとう。メールアドレスは？"
+     },
+     {
+      "sp": 1,
+      "en": "It's tanaka dot ken at example dot com.",
+      "jp": "tanaka.ken@example.com です。",
+      "note": "表現: dot = ドット(.)／at = アット(@)"
+     }
+    ]
+   },
+   {
+    "t": "📆 434｜日付と誕生日：Dates and Birthdays",
+    "l": [
+     {
+      "sp": 0,
+      "en": "When's your birthday?",
+      "jp": "誕生日はいつ？",
+      "note": "表現: When's ○○? = ○○はいつ？"
+     },
+     {
+      "sp": 1,
+      "en": "March twelfth. How about yours?",
+      "jp": "3月12日。あなたは？"
+     },
+     {
+      "sp": 0,
+      "en": "Mine's on the twenty-third of August.",
+      "jp": "私は8月23日。"
+     },
+     {
+      "sp": 1,
+      "en": "So you're a Leo. What year were you born?",
+      "jp": "じゃあ獅子座だね。何年生まれ？"
+     },
+     {
+      "sp": 0,
+      "en": "Nineteen ninety-five. And you?",
+      "jp": "1995年。あなたは？",
+      "note": "表現: nineteen ninety-five = 1995年（19・95と区切る）"
+     },
+     {
+      "sp": 1,
+      "en": "Two thousand. I'm younger than you.",
+      "jp": "2000年。あなたより若いね。"
+     },
+     {
+      "sp": 0,
+      "en": "By five years. Do you have plans for your birthday?",
+      "jp": "5歳差だね。誕生日の予定はある？"
+     },
+     {
+      "sp": 1,
+      "en": "Not yet. Maybe dinner with family.",
+      "jp": "まだ。家族と夕食かな。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the date today?",
+      "jp": "今日は何日？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "It's the seventeenth. Your birthday is in three weeks.",
+      "jp": "17日だよ。誕生日は3週間後だね。"
+     }
+    ]
+   },
+   {
+    "t": "🧾 435｜割り勘：Splitting the Bill",
+    "l": [
+     {
+      "sp": 0,
+      "en": "That was a great meal. Let's ask for the check.",
+      "jp": "おいしい食事だった。お会計をお願いしよう。"
+     },
+     {
+      "sp": 1,
+      "en": "Here's the bill. It comes to eighty-four dollars.",
+      "jp": "お会計です。84ドルになります。"
+     },
+     {
+      "sp": 0,
+      "en": "Let's split it. That's forty-two each.",
+      "jp": "割り勘にしよう。1人42ドル。",
+      "note": "表現: split the bill = 割り勘にする"
+     },
+     {
+      "sp": 1,
+      "en": "But I had the steak, and you had the salad.",
+      "jp": "でも私はステーキで、あなたはサラダだった。"
+     },
+     {
+      "sp": 0,
+      "en": "Fair point. Do you want to pay by item?",
+      "jp": "もっともだ。品目ごとに払いたい？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "It's okay. Let's just split it evenly.",
+      "jp": "いいよ。均等に割ろう。"
+     },
+     {
+      "sp": 0,
+      "en": "Alright. I'll cover the tip.",
+      "jp": "分かった。チップは私が出す。",
+      "note": "表現: I'll cover ○○. = ○○は私が払う"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. How much do you usually tip?",
+      "jp": "ありがとう。普段はいくらチップを払うの？"
+     },
+     {
+      "sp": 0,
+      "en": "About fifteen to twenty percent.",
+      "jp": "だいたい15〜20パーセント。"
+     },
+     {
+      "sp": 1,
+      "en": "Got it. Next time dinner's on me.",
+      "jp": "分かった。次は私のおごりね。"
+     }
+    ]
+   },
+   {
+    "t": "🏦 436｜銀行で：At the Bank",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning. How can I help you today?",
+      "jp": "おはようございます。本日はどのようなご用件ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'd like to open a savings account.",
+      "jp": "普通預金の口座を開きたいのですが。",
+      "note": "用語: savings account = 普通預金口座／checking account = 当座預金（日常の支払い用）"
+     },
+     {
+      "sp": 0,
+      "en": "Certainly. May I see your ID and proof of address?",
+      "jp": "かしこまりました。身分証と住所の証明を見せていただけますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Here's my passport and a utility bill.",
+      "jp": "パスポートと公共料金の請求書です。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. Would you like a debit card as well?",
+      "jp": "ありがとう。デビットカードも作りますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, please. Is there a monthly fee?",
+      "jp": "はい、お願いします。月額の手数料はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 0,
+      "en": "It's free if you keep five hundred dollars in the account.",
+      "jp": "口座に500ドル置いておけば無料です。"
+     },
+     {
+      "sp": 1,
+      "en": "That's fine. And how do I check my balance?",
+      "jp": "それなら大丈夫。残高はどうやって確認しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "You can use our app, or the ATM.",
+      "jp": "アプリか、ATMで確認できます。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. Could I deposit some cash now?",
+      "jp": "よかった。いま現金を預けられますか。",
+      "note": "用語: deposit = 預ける／withdraw = 引き出す"
+     }
+    ]
+   },
+   {
+    "t": "⚖️ 437｜量と単位：Amounts and Measurements",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How much flour do I need for this recipe?",
+      "jp": "このレシピには、小麦粉はどれくらい必要？",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Two cups, about two hundred and fifty grams.",
+      "jp": "2カップ、約250グラム。",
+      "note": "表現: two hundred and fifty = 250／cup = カップ（約240ml）"
+     },
+     {
+      "sp": 0,
+      "en": "And the sugar?",
+      "jp": "砂糖は？"
+     },
+     {
+      "sp": 1,
+      "en": "Half a cup. A little less if you like it less sweet.",
+      "jp": "半カップ。甘さ控えめなら、少し減らして。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the oven temperature?",
+      "jp": "オーブンの温度は？"
+     },
+     {
+      "sp": 1,
+      "en": "Three hundred and fifty degrees Fahrenheit.",
+      "jp": "華氏350度。"
+     },
+     {
+      "sp": 0,
+      "en": "That's about one eighty Celsius, right?",
+      "jp": "摂氏だと約180度だよね。",
+      "note": "用語: Fahrenheit = 華氏／Celsius = 摂氏"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Bake it for thirty-five minutes.",
+      "jp": "その通り。35分焼いて。"
+     },
+     {
+      "sp": 0,
+      "en": "I only have a small bag of butter. Is a hundred grams enough?",
+      "jp": "バターが小袋しかない。100グラムで足りる？"
+     },
+     {
+      "sp": 1,
+      "en": "Just right. Let's get started.",
+      "jp": "ちょうどいい。始めよう。"
+     }
+    ]
+   },
+   {
+    "t": "🚌 438｜時刻表を読む：Reading the Schedule",
+    "l": [
+     {
+      "sp": 0,
+      "en": "When's the next bus to the airport?",
+      "jp": "空港行きの次のバスはいつですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check. There's one at six fifteen.",
+      "jp": "確認します。6時15分に1本あります。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "It's six now. So fifteen minutes.",
+      "jp": "いま6時ですね。あと15分。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. After that, they run every thirty minutes.",
+      "jp": "はい。それ以降は30分おきです。",
+      "note": "表現: every thirty minutes = 30分おきに"
+     },
+     {
+      "sp": 0,
+      "en": "How long does it take to get there?",
+      "jp": "そこまでどれくらいかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About forty-five minutes, depending on traffic.",
+      "jp": "約45分、交通状況によります。"
+     },
+     {
+      "sp": 0,
+      "en": "And what's the fare?",
+      "jp": "運賃はいくら？"
+     },
+     {
+      "sp": 1,
+      "en": "Eight dollars one way, fifteen round trip.",
+      "jp": "片道8ドル、往復15ドルです。",
+      "note": "用語: one way = 片道／round trip = 往復"
+     },
+     {
+      "sp": 0,
+      "en": "Round trip, please. When does the last bus leave?",
+      "jp": "往復でお願いします。最終バスは何時？"
+     },
+     {
+      "sp": 1,
+      "en": "At eleven forty. Don't miss it!",
+      "jp": "11時40分です。乗り遅れないでね！"
+     }
+    ]
+   },
+   {
+    "t": "🔁 439｜返品と交換：Returns and Exchanges",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'd like to return this sweater.",
+      "jp": "こんにちは、このセーターを返品したいのですが。"
+     },
+     {
+      "sp": 1,
+      "en": "Do you have the receipt?",
+      "jp": "レシートはお持ちですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, here. I bought it five days ago.",
+      "jp": "はい、これです。5日前に買いました。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the problem with it?",
+      "jp": "どんな問題がありますか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "It's too small. I didn't try it on.",
+      "jp": "小さすぎるんです。試着しませんでした。"
+     },
+     {
+      "sp": 1,
+      "en": "We can exchange it for a larger size, or give you store credit.",
+      "jp": "大きいサイズへの交換か、店のクレジットでの返金ができます。",
+      "note": "用語: exchange = 交換／store credit = 店のクレジット"
+     },
+     {
+      "sp": 0,
+      "en": "Can I get a refund to my card instead?",
+      "jp": "代わりにカードへ返金してもらえますか。",
+      "note": "用語: refund = 返金"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, within thirty days, with a receipt. It'll take a few days.",
+      "jp": "はい、30日以内でレシートがあれば。数日かかります。"
+     },
+     {
+      "sp": 0,
+      "en": "That's fine. Please refund it.",
+      "jp": "それで構いません。返金をお願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "All done. Here's your slip.",
+      "jp": "完了です。こちらが控えです。"
+     }
+    ]
+   },
+   {
+    "t": "🏠 440｜家賃と毎月のお金：Rent and Monthly Budget",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My rent just went up by a hundred dollars.",
+      "jp": "家賃が100ドル上がったの。"
+     },
+     {
+      "sp": 1,
+      "en": "Ouch. What do you pay now?",
+      "jp": "うわあ。いまはいくら払ってるの？"
+     },
+     {
+      "sp": 0,
+      "en": "Twelve hundred a month, plus utilities.",
+      "jp": "月1200ドルに、光熱費。",
+      "note": "表現: twelve hundred = 1200（12×100 の言い方）"
+     },
+     {
+      "sp": 1,
+      "en": "Utilities? Like electricity and water?",
+      "jp": "光熱費？ 電気と水道とか？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, and internet. It's about two hundred more.",
+      "jp": "うん、それとネット。あと200ドルくらい。"
+     },
+     {
+      "sp": 1,
+      "en": "So about fourteen hundred in total.",
+      "jp": "じゃあ合計で約1400ドル。"
+     },
+     {
+      "sp": 0,
+      "en": "Right. I make about three thousand, so it's nearly half.",
+      "jp": "そう。収入が約3000ドルだから、ほぼ半分。",
+      "note": "用語: utilities = 光熱費／budget = 予算"
+     },
+     {
+      "sp": 1,
+      "en": "That's a lot. Have you thought about a roommate?",
+      "jp": "多いね。ルームメイトは考えた？"
+     },
+     {
+      "sp": 0,
+      "en": "Maybe. Or I could move somewhere cheaper.",
+      "jp": "かもね。もっと安い所に引っ越すとか。"
+     },
+     {
+      "sp": 1,
+      "en": "Let's make a budget together. Start with what you spend.",
+      "jp": "一緒に予算を作ろう。使っているお金から始めて。"
+     }
+    ]
+   }
+  ]
+ }
+]
