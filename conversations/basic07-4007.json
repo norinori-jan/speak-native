@@ -1,0 +1,594 @@
+[
+ {
+  "id": "basic07",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本7（住まい・電話・ネット 461〜470）",
+  "hint": "Ten everyday conversations about home and communication: landlord repairs, internet down, leaving a message, wrong number, video call, online order problem, moving day, neighbors, chores and the post office",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🔧 461｜大家さんに修理を頼む：Asking the Landlord to Fix Things",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, this is Ken from apartment four B.",
+      "jp": "こんにちは、4Bのケンです。"
+     },
+     {
+      "sp": 1,
+      "en": "Hello, Ken. What can I do for you?",
+      "jp": "こんにちは、ケン。ご用件は？"
+     },
+     {
+      "sp": 0,
+      "en": "The kitchen faucet is leaking. It drips all day.",
+      "jp": "台所の蛇口が漏れていて、1日中ぽたぽた落ちます。",
+      "note": "用語: faucet = 蛇口／leak = 漏れる"
+     },
+     {
+      "sp": 1,
+      "en": "Is it a lot of water?",
+      "jp": "水の量は多いですか。",
+      "note": "元の形: a lot of／聞こえ方: ア ロタ／使う場面:たくさんと言う時"
+     },
+     {
+      "sp": 0,
+      "en": "Not really, but it's getting worse.",
+      "jp": "そうでもないですが、悪くなっています。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll send a plumber tomorrow. Will you be home?",
+      "jp": "明日、水道屋を行かせます。ご在宅ですか。",
+      "note": "用語: plumber = 水道工事の人"
+     },
+     {
+      "sp": 0,
+      "en": "I'll be at work until five. Is the afternoon okay?",
+      "jp": "5時まで仕事です。午後でも大丈夫ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I can give him the spare key.",
+      "jp": "スペアの鍵を渡しておけます。"
+     },
+     {
+      "sp": 0,
+      "en": "That works. Please tell him to leave a note.",
+      "jp": "それで結構です。メモを残すように伝えてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Will do. Thanks for letting me know.",
+      "jp": "そうします。知らせてくれてありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🌐 462｜ネットがつながらない：The Internet Is Down",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Technical support. How can I help?",
+      "jp": "テクニカルサポートです。ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "My internet has been down since this morning.",
+      "jp": "今朝からネットがつながりません。"
+     },
+     {
+      "sp": 0,
+      "en": "Have you tried restarting the router?",
+      "jp": "ルーターを再起動してみましたか。",
+      "note": "表現: restart the router = ルーターを再起動する"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, twice. The light is blinking red.",
+      "jp": "はい、2回。ランプが赤く点滅しています。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me check your line. One moment, please.",
+      "jp": "回線を確認します。少々お待ちください。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "(a pause) There's an outage in your area.",
+      "jp": "（間があって）お住まいの地域で障害が出ています。",
+      "note": "用語: outage = 障害・停止"
+     },
+     {
+      "sp": 0,
+      "en": "How long will it take to fix?",
+      "jp": "直るまでどれくらいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Our team is working on it. About three hours.",
+      "jp": "担当が対応中です。約3時間です。"
+     },
+     {
+      "sp": 0,
+      "en": "Will I get a refund for today?",
+      "jp": "今日の分は返金されますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, we'll credit your next bill.",
+      "jp": "はい、次回の請求から差し引きます。"
+     }
+    ]
+   },
+   {
+    "t": "📲 463｜伝言を残す電話：Leaving a Message",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, is Mr. Brown there?",
+      "jp": "もしもし、ブラウンさんはいらっしゃいますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry, he's out of the office right now.",
+      "jp": "申し訳ありません、いま席を外しております。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ"
+     },
+     {
+      "sp": 0,
+      "en": "Could I leave a message?",
+      "jp": "伝言をお願いできますか。",
+      "note": "元の形: Could I／聞こえ方: クダイ／使う場面:お願いする時"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. May I have your name?",
+      "jp": "もちろん。お名前をいただけますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's Yuki Tanaka, from Sunrise Company.",
+      "jp": "サンライズ社の田中ユキです。"
+     },
+     {
+      "sp": 1,
+      "en": "And your number?",
+      "jp": "お電話番号は？"
+     },
+     {
+      "sp": 0,
+      "en": "It's five five five, one two three four.",
+      "jp": "555-1234です。"
+     },
+     {
+      "sp": 1,
+      "en": "What should I tell him?",
+      "jp": "何とお伝えしましょうか。"
+     },
+     {
+      "sp": 0,
+      "en": "Please ask him to call me back about the contract.",
+      "jp": "契約の件で折り返しお電話くださいと伝えてください。",
+      "note": "表現: call me back = 折り返し電話する"
+     },
+     {
+      "sp": 1,
+      "en": "I'll pass that on. Thank you for calling.",
+      "jp": "お伝えします。お電話ありがとうございました。"
+     }
+    ]
+   },
+   {
+    "t": "📵 464｜間違い電話：A Wrong Number",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello?",
+      "jp": "もしもし？"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, is this Mark?",
+      "jp": "こんにちは、マークさんですか。"
+     },
+     {
+      "sp": 0,
+      "en": "No, I'm afraid you have the wrong number.",
+      "jp": "いいえ、番号をお間違えのようです。",
+      "note": "表現: you have the wrong number = 番号が違います"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, I'm sorry. What number is this?",
+      "jp": "あ、すみません。何番ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "This is five five five, four four two one.",
+      "jp": "555-4421です。"
+     },
+     {
+      "sp": 1,
+      "en": "I was trying to reach five five five, four four one two.",
+      "jp": "555-4412にかけたかったんです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's close, but not this one.",
+      "jp": "惜しいですが、こちらではありません。"
+     },
+     {
+      "sp": 1,
+      "en": "Sorry to bother you. Have a good day.",
+      "jp": "お邪魔しました。よい一日を。",
+      "note": "表現: Sorry to bother you. = お邪魔してすみません"
+     },
+     {
+      "sp": 0,
+      "en": "No problem at all. You too.",
+      "jp": "全然構いません。あなたも。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. Goodbye.",
+      "jp": "ありがとう。さようなら。"
+     }
+    ]
+   },
+   {
+    "t": "💻 465｜ビデオ通話：A Video Call",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can you hear me? I think my mic is off.",
+      "jp": "聞こえますか。マイクが切れてるかも。",
+      "note": "表現: Can you hear me? = 聞こえますか（オンライン会議の定番）"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, I can hear you, but your video is frozen.",
+      "jp": "はい、聞こえますが、映像が止まっています。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me turn it off and on again.",
+      "jp": "いったん切って、また入れます。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "(a pause) How about now?",
+      "jp": "（間があって）いまはどうですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Perfect. Now I can see you.",
+      "jp": "完璧。いま見えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Sorry, my internet is a little slow today.",
+      "jp": "すみません、今日はネットが少し遅くて。"
+     },
+     {
+      "sp": 0,
+      "en": "No worries. Could you share your screen?",
+      "jp": "気にしないで。画面を共有してもらえますか。",
+      "note": "表現: share your screen = 画面を共有する"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Can you see the slides?",
+      "jp": "はい。スライドは見えますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, clearly. Please go ahead.",
+      "jp": "はい、はっきりと。どうぞ始めてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Let's begin.",
+      "jp": "よかった。始めましょう。"
+     }
+    ]
+   },
+   {
+    "t": "📦 466｜ネット注文のトラブル：An Online Order Problem",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, I ordered a lamp last week, but it hasn't arrived.",
+      "jp": "こんにちは、先週ランプを注文したのですが、届いていません。",
+      "note": "表現: it hasn't arrived = まだ届いていない"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry. May I have your order number?",
+      "jp": "申し訳ありません。注文番号を教えてもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's A, four, seven, nine, two, one.",
+      "jp": "A47921です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. It shows that it was delivered on Monday.",
+      "jp": "ありがとう。月曜日に配達済みになっています。"
+     },
+     {
+      "sp": 0,
+      "en": "But I never got it. Nobody was home that day.",
+      "jp": "でも受け取っていません。その日は誰も家にいませんでした。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me contact the carrier. It may be at a neighbor's.",
+      "jp": "配送業者に連絡します。お隣にあるかもしれません。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. What if it's lost?",
+      "jp": "分かりました。もし紛失していたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then we'll send a new one at no charge.",
+      "jp": "そしたら無料で新しいものを送ります。"
+     },
+     {
+      "sp": 0,
+      "en": "How long will that take?",
+      "jp": "どれくらいかかりますか。",
+      "note": "表現: business days = 営業日"
+     },
+     {
+      "sp": 1,
+      "en": "About three to five business days.",
+      "jp": "3〜5営業日です。"
+     }
+    ]
+   },
+   {
+    "t": "🏡 467｜引っ越しの日：Moving Day",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, are you moving in today?",
+      "jp": "こんにちは、今日引っ越してくるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes! I'm Emma. I'm in apartment six A.",
+      "jp": "そう！ エマです。6Aに入ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Welcome. I'm Tom, from across the hall.",
+      "jp": "ようこそ。向かいのトムです。"
+     },
+     {
+      "sp": 1,
+      "en": "Nice to meet you. Sorry about the noise today.",
+      "jp": "はじめまして。今日はうるさくてごめんなさい。"
+     },
+     {
+      "sp": 0,
+      "en": "It's no problem. Do you need a hand with the boxes?",
+      "jp": "気にしないで。箱を運ぶのを手伝おうか。",
+      "note": "表現: Do you need a hand? = 手伝おうか／a hand = 手助け"
+     },
+     {
+      "sp": 1,
+      "en": "That would be great. This one is really heavy.",
+      "jp": "助かる。これはすごく重いの。"
+     },
+     {
+      "sp": 0,
+      "en": "I've got it. Where should I put it?",
+      "jp": "任せて。どこに置けばいい？",
+      "note": "表現: I've got it. = 任せて／私が持つよ"
+     },
+     {
+      "sp": 1,
+      "en": "In the living room, by the window, please.",
+      "jp": "リビングの窓のそばにお願い。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. If you need anything, just knock.",
+      "jp": "できたよ。何かあればノックして。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you, Tom. You're so kind.",
+      "jp": "ありがとう、トム。親切ね。"
+     }
+    ]
+   },
+   {
+    "t": "🧂 468｜お隣さんに借りる：Borrowing from a Neighbor",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, sorry to bother you. Do you have any sugar I could borrow?",
+      "jp": "こんにちは、お邪魔してごめんなさい。借りられる砂糖はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. How much do you need?",
+      "jp": "もちろん。どれくらい要りますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Just a cup. I'm baking a cake and I ran out.",
+      "jp": "1カップだけ。ケーキを焼いていて、切らしてしまって。",
+      "note": "表現: I ran out of ○○. = ○○を切らした"
+     },
+     {
+      "sp": 1,
+      "en": "Here you go. Take what you need.",
+      "jp": "はい、どうぞ。必要なだけ取って。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you so much. I'll replace it tomorrow.",
+      "jp": "本当にありがとう。明日、返すね。",
+      "note": "表現: I'll replace it. = 同じものを返します"
+     },
+     {
+      "sp": 1,
+      "en": "Don't worry about it. Is it for a party?",
+      "jp": "気にしないで。パーティー用？",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 0,
+      "en": "It's my daughter's birthday.",
+      "jp": "娘の誕生日なの。"
+     },
+     {
+      "sp": 1,
+      "en": "How sweet. Happy birthday to her!",
+      "jp": "素敵ね。娘さんにおめでとうと伝えて！"
+     },
+     {
+      "sp": 0,
+      "en": "I will. I'll bring you a slice later.",
+      "jp": "伝える。あとで一切れ持ってくるね。"
+     },
+     {
+      "sp": 1,
+      "en": "That would be lovely. Thank you.",
+      "jp": "嬉しい。ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🧹 469｜家事の分担：Sharing Chores",
+    "l": [
+     {
+      "sp": 0,
+      "en": "The house is a mess. We need to clean.",
+      "jp": "家がめちゃくちゃ。掃除しなきゃ。",
+      "note": "表現: The house is a mess. = 家が散らかっている"
+     },
+     {
+      "sp": 1,
+      "en": "You're right. Let's split the chores.",
+      "jp": "その通り。家事を分けよう。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll do the dishes and vacuum the living room.",
+      "jp": "私は食器洗いと、リビングの掃除機がけをする。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Then I'll take out the trash and clean the bathroom.",
+      "jp": "じゃあ私はゴミ出しと、風呂場の掃除。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the laundry?",
+      "jp": "洗濯は？"
+     },
+     {
+      "sp": 1,
+      "en": "I'll start a load now. Can you fold it later?",
+      "jp": "いま洗濯を回す。あとでたたんでくれる？"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. And who's cooking tonight?",
+      "jp": "いいよ。今夜は誰が作る？"
+     },
+     {
+      "sp": 1,
+      "en": "It's your turn. I cooked yesterday.",
+      "jp": "あなたの番。私は昨日作ったから。",
+      "note": "表現: It's your turn. = あなたの番"
+     },
+     {
+      "sp": 0,
+      "en": "Fair enough. I'll make something simple.",
+      "jp": "もっともだ。簡単なものを作る。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Teamwork makes it easier.",
+      "jp": "よかった。協力すると楽になるね。"
+     }
+    ]
+   },
+   {
+    "t": "📬 470｜荷物の受け取り・郵便局：At the Post Office",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'd like to send this package to Japan.",
+      "jp": "こんにちは、この荷物を日本に送りたいです。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Let me weigh it. It's two kilos.",
+      "jp": "はい。重さを量ります。2キロです。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "How long will it take by air mail?",
+      "jp": "航空便だとどれくらいかかりますか。",
+      "note": "用語: air mail = 航空便／tracking = 追跡"
+     },
+     {
+      "sp": 1,
+      "en": "About seven to ten days.",
+      "jp": "7〜10日くらいです。"
+     },
+     {
+      "sp": 0,
+      "en": "And how much is it?",
+      "jp": "いくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Thirty-two dollars. Do you want tracking?",
+      "jp": "32ドルです。追跡はつけますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, please. And what's inside?",
+      "jp": "はい、お願いします。中身は何ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Books and some snacks.",
+      "jp": "本とお菓子です。"
+     },
+     {
+      "sp": 0,
+      "en": "Please fill out this customs form.",
+      "jp": "この税関の用紙に記入してください。",
+      "note": "用語: customs form = 税関申告書"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Here you go. Thank you.",
+      "jp": "はい。どうぞ。ありがとう。"
+     }
+    ]
+   }
+  ]
+ }
+]

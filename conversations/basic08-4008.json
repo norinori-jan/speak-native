@@ -1,0 +1,593 @@
+[
+ {
+  "id": "basic08",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本8（旅行・空港 471〜480）",
+  "hint": "Ten travel conversations: airport check-in, immigration, taxi, sightseeing, photos, tickets, hotel requests, restaurants, souvenirs and getting lost",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🛫 471｜空港のチェックイン：Airport Check-In",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Good morning. Where are you flying today?",
+      "jp": "おはようございます。今日はどちらへ？"
+     },
+     {
+      "sp": 1,
+      "en": "To Tokyo, please. Here's my passport.",
+      "jp": "東京までお願いします。パスポートです。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you have any bags to check?",
+      "jp": "預ける荷物はありますか。",
+      "note": "用語: check a bag = 荷物を預ける／carry-on = 機内持ち込み"
+     },
+     {
+      "sp": 1,
+      "en": "Just one suitcase. And a small carry-on.",
+      "jp": "スーツケース1つだけ。それと小さな機内持ち込み。"
+     },
+     {
+      "sp": 0,
+      "en": "Please put the suitcase on the scale.",
+      "jp": "スーツケースを秤にのせてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it under the limit?",
+      "jp": "重量制限内ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, twenty-two kilos. You're fine.",
+      "jp": "はい、22キロ。大丈夫です。"
+     },
+     {
+      "sp": 1,
+      "en": "Would you like a window or an aisle seat?",
+      "jp": "窓側と通路側、どちらがいいですか。",
+      "note": "用語: window seat / aisle seat = 窓側／通路側の席"
+     },
+     {
+      "sp": 0,
+      "en": "Window, please. Which gate is it?",
+      "jp": "窓側で。ゲートはどこですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Gate twelve. Boarding starts at ten fifteen.",
+      "jp": "12番ゲート。搭乗は10時15分からです。"
+     }
+    ]
+   },
+   {
+    "t": "🛃 472｜入国審査：Immigration",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Next, please. Passport?",
+      "jp": "次の方どうぞ。パスポートを。"
+     },
+     {
+      "sp": 1,
+      "en": "Here you go.",
+      "jp": "どうぞ。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the purpose of your visit?",
+      "jp": "訪問の目的は何ですか。",
+      "note": "表現: What's the purpose of your visit? = 訪問の目的は？"
+     },
+     {
+      "sp": 1,
+      "en": "Tourism. I'm here for a vacation.",
+      "jp": "観光です。休暇で来ました。"
+     },
+     {
+      "sp": 0,
+      "en": "How long will you stay?",
+      "jp": "何日滞在しますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Ten days.",
+      "jp": "10日間です。"
+     },
+     {
+      "sp": 0,
+      "en": "Where will you be staying?",
+      "jp": "どこに泊まりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "At a hotel downtown. Here's my reservation.",
+      "jp": "街の中心のホテルです。予約はこれです。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you have a return ticket?",
+      "jp": "帰りの航空券はありますか。",
+      "note": "用語: return ticket = 帰りの航空券"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, for the twentieth. Thank you, welcome.",
+      "jp": "はい、20日です。——ありがとう、ようこそ。"
+     }
+    ]
+   },
+   {
+    "t": "🚕 473｜タクシーに乗る：Taking a Taxi",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, where to?",
+      "jp": "こんにちは、どちらまで？",
+      "note": "表現: Where to? = どちらまで？（タクシーの運転手）"
+     },
+     {
+      "sp": 1,
+      "en": "To the Grand Hotel, please.",
+      "jp": "グランドホテルまでお願いします。"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. Do you have luggage?",
+      "jp": "はい。荷物はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Two bags. They're in the trunk.",
+      "jp": "2つ。トランクに入れました。"
+     },
+     {
+      "sp": 0,
+      "en": "How long will it take?",
+      "jp": "どれくらいかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About twenty minutes, if the traffic is good.",
+      "jp": "道が空いていれば20分くらい。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a flat rate from the airport?",
+      "jp": "空港からは定額ですか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "No, it's by the meter. About forty dollars.",
+      "jp": "いいえ、メーターです。40ドルくらい。",
+      "note": "表現: by the meter = メーター制で"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Could you drop me at the front door?",
+      "jp": "分かりました。正面玄関で降ろしてもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "No problem. Here we are. Have a great stay!",
+      "jp": "問題ないです。着きました。よいご滞在を！"
+     }
+    ]
+   },
+   {
+    "t": "🏖️ 474｜観光の相談：Asking About Sightseeing",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, what should we see in this city?",
+      "jp": "すみません、この街では何を見るといいですか。",
+      "note": "表現: ○○ is a must. = ○○は外せない・必見"
+     },
+     {
+      "sp": 1,
+      "en": "The old castle is a must. It's beautiful.",
+      "jp": "古い城は外せません。素晴らしいですよ。"
+     },
+     {
+      "sp": 0,
+      "en": "How do we get there?",
+      "jp": "どうやって行きますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Take bus number five. It stops right at the gate.",
+      "jp": "5番のバスに乗って。門の前で止まります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there an entrance fee?",
+      "jp": "入場料はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, ten dollars. Kids are free.",
+      "jp": "はい、10ドル。子供は無料です。"
+     },
+     {
+      "sp": 0,
+      "en": "What time does it close?",
+      "jp": "何時に閉まりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "At five. Go in the morning, it's less crowded.",
+      "jp": "5時です。朝に行くと、混んでいません。",
+      "note": "表現: less crowded = 混んでいない"
+     },
+     {
+      "sp": 0,
+      "en": "Great tip. Any good place for lunch nearby?",
+      "jp": "いい情報。近くにランチのいい店は？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, there's a little cafe by the river.",
+      "jp": "はい、川沿いに小さなカフェがあります。"
+     }
+    ]
+   },
+   {
+    "t": "🗺️ 475｜観光地で写真を頼む：Asking for a Photo",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, could you take a picture of us?",
+      "jp": "すみません、私たちの写真を撮ってもらえますか。",
+      "note": "表現: take a picture of us = 私たちの写真を撮る"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. Which button do I press?",
+      "jp": "もちろん。どのボタンを押せばいい？"
+     },
+     {
+      "sp": 0,
+      "en": "Just tap the screen. Make sure you get the tower.",
+      "jp": "画面をタップするだけ。塔が入るようにしてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Ready? Three, two, one.",
+      "jp": "いいですか。3、2、1。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me check. Oh, we blinked.",
+      "jp": "確認します。あ、目をつぶってた。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 1,
+      "en": "Shall I take another one?",
+      "jp": "もう1枚撮りましょうか。",
+      "note": "元の形: Shall I／聞こえ方: シャライ／使う場面:〜しましょうかと申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, please. One more, thank you.",
+      "jp": "はい、お願いします。もう1枚、ありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "There you go. That's a good one.",
+      "jp": "どうぞ。いいのが撮れました。"
+     },
+     {
+      "sp": 0,
+      "en": "It's perfect. Would you like us to take one of you?",
+      "jp": "完璧です。あなたも撮りましょうか。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks, but I'm okay. Enjoy your trip!",
+      "jp": "ありがとう、でも大丈夫。旅を楽しんで！"
+     }
+    ]
+   },
+   {
+    "t": "🚉 476｜切符を買う：Buying a Ticket",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Two tickets to Oxford, please.",
+      "jp": "オックスフォードまで2枚お願いします。"
+     },
+     {
+      "sp": 1,
+      "en": "One way or round trip?",
+      "jp": "片道ですか、往復ですか。",
+      "note": "表現: One way or round trip? = 片道ですか、往復ですか"
+     },
+     {
+      "sp": 0,
+      "en": "Round trip. We'll come back tomorrow.",
+      "jp": "往復で。明日帰ります。"
+     },
+     {
+      "sp": 1,
+      "en": "That's sixty pounds in total.",
+      "jp": "合計で60ポンドです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a discount for students?",
+      "jp": "学生割引はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with a valid student card.",
+      "jp": "はい、有効な学生証があれば。"
+     },
+     {
+      "sp": 0,
+      "en": "Here are our cards.",
+      "jp": "これが私たちの学生証です。"
+     },
+     {
+      "sp": 1,
+      "en": "Then it's forty-eight pounds. Platform three.",
+      "jp": "では48ポンドです。3番ホームです。",
+      "note": "用語: platform = ホーム"
+     },
+     {
+      "sp": 0,
+      "en": "What time does the next train leave?",
+      "jp": "次の電車は何時に出ますか。"
+     },
+     {
+      "sp": 1,
+      "en": "In ten minutes. Have a good trip.",
+      "jp": "10分後です。よいご旅行を。"
+     }
+    ]
+   },
+   {
+    "t": "🧳 477｜ホテルでのお願い：Requests at the Hotel",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Front desk, how can I help?",
+      "jp": "フロントです、ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, could I get extra towels, please?",
+      "jp": "こんにちは、タオルを追加でもらえますか。",
+      "note": "表現: extra towels = 追加のタオル"
+     },
+     {
+      "sp": 0,
+      "en": "Certainly. I'll send them up right away.",
+      "jp": "かしこまりました。すぐにお持ちします。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Also, what time is breakfast?",
+      "jp": "それと、朝食は何時ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "From six thirty to ten, on the first floor.",
+      "jp": "6時半から10時まで、1階です。"
+     },
+     {
+      "sp": 1,
+      "en": "Could I get a wake-up call at seven?",
+      "jp": "7時にモーニングコールをお願いできますか。",
+      "note": "用語: wake-up call = モーニングコール"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. Seven a.m., room four oh six.",
+      "jp": "はい。午前7時、406号室。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. And can you keep my bag today?",
+      "jp": "完璧。それと今日、荷物を預かってもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course, we'll hold it at the desk.",
+      "jp": "もちろん、フロントでお預かりします。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you very much.",
+      "jp": "本当にありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🍴 478｜旅先のレストラン：Eating Out While Traveling",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Table for two, please. Is there a wait?",
+      "jp": "2人です。待ちますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "About ten minutes. Would you like to wait at the bar?",
+      "jp": "10分ほど。バーでお待ちになりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. Can you recommend something local?",
+      "jp": "はい。この土地のものを、おすすめしてもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Our seafood stew is famous.",
+      "jp": "うちの魚介のシチューが有名です。",
+      "note": "表現: ○○ is famous. = ○○が有名"
+     },
+     {
+      "sp": 0,
+      "en": "Is it spicy?",
+      "jp": "辛いですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Not too much. I can make it mild.",
+      "jp": "それほどでも。控えめにもできます。",
+      "note": "表現: make it mild = 辛さを控えめにする"
+     },
+     {
+      "sp": 0,
+      "en": "Great. I'll have that, and a glass of white wine.",
+      "jp": "いいですね。それと白ワインを1杯。"
+     },
+     {
+      "sp": 1,
+      "en": "And for you, sir?",
+      "jp": "そちらのお客様は？"
+     },
+     {
+      "sp": 0,
+      "en": "The same, please, but with no wine.",
+      "jp": "同じものを。ただしワインなしで。"
+     },
+     {
+      "sp": 1,
+      "en": "Wonderful. I'll bring your drinks first.",
+      "jp": "かしこまりました。先に飲み物をお持ちします。"
+     }
+    ]
+   },
+   {
+    "t": "🛍️ 479｜お土産を買う：Buying Souvenirs",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'm looking for a gift for my mother.",
+      "jp": "こんにちは、母へのプレゼントを探しています。"
+     },
+     {
+      "sp": 1,
+      "en": "How about this scarf? It's handmade.",
+      "jp": "このスカーフはどうですか。手作りです。",
+      "note": "表現: How about ○○? = ○○はどうですか／すすめる時"
+     },
+     {
+      "sp": 0,
+      "en": "It's lovely. What's it made of?",
+      "jp": "素敵ですね。素材は何ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Pure wool, from local sheep.",
+      "jp": "純毛で、地元の羊のものです。"
+     },
+     {
+      "sp": 0,
+      "en": "How much is it?",
+      "jp": "いくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Thirty-five dollars. I can wrap it for free.",
+      "jp": "35ドル。無料で包装できます。",
+      "note": "表現: wrap it = 包む・ラッピングする"
+     },
+     {
+      "sp": 0,
+      "en": "That would be great. Do you have it in blue?",
+      "jp": "お願いします。青はありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check. Yes, here's a blue one.",
+      "jp": "確認します。はい、青がこちらに。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "I'll take it. Can I pay with a card?",
+      "jp": "それにします。カードで払えますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Thank you for visiting!",
+      "jp": "もちろん。ご来店ありがとう！"
+     }
+    ]
+   },
+   {
+    "t": "🧭 480｜道に迷った旅行者：Lost in a New City",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, I think I'm lost. Where are we on this map?",
+      "jp": "すみません、道に迷ったようです。この地図でここはどこですか。",
+      "note": "表現: I think I'm lost. = 道に迷ったようです"
+     },
+     {
+      "sp": 1,
+      "en": "We're here, on Main Street.",
+      "jp": "ここです、メイン通りです。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm trying to reach the train station.",
+      "jp": "駅に行きたいんです。"
+     },
+     {
+      "sp": 1,
+      "en": "It's about a ten-minute walk. Go down this street.",
+      "jp": "歩いて10分くらいです。この道を進んで。"
+     },
+     {
+      "sp": 0,
+      "en": "And then?",
+      "jp": "それから？"
+     },
+     {
+      "sp": 1,
+      "en": "At the big church, turn right.",
+      "jp": "大きな教会で右に曲がって。"
+     },
+     {
+      "sp": 0,
+      "en": "Then straight until you see a bridge.",
+      "jp": "それから橋が見えるまでまっすぐ。"
+     },
+     {
+      "sp": 1,
+      "en": "The station is just across the bridge.",
+      "jp": "駅は橋のすぐ向こうです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's easy. Thank you so much.",
+      "jp": "簡単ですね。本当にありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "Anytime. Safe travels!",
+      "jp": "いつでも。気をつけて旅を！",
+      "note": "表現: Safe travels! = よい旅を（気をつけて）"
+     }
+    ]
+   }
+  ]
+ }
+]

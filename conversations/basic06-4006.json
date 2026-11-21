@@ -1,0 +1,595 @@
+[
+ {
+  "id": "basic06",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本6（トラブル・緊急 451〜460）",
+  "hint": "Ten everyday conversations for problems and emergencies: lost wallet, police report, car trouble, emergency call, lost phone, wrong order, hotel complaint, cancelled flight, locked out and power outage",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "👛 451｜財布をなくした：I Lost My Wallet",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, I think I lost my wallet.",
+      "jp": "すみません、財布をなくしたようなんです。",
+      "note": "元の形: I think／聞こえ方: アイ シンク／使う場面:〜のようだと言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, stay calm. Where did you last see it?",
+      "jp": "分かりました、落ち着いて。最後に見たのはどこですか。"
+     },
+     {
+      "sp": 0,
+      "en": "I had it at the cafe next door. Maybe I left it there.",
+      "jp": "隣のカフェで持っていました。そこに置き忘れたかも。"
+     },
+     {
+      "sp": 1,
+      "en": "What does it look like?",
+      "jp": "どんな見た目ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's brown leather, with my ID and two cards inside.",
+      "jp": "茶色の革で、身分証とカードが2枚入っています。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me call the cafe for you.",
+      "jp": "カフェに電話してみますね。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "(a moment later) They have it! A waiter found it.",
+      "jp": "（しばらくして）ありました！ 店員さんが見つけてくれました。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, thank goodness. Is everything inside?",
+      "jp": "ああ、よかった。中身は全部ありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "They say yes. You can pick it up anytime today.",
+      "jp": "全部あるそうです。今日中ならいつでも取りに行けます。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you so much. You've saved my day.",
+      "jp": "本当にありがとう。助かりました。",
+      "note": "表現: You've saved my day. = 助かりました／大きな助けのお礼"
+     }
+    ]
+   },
+   {
+    "t": "🚓 452｜警察に届ける：Reporting to the Police",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, officer. I'd like to report a stolen bike.",
+      "jp": "こんにちは、おまわりさん。自転車の盗難を届けたいのですが。",
+      "note": "表現: report ○○ = ○○を届け出る／stolen = 盗まれた"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. When did it happen?",
+      "jp": "分かりました。いつ起きましたか。"
+     },
+     {
+      "sp": 0,
+      "en": "Sometime between nine and noon. I left it outside the library.",
+      "jp": "9時から正午の間のどこかです。図書館の外に置いていました。"
+     },
+     {
+      "sp": 1,
+      "en": "Was it locked?",
+      "jp": "鍵はかけていましたか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, with a chain. But the chain is gone too.",
+      "jp": "はい、チェーンで。でもチェーンもなくなっています。"
+     },
+     {
+      "sp": 1,
+      "en": "Can you describe the bike?",
+      "jp": "自転車の特徴を教えてもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's a blue road bike, with a black seat.",
+      "jp": "青いロードバイクで、黒いサドルです。"
+     },
+     {
+      "sp": 1,
+      "en": "Do you have the serial number?",
+      "jp": "製造番号は分かりますか。",
+      "note": "用語: serial number = 製造番号"
+     },
+     {
+      "sp": 0,
+      "en": "I have a photo of the receipt at home.",
+      "jp": "家にレシートの写真があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Fill out this form, and we'll contact you.",
+      "jp": "いいですね。この用紙に記入してください。こちらから連絡します。"
+     }
+    ]
+   },
+   {
+    "t": "🚗 453｜車が故障した：Car Trouble",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello? My car broke down on the highway.",
+      "jp": "もしもし？ 高速道路で車が故障しました。",
+      "note": "用語: break down = 故障する／tow truck = レッカー車"
+     },
+     {
+      "sp": 1,
+      "en": "Are you safe? Are you off the road?",
+      "jp": "安全ですか。道路から離れていますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, I'm on the shoulder with my hazard lights on.",
+      "jp": "はい、路肩で、ハザードランプをつけています。",
+      "note": "用語: shoulder = 路肩／hazard lights = ハザードランプ"
+     },
+     {
+      "sp": 1,
+      "en": "What seems to be the problem?",
+      "jp": "どんな問題ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "The engine made a strange noise and then stopped.",
+      "jp": "エンジンが変な音を出して、止まりました。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. What's your location?",
+      "jp": "分かりました。場所はどこですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Mile marker forty-two, heading north.",
+      "jp": "42マイル標識、北向きです。"
+     },
+     {
+      "sp": 1,
+      "en": "A tow truck will be there in thirty minutes.",
+      "jp": "レッカー車が30分で到着します。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I stay in the car?",
+      "jp": "車の中にいるべきですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Wait outside, away from traffic, and stay safe.",
+      "jp": "車の外で、車の流れから離れて待ち、安全を保ってください。"
+     }
+    ]
+   },
+   {
+    "t": "🔥 454｜緊急通報：Calling Emergency Services",
+    "l": [
+     {
+      "sp": 0,
+      "en": "911, what's your emergency?",
+      "jp": "911です、緊急事態の内容は？",
+      "note": "表現: What's your emergency? = 緊急の内容は？（911の最初の質問）"
+     },
+     {
+      "sp": 1,
+      "en": "There's a fire in my neighbor's building!",
+      "jp": "隣の建物で火事です！"
+     },
+     {
+      "sp": 0,
+      "en": "What's the address?",
+      "jp": "住所は？",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Forty-five Oak Street. I can see smoke from the second floor.",
+      "jp": "オーク通り45番地。2階から煙が見えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is anyone inside?",
+      "jp": "中に人はいますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I think so. I can hear someone shouting.",
+      "jp": "いると思います。誰かが叫ぶ声が聞こえます。"
+     },
+     {
+      "sp": 0,
+      "en": "Stay away from the building. Firefighters are on the way.",
+      "jp": "建物から離れてください。消防隊が向かっています。",
+      "note": "表現: on the way = 向かっている途中"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. I'm moving back now.",
+      "jp": "分かりました。いま下がっています。"
+     },
+     {
+      "sp": 0,
+      "en": "Stay on the line with me. Are you safe?",
+      "jp": "電話を切らずにいてください。安全ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. I can see the fire truck coming.",
+      "jp": "はい。消防車が来るのが見えます。"
+     }
+    ]
+   },
+   {
+    "t": "📱 455｜スマホをなくした：I Lost My Phone",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Oh no. I can't find my phone anywhere.",
+      "jp": "どうしよう。スマホがどこにも見つからない。"
+     },
+     {
+      "sp": 1,
+      "en": "When did you last use it?",
+      "jp": "最後に使ったのはいつ？"
+     },
+     {
+      "sp": 0,
+      "en": "On the bus. I was reading a message.",
+      "jp": "バスの中。メッセージを読んでた。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me call it. Maybe it's in your bag.",
+      "jp": "かけてみるね。カバンの中かも。",
+      "note": "元の形: Let me／聞こえ方: レミ／使う場面:〜してみると言う時"
+     },
+     {
+      "sp": 0,
+      "en": "It's ringing, but I don't hear anything.",
+      "jp": "鳴ってるけど、何も聞こえない。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "Wait, someone picked up!",
+      "jp": "待って、誰か出た！"
+     },
+     {
+      "sp": 0,
+      "en": "(on the phone) Hello, I found this phone on the bus.",
+      "jp": "（電話で）もしもし、バスでこの電話を見つけました。"
+     },
+     {
+      "sp": 1,
+      "en": "That's my friend's phone. Where can we meet?",
+      "jp": "それは友人の電話です。どこで会えますか。",
+      "note": "表現: We'll be right there. = すぐそちらに行きます"
+     },
+     {
+      "sp": 0,
+      "en": "I'm at the bus station right now.",
+      "jp": "いまバス停にいます。"
+     },
+     {
+      "sp": 1,
+      "en": "We'll be right there. Thank you so much.",
+      "jp": "すぐ行きます。本当にありがとうございます。"
+     }
+    ]
+   },
+   {
+    "t": "😤 456｜注文が違う：The Wrong Order",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, I ordered the chicken, not the fish.",
+      "jp": "すみません、頼んだのは魚じゃなくてチキンです。",
+      "note": "表現: not A, but B = Aではなく B"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, I'm so sorry. Let me check your order.",
+      "jp": "ああ、申し訳ありません。ご注文を確認します。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "It says here, chicken. I'm terribly sorry.",
+      "jp": "ここにはチキンとあります。大変申し訳ありません。"
+     },
+     {
+      "sp": 1,
+      "en": "It's okay. These things happen.",
+      "jp": "いいんです。こういうことはありますから。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll bring the right dish right away.",
+      "jp": "すぐに正しい料理をお持ちします。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. How long will it take?",
+      "jp": "ありがとう。どれくらいかかりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "About ten minutes. And the fish is on us.",
+      "jp": "10分ほどです。それと魚は当店のサービスです。",
+      "note": "表現: It's on us. = こちらの負担です（サービス）"
+     },
+     {
+      "sp": 1,
+      "en": "That's very kind. I appreciate it.",
+      "jp": "ご親切に。ありがとうございます。"
+     },
+     {
+      "sp": 0,
+      "en": "Would you like a drink while you wait?",
+      "jp": "お待ちの間、お飲み物はいかがですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Just water, please. Thank you.",
+      "jp": "水だけお願いします。ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "🛎️ 457｜ホテルの苦情：A Hotel Complaint",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, front desk. How can I help?",
+      "jp": "はい、フロントです。ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, this is room five twelve. The air conditioner isn't working.",
+      "jp": "こんにちは、512号室です。エアコンが動きません。",
+      "note": "表現: this is room 512 = 512号室です（電話の言い方）"
+     },
+     {
+      "sp": 0,
+      "en": "I'm sorry about that. Is it making any noise?",
+      "jp": "申し訳ありません。何か音はしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, nothing at all. And it's very hot in here.",
+      "jp": "いいえ、全く。それにここはとても暑いです。"
+     },
+     {
+      "sp": 0,
+      "en": "We'll send someone up right away.",
+      "jp": "すぐに担当者を向かわせます。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. Also, the people next door are quite loud.",
+      "jp": "ありがとう。それと、隣の人がかなりうるさいです。"
+     },
+     {
+      "sp": 0,
+      "en": "I apologize. I'll speak to them right now.",
+      "jp": "お詫びします。すぐに話をします。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "I appreciate it. I'd like to get some sleep.",
+      "jp": "助かります。少し眠りたいので。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. Would you prefer a different room?",
+      "jp": "もちろんです。別の部屋にしましょうか。",
+      "note": "元の形: Would you／聞こえ方: ウッジュ／使う場面:丁寧に聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, that would be better. Thank you.",
+      "jp": "はい、そのほうがいいです。ありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "✈️ 458｜フライトの欠航：A Cancelled Flight",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, my flight says 'canceled.' What happened?",
+      "jp": "すみません、私の便が『欠航』になっています。何があったのですか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm sorry. Bad weather. All flights to Boston were canceled.",
+      "jp": "申し訳ありません。悪天候です。ボストン行きは全部欠航です。"
+     },
+     {
+      "sp": 0,
+      "en": "What are my options?",
+      "jp": "どんな選択肢がありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "We can rebook you for tomorrow morning.",
+      "jp": "明日の朝の便に変更できます。",
+      "note": "用語: rebook = 予約を変更する"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything sooner?",
+      "jp": "もっと早いものはありませんか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "The only seat tonight is through Chicago.",
+      "jp": "今夜の座席は、シカゴ経由のものだけです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the hotel covered for tomorrow's flight?",
+      "jp": "明日の便だと、ホテルは補償されますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, we'll give you a voucher for a hotel and a meal.",
+      "jp": "はい、ホテルと食事の引換券をお渡しします。",
+      "note": "用語: voucher = 引換券・クーポン"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I'll take the morning flight.",
+      "jp": "分かりました。朝の便にします。"
+     },
+     {
+      "sp": 1,
+      "en": "Here's your new boarding pass. Sorry again.",
+      "jp": "こちらが新しい搭乗券です。重ねてお詫びします。"
+     }
+    ]
+   },
+   {
+    "t": "🔑 459｜鍵を閉じ込めた：Locked Out",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Oh no. I locked myself out.",
+      "jp": "しまった。締め出された。",
+      "note": "表現: I locked myself out. = 鍵を中に置いて締め出された"
+     },
+     {
+      "sp": 1,
+      "en": "Do you have a spare key?",
+      "jp": "スペアの鍵はある？"
+     },
+     {
+      "sp": 0,
+      "en": "It's inside, on the kitchen table.",
+      "jp": "中の、台所のテーブルの上。"
+     },
+     {
+      "sp": 1,
+      "en": "Is there a window we can open?",
+      "jp": "開けられる窓はある？"
+     },
+     {
+      "sp": 0,
+      "en": "They're all locked. We should call the landlord.",
+      "jp": "全部閉まってる。大家さんに電話しよう。"
+     },
+     {
+      "sp": 1,
+      "en": "I tried. He isn't answering.",
+      "jp": "かけたよ。出ないの。"
+     },
+     {
+      "sp": 0,
+      "en": "Then call a locksmith. They can open it quickly.",
+      "jp": "じゃあ鍵屋さんに電話して。すぐ開けてくれる。",
+      "note": "用語: locksmith = 鍵屋"
+     },
+     {
+      "sp": 1,
+      "en": "How much does that cost?",
+      "jp": "それはいくらかかる？"
+     },
+     {
+      "sp": 0,
+      "en": "Probably sixty to a hundred dollars.",
+      "jp": "たぶん60〜100ドル。"
+     },
+     {
+      "sp": 1,
+      "en": "Fine. Let's do it. I just want to get inside.",
+      "jp": "分かった、そうしよう。とにかく中に入りたい。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     }
+    ]
+   },
+   {
+    "t": "🕯️ 460｜停電：A Power Outage",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What happened? The lights just went out.",
+      "jp": "どうしたの？ 電気がいきなり消えた。"
+     },
+     {
+      "sp": 1,
+      "en": "I think there's a power outage.",
+      "jp": "停電だと思う。",
+      "note": "用語: power outage = 停電"
+     },
+     {
+      "sp": 0,
+      "en": "Is it just us, or the whole street?",
+      "jp": "うちだけ？ 通り全体？"
+     },
+     {
+      "sp": 1,
+      "en": "Look, the neighbors' houses are dark too.",
+      "jp": "見て、隣の家も暗い。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll find a flashlight. Where did we put it?",
+      "jp": "懐中電灯を探すよ。どこに置いたっけ。",
+      "note": "元の形: Where did we／聞こえ方: ウェアディドゥウィ／使う場面:どこに置いたか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "In the drawer by the door, I think.",
+      "jp": "ドアのそばの引き出しだったと思う。"
+     },
+     {
+      "sp": 0,
+      "en": "Got it. Should we call the power company?",
+      "jp": "あった。電力会社に電話する？"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check their website on my phone.",
+      "jp": "スマホでサイトを見てみる。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "They say it'll be back in two hours.",
+      "jp": "2時間で復旧するって。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Let's light some candles and wait.",
+      "jp": "じゃあ、ろうそくをつけて待とう。"
+     }
+    ]
+   }
+  ]
+ }
+]
