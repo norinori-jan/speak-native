@@ -1,0 +1,595 @@
+[
+ {
+  "id": "basic14",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本14（美容・車・暮らしの店 531〜540）",
+  "hint": "Ten conversations about hair salon, beauty, gas station, car repair, parking, bike repair, hardware store, laundromat, drugstore and dry cleaner",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "💇 531｜美容院で：At the Hair Salon",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, do you have an appointment?",
+      "jp": "こんにちは、ご予約はありますか。",
+      "note": "表現: Do you have an appointment? = ご予約はありますか"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, at two, under the name Sato.",
+      "jp": "はい、2時に、佐藤で。"
+     },
+     {
+      "sp": 0,
+      "en": "Please have a seat. What would you like today?",
+      "jp": "おかけください。今日はどうしますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Just a trim, about two centimeters.",
+      "jp": "毛先を整えるだけ、2センチくらい。",
+      "note": "用語: trim = 毛先を整える"
+     },
+     {
+      "sp": 0,
+      "en": "Do you want to keep the same style?",
+      "jp": "同じスタイルのままにしますか。",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but maybe a few layers on the sides.",
+      "jp": "はい、でも横に少しレイヤーを入れて。"
+     },
+     {
+      "sp": 0,
+      "en": "Sure. How's the water temperature?",
+      "jp": "はい。お湯の温度はいかがですか。"
+     },
+     {
+      "sp": 1,
+      "en": "It's perfect, thank you.",
+      "jp": "ちょうどいいです、ありがとう。"
+     },
+     {
+      "sp": 0,
+      "en": "(later) How does it look?",
+      "jp": "（あとで）いかがですか。"
+     },
+     {
+      "sp": 1,
+      "en": "It looks great. I love it.",
+      "jp": "いいですね。気に入りました。"
+     }
+    ]
+   },
+   {
+    "t": "💅 532｜ネイルとスキンケア：Beauty and Skin Care",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Your skin looks great. What's your secret?",
+      "jp": "肌がきれいだね。秘訣は？"
+     },
+     {
+      "sp": 1,
+      "en": "Water, sleep, and sunscreen every day.",
+      "jp": "水、睡眠、そして毎日の日焼け止め。"
+     },
+     {
+      "sp": 0,
+      "en": "Every day, even in winter?",
+      "jp": "毎日？ 冬でも？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. The sun is strong all year.",
+      "jp": "うん。日差しは一年中強いから。",
+      "note": "用語: sunscreen = 日焼け止め"
+     },
+     {
+      "sp": 0,
+      "en": "What about your nails? They're so pretty.",
+      "jp": "爪はどう？ すごくきれい。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. I got them done yesterday.",
+      "jp": "ありがとう。昨日やってもらったの。",
+      "note": "表現: I got them done. = やってもらった"
+     },
+     {
+      "sp": 0,
+      "en": "Where did you go?",
+      "jp": "どこで？",
+      "note": "元の形: did you／聞こえ方: ディジュ／使う場面:相手に過去をたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "A small place near the station. I'll text you the name.",
+      "jp": "駅の近くの小さな店。名前を送るね。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it expensive?",
+      "jp": "高い？"
+     },
+     {
+      "sp": 1,
+      "en": "Not really. About forty dollars.",
+      "jp": "そうでもない。40ドルくらい。"
+     }
+    ]
+   },
+   {
+    "t": "⛽ 533｜ガソリンスタンド：At the Gas Station",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Pump number four is free. Go ahead.",
+      "jp": "4番の給油機が空いています。どうぞ。"
+     },
+     {
+      "sp": 1,
+      "en": "Thanks. How do I pay?",
+      "jp": "ありがとう。どう払えばいいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "You can pay at the pump with a card.",
+      "jp": "給油機で、カードで払えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Regular or premium?",
+      "jp": "レギュラーですか、ハイオクですか。",
+      "note": "用語: regular / premium = レギュラー／ハイオク"
+     },
+     {
+      "sp": 0,
+      "en": "Regular is fine. Fill it up.",
+      "jp": "レギュラーで。満タンにして。",
+      "note": "表現: Fill it up. = 満タンにして"
+     },
+     {
+      "sp": 1,
+      "en": "(later) Do you need a receipt?",
+      "jp": "（あとで）レシートは必要ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, please. And is there a restroom?",
+      "jp": "はい、お願いします。トイレはありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "Around the back, on the left.",
+      "jp": "裏の左側です。"
+     },
+     {
+      "sp": 0,
+      "en": "Thanks. Is the air pump free?",
+      "jp": "ありがとう。空気入れは無料ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, next to the shop. Drive safe!",
+      "jp": "はい、店の隣です。気をつけて！"
+     }
+    ]
+   },
+   {
+    "t": "🚘 534｜車の修理を頼む：Taking Your Car to the Shop",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, my car is making a strange noise.",
+      "jp": "こんにちは、車から変な音がします。"
+     },
+     {
+      "sp": 1,
+      "en": "What kind of noise?",
+      "jp": "どんな音ですか。",
+      "note": "元の形: kind of／聞こえ方: カインダ／使う場面:ちょっと〜だと濁す時"
+     },
+     {
+      "sp": 0,
+      "en": "A squeaking sound when I brake.",
+      "jp": "ブレーキをかけると、キーキーという音です。"
+     },
+     {
+      "sp": 1,
+      "en": "It might be the brake pads. Let me take a look.",
+      "jp": "ブレーキパッドかもしれません。見てみます。",
+      "note": "用語: brake pads = ブレーキパッド"
+     },
+     {
+      "sp": 0,
+      "en": "How long will it take?",
+      "jp": "どれくらいかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About an hour for the inspection.",
+      "jp": "点検に1時間ほどです。"
+     },
+     {
+      "sp": 0,
+      "en": "And how much will it cost?",
+      "jp": "いくらかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll give you an estimate after checking.",
+      "jp": "確認してから、見積もりをお出しします。",
+      "note": "用語: estimate = 見積もり"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Please call me before you do any work.",
+      "jp": "分かりました。作業の前に電話をください。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. We always ask first.",
+      "jp": "もちろん。必ず先に確認します。"
+     }
+    ]
+   },
+   {
+    "t": "🅿️ 535｜駐車場で：Finding Parking",
+    "l": [
+     {
+      "sp": 0,
+      "en": "This lot is full. Let's try the next one.",
+      "jp": "この駐車場は満車だ。次を試そう。"
+     },
+     {
+      "sp": 1,
+      "en": "There's a spot over there, on the left.",
+      "jp": "あそこ、左側に空きがある。",
+      "note": "表現: a spot = 空いているスペース"
+     },
+     {
+      "sp": 0,
+      "en": "It's too small for our car.",
+      "jp": "うちの車には小さすぎる。"
+     },
+     {
+      "sp": 1,
+      "en": "Then let's park on the street.",
+      "jp": "じゃあ道路に停めよう。"
+     },
+     {
+      "sp": 0,
+      "en": "Is parking allowed here?",
+      "jp": "ここは駐車していいの？"
+     },
+     {
+      "sp": 1,
+      "en": "The sign says two hours only.",
+      "jp": "標識には2時間までって書いてある。",
+      "note": "表現: The sign says ○○. = 標識に○○と書いてある"
+     },
+     {
+      "sp": 0,
+      "en": "That's enough. We'll be quick.",
+      "jp": "それで足りる。急いで済ませよう。"
+     },
+     {
+      "sp": 1,
+      "en": "Do we need to pay at the meter?",
+      "jp": "メーターで払う必要がある？"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, put in some coins.",
+      "jp": "うん、小銭を入れて。"
+     },
+     {
+      "sp": 1,
+      "en": "I only have a card. Let me look for the machine.",
+      "jp": "カードしかない。機械を探してくる。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     }
+    ]
+   },
+   {
+    "t": "🚲 536｜自転車の修理：Fixing a Bike",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, my bike has a flat tire.",
+      "jp": "こんにちは、自転車がパンクしました。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me see. Yes, there's a nail in it.",
+      "jp": "見ます。ああ、釘が刺さっていますね。",
+      "note": "用語: a flat tire = パンクしたタイヤ"
+     },
+     {
+      "sp": 0,
+      "en": "Can you fix it today?",
+      "jp": "今日、直せますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. It will take about thirty minutes.",
+      "jp": "はい。30分くらいかかります。"
+     },
+     {
+      "sp": 0,
+      "en": "How much is the repair?",
+      "jp": "修理はいくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Fifteen dollars, with the new tube.",
+      "jp": "新しいチューブ込みで15ドルです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's fine. Can I wait here?",
+      "jp": "結構です。ここで待っていいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. There's coffee on the counter.",
+      "jp": "もちろん。カウンターにコーヒーがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. I'll look around the shop.",
+      "jp": "ありがとう。店内を見ています。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "(later) All done. It's good as new.",
+      "jp": "（あとで）できました。新品同様です。",
+      "note": "表現: as good as new = 新品同様"
+     }
+    ]
+   },
+   {
+    "t": "🔨 537｜ホームセンターで：At the Hardware Store",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I need something to fix a loose shelf.",
+      "jp": "こんにちは、ぐらつく棚を直すものがほしいです。"
+     },
+     {
+      "sp": 1,
+      "en": "Are the screws loose, or is the wall the problem?",
+      "jp": "ネジが緩いのですか、それとも壁の問題ですか。",
+      "note": "表現: loose = ゆるんだ・ぐらつく"
+     },
+     {
+      "sp": 0,
+      "en": "I think the screws pulled out of the wall.",
+      "jp": "壁からネジが抜けたのだと思います。",
+      "note": "元の形: out of／聞こえ方: アウタ／使う場面:〜から外へ"
+     },
+     {
+      "sp": 1,
+      "en": "Then you'll need wall anchors and longer screws.",
+      "jp": "では壁用のアンカーと、長めのネジが要ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Where can I find them?",
+      "jp": "どこにありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Aisle six, on the right side.",
+      "jp": "6番通路の右側です。"
+     },
+     {
+      "sp": 0,
+      "en": "Do I need any special tools?",
+      "jp": "特別な道具は要りますか。"
+     },
+     {
+      "sp": 1,
+      "en": "A drill and a screwdriver. Do you have those?",
+      "jp": "ドリルとドライバー。持っていますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Only a screwdriver.",
+      "jp": "ドライバーだけです。"
+     },
+     {
+      "sp": 1,
+      "en": "You can rent a drill here for ten dollars.",
+      "jp": "ここでドリルを10ドルで借りられます。",
+      "note": "表現: rent = 借りる（有料）"
+     }
+    ]
+   },
+   {
+    "t": "🧺 538｜コインランドリー：At the Laundromat",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, how does this machine work?",
+      "jp": "すみません、この洗濯機はどう使うんですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Put your clothes in, add detergent, then insert coins.",
+      "jp": "服を入れて、洗剤を入れて、コインを入れる。",
+      "note": "用語: detergent = 洗剤"
+     },
+     {
+      "sp": 0,
+      "en": "How many coins?",
+      "jp": "いくら入れるの？"
+     },
+     {
+      "sp": 1,
+      "en": "Four quarters for a regular load.",
+      "jp": "普通の量なら、25セント玉を4枚。"
+     },
+     {
+      "sp": 0,
+      "en": "And the dryer?",
+      "jp": "乾燥機は？"
+     },
+     {
+      "sp": 1,
+      "en": "Fifty cents for twenty minutes.",
+      "jp": "20分で50セント。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a change machine?",
+      "jp": "両替機はありますか。",
+      "note": "用語: change machine = 両替機"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, by the door.",
+      "jp": "はい、入口のそばに。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you so much.",
+      "jp": "本当にありがとう。"
+     },
+     {
+      "sp": 1,
+      "en": "No problem. Don't forget to empty the lint trap.",
+      "jp": "どういたしまして。ホコリ取りを空にするのを忘れずに。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     }
+    ]
+   },
+   {
+    "t": "🩺 539｜薬局とドラッグストア：At the Drugstore",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, where can I find bandages?",
+      "jp": "こんにちは、絆創膏はどこですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Aisle three, next to the first aid kits.",
+      "jp": "3番通路の、救急セットの隣です。"
+     },
+     {
+      "sp": 0,
+      "en": "And do you have sunscreen?",
+      "jp": "日焼け止めもありますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, in aisle five, with the summer items.",
+      "jp": "はい、5番通路の夏物のところに。",
+      "note": "用語: first aid kit = 救急セット"
+     },
+     {
+      "sp": 0,
+      "en": "Which one do you recommend?",
+      "jp": "どれがおすすめですか。"
+     },
+     {
+      "sp": 1,
+      "en": "This one is popular, and it's gentle on skin.",
+      "jp": "これが人気で、肌にやさしいです。"
+     },
+     {
+      "sp": 0,
+      "en": "How much is it?",
+      "jp": "いくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Twelve dollars. It's buy one, get one half off.",
+      "jp": "12ドル。1つ買うと、2つ目が半額です。",
+      "note": "表現: buy one, get one half off = 1つ買うと2つ目が半額"
+     },
+     {
+      "sp": 0,
+      "en": "That's a good deal. I'll take two.",
+      "jp": "お得ですね。2つください。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Great. You can pay at the front.",
+      "jp": "よかった。前のレジでお支払いください。"
+     }
+    ]
+   },
+   {
+    "t": "🧥 540｜クリーニング店：At the Dry Cleaner",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'd like to drop off these clothes.",
+      "jp": "こんにちは、この服を預けたいです。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Are there any stains?",
+      "jp": "はい。しみはありますか。",
+      "note": "用語: stain = しみ"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, there's a coffee stain on this shirt.",
+      "jp": "はい、このシャツにコーヒーのしみがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "We'll do our best to remove it.",
+      "jp": "できる限り落とします。"
+     },
+     {
+      "sp": 0,
+      "en": "When will they be ready?",
+      "jp": "いつ仕上がりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Thursday afternoon. Here's your ticket.",
+      "jp": "木曜の午後です。こちらが引換券です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I pick them up earlier?",
+      "jp": "もっと早く受け取れますか。"
+     },
+     {
+      "sp": 1,
+      "en": "We can rush it for an extra five dollars.",
+      "jp": "追加5ドルで急ぎにできます。",
+      "note": "表現: rush it = 急ぎで仕上げる"
+     },
+     {
+      "sp": 0,
+      "en": "No, Thursday is fine.",
+      "jp": "いえ、木曜で大丈夫です。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. See you then.",
+      "jp": "分かりました。ではその日に。"
+     }
+    ]
+   }
+  ]
+ }
+]

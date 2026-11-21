@@ -1,0 +1,600 @@
+[
+ {
+  "id": "basic12",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本12（役所・手続き 511〜520）",
+  "hint": "Ten conversations about offices and procedures: city office, documents, ID renewal, insurance, missed delivery, billing, lost and found, information desk, taxes and phone inquiries",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🏛️ 511｜役所で手続き：At the City Office",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello. I'd like to register my new address.",
+      "jp": "こんにちは、新しい住所を届けたいのですが。",
+      "note": "表現: register my address = 住所を登録する"
+     },
+     {
+      "sp": 1,
+      "en": "Certainly. Do you have your ID and a proof of address?",
+      "jp": "かしこまりました。身分証と住所の証明はありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Here's my ID and my lease.",
+      "jp": "身分証と賃貸契約書です。"
+     },
+     {
+      "sp": 1,
+      "en": "Please fill out this form.",
+      "jp": "この用紙に記入してください。"
+     },
+     {
+      "sp": 0,
+      "en": "Which line is the date?",
+      "jp": "日付はどの欄ですか。"
+     },
+     {
+      "sp": 1,
+      "en": "The first one, at the top.",
+      "jp": "一番上の、最初の欄です。"
+     },
+     {
+      "sp": 0,
+      "en": "Done. Is there a fee?",
+      "jp": "書けました。手数料はありますか。",
+      "note": "元の形: is there／聞こえ方: イズゼア／使う場面:〜はあるかたずねる時"
+     },
+     {
+      "sp": 1,
+      "en": "No, it's free. Please wait in the lobby.",
+      "jp": "いいえ、無料です。ロビーでお待ちください。"
+     },
+     {
+      "sp": 0,
+      "en": "About how long will it take?",
+      "jp": "どれくらいかかりますか。",
+      "note": "表現: About how long will it take? = どれくらいかかりますか"
+     },
+     {
+      "sp": 1,
+      "en": "About fifteen minutes. We'll call your number.",
+      "jp": "15分くらい。番号でお呼びします。"
+     }
+    ]
+   },
+   {
+    "t": "📄 512｜書類の不備：A Problem with Your Documents",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I'm sorry, but this form is incomplete.",
+      "jp": "申し訳ありませんが、この書類は不備があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Oh? What's missing?",
+      "jp": "えっ？ 何が足りませんか。",
+      "note": "用語: incomplete = 不備のある・不完全な"
+     },
+     {
+      "sp": 0,
+      "en": "You didn't sign here, at the bottom.",
+      "jp": "ここ、下の部分に署名がありません。"
+     },
+     {
+      "sp": 1,
+      "en": "I see. Do you have a pen?",
+      "jp": "なるほど。ペンはありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Of course. Please sign and write the date.",
+      "jp": "もちろん。署名して日付を書いてください。"
+     },
+     {
+      "sp": 1,
+      "en": "Is that all?",
+      "jp": "それで全部ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "We also need a copy of your passport.",
+      "jp": "パスポートのコピーも必要です。"
+     },
+     {
+      "sp": 1,
+      "en": "There's a copy machine over there.",
+      "jp": "コピー機はあちらにあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. I'll be right back.",
+      "jp": "ありがとう。すぐ戻ります。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Take your time. I'll hold your place.",
+      "jp": "ごゆっくり。順番はお取りしておきます。",
+      "note": "表現: I'll hold your place. = 順番を取っておきます"
+     }
+    ]
+   },
+   {
+    "t": "🪪 513｜身分証を作り直す：Renewing an ID",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I need to renew my driver's license.",
+      "jp": "こんにちは、運転免許証を更新したいです。"
+     },
+     {
+      "sp": 1,
+      "en": "Is it expired?",
+      "jp": "期限は切れていますか。",
+      "note": "用語: expired = 期限切れの／renew = 更新する"
+     },
+     {
+      "sp": 0,
+      "en": "It expires next month.",
+      "jp": "来月切れます。"
+     },
+     {
+      "sp": 1,
+      "en": "Then you can renew it now. Do you have your old license?",
+      "jp": "では今更新できます。古い免許証はありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, here it is.",
+      "jp": "はい、これです。"
+     },
+     {
+      "sp": 1,
+      "en": "Please look at the camera for a photo.",
+      "jp": "カメラを見て、写真を撮ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I smile?",
+      "jp": "笑ったほうがいいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "No, just look natural.",
+      "jp": "いいえ、自然にしてください。"
+     },
+     {
+      "sp": 0,
+      "en": "All done. The new one will arrive by mail.",
+      "jp": "終わりました。新しいものは郵送で届きます。",
+      "note": "表現: arrive by mail = 郵送で届く"
+     },
+     {
+      "sp": 1,
+      "en": "How long will that take?",
+      "jp": "どれくらいかかりますか。"
+     },
+     {
+      "sp": 0,
+      "en": "About two weeks.",
+      "jp": "約2週間です。"
+     }
+    ]
+   },
+   {
+    "t": "🗳️ 514｜病院の保険手続き：Insurance Questions",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, I have a question about my insurance.",
+      "jp": "こんにちは、保険について質問があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. What would you like to know?",
+      "jp": "はい。何をお知りになりたいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "Does it cover dental visits?",
+      "jp": "歯医者の通院も対象ですか。",
+      "note": "用語: cover = 保険の対象にする"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, but only up to five hundred dollars a year.",
+      "jp": "はい、ただし年間500ドルまでです。"
+     },
+     {
+      "sp": 0,
+      "en": "And what about emergency room visits?",
+      "jp": "救急外来はどうですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Those are covered, after a small copay.",
+      "jp": "それは対象です。少額の自己負担のあとで。",
+      "note": "用語: copay = 自己負担額"
+     },
+     {
+      "sp": 0,
+      "en": "How much is the copay?",
+      "jp": "自己負担はいくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Fifty dollars per visit.",
+      "jp": "1回につき50ドルです。"
+     },
+     {
+      "sp": 0,
+      "en": "I see. Can you send me the details by email?",
+      "jp": "分かりました。詳細をメールで送ってもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Certainly. I'll send them right now.",
+      "jp": "もちろん。いますぐ送ります。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "📮 515｜荷物の不在連絡：A Missed Delivery",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, I got a notice that you missed me.",
+      "jp": "もしもし、不在連絡のお知らせを受け取りました。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check. What's your tracking number?",
+      "jp": "確認します。追跡番号は？",
+      "note": "用語: tracking number = 追跡番号"
+     },
+     {
+      "sp": 0,
+      "en": "It's one, two, three, four, five, six.",
+      "jp": "123456です。"
+     },
+     {
+      "sp": 1,
+      "en": "I see. We tried at three o'clock yesterday.",
+      "jp": "分かりました。昨日3時に伺いました。"
+     },
+     {
+      "sp": 0,
+      "en": "I was at work. Can you redeliver tomorrow?",
+      "jp": "仕事でした。明日、再配達してもらえますか。",
+      "note": "用語: redeliver = 再配達する"
+     },
+     {
+      "sp": 1,
+      "en": "Of course. What time would be good?",
+      "jp": "もちろん。何時がいいですか。"
+     },
+     {
+      "sp": 0,
+      "en": "After six in the evening.",
+      "jp": "夕方6時以降で。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay, between six and eight.",
+      "jp": "分かりました、6時から8時の間で。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. I'll be home.",
+      "jp": "ありがとう。家にいます。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Great. You'll get a text before we arrive.",
+      "jp": "よかった。到着前にメッセージが届きます。"
+     }
+    ]
+   },
+   {
+    "t": "🏦 516｜税金や請求の質問：Asking About a Bill",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I think there's a mistake on my bill.",
+      "jp": "こんにちは、請求書に間違いがあると思います。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me look. What seems to be wrong?",
+      "jp": "見てみます。何がおかしいですか。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "I'm being charged for a service I don't use.",
+      "jp": "使っていないサービスの料金を請求されています。",
+      "note": "表現: I'm being charged for ○○. = ○○の料金を請求されている"
+     },
+     {
+      "sp": 1,
+      "en": "Which one?",
+      "jp": "どれですか。"
+     },
+     {
+      "sp": 0,
+      "en": "The premium channel package. I never signed up for it.",
+      "jp": "プレミアムチャンネルのパックです。申し込んだことはありません。",
+      "note": "表現: sign up for ○○ = ○○に申し込む"
+     },
+     {
+      "sp": 1,
+      "en": "You're right. I don't see your signature.",
+      "jp": "その通りですね。署名が見当たりません。"
+     },
+     {
+      "sp": 0,
+      "en": "So can you remove it?",
+      "jp": "では、外してもらえますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and I'll refund the last two months.",
+      "jp": "はい、直近の2か月分も返金します。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you. How long will the refund take?",
+      "jp": "ありがとう。返金にどれくらいかかりますか。"
+     },
+     {
+      "sp": 1,
+      "en": "About five business days.",
+      "jp": "営業日で5日ほどです。"
+     }
+    ]
+   },
+   {
+    "t": "🔍 517｜落とし物センター：Lost and Found",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I lost an umbrella on the train yesterday.",
+      "jp": "こんにちは、昨日電車で傘をなくしました。",
+      "note": "表現: I lost ○○ on the train. = 電車で○○をなくした"
+     },
+     {
+      "sp": 1,
+      "en": "What does it look like?",
+      "jp": "どんな傘ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's black, with a wooden handle.",
+      "jp": "黒で、木の持ち手です。"
+     },
+     {
+      "sp": 1,
+      "en": "Which line were you on?",
+      "jp": "どの路線ですか。"
+     },
+     {
+      "sp": 0,
+      "en": "The green line, around six in the evening.",
+      "jp": "緑線で、夕方6時ごろです。"
+     },
+     {
+      "sp": 1,
+      "en": "Let me check the records.",
+      "jp": "記録を確認します。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "(a pause) Yes, we have one that matches.",
+      "jp": "（間があって）はい、一致するものがあります。",
+      "note": "表現: one that matches = 一致するもの"
+     },
+     {
+      "sp": 1,
+      "en": "Oh, that's wonderful. Can I get it now?",
+      "jp": "よかった。いま受け取れますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Please show your ID and sign here.",
+      "jp": "身分証を見せて、ここに署名してください。"
+     },
+     {
+      "sp": 1,
+      "en": "Here you go. Thank you so much.",
+      "jp": "どうぞ。本当にありがとう。"
+     }
+    ]
+   },
+   {
+    "t": "⚖️ 518｜相談窓口で：At an Information Desk",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Excuse me, where can I get a parking permit?",
+      "jp": "すみません、駐車許可証はどこで手に入りますか。"
+     },
+     {
+      "sp": 1,
+      "en": "That's on the second floor, room two ten.",
+      "jp": "2階の210号室です。"
+     },
+     {
+      "sp": 0,
+      "en": "Do I need an appointment?",
+      "jp": "予約は必要ですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "No, it's first come, first served.",
+      "jp": "いいえ、先着順です。",
+      "note": "表現: first come, first served = 先着順"
+     },
+     {
+      "sp": 0,
+      "en": "What should I bring?",
+      "jp": "何を持っていけばいいですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Your car registration and a proof of address.",
+      "jp": "車の登録証と、住所の証明です。",
+      "note": "用語: registration = 登録・登録証"
+     },
+     {
+      "sp": 0,
+      "en": "How much does it cost?",
+      "jp": "いくらですか。"
+     },
+     {
+      "sp": 1,
+      "en": "Forty dollars for a year.",
+      "jp": "1年で40ドルです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the office open now?",
+      "jp": "事務所はいま開いていますか。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, until four thirty.",
+      "jp": "はい、4時半までです。"
+     }
+    ]
+   },
+   {
+    "t": "🧾 519｜確定申告の相談：Asking About Taxes",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hello, I need help with my tax return.",
+      "jp": "こんにちは、確定申告の手伝いが必要です。",
+      "note": "用語: tax return = 確定申告書／pay slip = 給与明細"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. Do you have your income documents?",
+      "jp": "はい。収入の書類はお持ちですか。"
+     },
+     {
+      "sp": 0,
+      "en": "I have my pay slips and my bank statements.",
+      "jp": "給与明細と銀行の明細があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Did you change jobs this year?",
+      "jp": "いいですね。今年、転職しましたか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, in June. So I have two employers.",
+      "jp": "はい、6月に。雇用主が2つあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Then we'll need both forms.",
+      "jp": "それなら両方の用紙が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "Will I get a refund?",
+      "jp": "還付はありますか。",
+      "note": "用語: refund = 還付・返金"
+     },
+     {
+      "sp": 1,
+      "en": "Let me calculate. Probably, yes.",
+      "jp": "計算します。たぶん、あります。",
+      "note": "元の形: let me／聞こえ方: レミ／使う場面:自分がやると申し出る時"
+     },
+     {
+      "sp": 0,
+      "en": "That's good news. When's the deadline?",
+      "jp": "いい知らせですね。期限はいつですか。"
+     },
+     {
+      "sp": 1,
+      "en": "The end of April. Let's finish this week.",
+      "jp": "4月末です。今週中に終わらせましょう。"
+     }
+    ]
+   },
+   {
+    "t": "📞 520｜問い合わせ電話：Calling for Information",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Thank you for calling. How can I help?",
+      "jp": "お電話ありがとうございます。ご用件は？"
+     },
+     {
+      "sp": 1,
+      "en": "Hi, what are your opening hours?",
+      "jp": "こんにちは、営業時間を教えてください。",
+      "note": "表現: opening hours = 営業時間"
+     },
+     {
+      "sp": 0,
+      "en": "We're open nine to five, Monday to Friday.",
+      "jp": "月曜から金曜の9時から5時まで営業しています。"
+     },
+     {
+      "sp": 1,
+      "en": "And are you open on weekends?",
+      "jp": "週末は開いていますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Only Saturday morning, ten to noon.",
+      "jp": "土曜の午前、10時から正午のみです。"
+     },
+     {
+      "sp": 1,
+      "en": "Do I need to make an appointment?",
+      "jp": "予約は必要ですか。",
+      "note": "元の形: do I／聞こえ方: ドゥアイ／使う場面:自分がしてよいか聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "For Saturday, yes. For weekdays, no.",
+      "jp": "土曜は必要です。平日は不要です。"
+     },
+     {
+      "sp": 1,
+      "en": "Okay. Could you give me the address?",
+      "jp": "分かりました。住所を教えてもらえますか。"
+     },
+     {
+      "sp": 0,
+      "en": "It's two hundred Main Street, third floor.",
+      "jp": "メイン通り200番地、3階です。"
+     },
+     {
+      "sp": 1,
+      "en": "Thank you. That's all I needed.",
+      "jp": "ありがとう。以上で全部です。",
+      "note": "表現: That's all I needed. = 必要なのはそれだけでした"
+     }
+    ]
+   }
+  ]
+ }
+]

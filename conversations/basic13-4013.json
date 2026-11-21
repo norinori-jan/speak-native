@@ -1,0 +1,596 @@
+[
+ {
+  "id": "basic13",
+  "ic": "🗣️",
+  "n": "聞くだけ英会話・基本13（天気・趣味・運動 521〜530）",
+  "hint": "Ten conversations about weather, seasons, gym, running, sports, hobby classes, music, travel photos, game night and a walk in the park",
+  "level": 4,
+  "keywords": [
+   "everyday",
+   "listening",
+   "basics"
+  ],
+  "d": [
+   {
+    "t": "🌦️ 521｜天気の話：Talking About the Weather",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Beautiful day, isn't it?",
+      "jp": "いい天気だね。",
+      "note": "表現: Beautiful day, isn't it? = いい天気ですね（あいさつ代わり）"
+     },
+     {
+      "sp": 1,
+      "en": "It really is. Yesterday was so cold.",
+      "jp": "本当に。昨日はすごく寒かった。"
+     },
+     {
+      "sp": 0,
+      "en": "I know. And it rained all day.",
+      "jp": "ほんとに。1日中雨だったし。"
+     },
+     {
+      "sp": 1,
+      "en": "What's the forecast for the weekend?",
+      "jp": "週末の予報は？",
+      "note": "用語: forecast = 予報"
+     },
+     {
+      "sp": 0,
+      "en": "Sunny on Saturday, but cloudy on Sunday.",
+      "jp": "土曜は晴れ、日曜は曇り。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect for a picnic on Saturday.",
+      "jp": "土曜はピクニックにぴったり。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I bring an umbrella just in case?",
+      "jp": "念のため傘を持つべき？"
+     },
+     {
+      "sp": 1,
+      "en": "There's a small chance of rain on Sunday evening.",
+      "jp": "日曜の夕方に、少しだけ雨の可能性がある。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. I'll check again on Friday.",
+      "jp": "分かった。金曜にもう一度確認する。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Good idea. The forecast can change.",
+      "jp": "いい考え。予報は変わるから。"
+     }
+    ]
+   },
+   {
+    "t": "🍂 522｜季節の話：Talking About the Seasons",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Which season do you like best?",
+      "jp": "どの季節がいちばん好き？"
+     },
+     {
+      "sp": 1,
+      "en": "Autumn. The leaves are beautiful.",
+      "jp": "秋。葉っぱがきれいだから。"
+     },
+     {
+      "sp": 0,
+      "en": "Not too hot, not too cold.",
+      "jp": "暑すぎず、寒すぎず。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. And you?",
+      "jp": "その通り。あなたは？"
+     },
+     {
+      "sp": 0,
+      "en": "I love summer. I love the beach.",
+      "jp": "夏が好き。ビーチが好きなの。"
+     },
+     {
+      "sp": 1,
+      "en": "Even when it's so humid?",
+      "jp": "こんなに蒸し暑くても？",
+      "note": "用語: humid = 蒸し暑い・湿度が高い"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, I don't mind the heat.",
+      "jp": "うん、暑さは気にならない。",
+      "note": "元の形: don't／聞こえ方: ドン／使う場面:禁止・否定する時"
+     },
+     {
+      "sp": 1,
+      "en": "I prefer winter, actually. I like snow.",
+      "jp": "私はむしろ冬の方がいい。雪が好き。"
+     },
+     {
+      "sp": 0,
+      "en": "Really? You're the first person I know who does.",
+      "jp": "本当？ そう言う人は、あなたが初めて。"
+     },
+     {
+      "sp": 1,
+      "en": "Ha, it's all about what you're used to.",
+      "jp": "ふふ、慣れてるものによるよね。",
+      "note": "表現: what you're used to = 慣れているもの"
+     }
+    ]
+   },
+   {
+    "t": "🏋️ 523｜ジムに入会する：Joining a Gym",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Hi, I'm interested in a membership.",
+      "jp": "こんにちは、会員になりたいです。",
+      "note": "表現: I'm interested in ○○. = ○○に興味があります"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Have you used a gym before?",
+      "jp": "いいですね。ジムを使ったことはありますか。"
+     },
+     {
+      "sp": 0,
+      "en": "A little, but not for a while.",
+      "jp": "少しだけ、でもしばらく行っていません。"
+     },
+     {
+      "sp": 1,
+      "en": "We have two plans. Monthly or yearly.",
+      "jp": "プランは2つ。月払いか年払いです。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference?",
+      "jp": "違いは何ですか。",
+      "note": "元の形: what's／聞こえ方: ワッツ／使う場面:何がと聞く時"
+     },
+     {
+      "sp": 1,
+      "en": "Yearly is cheaper, but you commit for twelve months.",
+      "jp": "年払いは安いですが、12か月の契約になります。",
+      "note": "用語: commit = 約束・契約する"
+     },
+     {
+      "sp": 0,
+      "en": "I'll start with monthly.",
+      "jp": "まず月払いにします。"
+     },
+     {
+      "sp": 1,
+      "en": "Smart. Would you like a tour?",
+      "jp": "賢いですね。見学しますか。"
+     },
+     {
+      "sp": 0,
+      "en": "Yes, please. Where are the lockers?",
+      "jp": "はい、お願いします。ロッカーはどこ？"
+     },
+     {
+      "sp": 1,
+      "en": "Right this way. I'll show you everything.",
+      "jp": "こちらへ。すべてご案内します。"
+     }
+    ]
+   },
+   {
+    "t": "🏃 524｜ランニングの習慣：Starting to Run",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You look fit. Do you exercise?",
+      "jp": "引き締まってるね。運動してる？",
+      "note": "表現: You look fit. = 引き締まっている・健康そう"
+     },
+     {
+      "sp": 1,
+      "en": "I run three times a week.",
+      "jp": "週に3回走ってる。"
+     },
+     {
+      "sp": 0,
+      "en": "How far do you run?",
+      "jp": "どれくらい走るの？"
+     },
+     {
+      "sp": 1,
+      "en": "About five kilometers each time.",
+      "jp": "毎回5キロくらい。"
+     },
+     {
+      "sp": 0,
+      "en": "I'd love to start, but I get bored.",
+      "jp": "始めたいけど、飽きちゃう。",
+      "note": "表現: I get bored. = 飽きてしまう"
+     },
+     {
+      "sp": 1,
+      "en": "Try running with a friend. It makes it fun.",
+      "jp": "友達と走ってみて。楽しくなるよ。"
+     },
+     {
+      "sp": 0,
+      "en": "Maybe I'll try that. Can I join you?",
+      "jp": "やってみるかも。一緒に走っていい？",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. We start at six in the morning.",
+      "jp": "いいよ。朝6時に始める。"
+     },
+     {
+      "sp": 0,
+      "en": "Six? That's early.",
+      "jp": "6時？ 早いね。"
+     },
+     {
+      "sp": 1,
+      "en": "It's the best time. It's quiet and cool.",
+      "jp": "いちばんいい時間なの。静かで涼しい。"
+     }
+    ]
+   },
+   {
+    "t": "⚽ 525｜スポーツ観戦：Watching a Game",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Are you going to the game on Saturday?",
+      "jp": "土曜の試合に行く？",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
+     },
+     {
+      "sp": 1,
+      "en": "Wouldn't miss it. Do you have tickets?",
+      "jp": "見逃さないよ。チケットはある？",
+      "note": "表現: Wouldn't miss it. = 絶対に見逃さない"
+     },
+     {
+      "sp": 0,
+      "en": "I got two. Want to come with me?",
+      "jp": "2枚取った。一緒に来る？"
+     },
+     {
+      "sp": 1,
+      "en": "Absolutely. Who's playing?",
+      "jp": "もちろん。どこが対戦？",
+      "note": "元の形: Who is／聞こえ方: フーズ／使う場面:誰がと聞く時"
+     },
+     {
+      "sp": 0,
+      "en": "Our team against the league leaders.",
+      "jp": "うちのチームと、リーグ首位。"
+     },
+     {
+      "sp": 1,
+      "en": "That's going to be tough.",
+      "jp": "きびしい試合になるね。"
+     },
+     {
+      "sp": 0,
+      "en": "Maybe, but we've been playing well.",
+      "jp": "かもね。でも最近は調子がいい。"
+     },
+     {
+      "sp": 1,
+      "en": "True. Let's wear our jerseys.",
+      "jp": "確かに。ユニフォームを着ていこう。"
+     },
+     {
+      "sp": 0,
+      "en": "Good idea. Let's meet at the stadium at one.",
+      "jp": "いいね。1時にスタジアムで会おう。"
+     },
+     {
+      "sp": 1,
+      "en": "See you there. Go team!",
+      "jp": "そこで会おう。がんばれチーム！"
+     }
+    ]
+   },
+   {
+    "t": "🎨 526｜趣味の教室：Joining a Hobby Class",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I'm thinking of taking a painting class.",
+      "jp": "絵画教室に通おうと思ってる。"
+     },
+     {
+      "sp": 1,
+      "en": "That's wonderful. Have you painted before?",
+      "jp": "いいね。描いたことはある？"
+     },
+     {
+      "sp": 0,
+      "en": "Never. I'm a complete beginner.",
+      "jp": "一度も。まったくの初心者。"
+     },
+     {
+      "sp": 1,
+      "en": "Everyone starts somewhere.",
+      "jp": "誰でも最初はそうだよ。",
+      "note": "表現: Everyone starts somewhere. = 誰でも最初はそう"
+     },
+     {
+      "sp": 0,
+      "en": "What if I'm bad at it?",
+      "jp": "下手だったらどうしよう。"
+     },
+     {
+      "sp": 1,
+      "en": "It's not about being good. It's about enjoying it.",
+      "jp": "上手いかどうかじゃない。楽しむことだよ。",
+      "note": "表現: It's not about being good. = 上手いかどうかが大事ではない"
+     },
+     {
+      "sp": 0,
+      "en": "You're right. I'll sign up today.",
+      "jp": "そうだね。今日申し込む。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     },
+     {
+      "sp": 1,
+      "en": "Which class are you looking at?",
+      "jp": "どの教室を見てるの？"
+     },
+     {
+      "sp": 0,
+      "en": "The Tuesday evening one, at the community center.",
+      "jp": "公民館の、火曜の夜のクラス。"
+     },
+     {
+      "sp": 1,
+      "en": "Great. Show me your work after.",
+      "jp": "いいね。あとで作品を見せて。"
+     }
+    ]
+   },
+   {
+    "t": "🎶 527｜音楽の好み：Talking About Music",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What kind of music do you listen to?",
+      "jp": "どんな音楽を聴く？",
+      "note": "表現: What kind of ○○ do you ...? = どんな種類の○○を〜？"
+     },
+     {
+      "sp": 1,
+      "en": "A bit of everything. Mostly pop and jazz.",
+      "jp": "いろいろ。主にポップスとジャズ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you play an instrument?",
+      "jp": "楽器は弾く？"
+     },
+     {
+      "sp": 1,
+      "en": "I play the piano, a little.",
+      "jp": "ピアノを少しね。"
+     },
+     {
+      "sp": 0,
+      "en": "Nice. Do you go to concerts?",
+      "jp": "いいね。コンサートには行く？"
+     },
+     {
+      "sp": 1,
+      "en": "Whenever I can. I saw a great one last month.",
+      "jp": "行けるときは必ず。先月、すごくいいのを見た。",
+      "note": "表現: Whenever I can. = できる時はいつも"
+     },
+     {
+      "sp": 0,
+      "en": "Who was playing?",
+      "jp": "誰が出てたの？"
+     },
+     {
+      "sp": 1,
+      "en": "A local band. They were amazing live.",
+      "jp": "地元のバンド。ライブがすごかった。"
+     },
+     {
+      "sp": 0,
+      "en": "I'd love to go next time.",
+      "jp": "次は私も行きたい。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll let you know when they come back.",
+      "jp": "また来る時に教えるね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "📷 528｜旅行の思い出話：Sharing Travel Photos",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can I see your photos from the trip?",
+      "jp": "旅行の写真、見せてもらえる？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. This is the mountain we climbed.",
+      "jp": "もちろん。これが登った山。"
+     },
+     {
+      "sp": 0,
+      "en": "Wow, the view is incredible.",
+      "jp": "うわあ、景色がすごい。"
+     },
+     {
+      "sp": 1,
+      "en": "It was tough, but so worth it.",
+      "jp": "大変だったけど、それだけの価値があった。",
+      "note": "表現: so worth it = それだけの価値が十分あった"
+     },
+     {
+      "sp": 0,
+      "en": "How long did the hike take?",
+      "jp": "登るのにどれくらいかかった？"
+     },
+     {
+      "sp": 1,
+      "en": "About six hours, with breaks.",
+      "jp": "休憩を入れて6時間くらい。"
+     },
+     {
+      "sp": 0,
+      "en": "Was it crowded?",
+      "jp": "混んでた？"
+     },
+     {
+      "sp": 1,
+      "en": "Not at all. We almost had it to ourselves.",
+      "jp": "全然。ほとんど貸し切りだった。",
+      "note": "表現: have it to ourselves = 貸し切り状態で楽しむ"
+     },
+     {
+      "sp": 0,
+      "en": "I'm jealous. Where's next?",
+      "jp": "うらやましい。次はどこ？"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe the coast. I'll show you the pictures later.",
+      "jp": "海岸かな。写真はあとで見せるね。",
+      "note": "元の形: I'll／聞こえ方: アイル／使う場面:これからやると決める時"
+     }
+    ]
+   },
+   {
+    "t": "🎮 529｜ゲームや映画の約束：Making Plans for a Game Night",
+    "l": [
+     {
+      "sp": 0,
+      "en": "We should have a game night soon.",
+      "jp": "近いうちにゲームの夜をやろうよ。",
+      "note": "元の形: We should／聞こえ方: ウィシュッド／使う場面:〜しようと提案する時"
+     },
+     {
+      "sp": 1,
+      "en": "Great idea. Who should we invite?",
+      "jp": "いい考え。誰を呼ぶ？"
+     },
+     {
+      "sp": 0,
+      "en": "Mia, Ben, and maybe Chris.",
+      "jp": "ミア、ベン、それにクリスかな。"
+     },
+     {
+      "sp": 1,
+      "en": "What day works for everyone?",
+      "jp": "みんなの都合がいい日は？"
+     },
+     {
+      "sp": 0,
+      "en": "Friday is usually good.",
+      "jp": "金曜はたいてい都合がいい。"
+     },
+     {
+      "sp": 1,
+      "en": "I can host. I have lots of games.",
+      "jp": "うちでやれるよ。ゲームはたくさんある。",
+      "note": "表現: I can host. = うちで開催できる"
+     },
+     {
+      "sp": 0,
+      "en": "I'll bring snacks and drinks.",
+      "jp": "私がお菓子と飲み物を持っていく。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. I'll send a group message.",
+      "jp": "完璧。グループにメッセージを送る。"
+     },
+     {
+      "sp": 0,
+      "en": "Don't forget to say seven o'clock.",
+      "jp": "7時って書き忘れないでね。"
+     },
+     {
+      "sp": 1,
+      "en": "Got it. This is going to be fun.",
+      "jp": "了解。きっと楽しいよ。",
+      "note": "元の形: going to／聞こえ方: ガナ／使う場面:これからの予定を言う時"
+     }
+    ]
+   },
+   {
+    "t": "🌳 530｜公園で散歩：A Walk in the Park",
+    "l": [
+     {
+      "sp": 0,
+      "en": "It's such a nice day for a walk.",
+      "jp": "散歩にぴったりのいい日だね。"
+     },
+     {
+      "sp": 1,
+      "en": "I love this park. It's so peaceful.",
+      "jp": "この公園が大好き。すごく落ち着く。"
+     },
+     {
+      "sp": 0,
+      "en": "Look at that squirrel!",
+      "jp": "あのリス見て！"
+     },
+     {
+      "sp": 1,
+      "en": "He's looking for food.",
+      "jp": "食べ物を探してるんだ。"
+     },
+     {
+      "sp": 0,
+      "en": "Do you want to sit on that bench?",
+      "jp": "あのベンチに座る？",
+      "note": "元の形: want to／聞こえ方: ワナ／使う場面:したいと伝える時"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, I could use a break.",
+      "jp": "うん、休憩したい。",
+      "note": "表現: I could use a break. = ひと休みしたい"
+     },
+     {
+      "sp": 0,
+      "en": "Do you come here often?",
+      "jp": "ここにはよく来るの？",
+      "note": "表現: Do you come here often? = ここにはよく来るの？"
+     },
+     {
+      "sp": 1,
+      "en": "Almost every weekend, when it's nice.",
+      "jp": "天気がいいと、ほぼ毎週末。"
+     },
+     {
+      "sp": 0,
+      "en": "I should do that, too. It's good for me.",
+      "jp": "私もそうしなきゃ。体にいいし。"
+     },
+     {
+      "sp": 1,
+      "en": "Come with me next time. It's relaxing.",
+      "jp": "次は一緒に来て。リラックスできるよ。"
+     }
+    ]
+   }
+  ]
+ }
+]
