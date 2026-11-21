@@ -3683,7 +3683,8 @@ function loadPackagedConversation(){
   {id:'basic15',file:'basic15-4015.json'},
   {id:'listen01',file:'listen01-4101.json'},
   {id:'crypto01',file:'crypto01-3401.json'},
-  {id:'net10',file:'net10-3210.json'}
+  {id:'net10',file:'net10-3210.json'},
+  {id:'quick01',file:'quick01-4201.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
