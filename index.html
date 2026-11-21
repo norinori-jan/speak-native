@@ -3686,7 +3686,11 @@ function loadPackagedConversation(){
   {id:'net10',file:'net10-3210.json'},
   {id:'quick01',file:'quick01-4201.json'},
   {id:'aisec01',file:'aisec01-4302.json'},
-  {id:'talk01',file:'talk01-4301.json'}
+  {id:'talk01',file:'talk01-4301.json'},
+  {id:'ai03',file:'ai03-4403.json'},
+  {id:'crypto03',file:'crypto03-4404.json'},
+  {id:'fx01',file:'fx01-4401.json'},
+  {id:'money02',file:'money02-4402.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
