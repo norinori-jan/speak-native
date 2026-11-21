@@ -3693,7 +3693,9 @@ function loadPackagedConversation(){
   {id:'money02',file:'money02-4402.json'},
   {id:'ai04',file:'ai04-4407.json'},
   {id:'fx02',file:'fx02-4405.json'},
-  {id:'money03',file:'money03-4406.json'}
+  {id:'money03',file:'money03-4406.json'},
+  {id:'band01',file:'band01-4502.json'},
+  {id:'fortune01',file:'fortune01-4501.json'}
  ];
  var pending=packs.filter(function(p){return !CONV_DATA.some(function(s){return s.id===p.id})});
  if(!pending.length)return Promise.resolve();
