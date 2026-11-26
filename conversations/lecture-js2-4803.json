@@ -1,0 +1,626 @@
+[
+ {
+  "id": "lecture-js2",
+  "ic": "🌐",
+  "n": "コード講義3：JavaScript編・画面とPWA",
+  "hint": "Lecture style, part three: Ken teaches Mia how JavaScript connects to the screen, with the DOM, events, storage, async code, iPhone traps, debugging and safe coding",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：DOMで画面を操作する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, how does JavaScript actually change what I see on the screen?",
+      "jp": "ケン、JavaScriptは実際にどうやって、画面に見えるものを変えるんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Through the DOM, the Document Object Model. The browser turns your HTML into a tree of objects, and JavaScript can read and change that tree.",
+      "jp": "DOM、つまりドキュメント・オブジェクト・モデルを通してです。ブラウザはHTMLをオブジェクトの木に変えて、JavaScriptがその木を読んだり変えたりできます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I grab one element?",
+      "jp": "一つの要素をつかむには？"
+     },
+     {
+      "sp": 1,
+      "en": "document.querySelector('#title') finds the element whose id is title. You can use the same selectors as in CSS.",
+      "jp": "document.querySelector('#title')で、idがtitleの要素を探せます。CSSと同じセレクタが使えます。"
+     },
+     {
+      "sp": 0,
+      "en": "And to change its text?",
+      "jp": "文字を変えるには？"
+     },
+     {
+      "sp": 1,
+      "en": "Set textContent: el.textContent = 'Hello'. That's the safe way, because it always treats the value as plain text.",
+      "jp": "textContentを設定します。el.textContent = 'Hello'。値を必ず単なる文字として扱うので、安全な方法です。"
+     },
+     {
+      "sp": 0,
+      "en": "I've also seen innerHTML. What's different?",
+      "jp": "innerHTMLも見たことがあります。何が違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "innerHTML reads the value as HTML. It's handy for building lists, but if the text came from a user, it can run harmful code. We'll talk about that in the safety lesson.",
+      "jp": "innerHTMLは値をHTMLとして読みます。リストを作るのに便利ですが、文字がユーザーから来たものなら、悪意のあるコードが動きかねません。安全の講義で話します。"
+     },
+     {
+      "sp": 0,
+      "en": "So when is innerHTML okay?",
+      "jp": "じゃあ、innerHTMLを使っていいのはいつですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When every piece of text going in has been escaped, or when it's your own fixed text. If you're not sure, use textContent.",
+      "jp": "入れる文字がすべてエスケープ済みの時か、自分で書いた固定の文字の時です。確信がなければ、textContentを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What about changing the look, like making a button red?",
+      "jp": "ボタンを赤くするような、見た目の変更は？"
+     },
+     {
+      "sp": 1,
+      "en": "Add or remove a CSS class: el.classList.add('active'). Keep the styling in CSS, and let JavaScript only switch classes.",
+      "jp": "CSSのクラスを付け外しします。el.classList.add('active')。見た目はCSSに置き、JavaScriptはクラスを切り替えるだけにします。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is that better?",
+      "jp": "なぜそのほうが良いんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because designers, and future you, can change the look without touching the logic. Each part has one job.",
+      "jp": "デザインする人も、未来のあなたも、ロジックに触らずに見た目を変えられるからです。それぞれの部分が一つの仕事をします。"
+     },
+     {
+      "sp": 0,
+      "en": "What if querySelector can't find the element?",
+      "jp": "querySelectorが要素を見つけられなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "It returns null, and then your next line fails with an error about reading properties of null. Check the id spelling, and make sure the script runs after the element exists.",
+      "jp": "nullを返し、次の行が「nullのプロパティを読めません」というエラーで失敗します。idの綴りを確認し、要素が存在したあとにスクリプトが実行されるようにします。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：イベントで動かす",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I make something happen when a button is pressed?",
+      "jp": "ボタンが押された時に何かを起こすには？"
+     },
+     {
+      "sp": 1,
+      "en": "With an event listener. button.addEventListener('click', onAdd). When the click happens, the browser calls your function onAdd.",
+      "jp": "イベントリスナーです。button.addEventListener('click', onAdd)。クリックが起きると、ブラウザがあなたの関数onAddを呼びます。"
+     },
+     {
+      "sp": 0,
+      "en": "What's inside onAdd?",
+      "jp": "onAddの中には何を書きますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The loop we learned: read the input, change the state, save, and render. The function receives an event object, usually written as e.",
+      "jp": "習ったあの循環です。入力を読み、stateを変え、保存して、描画する。関数はイベントのオブジェクトを受け取り、たいていeと書きます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is e used for?",
+      "jp": "eは何に使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "e.target tells you which element was clicked. For a form, e.preventDefault() stops the page from reloading, which is a very common need.",
+      "jp": "e.targetで、どの要素が押されたか分かります。フォームでは、e.preventDefault()がページの再読み込みを止めます。とてもよくある必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "My list items are created by code. When I add a listener to each, it stops working after I redraw.",
+      "jp": "リストの項目はコードで作っています。それぞれにリスナーを付けると、描き直したあとに動かなくなります。"
+     },
+     {
+      "sp": 1,
+      "en": "Classic problem. When you redraw, the old elements disappear along with their listeners. The fix is event delegation.",
+      "jp": "よくある問題です。描き直すと、古い要素がリスナーごと消えます。直し方は、イベント委譲です。"
+     },
+     {
+      "sp": 0,
+      "en": "What is that?",
+      "jp": "それは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Put one listener on the parent, the list itself. When any child is clicked, the event bubbles up, and you check e.target to see which child it was.",
+      "jp": "親、つまりリスト自体に、リスナーを一つ付けます。どの子が押されても、イベントが上に伝わってくるので、e.targetでどの子か確かめます。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do I know which task the child represents?",
+      "jp": "その子がどのタスクかは、どう分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Put the id in a data attribute, like data-id=\"5\", and read it with e.target.dataset.id. Then you find the task in your state.",
+      "jp": "data-id=\"5\"のようなデータ属性にidを入れて、e.target.dataset.idで読みます。そのあと、stateの中でタスクを探します。"
+     },
+     {
+      "sp": 0,
+      "en": "That's tidy. The screen carries only the id, and the data stays in the state.",
+      "jp": "すっきりしていますね。画面にはidだけがあり、データはstateに残ります。"
+     },
+     {
+      "sp": 1,
+      "en": "You've just restated the whole philosophy in one sentence.",
+      "jp": "その一文で、考え方全体をもう一度言い切りましたね。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：保存：localStorageとバックアップ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Where can my app save data in the browser?",
+      "jp": "アプリは、ブラウザのどこにデータを保存できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "localStorage is the simplest. localStorage.setItem('tasks', JSON.stringify(tasks)) saves, and JSON.parse(localStorage.getItem('tasks')) loads.",
+      "jp": "一番簡単なのはlocalStorageです。localStorage.setItem('tasks', JSON.stringify(tasks))で保存し、JSON.parse(localStorage.getItem('tasks'))で読み込みます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a size limit?",
+      "jp": "容量の上限はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Roughly five megabytes in most browsers. It's fine for settings and small lists. For larger data, use IndexedDB, which is asynchronous and more complex.",
+      "jp": "ほとんどのブラウザで、おおよそ5メガバイトです。設定や小さなリストには十分です。もっと大きなデータにはIndexedDBを使いますが、非同期で少し複雑です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can the data disappear?",
+      "jp": "データが消えることはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and that's important. The browser can clear site data, especially if the app isn't used for a long time, and private mode may refuse to save at all. Never treat it as a permanent vault.",
+      "jp": "あります。そしてそれは重要です。ブラウザはサイトのデータを消すことがあり、とくに長く使われないアプリではそうです。プライベートモードでは、保存自体を拒否することもあります。永久の金庫だと思ってはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "So what should I do?",
+      "jp": "では、どうすればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Build an export feature. Let the user save the data as a file, and import it back. A backup button is the best insurance you can give.",
+      "jp": "書き出し機能を作ります。ユーザーがデータをファイルとして保存でき、読み込んで戻せるようにします。バックアップのボタンは、あなたが用意できる最高の保険です。"
+     },
+     {
+      "sp": 0,
+      "en": "What about wrapping the calls in try and catch?",
+      "jp": "呼び出しをtryとcatchで囲むのは？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, always. Reading and writing can throw errors. If saving fails, tell the user on the screen instead of failing silently.",
+      "jp": "はい、必ずです。読み書きはエラーを投げることがあります。保存に失敗したら、黙って失敗せず、画面でユーザーに知らせます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I never save there?",
+      "jp": "そこに絶対保存してはいけないものは？"
+     },
+     {
+      "sp": 1,
+      "en": "Passwords and secrets in plain text. localStorage isn't encrypted. If you must keep something private, encrypt it with a passcode first.",
+      "jp": "パスワードや秘密を平文で保存してはいけません。localStorageは暗号化されていません。どうしても秘密を持つなら、先にパスコードで暗号化します。"
+     },
+     {
+      "sp": 0,
+      "en": "And a version number for the saved format?",
+      "jp": "保存の形式にバージョン番号を持たせるのは？"
+     },
+     {
+      "sp": 1,
+      "en": "Excellent habit. Save { v: 1, tasks: [...] }. Later, when you change the format, you can detect the old one and convert it.",
+      "jp": "素晴らしい習慣です。{ v: 1, tasks: [...] }のように保存します。あとで形式を変える時、古い形を見分けて変換できます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：非同期処理 async/await",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, some code runs later, like loading from the network. How does that work?",
+      "jp": "ケン、ネットワークからの読み込みのように、あとで実行されるコードがあります。あれはどういう仕組みですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Some tasks take time, so the browser doesn't wait. It continues with other work and comes back when the result is ready. That's asynchronous code.",
+      "jp": "時間がかかる仕事があるので、ブラウザは待たずに、他の作業を続けます。そして結果が準備できたら戻ってきます。それが非同期のコードです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I write it without getting lost?",
+      "jp": "迷子にならずに書くには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use async and await. Inside an async function, await pauses that function until the answer comes, but the rest of the page keeps working.",
+      "jp": "asyncとawaitを使います。async関数の中で、awaitは答えが来るまでその関数だけを止めますが、ページの残りは動き続けます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show me a network example?",
+      "jp": "ネットワークの例を見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "async function load() { const res = await fetch(url); const data = await res.json(); return data }. Two awaits: one for the response, one for reading its body.",
+      "jp": "async function load() { const res = await fetch(url); const data = await res.json(); return data }。awaitが二つあります。応答を待つものと、その本文を読むものです。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the network is down?",
+      "jp": "ネットワークが切れていたら？"
+     },
+     {
+      "sp": 1,
+      "en": "fetch throws an error, so wrap it in try and catch. Also check res.ok, because a server error like 404 doesn't throw by itself.",
+      "jp": "fetchはエラーを投げるので、tryとcatchで囲みます。res.okも確認してください。404のようなサーバーのエラーは、それだけでは投げられないからです。"
+     },
+     {
+      "sp": 0,
+      "en": "I once got an error mentioning CORS.",
+      "jp": "以前、CORSというエラーが出たことがあります。"
+     },
+     {
+      "sp": 1,
+      "en": "CORS is a browser rule. A page can call another site only if that site allows it. If it doesn't, the browser blocks the response, and the fix is on the server side, not in your code.",
+      "jp": "CORSはブラウザの決まりです。ページが別のサイトを呼べるのは、そのサイトが許可している時だけです。許可がなければブラウザが応答を止め、直すのはあなたのコードではなくサーバー側です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it safe to put an API key in my code?",
+      "jp": "APIキーをコードに入れても安全ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Anything in a browser app can be read by anyone. Let the user type their own key and store it carefully, or put the key on a server you control.",
+      "jp": "いいえ。ブラウザのアプリに入っているものは、誰でも読めます。ユーザーに自分のキーを入力してもらい、慎重に保存するか、自分で管理するサーバーにキーを置きます。"
+     },
+     {
+      "sp": 0,
+      "en": "And if I forget await?",
+      "jp": "awaitを忘れたら？"
+     },
+     {
+      "sp": 1,
+      "en": "You get a Promise object instead of the data, and the screen shows strange text. When you see \"Promise\" in the output, check for a missing await.",
+      "jp": "データの代わりにPromiseというオブジェクトが得られ、画面に変な文字が出ます。出力に「Promise」と見えたら、awaitの付け忘れを確認します。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：PWAとiPhoneの落とし穴",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My apps are used from the iPhone home screen. Are there special traps?",
+      "jp": "私のアプリはiPhoneのホーム画面から使います。特別な落とし穴はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Several. The first: if an input has a font size below sixteen pixels, iPhone zooms the page when you tap it, and it may not zoom back. Set input, select, and textarea to at least 16 pixels.",
+      "jp": "いくつかあります。一つ目、入力欄の文字が16ピクセル未満だと、タップした時にiPhoneがページを拡大し、元に戻らないことがあります。input、select、textareaを、16ピクセル以上にします。"
+     },
+     {
+      "sp": 0,
+      "en": "What else?",
+      "jp": "ほかには？"
+     },
+     {
+      "sp": 1,
+      "en": "Screen height. 100vh can include the area behind the address bar, so the bottom buttons get hidden. Try 100dvh, and test on a real phone.",
+      "jp": "画面の高さです。100vhはアドレスバーの裏の部分を含むことがあり、下のボタンが隠れます。100dvhを試し、実機で確かめます。"
+     },
+     {
+      "sp": 0,
+      "en": "And the notch and the home bar?",
+      "jp": "ノッチやホームバーは？"
+     },
+     {
+      "sp": 1,
+      "en": "Use env(safe-area-inset-bottom) in your padding, together with viewport-fit equals cover in the viewport meta tag. That keeps buttons away from the edges.",
+      "jp": "paddingにenv(safe-area-inset-bottom)を使い、viewportのmetaタグにviewport-fit=coverを合わせます。ボタンが端から離れます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about touch size?",
+      "jp": "タッチの大きさは？"
+     },
+     {
+      "sp": 1,
+      "en": "Make buttons at least forty-four pixels tall. Small buttons feel fine with a mouse, but with a thumb they cause mistakes.",
+      "jp": "ボタンは高さ44ピクセル以上にします。マウスなら小さくても平気ですが、親指では押し間違いが起きます。"
+     },
+     {
+      "sp": 0,
+      "en": "Now the one that bites me the most: I update the app, and nothing changes.",
+      "jp": "私が一番やられるのはこれです。アプリを更新しても、何も変わらないんです。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the service worker cache. The old version is kept for offline use, and it keeps serving until it's replaced. Close the app completely and open it again, sometimes twice.",
+      "jp": "サービスワーカーのキャッシュです。古い版がオフライン用に保存され、入れ替わるまで出し続けます。アプリを完全に閉じて、開き直します。二回必要なこともあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I make that less confusing?",
+      "jp": "それを分かりにくくなくできますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Show the version number on the screen, like r11. Then you can see at a glance whether you're running the new one. Some apps also use a network-first strategy for the main page.",
+      "jp": "画面にr11のようなバージョン番号を出します。すると、新しい版かどうかが一目で分かります。メインのページには、ネットワーク優先の方法を使うアプリもあります。"
+     },
+     {
+      "sp": 0,
+      "en": "And what does the manifest do?",
+      "jp": "マニフェストは何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a small file that gives the app its name, icon, and colors when it's added to the home screen. The service worker makes it work offline.",
+      "jp": "ホーム画面に追加した時の、アプリの名前、アイコン、色を決める小さなファイルです。オフラインで動くようにするのは、サービスワーカーです。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：エラーの読みかたとデバッグ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's practice reading errors. The console says \"Cannot read properties of undefined.\"",
+      "jp": "エラーを読む練習をしましょう。コンソールに「undefinedのプロパティを読めません」と出ています。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. That means you wrote something like a.b, but a was undefined. Which variable is it? Look at the line number, then print that variable just before.",
+      "jp": "良いですね。a.bのように書いたのに、aがundefinedだったという意味です。どの変数か。行番号を見て、その直前でその変数を表示します。"
+     },
+     {
+      "sp": 0,
+      "en": "And \"x is not defined\"?",
+      "jp": "「xが定義されていません」は？"
+     },
+     {
+      "sp": 1,
+      "en": "A typo, a name outside its scope, or something used before it was created. Check the spelling and where it was declared.",
+      "jp": "綴りの間違い、スコープの外の名前、作る前に使ったもののどれかです。綴りと、宣言した場所を確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "\"Unexpected token\"?",
+      "jp": "「予期しないトークン」は？"
+     },
+     {
+      "sp": 1,
+      "en": "A syntax error. Look at the line it reports and the line just before. Often a bracket, a quote, or a comma is missing, or a full-width character slipped in.",
+      "jp": "構文のエラーです。報告された行と、その直前の行を見ます。括弧、引用符、カンマの抜けや、全角の文字が紛れ込んでいることがよくあります。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the button does nothing, and there's no error at all?",
+      "jp": "ボタンが何もせず、エラーも全く出ない時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Then the listener probably isn't attached. Put console.log at the start of the handler. If nothing appears, the click never arrived. Check the id and the timing.",
+      "jp": "リスナーが付いていないのでしょう。処理の最初にconsole.logを置きます。何も出なければ、クリックが届いていません。idとタイミングを確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I narrow down a problem in a big file?",
+      "jp": "大きなファイルで、問題を絞り込むには？"
+     },
+     {
+      "sp": 1,
+      "en": "Cut in half. Disable half of the code and see if the problem remains. Repeat, and you find the guilty part in a few steps. This is binary search for bugs.",
+      "jp": "半分に切ります。コードの半分を無効にして、問題が残るか見ます。くり返せば、数回で犯人の部分に行き着きます。バグを探す二分探索です。"
+     },
+     {
+      "sp": 0,
+      "en": "On the iPhone I can't see the console.",
+      "jp": "iPhoneではコンソールが見られません。"
+     },
+     {
+      "sp": 1,
+      "en": "Two options. Debug on a PC browser first, since most bugs are the same. And add a small hidden log panel that shows messages and errors on the screen.",
+      "jp": "二つあります。まずパソコンのブラウザで直します。ほとんどのバグは同じだからです。そして、メッセージとエラーを画面に出す、小さな隠しログ欄を付けます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I write in the log?",
+      "jp": "ログには何を書けばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The place and the value: \"save: tasks=12\". A log that says only \"here\" doesn't help you tomorrow.",
+      "jp": "場所と値です。「save: tasks=12」のように。「ここ」とだけ書いたログは、明日のあなたを助けません。"
+     }
+    ]
+   },
+   {
+    "t": "第7講：安全に書く",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you mentioned that innerHTML can be dangerous. Can you explain?",
+      "jp": "ケン、innerHTMLが危険になりうると言いましたね。説明してもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Say a user types a memo containing a script tag, and you put it into innerHTML. The browser may run that script, and it can read the user's data. This is called cross-site scripting, or XSS.",
+      "jp": "ユーザーがスクリプトのタグを含むメモを打ち、それをinnerHTMLに入れたとします。ブラウザがそのスクリプトを実行し、ユーザーのデータを読めてしまうかもしれません。これがクロスサイトスクリプティング、XSSです。"
+     },
+     {
+      "sp": 0,
+      "en": "In my own personal app, who would attack me?",
+      "jp": "自分用のアプリで、誰が私を攻撃するんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Maybe nobody today. But data can arrive from elsewhere, such as pasted text, imported files, or a shared link. Build the habit now, and the habit protects you later.",
+      "jp": "今日は誰もいないかもしれません。でも、データは貼り付けた文字、読み込んだファイル、共有リンクなど、別の場所から届くことがあります。今から習慣にすれば、その習慣があとで守ってくれます。"
+     },
+     {
+      "sp": 0,
+      "en": "So what's the rule?",
+      "jp": "では、決まりは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Treat every outside string as untrusted. Use textContent, or escape the characters, such as the less-than sign, before putting them into HTML.",
+      "jp": "外から来た文字列は、すべて信用しないものとして扱います。textContentを使うか、HTMLに入れる前に、小なり記号などの文字をエスケープします。"
+     },
+     {
+      "sp": 0,
+      "en": "What about eval?",
+      "jp": "evalはどうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Never use eval, or new Function, with outside text. It runs any text as code. To read data, use JSON.parse, which only reads data and can't run anything.",
+      "jp": "外から来た文字にevalやnew Functionを使ってはいけません。どんな文字もコードとして実行します。データを読むには、JSON.parseを使います。データを読むだけで、何も実行できません。"
+     },
+     {
+      "sp": 0,
+      "en": "What about libraries from the internet?",
+      "jp": "インターネット上のライブラリは？"
+     },
+     {
+      "sp": 1,
+      "en": "Load them only from trusted sources, and pin an exact version. A script from another site has the same power as your own code.",
+      "jp": "信頼できる提供元からだけ読み込み、バージョンを正確に固定します。他のサイトのスクリプトは、あなた自身のコードと同じ力を持ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "And secrets?",
+      "jp": "秘密は？"
+     },
+     {
+      "sp": 1,
+      "en": "Never put keys, tokens, or passwords in code you publish. A public repository can be read by anyone, and bots scan for keys within minutes.",
+      "jp": "公開するコードに、キー、トークン、パスワードを入れてはいけません。公開リポジトリは誰でも読めますし、ボットは数分でキーを探し出します。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I already pushed one by accident?",
+      "jp": "もし間違えて、もう公開してしまったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Treat it as leaked. Revoke it and create a new one right away. Deleting the file afterward isn't enough, because the history still holds it.",
+      "jp": "漏れたものとして扱います。すぐに無効にして、新しいものを作ります。あとでファイルを消すだけでは足りません。履歴に残っているからです。"
+     }
+    ]
+   },
+   {
+    "t": "第8講：自分のアプリを作る道すじ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's put it all together. If I wanted to build a new app from nothing, what are the steps?",
+      "jp": "全部を合わせてみましょう。何もないところから新しいアプリを作るなら、手順は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "One: write the purpose in a single sentence. Two: list the data you'll keep. Three: sketch the screen on paper. Four: write the HTML. Five: style it with CSS.",
+      "jp": "一、目的を一文で書く。二、持つデータを書き出す。三、画面を紙に描く。四、HTMLを書く。五、CSSで整える。"
+     },
+     {
+      "sp": 0,
+      "en": "Then the JavaScript?",
+      "jp": "それからJavaScriptですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Six: create the state and the functions that change it. Seven: write render. Eight: connect the events. Nine: add saving. Ten: handle errors.",
+      "jp": "六、stateと、それを変える関数を作る。七、renderを書く。八、イベントをつなぐ。九、保存を加える。十、エラー処理をする。"
+     },
+     {
+      "sp": 0,
+      "en": "And at the end?",
+      "jp": "最後は？"
+     },
+     {
+      "sp": 1,
+      "en": "Eleven: try strange input, such as empty text, a very long line, symbols, and thousands of items. Twelve: test on a real iPhone. Thirteen: tidy the code. Fourteen: publish and check the version number.",
+      "jp": "十一、空の文字、とても長い行、記号、何千件ものデータなど、変な入力を試す。十二、実機のiPhoneで試す。十三、コードを整える。十四、公開して、バージョン番号を確認する。"
+     },
+     {
+      "sp": 0,
+      "en": "Fourteen steps. It's long, but each one is small.",
+      "jp": "十四段階。長いですが、一つ一つは小さいです。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the secret of building anything big. Small steps, tested one at a time.",
+      "jp": "それが、大きなものを作る秘訣です。小さな手順を、一つずつ試す。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I ask an AI to write the code for me?",
+      "jp": "AIにコードを書いてもらってもいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, as a helper. Give it the purpose, the data shape, and the screen. Then read the result, run it with harmless data, and ask it to explain what you don't understand.",
+      "jp": "はい、助っ人として。目的、データの形、画面を伝えます。そして結果を読み、害のないデータで動かし、分からない部分は説明してもらいます。"
+     },
+     {
+      "sp": 0,
+      "en": "I think I finally see why you always say, \"Understand before you run.\"",
+      "jp": "あなたがいつも「理解してから実行して」と言う理由が、やっと分かった気がします。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the whole lesson. Tools change, but that habit stays useful for your entire career.",
+      "jp": "それが講義のすべてです。道具は変わっても、その習慣は、キャリアのずっと先まで役に立ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. I'll build the small task list this weekend.",
+      "jp": "ありがとう、ケン。今週末に、小さなタスクリストを作ってみます。"
+     },
+     {
+      "sp": 1,
+      "en": "Wonderful. And if you're curious, next time I'll tell you how Java differs from JavaScript.",
+      "jp": "素晴らしい。もし興味があれば、次回は、JavaがJavaScriptとどう違うかを話します。"
+     }
+    ]
+   }
+  ]
+ }
+]

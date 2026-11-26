@@ -1,0 +1,666 @@
+[
+ {
+  "id": "lecture-js1",
+  "ic": "🟨",
+  "n": "コード講義2：JavaScript編・基礎",
+  "hint": "Lecture style, part two: Ken teaches Mia how to think in JavaScript, from input-process-output and variables to arrays, objects, functions and the data-versus-screen idea",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：プログラムは「入力・処理・出力」",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, last time you promised JavaScript. Is it very different from PowerShell?",
+      "jp": "ケン、前回JavaScriptを約束してくれましたね。PowerShellとは大きく違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The syntax is different, but the thinking is the same. Every program takes input, processes it, and produces output. That is the whole secret.",
+      "jp": "書き方は違いますが、考え方は同じです。どんなプログラムも、入力を受け取り、処理をして、出力を作ります。それが秘密のすべてです。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me an example from an app?",
+      "jp": "アプリでの例を挙げてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A memo app. Input is the text you type and the button you press. Processing is saving it to a list. Output is the list shown on the screen.",
+      "jp": "メモアプリです。入力は、打った文字と押したボタン。処理は、リストに保存すること。出力は、画面に表示されるリストです。"
+     },
+     {
+      "sp": 0,
+      "en": "So before I write any code, I should write those three things down?",
+      "jp": "じゃあコードを書く前に、その三つを書き出すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. If you can't say what goes in and what comes out, the code will wander. A paper note takes one minute and saves an hour.",
+      "jp": "はい。何が入って何が出るか言えないと、コードは迷走します。紙のメモは一分で済み、一時間を節約してくれます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where does JavaScript actually run?",
+      "jp": "JavaScriptは実際にどこで動くんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Mainly in the browser, which is why it can change the screen. It also runs on servers through Node.js, but today we'll focus on the browser, because your apps live there.",
+      "jp": "主にブラウザの中です。だから画面を変えられます。Node.jsを使えばサーバーでも動きますが、今日はあなたのアプリがあるブラウザに集中します。"
+     },
+     {
+      "sp": 0,
+      "en": "Do I need to install anything?",
+      "jp": "何かインストールが必要ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Every browser already has a console. You can open it in a desktop browser, type 1 plus 1, press Enter, and see 2 right away.",
+      "jp": "いいえ。どのブラウザにも、すでにコンソールがあります。パソコンのブラウザで開いて、1+1と打ってEnterを押せば、すぐに2が出ます。"
+     },
+     {
+      "sp": 0,
+      "en": "And on my iPhone?",
+      "jp": "iPhoneでは？"
+     },
+     {
+      "sp": 1,
+      "en": "It's harder to see the console there, so I suggest practicing on a PC and testing on the phone afterward. Or build a small on-screen log box inside your app.",
+      "jp": "そこではコンソールが見づらいので、パソコンで練習して、あとでiPhoneで試すことをすすめます。あるいはアプリの中に、小さな画面上のログ欄を作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the smallest program I can write?",
+      "jp": "書ける一番小さなプログラムは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "console.log('Hello'). It sends a message to the console. When you see it appear, you've done input, processing, and output in the simplest form.",
+      "jp": "console.log('Hello')です。コンソールにメッセージを送ります。それが表示されたら、入力・処理・出力を一番単純な形でやり遂げたことになります。"
+     },
+     {
+      "sp": 0,
+      "en": "That's small enough that I can't be scared of it.",
+      "jp": "それなら小さすぎて、怖がりようがありません。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. We'll grow it one piece at a time.",
+      "jp": "良いですね。一つずつ育てていきましょう。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：変数と型",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I store a value in JavaScript?",
+      "jp": "JavaScriptで値を保存するにはどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With const or let. const name = 'Mia' creates a name that can't be reassigned. let count = 0 creates one that can change later.",
+      "jp": "constかletです。const name = 'Mia'は、あとで代入し直せない名前を作ります。let count = 0は、あとで変えられるものを作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Which one should I use?",
+      "jp": "どちらを使えばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with const. Change to let only when you really need to change the value. That habit prevents many accidents.",
+      "jp": "まずconstです。本当に値を変える必要がある時だけ、letにします。その習慣で多くの事故を防げます。"
+     },
+     {
+      "sp": 0,
+      "en": "I've also seen var in old code.",
+      "jp": "古いコードではvarも見ました。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the old way, and its scope rules surprise people. In new code, avoid var.",
+      "jp": "それは古い方法で、スコープの決まりが人を驚かせます。新しいコードでは、varを避けてください。"
+     },
+     {
+      "sp": 0,
+      "en": "What kinds of values are there?",
+      "jp": "どんな種類の値がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The basic ones are strings, numbers, booleans, null, and undefined. Plus arrays and objects, which hold many values.",
+      "jp": "基本は、文字列、数値、真偽値、null、undefinedです。それと、たくさんの値を持つ配列とオブジェクトがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between null and undefined?",
+      "jp": "nullとundefinedの違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Undefined means \"no value has been set yet.\" Null means \"I deliberately put nothing here.\" In practice, treat both as empty, and check for them.",
+      "jp": "undefinedは「まだ値が設定されていない」、nullは「わざと何も入れていない」という意味です。実際には、どちらも空として扱い、確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I join text and variables?",
+      "jp": "文字と変数をつなぐには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use backticks. `Hello ${name}` puts the value of name inside the text. It's much cleaner than joining with plus signs.",
+      "jp": "バッククォートを使います。`Hello ${name}`は、nameの値を文字の中に入れます。プラス記号でつなぐより、ずっとすっきりします。"
+     },
+     {
+      "sp": 0,
+      "en": "And comparing values?",
+      "jp": "値の比較は？"
+     },
+     {
+      "sp": 1,
+      "en": "Always use three equals signs. 1 === '1' is false, because a number and a string are different types. Two equals signs convert types silently, and that causes bugs.",
+      "jp": "必ず等号を三つ使います。1 === '1'は、数値と文字列で型が違うのでfalseです。等号二つは、黙って型を変換するので、不具合の原因になります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything strange about numbers?",
+      "jp": "数値に変なところはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. 0.1 plus 0.2 gives 0.30000000000000004. For money, store whole units like yen as integers, and format them only when showing them.",
+      "jp": "あります。0.1+0.2は0.30000000000000004になります。お金は、円のような整数の単位で持ち、表示する時だけ整形します。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a useful warning. I would have trusted the decimals.",
+      "jp": "役に立つ警告です。小数を信じてしまうところでした。"
+     },
+     {
+      "sp": 1,
+      "en": "Everyone does once. Now you know the rule.",
+      "jp": "誰でも一度は信じます。これで決まりが分かりましたね。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：条件と繰り返し",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How does JavaScript make decisions?",
+      "jp": "JavaScriptはどうやって判断しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With if. if (score >= 80) { console.log('Great') } else { console.log('Keep going') }. The condition goes in parentheses.",
+      "jp": "ifです。if (score >= 80) { console.log('Great') } else { console.log('Keep going') }。条件は丸括弧に入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "That looks like PowerShell, except for the comparison.",
+      "jp": "比較のところ以外は、PowerShellに似ています。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Here you use the symbols: greater-than, less-than, and three equals. There is no -eq.",
+      "jp": "そうです。ここでは記号を使います。大なり、小なり、等号三つです。-eqはありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What counts as true in a condition?",
+      "jp": "条件で、何が真として扱われますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Anything except a few falsy values: false, zero, an empty string, null, undefined, and NaN. So if (list.length) means \"if the list isn't empty.\"",
+      "jp": "いくつかの偽の値を除いて、すべてです。false、0、空文字、null、undefined、NaNです。だからif (list.length)は「リストが空でなければ」という意味になります。"
+     },
+     {
+      "sp": 0,
+      "en": "And what about when zero is a valid value?",
+      "jp": "0が有効な値の場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "Then compare directly, such as count === 0. Otherwise, a real zero looks like \"nothing.\"",
+      "jp": "その時は、count === 0のように直接比較します。そうしないと、本当の0が「何もない」ように見えてしまいます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I repeat something?",
+      "jp": "何かをくり返すには？"
+     },
+     {
+      "sp": 1,
+      "en": "The most readable is for...of. for (const item of items) { console.log(item) } runs once for each item.",
+      "jp": "一番読みやすいのはfor...ofです。for (const item of items) { console.log(item) }は、項目ごとに一回実行します。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the classic for loop with i?",
+      "jp": "iを使う昔ながらのforは？"
+     },
+     {
+      "sp": 1,
+      "en": "It's still useful when you need the index, such as for (let i = 0; i < n; i++). But the index starts at zero, and many beginners make an off-by-one mistake.",
+      "jp": "添字が必要な時には今でも便利で、for (let i = 0; i < n; i++)のように書きます。ただ、添字は0から始まるので、一つずれる間違いを初心者はよくします。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a danger of loops that never stop?",
+      "jp": "永遠に終わらないループの危険はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. If the condition never becomes false, the page freezes. Always ask, \"What makes this loop end?\"",
+      "jp": "あります。条件がいつまでも偽にならないと、ページが固まります。いつも「何がこのループを終わらせるのか」と考えてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Like checking the exit before entering the room.",
+      "jp": "部屋に入る前に、出口を確認するようなものですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Nice way to say it. I'll borrow that.",
+      "jp": "いい言い方ですね。使わせてもらいます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：配列と map・filter",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, my app has a list of tasks. How do I handle a list?",
+      "jp": "ケン、私のアプリにはタスクのリストがあります。リストはどう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With an array. const tasks = ['mail', 'report', 'lunch']. You can add with push, and tasks.length tells you how many there are.",
+      "jp": "配列です。const tasks = ['mail', 'report', 'lunch']。pushで追加でき、tasks.lengthで個数が分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do I get the first one?",
+      "jp": "最初のものはどう取りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "tasks[0]. Remember, counting starts at zero.",
+      "jp": "tasks[0]です。数え始めは0だと覚えておいてください。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I want to keep only some of the items?",
+      "jp": "一部だけを残したい時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Use filter. tasks.filter(t => t.done) returns a new array with only the finished tasks. The original array is not changed.",
+      "jp": "filterを使います。tasks.filter(t => t.done)は、終わったタスクだけの新しい配列を返します。元の配列は変わりません。"
+     },
+     {
+      "sp": 0,
+      "en": "What does the arrow mean?",
+      "jp": "矢印は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a short way to write a function. t => t.done means \"given t, return t.done.\" Read the arrow as \"gives.\"",
+      "jp": "関数の短い書き方です。t => t.doneは「tを受け取って、t.doneを返す」という意味です。矢印は「〜を返す」と読んでください。"
+     },
+     {
+      "sp": 0,
+      "en": "And to change every item into something else?",
+      "jp": "全部の項目を別のものに変えるには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use map. tasks.map(t => t.title) turns a list of task objects into a list of titles.",
+      "jp": "mapを使います。tasks.map(t => t.title)は、タスクのオブジェクトのリストを、題名のリストに変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about finding just one item?",
+      "jp": "一つだけ探すには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use find. tasks.find(t => t.id === 5) returns the first match, or undefined if nothing matches. Always check for undefined.",
+      "jp": "findを使います。tasks.find(t => t.id === 5)は最初の一致を返し、無ければundefinedです。undefinedの確認を必ずしてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a way to total things up?",
+      "jp": "合計を出す方法はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "reduce. prices.reduce((sum, p) => sum + p, 0) adds them all. It looks odd at first, so a simple for...of loop is fine too.",
+      "jp": "reduceです。prices.reduce((sum, p) => sum + p, 0)で全部を足します。最初は変に見えるので、単純なfor...ofでも構いません。"
+     },
+     {
+      "sp": 0,
+      "en": "You said the original array isn't changed. Is that always true?",
+      "jp": "元の配列が変わらないと言いましたね。いつもそうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Not always. sort changes the original in place. To be safe, copy first: [...tasks].sort(). Those three dots spread the items into a new array.",
+      "jp": "いつもではありません。sortは元の配列を直接変えます。安全のために、先にコピーします。[...tasks].sort()。その三つの点は、項目を新しい配列に広げます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：オブジェクトとJSON",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I store a task with a title and a due date together?",
+      "jp": "題名と期限をまとめて一つのタスクとして持つには？"
+     },
+     {
+      "sp": 1,
+      "en": "With an object. const task = { id: 1, title: 'Write report', due: '2026-12-01', done: false }. Names on the left, values on the right.",
+      "jp": "オブジェクトです。const task = { id: 1, title: 'Write report', due: '2026-12-01', done: false }。左に名前、右に値です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I read one value?",
+      "jp": "一つの値はどう読みますか？"
+     },
+     {
+      "sp": 1,
+      "en": "task.title gives 'Write report'. If a name doesn't exist, you get undefined, not an error, so a typo can hide quietly.",
+      "jp": "task.titleで'Write report'が得られます。存在しない名前はエラーではなくundefinedになるので、綴りの間違いが静かに隠れることがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I pull out several values at once?",
+      "jp": "いくつかの値を一度に取り出せますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with destructuring: const { title, due } = task. It creates two variables in one line.",
+      "jp": "はい、分割代入で。const { title, due } = taskは、一行で二つの変数を作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "My apps save data in the browser. How does an object become something I can save?",
+      "jp": "私のアプリはブラウザにデータを保存します。オブジェクトは、どうすれば保存できる形になりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You turn it into text with JSON.stringify(task). To get the object back, use JSON.parse(text). JSON is just a text format for data.",
+      "jp": "JSON.stringify(task)で文字にします。オブジェクトに戻すにはJSON.parse(text)です。JSONは、データのための文字の形式にすぎません。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the saved text is broken?",
+      "jp": "保存した文字が壊れていたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then JSON.parse throws an error. Always wrap it in try and catch, and fall back to an empty default.",
+      "jp": "その時はJSON.parseがエラーを投げます。必ずtryとcatchで囲み、空の初期値に戻してください。"
+     },
+     {
+      "sp": 0,
+      "en": "Is JSON the same as a JavaScript object?",
+      "jp": "JSONはJavaScriptのオブジェクトと同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Almost, but stricter. In JSON, names must be in double quotes, and you can't have comments or trailing commas. That's why we use the tools to write it, instead of typing it by hand.",
+      "jp": "ほぼ同じですが、もっと厳格です。JSONでは名前を二重引用符で囲む必要があり、コメントや末尾のカンマは使えません。だから手で打たずに、ツールで書き出します。"
+     },
+     {
+      "sp": 0,
+      "en": "And to save the whole list?",
+      "jp": "リスト全体を保存するには？"
+     },
+     {
+      "sp": 1,
+      "en": "Stringify the array in the same way. One call, and the whole list becomes one piece of text.",
+      "jp": "配列も同じように文字にします。一回の呼び出しで、リスト全体が一つの文字になります。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：関数に分ける",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My code is getting long. Everything is in one big block.",
+      "jp": "コードが長くなってきました。全部が一つの大きな塊です。"
+     },
+     {
+      "sp": 1,
+      "en": "Time to split it into functions. A function is a named piece of work. function addTask(title) { ... } does one job, and its name says what the job is.",
+      "jp": "関数に分ける時です。関数は、名前の付いた仕事のまとまりです。function addTask(title) { ... }は一つの仕事をし、名前がその仕事を表します。"
+     },
+     {
+      "sp": 0,
+      "en": "How small should a function be?",
+      "jp": "関数はどのくらい小さくするべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Small enough to describe in one sentence without using the word \"and.\" If you need \"and,\" split it in two.",
+      "jp": "「そして」という言葉を使わずに、一文で説明できる大きさです。「そして」が必要なら、二つに分けます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can a function give back a result?",
+      "jp": "関数は結果を返せますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with return. function total(prices) { return prices.reduce(...) }. The caller gets the value and decides what to do with it.",
+      "jp": "はい、returnで。function total(prices) { return prices.reduce(...) }。呼び出した側が値を受け取り、どうするか決めます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do variables live? I got an error about a name not being defined.",
+      "jp": "変数はどこに存在しますか？名前が定義されていないというエラーが出ました。"
+     },
+     {
+      "sp": 1,
+      "en": "Variables made with const or let live inside the braces where you made them. That's called scope. Outside, the name doesn't exist.",
+      "jp": "constやletで作った変数は、作った波括弧の中に存在します。それをスコープと呼びます。外側には、その名前はありません。"
+     },
+     {
+      "sp": 0,
+      "en": "So the fix is to declare it in a wider place?",
+      "jp": "じゃあ直し方は、もっと広い場所で宣言することですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Sometimes. But often the better fix is to pass the value in as a parameter, and return the result. Functions that depend only on their inputs are easier to test.",
+      "jp": "そうする場合もあります。でも多くは、値をパラメータとして渡し、結果を返すほうが良い直し方です。入力だけに頼る関数は、試しやすいです。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I name my functions?",
+      "jp": "関数にはどんな名前を付けるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Verbs that say the job: addTask, saveTasks, renderList. If the name is vague, like doStuff, the code is vague too.",
+      "jp": "仕事を表す動詞です。addTask、saveTasks、renderList。doStuffのようにあいまいな名前なら、コードもあいまいになります。"
+     },
+     {
+      "sp": 0,
+      "en": "It's like the verb-noun rule in PowerShell.",
+      "jp": "PowerShellの動詞-名詞の決まりみたいですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Good names are the same in every language.",
+      "jp": "その通りです。良い名前は、どの言語でも同じです。"
+     }
+    ]
+   },
+   {
+    "t": "第7講：データと画面を分ける",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, my screen and my data keep getting mixed up. When I change one, the other is wrong.",
+      "jp": "ケン、画面とデータがいつも混ざります。片方を変えると、もう片方が間違います。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the most important design idea in this course. Keep your data in one place, and make the screen from the data. Never treat the screen as the data.",
+      "jp": "この講義で一番大事な設計の考え方です。データを一か所に持ち、画面はデータから作ります。画面をデータとして扱ってはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "What does that look like in code?",
+      "jp": "コードではどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "const state = { tasks: [], filter: 'all' }. That one object is the truth. A function render() reads state and builds the screen.",
+      "jp": "const state = { tasks: [], filter: 'all' }。そのオブジェクトが真実です。render()という関数がstateを読んで、画面を作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "And when the user clicks a button?",
+      "jp": "ユーザーがボタンを押したときは？"
+     },
+     {
+      "sp": 1,
+      "en": "The click handler changes state, and then calls render(). Always in that order: change the data, then redraw.",
+      "jp": "クリックの処理がstateを変え、それからrender()を呼びます。必ずその順番です。データを変えて、描き直す。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is it better than changing the text on the screen directly?",
+      "jp": "なぜ画面の文字を直接変えるより良いんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because the screen always matches the data. If something looks wrong, you look at the state and you know the truth. You don't have to hunt through the screen.",
+      "jp": "画面がいつもデータと一致するからです。おかしく見えたら、stateを見れば真実が分かります。画面の中を探し回らなくて済みます。"
+     },
+     {
+      "sp": 0,
+      "en": "Does redrawing everything every time cost a lot?",
+      "jp": "毎回すべてを描き直すと、負担は大きくありませんか？"
+     },
+     {
+      "sp": 1,
+      "en": "For a personal app with a few hundred items, no. Keep it simple first. Optimize only when you can measure that it's slow.",
+      "jp": "数百件程度の個人のアプリなら、大きくありません。まず単純にします。遅いと測れた時だけ、最適化します。"
+     },
+     {
+      "sp": 0,
+      "en": "And saving? Where does that fit?",
+      "jp": "保存はどこに入りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Right after changing the state: change, save, render. Then if the app closes, the data is safe, and the screen is rebuilt from it next time.",
+      "jp": "stateを変えた直後です。変える、保存する、描く。そうすればアプリが閉じてもデータは安全で、次回はそこから画面が作り直されます。"
+     },
+     {
+      "sp": 0,
+      "en": "Change, save, render. I'll remember that.",
+      "jp": "変える、保存する、描く。覚えておきます。"
+     },
+     {
+      "sp": 1,
+      "en": "That small loop is the heart of almost every app you've built.",
+      "jp": "その小さな循環が、あなたが作ったほとんどのアプリの心臓部です。"
+     }
+    ]
+   },
+   {
+    "t": "第8講：基礎のまとめと練習のしかた",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can you summarize the basics so I can review them on the train?",
+      "jp": "電車で復習できるように、基礎をまとめてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. One: think input, process, output. Two: use const by default, and compare with three equals signs. Three: use for...of, map, and filter for lists.",
+      "jp": "もちろん。一、入力・処理・出力で考える。二、基本はconstを使い、等号三つで比べる。三、リストにはfor...of、map、filterを使う。"
+     },
+     {
+      "sp": 0,
+      "en": "Four?",
+      "jp": "四は？"
+     },
+     {
+      "sp": 1,
+      "en": "Four: objects hold related values, and JSON turns them into text for saving. Five: split work into small functions with verb names. Six: keep the state in one place and render the screen from it.",
+      "jp": "四、オブジェクトは関連する値をまとめ、JSONが保存用の文字に変える。五、仕事を動詞の名前の小さな関数に分ける。六、stateを一か所に持ち、そこから画面を作る。"
+     },
+     {
+      "sp": 0,
+      "en": "That's six rules. I can hold six.",
+      "jp": "六つの決まりなら、覚えていられます。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. How should you practice? Don't just read. Type the examples, change one thing, and predict the result before you run it.",
+      "jp": "良いですね。練習はどうするか。読むだけではいけません。例を打ち、一か所を変え、実行する前に結果を予想します。"
+     },
+     {
+      "sp": 0,
+      "en": "Predict first. That sounds hard.",
+      "jp": "先に予想する。難しそうです。"
+     },
+     {
+      "sp": 1,
+      "en": "It's the best trick. When your prediction is wrong, you've found something you misunderstood, and that is exactly where learning happens.",
+      "jp": "最高のコツです。予想が外れたら、勘違いしていたところを見つけたということで、そこがまさに学びが起きる場所です。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I build first?",
+      "jp": "最初に何を作るべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A tiny task list: add, mark done, delete, and save. It uses every idea we covered today, and it fits in one screen.",
+      "jp": "小さなタスクリストです。追加、完了にする、削除、保存。今日扱った考えをすべて使い、画面一つに収まります。"
+     },
+     {
+      "sp": 0,
+      "en": "And next time?",
+      "jp": "次回は？"
+     },
+     {
+      "sp": 1,
+      "en": "Next time we'll connect the code to the screen: the DOM, events, storage, and the traps that only appear on iPhone.",
+      "jp": "次回は、コードを画面につなぎます。DOM、イベント、保存、そしてiPhoneでだけ現れる落とし穴です。"
+     },
+     {
+      "sp": 0,
+      "en": "I'm looking forward to it.",
+      "jp": "楽しみにしています。"
+     },
+     {
+      "sp": 1,
+      "en": "Me too. Good work today.",
+      "jp": "私もです。今日はよく頑張りました。"
+     }
+    ]
+   }
+  ]
+ }
+]

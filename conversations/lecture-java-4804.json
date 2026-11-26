@@ -1,0 +1,386 @@
+[
+ {
+  "id": "lecture-java",
+  "ic": "☕",
+  "n": "コード講義4：Java編・JavaScriptとの違い",
+  "hint": "Lecture style, part four: Ken explains how Java differs from JavaScript, and teaches the way Java programs are built, with types, classes, compiling, errors and where Java is used",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：JavaとJavaScriptは別の言語",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, is Java just the bigger version of JavaScript?",
+      "jp": "ケン、JavaはJavaScriptの大きい版なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No, and this confuses almost everyone. They are two different languages with different designers and different jobs. The similar name was a marketing choice from the 1990s.",
+      "jp": "いいえ。ほとんどの人がここで混乱します。設計した人も、役目も違う、別々の言語です。名前が似ているのは、1990年代の宣伝上の選択でした。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the main difference in what they do?",
+      "jp": "役目の一番の違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "JavaScript mainly runs in the browser and controls web pages. Java is a general-purpose language, used a lot for servers, business systems, and Android apps.",
+      "jp": "JavaScriptは主にブラウザで動き、Webページを制御します。Javaは汎用の言語で、サーバー、業務システム、Androidアプリなどによく使われます。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do they differ as languages?",
+      "jp": "言語としては、どこが違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Java is statically typed: you declare the type of every variable, and the compiler checks it before the program runs. JavaScript is dynamically typed: types are decided while it runs.",
+      "jp": "Javaは静的型付けです。変数ごとに型を宣言し、プログラムを動かす前にコンパイラが検査します。JavaScriptは動的型付けで、型は動いている間に決まります。"
+     },
+     {
+      "sp": 0,
+      "en": "Which is better?",
+      "jp": "どちらが良いですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Neither is always better. Static types catch many mistakes early, which helps large teams. Dynamic types let you write small things quickly, which suits small apps like yours.",
+      "jp": "どちらが常に良いということはありません。静的な型は、間違いを早く見つけるので、大きなチームに向いています。動的な型は、小さなものを素早く書けるので、あなたのような小さなアプリに向いています。"
+     },
+     {
+      "sp": 0,
+      "en": "So if I know JavaScript, can I read Java?",
+      "jp": "じゃあJavaScriptが分かれば、Javaが読めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You'll recognize a lot: if, for, braces, and methods. But Java requires more structure. Everything lives inside a class, and you write the types out.",
+      "jp": "多くは見覚えがあるでしょう。if、for、波括弧、メソッドなどです。ただJavaは、より多くの構造を求めます。すべてがクラスの中にあり、型を書き出します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why would I learn Java at all?",
+      "jp": "そもそもなぜJavaを学ぶんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because many companies run on it. If you work in IT at a large company, you'll meet Java systems even if you never write them, and knowing the basics helps you read their logs and errors.",
+      "jp": "多くの会社がJavaで動いているからです。大きな会社でITの仕事をすれば、自分で書かなくても、Javaのシステムに出会います。基本を知っていれば、そのログやエラーを読むのに役立ちます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：Javaの最小のプログラムと実行のしくみ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What does a minimal Java program look like?",
+      "jp": "最小のJavaプログラムはどんな形ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "public class Hello { public static void main(String[] args) { System.out.println(\"Hello\"); } }. It looks heavy, but each word has a reason.",
+      "jp": "public class Hello { public static void main(String[] args) { System.out.println(\"Hello\"); }。重く見えますが、各単語に理由があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you take it apart for me?",
+      "jp": "分解してもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Class Hello is the container. The method called main is where the program starts. System.out.println prints a line. The word void means the method returns nothing.",
+      "jp": "class Helloは入れ物です。mainというメソッドが、プログラムの開始地点です。System.out.printlnは一行を表示します。voidは、そのメソッドが何も返さないという意味です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I run it?",
+      "jp": "どうやって実行しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Two steps. First, javac Hello.java compiles the source into bytecode, a file named Hello.class. Second, java Hello runs that bytecode.",
+      "jp": "二段階です。まず、javac Hello.javaが、ソースをバイトコードに変換し、Hello.classというファイルを作ります。次に、java Helloがそのバイトコードを実行します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why two steps? JavaScript just runs.",
+      "jp": "なぜ二段階なんですか？JavaScriptは、ただ動きます。"
+     },
+     {
+      "sp": 1,
+      "en": "Because Java checks everything at compile time. If the code has a type error, you find out before it ever runs. The compile step is a gatekeeper.",
+      "jp": "Javaはコンパイル時にすべてを検査するからです。型の間違いがあれば、実行する前に分かります。コンパイルの段階は、門番です。"
+     },
+     {
+      "sp": 0,
+      "en": "What is the JVM that people mention?",
+      "jp": "みんなが言うJVMとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The Java Virtual Machine. It runs the bytecode, and there's a JVM for each operating system. So the same class file runs on Windows, Mac, or Linux. People call this \"write once, run anywhere.\"",
+      "jp": "Java仮想マシンです。バイトコードを実行し、OSごとにJVMがあります。だから同じclassファイルが、Windows、Mac、Linuxで動きます。「一度書けば、どこでも動く」と言われます。"
+     },
+     {
+      "sp": 0,
+      "en": "And the file name?",
+      "jp": "ファイル名は？"
+     },
+     {
+      "sp": 1,
+      "en": "A public class must live in a file with the same name. Class Hello goes in Hello.java. A mismatch is a very common beginner error.",
+      "jp": "publicなクラスは、同じ名前のファイルに置きます。class HelloはHello.javaです。不一致は、初心者のとてもよくある間違いです。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：型・変数・文字列",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I make a variable in Java?",
+      "jp": "Javaで変数はどう作りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You write the type first. int count = 0; String name = \"Mia\"; double price = 9.5; boolean done = false;. Every line ends with a semicolon.",
+      "jp": "先に型を書きます。int count = 0; String name = \"Mia\"; double price = 9.5; boolean done = false;。各行はセミコロンで終わります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why are there both int and double?",
+      "jp": "なぜintとdoubleの両方があるんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Int holds whole numbers, and double holds decimals. Java wants you to say which one you mean, and it won't silently mix them in the way that JavaScript does.",
+      "jp": "intは整数、doubleは小数を持ちます。Javaは、どちらのつもりか言うように求め、JavaScriptのように黙って混ぜることはしません。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if I put text into an int?",
+      "jp": "intに文字を入れたら、どうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The compiler refuses. You get an error like \"incompatible types,\" and the program won't compile. That's the gatekeeper working.",
+      "jp": "コンパイラが拒否します。「incompatible types」のようなエラーが出て、プログラムはコンパイルされません。門番が働いたということです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is String written with a capital letter?",
+      "jp": "Stringは大文字で書くんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. String is a class, not a basic type like int. And for comparing strings, use name.equals(\"Mia\"), not the double equals sign, which compares whether they are the same object.",
+      "jp": "はい。Stringはクラスで、intのような基本型ではありません。文字列の比較には、name.equals(\"Mia\")を使い、二重の等号は使いません。等号は、同じオブジェクトかどうかを比べるからです。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a trap I would have fallen into.",
+      "jp": "私が落ちそうな罠です。"
+     },
+     {
+      "sp": 1,
+      "en": "Many people do. Also, Java strings use double quotes only. Single quotes are for one character.",
+      "jp": "多くの人が落ちます。もう一つ、Javaの文字列は二重引用符だけです。一重引用符は、一文字用です。"
+     },
+     {
+      "sp": 0,
+      "en": "And lists?",
+      "jp": "リストは？"
+     },
+     {
+      "sp": 1,
+      "en": "An array has a fixed size, like int[] nums = new int[3]. More flexible is ArrayList<String>, whose angle brackets state what type it holds.",
+      "jp": "配列は固定の大きさで、int[] nums = new int[3]のように作ります。もっと柔軟なのがArrayList<String>で、山括弧が、入れる型を表します。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：クラスとオブジェクト",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you said everything is in a class. What is a class for?",
+      "jp": "ケン、すべてがクラスの中だと言いましたね。クラスは何のためにあるんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A class is a blueprint that combines data and behavior. A Task class has fields such as title and done, and methods such as markDone.",
+      "jp": "クラスは、データと動作をまとめた設計図です。Taskクラスには、titleやdoneというフィールドと、markDoneのようなメソッドがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "And an object?",
+      "jp": "オブジェクトは？"
+     },
+     {
+      "sp": 1,
+      "en": "An object is one real thing built from the blueprint. new Task(\"Write report\") creates one. You can create many tasks from the same class.",
+      "jp": "オブジェクトは、設計図から作った一つの実物です。new Task(\"Write report\")で一つ作ります。同じクラスから、たくさんのタスクを作れます。"
+     },
+     {
+      "sp": 0,
+      "en": "In JavaScript, I just wrote an object with curly braces.",
+      "jp": "JavaScriptでは、波括弧でオブジェクトをそのまま書きました。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. In Java, the shape must be defined by a class first. It's more formal, but the compiler then knows exactly which fields exist, and a typo becomes a compile error instead of a quiet undefined.",
+      "jp": "そうです。Javaでは、先にクラスで形を定義する必要があります。形式的ですが、コンパイラがどのフィールドがあるか正確に知っているので、綴りの間違いは、静かなundefinedではなく、コンパイルエラーになります。"
+     },
+     {
+      "sp": 0,
+      "en": "What does private mean when I see it?",
+      "jp": "privateと書いてあるのは、どういう意味ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It hides a field from outside code. Other code must use methods like getTitle. This protects the data from being changed carelessly.",
+      "jp": "フィールドを外のコードから隠します。他のコードは、getTitleのようなメソッドを使う必要があります。データが不注意に変えられるのを防ぎます。"
+     },
+     {
+      "sp": 0,
+      "en": "It's like the rule that screens should not change data directly.",
+      "jp": "画面がデータを直接変えてはいけない、という決まりに似ていますね。"
+     },
+     {
+      "sp": 1,
+      "en": "Good connection. Both ideas separate who owns the data from who uses it.",
+      "jp": "良いつながりです。どちらも、データを持つ者と使う者を分ける考え方です。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：エラーとスタックトレースを読む",
+    "l": [
+     {
+      "sp": 0,
+      "en": "When a Java program fails, I see a long list of lines. What am I looking at?",
+      "jp": "Javaのプログラムが失敗すると、長い行の一覧が出ます。何を見ているんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A stack trace. It shows the chain of method calls that led to the error, with the file name and line number of each.",
+      "jp": "スタックトレースです。エラーに至るまでのメソッド呼び出しの連なりを、それぞれのファイル名と行番号付きで示します。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do I start reading?",
+      "jp": "どこから読み始めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The first line names the exception and the message. Then look for the first line that mentions your own code, with a file name you recognize. That's usually where to look.",
+      "jp": "最初の行に、例外の名前とメッセージがあります。次に、あなた自身のコードの、見覚えのあるファイル名が出てくる最初の行を探します。そこが、たいてい調べる場所です。"
+     },
+     {
+      "sp": 0,
+      "en": "What are common exceptions?",
+      "jp": "よくある例外は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "NullPointerException means you used something that was null. ArrayIndexOutOfBoundsException means you went past the end of an array. FileNotFoundException means the path is wrong.",
+      "jp": "NullPointerExceptionは、nullのものを使ったという意味です。ArrayIndexOutOfBoundsExceptionは、配列の終わりを越えたという意味です。FileNotFoundExceptionは、パスが間違っているという意味です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is NullPointerException like undefined in JavaScript?",
+      "jp": "NullPointerExceptionは、JavaScriptのundefinedに似ていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Very similar. \"Cannot read properties of undefined\" in JavaScript and NullPointerException in Java are the same kind of mistake: using a value that isn't there.",
+      "jp": "とても似ています。JavaScriptの「undefinedのプロパティを読めません」と、JavaのNullPointerExceptionは、同じ種類の間違いです。そこにない値を使ったのです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I handle exceptions?",
+      "jp": "例外はどう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With try and catch, just like before. Java also forces you to handle or declare certain exceptions, called checked exceptions, so the compiler makes you think about failure.",
+      "jp": "以前と同じく、tryとcatchです。Javaは、検査例外と呼ばれるいくつかの例外について、処理するか宣言するかを強制するので、コンパイラが失敗について考えさせます。"
+     },
+     {
+      "sp": 0,
+      "en": "And when I can't read the log at work?",
+      "jp": "職場で、ログが読めない時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Copy the first line and the first line with your company's package name. That's usually enough for the developers to find the problem.",
+      "jp": "最初の行と、会社のパッケージ名が入った最初の行をコピーします。それだけで、開発者が問題を見つけられることがほとんどです。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：どちらを学ぶ？ これからの道すじ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "So which should I focus on, Java or JavaScript?",
+      "jp": "では、JavaとJavaScriptのどちらに集中すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "For your apps, JavaScript. It runs in every browser, needs no setup, and you can see results immediately. You'll use it every week.",
+      "jp": "あなたのアプリには、JavaScriptです。どのブラウザでも動き、準備がいらず、結果がすぐ見えます。毎週使うことになります。"
+     },
+     {
+      "sp": 0,
+      "en": "And Java?",
+      "jp": "Javaは？"
+     },
+     {
+      "sp": 1,
+      "en": "Learn it as a second language if your work touches business systems, or if you want to read Android and server code. The concepts you've learned, such as types, classes, and exceptions, will carry over.",
+      "jp": "仕事が業務システムに関わる場合や、Androidやサーバーのコードを読みたい場合に、第二の言語として学びます。型、クラス、例外といった、学んだ考え方は、そのまま引き継げます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a common thread across PowerShell, JavaScript, and Java?",
+      "jp": "PowerShell、JavaScript、Javaに共通する流れはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Describe the job in plain words. Break it into small steps. Read the errors. Test with harmless data. Never run what you don't understand. The languages change, but those five habits don't.",
+      "jp": "あります。仕事を普通の言葉で書く。小さな手順に分ける。エラーを読む。害のないデータで試す。理解していないものは実行しない。言語は変わっても、その五つの習慣は変わりません。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a good summary to keep.",
+      "jp": "取っておきたい、良いまとめですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Then keep it. And remember that fluency comes from small practice every day, not from one long night.",
+      "jp": "では取っておいてください。そして、流暢さは、一晩の長い勉強ではなく、毎日の小さな練習から生まれると覚えておいてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. This was a long lecture, but I understood it.",
+      "jp": "ありがとう、ケン。長い講義でしたが、分かりました。"
+     },
+     {
+      "sp": 1,
+      "en": "You asked good questions, and that's what made it work. Well done.",
+      "jp": "あなたが良い質問をしたからうまくいったんです。よく頑張りました。"
+     }
+    ]
+   }
+  ]
+ }
+]

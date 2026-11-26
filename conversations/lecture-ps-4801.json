@@ -1,0 +1,696 @@
+[
+ {
+  "id": "lecture-ps",
+  "ic": "🪟",
+  "n": "コード講義1：PowerShell編",
+  "hint": "Lecture style, part one: Ken teaches Mia how to think in PowerShell, from verb-noun commands and the object pipeline to safe scripts and troubleshooting a help desk ticket",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：コマンドは「動詞-名詞」で読む",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, PowerShell commands look like a foreign language to me. Where do I even begin?",
+      "jp": "ケン、PowerShellのコマンドは外国語みたいに見えます。どこから始めればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Let's begin with one rule, and it explains about half of PowerShell. Almost every command has two parts, a verb and a noun, joined by a hyphen.",
+      "jp": "一つの決まりから始めましょう。これでPowerShellの半分ほどが説明できます。ほとんどのコマンドは、動詞と名詞をハイフンでつないだ二つの部分でできています。"
+     },
+     {
+      "sp": 0,
+      "en": "Like Get-Process?",
+      "jp": "Get-Processのようなものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Get is the verb, and Process is the noun. So you can read it as \"get the processes.\" Get-Service gets services, and Get-Date gets the date.",
+      "jp": "その通りです。Getが動詞で、Processが名詞です。だから「プロセスを取得する」と読めます。Get-Serviceはサービスを、Get-Dateは日付を取得します。"
+     },
+     {
+      "sp": 0,
+      "en": "So if I want to stop a service, it would be Stop-Service?",
+      "jp": "じゃあサービスを止めたいなら、Stop-Serviceですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and that's the beauty of it. Once you know a few verbs, such as Get, Set, New, Remove, Start, and Stop, you can guess commands you have never seen.",
+      "jp": "そうです。それがこの仕組みの良いところです。Get、Set、New、Remove、Start、Stopといった動詞をいくつか知っていれば、見たことのないコマンドも推測できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I guess wrong?",
+      "jp": "推測が外れたらどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Then ask the shell itself. Get-Command lets you search. For example, Get-Command *service* lists every command with the word service in its name.",
+      "jp": "その時はシェル自身に聞きます。Get-Commandで検索できます。たとえばGet-Command *service*は、名前にserviceを含む全部のコマンドを一覧にします。"
+     },
+     {
+      "sp": 0,
+      "en": "And once I find a command, how do I learn how to use it?",
+      "jp": "コマンドを見つけたら、使い方はどう学びますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use Get-Help. Get-Help Get-Service shows the description, and adding -Examples shows real examples you can copy and adapt.",
+      "jp": "Get-Helpを使います。Get-Help Get-Serviceで説明が出て、-Examplesを付けると、コピーして直せる実際の例が出ます。"
+     },
+     {
+      "sp": 0,
+      "en": "So I don't need to memorize hundreds of commands.",
+      "jp": "じゃあ何百ものコマンドを暗記しなくていいんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "No. Memorize the pattern and the three discovery tools: Get-Command to find, Get-Help to learn, and Get-Member to inspect. We'll meet the third one soon.",
+      "jp": "いいえ。パターンと、三つの探す道具を覚えれば十分です。見つけるGet-Command、学ぶGet-Help、調べるGet-Memberです。三つ目はすぐ出てきます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a short way to type these? They're so long.",
+      "jp": "これらを短く打つ方法はありますか？長いです。"
+     },
+     {
+      "sp": 1,
+      "en": "There are aliases, like ls for Get-ChildItem. They're fine when you type by hand, but in a saved script, write the full name so that anyone can read it later.",
+      "jp": "エイリアスがあります。lsはGet-ChildItemの別名です。手で打つ時は便利ですが、保存するスクリプトでは、後で誰でも読めるように正式な名前で書いてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Okay. Full names in scripts, short ones when I'm just typing.",
+      "jp": "分かりました。スクリプトでは正式名、ただ打つ時は短く。"
+     },
+     {
+      "sp": 1,
+      "en": "One more tip: press the Tab key. It completes command names and parameter names, and it saves you from typos.",
+      "jp": "もう一つのコツは、Tabキーを押すことです。コマンド名やパラメータ名を補完してくれて、打ち間違いを防げます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：パイプラインは「文字」ではなく「物」を流す",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I see a vertical bar between commands. What is it doing?",
+      "jp": "コマンドの間に縦棒がありますね。何をしているんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's the pipe. It sends the output of the left command into the right command as input. Think of a factory line where each station does one job.",
+      "jp": "それがパイプです。左のコマンドの出力を、右のコマンドの入力として送ります。各持ち場が一つの仕事をする工場のラインを思い浮かべてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Like Linux, where text goes through the pipe?",
+      "jp": "文字が流れるLinuxのようなものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Here's the big difference. In PowerShell, the pipe carries objects, not plain text. An object has properties, like a Name, a Status, and a Memory size.",
+      "jp": "そこが大きな違いです。PowerShellでは、パイプは単なる文字ではなく、オブジェクトを運びます。オブジェクトには、名前、状態、メモリ量などのプロパティがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "So I don't have to cut the text apart to find the column I want?",
+      "jp": "じゃあ欲しい列を探すために文字を切り分けなくていいんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Correct. You just ask for the property by name. Get-Process | Select-Object Name, Id gives you only those two columns.",
+      "jp": "その通りです。プロパティを名前で頼めばいいだけです。Get-Process | Select-Object Name, Idなら、その二列だけが得られます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I know what properties exist?",
+      "jp": "どんなプロパティがあるかは、どうやって分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's Get-Member. Send any object into it, like Get-Process | Get-Member, and it lists every property and method that object has.",
+      "jp": "それがGet-Memberです。どんなオブジェクトでも送り込めば、たとえばGet-Process | Get-Memberで、そのオブジェクトの全プロパティとメソッドが一覧になります。"
+     },
+     {
+      "sp": 0,
+      "en": "And if I only want some of the items, not all of them?",
+      "jp": "全部ではなく、一部の項目だけ欲しい時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Filter with Where-Object. For example, Get-Service | Where-Object Status -eq 'Running' keeps only the running services.",
+      "jp": "Where-Objectで絞ります。たとえばGet-Service | Where-Object Status -eq 'Running'は、動いているサービスだけを残します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why -eq instead of an equals sign?",
+      "jp": "なぜ等号ではなく-eqなんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because the symbols greater-than and less-than are already used for redirecting output. So comparisons are written as words: -eq, -ne, -gt, -lt, and -like.",
+      "jp": "大なり小なりの記号は、出力の転送にすでに使われているからです。そのため比較は単語で書きます。-eq、-ne、-gt、-lt、-likeなどです。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I sort the results too?",
+      "jp": "結果を並べ替えることもできますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Sort-Object orders them. Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 5 shows the five processes using the most memory.",
+      "jp": "できます。Sort-Objectで並べ替えます。Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 5は、メモリを一番使っている五つのプロセスを表示します。"
+     },
+     {
+      "sp": 0,
+      "en": "That one line answers a real question. I like that.",
+      "jp": "その一行で実際の疑問に答えが出るんですね。気に入りました。"
+     },
+     {
+      "sp": 1,
+      "en": "That is the way of thinking. Get the objects, filter them, sort them, pick the columns. Four small steps connected by pipes.",
+      "jp": "それが考え方です。オブジェクトを取り、絞り、並べ、列を選ぶ。パイプでつないだ四つの小さな手順です。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：変数・条件・くり返し",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Now I'd like to store things. How do variables work?",
+      "jp": "今度は値を保存したいです。変数はどう使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A variable starts with a dollar sign. $name = 'PC-001' stores the text. You don't have to declare a type; PowerShell figures it out.",
+      "jp": "変数はドル記号で始めます。$name = 'PC-001'で文字を保存します。型を宣言する必要はなく、PowerShellが判断してくれます。"
+     },
+     {
+      "sp": 0,
+      "en": "And I can put a whole list of things in one variable?",
+      "jp": "一つの変数にリスト全体を入れることもできますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. $pcs = Get-Process puts every process object in $pcs, and $pcs.Count tells you how many there are.",
+      "jp": "できます。$pcs = Get-Processは全プロセスのオブジェクトを$pcsに入れ、$pcs.Countで何個あるか分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "What about single quotes versus double quotes?",
+      "jp": "シングルクォートとダブルクォートの違いは？"
+     },
+     {
+      "sp": 1,
+      "en": "Single quotes are literal. Double quotes expand variables, so \"Hello $name\" becomes \"Hello PC-001\". If you only need plain text, use single quotes.",
+      "jp": "シングルクォートは文字どおりです。ダブルクォートは変数を展開するので、\"Hello $name\"は\"Hello PC-001\"になります。ただの文字なら、シングルクォートを使ってください。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I make a decision, like \"if the disk is almost full, warn me\"?",
+      "jp": "「ディスクがほぼ満杯なら警告して」のような判断はどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With if. if ($free -lt 10) { Write-Warning 'Low disk space' }. The condition goes in parentheses and the action goes in braces.",
+      "jp": "ifを使います。if ($free -lt 10) { Write-Warning 'Low disk space' }。条件は丸括弧、動作は波括弧に入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "And to repeat something for many computers?",
+      "jp": "たくさんのパソコンに同じことをくり返すには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use foreach. foreach ($pc in $pcs) { ... } runs the block once for each item, and $pc holds the current one.",
+      "jp": "foreachを使います。foreach ($pc in $pcs) { ... }は、ブロックを項目ごとに一回ずつ実行し、$pcが今の項目を持ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is that different from ForEach-Object in a pipeline?",
+      "jp": "パイプラインの中のForEach-Objectとは違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Same idea, different place. In a pipeline, ForEach-Object gives you the current item as $_. In a script, the foreach statement with a named variable is usually easier to read.",
+      "jp": "考え方は同じで、使う場所が違います。パイプラインの中では、ForEach-Objectが今の項目を$_で渡します。スクリプトでは、名前を付けた変数のforeach文のほうが、たいてい読みやすいです。"
+     },
+     {
+      "sp": 0,
+      "en": "So which one should I choose?",
+      "jp": "どちらを選べばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Choose the one you can read tomorrow. Readability beats cleverness every time.",
+      "jp": "明日の自分が読めるほうを選んでください。読みやすさは、いつも賢さに勝ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a good rule for everything, not only scripts.",
+      "jp": "それはスクリプトに限らず、何にでも良い決まりですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Agreed. Next, we'll talk about what keeps you safe.",
+      "jp": "同感です。次は、身を守る方法の話をします。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：実行前の安全確認 -WhatIf と -Confirm",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I'm nervous about commands that delete or change things. What if I make a mistake?",
+      "jp": "ケン、削除したり変更したりするコマンドが怖いです。間違えたらどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Good instinct. PowerShell gives you a safety net called -WhatIf. Add it to a command, and it only shows what would happen, without doing it.",
+      "jp": "良い勘です。PowerShellには-WhatIfという安全網があります。コマンドに付けると、実際には行わず、何が起きるかだけを表示します。"
+     },
+     {
+      "sp": 0,
+      "en": "So Remove-Item old.txt -WhatIf would not delete the file?",
+      "jp": "じゃあRemove-Item old.txt -WhatIfは、ファイルを削除しないんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Right. It prints something like \"What if: Performing the operation Remove File on target old.txt.\" Nothing is touched.",
+      "jp": "そうです。「What if: Performing the operation Remove File on target old.txt」のように表示するだけで、何も触りません。"
+     },
+     {
+      "sp": 0,
+      "en": "And -Confirm?",
+      "jp": "-Confirmは？"
+     },
+     {
+      "sp": 1,
+      "en": "-Confirm asks you yes or no before each action. It's slower, but it's good when you're working on a real server and you want to check each step.",
+      "jp": "-Confirmは、各動作の前に「はい・いいえ」を聞きます。遅くなりますが、本番のサーバーで一つずつ確かめたい時に良いです。"
+     },
+     {
+      "sp": 0,
+      "en": "Do all commands support -WhatIf?",
+      "jp": "すべてのコマンドが-WhatIfに対応していますか？"
+     },
+     {
+      "sp": 1,
+      "en": "No, only commands that change something. Get commands just read, so they don't need it. You can check with Get-Help and look for the WhatIf parameter.",
+      "jp": "いいえ、何かを変更するコマンドだけです。Get系は読むだけなので必要ありません。Get-Helpで、WhatIfパラメータがあるか確認できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What's my routine, then?",
+      "jp": "では、私の手順はどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Three steps. First, run the Get version and look at the list. Second, add -WhatIf to the change command. Third, remove -WhatIf and run it for real.",
+      "jp": "三段階です。まず、Get版を実行して一覧を見ます。次に、変更のコマンドに-WhatIfを付けます。最後に、-WhatIfを外して本番を実行します。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the execution policy? I got an error saying scripts are disabled.",
+      "jp": "実行ポリシーはどうですか？スクリプトの実行が無効というエラーが出ました。"
+     },
+     {
+      "sp": 1,
+      "en": "That's a safety setting that decides which scripts may run. On a personal PC, Set-ExecutionPolicy RemoteSigned -Scope CurrentUser is a common choice.",
+      "jp": "どのスクリプトを実行してよいかを決める安全設定です。個人のパソコンでは、Set-ExecutionPolicy RemoteSigned -Scope CurrentUserがよく選ばれます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I just set it to allow everything?",
+      "jp": "全部許可にしてしまってもいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "I wouldn't. At work, the policy may be set by your company, and changing it may be against the rules. Ask your administrator first.",
+      "jp": "おすすめしません。職場では、会社がポリシーを決めている場合があり、変更が規則違反になることもあります。先に管理者に確認してください。"
+     },
+     {
+      "sp": 0,
+      "en": "And I should never run a script I don't understand.",
+      "jp": "それと、理解していないスクリプトは決して実行しない、ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Read it first. If you can't explain what each line does, don't run it on a real machine.",
+      "jp": "その通りです。先に読みます。各行が何をするか説明できないなら、本物のマシンでは実行しないでください。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：スクリプトを作る手順",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I've typed one-liners. How do I turn them into a real script?",
+      "jp": "一行コマンドは打てるようになりました。本物のスクリプトにするにはどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start the same way as always: write the routine in plain words. For example, \"Check the disk space of each PC and save a report.\"",
+      "jp": "いつもと同じ始め方です。手順を普通の言葉で書きます。たとえば「各パソコンのディスク空き容量を調べて、レポートを保存する」。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I translate each sentence into a command?",
+      "jp": "それから、各文をコマンドに直すんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, one at a time. Test each line in the console first. When a line works, move it into a file ending in dot ps1.",
+      "jp": "はい、一つずつです。まず各行をコンソールで試します。動いたら、拡張子ps1のファイルに移します。"
+     },
+     {
+      "sp": 0,
+      "en": "What goes at the top of the file?",
+      "jp": "ファイルの先頭には何を書きますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A short comment about what the script does, and a param block if you want to give it inputs, like a folder path or a computer name.",
+      "jp": "スクリプトが何をするかの短いコメントと、入力を渡したいなら、フォルダのパスやコンピューター名のようなparamブロックです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why use parameters instead of writing the names directly in the script?",
+      "jp": "なぜ名前を直接書かずに、パラメータを使うんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "So you can reuse the script. If the computer name is a parameter, you run the same file for any computer, and you never edit the code.",
+      "jp": "スクリプトを使い回せるからです。コンピューター名をパラメータにすれば、同じファイルをどのコンピューターにも使えて、コードを編集しなくて済みます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I handle things that might fail, like a computer that is turned off?",
+      "jp": "電源が切れているコンピューターのように、失敗しうるものはどう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With try and catch. Put the risky command in try, and put the plan B in catch. Add -ErrorAction Stop to the command so that its errors are caught.",
+      "jp": "tryとcatchです。危ないコマンドをtryに、次善策をcatchに入れます。コマンドに-ErrorAction Stopを付けると、そのエラーを捕まえられます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do I need -ErrorAction Stop?",
+      "jp": "なぜ-ErrorAction Stopが必要なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Many errors in PowerShell are non-terminating. They print red text but the script keeps going, and catch never sees them. Stop turns them into errors that catch can handle.",
+      "jp": "PowerShellの多くのエラーは、非終了エラーだからです。赤い文字は出ますが、スクリプトは続き、catchには届きません。Stopにすると、catchが扱えるエラーになります。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do I save the results?",
+      "jp": "結果はどう保存しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Export-Csv writes objects to a CSV file. Remember to add -NoTypeInformation in Windows PowerShell 5.1, and -Encoding UTF8 if you have Japanese text.",
+      "jp": "Export-Csvは、オブジェクトをCSVファイルに書き出します。Windows PowerShell 5.1では-NoTypeInformationを、日本語があるなら-Encoding UTF8を忘れずに付けてください。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between Windows PowerShell and PowerShell 7?",
+      "jp": "Windows PowerShellとPowerShell 7の違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Windows PowerShell 5.1 is built into Windows and is still common at work. PowerShell 7 is newer, runs on more systems, and is installed separately. Know which one you're typing into.",
+      "jp": "Windows PowerShell 5.1はWindowsに内蔵されていて、職場ではまだ一般的です。PowerShell 7はより新しく、より多くのシステムで動き、別にインストールします。どちらに打ち込んでいるか知っておいてください。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I check?",
+      "jp": "どうやって確認できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Type $PSVersionTable. The PSVersion line shows the number: five-point-one, or seven and above.",
+      "jp": "$PSVersionTableと打ちます。PSVersionの行に、5.1か7以上かの数字が出ます。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：ヘルプデスクで使う実例",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's use this for a real ticket. A user says their PC is slow. What would you check?",
+      "jp": "実際のチケットで使ってみましょう。ユーザーが「パソコンが遅い」と言っています。何を確認しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "First, the basics. How long since the last restart? Get-CimInstance Win32_OperatingSystem shows LastBootUpTime.",
+      "jp": "まず基本です。最後の再起動からどれくらいか。Get-CimInstance Win32_OperatingSystemでLastBootUpTimeが分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "And what's eating the resources?",
+      "jp": "それと、何が資源を使っているか？"
+     },
+     {
+      "sp": 1,
+      "en": "The command we saw earlier: Get-Process sorted by WorkingSet, top five. For CPU, sort by CPU instead.",
+      "jp": "先ほどのコマンドです。WorkingSetで並べたGet-Processの上位五件。CPUなら、代わりにCPUで並べます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the disk?",
+      "jp": "ディスクは？"
+     },
+     {
+      "sp": 1,
+      "en": "Get-PSDrive C shows used and free space. If free space is under ten percent of the drive, that alone can slow a PC down.",
+      "jp": "Get-PSDrive Cで使用量と空き容量が分かります。空きがドライブの10パーセント未満なら、それだけでパソコンが遅くなることがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "And if the user says \"I can't reach the internal site\"?",
+      "jp": "「社内サイトにつながらない」と言われたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Test-NetConnection is your friend. Test-NetConnection intranet.example.com -Port 443 tells you whether the name resolves and whether the port answers.",
+      "jp": "Test-NetConnectionが頼りになります。Test-NetConnection intranet.example.com -Port 443で、名前が引けるか、ポートが応答するかが分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the name doesn't resolve?",
+      "jp": "名前が引けなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then use Resolve-DnsName to look at DNS directly. A name problem points to DNS or the network settings, not the website itself.",
+      "jp": "Resolve-DnsNameでDNSを直接見ます。名前の問題は、サイト自体ではなく、DNSかネットワーク設定を示しています。"
+     },
+     {
+      "sp": 0,
+      "en": "What about an account that's locked out?",
+      "jp": "アカウントがロックされている場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "In a company with Active Directory, the ActiveDirectory module has Get-ADUser and Unlock-ADAccount. But you need the right permission, and you must verify the person's identity first.",
+      "jp": "Active Directoryのある会社なら、ActiveDirectoryモジュールにGet-ADUserとUnlock-ADAccountがあります。ただし適切な権限が必要ですし、先に本人確認をしなければなりません。"
+     },
+     {
+      "sp": 0,
+      "en": "So the command is easy, but the process around it matters.",
+      "jp": "つまりコマンドは簡単でも、その周りの手続きが大事なんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. A help desk is trusted because of its process, not only its speed.",
+      "jp": "その通りです。ヘルプデスクが信頼されるのは、速さだけではなく、手続きがあるからです。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I record what I ran?",
+      "jp": "実行したものは記録すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Write the command and the result in the ticket. Start-Transcript can even record a whole session to a file.",
+      "jp": "はい。コマンドと結果をチケットに書きます。Start-Transcriptなら、セッション全体をファイルに記録することもできます。"
+     }
+    ]
+   },
+   {
+    "t": "第7講：エラーの読みかたとつまずき",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My script turned red again. This time I didn't close the window.",
+      "jp": "スクリプトがまた赤くなりました。今回はウィンドウを閉じませんでした。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. What does the first line say?",
+      "jp": "良いですね。最初の行には何と書いてありますか？"
+     },
+     {
+      "sp": 0,
+      "en": "\"The term 'Get-Foo' is not recognized as the name of a cmdlet.\"",
+      "jp": "「'Get-Foo'という用語は、コマンドレットの名前として認識されません」とあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Then it's either a typo, or the module isn't loaded or installed. Check the spelling with Get-Command Get-Foo.",
+      "jp": "綴りの間違いか、モジュールが読み込まれていないかインストールされていないかです。Get-Command Get-Fooで綴りを確認してください。"
+     },
+     {
+      "sp": 0,
+      "en": "Another one says \"Access is denied.\"",
+      "jp": "別のものには「アクセスが拒否されました」とあります。"
+     },
+     {
+      "sp": 1,
+      "en": "That's about permission. Maybe you need to run PowerShell as an administrator, or maybe your account simply isn't allowed. Don't work around it without asking.",
+      "jp": "権限の問題です。管理者としてPowerShellを実行する必要があるのか、そもそもアカウントに許可がないのかもしれません。確認せずに回避しないでください。"
+     },
+     {
+      "sp": 0,
+      "en": "And \"Cannot find path\"?",
+      "jp": "「パスが見つかりません」は？"
+     },
+     {
+      "sp": 1,
+      "en": "Check the spelling, and check which folder you're in with Get-Location. A relative path depends on where you're standing.",
+      "jp": "綴りを確認し、Get-Locationで今どのフォルダにいるか確認します。相対パスは、今立っている場所に左右されます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the strange characters when I open the CSV in Excel?",
+      "jp": "CSVをExcelで開いた時の変な文字は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's an encoding issue. Save with -Encoding UTF8, and in Windows PowerShell 5.1 that adds a signature that helps Excel. Test with a small file first.",
+      "jp": "文字コードの問題です。-Encoding UTF8で保存してください。Windows PowerShell 5.1では、Excelが読みやすくなる印が付きます。まず小さなファイルで試してください。"
+     },
+     {
+      "sp": 0,
+      "en": "My script works when I type it, but not when I run the file.",
+      "jp": "打つと動くのに、ファイルとして実行すると動きません。"
+     },
+     {
+      "sp": 1,
+      "en": "Check the current folder, the execution policy, and whether you used a variable that only existed in your console session. A script starts with a clean slate.",
+      "jp": "今のフォルダ、実行ポリシー、コンソールだけに存在した変数を使っていないかを確認します。スクリプトはまっさらな状態から始まります。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I see what a variable holds while the script runs?",
+      "jp": "実行中に、変数に何が入っているか見るには？"
+     },
+     {
+      "sp": 1,
+      "en": "Write-Host or Write-Output for a quick look. For deeper checks, Set-PSDebug or the debugger in an editor like VS Code helps.",
+      "jp": "ちょっと見るにはWrite-HostかWrite-Outputです。深く調べるなら、Set-PSDebugや、VS Codeなどのエディタのデバッガーが役立ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "And when I can't solve it myself?",
+      "jp": "自分で解決できない時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Copy the exact message, say what you ran, and say what you expected. A precise question gets a precise answer, whether you ask a colleague or an AI.",
+      "jp": "正確なメッセージをコピーし、何を実行し、何を期待したかを伝えます。同僚に聞いても、AIに聞いても、正確な質問は正確な答えを引き出します。"
+     }
+    ]
+   },
+   {
+    "t": "第8講：AIと一緒に作る、そして自分で確かめる",
+    "l": [
+     {
+      "sp": 0,
+      "en": "These days I can ask an AI to write the script. Is that cheating?",
+      "jp": "最近はAIにスクリプトを書いてもらえます。ずるいことですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Not at all. It's a tool. But you stay responsible for what runs, so you must understand it before you run it.",
+      "jp": "全然ずるくありません。道具です。ただ、実行するものには自分が責任を持つので、実行前に理解しなければなりません。"
+     },
+     {
+      "sp": 0,
+      "en": "How should I ask?",
+      "jp": "どう頼めばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Give four things: your goal, the PowerShell version, the exact input, and the output you want. \"Windows PowerShell 5.1, list the files over 100 megabytes in this folder, output a CSV.\"",
+      "jp": "四つ伝えます。目的、PowerShellのバージョン、正確な入力、欲しい出力です。「Windows PowerShell 5.1で、このフォルダの100メガバイトを超えるファイルを一覧にして、CSVで出力」のように。"
+     },
+     {
+      "sp": 0,
+      "en": "And after it gives me the code?",
+      "jp": "コードをもらったあとは？"
+     },
+     {
+      "sp": 1,
+      "en": "Read it line by line. Ask the AI to explain anything you don't know. Look for delete commands, for anything that changes settings, and for anything that sends data out.",
+      "jp": "一行ずつ読みます。分からない部分はAIに説明してもらいます。削除コマンド、設定を変えるもの、データを外に送るものに注意して見てください。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I run it with -WhatIf, or on a test folder.",
+      "jp": "それから-WhatIfを付けるか、テスト用のフォルダで実行します。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Test with harmless data first, and keep a backup of anything important.",
+      "jp": "そうです。まず害のないデータで試し、大事なものはバックアップを取ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I give the AI my company's data to work with?",
+      "jp": "会社のデータをAIに渡して作業させてもいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Be careful. Don't paste passwords, personal information, or confidential data. Follow your company's rules about which AI tools are allowed.",
+      "jp": "気をつけてください。パスワード、個人情報、機密データを貼り付けてはいけません。どのAIツールが許可されているかは、会社の規則に従ってください。"
+     },
+     {
+      "sp": 0,
+      "en": "I can use fake sample data to show the structure.",
+      "jp": "構造を見せるために、架空のサンプルデータを使えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, that's the safe way. Now you have the whole path: think in plain words, discover with Get-Command and Get-Help, test with -WhatIf, handle errors, and never run what you can't explain.",
+      "jp": "そうです、それが安全な方法です。これで全体の道筋が揃いました。普通の言葉で考え、Get-CommandとGet-Helpで探し、-WhatIfで試し、エラーを扱い、説明できないものは決して実行しない。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. I feel much less afraid of that blue window now.",
+      "jp": "ありがとう、ケン。あの青い画面が、ずいぶん怖くなくなりました。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Next time, we'll move on to JavaScript, where you build the screen itself.",
+      "jp": "良かったです。次回は、画面そのものを作るJavaScriptに進みます。"
+     }
+    ]
+   }
+  ]
+ }
+]
