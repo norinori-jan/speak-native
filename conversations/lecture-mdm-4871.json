@@ -1,0 +1,556 @@
+[
+ {
+  "id": "lecture-mdm",
+  "ic": "📱",
+  "n": "端末管理講義：Intune・Defenderの仕事（やさしい→難しい）",
+  "hint": "Lecture style on device management work: Ken teaches Mia what Intune and Defender do, how PCs and iPhones are enrolled, how policies and conditional access work, how to handle alerts, tickets and lost devices, and how to run changes safely",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：この仕事は何をするのか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I might be asked to manage the company's PCs and iPhones with Intune and Defender. What does that job actually involve?",
+      "jp": "ケン、会社のPCとiPhoneを、IntuneとDefenderで管理する仕事を頼まれるかもしれません。その仕事は、実際には何をするんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "In one sentence: you keep every company device in a safe and usable condition, and you react quickly when something goes wrong.",
+      "jp": "一文で言えば、すべての会社の端末を、安全で使える状態に保ち、何か問題が起きたら、素早く対応する仕事です。"
+     },
+     {
+      "sp": 0,
+      "en": "What is Intune, and what is Defender? Are they the same thing?",
+      "jp": "Intuneとは何で、Defenderとは何ですか？同じものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Intune is the management tool: it sends settings and apps to devices, enforces rules, and can lock or wipe a lost device. Defender is the protection tool: it detects threats and can isolate an infected device.",
+      "jp": "いいえ。Intuneは管理の道具です。設定とアプリを端末に送り、規則を強制し、紛失した端末をロックしたり初期化したりできます。Defenderは防御の道具で、脅威を検知し、感染した端末を隔離できます。"
+     },
+     {
+      "sp": 0,
+      "en": "And where does Microsoft Entra ID fit in?",
+      "jp": "Microsoft Entra IDは、どこに入りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Entra ID is the identity system. It decides who can sign in, and, with conditional access, it can refuse a sign-in from a device that doesn't follow the rules. Intune reports the device's health, and Entra uses it at the door.",
+      "jp": "Entra IDは、ID（身元）のしくみです。誰がサインインできるかを決め、条件付きアクセスで、規則を守っていない端末からのサインインを断れます。Intuneが端末の健康状態を報告し、Entraが入口でそれを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "So the three work together.",
+      "jp": "つまり、三つが連携しているんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Think of a building: Entra is the front door, Intune checks that your badge and your device meet the rules, and Defender is the security guard who watches for trouble.",
+      "jp": "はい。建物で考えてください。Entraは正面の入口、Intuneは、バッジと端末が規則を満たしているかの確認、Defenderは、問題を見張る警備員です。"
+     },
+     {
+      "sp": 0,
+      "en": "What does a normal day look like?",
+      "jp": "普通の一日は、どんな感じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Answering tickets like \"I can't enroll my phone,\" adjusting a policy, preparing devices for new employees, checking reports for devices that are out of date, and reviewing alerts.",
+      "jp": "「iPhoneを登録できない」のような問い合わせに答え、ポリシーを調整し、新入社員の端末を準備し、古いままの端末のレポートを確認し、アラートを見直します。"
+     },
+     {
+      "sp": 0,
+      "en": "It sounds like support, operations, and security together.",
+      "jp": "サポートと運用とセキュリティが、一緒になっているように聞こえます。"
+     },
+     {
+      "sp": 1,
+      "en": "That's exactly right, and that's why this job is in demand. You need to be calm, careful, and good at explaining things to non-technical people.",
+      "jp": "その通りで、だからこの仕事は需要があります。落ち着いていて、慎重で、技術に詳しくない人に説明するのが上手である必要があります。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：登録（Enrollment）と所有の考え方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "People keep saying \"enroll the device.\" What does enrollment mean?",
+      "jp": "みんな「端末を登録する」と言います。登録とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Enrollment is the moment a device becomes managed. After it, Intune can send policies and apps, and it can see the device's status. Before it, the device is just a device.",
+      "jp": "登録とは、端末が管理される状態になる瞬間です。その後は、Intuneがポリシーとアプリを送れ、端末の状態を見られます。その前は、ただの端末です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the method the same for every device?",
+      "jp": "方法は、すべての端末で同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. The method depends on who owns the device. A company-owned device can be managed strongly. A personal device must be managed more gently, to protect the owner's privacy.",
+      "jp": "いいえ。方法は、端末の所有者で変わります。会社所有の端末は、強く管理できます。個人の端末は、持ち主のプライバシーを守るために、もっと穏やかに管理しなければなりません。"
+     },
+     {
+      "sp": 0,
+      "en": "What are the options for a personal phone?",
+      "jp": "個人の携帯には、どんな選択肢がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Two common ones. With app protection only, the company manages only the work apps and their data, not the phone. With user enrollment on an iPhone, the work data lives in a separate area that the company can remove, without touching personal photos or messages.",
+      "jp": "よくある二つがあります。アプリ保護だけなら、会社は業務アプリとそのデータだけを管理し、携帯自体は管理しません。iPhoneのユーザー登録なら、業務データは別の領域にあり、会社は、個人の写真やメッセージに触れずに、それを削除できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does that matter?",
+      "jp": "なぜそれが重要なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because people won't use a device that feels like it's being watched. Explain clearly what the company can see and what it cannot. Trust makes the whole system work.",
+      "jp": "監視されているように感じる端末を、人は使いたがらないからです。会社が見られるものと見られないものを、はっきり説明します。信頼が、システム全体を機能させます。"
+     },
+     {
+      "sp": 0,
+      "en": "And for company-owned devices?",
+      "jp": "会社所有の端末は？"
+     },
+     {
+      "sp": 1,
+      "en": "You can use automatic enrollment: Windows Autopilot for PCs, and Apple's automatic device enrollment for iPhones. The device enrolls itself during the first setup, and the user doesn't have to do anything technical.",
+      "jp": "自動登録が使えます。PCにはWindows Autopilot、iPhoneにはAppleの自動デバイス登録です。端末が最初の設定中に自分で登録し、利用者は技術的なことをする必要がありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What mistake do beginners make here?",
+      "jp": "初心者は、ここでどんな間違いをしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "They test on real employees' devices. Always keep a small group of test devices, and try every change there first.",
+      "jp": "実際の社員の端末で試すことです。小さなテスト用の端末のグループを必ず持ち、すべての変更を、まずそこで試します。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：Windows のキッティング（Autopilot）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's talk about setting up a new Windows PC. How does Autopilot work?",
+      "jp": "新しいWindowsのPCの設定の話をしましょう。Autopilotは、どう動きますか？"
+     },
+     {
+      "sp": 1,
+      "en": "First, the device's hardware identity, called the hardware hash, is registered in Autopilot. Then you assign a profile to it. When the user turns on the PC and connects to the internet, the PC finds its profile and sets itself up.",
+      "jp": "まず、端末の機器の識別情報、ハードウェアハッシュを、Autopilotに登録します。次に、プロファイルを割り当てます。利用者がPCの電源を入れてインターネットにつなぐと、PCが自分のプロファイルを見つけて、自動で設定します。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens during setup?",
+      "jp": "設定中に何が起きますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The user signs in with their work account, the PC joins Entra ID, and Intune delivers the policies and the apps. A screen called the Enrollment Status Page shows the progress, and holds the user until the essentials are installed.",
+      "jp": "利用者が業務のアカウントでサインインし、PCがEntra IDに参加し、Intuneがポリシーとアプリを届けます。登録状況ページという画面が、進行を示し、必須のものが入るまで利用者を待たせます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I put in that required list?",
+      "jp": "その必須のリストに、何を入れるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Only what's truly needed for the user to start working: security software, VPN, and a few key apps. If you list too much, the screen waits for a long time, or fails if one app fails.",
+      "jp": "利用者が働き始めるために、本当に必要なものだけです。セキュリティのソフト、VPN、いくつかの主要なアプリです。多く入れすぎると、画面が長く待たされたり、一つのアプリが失敗しただけで、止まったりします。"
+     },
+     {
+      "sp": 0,
+      "en": "What about encryption?",
+      "jp": "暗号化は？"
+     },
+     {
+      "sp": 1,
+      "en": "Turn on BitLocker through a policy, and make sure the recovery key is saved to Entra ID. If a user forgets their PIN or hardware changes, you'll need that key to unlock the drive.",
+      "jp": "ポリシーでBitLockerを有効にし、回復キーが、Entra IDに保存されるようにします。利用者がPINを忘れたり、ハードウェアが変わったりした時に、ドライブを開けるのに、そのキーが必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "What commonly goes wrong?",
+      "jp": "よく起きる失敗は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The hash was never registered, the profile isn't assigned, the device is in the wrong group, or the network blocks the setup. When a PC doesn't get its profile, check those four in order.",
+      "jp": "ハッシュが登録されていない、プロファイルが割り当てられていない、端末が間違ったグループにある、ネットワークが設定を止めている、です。PCがプロファイルを受け取れない時は、その四つを順に確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I check that a new PC is truly ready?",
+      "jp": "新しいPCが、本当に準備できたことは、どうやって確かめますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In Intune, look at the device: Is it enrolled, is it compliant, is encryption on, and has Defender reported in? Then sign in as a test user and open Teams and Outlook. If both work, the kit is ready.",
+      "jp": "Intuneで端末を見ます。登録済みか、準拠しているか、暗号化は有効か、Defenderは報告してきているか。それからテスト用の利用者でサインインし、TeamsとOutlookを開きます。両方が動けば、準備完了です。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：iPhone のキッティング（ABM・ADE・APNs）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What's different about iPhones?",
+      "jp": "iPhoneは、何が違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Apple needs two things in the background. First, an Apple push notification certificate, called APNs, which lets Intune send commands to iPhones. Second, Apple Business Manager, where your company registers the iPhones it buys.",
+      "jp": "背景にAppleが必要とする二つがあります。一つ目は、APNsと呼ばれるAppleのプッシュ通知の証明書で、IntuneがiPhoneにコマンドを送れるようにします。二つ目はApple Business Managerで、会社が買ったiPhoneを登録する場所です。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if the APNs certificate expires?",
+      "jp": "APNsの証明書が切れたら、どうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You can no longer manage any iPhone: no new policies, no lock, no wipe. It must be renewed every year, with the same Apple ID that created it. Put the date in a shared calendar, and give the task to two people.",
+      "jp": "どのiPhoneも管理できなくなります。新しいポリシーも、ロックも、ワイプもできません。毎年、作成した時と同じApple IDで更新する必要があります。日付を共有のカレンダーに入れ、担当を二人にします。"
+     },
+     {
+      "sp": 0,
+      "en": "What does automatic enrollment do for iPhones?",
+      "jp": "自動登録は、iPhoneに何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "When someone turns on a new company iPhone, it contacts Apple, finds that it belongs to your company, and enrolls in Intune. The device becomes supervised, which allows stronger control, like lost mode and many restrictions.",
+      "jp": "誰かが新しい会社のiPhoneの電源を入れると、Appleに問い合わせ、会社のものだと分かり、Intuneに登録されます。端末は監視対象になり、紛失モードや多くの制限のような、より強い制御ができるようになります。"
+     },
+     {
+      "sp": 0,
+      "en": "Can a device be changed from supervised to unsupervised later?",
+      "jp": "監視対象から、そうでない状態に、あとで変えられますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Not easily; usually it requires erasing the device. That's why you must decide the enrollment settings carefully before you hand out iPhones.",
+      "jp": "簡単にはできません。たいていは、端末を初期化する必要があります。だから、iPhoneを配る前に、登録の設定を、慎重に決めなければなりません。"
+     },
+     {
+      "sp": 0,
+      "en": "How are apps delivered?",
+      "jp": "アプリは、どう配るんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Through Apple's volume purchase program in Apple Business Manager. Intune assigns the apps to groups. That token also expires yearly, so add it to the calendar too.",
+      "jp": "Apple Business Managerの、一括購入のしくみを通してです。Intuneがアプリをグループに割り当てます。そのトークンも毎年切れるので、カレンダーに入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "And Defender on an iPhone?",
+      "jp": "iPhoneのDefenderは？"
+     },
+     {
+      "sp": 1,
+      "en": "It's more limited than on a PC. It mainly helps with phishing and web protection, jailbreak detection, and checking for risky settings. Don't expect the same investigation tools as on Windows.",
+      "jp": "PCより機能が限られています。主に、フィッシングとWeb保護、脱獄の検知、危険な設定の確認を助けます。Windowsと同じ調査の道具は、期待してはいけません。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：ポリシーと条件付きアクセス",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's talk about policies. I've heard \"compliance policy\" and \"configuration profile.\" Are they different?",
+      "jp": "ポリシーの話をしましょう。「コンプライアンスポリシー」と「構成プロファイル」と聞きます。違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. A configuration profile pushes settings onto the device, like a Wi-Fi profile or a screen lock. A compliance policy defines what a healthy device looks like, like encryption on, a minimum OS version, and no jailbreak.",
+      "jp": "はい。構成プロファイルは、Wi-Fiの設定や画面ロックのように、設定を端末に送ります。コンプライアンスポリシーは、健康な端末の姿を定義します。暗号化が有効、最低のOS版、脱獄なし、などです。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens when a device isn't compliant?",
+      "jp": "端末が準拠していないと、どうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Intune marks it as non-compliant. You can send the user a reminder and give a grace period. Then conditional access can block the device from company apps until the problem is fixed.",
+      "jp": "Intuneが、準拠していないと印を付けます。利用者に通知を送り、猶予期間を与えられます。そのあと、条件付きアクセスが、問題が直るまで、その端末を会社のアプリから遮断できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not block immediately?",
+      "jp": "なぜすぐに遮断しないんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because people need time to fix things, like installing an update, and an instant block creates panic and a flood of tickets. A short grace period and a clear message make the change gentle.",
+      "jp": "更新を入れるように、直すには時間が必要だからです。即時の遮断は、パニックと、問い合わせの殺到を招きます。短い猶予期間と、分かりやすいメッセージが、変更を穏やかにします。"
+     },
+     {
+      "sp": 0,
+      "en": "What is the biggest risk when I create a conditional access policy?",
+      "jp": "条件付きアクセスのポリシーを作る時の、最大の危険は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Locking everyone out, including yourself. Always keep an emergency administrator account that is excluded from the policy, stored securely, and monitored. And test first in report-only mode to see who would be affected.",
+      "jp": "自分を含め、全員を締め出すことです。ポリシーから除外した、緊急用の管理者アカウントを必ず用意し、安全に保管し、監視します。そしてまず「レポート専用」のモードで試し、誰に影響が出るか確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How should I roll out a new policy?",
+      "jp": "新しいポリシーは、どう展開すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "In stages: first the IT team, then one department, then everyone. At each stage, watch the number of support tickets. If it rises, stop and review. Always know how to roll back.",
+      "jp": "段階的に。最初はIT部門、次に一つの部署、それから全員です。各段階で、問い合わせの件数を見ます。増えたら、止めて見直します。戻し方を、必ず把握しておきます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a lot of care.",
+      "jp": "とても慎重ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "One policy can affect thousands of devices. Care is the job.",
+      "jp": "一つのポリシーが、何千もの端末に影響しうるからです。慎重さが、この仕事です。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：Defender のアラートへの初動",
+    "l": [
+     {
+      "sp": 0,
+      "en": "An alert appeared in Defender. What should I do first?",
+      "jp": "Defenderにアラートが出ました。最初に何をすべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Stay calm and read it. Check the severity, which device and which user are involved, and what happened and when. Then ask: is it a single device, or the same alert on many?",
+      "jp": "落ち着いて、読みます。重大度、どの端末とどの利用者が関わるか、何がいつ起きたかを確認します。そして、一台だけか、同じアラートが多くの端末で出ているかを問います。"
+     },
+     {
+      "sp": 0,
+      "en": "What if it's serious?",
+      "jp": "重大なものなら？"
+     },
+     {
+      "sp": 1,
+      "en": "Escalate immediately to the security team, and don't wait to be sure. A good rule: if you're unsure whether it's real, treat it as real until someone qualified says otherwise.",
+      "jp": "確信を待たず、すぐにセキュリティ担当へ上げます。良い決まりがあります。本物か自信がない時は、資格のある人が違うと言うまで、本物として扱います。"
+     },
+     {
+      "sp": 0,
+      "en": "When should I isolate a device?",
+      "jp": "端末を隔離するのは、いつですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When there's a real risk that a threat will spread, such as ransomware behavior. Isolation cuts the device off from the network, but it keeps the connection to Defender, so you can still investigate. Tell the user what you're doing and why.",
+      "jp": "ランサムウェアのような動きで、脅威が広がる本当の危険がある時です。隔離は、端末をネットワークから切り離しますが、Defenderとの接続は保つので、調査は続けられます。利用者に、何をしているか、なぜかを伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I tell the user?",
+      "jp": "利用者に、何と伝えればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Short and calm. \"We detected something unusual on your PC. We are isolating it to protect the company, and the security team will contact you. Please don't turn it off or delete anything.\"",
+      "jp": "短く、落ち着いて。「お使いのPCで、普段と違うものを検知しました。会社を守るために隔離しており、セキュリティ担当から連絡します。電源を切ったり、何かを削除したりしないでください」。"
+     },
+     {
+      "sp": 0,
+      "en": "Why shouldn't they turn it off?",
+      "jp": "なぜ、電源を切ってはいけないんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because evidence may exist only in memory. Also never wipe or reinstall until the investigation team says it's allowed, or you destroy the evidence.",
+      "jp": "証拠が、メモリの中にだけ存在するかもしれないからです。また、調査チームが許可するまで、初期化や再インストールをしてはいけません。証拠を壊してしまいます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if it's a false positive?",
+      "jp": "誤検知だったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Confirm with the owner of the file or tool, then add an exclusion, but narrowly: a specific path or file, with a reason and an end date. A wide exclusion is a hole in your defense.",
+      "jp": "ファイルやツールの持ち主に確認し、除外を追加しますが、狭く限定します。特定のパスやファイルに、理由と終了日を付けます。広い除外は、防御の穴です。"
+     },
+     {
+      "sp": 0,
+      "en": "And afterward?",
+      "jp": "そのあとは？"
+     },
+     {
+      "sp": 1,
+      "en": "Write down the timeline, your decisions, and your reasons. If personal data might have leaked, notify the people responsible for that process right away. Good notes protect everyone.",
+      "jp": "時系列、判断、その理由を書き留めます。個人情報が漏れた可能性があるなら、その手続きの担当者に、すぐ知らせます。良い記録が、全員を守ります。"
+     }
+    ]
+   },
+   {
+    "t": "第7講：問い合わせ対応（切り分けと説明）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A user writes, \"My phone says it isn't compliant and I can't open email.\" What do I do?",
+      "jp": "利用者が「携帯が準拠していないと出て、メールが開けない」と書いてきました。どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't guess. Look up the device in Intune, open its compliance details, and see which rule failed. It might be an outdated OS, a missing passcode, or a long time since the last sync.",
+      "jp": "推測しません。Intuneで端末を探し、コンプライアンスの詳細を開き、どの規則が失敗したかを見ます。古いOS、パスコードがない、最後の同期から長い時間が経っている、などかもしれません。"
+     },
+     {
+      "sp": 0,
+      "en": "Then?",
+      "jp": "それから？"
+     },
+     {
+      "sp": 1,
+      "en": "Tell the user exactly what to do, in simple steps: \"Please update your iPhone to the latest version, then open the Company Portal and tap Check status.\" A specific instruction beats a general apology.",
+      "jp": "利用者に、やるべきことを、簡単な手順で正確に伝えます。「iPhoneを最新の版に更新し、Company Portalを開いて、状態の確認を押してください」。具体的な指示は、一般的なお詫びに勝ります。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the user can't enroll a new device at all?",
+      "jp": "利用者が、新しい端末を、全く登録できない場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "Check these in order: Does the user have an Intune license? Is the enrollment method allowed for this type of device? Has the user reached the device limit? Is the time on the device correct? For iPhones, also check the APNs certificate and the Apple Business Manager token.",
+      "jp": "順に確認します。利用者にIntuneのライセンスがあるか。この種類の端末に、その登録方法が許可されているか。利用者が台数の上限に達していないか。端末の時刻は正しいか。iPhoneでは、APNsの証明書と、Apple Business Managerのトークンも確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "If many users report the same problem at once?",
+      "jp": "多くの利用者が、同時に同じ問題を報告したら？"
+     },
+     {
+      "sp": 1,
+      "en": "That's not a user problem, it's an incident. Think about what changed recently: a new policy, an expired certificate, or a service outage. Check the service health page, and tell the team before the tickets pile up.",
+      "jp": "それは、利用者の問題ではなく、障害です。最近、何が変わったかを考えます。新しいポリシー、切れた証明書、サービスの停止です。サービスの状態のページを確認し、問い合わせが積み上がる前に、チームに伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "How should I speak to non-technical users?",
+      "jp": "技術に詳しくない利用者には、どう話せばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use plain words, one step at a time, and confirm after each step. Say what you're doing and why. Avoid blaming. \"This often happens after a phone update\" is kinder than \"You did it wrong.\"",
+      "jp": "やさしい言葉で、一度に一段階ずつ話し、各段階のあとに確認します。何をしているか、なぜかを話します。責めません。「携帯の更新後によく起きます」は、「やり方が違います」より優しいです。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I record in a ticket?",
+      "jp": "チケットには、何を記録すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The symptom, the device and user, what you checked, what you changed, the result, and the time. If you escalate, include everything so nobody has to ask the same questions again.",
+      "jp": "症状、端末と利用者、確認したこと、変更したこと、結果、時刻です。上へ上げる時は、誰も同じ質問をし直さなくて済むように、全部を含めます。"
+     }
+    ]
+   },
+   {
+    "t": "第8講：紛失・退職・変更管理・報告",
+    "l": [
+     {
+      "sp": 0,
+      "en": "An employee says, \"I lost my company iPhone on the train.\" What's the first move?",
+      "jp": "社員が「会社のiPhoneを電車で失くしました」と言います。最初にすることは？"
+     },
+     {
+      "sp": 1,
+      "en": "Stay kind and calm. Collect the facts: when, where, and what was on it. Report to your manager and the security team. Then close the door: disable the user's sign-in and revoke sessions, so a finder can't reach company data.",
+      "jp": "優しく、落ち着いて。事実を集めます。いつ、どこで、何が入っていたか。上司とセキュリティ担当に報告します。それから入口を閉じます。利用者のサインインを無効にして、セッションを取り消し、拾った人が会社のデータに届かないようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "And the device itself?",
+      "jp": "端末自体は？"
+     },
+     {
+      "sp": 1,
+      "en": "Lock it remotely. On a supervised iPhone you can use lost mode, which shows a message on the screen. If the device is encrypted, which iPhones are by default, the risk is lower, but a wipe is the safest choice if recovery is unlikely.",
+      "jp": "遠隔でロックします。監視対象のiPhoneでは、紛失モードが使え、画面にメッセージを表示できます。端末が暗号化されていれば、iPhoneは標準で暗号化されており、危険は下がりますが、戻る見込みが低いなら、ワイプが最も安全な選択です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is a wipe always okay?",
+      "jp": "ワイプは、いつでもいいんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. It can't be undone. Get approval, write down who decided and when, and for a personal phone, remove only the company data. If personal data might have leaked, the privacy process starts immediately.",
+      "jp": "いいえ。元に戻せません。承認を得て、誰がいつ決めたかを書きます。個人の携帯なら、会社のデータだけを削除します。個人情報が漏れた可能性があれば、個人情報の手続きが、すぐに始まります。"
+     },
+     {
+      "sp": 0,
+      "en": "What about employees who are leaving?",
+      "jp": "退職する社員は？"
+     },
+     {
+      "sp": 1,
+      "en": "Have a checklist: transfer their data, collect the devices, disable the accounts, wipe and reset the devices, reclaim the licenses, and update the asset list. Disable the account at the right moment, not before the data is handed over.",
+      "jp": "チェックリストを使います。データを引き継ぎ、端末を回収し、アカウントを無効にし、端末を初期化して、ライセンスを回収し、資産台帳を更新します。データを引き継ぐ前に、アカウントを無効にしてはいけません。時機を見ます。"
+     },
+     {
+      "sp": 0,
+      "en": "You've talked about careful changes. What's the pattern?",
+      "jp": "慎重な変更の話をしてきましたね。型は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Write the purpose and the impact, test on a small group, announce it to users, roll out in stages, watch the ticket numbers, and keep a way to roll back. Then record what you changed.",
+      "jp": "目的と影響を書き、小さなグループで試し、利用者に知らせ、段階的に展開し、問い合わせの件数を見て、戻す方法を残します。そして、何を変えたかを記録します。"
+     },
+     {
+      "sp": 0,
+      "en": "And reporting to management?",
+      "jp": "管理職への報告は？"
+     },
+     {
+      "sp": 1,
+      "en": "Use numbers: the percentage of compliant devices, the percentage up to date, the number of alerts and how fast they were handled, and the number of lost devices. In English: \"Ninety-six percent of devices are compliant. We have two open alerts, and both are under investigation.\"",
+      "jp": "数字を使います。準拠している端末の割合、最新の状態の割合、アラートの件数と対応の速さ、紛失した端末の数です。英語なら、「端末の96パーセントが準拠しています。未解決のアラートは二件で、どちらも調査中です」。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. I understand the job now, and I know what to learn.",
+      "jp": "ありがとう、ケン。仕事が分かって、何を学ぶべきかも分かりました。"
+     },
+     {
+      "sp": 1,
+      "en": "Start with Entra ID and Intune enrollment on a test device. Practice there, take notes, and grow step by step. The care you show is what makes this job valuable.",
+      "jp": "テスト用の端末で、Entra IDとIntuneの登録から始めてください。そこで練習し、記録を取り、一歩ずつ育てていきます。あなたの慎重さが、この仕事の価値を作ります。"
+     }
+    ]
+   }
+  ]
+ }
+]

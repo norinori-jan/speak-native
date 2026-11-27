@@ -1,0 +1,526 @@
+[
+ {
+  "id": "lecture-sql",
+  "ic": "🗃️",
+  "n": "データ基礎講義：SQLと表の設計（やさしい→難しい）",
+  "hint": "Lecture style on data fundamentals: Ken teaches Mia tables and keys, SELECT, filtering, aggregation, joins, safe changes, design with indexes, and how to check SQL that an AI wrote",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：データは「表」で考える",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, people say data skills matter more in the age of AI. Where should I begin?",
+      "jp": "ケン、AIの時代には、データの力がもっと大事だと言われます。どこから始めればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "With the idea of a table. Almost all business data is rows and columns. Each row is one thing, such as one customer, and each column is one fact about it, such as the name.",
+      "jp": "表という考え方からです。業務のデータのほとんどは、行と列です。各行が、たとえば顧客一人という、一つのもの、各列が、名前のような、その一つについての事実です。"
+     },
+     {
+      "sp": 0,
+      "en": "So a spreadsheet is a table.",
+      "jp": "じゃあ表計算は、表なんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "In spirit, yes. A database table is stricter, though: every column has a fixed type, and every row has the same shape. That strictness is what makes the data trustworthy.",
+      "jp": "精神としては、そうです。ただ、データベースの表はもっと厳格です。各列には決まった型があり、各行が同じ形をしています。その厳格さが、データを信頼できるものにします。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I tell one row from another?",
+      "jp": "行どうしは、どうやって区別しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With a primary key, a column whose value is unique for each row, like a customer ID. Never use a name as the key, because two people can share a name.",
+      "jp": "主キーを使います。顧客IDのように、行ごとに値が重ならない列です。名前を主キーにしてはいけません。同じ名前の人が二人いるかもしれないからです。"
+     },
+     {
+      "sp": 0,
+      "en": "And how do tables relate to each other?",
+      "jp": "表どうしは、どう関係づけますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With a foreign key: a column in one table that holds the primary key of another. An orders table has a customer_id that points to the customers table.",
+      "jp": "外部キーです。ある表の列が、別の表の主キーを持ちます。注文の表にはcustomer_idがあり、顧客の表を指します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not put everything in one big table?",
+      "jp": "なぜ、全部を一つの大きな表に入れないんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because then the same customer's address would be copied into every order. When the address changes, you must fix it in many places, and you'll miss one. Store each fact once.",
+      "jp": "そうすると、同じ顧客の住所が、すべての注文にコピーされます。住所が変わると、たくさんの場所を直す必要があり、必ず一か所は見落とします。各事実は、一度だけ保存します。"
+     },
+     {
+      "sp": 0,
+      "en": "Store each fact once. That's easy to remember.",
+      "jp": "各事実は一度だけ。覚えやすいですね。"
+     },
+     {
+      "sp": 1,
+      "en": "That single rule is the heart of good data design. We'll come back to it.",
+      "jp": "その一つの決まりが、良いデータ設計の核心です。あとでまた戻ってきます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：SELECTとWHERE",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I ask a database a question?",
+      "jp": "データベースに質問するには、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With SQL, the language for talking to relational databases. The basic question is SELECT name, city FROM customers; which means \"show me these columns from this table.\"",
+      "jp": "リレーショナルデータベースと話すための言葉、SQLです。基本の質問は、SELECT name, city FROM customers;で、「この表の、これらの列を見せて」という意味です。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I want only some of the rows?",
+      "jp": "一部の行だけが欲しい時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Add WHERE. SELECT name FROM customers WHERE city = 'Osaka'; returns only the customers in Osaka. Text values go in single quotes.",
+      "jp": "WHEREを足します。SELECT name FROM customers WHERE city = 'Osaka';は、大阪の顧客だけを返します。文字の値は、一重引用符で囲みます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I combine conditions?",
+      "jp": "条件を組み合わせられますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With AND and OR, and parentheses to make the order clear. WHERE city = 'Osaka' AND (age >= 20 OR member = 1). Without parentheses, AND is evaluated before OR, which surprises many people.",
+      "jp": "ANDとORで、順序を明確にするために括弧を使います。WHERE city = 'Osaka' AND (age >= 20 OR member = 1)。括弧がないと、ANDがORより先に評価され、多くの人が驚きます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about searching for part of a text?",
+      "jp": "文字の一部を探すには？"
+     },
+     {
+      "sp": 1,
+      "en": "LIKE. WHERE name LIKE 'Sa%' matches names starting with Sa. The percent sign means \"anything.\" Be careful with leading wildcards like '%a', because they can be slow on big tables.",
+      "jp": "LIKEです。WHERE name LIKE 'Sa%'は、Saで始まる名前に一致します。パーセント記号は「何でも」という意味です。'%a'のように、先頭にワイルドカードを置くと、大きな表では遅くなるので注意します。"
+     },
+     {
+      "sp": 0,
+      "en": "How are empty values handled?",
+      "jp": "空の値は、どう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "An empty value is NULL, which means \"unknown.\" You can't test it with equals. Use IS NULL or IS NOT NULL. Comparing anything to NULL with equals gives neither true nor false, and rows silently disappear.",
+      "jp": "空の値はNULLで、「不明」という意味です。等号では試せません。IS NULLかIS NOT NULLを使います。NULLと等号で比べると、真でも偽でもなく、行が黙って消えます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the kind of trap I'd want to know before the data is important.",
+      "jp": "データが大事なものになる前に、知っておきたい罠ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Good instinct. Always ask: \"What if this column is empty?\" before trusting a result.",
+      "jp": "良い勘です。結果を信じる前に、いつも「この列が空だったら？」と問いましょう。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：並べ替え・件数・集計",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I sort the results?",
+      "jp": "結果を並べ替えるには？"
+     },
+     {
+      "sp": 1,
+      "en": "ORDER BY. SELECT name, price FROM items ORDER BY price DESC; sorts from highest to lowest. Without ORDER BY, the order of rows is not guaranteed.",
+      "jp": "ORDER BYです。SELECT name, price FROM items ORDER BY price DESC;は、高い順に並べます。ORDER BYがないと、行の順番は保証されません。"
+     },
+     {
+      "sp": 0,
+      "en": "And to see just the first few?",
+      "jp": "最初の数件だけを見るには？"
+     },
+     {
+      "sp": 1,
+      "en": "LIMIT, in many databases. LIMIT 10 returns ten rows. It's a safe habit to add LIMIT when you explore a big table, so you don't flood your screen.",
+      "jp": "多くのデータベースで、LIMITです。LIMIT 10は十行を返します。大きな表を調べる時にLIMITを付けるのは、画面があふれないための、安全な習慣です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I count things?",
+      "jp": "数えるには？"
+     },
+     {
+      "sp": 1,
+      "en": "With aggregate functions: COUNT, SUM, AVG, MIN, and MAX. SELECT COUNT(*) FROM orders; tells you how many rows there are.",
+      "jp": "集計関数を使います。COUNT、SUM、AVG、MIN、MAXです。SELECT COUNT(*) FROM orders;で、行が何行あるか分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is COUNT(*) the same as COUNT of a column?",
+      "jp": "COUNT(*)と、列のCOUNTは同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. COUNT(*) counts all rows. COUNT(column) counts only rows where that column isn't NULL. A difference between the two is a clue that some values are missing.",
+      "jp": "いいえ。COUNT(*)は全部の行を数えます。COUNT(列)は、その列がNULLでない行だけを数えます。二つに違いがあれば、値が欠けている手がかりです。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I remove duplicates?",
+      "jp": "重複を除けますか？"
+     },
+     {
+      "sp": 1,
+      "en": "SELECT DISTINCT city FROM customers; lists each city once. COUNT(DISTINCT customer_id) counts unique customers, which is often what a manager really asks.",
+      "jp": "SELECT DISTINCT city FROM customers;は、各都市を一回ずつ並べます。COUNT(DISTINCT customer_id)は、重複しない顧客数を数えます。管理職が本当に知りたいのは、よくこちらです。"
+     },
+     {
+      "sp": 0,
+      "en": "So the same question can have different answers, depending on how I count.",
+      "jp": "つまり、数え方によって、同じ質問に違う答えが出るんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. In data work, the most important skill is defining what you are counting before you count it.",
+      "jp": "その通りです。データの仕事で最も大事な力は、数える前に、何を数えるのかを定義することです。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：GROUP BYとHAVING",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My manager asked, \"How many orders did each customer make?\" That's a count per group.",
+      "jp": "上司が、「顧客ごとに、注文が何件ありますか」と聞きました。グループごとの件数ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's GROUP BY. SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id; gives one row per customer, with the number of their orders.",
+      "jp": "それがGROUP BYです。SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id;は、顧客ごとに一行を、その注文数とともに返します。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I want only the customers with more than five orders?",
+      "jp": "注文が五件より多い顧客だけが欲しい時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Use HAVING, which filters the groups after they're counted. WHERE filters rows before grouping; HAVING filters groups after. This difference is a very common interview question.",
+      "jp": "HAVINGを使い、数えたあとのグループを絞ります。WHEREはグループ化の前に行を絞り、HAVINGは後にグループを絞ります。この違いは、面接でとてもよく聞かれます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show the whole shape?",
+      "jp": "全体の形を見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "SELECT customer_id, SUM(amount) AS total FROM orders WHERE status = 'paid' GROUP BY customer_id HAVING SUM(amount) > 100000 ORDER BY total DESC;. Read it in order: which rows, grouped how, which groups, in what order.",
+      "jp": "SELECT customer_id, SUM(amount) AS total FROM orders WHERE status = 'paid' GROUP BY customer_id HAVING SUM(amount) > 100000 ORDER BY total DESC;。順番に読みます。どの行を、どうグループにし、どのグループを、どの順に。"
+     },
+     {
+      "sp": 0,
+      "en": "What does AS do?",
+      "jp": "ASは何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It gives a column a readable name in the result. total is easier to understand than SUM(amount).",
+      "jp": "結果の列に、読みやすい名前を付けます。SUM(amount)より、totalのほうが分かりやすいです。"
+     },
+     {
+      "sp": 0,
+      "en": "I notice the written order isn't the order I think in.",
+      "jp": "書く順番は、私が考える順番と違いますね。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. The database actually works in this order: FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY. Knowing that explains many error messages.",
+      "jp": "そうです。データベースは、実際には、FROM、WHERE、GROUP BY、HAVING、SELECT、ORDER BYの順に処理します。それを知っていると、多くのエラーが説明できます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：JOINで表をつなぐ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My orders table has only customer IDs, not names. How do I show the names?",
+      "jp": "注文の表には、顧客IDしかなく、名前がありません。名前を表示するには？"
+     },
+     {
+      "sp": 1,
+      "en": "With a JOIN, which combines rows from two tables by matching keys. SELECT c.name, o.amount FROM orders o JOIN customers c ON o.customer_id = c.id;",
+      "jp": "JOINです。二つの表の行を、キーの一致で結びつけます。SELECT c.name, o.amount FROM orders o JOIN customers c ON o.customer_id = c.id;"
+     },
+     {
+      "sp": 0,
+      "en": "What are the letters o and c?",
+      "jp": "oとcという文字は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Aliases, short nicknames for the tables. They make long queries easier to read, and they tell the database which table each column belongs to.",
+      "jp": "別名で、表の短いあだ名です。長い問い合わせを読みやすくし、各列がどの表のものか、データベースに伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What kinds of joins are there?",
+      "jp": "JOINには、どんな種類がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The two to master are INNER JOIN and LEFT JOIN. INNER keeps only rows that match in both tables. LEFT keeps every row from the left table, even if there's no match, filling the missing side with NULL.",
+      "jp": "習得すべき二つは、INNER JOINとLEFT JOINです。INNERは、両方の表で一致した行だけを残します。LEFTは、一致がなくても、左の表の全部の行を残し、欠けた側をNULLで埋めます。"
+     },
+     {
+      "sp": 0,
+      "en": "When would I choose LEFT?",
+      "jp": "いつLEFTを選びますか？"
+     },
+     {
+      "sp": 1,
+      "en": "When the question is about everyone, including those with nothing. \"List all customers and their order counts, including customers who never ordered.\" An INNER JOIN would silently drop those customers.",
+      "jp": "誰についてか、何もない人も含めて問う時です。「一度も注文していない顧客も含めて、全顧客と注文数を一覧に」。INNER JOINでは、そうした顧客が黙って消えます。"
+     },
+     {
+      "sp": 0,
+      "en": "And a join can multiply rows?",
+      "jp": "それと、JOINで行が増えることもあるんですよね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and it's a classic bug. If one customer has three orders, the customer's row appears three times. If you then sum a customer-level value, you count it three times. Always check row counts before and after a join.",
+      "jp": "はい、古典的なバグです。一人の顧客に三件の注文があると、その顧客の行が三回出ます。そこで、顧客単位の値を合計すると、三回数えてしまいます。JOINの前後で、必ず行数を確認します。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：変更は慎重に（INSERT・UPDATE・DELETE・トランザクション）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Everything so far only reads data. What about changing it?",
+      "jp": "ここまでは、データを読むだけでした。変更はどうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "INSERT adds rows, UPDATE changes them, and DELETE removes them. These are powerful and dangerous. The most famous mistake is UPDATE or DELETE without a WHERE clause, which changes every row.",
+      "jp": "INSERTは行を追加し、UPDATEは変更し、DELETEは削除します。強力で、危険です。最も有名な間違いは、WHEREのないUPDATEやDELETEで、全部の行が変わってしまうことです。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I protect myself?",
+      "jp": "自分を守るには、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "First, run the same WHERE as a SELECT and look at the rows it returns. Check the count. Only when the rows are exactly the ones you expect, change SELECT to UPDATE or DELETE.",
+      "jp": "まず、同じWHEREでSELECTを実行して、返る行を見ます。件数を確認します。期待どおりの行だけであれば、SELECTをUPDATEかDELETEに変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's like -WhatIf in PowerShell.",
+      "jp": "PowerShellの-WhatIfみたいですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Same spirit. Second, use a transaction: BEGIN, make your changes, check the results, and then COMMIT if they're right, or ROLLBACK to undo everything.",
+      "jp": "同じ精神です。次に、トランザクションを使います。BEGINし、変更を行い、結果を確認し、正しければCOMMIT、間違っていればROLLBACKで、すべてを取り消します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is a transaction important beyond safety?",
+      "jp": "安全以外に、トランザクションが大事な理由は？"
+     },
+     {
+      "sp": 1,
+      "en": "Because several changes can belong together. Moving money means subtracting from one account and adding to another. A transaction guarantees both happen or neither does.",
+      "jp": "いくつかの変更が、一組のものである場合があるからです。お金の移動は、一方の口座から引き、もう一方に足すことです。トランザクションは、両方が起きるか、どちらも起きないかを保証します。"
+     },
+     {
+      "sp": 0,
+      "en": "And on a production database?",
+      "jp": "本番のデータベースでは？"
+     },
+     {
+      "sp": 1,
+      "en": "Take a backup first, have a second person review the statement, run it in a quiet period, and record exactly what you ran. Never experiment on production data.",
+      "jp": "先にバックアップを取り、二人目の人が文を確認し、静かな時間帯に実行し、実行した内容を正確に記録します。本番のデータで、実験してはいけません。"
+     }
+    ]
+   },
+   {
+    "t": "第7講：設計：正規化・制約・索引",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You said, \"Store each fact once.\" Does that have a name?",
+      "jp": "「各事実は一度だけ保存する」と言いましたね。それには名前がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Normalization. It's the practice of splitting data into tables so each fact lives in one place. Customers in one table, orders in another, products in a third, connected by keys.",
+      "jp": "正規化です。各事実が一か所にあるように、データを表に分ける方法です。顧客は一つの表、注文は別の表、商品は三つ目の表で、キーでつなぎます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I split too much?",
+      "jp": "分けすぎたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then queries need many joins and become slow and hard to read. Some systems, especially for reporting, deliberately keep copies of data to be faster. That's called denormalization, and it's a trade-off, not a mistake.",
+      "jp": "問い合わせに多くのJOINが必要になり、遅く、読みにくくなります。とくに集計用のシステムでは、速さのために、わざとデータのコピーを持つものもあります。それは非正規化と呼ばれ、間違いではなく、トレードオフです。"
+     },
+     {
+      "sp": 0,
+      "en": "How does a database stop bad data from getting in?",
+      "jp": "データベースは、どうやって、不正なデータが入るのを防ぎますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With constraints. NOT NULL forbids empty values, UNIQUE forbids duplicates, CHECK enforces rules like price >= 0, and FOREIGN KEY ensures an order can't point to a customer who doesn't exist.",
+      "jp": "制約です。NOT NULLは空の値を禁じ、UNIQUEは重複を禁じ、CHECKはprice >= 0のような規則を強制し、FOREIGN KEYは、存在しない顧客を指す注文を防ぎます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not just check in the application?",
+      "jp": "なぜ、アプリで確認するだけではだめなんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because many programs, scripts, and people touch the same database. Rules in the database protect the data from every one of them, including your own future mistakes.",
+      "jp": "多くのプログラム、スクリプト、人が、同じデータベースに触るからです。データベースの中の規則は、それらすべて、将来の自分の間違いからも、データを守ります。"
+     },
+     {
+      "sp": 0,
+      "en": "And indexes? My search is slow.",
+      "jp": "索引は？検索が遅いんです。"
+     },
+     {
+      "sp": 1,
+      "en": "An index is like the index of a book. It lets the database find rows without reading the whole table. Add one on columns you search or join by often. But each index slows writes and takes space, so don't add them everywhere.",
+      "jp": "索引は、本の索引のようなものです。表全体を読まずに、行を見つけられます。よく検索や結合に使う列に付けます。ただ、索引は書き込みを遅くし、容量も使うので、あちこちに付けてはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I know whether an index is being used?",
+      "jp": "索引が使われているかは、どうやって分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Ask the database to explain its plan, with EXPLAIN. It shows whether it scans the whole table or uses an index. Measure first, then add the index.",
+      "jp": "EXPLAINで、実行の計画を説明させます。表全体を調べるのか、索引を使うのかが分かります。まず測り、それから索引を足します。"
+     }
+    ]
+   },
+   {
+    "t": "第8講：AIが書いたSQLを検証する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "These days, I can ask an AI to write SQL. How do I know it's right?",
+      "jp": "最近は、AIにSQLを書いてもらえます。それが正しいかどうか、どうやって分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You verify it, and that needs everything we've covered. First, give the AI your table definitions: names, columns, types, and keys. Without them, it guesses, and a guess looks just as confident as a fact.",
+      "jp": "検証します。そのためには、ここまでのすべてが必要です。まずAIに、表の定義を渡します。名前、列、型、キーです。それがないと推測し、推測も、事実と同じくらい自信ありげに見えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I read the query?",
+      "jp": "それからクエリを読むんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, in the order the database works: FROM and JOIN, then WHERE, then GROUP BY and HAVING, then SELECT and ORDER BY. Ask yourself: are the join keys right, could a join multiply rows, and how are NULLs handled?",
+      "jp": "はい、データベースが処理する順番に。FROMとJOIN、次にWHERE、GROUP BYとHAVING、最後にSELECTとORDER BYです。自問します。結合のキーは正しいか、JOINで行が増えないか、NULLはどう扱われているか。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I test it?",
+      "jp": "どうやって試せますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a tiny table where you know the answer by hand. Five rows, with an empty value, a duplicate, and a customer who has no orders. If the query gets that small case right, your trust grows. If not, you've found the bug cheaply.",
+      "jp": "手で答えが分かる、小さな表を使います。五行で、空の値、重複、注文のない顧客を入れます。その小さな例で、クエリが正しければ、信頼が高まります。違えば、安く、バグを見つけたことになります。"
+     },
+     {
+      "sp": 0,
+      "en": "And for queries that change data?",
+      "jp": "データを変更するクエリは？"
+     },
+     {
+      "sp": 1,
+      "en": "Convert to a SELECT first and compare the rows. Run inside a transaction, check the count, and roll back if anything looks odd. Never run AI-written UPDATE or DELETE directly on production.",
+      "jp": "先にSELECTに変えて、行を比べます。トランザクションの中で実行し、件数を確認し、少しでもおかしければロールバックします。AIが書いたUPDATEやDELETEを、本番で直接実行してはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a security risk in the SQL itself?",
+      "jp": "SQLそのものに、セキュリティの危険はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: SQL injection. If an application builds a query by joining user input into the text, an attacker can inject their own commands. The fix is parameterized queries, where the input is passed separately and never treated as code.",
+      "jp": "はい、SQLインジェクションです。アプリが、ユーザーの入力を文字につなげてクエリを作ると、攻撃者が自分のコマンドを注入できます。直し方は、パラメータ化したクエリで、入力を別に渡し、コードとして扱わないことです。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the data I give the AI to test with?",
+      "jp": "AIにテスト用に渡すデータはどうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use fake sample data. Never paste real customer records, personal information, or confidential figures into an AI tool unless your company explicitly allows it. The table structure is usually enough for the AI to help.",
+      "jp": "架空のサンプルデータを使います。会社が明確に許可していない限り、本物の顧客の記録、個人情報、機密の数字を、AIのツールに貼り付けてはいけません。たいていは、表の構造だけで、AIは手伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "So the AI writes quickly, and I provide the judgment.",
+      "jp": "じゃあAIが素早く書き、私が判断を担うんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the partnership. Understand the data, define the question, verify the answer. The tool changes, but those three duties stay with you.",
+      "jp": "それが協力の形です。データを理解し、問いを定義し、答えを検証する。道具は変わっても、その三つの責任は、あなたに残ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. I feel ready to look at real tables now.",
+      "jp": "ありがとう、ケン。本物の表を見る準備ができた気がします。"
+     },
+     {
+      "sp": 1,
+      "en": "Good. Start small, count carefully, and always ask what's missing.",
+      "jp": "良いですね。小さく始め、慎重に数え、いつも、何が欠けているかを問いましょう。"
+     }
+    ]
+   }
+  ]
+ }
+]
