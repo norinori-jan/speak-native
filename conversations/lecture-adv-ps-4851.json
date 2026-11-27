@@ -1,0 +1,606 @@
+[
+ {
+  "id": "lecture-adv-ps",
+  "ic": "🪟",
+  "n": "応用講義1：PowerShell応用（やさしい→難しい）",
+  "hint": "Advanced lecture series, part one: Ken and Mia move from tidy one-liners to reusable functions, objects you build yourself, bulk operations from CSV, logging, remote work and a design review of a script",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "応用1講：関数にして使い回す",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, my scripts work, but I keep copying and pasting the same lines between them. It feels wrong.",
+      "jp": "ケン、スクリプトは動くんですが、同じ行を何度もコピーして貼り付けています。何か間違っている気がします。"
+     },
+     {
+      "sp": 1,
+      "en": "Your instinct is right. When you copy the same lines three times, it's time to make a function. A function gives a name to a piece of logic, so you can call it from anywhere.",
+      "jp": "その勘は正しいです。同じ行を三回コピーしたら、関数にする時です。関数は、ひとまとまりの処理に名前を付けるので、どこからでも呼び出せます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does it look like?",
+      "jp": "どんな形ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "function Get-DiskReport { param([string]$ComputerName) ... }. Notice the name follows the verb-noun rule, and the inputs are declared in a param block with their types.",
+      "jp": "function Get-DiskReport { param([string]$ComputerName) ... }です。名前が動詞-名詞の決まりに従い、入力はparamブロックで型付きで宣言されていることに注目してください。"
+     },
+     {
+      "sp": 0,
+      "en": "Why declare the type?",
+      "jp": "なぜ型を宣言するんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because PowerShell then validates the input for you. If someone passes something that can't become a string, it fails early with a clear message instead of failing strangely later.",
+      "jp": "PowerShellが入力を検証してくれるからです。文字列にできないものを渡されたら、後で奇妙に失敗するのではなく、早い段階で明確なメッセージとともに失敗します。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I make a parameter required?",
+      "jp": "パラメータを必須にできますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: [Parameter(Mandatory)]. If the caller leaves it out, PowerShell asks for it. You can also restrict values with ValidateSet, so only allowed choices are accepted.",
+      "jp": "できます。[Parameter(Mandatory)]です。呼び出す側が省略すると、PowerShellが入力を求めます。ValidateSetで値を制限すれば、許可された選択肢だけを受け付けます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should a function return?",
+      "jp": "関数は何を返すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Objects, not formatted text. Return the data, and let the caller decide how to display it. If you print with Write-Host inside, nobody can pipe the result onward.",
+      "jp": "整形した文字ではなく、オブジェクトです。データを返し、表示の仕方は呼び出す側に任せます。中でWrite-Hostで表示してしまうと、結果を次にパイプでつなげません。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the object pipeline idea again.",
+      "jp": "またオブジェクトのパイプラインの考え方ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and it's the core of advanced PowerShell. Output objects, and formatting is the last step, never the middle step.",
+      "jp": "はい、それが応用のPowerShellの核心です。オブジェクトを出力し、整形は最後の段階で、途中ではしません。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do I keep my functions?",
+      "jp": "関数はどこに置いておけばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Put related functions in a dot-psm1 module file, and load it with Import-Module. Then they behave like built-in commands, with help and tab completion.",
+      "jp": "関連する関数を、拡張子psm1のモジュールファイルにまとめて、Import-Moduleで読み込みます。すると、ヘルプやタブ補完つきで、組み込みのコマンドのように使えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I add help text to my own functions?",
+      "jp": "自分の関数にヘルプの文章を付けられますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With comment-based help: a block at the top of the function with .SYNOPSIS and .EXAMPLE. Then Get-Help works on your function too, and your future self will thank you.",
+      "jp": "コメントベースのヘルプです。関数の先頭に、.SYNOPSISや.EXAMPLEを書いたブロックを置きます。すると自分の関数でもGet-Helpが使え、未来の自分が感謝します。"
+     }
+    ]
+   },
+   {
+    "t": "応用2講：自分でオブジェクトを作る",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Sometimes I need to combine data from two places into one table. Do I have to glue text together?",
+      "jp": "ときどき、二か所のデータを一つの表にまとめたい時があります。文字をつなぎ合わせるしかありませんか？"
+     },
+     {
+      "sp": 1,
+      "en": "No, build an object. [PSCustomObject]@{ Name = $pc; FreeGB = $free; Status = 'OK' } creates one record with named properties, exactly like the output of built-in commands.",
+      "jp": "いいえ、オブジェクトを作ります。[PSCustomObject]@{ Name = $pc; FreeGB = $free; Status = 'OK' }は、組み込みコマンドの出力と全く同じように、名前付きプロパティを持つ一件のレコードを作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "What is that at-sign and brace?",
+      "jp": "その、アットマークと波括弧は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a hashtable literal: a set of key and value pairs. Casting it to PSCustomObject turns the keys into properties.",
+      "jp": "ハッシュテーブルのリテラルで、キーと値の組の集まりです。それをPSCustomObjectに変換すると、キーがプロパティになります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is that better than a string?",
+      "jp": "なぜそれが文字列より良いんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because everything downstream works. Sort-Object, Where-Object, Export-Csv, and ConvertTo-Json all understand objects. With strings, you would write parsing code for each of them.",
+      "jp": "下流のすべてがうまく動くからです。Sort-Object、Where-Object、Export-Csv、ConvertTo-Jsonは、すべてオブジェクトを理解します。文字列だと、それぞれに解析のコードを書く必要があります。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I add a calculated column to existing output?",
+      "jp": "既存の出力に、計算した列を足すには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a calculated property with Select-Object: Select-Object Name, @{ Name = 'SizeMB'; Expression = { [math]::Round($_.Length / 1MB, 1) } }. It builds a new column from the current item.",
+      "jp": "Select-Objectの計算プロパティを使います。Select-Object Name, @{ Name = 'SizeMB'; Expression = { [math]::Round($_.Length / 1MB, 1) } }。今の項目から、新しい列を作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "That's dense. Can you read it to me slowly?",
+      "jp": "濃いですね。ゆっくり読んでもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Sure. \"Make a column called SizeMB. For each item, take its Length, divide by one megabyte, and round to one decimal.\" The Expression block is just a mini-function that runs once per item.",
+      "jp": "もちろん。「SizeMBという列を作る。各項目について、Lengthを1メガバイトで割り、小数一桁に丸める」。Expressionブロックは、項目ごとに一回実行される小さな関数にすぎません。"
+     },
+     {
+      "sp": 0,
+      "en": "What about grouping, like counting files by extension?",
+      "jp": "拡張子ごとにファイルを数えるような、グループ化は？"
+     },
+     {
+      "sp": 1,
+      "en": "Group-Object. Get-ChildItem -File | Group-Object Extension | Sort-Object Count -Descending. Each group object has a Name and a Count, and the original items are inside it.",
+      "jp": "Group-Objectです。Get-ChildItem -File | Group-Object Extension | Sort-Object Count -Descending。各グループのオブジェクトには、NameとCountがあり、元の項目がその中に入っています。"
+     },
+     {
+      "sp": 0,
+      "en": "So I can build a small report in one pipeline.",
+      "jp": "じゃあ一つのパイプラインで、小さなレポートを作れますね。"
+     },
+     {
+      "sp": 1,
+      "en": "And when the pipeline gets longer than you can explain in one breath, store an intermediate result in a variable, and name it well.",
+      "jp": "そして、パイプラインが一息で説明できないほど長くなったら、途中の結果を変数に入れ、良い名前を付けます。"
+     }
+    ]
+   },
+   {
+    "t": "応用3講：CSVから一括処理する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My manager gave me a CSV of fifty new employees and asked me to create the accounts. I don't want to click fifty times.",
+      "jp": "上司から、新入社員五十人のCSVを渡されて、アカウントを作るように頼まれました。五十回クリックしたくありません。"
+     },
+     {
+      "sp": 1,
+      "en": "This is the classic job for PowerShell. Import-Csv reads the file, and each row becomes an object whose properties are the column headers.",
+      "jp": "PowerShellの古典的な仕事です。Import-Csvがファイルを読み込み、各行が、列の見出しをプロパティに持つオブジェクトになります。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I loop over the rows?",
+      "jp": "それから行をくり返し処理するんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: foreach ($row in Import-Csv .\\users.csv) { ... }. But before you create anything, validate. Check for empty names, duplicate IDs, and strange characters.",
+      "jp": "はい。foreach ($row in Import-Csv .\\users.csv) { ... }です。でも何かを作る前に、検証してください。空の名前、重複したID、変な文字を確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens if row thirty fails?",
+      "jp": "三十行目で失敗したらどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's the key design question. Wrap each row in its own try and catch, record the failure with the row number, and continue. One bad row should not stop forty-nine good ones.",
+      "jp": "そこが設計の肝です。各行を、それぞれのtryとcatchで囲み、行番号とともに失敗を記録して、続けます。一つの悪い行が、四十九個の良い行を止めてはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "And I should test it first, right?",
+      "jp": "それと、先に試すんですよね？"
+     },
+     {
+      "sp": 1,
+      "en": "Always. Support -WhatIf in your own function with SupportsShouldProcess, and run the whole CSV in dry-run mode first. Then read the list of what would happen.",
+      "jp": "必ずです。自作の関数でも、SupportsShouldProcessで-WhatIfに対応し、まずCSV全体を試験実行で通します。それから、何が起きるはずかの一覧を読みます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should the script produce at the end?",
+      "jp": "スクリプトは、最後に何を出力すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A result file: one row per input row, with a Status column, a Message column, and a timestamp. It becomes your evidence, and your manager's report.",
+      "jp": "結果ファイルです。入力の一行ごとに一行を出し、Status列、Message列、日時を付けます。それがあなたの証拠になり、上司への報告にもなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Should the initial passwords be in that file?",
+      "jp": "初期パスワードは、そのファイルに入れてもいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Never write secrets into a log or a result file. Deliver them through the approved secure process, and force a password change at first sign-in.",
+      "jp": "いいえ。秘密を、ログや結果のファイルに書いてはいけません。承認された安全な手続きで渡し、最初のサインインでパスワード変更を必須にします。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the kind of detail I'd have missed.",
+      "jp": "それは、私が見落としそうな細部です。"
+     },
+     {
+      "sp": 1,
+      "en": "Most security problems in scripts are details like that. A checklist at the end of the design, not just at the end of the coding, catches them.",
+      "jp": "スクリプトのセキュリティの問題の多くは、そういう細部です。コーディングの最後だけでなく、設計の最後にもチェックリストを使うと、見つけられます。"
+     }
+    ]
+   },
+   {
+    "t": "応用4講：ログと再実行できる設計",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My script ran overnight and failed, and I don't know where. How do I prevent that?",
+      "jp": "スクリプトが夜中に実行されて失敗したのに、どこで失敗したか分かりません。どう防げばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Logging. Write a line for each important step, with a timestamp, a level, and a message. Start with Add-Content to a log file, or Start-Transcript for the whole session.",
+      "jp": "ログです。重要な手順ごとに、日時、レベル、メッセージを付けて一行書きます。まずログファイルへのAdd-Contentか、セッション全体のStart-Transcriptから始めます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should be in the message?",
+      "jp": "メッセージには何を入れますか？"
+     },
+     {
+      "sp": 1,
+      "en": "What was attempted, on which target, and the result. \"Disabled account for user 1042: success\" tells a story. \"Done\" tells nothing.",
+      "jp": "何を試し、どの対象に対して、結果はどうだったか。「ユーザー1042のアカウントを無効化：成功」は、物語を語ります。「完了」は、何も語りません。"
+     },
+     {
+      "sp": 0,
+      "en": "And errors?",
+      "jp": "エラーは？"
+     },
+     {
+      "sp": 1,
+      "en": "In catch, log $_.Exception.Message, and the line where it happened. The automatic variable $_ holds the error record inside catch.",
+      "jp": "catchの中で、$_.Exception.Messageと、発生した行をログに書きます。自動変数$_が、catchの中ではエラーの記録を持っています。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the script is run twice by mistake?",
+      "jp": "スクリプトを間違えて二回実行したら？"
+     },
+     {
+      "sp": 1,
+      "en": "That's idempotency, a very important idea. A well-designed script gives the same result whether you run it once or ten times. Check the current state before changing it.",
+      "jp": "冪等性という、とても重要な考えです。よく設計されたスクリプトは、一回実行しても十回実行しても、同じ結果になります。変更する前に、現在の状態を確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me an example?",
+      "jp": "例を挙げてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Before creating a folder, test whether it exists with Test-Path. Before adding a user to a group, check whether they're already a member. The second run then reports \"already done\" and changes nothing.",
+      "jp": "フォルダを作る前に、Test-Pathで存在を確認します。ユーザーをグループに追加する前に、すでにメンバーか確認します。二回目は「実施済み」と報告し、何も変えません。"
+     },
+     {
+      "sp": 0,
+      "en": "That makes failures much less scary. I can just run it again.",
+      "jp": "それなら失敗がずっと怖くなくなります。もう一度実行すればいいんですから。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Scripts that can be re-run safely turn recovery from a crisis into a routine.",
+      "jp": "その通りです。安全に再実行できるスクリプトは、復旧を、危機から日常の作業に変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there also a way to run things on a schedule?",
+      "jp": "決まった時刻に実行する方法もありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Task Scheduler can run your script on a schedule, using a registered task. When the script runs unattended, logging and idempotency matter even more.",
+      "jp": "タスクスケジューラが、登録したタスクで、スクリプトを決まった時刻に実行できます。無人で実行される場合は、ログと冪等性が、さらに重要になります。"
+     }
+    ]
+   },
+   {
+    "t": "応用5講：リモートと複数台の処理",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My boss wants a check across two hundred PCs. Do I log in to each one?",
+      "jp": "上司が、二百台のパソコンの確認を求めています。一台ずつログインするんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. PowerShell remoting lets you run commands on other machines. Invoke-Command -ComputerName $list -ScriptBlock { Get-Service Spooler } runs the block on each one.",
+      "jp": "いいえ。PowerShellのリモート処理で、他のマシンでコマンドを実行できます。Invoke-Command -ComputerName $list -ScriptBlock { Get-Service Spooler }は、各マシンでそのブロックを実行します。"
+     },
+     {
+      "sp": 0,
+      "en": "Does it run them one by one?",
+      "jp": "一台ずつ実行されますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In parallel, up to a throttle limit that you can set. The results come back as objects with an extra property, PSComputerName, telling you which machine each came from.",
+      "jp": "設定できる制限の数まで、並列に実行されます。結果は、PSComputerNameという追加のプロパティを持つオブジェクトで戻り、どのマシンの結果か分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "What about machines that are offline?",
+      "jp": "オフラインのマシンは？"
+     },
+     {
+      "sp": 1,
+      "en": "They produce errors. Use -ErrorAction SilentlyContinue with -ErrorVariable to collect the failures, then report them separately. Don't let silence hide the unreachable machines.",
+      "jp": "エラーを出します。-ErrorAction SilentlyContinueと-ErrorVariableを使って、失敗を集め、別に報告します。沈黙が、到達できないマシンを隠してはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "Is remoting enabled by default?",
+      "jp": "リモート処理は、最初から有効ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It depends on the machine and the company's policy. On servers it's often on; on clients it may be off. Enabling it is a security decision, so it needs approval and the right firewall and permissions.",
+      "jp": "マシンや会社の方針によります。サーバーでは有効なことが多く、クライアントでは無効なこともあります。有効にするのはセキュリティの判断なので、承認と、適切なファイアウォールと権限が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the variables? My local variable wasn't visible inside the block.",
+      "jp": "変数についてです。手元の変数が、ブロックの中で見えませんでした。"
+     },
+     {
+      "sp": 1,
+      "en": "The block runs on another computer, so it can't see your local variables. Pass them with the using prefix, like $using:threshold, or through -ArgumentList.",
+      "jp": "ブロックは別のコンピューターで実行されるので、手元の変数は見えません。$using:thresholdのようにusingの接頭辞を付けるか、-ArgumentListで渡します。"
+     },
+     {
+      "sp": 0,
+      "en": "And credentials?",
+      "jp": "資格情報は？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't type passwords into scripts. Use your own signed-in session, or a secure credential store approved by your company. A password in a script file is a password in every backup of that file.",
+      "jp": "パスワードをスクリプトに打ち込んではいけません。自分のサインイン済みのセッションか、会社が承認した安全な資格情報の保管場所を使います。スクリプトのファイルにあるパスワードは、そのファイルのすべてのバックアップにあるパスワードです。"
+     },
+     {
+      "sp": 0,
+      "en": "So power also means responsibility.",
+      "jp": "つまり力には、責任も伴うんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Always. One command can now affect two hundred machines, so your caution should scale with it.",
+      "jp": "いつでもです。一つのコマンドが二百台に影響しうるので、注意も同じだけ大きくします。"
+     }
+    ]
+   },
+   {
+    "t": "応用6講：APIとJSONを扱う",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can PowerShell talk to web services?",
+      "jp": "PowerShellは、Webサービスと通信できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Invoke-RestMethod calls a web API and returns the JSON already converted into objects. You get properties, not raw text.",
+      "jp": "はい。Invoke-RestMethodは、WebのAPIを呼び出し、JSONをすでにオブジェクトに変換して返します。生の文字ではなく、プロパティが得られます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the service needs a token?",
+      "jp": "サービスがトークンを必要とするなら？"
+     },
+     {
+      "sp": 1,
+      "en": "You add it to the headers: -Headers @{ Authorization = \"Bearer $token\" }. Where the token comes from matters: an environment variable or a protected store, never the script text.",
+      "jp": "ヘッダーに追加します。-Headers @{ Authorization = \"Bearer $token\" }。トークンをどこから取るかが重要です。環境変数か保護された保管場所からで、スクリプトの文章の中ではいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "What about APIs that return many pages of results?",
+      "jp": "結果が何ページにも分かれるAPIは？"
+     },
+     {
+      "sp": 1,
+      "en": "Loop while there's a next-page link or token, and gather the items into one list. Add a short pause between calls, since many services limit how fast you may call.",
+      "jp": "次のページへのリンクやトークンがある間、くり返し、項目を一つのリストに集めます。呼び出しの間に短い待ち時間を入れてください。多くのサービスは、呼び出しの速さを制限しているからです。"
+     },
+     {
+      "sp": 0,
+      "en": "And when the service says \"too many requests\"?",
+      "jp": "サービスが「リクエストが多すぎる」と言ったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Wait and retry, with an increasing delay. That's called backoff. Don't hammer a service that's asking you to slow down.",
+      "jp": "待ってから、間隔を延ばしながら再試行します。それをバックオフと呼びます。減速を求めているサービスを、叩き続けてはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I write the result to a file?",
+      "jp": "結果をファイルに書くには？"
+     },
+     {
+      "sp": 1,
+      "en": "ConvertTo-Json -Depth 5 | Set-Content. The Depth setting matters, because the default depth is only two, and deeper objects get silently cut off.",
+      "jp": "ConvertTo-Json -Depth 5 | Set-Contentです。Depthの設定が重要で、初期値はわずか2なので、それより深いオブジェクトは、黙って切り捨てられます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a nasty surprise. I wouldn't have noticed.",
+      "jp": "嫌な驚きですね。気づかなかったと思います。"
+     },
+     {
+      "sp": 1,
+      "en": "That's why you test with real data, and compare the counts. If the input had two hundred items and the file has two hundred, you have some evidence it worked.",
+      "jp": "だから実際のデータで試し、件数を比べます。入力が二百件で、ファイルも二百件なら、うまくいったという証拠が少しは得られます。"
+     }
+    ]
+   },
+   {
+    "t": "応用7講：テストと品質",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I know my function is correct, besides running it by hand?",
+      "jp": "手で実行する以外に、自分の関数が正しいとどうやって分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Write tests. Pester is the standard testing framework for PowerShell. You describe expected behavior, and Pester checks it every time you run it.",
+      "jp": "テストを書きます。PesterはPowerShellの標準的なテストの枠組みです。期待する動作を記述すると、実行のたびにPesterが確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show me what a test looks like?",
+      "jp": "テストがどんな形か、見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Describe 'Get-DiskReport' { It 'flags low space' { (Get-DiskReport -Free 5).Status | Should -Be 'Low' } }. The sentence reads like a requirement.",
+      "jp": "Describe 'Get-DiskReport' { It 'flags low space' { (Get-DiskReport -Free 5).Status | Should -Be 'Low' } }。その文は、要件のように読めます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if my function reads from a real server?",
+      "jp": "関数が本物のサーバーから読むなら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then you mock it. A mock replaces the real command with a fake one that returns known data during the test. Your test no longer depends on a live server.",
+      "jp": "その場合はモックを使います。モックは、テストの間、本物のコマンドを、既知のデータを返す偽物に置き換えます。テストが、稼働中のサーバーに依存しなくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Isn't testing too much for a small script?",
+      "jp": "小さなスクリプトに、テストは大げさではありませんか？"
+     },
+     {
+      "sp": 1,
+      "en": "For a throwaway, yes. But if the script changes people's accounts or deletes files, a few tests are cheap insurance. Test the decisions: the if statements, the filters, and the edge cases.",
+      "jp": "使い捨てならそうです。でも、人のアカウントを変えたり、ファイルを削除したりするなら、少しのテストは安い保険です。判断の部分を試します。if文、フィルター、端のケースです。"
+     },
+     {
+      "sp": 0,
+      "en": "What are edge cases?",
+      "jp": "端のケースとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The strange inputs: empty list, one item, duplicates, a name with an apostrophe, a missing column. Most bugs live there, not in the normal path.",
+      "jp": "変な入力です。空のリスト、一件だけ、重複、アポストロフィのある名前、欠けている列。ほとんどのバグは、通常の経路ではなく、そこにいます。"
+     },
+     {
+      "sp": 0,
+      "en": "And a tool to check style?",
+      "jp": "書き方を検査する道具は？"
+     },
+     {
+      "sp": 1,
+      "en": "PSScriptAnalyzer. It reads your script and warns about bad habits, like using aliases or Write-Host, or unused variables. Run it before you share any script.",
+      "jp": "PSScriptAnalyzerです。スクリプトを読み、エイリアスやWrite-Hostの使用、使っていない変数のような、悪い習慣を警告します。どんなスクリプトも、共有する前に実行してください。"
+     }
+    ]
+   },
+   {
+    "t": "応用8講：スクリプトのレビューと総仕上げ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, can we review one of my scripts together, the way a senior engineer would?",
+      "jp": "ケン、先輩のエンジニアがするように、私のスクリプトを一緒にレビューしてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Gladly. When I review a script, I ask five questions. First, is the purpose clear from the name and the comments?",
+      "jp": "喜んで。スクリプトをレビューする時、私は五つの質問をします。一つ目、名前とコメントから、目的が明確か。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the second?",
+      "jp": "二つ目は？"
+     },
+     {
+      "sp": 1,
+      "en": "What can go wrong? I look at every place where input comes in, and every place where something is changed or deleted, and I ask what happens on failure.",
+      "jp": "何がうまくいかない可能性があるか。入力が入るすべての場所と、何かを変更したり削除したりするすべての場所を見て、失敗した時にどうなるかを問います。"
+     },
+     {
+      "sp": 0,
+      "en": "Third?",
+      "jp": "三つ目は？"
+     },
+     {
+      "sp": 1,
+      "en": "Is it safe to run twice? Does it have a dry-run mode? Can I see afterward what it did?",
+      "jp": "二回実行しても安全か。試験実行のモードがあるか。あとで何をしたか確認できるか。"
+     },
+     {
+      "sp": 0,
+      "en": "Fourth and fifth?",
+      "jp": "四つ目と五つ目は？"
+     },
+     {
+      "sp": 1,
+      "en": "Fourth, are there secrets or personal data in the code or the logs? Fifth, could a colleague run it without asking you, and understand the results?",
+      "jp": "四つ目、コードやログに、秘密や個人情報がないか。五つ目、同僚が、あなたに聞かずに実行でき、結果を理解できるか。"
+     },
+     {
+      "sp": 0,
+      "en": "Those questions would improve every script I've ever written.",
+      "jp": "その質問は、私がこれまで書いたすべてのスクリプトを改善してくれそうです。"
+     },
+     {
+      "sp": 1,
+      "en": "They improve mine too. Notice that none of them is about clever syntax. Advanced skill is mostly judgment, not tricks.",
+      "jp": "私のものも改善してくれます。どれも、巧妙な書き方についてではないことに気づいてください。応用の力は、ほとんどが技ではなく、判断です。"
+     },
+     {
+      "sp": 0,
+      "en": "So what's the single idea to remember from this whole series?",
+      "jp": "では、このシリーズ全体から、覚えておく一つの考えは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Build tools that other people can trust, including the future you at three in the morning. That means clear names, safe defaults, honest logs, and the courage to test before you touch the real thing.",
+      "jp": "他の人が信頼できる道具を作る。夜中の三時の未来のあなたも含めてです。つまり、明確な名前、安全な初期設定、正直なログ、そして本物に触る前に試す勇気です。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll put that on a sticky note. Thank you, Ken.",
+      "jp": "付箋に書いておきます。ありがとう、ケン。"
+     },
+     {
+      "sp": 1,
+      "en": "You're welcome. Next, we'll do the same for JavaScript, and the difficulty goes up again.",
+      "jp": "どういたしまして。次はJavaScriptで同じことをします。難しさも、また上がります。"
+     }
+    ]
+   }
+  ]
+ }
+]

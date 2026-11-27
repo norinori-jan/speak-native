@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-adv-design",
+  "ic": "🧭",
+  "n": "応用講義4：三つの言語をまたぐ設計と判断（最難関）",
+  "hint": "Advanced lecture series, finale: Ken and Mia leave syntax behind and practice the hardest skills, which are requirements, trade-offs, security by design, incident postmortems and explaining your work to others",
+  "level": 5,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "応用1講：要件を聞き出して言葉にする",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, a colleague said, \"Can you make a tool to track our equipment?\" I almost said yes and started coding.",
+      "jp": "ケン、同僚が「備品を管理するツールを作れる？」と言いました。もう少しで、はいと言ってコードを書き始めるところでした。"
+     },
+     {
+      "sp": 1,
+      "en": "I'm glad you stopped. That sentence is a wish, not a requirement. Your first job is to ask questions until the real need is clear.",
+      "jp": "止まってくれて嬉しいです。その一文は、願いであって、要件ではありません。最初の仕事は、本当の必要がはっきりするまで、質問することです。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I ask?",
+      "jp": "何を聞けばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Who will use it, and how often? What problem happens today? What does success look like? What data is involved, and is any of it sensitive? What happens if it breaks?",
+      "jp": "誰が、どれくらいの頻度で使うのか。今日、どんな問題が起きているのか。成功とはどういう状態か。どんなデータが関わり、機密のものはあるか。壊れたらどうなるか。"
+     },
+     {
+      "sp": 0,
+      "en": "What if they say, \"I don't know, just make something\"?",
+      "jp": "「分からない、とにかく何か作って」と言われたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then build the smallest version and show it quickly. People often discover what they want only when they see something. But say clearly that it's a first draft, so nobody mistakes it for the final system.",
+      "jp": "その時は、一番小さな版を作って、早く見せます。人は、何かを見て初めて、欲しいものが分かることがよくあります。ただし、最初の草案だとはっきり言い、誰も最終のシステムと勘違いしないようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I record what we agreed?",
+      "jp": "合意したことは、どう記録しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Write a one-page summary: purpose, users, main functions, what's out of scope, and the open questions. Send it, and ask for corrections. Most misunderstandings are caught at that point, when they're cheap.",
+      "jp": "一ページの要約を書きます。目的、利用者、主な機能、範囲外のもの、未解決の質問です。それを送り、訂正を求めます。ほとんどの誤解は、その時点で、安いうちに見つかります。"
+     },
+     {
+      "sp": 0,
+      "en": "Out of scope. That's a brave thing to write down.",
+      "jp": "範囲外。それを書き出すのは、勇気がいりますね。"
+     },
+     {
+      "sp": 1,
+      "en": "It's the most protective sentence in the document. It says what you are not promising, and that prevents endless growth later.",
+      "jp": "その文書で、最も身を守ってくれる一文です。約束しないことを示し、あとで際限なく膨らむのを防ぎます。"
+     }
+    ]
+   },
+   {
+    "t": "応用2講：トレードオフを説明する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "For the equipment tool, I could build a web page, a spreadsheet, or a full database system. How do I choose?",
+      "jp": "備品のツールは、Webページ、表計算、本格的なデータベースのシステムのどれでも作れます。どう選びますか？"
+     },
+     {
+      "sp": 1,
+      "en": "By comparing trade-offs against the requirements. Every option gains something and costs something. Your job is to make those costs visible, not hide them.",
+      "jp": "要件に照らして、トレードオフを比べます。どの選択肢も、何かを得て、何かを失います。あなたの仕事は、その代償を見えるようにすることで、隠すことではありません。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you do it for these three?",
+      "jp": "この三つで、やってみてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A spreadsheet is fastest and everyone understands it, but it's weak on access control and history. A single-file web app is light and works on phones, but data lives in each device unless you add sync. A database system is robust, but it costs time, maintenance, and a server to look after.",
+      "jp": "表計算は一番早く、誰でも分かりますが、アクセス制御と履歴に弱いです。単一ファイルのWebアプリは軽く、スマホで動きますが、同期を足さない限り、データが各端末にあります。データベースのシステムは頑丈ですが、時間、保守、世話をするサーバーが必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "Which would you recommend?",
+      "jp": "どれをおすすめしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It depends on the answers to the questions. Twenty items and three users, a spreadsheet. Hundreds of items and approval workflows, a proper system. State your recommendation, and say what would change your mind.",
+      "jp": "質問への答え次第です。二十個の備品と三人の利用者なら、表計算。数百個の備品と承認の流れがあるなら、きちんとしたシステム。推奨を述べ、何があれば考えが変わるかも言います。"
+     },
+     {
+      "sp": 0,
+      "en": "\"What would change my mind.\" That's a useful phrase.",
+      "jp": "「何があれば考えが変わるか」。役に立つ言い回しですね。"
+     },
+     {
+      "sp": 1,
+      "en": "It shows honesty and invites better information. In English, you might say, \"My recommendation is X, unless we find that Y, in which case Z.\"",
+      "jp": "誠実さを示し、より良い情報を招きます。英語なら、「推奨はXですが、もしYと分かれば、その場合はZです」と言えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Let me practice: \"I recommend a spreadsheet, unless we find that more than ten people need to edit it, in which case we should consider a database.\"",
+      "jp": "練習してみます。「表計算をおすすめしますが、もし十人以上が編集する必要があると分かれば、その場合は、データベースを検討すべきです」。"
+     },
+     {
+      "sp": 1,
+      "en": "Perfect. Clear, balanced, and actionable. That's a sentence a manager can use.",
+      "jp": "完璧です。明確で、偏りがなく、行動につながります。管理職が使える一文です。"
+     }
+    ]
+   },
+   {
+    "t": "応用3講：セキュリティを最初から設計に入れる",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Security always feels like something we add at the end. Is that wrong?",
+      "jp": "セキュリティは、いつも最後に足すものに感じます。それは間違っていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's the most expensive way. Security by design means asking the questions at the beginning: What data do we hold? Who may see it? What happens if it leaks?",
+      "jp": "一番高くつくやり方です。設計の段階からのセキュリティとは、最初に問うことです。どんなデータを持つのか、誰が見てよいのか、漏れたらどうなるか。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me the shortest useful version?",
+      "jp": "役に立つ、一番短い版を教えてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Four moves. Collect less data. Give each person the minimum access they need. Protect what you keep, with encryption and logs. And prepare for failure, with backups and a response plan.",
+      "jp": "四つの動きです。集めるデータを減らす。各人に必要最小限のアクセスを与える。持つものを、暗号化とログで守る。そして失敗に備え、バックアップと対応の計画を持つ。"
+     },
+     {
+      "sp": 0,
+      "en": "Why collect less?",
+      "jp": "なぜ、集めるデータを減らすんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Data you never collected can't be leaked. Every extra field is a liability. Ask of each one, \"Do we truly need this, and for how long?\"",
+      "jp": "集めなかったデータは、漏れようがありません。余分な項目は、すべて負債です。それぞれに、「本当に必要か、いつまで必要か」と問います。"
+     },
+     {
+      "sp": 0,
+      "en": "And least privilege?",
+      "jp": "最小権限は？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with no access, and add only what the job needs. People are often given broad access \"for convenience,\" and that's how a single stolen account becomes a disaster.",
+      "jp": "アクセスなしから始め、仕事に必要なものだけを足します。人は「便利だから」と広い権限を与えられがちで、それが、盗まれたアカウント一つが、大惨事になる理由です。"
+     },
+     {
+      "sp": 0,
+      "en": "What is the response plan for?",
+      "jp": "対応の計画は、何のためですか？"
+     },
+     {
+      "sp": 1,
+      "en": "For the day something goes wrong, when people panic. A plan says who decides, who is told, what is preserved as evidence, and in what order. A calm checklist beats improvisation under stress.",
+      "jp": "何かがうまくいかなくなり、人が慌てる日のためです。計画は、誰が決め、誰に知らせ、証拠として何を保存し、どの順番で動くかを示します。落ち着いたチェックリストは、強い緊張の中の即興に勝ります。"
+     }
+    ]
+   },
+   {
+    "t": "応用4講：障害後の振り返り（ポストモーテム）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Last month our system went down for two hours, and everyone blamed one person. It felt wrong.",
+      "jp": "先月、システムが二時間止まって、みんなが一人の人を責めました。何か違うと感じました。"
+     },
+     {
+      "sp": 1,
+      "en": "Your feeling is right. A good postmortem looks for causes in the system, not blame in the person. If one mistake can cause a two-hour outage, the real question is why the system allowed it.",
+      "jp": "その感覚は正しいです。良い振り返りは、人への非難ではなく、仕組みの中に原因を探します。一つのミスが二時間の停止を起こせるなら、本当の問いは、なぜ仕組みがそれを許したのか、です。"
+     },
+     {
+      "sp": 0,
+      "en": "What does a postmortem include?",
+      "jp": "振り返りには、何を入れますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A timeline of what happened, the impact, the root causes, what went well, what went badly, and specific actions with owners and dates.",
+      "jp": "起きたことの時系列、影響、根本の原因、うまくいったこと、うまくいかなかったこと、そして担当者と期日のある、具体的な行動です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I find a root cause?",
+      "jp": "根本の原因は、どうやって見つけますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Ask why repeatedly. The service stopped. Why? A disk filled up. Why? Logs weren't rotated. Why? Nobody owned that task. Now you have a fix: assign ownership and automate the rotation.",
+      "jp": "なぜを、くり返します。サービスが止まった。なぜ？ディスクがいっぱいになった。なぜ？ログが入れ替えられていなかった。なぜ？その作業の担当がいなかった。これで直し方が分かります。担当を決め、入れ替えを自動化することです。"
+     },
+     {
+      "sp": 0,
+      "en": "And what do I say in English if I'm explaining it to a manager?",
+      "jp": "管理職に英語で説明するなら、何と言えばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "\"The outage lasted two hours. The root cause was a full disk, because log rotation had no owner. We have assigned an owner and automated the cleanup, and we will add a disk alert by Friday.\"",
+      "jp": "「停止は二時間続きました。根本の原因は、ログの入れ替えに担当がいなかったことによる、ディスクの満杯です。担当を決め、整理を自動化しました。金曜までに、ディスクの警報を追加します」。"
+     },
+     {
+      "sp": 0,
+      "en": "That's calm, factual, and it ends with action.",
+      "jp": "落ち着いていて、事実に基づき、行動で終わっていますね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the formula for any bad news: say what happened, why, what you've done, and what comes next.",
+      "jp": "それが、どんな悪い知らせにも使える型です。何が起きたか、なぜか、何をしたか、次に何があるか。"
+     }
+    ]
+   },
+   {
+    "t": "応用5講：学んだことを人に教える、そしてこれから",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, you've taught me so much. How do I make sure I really keep it?",
+      "jp": "ケン、たくさん教えてもらいました。本当に身につけるには、どうすればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Teach it. When you explain something to another person, you find out exactly which parts you don't understand yet. Try explaining a pipeline, or a closure, to a new colleague.",
+      "jp": "人に教えることです。誰かに説明すると、まだ分かっていない部分が、はっきり見つかります。新しい同僚に、パイプラインやクロージャを説明してみてください。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I explain it badly?",
+      "jp": "下手に説明したら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then you've learned where to improve, and so did they, because a confused listener asks good questions. Start with a small example, and say why it matters before you say how it works.",
+      "jp": "それなら、どこを改善すべきか学べますし、相手もそうです。混乱した聞き手は、良い質問をするからです。小さな例から始め、どう動くかの前に、なぜ大事かを言います。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the long term? There's so much to learn.",
+      "jp": "長い目で見ると、どうでしょう。学ぶことが、とてもたくさんあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Pick a direction, and go deep on the foundations: how data moves, how failures happen, how to read the evidence. Tools change every few years, but those fundamentals hold for a whole career.",
+      "jp": "方向を一つ選び、基礎を深く学びます。データがどう動くか、失敗がどう起きるか、証拠をどう読むか。道具は数年ごとに変わりますが、その基礎は、キャリア全体で通用します。"
+     },
+     {
+      "sp": 0,
+      "en": "And my English? I want to explain all this to international colleagues someday.",
+      "jp": "私の英語は？いつか、これらすべてを、海外の同僚に説明したいんです。"
+     },
+     {
+      "sp": 1,
+      "en": "You already have the sentences in your head from these lectures. Keep shadowing them aloud, then say them without looking, then change one detail and say them again. Fluency grows from that kind of play.",
+      "jp": "この講義の文は、もう頭の中にあります。声に出して真似し続け、次に見ずに言い、それから細部を一つ変えて、もう一度言います。流暢さは、そういう遊びから育ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. This was the hardest series, but I feel I can handle real work now.",
+      "jp": "ありがとう、ケン。一番難しいシリーズでしたが、本物の仕事に向き合える気がします。"
+     },
+     {
+      "sp": 1,
+      "en": "You can. Be careful, be curious, and be kind to the people who use what you build. That's the whole craft.",
+      "jp": "できます。慎重に、好奇心を持ち、あなたが作るものを使う人に優しくあってください。それが、仕事の全部です。"
+     }
+    ]
+   }
+  ]
+ }
+]

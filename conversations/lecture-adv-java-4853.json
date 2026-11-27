@@ -1,0 +1,426 @@
+[
+ {
+  "id": "lecture-adv-java",
+  "ic": "☕",
+  "n": "応用講義3：Java応用（やさしい→難しい）",
+  "hint": "Advanced lecture series, part three: Ken and Mia go deeper into Java, with collections, generics, interfaces, streams, exceptions, build tools and how a business system is layered",
+  "level": 5,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "応用1講：コレクション（List・Map・Set）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, in JavaScript I used arrays and objects for everything. What does Java use?",
+      "jp": "ケン、JavaScriptでは、何でも配列とオブジェクトで済ませていました。Javaでは何を使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The Collections Framework. The three main shapes are List for an ordered sequence, Set for a group with no duplicates, and Map for key and value pairs.",
+      "jp": "コレクションの枠組みです。主な三つの形は、順序のある並びのList、重複のない集まりのSet、キーと値の組のMapです。"
+     },
+     {
+      "sp": 0,
+      "en": "Which one is like a JavaScript array?",
+      "jp": "JavaScriptの配列に近いのはどれですか？"
+     },
+     {
+      "sp": 1,
+      "en": "ArrayList. List<String> names = new ArrayList<>(); names.add(\"Mia\"); The type in the angle brackets tells the compiler what the list may hold.",
+      "jp": "ArrayListです。List<String> names = new ArrayList<>(); names.add(\"Mia\");。山括弧の中の型が、リストに入れてよいものをコンパイラに伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why declare it as List but create an ArrayList?",
+      "jp": "なぜListで宣言して、ArrayListを作るんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Program to the interface, not the implementation. If you later need a different kind of list, you change one word on the right, and the rest of the code stays the same.",
+      "jp": "実装ではなく、インターフェースに向けて書くからです。あとで別の種類のリストが必要になったら、右側の一語を変えるだけで、他のコードはそのままです。"
+     },
+     {
+      "sp": 0,
+      "en": "And Map?",
+      "jp": "Mapは？"
+     },
+     {
+      "sp": 1,
+      "en": "Map<String, Integer> stock = new HashMap<>(); stock.put(\"apple\", 3); stock.get(\"apple\") returns 3. It's like a JavaScript object, but with declared key and value types.",
+      "jp": "Map<String, Integer> stock = new HashMap<>(); stock.put(\"apple\", 3); stock.get(\"apple\")は3を返します。JavaScriptのオブジェクトに似ていますが、キーと値の型が宣言されています。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the key isn't there?",
+      "jp": "キーがなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "get returns null, and that's the root of many NullPointerExceptions. Use getOrDefault, or check containsKey first.",
+      "jp": "getはnullを返し、それが多くのNullPointerExceptionの根源です。getOrDefaultを使うか、先にcontainsKeyで確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why would I choose a Set?",
+      "jp": "なぜSetを選ぶんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When duplicates must be impossible, like a list of unique user IDs. Adding the same value twice just keeps one copy, and checking membership is very fast.",
+      "jp": "重複があり得ないようにしたい時です。ユニークなユーザーIDの一覧のようなものです。同じ値を二度追加しても、一つしか残らず、含まれているかの確認も、とても速いです。"
+     },
+     {
+      "sp": 0,
+      "en": "It sounds like choosing the right container is half of the design.",
+      "jp": "適切な入れ物を選ぶことが、設計の半分のように聞こえます。"
+     },
+     {
+      "sp": 1,
+      "en": "It is. Pick the structure that makes the correct behavior natural, and the code becomes simpler.",
+      "jp": "その通りです。正しい動作が自然になる構造を選ぶと、コードが単純になります。"
+     }
+    ]
+   },
+   {
+    "t": "応用2講：ジェネリクスとインターフェース",
+    "l": [
+     {
+      "sp": 0,
+      "en": "You keep mentioning the angle brackets. What are generics?",
+      "jp": "山括弧の話を、何度も出していますね。ジェネリクスとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Generics let a class or method work with many types while keeping type safety. List<T> is one definition that works for List<String>, List<Integer>, and so on.",
+      "jp": "ジェネリクスは、型の安全性を保ちながら、一つのクラスやメソッドを、多くの型で使えるようにします。List<T>という一つの定義が、List<String>やList<Integer>などで使えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the benefit over just using Object?",
+      "jp": "Objectを使うだけの場合と比べて、何が良いんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Without generics, you'd cast every item you take out, and a wrong cast crashes at runtime. With generics, the compiler rejects the mistake before the program runs.",
+      "jp": "ジェネリクスがないと、取り出すたびにキャストが必要で、間違ったキャストは実行時に落ちます。ジェネリクスがあれば、プログラムを動かす前に、コンパイラがその間違いを拒否します。"
+     },
+     {
+      "sp": 0,
+      "en": "And interfaces?",
+      "jp": "インターフェースは？"
+     },
+     {
+      "sp": 1,
+      "en": "An interface is a contract: a list of methods that any implementing class must provide. interface Notifier { void send(String message); } doesn't say how to send, only that you can.",
+      "jp": "インターフェースは契約です。実装するクラスが、必ず提供するメソッドの一覧です。interface Notifier { void send(String message); }は、送る方法ではなく、送れるということだけを示します。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me a real use for that?",
+      "jp": "その、実際の使い道を教えてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You could have EmailNotifier and ChatNotifier both implementing Notifier. The rest of your code depends only on Notifier, so you can swap one for the other without rewriting it.",
+      "jp": "EmailNotifierとChatNotifierが、どちらもNotifierを実装できます。他のコードはNotifierにだけ依存するので、書き直さずに、片方をもう片方に差し替えられます。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds useful for testing, too.",
+      "jp": "テストにも役立ちそうです。"
+     },
+     {
+      "sp": 1,
+      "en": "Very much. In a test, you pass a fake Notifier that records messages instead of sending them. Depending on contracts rather than concrete classes is a core design habit.",
+      "jp": "とても役立ちます。テストでは、メッセージを送らず記録するだけの、偽のNotifierを渡します。具体的なクラスではなく契約に依存するのは、設計の核となる習慣です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it like a function type in JavaScript?",
+      "jp": "JavaScriptの関数の型のようなものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "In spirit, yes. In JavaScript, anything with the right shape works, because it's dynamic. In Java, you declare the contract, and the compiler enforces it.",
+      "jp": "精神としては、そうです。JavaScriptでは、動的なので、正しい形をしていれば何でも動きます。Javaでは契約を宣言し、コンパイラがそれを強制します。"
+     }
+    ]
+   },
+   {
+    "t": "応用3講：ラムダとStream",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I saw Java code with arrows and the word stream. It looked like JavaScript's map and filter.",
+      "jp": "矢印とstreamという言葉のあるJavaのコードを見ました。JavaScriptのmapやfilterに見えました。"
+     },
+     {
+      "sp": 1,
+      "en": "Good eye. A lambda is a short anonymous function, written x -> x * 2, and a Stream is a pipeline of operations over a collection, much like PowerShell's pipeline.",
+      "jp": "良い目です。ラムダは短い無名の関数で、x -> x * 2と書き、Streamはコレクションに対する操作のパイプラインで、PowerShellのパイプラインによく似ています。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show one?",
+      "jp": "一つ見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "names.stream().filter(n -> n.startsWith(\"A\")).map(String::toUpperCase).collect(Collectors.toList()). Filter the names, change each one, and gather the result into a list.",
+      "jp": "names.stream().filter(n -> n.startsWith(\"A\")).map(String::toUpperCase).collect(Collectors.toList())。名前を絞り、それぞれを変え、結果をリストに集めます。"
+     },
+     {
+      "sp": 0,
+      "en": "What are the double colons?",
+      "jp": "二つのコロンは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A method reference, a shorter way to point at an existing method. String::toUpperCase means \"call toUpperCase on each item.\"",
+      "jp": "メソッド参照で、既存のメソッドを指す、より短い書き方です。String::toUpperCaseは、「各項目にtoUpperCaseを呼ぶ」という意味です。"
+     },
+     {
+      "sp": 0,
+      "en": "Does the stream change the original list?",
+      "jp": "streamは、元のリストを変えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Streams don't modify their source, and they're lazy: nothing runs until a terminal operation like collect or forEach asks for the result.",
+      "jp": "いいえ。streamは元のデータを変えず、遅延評価です。collectやforEachのような、最後の操作が結果を求めるまで、何も実行されません。"
+     },
+     {
+      "sp": 0,
+      "en": "When should I prefer a plain loop?",
+      "jp": "普通のループを選ぶべきなのは、いつですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When the logic has many steps, side effects, or complicated early exits. A readable loop beats a clever stream. The same rule applies in every language.",
+      "jp": "処理に、多くの段階、副作用、複雑な途中終了がある時です。読みやすいループは、凝ったstreamに勝ります。同じ決まりが、どの言語にも当てはまります。"
+     },
+     {
+      "sp": 0,
+      "en": "So the three languages keep teaching me the same lesson.",
+      "jp": "つまり、三つの言語が、同じ教訓を教え続けているんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. The syntax differs, but good engineering habits are remarkably portable.",
+      "jp": "はい。書き方は違っても、良いエンジニアリングの習慣は、驚くほど持ち運べます。"
+     }
+    ]
+   },
+   {
+    "t": "応用4講：例外設計とリソース管理",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Earlier, you said Java forces me to think about failure. How should I design the error handling?",
+      "jp": "以前、Javaは失敗について考えさせると言いましたね。エラー処理は、どう設計すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with a rule: catch an exception only where you can do something useful about it. Otherwise, let it travel up to a place that can.",
+      "jp": "決まりから始めます。例外は、役に立つ対処ができる場所でだけ捕まえます。そうでなければ、それができる場所まで、上へ伝わらせます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about catching everything, to be safe?",
+      "jp": "安全のために、全部を捕まえるのは？"
+     },
+     {
+      "sp": 1,
+      "en": "That hides real problems. A catch block that swallows the exception and does nothing is one of the worst habits. At minimum, log it with its stack trace.",
+      "jp": "本当の問題を隠してしまいます。例外を飲み込んで何もしないcatchは、最悪の習慣の一つです。最低限、スタックトレースとともにログに残します。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between checked and unchecked exceptions?",
+      "jp": "検査例外と非検査例外の違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Checked exceptions, like IOException, must be declared or caught, because the caller might recover. Unchecked ones, like NullPointerException, usually signal a programming bug that should be fixed, not caught.",
+      "jp": "IOExceptionのような検査例外は、呼び出す側が回復できるかもしれないので、宣言するか捕まえる必要があります。NullPointerExceptionのような非検査例外は、通常、捕まえるのではなく直すべきプログラムの不具合を示します。"
+     },
+     {
+      "sp": 0,
+      "en": "What about files and database connections? They need to be closed.",
+      "jp": "ファイルやデータベースの接続はどうですか？閉じる必要があります。"
+     },
+     {
+      "sp": 1,
+      "en": "Use try-with-resources: try (var in = Files.newBufferedReader(path)) { ... }. The resource is closed automatically, even if an exception occurs. Forgetting to close is a classic leak.",
+      "jp": "try-with-resourcesを使います。try (var in = Files.newBufferedReader(path)) { ... }。例外が起きても、資源は自動的に閉じられます。閉じ忘れは、古典的な漏れの原因です。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I create my own exception types?",
+      "jp": "自分の例外の型を作るべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When it makes the error meaningful, yes. An OrderNotFoundException tells the reader more than a generic RuntimeException. Include the ID in the message so the log is useful.",
+      "jp": "エラーに意味が出るなら、作ります。OrderNotFoundExceptionは、汎用のRuntimeExceptionより、読む人に多くを伝えます。ログが役立つように、メッセージにIDを入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "And what about the message for users?",
+      "jp": "ユーザーへのメッセージは？"
+     },
+     {
+      "sp": 1,
+      "en": "Keep it separate. Users see a short, friendly sentence. The detailed message and stack trace go to the log, where only the team can read them. Never show internal details to the user.",
+      "jp": "分けて考えます。ユーザーには、短く親切な一文を見せます。詳しいメッセージとスタックトレースは、チームだけが読めるログに出します。内部の詳細を、ユーザーに見せてはいけません。"
+     }
+    ]
+   },
+   {
+    "t": "応用5講：ビルドツールと依存関係",
+    "l": [
+     {
+      "sp": 0,
+      "en": "In my apps there's no build step. Why does Java always seem to need Maven or Gradle?",
+      "jp": "私のアプリにはビルドの手順がありません。なぜJavaは、いつもMavenやGradleが必要なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because Java projects usually have many source files, tests, and external libraries. A build tool compiles everything in the right order, runs tests, downloads dependencies, and packages the result.",
+      "jp": "Javaのプロジェクトは、たいてい多くのソースファイル、テスト、外部のライブラリを持つからです。ビルドツールは、正しい順番ですべてをコンパイルし、テストを実行し、依存するものをダウンロードし、成果物にまとめます。"
+     },
+     {
+      "sp": 0,
+      "en": "What's a dependency here?",
+      "jp": "ここでの依存とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A library your code uses. You list it in the build file, such as pom.xml for Maven, with a name and a version, and the tool fetches it for you.",
+      "jp": "あなたのコードが使うライブラリです。ビルドのファイル、たとえばMavenならpom.xmlに、名前とバージョンを書くと、ツールが取ってきてくれます。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds like the CDN scripts in my web apps.",
+      "jp": "私のWebアプリの、CDNのスクリプトに似ていますね。"
+     },
+     {
+      "sp": 1,
+      "en": "Same idea, and the same advice: pin exact versions, and use trusted sources. An outdated dependency with a known vulnerability is a common way systems get breached.",
+      "jp": "同じ考え方で、同じ助言です。正確なバージョンを固定し、信頼できる提供元を使います。既知の脆弱性を持つ古い依存物は、システムが侵入される一般的な経路です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do teams keep track of that?",
+      "jp": "チームは、それをどう把握しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With dependency scanning tools that compare your libraries against vulnerability databases, and with a habit of regular updates. In security work, you may be asked to review those reports.",
+      "jp": "ライブラリを、脆弱性のデータベースと照合する、依存関係の検査ツールと、定期的な更新の習慣でです。セキュリティの仕事では、その報告書の確認を頼まれるかもしれません。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the output of a Java build?",
+      "jp": "Javaのビルドの成果物は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Often a JAR file, which is a package of compiled classes. You run it with java -jar app.jar. For web systems, it might be a WAR file or a container image.",
+      "jp": "多くはJARファイルで、コンパイル済みのクラスをまとめたものです。java -jar app.jarで実行します。Webのシステムなら、WARファイルやコンテナのイメージのこともあります。"
+     },
+     {
+      "sp": 0,
+      "en": "I think I understand why logs from Java systems mention so many package names.",
+      "jp": "Javaのシステムのログに、たくさんのパッケージ名が出てくる理由が、分かった気がします。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Each name is a library or a layer. Reading them gives you a map of the system.",
+      "jp": "そうです。各名前は、ライブラリか層です。それを読めば、システムの地図が得られます。"
+     }
+    ]
+   },
+   {
+    "t": "応用6講：業務システムの層構造と全体の設計",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's finish with the big picture. How is a typical Java business system organized?",
+      "jp": "最後に全体像を話しましょう。典型的なJavaの業務システムは、どう構成されていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In layers. A controller layer receives requests, a service layer holds the business rules, and a repository layer talks to the database. Each layer only talks to the one below it.",
+      "jp": "層になっています。コントローラー層が要求を受け取り、サービス層が業務の規則を持ち、リポジトリ層がデータベースと話します。各層は、すぐ下の層とだけ話します。"
+     },
+     {
+      "sp": 0,
+      "en": "That reminds me of keeping data and screen separate.",
+      "jp": "データと画面を分けることを思い出します。"
+     },
+     {
+      "sp": 1,
+      "en": "It's the same principle at a larger scale: separate concerns, so each part can change and be tested on its own.",
+      "jp": "同じ原則を、より大きな規模にしたものです。関心を分けることで、各部分を、単独で変更し、試験できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do frameworks like Spring fit in?",
+      "jp": "Springのような枠組みは、どこに入りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Spring wires the layers together. It creates the objects, supplies each one with what it needs, called dependency injection, and handles web requests, security, and database access.",
+      "jp": "Springが、層をつなぎ合わせます。オブジェクトを作り、各々に必要なものを渡し、これを依存性の注入と呼び、Webの要求、セキュリティ、データベースの利用も扱います。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is dependency injection useful?",
+      "jp": "依存性の注入は、なぜ役に立つんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because a class asks for a contract, like a Notifier, instead of creating a specific implementation itself. That makes it easy to replace parts and to test with fakes.",
+      "jp": "クラスが、具体的な実装を自分で作る代わりに、Notifierのような契約を求めるからです。部品の交換や、偽物を使ったテストが、簡単になります。"
+     },
+     {
+      "sp": 0,
+      "en": "And security in such a system?",
+      "jp": "そういうシステムでのセキュリティは？"
+     },
+     {
+      "sp": 1,
+      "en": "It works in layers too: authenticate the user, authorize each action, validate all input, use parameterized queries for the database, log security events, and never expose internal errors. The design review questions we used before still apply.",
+      "jp": "それも層で働きます。ユーザーを認証し、各操作を認可し、すべての入力を検証し、データベースにはパラメータ化した問い合わせを使い、セキュリティの出来事を記録し、内部のエラーを決して見せない。以前使った、設計レビューの質問が、今も当てはまります。"
+     },
+     {
+      "sp": 0,
+      "en": "So from a one-line PowerShell command to a layered Java system, the thinking is the same.",
+      "jp": "じゃあ、PowerShellの一行のコマンドから、層のあるJavaのシステムまで、考え方は同じなんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Clear purpose, small parts, safe defaults, honest logs, tests, and care for people's data. You've learned the pattern. Now it's about practice and judgment.",
+      "jp": "はい。明確な目的、小さな部品、安全な初期設定、正直なログ、テスト、人のデータへの気遣い。あなたは型を学びました。これからは、練習と判断の問題です。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. I'm not afraid of those systems anymore.",
+      "jp": "ありがとう、ケン。もうそういうシステムが怖くありません。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the best result a teacher could hope for. Keep asking good questions.",
+      "jp": "それが、先生が望める最高の成果です。良い質問を、し続けてください。"
+     }
+    ]
+   }
+  ]
+ }
+]

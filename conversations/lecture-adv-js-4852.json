@@ -1,0 +1,616 @@
+[
+ {
+  "id": "lecture-adv-js",
+  "ic": "🟨",
+  "n": "応用講義2：JavaScript応用（やさしい→難しい）",
+  "hint": "Advanced lecture series, part two: Ken and Mia climb from closures and modules to promises, IndexedDB, service workers, Web Crypto, performance and a full code review of a single-file PWA",
+  "level": 5,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "応用1講：スコープとクロージャ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I read that a function can \"remember\" variables from where it was created. That sounds like magic.",
+      "jp": "ケン、関数は、作られた場所の変数を「覚えている」ことができると読みました。魔法のように聞こえます。"
+     },
+     {
+      "sp": 1,
+      "en": "It isn't magic, it's called a closure. When you create a function inside another function, the inner one keeps access to the outer one's variables, even after the outer one has finished.",
+      "jp": "魔法ではなく、クロージャと呼ばれます。関数の中で別の関数を作ると、外側の関数が終わったあとでも、内側の関数は外側の変数に使えるままです。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show me a small example?",
+      "jp": "小さな例を見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "function makeCounter() { let n = 0; return () => ++n }. Each call to makeCounter creates its own private n, and the returned function can change it. Nobody else can touch it.",
+      "jp": "function makeCounter() { let n = 0; return () => ++n }。makeCounterを呼ぶたびに、自分専用のnができ、返された関数がそれを変えられます。他の誰もそれには触れません。"
+     },
+     {
+      "sp": 0,
+      "en": "So it's a way to hide data.",
+      "jp": "つまり、データを隠す方法なんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. That's how modules keep internal details private. It also explains a classic bug: creating functions in a loop with var, where they all share one variable.",
+      "jp": "その通りです。モジュールが内部の詳細を隠すのは、そのやり方です。また、古典的なバグも説明できます。varでループの中に関数を作ると、全部が一つの変数を共有してしまう問題です。"
+     },
+     {
+      "sp": 0,
+      "en": "And let fixes that?",
+      "jp": "それはletで直りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. With let, each loop turn gets a fresh variable, so each function captures its own. That's one reason we prefer let and const.",
+      "jp": "はい。letでは、ループの周ごとに新しい変数ができるので、各関数が自分のものを捕まえます。それが、letとconstを好む理由の一つです。"
+     },
+     {
+      "sp": 0,
+      "en": "Where would I use closures in a real app?",
+      "jp": "実際のアプリでは、クロージャをどこで使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Event handlers that need context, a debounce function that delays a search while the user is typing, or a small store that hides its state and exposes only a few functions.",
+      "jp": "文脈が必要なイベントの処理、ユーザーが入力している間、検索を遅らせるデバウンスの関数、状態を隠して、いくつかの関数だけを公開する小さな保管庫などです。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you explain debounce a little?",
+      "jp": "デバウンスを少し説明してもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You wait until the user stops typing for, say, three hundred milliseconds before searching. A timer variable stays in a closure, and each keystroke resets it.",
+      "jp": "ユーザーが、たとえば三百ミリ秒の間、入力をやめるまで待ってから検索します。タイマーの変数をクロージャの中に残し、キーを押すたびにそれをリセットします。"
+     },
+     {
+      "sp": 0,
+      "en": "That saves a lot of unnecessary work.",
+      "jp": "無駄な処理がずいぶん減りますね。"
+     },
+     {
+      "sp": 1,
+      "en": "And it makes the app feel smoother. Many performance improvements are just doing less work at the right moment.",
+      "jp": "しかも、アプリが滑らかに感じられます。性能の改善の多くは、適切な時に、仕事を減らすだけです。"
+     }
+    ]
+   },
+   {
+    "t": "応用2講：モジュールとクラス",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My single file is now three thousand lines. How do I keep it understandable?",
+      "jp": "一つのファイルが、三千行になりました。どうすれば、理解できる状態を保てますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Organize it into sections, each with one responsibility: storage, state, rendering, events, utilities. In a single-file app, an object or an immediately invoked function can act as a module boundary.",
+      "jp": "責任を一つずつ持つ区画に整理します。保存、状態、描画、イベント、道具です。単一ファイルのアプリでは、オブジェクトや、即時実行の関数が、モジュールの境界として働きます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about real modules, with import and export?",
+      "jp": "importとexportを使う、本物のモジュールは？"
+     },
+     {
+      "sp": 1,
+      "en": "They're great when you have multiple files. With type=\"module\" in the script tag, each file has its own scope, and you export only what others need.",
+      "jp": "複数のファイルがあるなら、素晴らしい方法です。scriptタグにtype=\"module\"を付ければ、各ファイルが自分のスコープを持ち、他が必要とするものだけをexportします。"
+     },
+     {
+      "sp": 0,
+      "en": "Does that work on GitHub Pages?",
+      "jp": "GitHub Pagesで動きますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, because it's just static files. But your strict single-file rule means you'd give that up, so decide based on whether file size or portability matters more.",
+      "jp": "はい、ただの静的なファイルだからです。ただ、単一ファイルという厳格な決まりを、手放すことになるので、ファイルの大きさと持ち運びやすさのどちらが大事かで決めます。"
+     },
+     {
+      "sp": 0,
+      "en": "And classes?",
+      "jp": "クラスは？"
+     },
+     {
+      "sp": 1,
+      "en": "JavaScript has class syntax. A class groups data and methods, as in Java. It's useful when you have many objects of the same kind, each with its own state and behavior.",
+      "jp": "JavaScriptにはclassの書き方があります。Javaと同じように、データとメソッドをまとめます。同じ種類のオブジェクトがたくさんあり、それぞれが自分の状態と動作を持つ時に便利です。"
+     },
+     {
+      "sp": 0,
+      "en": "Do I need classes in a small app?",
+      "jp": "小さなアプリで、クラスは必要ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Often not. Plain objects and functions are enough, and simpler. Use a class when you find yourself repeating the same group of functions on the same group of data.",
+      "jp": "多くの場合、必要ありません。普通のオブジェクトと関数で足りて、より単純です。同じデータのまとまりに対して、同じ関数のまとまりを、何度も書いていると気づいた時に、クラスを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the danger of too much structure?",
+      "jp": "構造が多すぎる危険は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Over-engineering. If it takes ten files to show a button, the structure is serving itself, not you. Structure should reduce the pain you actually feel.",
+      "jp": "作り込みすぎです。ボタン一つを出すのに十個のファイルが必要なら、構造が自分自身のために働いていて、あなたのためではありません。構造は、実際に感じている苦労を減らすべきです。"
+     },
+     {
+      "sp": 0,
+      "en": "So I should wait for the pain first.",
+      "jp": "じゃあ、先に苦労を感じるのを待つべきなんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Reasonably, yes. Start simple, and add structure when the code tells you it needs it.",
+      "jp": "ある程度は、そうです。単純に始めて、コードが必要だと教えてくれたときに、構造を足します。"
+     }
+    ]
+   },
+   {
+    "t": "応用3講：Promiseと並行処理",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Last time, we used async and await. What's really under them?",
+      "jp": "前回は、asyncとawaitを使いました。その下には、実際には何があるんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Promises. A Promise is an object that represents a result that will arrive later. It's either pending, fulfilled with a value, or rejected with an error.",
+      "jp": "Promiseです。Promiseは、あとで届く結果を表すオブジェクトで、待機中、値とともに成功、またはエラーとともに失敗のどれかです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do I need to know that if await hides it?",
+      "jp": "awaitが隠してくれるなら、なぜ知る必要があるんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because of parallel work. If you await three requests one after another, they run in sequence, and you wait for the sum of the times.",
+      "jp": "並行の処理のためです。三つのリクエストを、一つずつawaitすると、順番に実行され、時間の合計を待つことになります。"
+     },
+     {
+      "sp": 0,
+      "en": "And in parallel?",
+      "jp": "並行にするには？"
+     },
+     {
+      "sp": 1,
+      "en": "Promise.all. const [a, b, c] = await Promise.all([f1(), f2(), f3()]). All three start together, and you wait only for the slowest. But if one rejects, the whole thing rejects.",
+      "jp": "Promise.allです。const [a, b, c] = await Promise.all([f1(), f2(), f3()])。三つが同時に始まり、一番遅いものだけを待ちます。ただし、一つが失敗すると、全体が失敗します。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I want the results of the successful ones anyway?",
+      "jp": "成功したものの結果は、それでも欲しい時は？"
+     },
+     {
+      "sp": 1,
+      "en": "Use Promise.allSettled. It waits for every promise and gives you a list saying which succeeded and which failed. That's ideal for a batch where partial results are useful.",
+      "jp": "Promise.allSettledを使います。すべてのPromiseを待ち、どれが成功しどれが失敗したか、一覧で返します。部分的な結果が役に立つ、一括処理に最適です。"
+     },
+     {
+      "sp": 0,
+      "en": "What about a request that never finishes?",
+      "jp": "終わらないリクエストは？"
+     },
+     {
+      "sp": 1,
+      "en": "Add a timeout with AbortController. You can cancel a fetch after, say, ten seconds, and show a friendly message instead of a spinner that spins forever.",
+      "jp": "AbortControllerで、タイムアウトを付けます。たとえば十秒後にfetchを取り消し、いつまでも回り続けるスピナーの代わりに、親切なメッセージを出せます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a common mistake with async code in loops?",
+      "jp": "ループの中の非同期のコードで、よくある間違いはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. forEach doesn't wait for await inside its callback. Use for...of when you need to wait for each step, or map with Promise.all when the steps can run together.",
+      "jp": "あります。forEachは、コールバックの中のawaitを待ちません。各段階を待ちたいならfor...of、段階を同時に実行できるなら、mapとPromise.allを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "I probably have that bug already.",
+      "jp": "たぶんそのバグが、もうあります。"
+     },
+     {
+      "sp": 1,
+      "en": "Search your code for forEach with async. It's one of the most common hidden bugs.",
+      "jp": "コードの中で、asyncのあるforEachを探してください。最もよくある、隠れたバグの一つです。"
+     }
+    ]
+   },
+   {
+    "t": "応用4講：IndexedDBで大きなデータを持つ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My app's data is now over five megabytes. localStorage can't hold it.",
+      "jp": "アプリのデータが、5メガバイトを超えました。localStorageでは持てません。"
+     },
+     {
+      "sp": 1,
+      "en": "Time for IndexedDB. It's a real database in the browser. It stores objects directly, handles hundreds of megabytes, and supports indexes for quick searches.",
+      "jp": "IndexedDBの出番です。ブラウザの中にある、本物のデータベースです。オブジェクトを直接保存し、数百メガバイトを扱え、速い検索のための索引にも対応します。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it harder to use?",
+      "jp": "使うのは難しいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Its original API is event-based and verbose. Most people wrap it in a small set of Promise-based functions: open, get, put, delete, and getAll.",
+      "jp": "はい。元のAPIはイベント式で、冗長です。ほとんどの人は、Promiseを使った小さな関数群に包みます。open、get、put、delete、getAllです。"
+     },
+     {
+      "sp": 0,
+      "en": "What are object stores?",
+      "jp": "オブジェクトストアとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Think of each store as a table. You create them when the database is first opened or upgraded, in the upgrade handler, along with an index for any field you'll search by.",
+      "jp": "各ストアを、表のようなものと考えます。データベースを最初に開いた時やバージョンを上げた時に、アップグレードの処理の中で、検索に使うフィールドの索引と一緒に作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "What does the version number do?",
+      "jp": "バージョン番号は何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "When you raise it, the upgrade handler runs once, and that's where you migrate old data to a new structure. Forgetting to handle migration is a classic way to lose user data.",
+      "jp": "上げると、アップグレードの処理が一度実行され、そこで古いデータを新しい構造に移します。移行の処理を忘れるのは、ユーザーのデータを失う、古典的な方法です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I protect against losing data?",
+      "jp": "データを失わないようにするには？"
+     },
+     {
+      "sp": 1,
+      "en": "Always provide an export button, and test the migration with a copy of real data before you release. Also ask the browser for persistent storage, using navigator.storage.persist, so the data is less likely to be cleared.",
+      "jp": "必ず書き出しのボタンを用意し、公開する前に、本物のデータのコピーで移行を試します。また、navigator.storage.persistで永続的な保存を頼むと、データが消される可能性が低くなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Does persist always get granted?",
+      "jp": "persistは、いつも許可されますか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. The browser decides, based on its own rules. So treat it as a helpful request, not a guarantee, and keep your backups.",
+      "jp": "いいえ。ブラウザが、自分の決まりで判断します。だから、保証ではなく役立つお願いとして扱い、バックアップを取り続けます。"
+     }
+    ]
+   },
+   {
+    "t": "応用5講：サービスワーカーと更新の設計",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I still struggle with updates not appearing. Can we design this properly?",
+      "jp": "更新が反映されない問題には、まだ悩んでいます。きちんと設計できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. A service worker is a script that sits between your page and the network. It can answer requests from a cache, even offline, and that same power is why stale versions happen.",
+      "jp": "はい。サービスワーカーは、ページとネットワークの間に立つスクリプトです。オフラインでも、キャッシュから要求に答えられますが、その同じ力が、古い版が出る原因です。"
+     },
+     {
+      "sp": 0,
+      "en": "What are the common caching strategies?",
+      "jp": "よくあるキャッシュの方法は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Cache-first is fast and works offline but can serve old files. Network-first always tries for fresh data and falls back to the cache. Stale-while-revalidate shows the cached copy now and updates it in the background.",
+      "jp": "キャッシュ優先は、速くオフラインでも動きますが、古いファイルを出すことがあります。ネットワーク優先は、常に新しいデータを取りに行き、だめならキャッシュに戻ります。stale-while-revalidateは、今はキャッシュのコピーを見せ、裏で更新します。"
+     },
+     {
+      "sp": 0,
+      "en": "Which would you choose for the main page?",
+      "jp": "メインのページには、どれを選びますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Network-first for the HTML and scripts, so updates arrive quickly, and cache-first for icons and fonts, which rarely change. Matching the strategy to how often the file changes is the whole idea.",
+      "jp": "HTMLとスクリプトにはネットワーク優先で、更新がすぐ届くようにし、めったに変わらないアイコンやフォントにはキャッシュ優先です。ファイルが変わる頻度に、方法を合わせるのが、考え方の全部です。"
+     },
+     {
+      "sp": 0,
+      "en": "How does the browser decide a new service worker is available?",
+      "jp": "ブラウザは、新しいサービスワーカーがあることを、どうやって判断しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It compares the service worker file byte by byte. If even one byte differs, it installs the new one, which then waits until old pages are closed. That's why a version constant in the file, like a cache name, is so useful.",
+      "jp": "サービスワーカーのファイルを、バイトごとに比べます。一バイトでも違えば、新しいものをインストールし、古いページが閉じられるまで待ちます。だから、ファイルの中にキャッシュ名のようなバージョンの定数を入れておくのが、とても役立ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens to the old caches?",
+      "jp": "古いキャッシュはどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In the activate step, delete every cache whose name isn't the current one. Otherwise old files pile up and waste storage.",
+      "jp": "activateの段階で、名前が今のものでないキャッシュを、すべて削除します。そうしないと、古いファイルがたまって、容量を無駄にします。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I make the app tell the user, \"A new version is ready\"?",
+      "jp": "アプリが、ユーザーに「新しい版があります」と知らせるようにできますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Listen for the updatefound event, show a small banner, and let the user choose to reload. That turns a mysterious problem into a clear, friendly step.",
+      "jp": "できます。updatefoundのイベントを待ち、小さなバナーを出して、ユーザーに再読み込みを選んでもらいます。謎の問題が、分かりやすく親切な手順になります。"
+     },
+     {
+      "sp": 0,
+      "en": "That would end my confusion.",
+      "jp": "それで、私の混乱が終わりそうです。"
+     },
+     {
+      "sp": 1,
+      "en": "And always display the version number. Debugging is far easier when you know which version you're looking at.",
+      "jp": "そして、常にバージョン番号を表示してください。どの版を見ているか分かっていると、デバッグがずっと楽になります。"
+     }
+    ]
+   },
+   {
+    "t": "応用6講：Web Cryptoで安全に保存する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I want to protect private memos in my app with a passcode. Where do I start?",
+      "jp": "アプリの私的なメモを、パスコードで守りたいです。どこから始めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With the Web Crypto API, built into every modern browser. First rule: never invent your own cryptography. Use the standard building blocks.",
+      "jp": "最近のすべてのブラウザに内蔵された、Web Crypto APIからです。最初の決まりは、自前の暗号を発明しないこと。標準の部品を使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What are those building blocks?",
+      "jp": "その部品とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A password is weak as a key, so you first derive a strong key from it with PBKDF2, using a random salt and many iterations. Then you encrypt with AES-GCM, which also detects tampering.",
+      "jp": "パスワードは、鍵としては弱いので、まずPBKDF2で、ランダムなソルトと多くの反復回数を使い、そこから強い鍵を導き出します。それからAES-GCMで暗号化します。改ざんの検出もできる方式です。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the salt for?",
+      "jp": "ソルトは何のためですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It makes the same passcode produce a different key each time, which defeats precomputed attack tables. The salt isn't secret, so store it with the data.",
+      "jp": "同じパスコードでも、毎回違う鍵ができるようにし、事前に計算された攻撃用の表を無効にします。ソルトは秘密ではないので、データと一緒に保存します。"
+     },
+     {
+      "sp": 0,
+      "en": "And the initialization vector?",
+      "jp": "初期化ベクトルは？"
+     },
+     {
+      "sp": 1,
+      "en": "The IV is a random number used once per encryption. With AES-GCM, you must never reuse an IV with the same key. Generate a new random one each time, and store it next to the ciphertext.",
+      "jp": "IVは、暗号化ごとに一度だけ使うランダムな数です。AES-GCMでは、同じ鍵でIVを再利用してはいけません。毎回、新しいランダムなものを作り、暗号文の隣に保存します。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the user forgets the passcode?",
+      "jp": "ユーザーがパスコードを忘れたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Then the data is gone, by design. There's no back door. You must warn the user clearly, and encourage them to keep an encrypted backup somewhere safe.",
+      "jp": "その時は、設計どおり、データは失われます。裏口はありません。ユーザーにはっきり警告し、暗号化したバックアップを安全な場所に保管するよう勧めます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the key stored anywhere?",
+      "jp": "鍵はどこかに保存されますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Ideally, only in memory while the app is unlocked, and cleared when it locks. You can also mark the derived key as non-extractable, so scripts can use it but can't read it out.",
+      "jp": "理想は、アプリのロックを解除している間だけ、メモリの中に持ち、ロックしたら消すことです。導き出した鍵を、取り出し不可に設定すれば、スクリプトは使えても、読み出せなくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Does encryption mean I can ignore everything else we learned about safety?",
+      "jp": "暗号化したら、これまで学んだ安全の話は、ほかを無視していいんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. If your page has an XSS hole, an attacker's script can read the data after you unlock it. Encryption protects stored data, not a compromised page. Defense comes in layers.",
+      "jp": "いいえ。ページにXSSの穴があれば、ロックを解除したあと、攻撃者のスクリプトがデータを読めます。暗号化が守るのは保存されたデータで、侵入されたページではありません。守りは、層になっています。"
+     }
+    ]
+   },
+   {
+    "t": "応用7講：性能とメモリ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My list screen gets slow with five thousand items. Where do I look first?",
+      "jp": "五千件になると、一覧画面が遅くなります。最初にどこを見ればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Measure before guessing. Use performance.now() around the suspicious part, or the browser's performance tools on a PC. You're often surprised by where the time actually goes.",
+      "jp": "推測する前に測ります。怪しい部分をperformance.now()で挟むか、パソコンのブラウザの性能の道具を使います。時間が実際にどこで使われているかで、よく驚かされます。"
+     },
+     {
+      "sp": 0,
+      "en": "What are common causes?",
+      "jp": "よくある原因は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Rebuilding the whole list with innerHTML on every keystroke, doing a heavy search on each input event, and reading layout values inside loops, which forces the browser to recalculate again and again.",
+      "jp": "キーを押すたびに、innerHTMLで一覧全体を作り直すこと、入力のたびに重い検索をすること、ループの中でレイアウトの値を読んで、ブラウザに何度も再計算させることです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I fix the first one?",
+      "jp": "一つ目は、どう直しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Render only what's visible, which is called virtual scrolling or windowing. Or paginate: show fifty items and a \"show more\" button. Both keep the page light.",
+      "jp": "見える部分だけを描画します。仮想スクロールやウィンドウ化と呼ばれます。あるいは、ページに分けて、五十件と「もっと見る」のボタンを出します。どちらもページを軽く保ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "And the second?",
+      "jp": "二つ目は？"
+     },
+     {
+      "sp": 1,
+      "en": "Debounce the input, and precompute a search index, such as a lowercase text field per item, so each search only compares strings instead of rebuilding them.",
+      "jp": "入力をデバウンスし、項目ごとの小文字の文字のフィールドのような、検索用の索引を、前もって計算しておきます。検索が、文字列を作り直さず、比べるだけで済みます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about memory leaks?",
+      "jp": "メモリリークは？"
+     },
+     {
+      "sp": 1,
+      "en": "In a long-running app, listeners that are never removed, timers that never stop, and growing arrays of old data hold memory. Remove what you add: listeners, intervals, and object URLs.",
+      "jp": "長く動くアプリでは、外されないリスナー、止まらないタイマー、増え続ける古いデータの配列が、メモリを占有し続けます。足したものは外します。リスナー、インターバル、オブジェクトのURLです。"
+     },
+     {
+      "sp": 0,
+      "en": "On an iPhone, does memory matter more?",
+      "jp": "iPhoneでは、メモリはより重要ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, because the system can kill a page that uses too much, and the user sees a reload. So big images, large arrays, and huge strings need care.",
+      "jp": "はい。使いすぎたページは、システムが終了させることがあり、ユーザーには再読み込みに見えます。だから、大きな画像、大きな配列、巨大な文字列には、注意が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "So the rule is: measure, then fix the biggest cost first.",
+      "jp": "つまり、測ってから、一番大きな負担を先に直す、ということですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Optimization without measurement is just decoration.",
+      "jp": "その通りです。測定のない最適化は、ただの飾りです。"
+     }
+    ]
+   },
+   {
+    "t": "応用8講：単一ファイルPWAのコードレビュー",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Now the big one. Review my three-thousand-line single-file PWA like a professional.",
+      "jp": "いよいよ大物です。私の三千行の単一ファイルPWAを、プロのようにレビューしてください。"
+     },
+     {
+      "sp": 1,
+      "en": "I'll go through six layers. Layer one: data. Is there a version number in the saved format, a migration path, and an export and import feature that's been tested?",
+      "jp": "六つの層で見ます。第一層、データ。保存形式にバージョン番号があるか、移行の道筋があるか、試験済みの書き出しと読み込みの機能があるか。"
+     },
+     {
+      "sp": 0,
+      "en": "Layer two?",
+      "jp": "第二層は？"
+     },
+     {
+      "sp": 1,
+      "en": "State and rendering. Is there one source of truth? Does every change follow change, save, render? Are there places where the screen is edited directly?",
+      "jp": "状態と描画。真実の源が一つか。すべての変更が、変更、保存、描画の順に従っているか。画面が直接編集されている場所はないか。"
+     },
+     {
+      "sp": 0,
+      "en": "Layer three?",
+      "jp": "第三層は？"
+     },
+     {
+      "sp": 1,
+      "en": "Safety. Every place where outside text enters the screen, is it escaped or set with textContent? Any eval, any secrets in the source, any scripts from other sites without a fixed version?",
+      "jp": "安全。外から来た文字が画面に入るすべての場所で、エスケープされているか、textContentで設定されているか。evalはないか、ソースに秘密はないか、バージョンが固定されていない他のサイトのスクリプトはないか。"
+     },
+     {
+      "sp": 0,
+      "en": "Four?",
+      "jp": "四は？"
+     },
+     {
+      "sp": 1,
+      "en": "Failure handling. What happens when storage is full, when JSON is corrupt, when the network is down, when a permission is denied? The user should always see a clear message and keep their data.",
+      "jp": "失敗への対応。保存の容量がいっぱいの時、JSONが壊れている時、ネットワークが切れている時、許可が拒否された時、どうなるか。ユーザーが、いつも明確なメッセージを見て、データを失わないことです。"
+     },
+     {
+      "sp": 0,
+      "en": "Five and six?",
+      "jp": "五と六は？"
+     },
+     {
+      "sp": 1,
+      "en": "Five: the iPhone experience, including the sixteen-pixel inputs, safe areas, and touch targets. Six: updates, with a visible version, a sound cache strategy, and a clean way to roll back.",
+      "jp": "五、iPhoneでの使い心地。16ピクセルの入力欄、安全領域、タッチの大きさです。六、更新。見えるバージョン、健全なキャッシュの方法、きれいに元へ戻す方法です。"
+     },
+     {
+      "sp": 0,
+      "en": "That's a complete checklist. What would you say to someone proud of a three-thousand-line file?",
+      "jp": "完全なチェックリストですね。三千行のファイルを誇りに思っている人に、何と言いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "I'd say: well done, and now let's make it trustworthy. Size isn't quality. The quality is in the boundaries, the failure paths, and the care for the user's data.",
+      "jp": "よくやりました、これからは信頼できるものにしましょう、と言います。大きさは品質ではありません。品質は、境界、失敗の経路、そしてユーザーのデータへの気遣いにあります。"
+     },
+     {
+      "sp": 0,
+      "en": "I'll review my own apps with these six layers this weekend.",
+      "jp": "今週末、この六つの層で、自分のアプリをレビューしてみます。"
+     },
+     {
+      "sp": 1,
+      "en": "Excellent. And remember, a review is not a verdict on you. It's a map of where to improve next.",
+      "jp": "素晴らしい。そして、レビューは、あなたへの判決ではないと覚えておいてください。次に、どこを良くするかの地図です。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. The difficulty did go up, but it all connects.",
+      "jp": "ありがとう、ケン。確かに難しくなりましたが、全部がつながっています。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the sign you're learning, not memorizing. Next up: Java in depth, and design thinking across all three languages.",
+      "jp": "それは、暗記ではなく、学んでいる証拠です。次は、Javaを深く、そして三つの言語にまたがる設計の考え方です。"
+     }
+    ]
+   }
+  ]
+ }
+]
