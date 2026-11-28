@@ -3519,7 +3519,7 @@ var EXTRA_DATA=[
 var CONV_DATA=DATA.concat(EXTRA_DATA);
 var packagedConversationPromise=null;
 var PK='dei_conv_prog',CK='dei_conv_custom';
-var S={stage:'home',cat:LS.get('dei_conv_cat','all'),sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
+var S={stage:'home',cat:LS.get('dei_conv_cat','all'),sid:null,did:null,mode:'listen',lang:LS.get('dei_conv_lang','en'),slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
 var root=$('#cvRoot'),body=$('#cvBody');/*bgx*/S.bgx=+LS.get('dei_conv_bgx',0)||0;var BGXN=0,BGXH=null,BGXA=null;/*cv-extra*/S.vmode=+LS.get('dei_conv_voice',1)||0;S.bg=+LS.get('dei_conv_bg',1)!==0;var VOICEL=['🎭 声：固定','🎭 声：会話ごと','🎭 声：ランダム'];/*cont-play*/S.cont=+LS.get('dei_conv_cont',0)||0;var CONTL=['♾ 連続：切','♾ 連続：この場面','♾ 連続：全部','🔀 連続：ランダム','📋 連続：再生リスト'];var WL=null;
 if(LS.get('dei_conv_hen',false))root.classList.add('hen');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
@@ -3818,14 +3818,27 @@ function playAll(){
  stopAll();setCast();var my=S.tok;
  pset(d.id,function(o){o.l=(o.l||0)+1});
  S.playing=true;S.paused=false;updatePlaybackButton();bgxOn();
+ var units=[];
  d.lines.forEach(function(line,i){
+  var lg=S.lang||'en',jp=String(line.jp||'').trim();
+  if(lg==='enjp'&&jp){units.push({l:line,i:i,k:'en'},{l:line,i:i,k:'jp'})}
+  else if(lg==='jpen'&&jp){units.push({l:line,i:i,k:'jp'},{l:line,i:i,k:'en'})}
+  else if(lg==='jp'&&jp){units.push({l:line,i:i,k:'jp'})}
+  else units.push({l:line,i:i,k:'en'});
+ });
+ units.forEach(function(un,n){
   if(my!==S.tok)return;
-  var u=new SpeechSynthesisUtterance(makeSpeakText(line.speak||line.en));
-  u.lang='en-US';var g=GEN[line.sp]||'f';var v=pickV(g,line.sp);if(v){u.voice=v;u.lang=v.lang}
-  u.rate=S.slow?0.7:0.90;applyTone(u,line.sp);
+  var line=un.l,i=un.i,u;
+  if(un.k==='jp'){
+   u=new SpeechSynthesisUtterance(String(line.jp));u.lang='ja-JP';var jv=pickJa(GEN[line.sp]||'f');if(jv){u.voice=jv;u.lang=jv.lang}u.rate=S.slow?0.8:0.95;
+  }else{
+   u=new SpeechSynthesisUtterance(makeSpeakText(line.speak||line.en));
+   u.lang='en-US';var g=GEN[line.sp]||'f';var v=pickV(g,line.sp);if(v){u.voice=v;u.lang=v.lang}
+   u.rate=S.slow?0.7:0.90;applyTone(u,line.sp);
+  }
   u.onstart=function(){if(my===S.tok)mark(i)};
   u.onend=function(){
-   if(my!==S.tok||i!==d.lines.length-1)return;
+   if(my!==S.tok||n!==units.length-1)return;
    S.playing=false;S.paused=false;mark(-1);updatePlaybackButton();
    var w=$('#cvWho');if(w)w.textContent='✔ 聞き終わりました。何回でも聞いてください。';contSchedule(my);
   };
@@ -3842,6 +3855,10 @@ function playAll(){
   }
  });
 }
+var LANGL={en:'🔊 音声：英語のみ',enjp:'🔊 音声：英語→日本語',jpen:'🔊 音声：日本語→英語',jp:'🔊 音声：日本語のみ'};
+function pickJa(g){try{var vs=(speechSynthesis.getVoices()||[]).filter(function(v){return/^ja[-_]/i.test(v.lang)});if(!vs.length)return null;
+ var M=/otoya|ichiro|hattori|takeru|male/i,F=/kyoko|o-ren|haruka|ayumi|sayaka|female/i;var re=g==='m'?M:F;
+ return vs.find(function(v){return re.test(v.name)})||vs[0]}catch(e){return null}}
 function contWake(on){try{if(on&&navigator.wakeLock){navigator.wakeLock.request('screen').then(function(l){WL=l}).catch(function(){})}else if(WL){WL.release();WL=null}}catch(e){}}
 function contSchedule(my){if(!S.cont)return;var w=$('#cvWho');var tm=setTimeout(function(){if(S.tok!==my||S.playing||!S.cont||S.stage!=='dlg'||S.mode!=='listen')return;contNext()},1600);if(w)w.textContent='✔ 聞き終わりました。まもなく次の会話へ…'}
 function contNext(){var list=S.cont===4?plList():(S.cont===1?dlgs(S.sid):allD());if(!list.length)return;var cur=list.findIndex(function(x){return x.id===S.did}),n;
@@ -4030,7 +4047,7 @@ function render(){
   var d=findD(S.did);h+='<div class="row"><button data-a="back">‹ '+E(scn(d.scene).n)+'</button></div><div class="card"><div class="en">'+E(d.title)+'</div><div class="bd">'+E(badges(d.id))+'</div></div>';h+='<div class="row"><button class="pri" data-a="music-send">🎼 この会話を music-suite へ送る</button></div>';
   h+='<div class="row"><button data-a="md" data-v="listen" class="'+(S.mode==='listen'?'sel':'')+'">👂 聞く</button><button data-a="md" data-v="shadow" class="'+(S.mode==='shadow'?'sel':'')+'">🗣 まねる</button><button data-a="md" data-v="role" class="'+(S.mode==='role'?'sel':'')+'">🎭 役で話す</button></div>';
   if(S.mode==='listen'){
-   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="vset">🎙 声の設定</button><button data-a="plad" class="'+(plHas(S.did)?'sel':'')+'">'+(plHas(S.did)?'📋 リストに入っています':'➕ 再生リストに追加')+'</button><button data-a="sleep" class="'+(S.sleepAt?'sel':'')+'">'+sleepLabel()+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
+   h+='<button class="pri big" id="cvPlayBtn" data-a="play">▶ 会話を聞く</button><div class="hear" id="cvWho"></div><div class="row"><button data-a="stop">■ 止める</button><button data-a="next-dialog">次の会話 ›</button><button data-a="bgx" class="'+(S.bgx?'sel':'')+'">'+(S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切')+'</button><button data-a="ainext">🤖 続きをAIで</button><button data-a="lang">'+(LANGL[S.lang]||LANGL.en)+'</button><button data-a="voice">'+VOICEL[S.vmode]+'</button><button data-a="bg" class="'+(S.bg?'sel':'')+'">'+(S.bg?'📻 画面を変えても流す：入':'📻 画面を変えても流す：切')+'</button><button data-a="cont" class="'+(S.cont?'sel':'')+'">'+CONTL[S.cont]+'</button><button data-a="vset">🎙 声の設定</button><button data-a="plad" class="'+(plHas(S.did)?'sel':'')+'">'+(plHas(S.did)?'📋 リストに入っています':'➕ 再生リストに追加')+'</button><button data-a="sleep" class="'+(S.sleepAt?'sel':'')+'">'+sleepLabel()+'</button><button data-a="slow" class="'+(S.slow?'sel':'')+'">🐢 ゆっくり</button><button data-a="hen" class="'+(root.classList.contains('hen')?'sel':'')+'">英語をぼかす</button><button data-a="hjp" class="'+(root.classList.contains('hjp')?'sel':'')+'">日本語を隠す</button></div>';
    h+='<div class="card">'+d.lines.map(function(l,i){return'<div class="ln"><button data-a="one" data-i="'+i+'">▶</button><button data-a="keep" data-i="'+i+'">'+(isKept(l.en)?'★':'☆')+'</button><div class="t"><div class="nm">'+NAMES[l.sp]+'</div><div class="en">'+E(l.en)+'</div><div class="jp">'+E(l.jp)+'</div>'+(l.note?'<div class="jp" style="opacity:.85">💡 '+E(l.note)+'</div>':'')+'</div></div>'}).join('')+'</div>';
    h+='<div class="sub">まず日本語を見ずに何回か聞いて、わからない所だけ文字を確認します。聞いて覚えたら「まねる」へ。</div>';h+=termsCard(d);
   }else if(S.mode==='shadow'){
@@ -4068,6 +4085,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  else if(a==='play')playAll();
  else if(a==='stop'){stopAll();mark(-1)}
  else if(a==='bgx'){S.bgx=S.bgx?0:1;LS.set('dei_conv_bgx',S.bgx);b.textContent=S.bgx?'🔋 他のアプリ中も試す（実験）：入':'🔋 他のアプリ中も試す（実験）：切';b.classList.toggle('sel',!!S.bgx);if(S.bgx&&S.playing)bgxOn();else bgxOff();toast(S.bgx?'入れました。再生してから他のアプリへ移って確かめてください':'切りました')}
+ else if(a==='lang'){var LO=['en','enjp','jpen','jp'];S.lang=LO[(LO.indexOf(S.lang)+1)%4];LS.set('dei_conv_lang',S.lang);b.textContent=LANGL[S.lang];S.msg=S.lang==='en'?'英語だけで流します':S.lang==='enjp'?'英語のあとに日本語を流します':S.lang==='jpen'?'日本語のあとに英語を流します':'日本語だけで流します'}
  else if(a==='next-dialog')nextDialogue();
  else if(a==='srs'){stopAll();srsStart();S.stage='srs';render();srsAuto()}
  else if(a==='srsshow'){S.sshow=true;render();var sc0=srsCur();if(sc0&&srsMode(sc0)==='S')srsSay()}
