@@ -3376,6 +3376,9 @@ mount();
 #cvRoot button.sel{border-color:var(--accent,#5cefb0);box-shadow:0 0 0 1px var(--accent,#5cefb0) inset}
 #cvRoot button:disabled{opacity:.45}
 #cvRoot .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+#cvRoot .cvcats{position:sticky;top:0;z-index:2;background:var(--bg,#0f1115);padding:6px 0}
+#cvRoot .cvcat{padding:7px 11px;font-size:13px}
+#cvRoot .cvcat small{opacity:.7}
 #cvRoot .card{background:var(--surface,#16181c);border:1px solid var(--border,#2a2d35);border-radius:14px;padding:12px;margin:10px 0}
 #cvRoot .en{font-size:17px;line-height:1.5}
 #cvRoot .jp{font-size:13px;color:var(--text-muted,#9aa0aa);line-height:1.5;margin-top:2px}
@@ -3516,7 +3519,7 @@ var EXTRA_DATA=[
 var CONV_DATA=DATA.concat(EXTRA_DATA);
 var packagedConversationPromise=null;
 var PK='dei_conv_prog',CK='dei_conv_custom';
-var S={stage:'home',sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
+var S={stage:'home',cat:LS.get('dei_conv_cat','all'),sid:null,did:null,mode:'listen',slow:false,tok:0,li:0,role:0,ri:0,okN:0,ngN:0,shown:false,heard:'',msg:'',busy:false,rec:null,auto:false,playing:false,paused:false};
 var root=$('#cvRoot'),body=$('#cvBody');/*bgx*/S.bgx=+LS.get('dei_conv_bgx',0)||0;var BGXN=0,BGXH=null,BGXA=null;/*cv-extra*/S.vmode=+LS.get('dei_conv_voice',1)||0;S.bg=+LS.get('dei_conv_bg',1)!==0;var VOICEL=['🎭 声：固定','🎭 声：会話ごと','🎭 声：ランダム'];/*cont-play*/S.cont=+LS.get('dei_conv_cont',0)||0;var CONTL=['♾ 連続：切','♾ 連続：この場面','♾ 連続：全部','🔀 連続：ランダム','📋 連続：再生リスト'];var WL=null;
 if(LS.get('dei_conv_hen',false))root.classList.add('hen');
 function toast(m){try{if(typeof showToast==='function')showToast(m)}catch(e){}}
@@ -3524,6 +3527,17 @@ function prog(){var p=LS.get(PK,{});return p&&typeof p==='object'?p:{}}
 function pget(id){return prog()[id]||{l:0,s:0,a:0,b:0}}
 function pset(id,f){var p=prog();var o=p[id]||{l:0,s:0,a:0,b:0};f(o);p[id]=o;LS.set(PK,p)}
 function custom(){var a=LS.get(CK,[]);return Array.isArray(a)?a:[]}
+var CATS=[['all','📚','すべて'],['lec','🎓','講義'],['it','💻','IT・技術'],['story','📖','小説・物語'],['drama','🎬','ドラマ・音楽'],['daily','🗣','日常会話'],['theme','💰','テーマ別'],['news','📰','ニュース・AI'],['etc','📦','その他']];
+function catOf(s){var i=String(s.id||'');
+if(/^lecture/.test(i))return'lec';
+if(/^(story|draft[0-9]*-|storylong|sci0|phil0|mystery)/.test(i))return'story';
+if(/^(drama|song|album|cinemaadv|band)/.test(i))return'drama';
+if(/^(net|crypto0[12]|sec0|career|cyberteam|aidevtalk|aistages|scriptlearn|apptips|askai|gittrouble|offline|aiclass|aisec|gh|code|dev)/.test(i))return'it';
+if(/^(newstalk|newsnow|news|ai0|aiwork|ai[0-9])/.test(i))return'news';
+if(/^(talk|fx|money|crypto03|acct|fortune|cad|incense)/.test(i))return'theme';
+if(/^(basic|quick|listen|honest|familyfight|mishap|biztravel|wellness|hobbyfit|campus|traffic|dineout|housing|negoadv|traveladv|meet|morning|family|shopping|restaurant|cafe|travel|direction|pharmacy|transit|friends|booking|workplace|trouble|hotel|airport|doctor|bank|phone|school|party|sports|weather|work|shop|home)/.test(i)||/^(food|go|plan|care|intro|ask|rep)$/.test(i))return'daily';
+return'etc'}
+function catCount(k){return k==='all'?CONV_DATA.length:CONV_DATA.filter(function(s){return catOf(s)===k}).length}
 function dlgs(sid){var out=[];CONV_DATA.forEach(function(s){if(s.id===sid)s.d.forEach(function(d,i){out.push({id:s.id+(i+1),title:d.t,lines:d.l,scene:sid,own:0})})});custom().forEach(function(c){if(c.scene===sid)out.push({id:c.id,title:c.title,lines:c.lines,scene:sid,own:1,terms:c.terms})});return out}
 function allD(){var o=[];CONV_DATA.forEach(function(s){o=o.concat(dlgs(s.id))});return o}
 /*news-in*/var NEWSK='dei_news_in';
@@ -3986,7 +4000,7 @@ function render(){
   h+='<p class="sub">場面ごとの会話を<b>聞いて → まねして → 役になって話す</b>。両方の役で言えたら、その会話は★マスターです。</p>';
    h+='<div class="msg" id="cvMsg">'+E(S.msg)+'</div>';
   h+='<div class="card"><div class="en">★ マスター '+m+' / '+all.length+' 本</div><div class="bar"><i style="width:'+Math.round(m/Math.max(1,all.length)*100)+'%"></i></div></div>';
-  h+=srsBtn();h+=plBtn();h+='<button class="sc" data-a="vset"><span class="ic">🎙</span><span class="tx"><div class="en">声の設定</div><div class="bd">国・性別・声を選ぶ（Mia / Ken）</div></span></button>';h+=keepBtn();h+=newsBtn();CONV_DATA.forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
+  h+=srsBtn();h+=plBtn();h+='<button class="sc" data-a="vset"><span class="ic">🎙</span><span class="tx"><div class="en">声の設定</div><div class="bd">国・性別・声を選ぶ（Mia / Ken）</div></span></button>';h+=keepBtn();h+=newsBtn();h+='<div class="row cvcats">';CATS.forEach(function(c){var n=catCount(c[0]);if(c[0]!=='all'&&!n)return;h+='<button class="cvcat'+(S.cat===c[0]?' sel':'')+'" data-a="cat" data-c="'+c[0]+'">'+c[1]+' '+c[2]+' <small>'+n+'</small></button>'});h+='</div>';CONV_DATA.filter(function(s){return S.cat==='all'||catOf(s)===S.cat}).forEach(function(s){var ds=dlgs(s.id),mm=ds.filter(function(d){return mastered(d.id)}).length;h+='<button class="sc" data-a="scene" data-id="'+s.id+'"><span class="ic">'+s.ic+'</span><span class="tx"><div class="en">'+E(s.n)+'</div><div class="bar"><i style="width:'+Math.round(mm/Math.max(1,ds.length)*100)+'%"></i></div></span><span class="jp">'+mm+'/'+ds.length+'</span></button>'});
  }else if(S.stage==='scene'){
   var sc=scn(S.sid);h+='<div class="row"><button data-a="home">‹ 場面一覧</button></div><div class="card"><div class="en">'+sc.ic+' '+E(sc.n)+'</div></div>';
   dlgs(S.sid).forEach(function(d){h+='<button class="sc" data-a="open" data-id="'+E(d.id)+'"><span class="tx"><div class="en">'+E(d.title)+(d.own?' 🤖':'')+'</div><div class="bd">'+E(badges(d.id))+'</div></span><span class="jp">›</span></button>'});
@@ -4031,6 +4045,7 @@ body.addEventListener('click',async function(ev){var b=ev.target.closest('[data-
  var d=S.did?findD(S.did):null;
  if(a==='close'){if(!(S.bg&&S.playing))stopAll();root.classList.remove('on');updateMini()}
  else if(a==='home'){stopAll();S.stage='home';render()}
+ else if(a==='cat'){S.cat=b.dataset.c;LS.set('dei_conv_cat',S.cat);render()}
  else if(a==='scene'){S.sid=b.dataset.id;S.stage='scene';S.msg='';render()}
  else if(a==='back'){stopAll();S.stage='scene';S.msg='';render()}
  else if(a==='open'){S.did=b.dataset.id;S.mode='listen';S.li=0;S.ri=-1;S.stage='dlg';render()}
