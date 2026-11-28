@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-azure",
+  "ic": "☁",
+  "n": "クラウド講義：Azureの基礎（やさしい→難しい）",
+  "hint": "Lecture style on cloud basics with Azure: Ken teaches Mia what the cloud is, the shared responsibility model, subscriptions and resource groups, virtual machines and storage, networking and identity, and cost control",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：クラウドとは何か",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what exactly is \"the cloud\"?",
+      "jp": "ケン、「クラウド」とは、正確には何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's renting computing power from a big provider over the internet, instead of buying and running your own servers.",
+      "jp": "自分でサーバーを買って運用する代わりに、大手の提供者から、インターネット越しに計算能力を借りることです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why would a company do that?",
+      "jp": "なぜ会社は、そうするのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Speed and flexibility. You can start a server in minutes, grow when busy, shrink when quiet, and pay only for what you use.",
+      "jp": "速さと柔軟さです。数分でサーバーを始められ、忙しいときは増やし、静かなときは減らして、使った分だけ払います。"
+     },
+     {
+      "sp": 0,
+      "en": "What are IaaS, PaaS, and SaaS?",
+      "jp": "IaaS、PaaS、SaaSとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "They're three levels. IaaS rents you the machine, PaaS also manages the platform so you only bring your app, and SaaS is a finished app like email.",
+      "jp": "三つの段階です。IaaSは機械を貸し、PaaSはプラットフォームも管理して、アプリだけを持ち込めばよく、SaaSはメールのような、完成したアプリです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is the cloud automatically secure?",
+      "jp": "クラウドは、自動的に安全ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. The provider secures the data centers and the hardware. You are still responsible for your accounts, settings, and data. That's the shared responsibility model.",
+      "jp": "いいえ。提供者は、データセンターとハードウェアを守ります。あなたは、自分のアカウント、設定、データへの責任を負います。それが、責任共有モデルです。"
+     },
+     {
+      "sp": 0,
+      "en": "So most cloud incidents come from our side?",
+      "jp": "では、クラウドのインシデントの多くは、利用者側から起きるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Very often, yes: open storage, weak identity, or a forgotten setting. The cloud is safe when it's configured with care.",
+      "jp": "とても多くの場合、そうです。公開されたストレージ、弱いID、忘れられた設定。クラウドは、注意して設定すれば安全です。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：Azureの入れ物の考え方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How is Azure organized?",
+      "jp": "Azureは、どのように整理されていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "From the top: a tenant for your organization, subscriptions for billing and boundaries, resource groups as folders, and resources inside them.",
+      "jp": "上から順に、組織を表すテナント、請求と境界のためのサブスクリプション、フォルダーにあたるリソースグループ、その中のリソースです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a resource group for?",
+      "jp": "リソースグループは、何のためにあるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It keeps related things together: the web app, its database, and its storage. You can manage, permission, and delete them as one unit.",
+      "jp": "関連するものを一緒にまとめます。ウェブアプリ、データベース、ストレージ。一つの単位として、管理し、権限を与え、削除できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a region?",
+      "jp": "リージョンとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A geographic area with data centers, like Japan East. You choose where your resources live, which affects speed, price, and legal rules for data.",
+      "jp": "日本東部のような、データセンターのある地理的な地域です。リソースを置く場所を選び、速度、料金、データに関する法的な決まりに影響します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I control who can do what?",
+      "jp": "誰が何をできるかは、どう管理しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With role-based access control. You assign a role, like Reader or Contributor, to a person or group at a scope such as a resource group.",
+      "jp": "ロールベースのアクセス制御です。閲覧者や共同作成者などのロールを、リソースグループのような範囲で、人やグループに割り当てます。"
+     },
+     {
+      "sp": 0,
+      "en": "Which role should I give by default?",
+      "jp": "既定では、どのロールを与えるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The smallest that does the job. Reader first. Give broader roles only when needed, and only for as long as needed.",
+      "jp": "仕事ができる、最小のものです。まず閲覧者。広い役割は、必要なときだけ、必要な期間だけ与えます。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：計算とストレージ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What is a virtual machine?",
+      "jp": "仮想マシンとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A computer simulated in software on the provider's hardware. You choose its size, system, and disk, and you manage the inside yourself.",
+      "jp": "提供者のハードウェアの上で、ソフトウェアとして再現されたコンピューターです。大きさ、OS、ディスクを選び、中身は自分で管理します。"
+     },
+     {
+      "sp": 0,
+      "en": "When would I use something other than a virtual machine?",
+      "jp": "仮想マシン以外は、いつ使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "When you don't want to manage servers. A managed web app service runs your code and handles patching and scaling, so you focus on the application.",
+      "jp": "サーバーを管理したくないときです。管理されたウェブアプリのサービスが、コードを動かし、更新と拡張を引き受けるので、アプリに集中できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What kinds of storage are there?",
+      "jp": "ストレージには、どんな種類がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Blob storage for files and objects, file shares like a network drive, and managed disks for virtual machines. Each fits a different job.",
+      "jp": "ファイルやオブジェクト用のブロブストレージ、ネットワークドライブのようなファイル共有、仮想マシン用のマネージドディスクです。それぞれ、別の仕事に向いています。"
+     },
+     {
+      "sp": 0,
+      "en": "What goes wrong most with storage?",
+      "jp": "ストレージで最も多い失敗は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Public access by mistake. A container opened to the whole internet has leaked countless private files. Keep it private unless there's a clear reason.",
+      "jp": "間違った公開です。インターネット全体に開かれたコンテナーから、数え切れない非公開のファイルが漏れています。明確な理由が無い限り、非公開にしておきます。"
+     },
+     {
+      "sp": 0,
+      "en": "Are backups automatic?",
+      "jp": "バックアップは、自動ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Not unless you set them up. Decide how much data you can afford to lose and how fast you must recover, then configure backup to match.",
+      "jp": "設定しない限り、自動ではありません。どれだけのデータを失ってよいか、どれだけ速く復旧すべきかを決めて、それに合わせてバックアップを設定します。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：ネットワークとID",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do cloud machines talk to each other?",
+      "jp": "クラウドのマシン同士は、どうやって話すのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Through a virtual network, split into subnets. It's the same idea as a normal network: addresses, routes, and rules, but defined in software.",
+      "jp": "仮想ネットワークを通じて、サブネットに分けて話します。普通のネットワークと同じ考えで、アドレス、経路、規則がありますが、ソフトウェアで定義されます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I control the traffic?",
+      "jp": "通信は、どう制御しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With network security groups. They're allow-and-deny rules by port, address, and direction. Open only what you need, especially for remote login.",
+      "jp": "ネットワークセキュリティグループです。ポート、アドレス、方向ごとの、許可と拒否の規則です。必要なものだけを開け、特にリモートログインに注意します。"
+     },
+     {
+      "sp": 0,
+      "en": "Should a server have a public address?",
+      "jp": "サーバーは、公開アドレスを持つべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Only if it must be reached from outside. Many servers can stay private and be reached through a secure gateway, which shrinks the attack surface.",
+      "jp": "外から届く必要がある場合だけです。多くのサーバーは、非公開のままで、安全な入口を通して到達でき、攻撃される面を小さくできます。"
+     },
+     {
+      "sp": 0,
+      "en": "How does Azure know who is calling?",
+      "jp": "Azureは、誰が呼んでいるかを、どうやって知りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Through Entra ID, the same identity service that handles sign-in. People, apps, and services all authenticate there before being authorized.",
+      "jp": "サインインを担当する、同じIDのサービスであるEntra IDを通じてです。人、アプリ、サービスの全てが、そこで認証されてから、認可されます。"
+     },
+     {
+      "sp": 0,
+      "en": "How can an app use a secret without storing a password?",
+      "jp": "アプリは、パスワードを保存せずに、どう秘密を使えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With a managed identity. Azure gives the resource its own identity, so it can reach other services without any password in the code.",
+      "jp": "マネージドIDを使います。Azureがリソースに専用のIDを与えるので、コードにパスワードを置かずに、他のサービスに届けます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：コストと運用の習慣",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I've heard a cloud bill can surprise people. Why?",
+      "jp": "クラウドの請求が、人を驚かせることがあると聞きました。なぜですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because everything is metered. A forgotten virtual machine, a large disk, or heavy data transfer keeps charging until you remove it.",
+      "jp": "全てが従量だからです。忘れられた仮想マシン、大きなディスク、多量のデータ転送は、消すまで課金され続けます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I keep costs under control?",
+      "jp": "費用は、どう抑えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Set budgets with alerts, use tags to see who owns what, and review the cost view regularly. Alerts turn a surprise into a warning.",
+      "jp": "アラート付きの予算を設定し、タグで誰が何を持つかを見えるようにし、費用の画面を定期的に見直します。アラートが、驚きを警告に変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What are tags?",
+      "jp": "タグとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Labels you attach to resources, like owner, project, or environment. They let you group the bill and find forgotten test resources.",
+      "jp": "持ち主、プロジェクト、環境のように、リソースに付けるラベルです。請求をまとめたり、忘れられた試験用のリソースを見つけたりできます。"
+     },
+     {
+      "sp": 0,
+      "en": "How should I try things safely?",
+      "jp": "安全に試すには、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a separate test subscription or resource group, set a spending limit, and delete everything when you finish. Cleaning up is part of learning.",
+      "jp": "別の試験用サブスクリプションやリソースグループを使い、利用の上限を設定し、終わったら全てを削除します。片付けは、学びの一部です。"
+     },
+     {
+      "sp": 0,
+      "en": "What's one habit that makes cloud work calmer?",
+      "jp": "クラウドの仕事を落ち着いたものにする習慣を、一つ挙げるなら？"
+     },
+     {
+      "sp": 1,
+      "en": "Define things as code. When your setup is written in a template, you can review it, repeat it exactly, and rebuild it after a mistake.",
+      "jp": "構成をコードで定義することです。設定がテンプレートに書かれていれば、確認でき、正確に繰り返せ、間違いの後に作り直せます。"
+     }
+    ]
+   }
+  ]
+ }
+]

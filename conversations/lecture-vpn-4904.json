@@ -1,0 +1,236 @@
+[
+ {
+  "id": "lecture-vpn",
+  "ic": "🔌",
+  "n": "ネットワーク機器とVPN講義：つなぐ・守る・見分ける（やさしい→難しい）",
+  "hint": "Lecture style on network devices and VPN: Ken teaches Mia switches, routers, firewalls, Wi-Fi, VLANs and NAT, VPN types and how a tunnel works, zero trust ideas, and how this connects to the networking, identity and logging lectures",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：ネットワーク機器の役割",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, there are so many boxes in a server room. What does each one do?",
+      "jp": "ケン、サーバー室には箱がたくさんあります。それぞれ何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A switch connects devices inside one network. A router connects different networks. A firewall decides what traffic may pass. Three jobs, three kinds of box.",
+      "jp": "スイッチは、一つのネットワークの中の端末をつなぎます。ルーターは、異なるネットワークをつなぎます。ファイアウォールは、どの通信を通すかを決めます。三つの仕事、三種類の箱です。"
+     },
+     {
+      "sp": 0,
+      "en": "How does a switch know where to send data?",
+      "jp": "スイッチは、データをどこへ送るかを、どうやって知るのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It learns which device is on which port, using hardware addresses. Then it sends data only to the right port instead of everywhere.",
+      "jp": "ハードウェアのアドレスを使って、どの端末が、どのポートにいるかを学びます。そして、あちこちでなく、正しいポートにだけデータを送ります。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the address and gateway idea from the networking lecture.",
+      "jp": "ネットワーク講義の、アドレスとゲートウェイの話ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. The switch works inside the neighborhood, and the router is the gate out of it. Now you can picture where each piece lives.",
+      "jp": "はい。スイッチは近所の中で働き、ルーターは、その外への門です。これで、各部品がどこにあるか、思い描けます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is NAT?",
+      "jp": "NATとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Network address translation. The router lets many private addresses share one public address, rewriting them as traffic passes. It also hides the inside from the outside.",
+      "jp": "ネットワークアドレス変換です。ルーターが、多くのプライベートアドレスに、一つの公開アドレスを共有させ、通信が通る際に書き換えます。外から、中が見えにくくもなります。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a VLAN?",
+      "jp": "VLANとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A way to split one physical network into separate virtual ones. Guests, staff, and servers can share the same switches but not see each other.",
+      "jp": "一つの物理的なネットワークを、別々の仮想のものに分ける方法です。来客、社員、サーバーが、同じスイッチを共有しても、互いを見られません。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：ファイアウォールとWi-Fi",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How does a firewall decide?",
+      "jp": "ファイアウォールは、どうやって決めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "By rules: source, destination, port, and direction, evaluated in order. The best practice is deny by default, then allow only what's needed.",
+      "jp": "規則によります。送信元、宛先、ポート、方向を、順番に評価します。最良の実践は、既定で拒否し、必要なものだけを許可することです。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds like the cloud security groups.",
+      "jp": "クラウドのセキュリティグループに似ていますね。"
+     },
+     {
+      "sp": 1,
+      "en": "Same logic. Cloud security groups are firewall rules in software. If you can read one, you can read the other.",
+      "jp": "同じ論理です。クラウドのセキュリティグループは、ソフトウェアの、ファイアウォールの規則です。一つを読めれば、もう一つも読めます。"
+     },
+     {
+      "sp": 0,
+      "en": "What's a next-generation firewall?",
+      "jp": "次世代ファイアウォールとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "One that understands applications and users, not only ports. It can block a specific app or inspect traffic for threats, but it needs careful tuning.",
+      "jp": "ポートだけでなく、アプリや利用者を理解するものです。特定のアプリを止めたり、通信の脅威を調べたりできますが、慎重な調整が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "How should Wi-Fi be secured?",
+      "jp": "Wi-Fiは、どう守るべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use modern encryption, WPA3 if available, a strong passphrase or company sign-in, and a separate network for guests. Never leave default admin passwords.",
+      "jp": "新しい暗号化、可能ならWPA3、強い合言葉や会社のサインイン、来客用の別のネットワークを使います。管理画面の初期パスワードは、決して放置しません。"
+     },
+     {
+      "sp": 0,
+      "en": "Is public Wi-Fi dangerous?",
+      "jp": "公共のWi-Fiは、危険ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's untrusted. Rely on HTTPS and a VPN, avoid sensitive work if possible, and watch for fake networks with names similar to the real one.",
+      "jp": "信頼できません。HTTPSとVPNを頼りにし、可能なら重要な作業は避け、本物に似た名前の、偽のネットワークに注意します。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：VPNの仕組み",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What does a VPN actually do?",
+      "jp": "VPNは、実際には何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It builds an encrypted tunnel across an untrusted network, like the internet, so two points behave as if they were on the same private network.",
+      "jp": "インターネットのような、信頼できないネットワークを横切る、暗号化されたトンネルを作り、二つの地点が、同じ私的なネットワークにいるように振る舞わせます。"
+     },
+     {
+      "sp": 0,
+      "en": "What kinds of VPN are there?",
+      "jp": "VPNには、どんな種類がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Remote access, where one person connects to the office, and site-to-site, where two offices are joined permanently. The tunnel idea is the same.",
+      "jp": "一人が事務所に接続する、リモートアクセスと、二つの事務所を常時つなぐ、拠点間です。トンネルの考えは同じです。"
+     },
+     {
+      "sp": 0,
+      "en": "How is the tunnel kept secure?",
+      "jp": "トンネルは、どうやって安全に保たれますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With encryption and authentication, based on the same TLS and certificate ideas we studied. Both sides prove who they are before any data flows.",
+      "jp": "暗号化と認証で保たれ、学んだTLSと証明書と同じ考えに基づきます。データが流れる前に、双方が、誰であるかを証明します。"
+     },
+     {
+      "sp": 0,
+      "en": "Does a VPN make me anonymous?",
+      "jp": "VPNを使うと、匿名になりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. It moves trust from your local network to the VPN provider or your company. It protects the road, but it doesn't make you invisible.",
+      "jp": "いいえ。信頼を、手元のネットワークから、VPNの提供者や会社に移すだけです。道は守りますが、見えなくなるわけではありません。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does my VPN sometimes make things slow?",
+      "jp": "なぜ、VPNで、ときどき遅くなるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Encryption costs a little, and traffic may take a longer route through the VPN gateway. Split tunneling sends only company traffic through it, with trade-offs for security.",
+      "jp": "暗号化に少し手間がかかり、通信がVPNの入口を通って、遠回りになることがあります。分割トンネルは、会社の通信だけを通しますが、セキュリティ上の得失があります。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：ゼロトラストと、他の分野とのつながり",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I hear that VPNs are being replaced by zero trust. Is that true?",
+      "jp": "VPNが、ゼロトラストに置き換わると聞きます。本当ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Partly. Old VPNs trust anyone who gets inside. Zero trust says: never assume trust from location, verify every request by identity, device, and context.",
+      "jp": "一部は本当です。古いVPNは、中に入った人を信頼します。ゼロトラストは、場所から信頼を仮定せず、全ての要求を、ID、端末、状況で確認する、という考えです。"
+     },
+     {
+      "sp": 0,
+      "en": "How does that connect to identity?",
+      "jp": "それは、IDとどうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Directly. Conditional access from the identity lecture is zero trust in action: strong sign-in, MFA, and a compliant device checked every time.",
+      "jp": "直接つながります。認証講義の条件付きアクセスは、実践されているゼロトラストです。強いサインイン、MFA、毎回確認される、準拠した端末です。"
+     },
+     {
+      "sp": 0,
+      "en": "And device management?",
+      "jp": "端末管理とは？"
+     },
+     {
+      "sp": 1,
+      "en": "Intune says whether a device is healthy. That answer decides whether it can reach the network or the company's apps. Devices and networks are one story now.",
+      "jp": "Intuneが、端末が健全かを伝えます。その答えが、ネットワークや会社のアプリに届けるかを決めます。端末とネットワークは、今や一つの物語です。"
+     },
+     {
+      "sp": 0,
+      "en": "What about logs?",
+      "jp": "ログは、どうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Firewalls, VPN gateways, and Wi-Fi controllers all produce logs. Sent to one place, they let you trace a connection from a login to the destination, as in the logging lecture.",
+      "jp": "ファイアウォール、VPNの入口、Wi-Fiの制御装置は、全てログを出します。一か所に送れば、ログ講義のように、ログインから宛先まで、接続をたどれます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I do first when a VPN user can't connect?",
+      "jp": "VPNの利用者が接続できないとき、最初に何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Go bottom up, as before: is the user online, can they reach the gateway, does DNS resolve, are credentials and MFA fine, is the device compliant? Check the VPN log last, and with a time range.",
+      "jp": "以前と同じ、下から上へです。利用者はオンラインか、入口に届くか、DNSは解決するか、資格情報とMFAは正常か、端末は準拠しているか。VPNのログは、最後に、時間の範囲を付けて確認します。"
+     }
+    ]
+   }
+  ]
+ }
+]

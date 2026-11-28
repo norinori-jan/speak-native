@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-auth",
+  "ic": "🔐",
+  "n": "認証講義：IDとパスワードとMFAとトークン（やさしい→難しい）",
+  "hint": "Lecture style on identity: Ken teaches Mia the difference between authentication and authorization, password storage, MFA, tokens and OAuth, Entra ID sign-in, and how attackers abuse identity",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：認証と認可は別のもの",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, people say \"authentication\" and \"authorization.\" Are they the same?",
+      "jp": "ケン、「認証」と「認可」と言いますが、同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Authentication asks, \"Who are you?\" Authorization asks, \"What are you allowed to do?\" You always need the first before the second.",
+      "jp": "いいえ。認証は「あなたは誰ですか」と問います。認可は「あなたは何をしてよいですか」と問います。必ず、先に一つ目が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me a daily example?",
+      "jp": "日常の例を挙げてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "An office building. Your badge proves who you are. But the badge only opens the doors you have permission for. Entering is authentication, and which doors open is authorization.",
+      "jp": "オフィスビルです。社員証が、あなたが誰かを証明します。でも、その社員証は、許可された扉しか開けません。入ることが認証、どの扉が開くかが認可です。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is that difference important?",
+      "jp": "その違いは、なぜ重要なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Many security failures are authorization mistakes: a person is correctly logged in, but can see data that belongs to someone else.",
+      "jp": "多くのセキュリティ上の失敗は、認可の間違いです。ログイン自体は正しいのに、他の人のデータが見えてしまいます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is \"least privilege\"?",
+      "jp": "「最小権限」とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Give each person and program only the access they need to do their job, nothing more. It limits the damage if an account is ever stolen.",
+      "jp": "各人と各プログラムに、仕事に必要なアクセスだけを与え、それ以上は与えません。アカウントが盗まれたときの被害を限定します。"
+     },
+     {
+      "sp": 0,
+      "en": "So an admin account shouldn't be used for everyday work?",
+      "jp": "では、管理者アカウントは、普段の作業に使うべきではないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Use a normal account daily, and the admin account only when needed. That way a phishing click doesn't hand over everything.",
+      "jp": "そのとおりです。普段は通常のアカウントを使い、管理者アカウントは必要なときだけ使います。そうすれば、フィッシングのクリックで全部を渡さずに済みます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：パスワードはどう守られるか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How does a service store my password?",
+      "jp": "サービスは、私のパスワードをどう保存しているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A good service never stores the password itself. It stores a hash, a one-way fingerprint made by a slow, special function.",
+      "jp": "良いサービスは、パスワードそのものを保存しません。遅く作られた特別な関数で作る、一方向の指紋であるハッシュを保存します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why can't it just be encrypted?",
+      "jp": "なぜ、暗号化ではだめなのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Encryption can be reversed with a key. A hash can't be reversed. So even if the database leaks, the attacker doesn't get the passwords directly.",
+      "jp": "暗号化は、鍵で元に戻せます。ハッシュは元に戻せません。だから、データベースが漏れても、攻撃者はパスワードを直接は手に入れられません。"
+     },
+     {
+      "sp": 0,
+      "en": "Then why do leaked passwords still cause trouble?",
+      "jp": "では、なぜ漏れたパスワードが、それでも問題になるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because attackers guess. They hash common passwords and compare. Weak or reused passwords fall quickly.",
+      "jp": "攻撃者が推測するからです。よくあるパスワードをハッシュにして、比べます。弱いパスワードや使い回しは、すぐに破られます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a salt?",
+      "jp": "ソルトとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A random value added to each password before hashing. It makes identical passwords produce different hashes, so one precomputed table can't break everyone.",
+      "jp": "ハッシュにする前に、各パスワードに加えるランダムな値です。同じパスワードでも違うハッシュになるので、一つの事前計算の表で全員を破ることはできません。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the best advice for users?",
+      "jp": "利用者への、最良の助言は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a password manager, make each password long and unique, and turn on multi-factor authentication. Length beats cleverness.",
+      "jp": "パスワード管理ツールを使い、各パスワードを長く、他と違うものにして、多要素認証を有効にします。工夫より、長さが勝ちます。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：多要素認証（MFA）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What does MFA add?",
+      "jp": "MFAは、何を加えるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A second proof. Something you know, like a password, plus something you have, like a phone, or something you are, like a fingerprint.",
+      "jp": "二つ目の証明です。パスワードのような知っているものに、スマホのような持っているもの、または指紋のような自分自身を加えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Are all MFA methods equally strong?",
+      "jp": "MFAの方法は、全て同じ強さですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Text message codes are better than nothing, but they can be intercepted or tricked out of you. App-based approval is better, and hardware keys or passkeys are strongest.",
+      "jp": "いいえ。SMSのコードは無いよりましですが、傍受されたり、だまし取られたりします。アプリでの承認はより良く、ハードウェアキーやパスキーが最も強いです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is an MFA fatigue attack?",
+      "jp": "MFA疲労攻撃とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The attacker has your password and keeps triggering approval prompts, hoping you'll tap \"Approve\" just to make them stop. Never approve a prompt you didn't start.",
+      "jp": "攻撃者があなたのパスワードを持っていて、承認の通知を送り続け、止めたくて「承認」を押すのを待ちます。自分で始めていない通知は、絶対に承認しないでください。"
+     },
+     {
+      "sp": 0,
+      "en": "How do we defend against that?",
+      "jp": "それには、どう防ぎますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use number matching, where you must type a code shown on the sign-in screen. It proves you're actually the one signing in.",
+      "jp": "ナンバーマッチングを使います。サインイン画面に出る数字を、自分で入力します。実際に自分がサインインしている証拠になります。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a passkey?",
+      "jp": "パスキーとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A passkey replaces the password with a cryptographic key stored on your device, unlocked by your face or fingerprint. There's no secret to type, so there's nothing to phish.",
+      "jp": "パスキーは、パスワードを、端末に保存した暗号の鍵で置き換え、顔や指紋で解除します。入力する秘密が無いので、フィッシングで盗むものもありません。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：トークンとOAuth",
+    "l": [
+     {
+      "sp": 0,
+      "en": "After I sign in, how does the site remember me?",
+      "jp": "サインインした後、サイトは私をどうやって覚えているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It gives your browser a token, a small proof of sign-in. Each request carries it, so you don't enter your password every time.",
+      "jp": "ブラウザに、サインインした小さな証明であるトークンを渡します。各リクエストがそれを運ぶので、毎回パスワードを入れなくて済みます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is a token as sensitive as a password?",
+      "jp": "トークンは、パスワードと同じくらい重要ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, sometimes more. If someone steals your valid token, they can act as you without knowing your password or passing MFA.",
+      "jp": "はい、時にはそれ以上です。有効なトークンを盗まれると、パスワードを知らなくても、MFAを通らなくても、あなたとして動けてしまいます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why are tokens short-lived?",
+      "jp": "なぜトークンは、短い期間で切れるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "To shrink the window of misuse. A short-lived access token is paired with a refresh token that can get a new one, and the refresh token is guarded more tightly.",
+      "jp": "悪用できる時間を縮めるためです。短命のアクセストークンに、新しいものを得られるリフレッシュトークンを組み合わせ、後者はより厳重に守ります。"
+     },
+     {
+      "sp": 0,
+      "en": "What is OAuth?",
+      "jp": "OAuthとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It lets you grant an app limited access to your account without giving it your password. Think of the \"Sign in with\" button and the list of permissions you approve.",
+      "jp": "パスワードを渡さずに、アプリに自分のアカウントへの限定的なアクセスを許可する仕組みです。「〜でサインイン」のボタンと、承認する権限の一覧を思い浮かべてください。"
+     },
+     {
+      "sp": 0,
+      "en": "Why should I read that permission list?",
+      "jp": "なぜ、その権限の一覧を読むべきなのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A malicious app can ask for far more than it needs, like reading all your mail. Approving without reading is a known attack path called consent phishing.",
+      "jp": "悪意のあるアプリは、全てのメールを読むなど、必要以上を求めることがあります。読まずに承認するのは、同意フィッシングという、知られた攻撃の経路です。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：Entra IDと条件付きアクセス",
+    "l": [
+     {
+      "sp": 0,
+      "en": "In a company, who manages all these identities?",
+      "jp": "会社では、誰がこれらのIDを全部管理しているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Usually an identity service like Microsoft Entra ID. It holds the users, groups, devices, and apps, and it handles sign-in for your company's tools.",
+      "jp": "たいてい、Microsoft Entra IDのようなIDのサービスです。ユーザー、グループ、端末、アプリを保持し、会社の道具のサインインを担当します。"
+     },
+     {
+      "sp": 0,
+      "en": "What is conditional access?",
+      "jp": "条件付きアクセスとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a set of if-then rules at sign-in. For example: if the user is outside the country, or the device isn't compliant, then require MFA or block access.",
+      "jp": "サインイン時の、「もし〜なら」という規則の集まりです。例えば、利用者が国外にいる、または端末が準拠していないなら、MFAを要求するか、アクセスを遮断します。"
+     },
+     {
+      "sp": 0,
+      "en": "How does that connect to device management?",
+      "jp": "それは、端末の管理とどうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Intune reports whether a device is compliant, and conditional access uses that answer. An unmanaged or risky device can be refused before it touches company data.",
+      "jp": "Intuneが端末が準拠しているかを報告し、条件付きアクセスがその答えを使います。管理されていない、または危険な端末は、会社のデータに触れる前に断れます。"
+     },
+     {
+      "sp": 0,
+      "en": "What would I look at in the sign-in logs?",
+      "jp": "サインインのログでは、何を見ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Who signed in, from where, on which device, with what result, and which policy applied. Unusual locations and repeated failures are the first clues.",
+      "jp": "誰が、どこから、どの端末で、どんな結果で、どのポリシーが適用されてサインインしたかです。普段と違う場所や、繰り返しの失敗が、最初の手がかりです。"
+     },
+     {
+      "sp": 0,
+      "en": "What's one habit that protects an identity the most?",
+      "jp": "IDを最もよく守る習慣を、一つ挙げるなら？"
+     },
+     {
+      "sp": 1,
+      "en": "Treat every unexpected prompt as a warning. If you didn't start it, don't approve it, and report it. Fast reporting turns an incident into a small event.",
+      "jp": "予期しない通知は全て警告として扱うことです。自分で始めていないなら承認せず、報告します。早い報告が、インシデントを小さな出来事に変えます。"
+     }
+    ]
+   }
+  ]
+ }
+]

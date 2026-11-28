@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-web",
+  "ic": "🌐",
+  "n": "Web講義：HTTPとAPIとJSON（やさしい→難しい）",
+  "hint": "Lecture style on how the web talks: Ken teaches Mia what HTTP requests and responses are, status codes, JSON, APIs, API keys and safe handling, and how to debug a failing call",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：ブラウザとサーバーの会話",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what actually happens when I open a web page?",
+      "jp": "ケン、ウェブページを開くとき、実際には何が起きているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Your browser sends a request to a server, and the server sends back a response. That's the whole idea of HTTP: ask, then answer.",
+      "jp": "ブラウザがサーバーにリクエストを送り、サーバーがレスポンスを返します。これがHTTPの基本の考えで、頼んで、答えをもらう、ということです。"
+     },
+     {
+      "sp": 0,
+      "en": "What's in a request?",
+      "jp": "リクエストには、何が入っていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A method, like GET or POST, an address, some headers, and sometimes a body. The method says what you want to do.",
+      "jp": "GETやPOSTのようなメソッド、アドレス、いくつかのヘッダー、時にはボディです。メソッドが、何をしたいかを表します。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between GET and POST?",
+      "jp": "GETとPOSTの違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "GET asks for data and shouldn't change anything. POST sends data to the server, for example to create a new account.",
+      "jp": "GETはデータを求め、何も変えないのが原則です。POSTはサーバーにデータを送り、例えば新しいアカウントを作ります。"
+     },
+     {
+      "sp": 0,
+      "en": "And the response?",
+      "jp": "では、レスポンスは？"
+     },
+     {
+      "sp": 1,
+      "en": "A status code, headers, and a body. The status code is a short number that tells you how it went.",
+      "jp": "ステータスコード、ヘッダー、ボディです。ステータスコードは、結果を伝える短い数字です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I see these requests myself?",
+      "jp": "そのリクエストを、自分で見られますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Open your browser's developer tools and look at the Network tab. It's the best classroom for learning how the web works.",
+      "jp": "はい。ブラウザの開発者ツールを開いて、ネットワークのタブを見ます。ウェブの仕組みを学ぶ、最高の教室です。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：ステータスコードを読む",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What do the status codes mean?",
+      "jp": "ステータスコードは、どういう意味ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Think in groups. 2xx means success, 3xx means go somewhere else, 4xx means the request had a problem, and 5xx means the server had a problem.",
+      "jp": "グループで考えます。2xxは成功、3xxは別の場所へ、4xxはリクエスト側の問題、5xxはサーバー側の問題です。"
+     },
+     {
+      "sp": 0,
+      "en": "Which ones should I remember?",
+      "jp": "どれを覚えるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "200 is OK. 401 means you're not authenticated. 403 means you're known but not allowed. 404 means not found. 500 means the server broke.",
+      "jp": "200は成功です。401は認証されていない、403は誰かは分かっているが許可がない、404は見つからない、500はサーバーの故障です。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between 401 and 403?",
+      "jp": "401と403の違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "401: \"I don't know who you are.\" 403: \"I know who you are, and you may not do this.\" The fix is different in each case.",
+      "jp": "401は「あなたが誰か分かりません」。403は「あなたが誰かは分かりますが、これはできません」。直し方が、それぞれ違います。"
+     },
+     {
+      "sp": 0,
+      "en": "If I get a 500, is it my fault?",
+      "jp": "500が出たら、私のせいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Not necessarily. But your request might have triggered a bug. Check the server log, and see whether the same call works with different input.",
+      "jp": "必ずしもそうではありません。ただ、あなたのリクエストがバグを引き起こしたのかもしれません。サーバーのログを確認し、別の入力で同じ呼び出しが動くか見ます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about 429?",
+      "jp": "429は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Too many requests. You're being rate limited. Slow down, and retry after a short wait.",
+      "jp": "リクエストが多すぎる、です。回数制限を受けています。速度を落とし、少し待ってから再試行します。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：JSONという共通語",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Whenever I look at API data, it's in curly braces. What is that?",
+      "jp": "APIのデータを見ると、いつも波かっこで書かれています。あれは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's JSON. It's a simple text format for data: names and values in pairs, like \"name\": \"Mia\".",
+      "jp": "それがJSONです。データのための単純な文字の形式で、\"name\": \"Mia\" のように、名前と値の組で書きます。"
+     },
+     {
+      "sp": 0,
+      "en": "What kinds of values can it hold?",
+      "jp": "どんな種類の値を入れられますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Text, numbers, true or false, null, lists in square brackets, and objects in curly braces. Objects can nest inside objects.",
+      "jp": "文字、数字、真偽、null、角かっこのリスト、波かっこのオブジェクトです。オブジェクトの中に、オブジェクトを入れ子にできます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is JSON used everywhere?",
+      "jp": "なぜJSONは、どこでも使われているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's easy for people to read, easy for programs to parse, and nearly every language supports it. It became the common language between systems.",
+      "jp": "人が読みやすく、プログラムが解析しやすく、ほぼ全ての言語が対応しているからです。システム同士の共通語になりました。"
+     },
+     {
+      "sp": 0,
+      "en": "What are the most common JSON mistakes?",
+      "jp": "JSONで、よくある間違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A trailing comma, single quotes instead of double quotes, and a missing bracket. A formatter or validator finds these in a second.",
+      "jp": "最後の余分なカンマ、二重引用符ではなく一重引用符、かっこの閉じ忘れです。整形ツールや検証ツールなら、すぐ見つかります。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I handle a field that might be missing?",
+      "jp": "無いかもしれない項目は、どう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Never assume it's there. Check first, or use a default value. Most real-world crashes come from data that wasn't shaped the way we expected.",
+      "jp": "あると決めつけないことです。先に確認するか、既定値を使います。現実の障害の多くは、想定した形でないデータから起きます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：APIとキーの扱い",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What exactly is an API?",
+      "jp": "APIとは、正確には何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a menu that a service offers to programs. You send a request in the agreed format, and you get back data or an action, without knowing how it works inside.",
+      "jp": "サービスがプログラムに提供する、メニューのようなものです。決められた形式でリクエストを送ると、中の仕組みを知らなくても、データや動作が返ってきます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do I need an API key?",
+      "jp": "なぜAPIキーが必要なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It identifies your app. The service uses it to know who is calling, to apply limits, and to charge you. Treat it like a password.",
+      "jp": "あなたのアプリを識別するためです。サービスは、誰が呼んでいるかを知り、制限をかけ、料金を請求するために使います。パスワードのように扱ってください。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I put the key in my web page's JavaScript?",
+      "jp": "キーを、ウェブページのJavaScriptに入れてもいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Anyone can open the page source and read it. Keep keys on a server you control, and let the page talk to your server instead.",
+      "jp": "いいえ。誰でもページのソースを開いて読めます。キーは自分が管理するサーバーに置き、ページはそのサーバーと話すようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I have to call the API from a phone app?",
+      "jp": "スマホのアプリから、APIを呼ぶ必要がある場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "Same principle. A small server in the middle holds the secret and checks that the caller is allowed. The app never carries the real key.",
+      "jp": "原則は同じです。間に小さなサーバーを置いて、秘密を持たせ、呼び出し元が許可されているか確認します。アプリは、本物のキーを持ち歩きません。"
+     },
+     {
+      "sp": 0,
+      "en": "What is rate limiting for?",
+      "jp": "回数制限は、何のためにありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It protects the service from overload and abuse. As a caller, you should expect it and handle a 429 politely instead of hammering the server.",
+      "jp": "サービスを、過負荷や悪用から守ります。呼ぶ側は、それを前提にして、429が来たらサーバーを叩き続けず、丁寧に扱うべきです。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：失敗した呼び出しをデバッグする",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My API call fails. Where do I start?",
+      "jp": "APIの呼び出しが失敗します。どこから始めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with the status code and the response body. They usually tell you what went wrong, in plain words.",
+      "jp": "ステータスコードと、レスポンスのボディから始めます。たいてい、何が悪かったかが、分かりやすい言葉で書かれています。"
+     },
+     {
+      "sp": 0,
+      "en": "What if there's no response at all?",
+      "jp": "レスポンスがまったく無い場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "Then the problem is before HTTP: the network, DNS, a certificate, or a blocked connection. Check those layers one by one.",
+      "jp": "その場合、問題はHTTPより前にあります。ネットワーク、DNS、証明書、遮断された接続です。その層を一つずつ確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I test a call without writing code?",
+      "jp": "コードを書かずに、呼び出しを試すには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a command line tool like curl, or an API client app. You can adjust one thing at a time and see exactly what changes.",
+      "jp": "curlのようなコマンドラインのツールや、APIクライアントのアプリを使います。一度に一つだけ変えて、何が変わるかを正確に見られます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does it mean if it works in the tool but fails in my page?",
+      "jp": "ツールでは動くのに、自分のページでは失敗するのは、何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Often it's a browser rule called CORS. The server must explicitly allow your page's origin. The tool doesn't enforce that rule, but browsers do.",
+      "jp": "よくあるのは、CORSというブラウザの決まりです。サーバーが、あなたのページの送信元を明示的に許可する必要があります。ツールはその決まりを強制しませんが、ブラウザは強制します。"
+     },
+     {
+      "sp": 0,
+      "en": "Is retrying always a good idea?",
+      "jp": "再試行は、いつも良い考えですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Only for temporary failures, like a timeout or 503, and with a growing delay. Retrying a bad request just repeats the same mistake faster.",
+      "jp": "タイムアウトや503のような、一時的な失敗のときだけです。それも、待ち時間を伸ばしながら。悪いリクエストを再試行しても、同じ間違いを速く繰り返すだけです。"
+     }
+    ]
+   }
+  ]
+ }
+]

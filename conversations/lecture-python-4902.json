@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-python",
+  "ic": "🐍",
+  "n": "Python講義：基礎（やさしい→難しい）",
+  "hint": "Lecture style on Python basics: Ken teaches Mia variables, lists and dictionaries, control flow, functions, files and JSON, libraries and virtual environments, and shows how Python connects to PowerShell, JavaScript, SQL, APIs and automation",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：Pythonはどんな言語か",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, we've done PowerShell, JavaScript, and Java. Why add Python?",
+      "jp": "ケン、PowerShell、JavaScript、Javaをやりました。なぜPythonも加えるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because it's the common language for data, automation, and AI. Its code reads almost like plain English, so it's a great first language.",
+      "jp": "データ、自動化、AIの共通語だからです。コードが、ほぼ普通の英語のように読めるので、最初の言語としても優れています。"
+     },
+     {
+      "sp": 0,
+      "en": "How does it compare with the others?",
+      "jp": "他の言語とは、どう比べられますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Like JavaScript, it runs without a compile step. Unlike Java, you don't declare types everywhere. And it uses indentation, not curly braces, to show structure.",
+      "jp": "JavaScriptのように、コンパイルの手順なしで動きます。Javaと違い、至る所で型を宣言しません。そして、構造を示すのに、波かっこでなく、字下げを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "Indentation matters?",
+      "jp": "字下げが、重要なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Very much. It's part of the grammar. Inconsistent spaces cause errors, so let your editor handle it and use four spaces consistently.",
+      "jp": "とても重要です。文法の一部です。空白が揃っていないとエラーになるので、エディターに任せ、四つの空白で統一します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I try it out?",
+      "jp": "どうやって試しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Type python in a terminal to open an interactive prompt, or save a file ending in dot py and run it. Both are fine for learning.",
+      "jp": "ターミナルでpythonと入力して、対話の画面を開くか、拡張子がドットpyのファイルを保存して実行します。学ぶには、どちらでも構いません。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the first thing to learn?",
+      "jp": "最初に学ぶのは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Print something, store a value in a variable, and read an error message. Reading errors is a skill worth practicing from day one.",
+      "jp": "何かを表示し、値を変数に入れ、エラーメッセージを読むことです。エラーを読むのは、初日から練習する価値のある技術です。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：データを入れる箱",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What kinds of values does Python have?",
+      "jp": "Pythonには、どんな種類の値がありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Text, integers, decimals, and true or false. You don't declare the type. Python decides it from the value.",
+      "jp": "文字、整数、小数、真偽です。型は宣言しません。値から、Pythonが決めます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I hold many values?",
+      "jp": "たくさんの値を持つには？"
+     },
+     {
+      "sp": 1,
+      "en": "A list holds an ordered collection, in square brackets. A dictionary holds named values, in curly braces. A dictionary is the same shape as JSON.",
+      "jp": "リストは、順序のある集まりを、角かっこで持ちます。辞書は、名前の付いた値を、波かっこで持ちます。辞書は、JSONと同じ形です。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the format from the Web lecture.",
+      "jp": "Web講義の形式ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, and that's why Python is so good at APIs: you read a JSON response and it becomes a dictionary you can use right away.",
+      "jp": "はい。だからPythonはAPIに強いのです。JSONのレスポンスを読めば、すぐに使える辞書になります。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I get one item from a list?",
+      "jp": "リストから一つの項目を取り出すには？"
+     },
+     {
+      "sp": 1,
+      "en": "By position, starting from zero. The first item is zero, the second is one. A negative number counts from the end.",
+      "jp": "位置で取り出し、零から数えます。最初の項目は零、二番目は一です。負の数は、末尾から数えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I change a list after creating it?",
+      "jp": "リストは、作った後で変更できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, lists are mutable. You can add, remove, and replace items. There's also a tuple, which looks similar but can't be changed.",
+      "jp": "はい、リストは変更できます。追加、削除、置き換えができます。見た目が似ているけれど、変更できない、タプルもあります。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：条件と繰り返しと関数",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I make a decision in code?",
+      "jp": "コードで判断するには？"
+     },
+     {
+      "sp": 1,
+      "en": "With if, elif, and else, followed by a colon and an indented block. It's the same logic as in any language, in a quieter spelling.",
+      "jp": "if、elif、else の後に、コロンと字下げしたブロックを続けます。どの言語とも同じ論理で、より静かな書き方です。"
+     },
+     {
+      "sp": 0,
+      "en": "And loops?",
+      "jp": "繰り返しは？"
+     },
+     {
+      "sp": 1,
+      "en": "A for loop walks through a list one item at a time. A while loop repeats as long as a condition is true. Most daily work uses for.",
+      "jp": "forの繰り返しは、リストを一項目ずつ巡ります。whileは、条件が真の間、繰り返します。日常の作業の多くは、forを使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What are comprehensions I keep seeing?",
+      "jp": "よく見る、内包表記とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A compact way to build a list from another list in one line. Use it when it's clear. If it gets complicated, a normal loop reads better.",
+      "jp": "別のリストから、一行で新しいリストを作る、簡潔な書き方です。分かりやすいときに使い、複雑になるなら、普通の繰り返しの方が読みやすいです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I define a function?",
+      "jp": "関数は、どう定義しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With def, a name, parameters, and a block. Return a value with return. Small functions with clear names make code easy to test.",
+      "jp": "def、名前、引数、ブロックで定義します。値は return で返します。名前の分かりやすい、小さな関数は、コードを試験しやすくします。"
+     },
+     {
+      "sp": 0,
+      "en": "Is that like the design lecture's advice?",
+      "jp": "設計の講義の助言と同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: one function, one job. The principle is the same in PowerShell, JavaScript, Java, and Python. Languages change, but good design carries over.",
+      "jp": "はい。一つの関数に、一つの仕事。その原則は、PowerShell、JavaScript、Java、Pythonで同じです。言語は変わっても、良い設計は引き継がれます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：ファイルとJSONとエラー処理",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I read a file?",
+      "jp": "ファイルは、どう読みますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use the with statement and open. It closes the file for you even if an error happens, which prevents a whole class of bugs.",
+      "jp": "with文と open を使います。エラーが起きても、ファイルを自動で閉じるので、ある種のバグをまとめて防げます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I handle JSON?",
+      "jp": "JSONは、どう扱いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The json module loads text into a dictionary and dumps a dictionary back to text. It's two lines to read an API result you saved.",
+      "jp": "jsonモジュールが、文字を辞書に読み込み、辞書を文字に書き戻します。保存したAPIの結果を読むのは、二行です。"
+     },
+     {
+      "sp": 0,
+      "en": "What if the file doesn't exist?",
+      "jp": "ファイルが存在しなかったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Python raises an exception. Catch it with try and except, and respond sensibly: show a clear message, use a default, or stop safely.",
+      "jp": "Pythonは、例外を起こします。try と except で受け止め、分かりやすい文を表示する、既定値を使う、安全に止まるなど、適切に対応します。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I catch every error?",
+      "jp": "全てのエラーを、受け止めるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Catch the specific ones you can handle. A blanket catch that hides errors makes bugs invisible, and invisible bugs are the worst kind.",
+      "jp": "いいえ。対処できる、特定のものだけを受け止めます。全てを覆い隠す受け止め方は、バグを見えなくし、見えないバグが、最悪の種類です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I write to a file safely?",
+      "jp": "ファイルに安全に書くには？"
+     },
+     {
+      "sp": 1,
+      "en": "Open it in write mode, but remember that write mode erases the old content. Use append mode when you want to keep it.",
+      "jp": "書き込みのモードで開きますが、そのモードは、古い内容を消すことを覚えておきます。残したいなら、追記のモードを使います。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：他の分野とのつながりと、環境の整え方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I use other people's code?",
+      "jp": "他の人のコードは、どう使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With libraries. pip installs them, and import brings them in. There are libraries for web requests, data tables, Excel files, and much more.",
+      "jp": "ライブラリで使います。pip でインストールし、import で取り込みます。ウェブへのリクエスト、データの表、Excelのファイルなど、たくさんあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do people talk about virtual environments?",
+      "jp": "なぜ、仮想環境が話題になるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Each project gets its own set of libraries, so one project's versions don't break another's. It's the same spirit as containers, only lighter.",
+      "jp": "各プロジェクトが、自分専用のライブラリの組を持つので、一つのプロジェクトの版が、他を壊しません。コンテナと同じ精神で、より軽いものです。"
+     },
+     {
+      "sp": 0,
+      "en": "How does Python connect to what we've learned?",
+      "jp": "Pythonは、これまでに学んだことと、どうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It calls APIs from the Web lecture, queries databases from the SQL lecture, processes logs, and automates the tasks you'd otherwise do in PowerShell. It's glue between all of them.",
+      "jp": "Web講義のAPIを呼び、SQL講義のデータベースに問い合わせ、ログを処理し、PowerShellでやる作業も自動化します。その全てをつなぐ、接着剤です。"
+     },
+     {
+      "sp": 0,
+      "en": "Is it good for security work?",
+      "jp": "セキュリティの仕事にも、向いていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Very. Analysts use it to parse logs, call security APIs, and automate triage. Combined with regular expressions, it turns a thousand lines into a clean list.",
+      "jp": "とても向いています。アナリストは、ログの解析、セキュリティのAPIの呼び出し、トリアージの自動化に使います。正規表現と組み合わせれば、千行が、きれいな一覧になります。"
+     },
+     {
+      "sp": 0,
+      "en": "What small project should I start with?",
+      "jp": "どんな小さなプロジェクトから始めるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Read a log file, count the errors, and write a summary. It touches files, loops, dictionaries, and output, and it's genuinely useful.",
+      "jp": "ログのファイルを読み、エラーを数え、まとめを書くことです。ファイル、繰り返し、辞書、出力に触れ、本当に役に立ちます。"
+     }
+    ]
+   }
+  ]
+ }
+]

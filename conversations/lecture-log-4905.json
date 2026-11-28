@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-log",
+  "ic": "📈",
+  "n": "ログ設計と監視講義：見える仕組みを作る（やさしい→難しい）",
+  "hint": "Lecture style on logging and monitoring design: Ken teaches Mia what to log, log levels and structure, collecting and storing logs, metrics and alerts, tuning noise, and how it connects to security operations, KQL, containers, Python and the cloud",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：なぜログを設計するのか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, we've used logs a lot. But who decides what gets logged?",
+      "jp": "ケン、ログは、たくさん使ってきました。でも、何をログに残すかは、誰が決めるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The people who build the system. That's why logging is design work. If nobody planned it, the log you need during an incident often doesn't exist.",
+      "jp": "システムを作る人たちです。だから、ログは設計の仕事です。誰も計画しなければ、インシデントのときに必要なログが、存在しないことがよくあります。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the difference between logging and monitoring?",
+      "jp": "ログと監視の違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Logs are the detailed diary of events. Monitoring watches numbers and alerts you early when something is wrong. You need both: monitoring tells you something is wrong, logs tell you why.",
+      "jp": "ログは、出来事の詳しい日記です。監視は、数字を見て、何かがおかしいときに早く知らせます。両方が必要です。監視が「おかしい」と伝え、ログが「なぜか」を伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What should a good log entry contain?",
+      "jp": "良いログの一件には、何が入るべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When it happened, where it came from, who or what was involved, what happened, and the result. The classic questions: who, what, when, where, and outcome.",
+      "jp": "いつ起きたか、どこから来たか、誰や何が関わったか、何が起きたか、その結果。昔からの問い、誰が、何を、いつ、どこで、結果は、です。"
+     },
+     {
+      "sp": 0,
+      "en": "How does this connect to security operations?",
+      "jp": "これは、セキュリティ運用と、どうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "The analyst's investigation is only as good as the logs available. A well-designed log turns an hour of guessing into a minute of reading.",
+      "jp": "アナリストの調査は、手元のログの質で決まります。よく設計されたログは、一時間の推測を、一分の読み取りに変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is more logging always better?",
+      "jp": "ログは、多ければ多いほど良いのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Too much costs money and buries the signal. Log what supports detection, investigation, and accountability, and skip the rest.",
+      "jp": "いいえ。多すぎると、費用がかかり、信号が埋もれます。検知、調査、説明責任を支えるものを残し、他は省きます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：ログの書き方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What are log levels?",
+      "jp": "ログのレベルとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Labels of importance: debug, info, warning, error, and critical. They let you filter. In production, you usually keep info and above.",
+      "jp": "重要度の札です。デバッグ、情報、警告、エラー、重大。絞り込みに使えます。本番では、通常、情報以上を残します。"
+     },
+     {
+      "sp": 0,
+      "en": "How should the text be written?",
+      "jp": "文は、どう書くべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "In a consistent structure, ideally JSON, with named fields. Then tools can search and count fields instead of guessing from free text with regular expressions.",
+      "jp": "一貫した構造で、できればJSONで、名前付きの項目にします。そうすれば、道具が、自由な文を正規表現で推測せず、項目を検索し、数えられます。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the same data shape as in the Web lecture.",
+      "jp": "Web講義と、同じデータの形ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. And in Python, writing a structured log is just dumping a dictionary. Consistent fields are what make KQL queries easy later.",
+      "jp": "はい。Pythonなら、構造のあるログを書くのは、辞書を書き出すだけです。項目が揃っていることが、後でKQLの検索を楽にします。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything I must never log?",
+      "jp": "絶対にログに残してはいけないものは？"
+     },
+     {
+      "sp": 1,
+      "en": "Passwords, tokens, API keys, and sensitive personal data. Logs are copied widely and kept long, so a secret in a log is a leak waiting to happen.",
+      "jp": "パスワード、トークン、APIキー、機微な個人データです。ログは、広くコピーされ、長く保管されるので、ログの中の秘密は、いつか起きる漏えいです。"
+     },
+     {
+      "sp": 0,
+      "en": "What about time?",
+      "jp": "時刻は、どうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Always record timestamps with the time zone, ideally in UTC. Mismatched clocks across systems make a timeline impossible to trust.",
+      "jp": "タイムゾーン付きで、できればUTCで、常に時刻を記録します。システム間で時計がずれていると、時系列を信用できなくなります。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：集めて、保管して、検索する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Logs are spread over many machines. How do we gather them?",
+      "jp": "ログは、多くのマシンに散らばっています。どうやって集めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "An agent or forwarder sends them to a central platform. Containers write to standard output, and the platform collects them. One place to search is the goal.",
+      "jp": "エージェントや転送の仕組みが、中央の基盤に送ります。コンテナは標準出力に書き、基盤が集めます。検索する場所を一つにするのが、目的です。"
+     },
+     {
+      "sp": 0,
+      "en": "How long should we keep logs?",
+      "jp": "ログは、どのくらいの期間、保管すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It depends on rules, cost, and risk. Keep recent logs hot and searchable, older ones cheaper and slower. Attackers are often found months after they got in.",
+      "jp": "規則、費用、リスクによります。最近のものは、すぐ検索できるようにし、古いものは、より安く、遅い保管にします。攻撃者は、侵入の数か月後に見つかることもよくあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Who should be able to read logs?",
+      "jp": "ログは、誰が読めるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Only those who need to. And nobody should be able to edit them quietly. Protect logs from tampering, because an attacker's first move is often to erase their traces.",
+      "jp": "必要な人だけです。そして、誰も、こっそり編集できないようにします。改ざんから守ります。攻撃者の最初の動きは、痕跡を消すことが多いからです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do we search them?",
+      "jp": "どうやって検索しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With a query language like KQL. Filter by time and keys first, then summarize. A well-designed log and a good query make an answer in seconds.",
+      "jp": "KQLのような検索の言語で。まず、時間とキーで絞り込み、それから集計します。よく設計されたログと、良い検索が、数秒で答えを出します。"
+     },
+     {
+      "sp": 0,
+      "en": "What if logging itself fails?",
+      "jp": "ログ自体が失敗したら？"
+     },
+     {
+      "sp": 1,
+      "en": "Monitor the pipeline too. A silent log source is a warning sign: either nothing happened, or someone turned it off. Alert on missing data.",
+      "jp": "その仕組みも監視します。静かなログの出所は、警告の印です。何も起きていないか、誰かが止めたかのどちらかです。データの欠落にも、アラートを出します。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：メトリクスとアラートの設計",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What are metrics?",
+      "jp": "メトリクスとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Numbers measured over time: CPU use, error rate, response time, disk space. They're small, cheap, and perfect for graphs and early warnings.",
+      "jp": "時間とともに測る数字です。CPUの使用、エラーの割合、応答時間、ディスクの空き。小さく、安く、グラフや早期の警告に最適です。"
+     },
+     {
+      "sp": 0,
+      "en": "Which numbers matter most?",
+      "jp": "どの数字が、最も大切ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with four: how busy it is, how often it fails, how slow it is, and how full it is. Together they describe the health of almost any service.",
+      "jp": "四つから始めます。どれだけ忙しいか、どれだけ失敗するか、どれだけ遅いか、どれだけ満杯か。合わせて、ほぼ全てのサービスの健康を表します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I design a good alert?",
+      "jp": "良いアラートは、どう設計しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It should be urgent, actionable, and clear. If it fires and nobody needs to do anything, delete or fix it. Each alert should say what to check first.",
+      "jp": "緊急で、行動でき、分かりやすいことです。鳴っても、誰も何もする必要がないなら、消すか直します。各アラートは、最初に何を確認するかを、伝えるべきです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is alert fatigue again?",
+      "jp": "アラート疲れとは、何でしたか？"
+     },
+     {
+      "sp": 1,
+      "en": "When too many noisy alerts train people to ignore them. We saw it in the security operations lecture. The cure is fewer, better alerts, tuned regularly.",
+      "jp": "うるさいアラートが多すぎて、人が無視するようになることです。セキュリティ運用講義で見ました。治療は、より少なく、より良いアラートを、定期的に調整することです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I know a threshold is right?",
+      "jp": "しきい値が正しいかは、どう分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Look at the history. A threshold set from real data and revisited after each incident beats one that was guessed once and forgotten.",
+      "jp": "履歴を見ます。実際のデータから決め、インシデントの後に見直すしきい値は、一度推測して忘れられたものに勝ります。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：全体のつながりと、始め方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Can you tie the whole series together for me?",
+      "jp": "この講義の全体を、つなげて見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Gladly. Devices, networks, and identities produce logs. Python and KQL turn them into answers. The security team acts on them, and dashboards show the story to everyone.",
+      "jp": "喜んで。端末、ネットワーク、IDが、ログを出します。PythonとKQLが、それを答えに変えます。セキュリティチームがそれに動き、ダッシュボードが、その物語を皆に見せます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where does the cloud fit?",
+      "jp": "クラウドは、どこに入りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Cloud platforms offer built-in logging and monitoring for every resource. Turn them on early, because you can't investigate yesterday's events from logs you never collected.",
+      "jp": "クラウドの基盤は、全てのリソースに、組み込みのログと監視を提供します。早く有効にします。集めていないログから、昨日の出来事を調べることはできないからです。"
+     },
+     {
+      "sp": 0,
+      "en": "And Docker?",
+      "jp": "Dockerは、どうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Containers disappear when they stop, along with their files. That's why their logs must go to a central place, or the evidence vanishes with the container.",
+      "jp": "コンテナは、止まるとファイルごと消えます。だから、ログを中央の場所に送る必要があり、さもないと、証拠がコンテナと一緒に消えます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I practice this alone?",
+      "jp": "これを、一人で練習するには？"
+     },
+     {
+      "sp": 1,
+      "en": "Write a small Python script that logs structured events, collect them in a file, then count errors with a query or a pivot. You'll feel the whole cycle.",
+      "jp": "構造のあるイベントを記録する、小さなPythonスクリプトを書き、ファイルに集め、検索やピボットでエラーを数えます。全体の循環が、体で分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "What is the one idea to remember?",
+      "jp": "覚えておくべき、一つの考えは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Decide today what questions you'll need to answer on your worst day, and make sure your logs can answer them. That's logging design in one sentence.",
+      "jp": "最悪の日に答える必要のある問いを、今日のうちに決め、ログがそれに答えられるようにすることです。それが、ログ設計の、一文での説明です。"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,301 @@
+[
+ {
+  "id": "lecture-net",
+  "ic": "🛰",
+  "n": "ネットワーク講義：IPとDNSとTLS（やさしい→難しい）",
+  "hint": "Lecture style on networking: Ken teaches Mia IP addresses, DNS, ports, TCP, TLS certificates, and a calm method to troubleshoot why something cannot connect",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：住所としてのIPアドレス",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, networking always feels like magic to me. Where do I start?",
+      "jp": "ケン、ネットワークはいつも魔法のように感じます。どこから始めればいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with addresses. Every device on a network has an IP address, like a house number, so data knows where to go.",
+      "jp": "住所から始めます。ネットワーク上の全ての端末には、家の番号のようなIPアドレスがあり、データはそれを見て行き先を知ります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do my home devices all start with 192.168?",
+      "jp": "家の端末が、どれも192.168で始まるのはなぜですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Those are private addresses, used only inside your home network. Your router has one public address facing the internet and shares it with everyone inside.",
+      "jp": "それはプライベートアドレスで、家庭内のネットワークでだけ使います。ルーターが、インターネット側に一つの公開アドレスを持ち、中の全員で共有します。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a subnet mask?",
+      "jp": "サブネットマスクとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It tells a device which addresses are on its own local network and which ones must go through the router. It draws the neighborhood border.",
+      "jp": "端末に、どのアドレスが自分と同じ近所のネットワークで、どれがルーターを通す必要があるかを教えます。近所の境界線を引くものです。"
+     },
+     {
+      "sp": 0,
+      "en": "And the default gateway?",
+      "jp": "デフォルトゲートウェイは？"
+     },
+     {
+      "sp": 1,
+      "en": "It's the door out of your neighborhood. When the destination isn't local, the device hands the data to the gateway.",
+      "jp": "近所の外へ出る扉です。行き先が近所でなければ、端末はデータをゲートウェイに渡します。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I check my own address?",
+      "jp": "自分のアドレスは、どう確認しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "On Windows, run ipconfig. It shows your address, mask, gateway, and DNS server. It's the first command I run in any network problem.",
+      "jp": "Windowsなら ipconfig を実行します。アドレス、マスク、ゲートウェイ、DNSサーバーが表示されます。ネットワークの問題で、私が最初に実行するコマンドです。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：DNSは電話帳",
+    "l": [
+     {
+      "sp": 0,
+      "en": "People don't type numbers. They type names. How does that work?",
+      "jp": "人は数字ではなく、名前を入力します。どういう仕組みですか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's DNS, the phone book of the internet. It translates a name like example.com into an IP address.",
+      "jp": "それがDNSで、インターネットの電話帳です。example.com のような名前を、IPアドレスに変換します。"
+     },
+     {
+      "sp": 0,
+      "en": "Who answers the question?",
+      "jp": "誰がその問いに答えるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Your device asks a DNS resolver, usually run by your provider or company. If it doesn't know, it asks other servers until it finds the answer.",
+      "jp": "端末が、通常はプロバイダーや会社が運営するDNSリゾルバーに尋ねます。知らなければ、答えが見つかるまで他のサーバーに尋ねます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do people say \"it's always DNS\"?",
+      "jp": "なぜ「いつもDNSが原因だ」と言われるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because so many failures look like \"the site is down\" when really the name just isn't resolving. It's a joke, but there's truth in it.",
+      "jp": "多くの障害が、実際には名前が解決できないだけなのに、「サイトが落ちている」ように見えるからです。冗談ですが、真実も含んでいます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I test DNS?",
+      "jp": "DNSは、どう調べますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use nslookup or Resolve-DnsName with the name. If you get an address back, DNS works. If not, the problem is the name lookup, not the website.",
+      "jp": "名前を指定して nslookup や Resolve-DnsName を使います。アドレスが返れば、DNSは動いています。返らなければ、問題はウェブサイトではなく、名前の検索です。"
+     },
+     {
+      "sp": 0,
+      "en": "What are records like A and CNAME?",
+      "jp": "AやCNAMEのようなレコードとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "An A record points a name to an address. A CNAME says, \"this name is just another name for that one.\" There's also MX for email.",
+      "jp": "Aレコードは、名前をアドレスに結びます。CNAMEは「この名前は、あの名前の別名です」と言います。メール用のMXもあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does a DNS change take time to appear?",
+      "jp": "DNSの変更が、反映されるまでに時間がかかるのはなぜですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because answers are cached. Each record has a time to live, and until it expires, some resolvers keep giving the old answer.",
+      "jp": "答えがキャッシュされるからです。各レコードには有効時間があり、それが切れるまで、古い答えを返し続けるリゾルバーがあります。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：ポートとTCP",
+    "l": [
+     {
+      "sp": 0,
+      "en": "If the IP address is the building, what is a port?",
+      "jp": "IPアドレスが建物なら、ポートは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A port is the door number of a specific service in that building. Web uses 80 and 443, SSH uses 22, and RDP uses 3389.",
+      "jp": "その建物の中にある、特定のサービスの入口の番号です。ウェブは80と443、SSHは22、RDPは3389を使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What is TCP?",
+      "jp": "TCPとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "TCP is the careful delivery method. It sets up a connection with a handshake, numbers the pieces, and resends anything that got lost.",
+      "jp": "TCPは、丁寧な配送の方法です。ハンドシェイクで接続を作り、断片に番号を付け、失われたものは再送します。"
+     },
+     {
+      "sp": 0,
+      "en": "And UDP?",
+      "jp": "UDPは？"
+     },
+     {
+      "sp": 1,
+      "en": "UDP skips the care to be fast. It just sends. That's good for voice and video calls, where a late packet is worse than a lost one.",
+      "jp": "UDPは、速さのために丁寧さを省き、ただ送ります。音声や映像の通話に向いていて、遅れたパケットは、失われたパケットより悪いからです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do firewalls care about ports?",
+      "jp": "なぜファイアウォールは、ポートを気にするのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A firewall decides which doors are open. Opening only the ports you need keeps unnecessary services unreachable from outside.",
+      "jp": "ファイアウォールは、どの入口を開けるかを決めます。必要なポートだけを開ければ、不要なサービスに外から届かなくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "How can I test if a port is reachable?",
+      "jp": "ポートに届くかどうかは、どう試しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In PowerShell, use Test-NetConnection with the host and port. It tells you whether the connection succeeded, which separates \"network is fine\" from \"service is blocked.\"",
+      "jp": "PowerShellで、ホストとポートを指定して Test-NetConnection を使います。接続が成功したかが分かり、「ネットワークは正常」と「サービスが遮断されている」を切り分けられます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：TLSと証明書",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What does the padlock in the browser mean?",
+      "jp": "ブラウザの鍵のマークは、何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It means the connection is encrypted with TLS, and the site proved its identity with a certificate. It does not mean the site itself is trustworthy.",
+      "jp": "TLSで通信が暗号化され、サイトが証明書で身元を示した、という意味です。サイト自体が信頼できる、という意味ではありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What's a certificate, exactly?",
+      "jp": "証明書とは、正確には何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a signed statement: \"This public key belongs to this name.\" A trusted authority signs it, and your device checks the signature.",
+      "jp": "「この公開鍵は、この名前のものです」という署名付きの声明です。信頼された認証局が署名し、あなたの端末が署名を確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do certificates expire?",
+      "jp": "なぜ証明書には期限があるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "To limit the damage if one is stolen, and to force regular renewal. But an expired certificate is a very common cause of a sudden outage.",
+      "jp": "盗まれた場合の被害を限定し、定期的な更新を促すためです。ただ、期限切れの証明書は、突然の障害のとても多い原因です。"
+     },
+     {
+      "sp": 0,
+      "en": "What if my browser shows a certificate warning?",
+      "jp": "ブラウザが証明書の警告を出したら？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't click through by habit. Check the reason: expired, wrong name, or untrusted authority. On a network you don't control, it can mean someone is intercepting your traffic.",
+      "jp": "習慣で先に進まないでください。理由を確認します。期限切れか、名前の違いか、信頼されない認証局か。自分で管理していないネットワークでは、誰かが通信を傍受している可能性もあります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is HTTPS enough to be safe?",
+      "jp": "HTTPSがあれば、安全ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It protects the road, not the destination. A phishing site can have a perfectly valid certificate. Always check the address too.",
+      "jp": "道は守りますが、行き先は守りません。フィッシングサイトも、完全に有効な証明書を持てます。必ずアドレスも確認してください。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：つながらない原因を切り分ける",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Something can't connect. Where do I begin?",
+      "jp": "何かがつながりません。どこから始めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Go from the bottom up. First, is the device on the network? Then, does it have a valid address? Then, can it reach the gateway?",
+      "jp": "下から上へ進みます。まず、端末はネットワークにいるか。次に、有効なアドレスを持っているか。そして、ゲートウェイに届くか。"
+     },
+     {
+      "sp": 0,
+      "en": "And after that?",
+      "jp": "その後は？"
+     },
+     {
+      "sp": 1,
+      "en": "Can it reach an outside address by number? If yes, test the name with DNS. If the name works, test the port, then the application.",
+      "jp": "外のアドレスに、数字で届くか。届けば、名前をDNSで試します。名前が動けば、ポート、そしてアプリケーションを試します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why test by number first?",
+      "jp": "なぜ、先に数字で試すのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It separates two problems. If the number works but the name doesn't, you've proven the network is fine and DNS is the suspect.",
+      "jp": "二つの問題を切り分けられるからです。数字は届いて名前は届かないなら、ネットワークは正常で、DNSが疑わしいと証明できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does ping really tell me?",
+      "jp": "pingは、本当は何を教えてくれますか？"
+     },
+     {
+      "sp": 1,
+      "en": "That a reply came back. But some systems block ping on purpose, so a failed ping alone is not proof of a problem. Use it as one clue.",
+      "jp": "返事が戻ってきた、ということです。ただ、意図的にpingを遮断するシステムもあるので、pingの失敗だけでは問題の証拠になりません。一つの手がかりとして使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I write down as I troubleshoot?",
+      "jp": "切り分けの間、何を書き留めるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Each test, its result, and the time. It stops you from repeating yourself, and it makes your report to the next person much more useful.",
+      "jp": "各テストと、その結果と、時刻です。同じことの繰り返しを防ぎ、次の人への報告がずっと役に立つものになります。"
+     }
+    ]
+   }
+  ]
+ }
+]

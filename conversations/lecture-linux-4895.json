@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-linux",
+  "ic": "🐧",
+  "n": "Linux講義：コマンドとシェル（やさしい→難しい）",
+  "hint": "Lecture style on the Linux command line: Ken teaches Mia files and paths, permissions, pipes and text tools, processes and logs, and safe habits for working on a server",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：なぜコマンドラインを使うのか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, why do servers use a black screen with text instead of windows and icons?",
+      "jp": "ケン、なぜサーバーでは、ウィンドウやアイコンではなく、文字だけの黒い画面を使うのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because servers are usually far away and have no screen. A text connection is light, fast, and easy to automate with scripts.",
+      "jp": "サーバーは、たいてい遠くにあり、画面が無いからです。文字の接続は軽くて速く、スクリプトで自動化もしやすいです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is the shell?",
+      "jp": "シェルとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The shell is the program that reads what you type and runs it. Bash is the most common one on Linux.",
+      "jp": "シェルは、あなたが入力したものを読んで実行するプログラムです。Linuxで最も一般的なのが、Bashです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I know where I am?",
+      "jp": "今どこにいるかは、どう分かりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Type pwd. It prints your current folder. Then ls lists what's inside, and cd moves you to another folder.",
+      "jp": "pwd と入力します。今のフォルダーが表示されます。次に ls で中身を並べ、cd で別のフォルダーに移動します。"
+     },
+     {
+      "sp": 0,
+      "en": "The paths look strange. What does a leading slash mean?",
+      "jp": "パスが独特です。先頭のスラッシュは何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A path starting with a slash is absolute, counted from the root of the whole system. Without it, the path is relative to where you are now.",
+      "jp": "スラッシュで始まるパスは絶対パスで、システム全体の根元から数えます。無ければ、今いる場所からの相対パスです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a way to get help for a command?",
+      "jp": "コマンドの助けを得る方法はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Type man and the command name for the manual, or add the help option. Reading the manual is a habit of good engineers.",
+      "jp": "はい。man とコマンド名で説明書が出ますし、helpのオプションも付けられます。説明書を読むのは、良い技術者の習慣です。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：ファイルを扱う",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I look inside a file?",
+      "jp": "ファイルの中身は、どうやって見ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "cat prints a whole file. For long ones, use less to scroll, head for the first lines, and tail for the last lines.",
+      "jp": "cat は、ファイル全体を表示します。長いものは、スクロールできる less、最初の行の head、最後の行の tail を使います。"
+     },
+     {
+      "sp": 0,
+      "en": "What does tail -f do?",
+      "jp": "tail -f は何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It keeps watching the end of a file and shows new lines as they appear. It's perfect for watching a live log.",
+      "jp": "ファイルの末尾を見続けて、新しい行が増えるたびに表示します。リアルタイムのログを見るのに最適です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I copy, move, and delete?",
+      "jp": "コピー、移動、削除は、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "cp copies, mv moves or renames, and rm deletes. There's no recycle bin, so a deleted file is gone for good.",
+      "jp": "cp がコピー、mv が移動や名前の変更、rm が削除です。ごみ箱は無いので、消したファイルは、完全に消えます。"
+     },
+     {
+      "sp": 0,
+      "en": "That sounds dangerous.",
+      "jp": "それは危なそうです。"
+     },
+     {
+      "sp": 1,
+      "en": "It is, so be careful with rm and wildcards. Run ls with the same pattern first, to see exactly what you're about to remove.",
+      "jp": "危ないので、rmとワイルドカードには注意します。同じパターンで先に ls を実行して、消そうとしているものを正確に確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I find a file I lost?",
+      "jp": "なくしたファイルは、どう探しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use find with a folder and a name pattern. It searches through the folders for you, and it can also filter by size or date.",
+      "jp": "フォルダーと名前のパターンを指定して、find を使います。フォルダーの中を探してくれて、大きさや日付での絞り込みもできます。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：権限という考え方",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Why do I sometimes get \"permission denied\"?",
+      "jp": "なぜ、ときどき「権限がありません」と出るのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Every file has an owner, a group, and permissions. Your user may not have the right to read, write, or run that file.",
+      "jp": "全てのファイルには、持ち主、グループ、権限があります。あなたのユーザーに、そのファイルを読む、書く、実行する権利が無いのかもしれません。"
+     },
+     {
+      "sp": 0,
+      "en": "What do the letters r, w, and x mean?",
+      "jp": "r、w、x という文字は、何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Read, write, and execute. ls -l shows them for the owner, the group, and everyone else, in that order.",
+      "jp": "読む、書く、実行する、です。ls -l で、持ち主、グループ、その他の全員の順に表示されます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is chmod?",
+      "jp": "chmod とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It changes permissions. A common one is making a script executable. But never use a wide-open setting like 777 just to make an error go away.",
+      "jp": "権限を変えるコマンドです。よくあるのは、スクリプトを実行可能にすることです。ただ、エラーを消すためだけに、777のような全開の設定を使ってはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "And sudo?",
+      "jp": "sudo は？"
+     },
+     {
+      "sp": 1,
+      "en": "It runs one command with administrator power. Think before you press Enter, because with that power, a typo can damage the whole system.",
+      "jp": "一つのコマンドを、管理者の力で実行します。Enterを押す前に考えてください。その力があると、打ち間違い一つでシステム全体を壊しかねません。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not just log in as root all the time?",
+      "jp": "なぜ、常にrootでログインしないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because of least privilege. Work as a normal user and raise your power only for the step that needs it. It limits mistakes and attacks.",
+      "jp": "最小権限の考え方があるからです。普段は通常のユーザーで作業し、必要な手順だけ力を上げます。間違いも攻撃も、限定できます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：パイプとテキストの道具",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What's the vertical bar I keep seeing between commands?",
+      "jp": "コマンドの間に、よく見る縦棒は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's a pipe. It sends the output of one command into the next, so you can build a small tool by chaining simple ones.",
+      "jp": "パイプです。一つのコマンドの出力を、次のコマンドに送るので、単純なものをつなげて、小さな道具を作れます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you show me an example?",
+      "jp": "例を見せてもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Say you want to know how often each error appears in a log. You grep the lines with ERROR, sort them, then count the duplicates with uniq.",
+      "jp": "ログに、各エラーが何回出るかを知りたいとします。ERRORを含む行を grep で抜き出し、sort で並べ、uniq で重複を数えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does grep do exactly?",
+      "jp": "grep は、正確には何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It prints only the lines that match a pattern. Add the ignore-case option, or the count option, and it becomes your daily search tool.",
+      "jp": "パターンに一致した行だけを表示します。大文字小文字を無視するオプションや、数えるオプションを付ければ、毎日使う検索の道具になります。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I save the result to a file?",
+      "jp": "結果を、ファイルに保存するには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use a greater-than sign to write to a file, and two of them to append. Be careful: a single one overwrites what was there.",
+      "jp": "大なり記号でファイルに書き、二つ重ねると追記します。注意してください。一つだけだと、元の内容を上書きします。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is this style so powerful?",
+      "jp": "なぜ、この方式はそんなに強力なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because each tool does one small thing well. Chained together, they answer questions in seconds that would take an hour by hand.",
+      "jp": "各道具が、小さな一つのことをうまくやるからです。つなげれば、手作業なら一時間かかる問いに、数秒で答えられます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：プロセスとログと、安全な習慣",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I see what's running on the machine?",
+      "jp": "マシンで何が動いているかは、どう見ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "ps lists processes, and top or htop shows them live with CPU and memory use. When a server is slow, that's the first place I look.",
+      "jp": "ps がプロセスを並べ、top や htop が、CPUとメモリの使用量とともにリアルタイムで表示します。サーバーが遅いとき、私が最初に見る場所です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I stop a stuck program?",
+      "jp": "止まったプログラムは、どう止めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use kill with the process number. Start with the polite request. Only use the forceful version if the program refuses to stop.",
+      "jp": "プロセス番号を指定して kill を使います。まず丁寧な要求から始め、プログラムが止まらないときだけ、強制的な方を使います。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do I find the logs?",
+      "jp": "ログは、どこにありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Traditionally in the var log folder. On modern systems, journalctl reads the system journal, and you can filter by service and time.",
+      "jp": "従来は、var の log フォルダーにあります。新しいシステムでは、journalctl がシステムのジャーナルを読み、サービスや時間で絞り込めます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I check that disk space isn't the problem?",
+      "jp": "ディスクの空きが原因でないかは、どう確認しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use df for free space per disk and du to see which folder is using it. A full disk causes strange failures that look unrelated.",
+      "jp": "df でディスクごとの空きを、du でどのフォルダーが使っているかを見ます。ディスクが満杯だと、無関係に見える、奇妙な障害が起きます。"
+     },
+     {
+      "sp": 0,
+      "en": "Any safe habits for a production server?",
+      "jp": "本番のサーバーでの、安全な習慣はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Read before you change. Back up a config file before editing it. Make one change at a time, and write down what you did so you can undo it.",
+      "jp": "変える前に読みます。設定ファイルは、編集の前にバックアップを取ります。一度に一つだけ変更し、元に戻せるように、やったことを書き留めます。"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,281 @@
+[
+ {
+  "id": "lecture-regex",
+  "ic": "🔍",
+  "n": "正規表現講義：文字の型で探す（やさしい→難しい）",
+  "hint": "Lecture style on regular expressions: Ken teaches Mia literals, character classes, quantifiers, anchors, groups, and how to test patterns safely in logs and code",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：正規表現とは何か",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what are regular expressions? They look like cat walked on the keyboard.",
+      "jp": "ケン、正規表現とは何ですか？猫がキーボードの上を歩いたように見えます。"
+     },
+     {
+      "sp": 1,
+      "en": "Ha, they do. A regular expression is a pattern that describes a shape of text, so you can find or check it, instead of searching for one exact word.",
+      "jp": "笑ってしまいますね。正規表現は、文字の形を表すパターンで、一つの正確な単語を探す代わりに、その形のものを見つけたり、確認したりできます。"
+     },
+     {
+      "sp": 0,
+      "en": "When do I need that?",
+      "jp": "それは、いつ必要になりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "When the exact text varies. Phone numbers, email addresses, dates, and IP addresses all share a shape, but each one is different.",
+      "jp": "正確な文字が変わるときです。電話番号、メールアドレス、日付、IPアドレスは、どれも共通の形がありますが、一つ一つは違います。"
+     },
+     {
+      "sp": 0,
+      "en": "Where can I use them?",
+      "jp": "どこで使えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Almost everywhere: editors, grep, PowerShell, JavaScript, Python, and log tools. Learn it once, and you can use it in all of them.",
+      "jp": "ほぼどこでもです。エディター、grep、PowerShell、JavaScript、Python、ログの道具。一度学べば、その全てで使えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is every tool exactly the same?",
+      "jp": "どの道具でも、全く同じですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The core is the same, but small details differ between tools. So always test in the tool you're actually using.",
+      "jp": "中心の部分は同じですが、細かい部分は道具ごとに違います。だから、実際に使う道具で、必ず試してください。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：基本の部品",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What's the simplest pattern?",
+      "jp": "最も単純なパターンは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Plain letters. The pattern cat matches the letters c, a, t in a row. Anything that isn't special just means itself.",
+      "jp": "ただの文字です。パターン cat は、c、a、t が並んだものに一致します。特別でないものは、そのまま自分自身を意味します。"
+     },
+     {
+      "sp": 0,
+      "en": "What does a dot mean?",
+      "jp": "ドットは何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A dot matches any single character. So c dot t matches cat, cot, and cut.",
+      "jp": "任意の一文字に一致します。だから、cドットt は、cat、cot、cut に一致します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I match only some letters?",
+      "jp": "一部の文字だけに一致させるには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use square brackets. The pattern c, then a bracket with a and o, then t, matches cat and cot but not cut.",
+      "jp": "角かっこを使います。c、次に a と o の入った角かっこ、そして t というパターンは、cat と cot に一致しますが、cut には一致しません。"
+     },
+     {
+      "sp": 0,
+      "en": "Are there shortcuts for digits and spaces?",
+      "jp": "数字や空白の近道はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Backslash d means a digit, backslash w means a letter, digit, or underscore, and backslash s means a space.",
+      "jp": "はい。バックスラッシュdは数字、バックスラッシュwは文字、数字、アンダースコア、バックスラッシュsは空白を意味します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I match a real dot or bracket?",
+      "jp": "本物のドットや角かっこに一致させるには？"
+     },
+     {
+      "sp": 1,
+      "en": "Put a backslash before it. That escapes it, which tells the engine to treat the symbol as an ordinary character.",
+      "jp": "前にバックスラッシュを付けます。エスケープといい、その記号を、普通の文字として扱うよう、エンジンに伝えます。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：繰り返しと位置",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I say \"one or more digits\"?",
+      "jp": "「一つ以上の数字」は、どう言いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Put a plus after the digit shortcut. Plus means one or more, star means zero or more, and question mark means zero or one.",
+      "jp": "数字の近道の後に、プラスを付けます。プラスは一回以上、スターは零回以上、疑問符は零回か一回です。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I say exactly three times?",
+      "jp": "ちょうど三回、と言えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, with curly braces. A digit followed by braces with a three means exactly three digits. You can also give a range, like two to four.",
+      "jp": "はい、波かっこで言えます。数字の後に、三を入れた波かっこを付けると、ちょうど三桁です。二から四のように、範囲も指定できます。"
+     },
+     {
+      "sp": 0,
+      "en": "What are the caret and the dollar sign?",
+      "jp": "キャレットとドルの記号は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Anchors. The caret means the start of the line, and the dollar means the end. They make sure the whole line matches, not just a piece of it.",
+      "jp": "アンカーです。キャレットは行の始まり、ドルは終わりを意味します。一部だけでなく、行全体が一致することを保証します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does that matter when validating input?",
+      "jp": "入力の検証では、なぜそれが重要ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Without anchors, a pattern for a digit would accept \"abc7xyz\" because it finds a digit somewhere inside. Anchors make the check strict.",
+      "jp": "アンカーが無いと、数字のパターンは、中のどこかに数字があるので、「abc7xyz」も受け入れます。アンカーが、検査を厳密にします。"
+     },
+     {
+      "sp": 0,
+      "en": "What is greedy matching?",
+      "jp": "貪欲な一致とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "By default, plus and star grab as much as they can. If you want the smallest match, add a question mark after them to make it lazy.",
+      "jp": "既定では、プラスやスターは、取れるだけ多く取ります。最小の一致が欲しければ、その後に疑問符を付けて、控えめにします。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：グループと取り出し",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I pull out just part of a match?",
+      "jp": "一致した一部だけを取り出すには、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Wrap that part in parentheses. It becomes a group, and most tools let you read each group separately afterward.",
+      "jp": "その部分を、丸かっこで囲みます。グループになり、たいていの道具で、後からグループごとに別々に読めます。"
+     },
+     {
+      "sp": 0,
+      "en": "Can you give me a picture?",
+      "jp": "イメージで説明してもらえますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Take a date like 2026-11-28. With three groups for year, month, and day, you can get the three numbers separately in one step.",
+      "jp": "2026-11-28 のような日付を考えます。年、月、日の三つのグループを作れば、三つの数字を一度に別々に得られます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does the vertical bar mean in a pattern?",
+      "jp": "パターンの中の縦棒は、何を意味しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It means \"or.\" The pattern cat bar dog matches either word. Put it inside a group to limit what the choice applies to.",
+      "jp": "「または」です。cat 縦棒 dog は、どちらの単語にも一致します。グループの中に入れて、選択の及ぶ範囲を限定します。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I reuse a group in the replacement?",
+      "jp": "置換の中で、グループを再利用できますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Most tools let you refer to group one, group two, and so on. That's how you reorder a date from year-month-day to day-month-year.",
+      "jp": "はい。たいていの道具で、グループ1、グループ2などを参照できます。年月日を、日月年に並べ替えるのは、その方法です。"
+     },
+     {
+      "sp": 0,
+      "en": "What are named groups?",
+      "jp": "名前付きグループとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "You give a group a label, like year, instead of a number. The code becomes much easier to read months later.",
+      "jp": "番号の代わりに、年のような名前を付けます。数か月後にコードを読むとき、ずっと分かりやすくなります。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：実務での使い方と落とし穴",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What's a good way to build a pattern without going crazy?",
+      "jp": "正気を保ちながらパターンを作る、良い方法は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Build it in small steps and test each step on real samples. Use an online tester, or the tool itself, and include both lines that should match and lines that shouldn't.",
+      "jp": "小さな段階で作り、各段階を実際の見本で試します。オンラインの試験ツールや、その道具自体を使い、一致すべき行と、一致すべきでない行の両方を入れます。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I validate email addresses with a regex?",
+      "jp": "メールアドレスを、正規表現で検証すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Only loosely. The full rules are complex, and a strict pattern rejects valid addresses. A simple check plus a confirmation email is better.",
+      "jp": "ゆるくだけです。完全な規則は複雑で、厳しいパターンは、有効なアドレスを拒否します。簡単な確認と、確認メールの組み合わせが、より良い方法です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I use it on logs?",
+      "jp": "ログには、どう使いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Search for error codes, extract IP addresses, or find a user ID in each line. Combined with grep or a log tool, it turns a wall of text into a list.",
+      "jp": "エラーコードを探したり、IPアドレスを取り出したり、各行のユーザーIDを見つけたりします。grepやログの道具と組み合わせれば、文字の壁が、一覧に変わります。"
+     },
+     {
+      "sp": 0,
+      "en": "Can a regex be dangerous?",
+      "jp": "正規表現が、危険になることはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Some badly written patterns take exponentially longer on certain input, which can freeze a service. It's called catastrophic backtracking.",
+      "jp": "はい。書き方の悪いパターンは、ある入力で、指数的に時間がかかり、サービスが止まることがあります。壊滅的なバックトラックと呼ばれます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I avoid that?",
+      "jp": "それを避けるには？"
+     },
+     {
+      "sp": 1,
+      "en": "Avoid nesting repeats inside repeats, anchor your patterns, limit input length, and test with long, strange input before using it on untrusted data.",
+      "jp": "繰り返しの中に繰り返しを入れ子にするのを避け、パターンにアンカーを付け、入力の長さを制限し、信頼できないデータに使う前に、長くて変な入力で試します。"
+     }
+    ]
+   }
+  ]
+ }
+]

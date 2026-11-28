@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-secops",
+  "ic": "🛡",
+  "n": "セキュリティ運用講義：見つけて、止めて、直す（やさしい→難しい）",
+  "hint": "Lecture style on security operations: Ken teaches Mia the SOC role, alerts and triage, the incident response steps, phishing handling, vulnerability management, and writing a clear incident report",
+  "level": 4,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：セキュリティ運用の仕事",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what does a security operations team actually do all day?",
+      "jp": "ケン、セキュリティ運用のチームは、一日中、実際に何をしているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "They watch for signs of trouble, decide which ones are real, stop the real ones, and learn from each. It's like a hospital emergency room for computers.",
+      "jp": "問題の兆しを見張り、どれが本物かを判断し、本物を止め、一つ一つから学びます。コンピューターのための、病院の救急室のようなものです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a SOC?",
+      "jp": "SOCとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A security operations center. It's the team and the tools that monitor logs and alerts, usually with several levels of analysts.",
+      "jp": "セキュリティオペレーションセンターです。ログとアラートを監視する、チームと道具で、たいてい、複数の段階のアナリストがいます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do the alerts come from?",
+      "jp": "アラートは、どこから来ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "From tools like endpoint protection, sign-in monitoring, email filters, and network sensors. A central system collects them so analysts see one picture.",
+      "jp": "端末の保護、サインインの監視、メールのフィルター、ネットワークのセンサーなどの道具からです。中央のシステムが集め、アナリストが一つの全体像を見られるようにします。"
+     },
+     {
+      "sp": 0,
+      "en": "Do analysts see attacks all the time?",
+      "jp": "アナリストは、常に攻撃を見ているのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "They see mostly noise: harmless things that look suspicious. The skill is telling the noise from the signal calmly and quickly.",
+      "jp": "見るのは、ほとんどが雑音です。疑わしく見える、無害なもの。雑音と信号を、落ち着いて素早く見分けることが、技術です。"
+     },
+     {
+      "sp": 0,
+      "en": "What personality suits this work?",
+      "jp": "この仕事には、どんな性格が向いていますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Curious, careful, and calm under pressure. And honest: when you're unsure, say so and ask. Guessing quietly causes the worst mistakes.",
+      "jp": "好奇心があり、慎重で、圧力の下でも落ち着いている人です。そして正直であること。分からないときは、そう言って尋ねます。黙って推測するのが、最悪の間違いを招きます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：アラートの見極め（トリアージ）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "An alert just came in. What do I do first?",
+      "jp": "アラートが来ました。最初に何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Read it fully. What triggered it, which user or device, and when. Then ask: is this normal for that user or system?",
+      "jp": "全部を読みます。何が引き金か、どのユーザーか端末か、いつか。そして問います。そのユーザーやシステムにとって、これは普通のことか。"
+     },
+     {
+      "sp": 0,
+      "en": "What does triage mean?",
+      "jp": "トリアージとは、どういう意味ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Sorting by urgency. You decide what needs action right now, what can wait, and what is a false alarm. Not every alert deserves the same effort.",
+      "jp": "緊急度で仕分けることです。今すぐ行動が必要なもの、待てるもの、誤報を決めます。全てのアラートに、同じ労力をかける価値はありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a false positive?",
+      "jp": "誤検知とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "An alert about something harmless. Too many of them cause alert fatigue, where people stop paying attention, so tuning the rules is real work.",
+      "jp": "無害なものに対するアラートです。多すぎると、人が注意を払わなくなる、アラート疲れを生むので、規則の調整は、本物の仕事です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I find more context?",
+      "jp": "より多くの文脈は、どう見つけますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Check the sign-in history, the device's recent activity, and whether others had the same alert. Logs and queries turn one alert into a story.",
+      "jp": "サインインの履歴、端末の最近の動き、他にも同じアラートがあったかを確認します。ログと検索が、一つのアラートを、物語に変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "When should I escalate?",
+      "jp": "いつ、上に引き継ぐべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "When there's real impact or you're unsure about the risk. Escalating early with clear notes is never a failure. Waiting too long is.",
+      "jp": "実際の影響があるときや、リスクに自信がないときです。明確なメモを付けた、早い引き継ぎは、失敗ではありません。待ちすぎが、失敗です。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：インシデント対応の流れ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Is there a standard way to handle an incident?",
+      "jp": "インシデントを扱う、標準的な方法はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: prepare, detect, contain, eradicate, recover, and learn. The order keeps you from rushing into a fix before you understand the problem.",
+      "jp": "はい。備える、検知する、封じ込める、除去する、復旧する、学ぶ、です。この順序が、問題を理解する前に、慌てて直そうとするのを防ぎます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does containment mean?",
+      "jp": "封じ込めとは、どういう意味ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Stopping the spread. For example, isolating an infected device from the network or disabling a stolen account. You limit the damage first.",
+      "jp": "広がりを止めることです。例えば、感染した端末をネットワークから切り離す、盗まれたアカウントを無効にする。まず、被害を限定します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not just wipe the machine right away?",
+      "jp": "なぜ、すぐにマシンを消去しないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because you'd destroy evidence, and you might not learn how the attacker got in. Preserve what you need, then clean up.",
+      "jp": "証拠を壊してしまい、攻撃者がどう入ったかが分からなくなるかもしれないからです。必要なものを保全してから、掃除します。"
+     },
+     {
+      "sp": 0,
+      "en": "What is eradication?",
+      "jp": "除去とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Removing the cause: the malware, the bad account, the open hole. If you only treat the symptom, the attacker simply comes back.",
+      "jp": "原因を取り除くことです。マルウェア、悪いアカウント、開いた穴。症状だけに対処すれば、攻撃者は、ただ戻ってきます。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens after recovery?",
+      "jp": "復旧の後は、何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A review without blame. What worked, what didn't, and what we change. A good review makes the next incident smaller.",
+      "jp": "責める人のいない振り返りです。何がうまくいき、何がだめで、何を変えるか。良い振り返りが、次のインシデントを小さくします。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：フィッシングと脆弱性への対応",
+    "l": [
+     {
+      "sp": 0,
+      "en": "A user reports a suspicious email. What do I do?",
+      "jp": "利用者が、怪しいメールを報告してきました。何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Thank them first, because reporting is the behavior we want. Then check the sender, links, and attachments safely, without clicking.",
+      "jp": "まず感謝します。報告は、私たちが望む行動だからです。次に、送信者、リンク、添付を、クリックせずに、安全に確認します。"
+     },
+     {
+      "sp": 0,
+      "en": "And if the user already clicked?",
+      "jp": "もし利用者が、すでにクリックしていたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Don't blame them. Check whether they entered a password or opened a file. If so, reset the password, revoke sessions, and look at their recent sign-ins.",
+      "jp": "責めないでください。パスワードを入力したか、ファイルを開いたかを確認します。そうなら、パスワードをリセットし、セッションを取り消し、最近のサインインを調べます。"
+     },
+     {
+      "sp": 0,
+      "en": "Do we look for the same email elsewhere?",
+      "jp": "同じメールを、他でも探しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Phishing is almost never sent to one person. Search for other recipients and remove the message from all inboxes.",
+      "jp": "はい。フィッシングは、一人だけに送られることは、ほぼありません。他の受信者を探し、全ての受信箱から、そのメッセージを削除します。"
+     },
+     {
+      "sp": 0,
+      "en": "What is vulnerability management?",
+      "jp": "脆弱性管理とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Finding known weaknesses in software and systems, ranking them by risk, and fixing the important ones first. You can't patch everything at once.",
+      "jp": "ソフトウェアやシステムにある、既知の弱点を見つけ、リスクで順位を付け、重要なものから直すことです。全てを一度には、直せません。"
+     },
+     {
+      "sp": 0,
+      "en": "How do we rank them?",
+      "jp": "順位は、どう付けますか？"
+     },
+     {
+      "sp": 1,
+      "en": "By severity and by context: is it exploited in the wild, is the system exposed to the internet, and what data does it hold? A medium issue on an exposed system can outrank a high one on an isolated machine.",
+      "jp": "深刻度と文脈によります。実際に悪用されているか、システムがインターネットに公開されているか、どんなデータを持つか。公開されたシステムの中程度の問題が、隔離された機械の高い問題より、優先されることもあります。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：報告書と、日々の習慣",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How should I write up an incident?",
+      "jp": "インシデントは、どう書き上げればよいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Plain and in order: what happened, when, what was affected, what we did, and what remains. Someone who wasn't there should understand it.",
+      "jp": "平易に、順番に書きます。何が起きたか、いつか、何に影響したか、何をしたか、何が残っているか。その場にいなかった人が、理解できるように。"
+     },
+     {
+      "sp": 0,
+      "en": "What should the timeline include?",
+      "jp": "時系列には、何を入れますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Exact times with the time zone, the evidence for each step, and who did what. Facts first, then your interpretation, clearly marked as interpretation.",
+      "jp": "タイムゾーン付きの正確な時刻、各手順の根拠、誰が何をしたか。まず事実、次に解釈を、解釈だとはっきり分けて書きます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I don't know the cause yet?",
+      "jp": "まだ原因が分からない場合は？"
+     },
+     {
+      "sp": 1,
+      "en": "Say so. Write \"root cause under investigation\" and list what you've ruled out. Honest uncertainty is far more useful than a confident guess.",
+      "jp": "そう言います。「根本原因は調査中」と書き、除外したことを挙げます。正直な不確かさは、自信満々の推測より、ずっと役に立ちます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I avoid burning out in this work?",
+      "jp": "この仕事で、燃え尽きないためには？"
+     },
+     {
+      "sp": 1,
+      "en": "Use checklists, share the load, and take handovers seriously. Calm routines beat heroic effort, and rest is part of keeping a system safe.",
+      "jp": "チェックリストを使い、負担を分け合い、引き継ぎを真剣に扱います。落ち着いた手順は、英雄的な努力に勝ち、休むことも、システムを安全に保つ仕事の一部です。"
+     },
+     {
+      "sp": 0,
+      "en": "What's the most important habit to start now?",
+      "jp": "今から始める、最も大切な習慣は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Keep a log of what you learn: every command, every pattern, every mistake. In a year, that notebook will be your most valuable tool.",
+      "jp": "学んだことの記録を続けることです。全てのコマンド、パターン、間違い。一年後には、そのノートが、最も価値のある道具になります。"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-docker",
+  "ic": "🐳",
+  "n": "Docker講義：コンテナの基礎（やさしい→難しい）",
+  "hint": "Lecture style on containers: Ken teaches Mia images and containers, running and stopping them, ports and volumes, Dockerfiles, and security habits, and shows how it connects to Linux, networking, Git, Azure and logging",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：コンテナとは何か",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what is a container, and why is everyone talking about it?",
+      "jp": "ケン、コンテナとは何ですか？なぜ皆が話題にするのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A container packages an app together with everything it needs to run. It runs the same on your laptop, a test server, and the cloud.",
+      "jp": "コンテナは、アプリと、それを動かすのに必要な全てを一つにまとめたものです。自分のパソコンでも、試験用サーバーでも、クラウドでも、同じように動きます。"
+     },
+     {
+      "sp": 0,
+      "en": "How is that different from a virtual machine?",
+      "jp": "仮想マシンとは、何が違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A virtual machine carries a whole operating system, so it's heavy. Containers share the host's kernel, so they start in seconds and use much less memory.",
+      "jp": "仮想マシンは、OS全体を運ぶので重いです。コンテナは、ホストのカーネルを共有するので、数秒で起動し、メモリもずっと少なく済みます。"
+     },
+     {
+      "sp": 0,
+      "en": "Kernel? That sounds like our Linux lecture.",
+      "jp": "カーネル？Linux講義の話に似ています。"
+     },
+     {
+      "sp": 1,
+      "en": "Right. Containers are a Linux feature at heart. Everything you learned about files, permissions, and processes applies inside a container.",
+      "jp": "そのとおりです。コンテナは、本質的にはLinuxの機能です。ファイル、権限、プロセスについて学んだことは、全てコンテナの中でも当てはまります。"
+     },
+     {
+      "sp": 0,
+      "en": "What problem does it solve?",
+      "jp": "どんな問題を解決しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "\"It works on my machine.\" When the environment travels with the app, differences between machines stop causing mysterious failures.",
+      "jp": "「私のマシンでは動く」という問題です。環境がアプリと一緒に運ばれるので、マシンごとの違いによる、不可解な障害が起きなくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is a container a secure box?",
+      "jp": "コンテナは、安全な箱ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's an isolation tool, not a perfect wall. Treat it as one layer of defense, and keep applying least privilege inside it.",
+      "jp": "隔離の道具であって、完全な壁ではありません。防御の一つの層として扱い、中でも最小権限を守り続けます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：イメージとコンテナ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What's the difference between an image and a container?",
+      "jp": "イメージとコンテナの違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "An image is the recipe and ingredients, frozen. A container is a running instance made from that image. You can start many containers from one image.",
+      "jp": "イメージは、固められた、レシピと材料です。コンテナは、そのイメージから作られた、動いている実体です。一つのイメージから、多くのコンテナを起動できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do images come from?",
+      "jp": "イメージは、どこから来ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "From a registry, like Docker Hub or your cloud provider's registry. You pull an image down, much like pulling code from GitHub.",
+      "jp": "Docker Hubや、クラウド提供者のレジストリからです。GitHubからコードをプルするように、イメージをプルして取り込みます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I run one?",
+      "jp": "どうやって動かしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With docker run and the image name. Add a flag to run it in the background, and another to give it a name you can remember.",
+      "jp": "docker run とイメージ名で動かします。背景で動かすフラグと、覚えやすい名前を付けるフラグを足します。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I see and stop containers?",
+      "jp": "コンテナの確認と停止は、どうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "docker ps lists the running ones, docker stop stops one, and docker rm removes it. It's the same idea as ps and kill on Linux.",
+      "jp": "docker ps で動いているものを並べ、docker stop で止め、docker rm で削除します。Linuxの ps と kill と、同じ考えです。"
+     },
+     {
+      "sp": 0,
+      "en": "What happens to my data when a container is removed?",
+      "jp": "コンテナを削除すると、データはどうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Anything written inside the container is lost. That's by design: containers are disposable. Important data belongs outside, in a volume.",
+      "jp": "コンテナの中に書いたものは、失われます。それは設計どおりで、コンテナは使い捨てです。大切なデータは、外のボリュームに置きます。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：ポートとボリューム",
+    "l": [
+     {
+      "sp": 0,
+      "en": "My container runs, but my browser can't reach it. Why?",
+      "jp": "コンテナは動いているのに、ブラウザから届きません。なぜですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The container has its own private network. You must publish a port, mapping a port on your machine to a port inside the container.",
+      "jp": "コンテナには、専用の私的なネットワークがあります。自分のマシンのポートと、コンテナの中のポートを結ぶ、ポートの公開が必要です。"
+     },
+     {
+      "sp": 0,
+      "en": "That's the port idea from the networking lecture.",
+      "jp": "ネットワーク講義のポートの考えですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Same doors, same firewall rules. If a connection fails, use the same bottom-up troubleshooting: address, name, port, application.",
+      "jp": "まさにそうです。同じ入口、同じファイアウォールの規則です。接続が失敗したら、同じ下から上への切り分けをします。住所、名前、ポート、アプリケーションの順です。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a volume?",
+      "jp": "ボリュームとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A storage area that lives outside the container's lifetime. When you replace the container, the volume and its data stay.",
+      "jp": "コンテナの寿命の外にある、保存領域です。コンテナを入れ替えても、ボリュームとそのデータは残ります。"
+     },
+     {
+      "sp": 0,
+      "en": "How do containers talk to each other?",
+      "jp": "コンテナ同士は、どうやって話しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Through a shared network, and they can find each other by name. A web app container can reach a database container just by its name.",
+      "jp": "共有のネットワークを通して、名前で互いを見つけられます。ウェブアプリのコンテナは、データベースのコンテナに、名前だけで届きます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I pass settings, like a password?",
+      "jp": "パスワードのような設定は、どう渡しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With environment variables or a secrets feature. Never bake a password into the image, because anyone with the image can read it.",
+      "jp": "環境変数や、秘密を扱う機能を使います。パスワードをイメージに焼き込んではいけません。そのイメージを持つ人が、誰でも読めるからです。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：Dockerfileとビルド",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I make my own image?",
+      "jp": "自分のイメージは、どう作りますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You write a Dockerfile: a short text file listing the steps. Start from a base image, copy your code in, install what it needs, and say how to start it.",
+      "jp": "Dockerfileを書きます。手順を並べた短い文章のファイルです。土台のイメージから始め、コードをコピーし、必要なものをインストールし、起動の方法を書きます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why keep the Dockerfile in Git?",
+      "jp": "なぜDockerfileを、Gitに入れておくのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because it describes your environment as code. It's reviewed, versioned, and repeatable, exactly like the Git lecture's habits.",
+      "jp": "環境をコードとして記述しているからです。Git講義の習慣と同じく、レビューされ、版を持ち、繰り返せます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I keep an image small?",
+      "jp": "イメージを小さく保つには？"
+     },
+     {
+      "sp": 1,
+      "en": "Choose a slim base image, install only what you need, and don't leave tools or caches behind. Smaller images pull faster and have less to attack.",
+      "jp": "軽い土台のイメージを選び、必要なものだけをインストールし、道具やキャッシュを残さないことです。小さいイメージは、取り込みが速く、攻撃される面も少なくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "What are layers?",
+      "jp": "レイヤーとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Each step in a Dockerfile makes a layer, and Docker caches them. Put rarely changing steps first, and your rebuilds become very fast.",
+      "jp": "Dockerfileの各手順が、レイヤーを作り、Dockerはそれをキャッシュします。あまり変わらない手順を先に置けば、再ビルドがとても速くなります。"
+     },
+     {
+      "sp": 0,
+      "en": "Which user should the app run as?",
+      "jp": "アプリは、どのユーザーとして動かすべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A normal, non-root user. If an attacker takes over the app, they shouldn't also own the container. That's least privilege again.",
+      "jp": "root以外の、通常のユーザーです。攻撃者がアプリを乗っ取っても、コンテナ全体まで握られるべきではありません。ここでも、最小権限です。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：他の分野とのつながりと、運用の習慣",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How does Docker connect to the cloud?",
+      "jp": "Dockerは、クラウドとどうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Cloud services like Azure can run your container directly, without you managing a server. You push the image to a registry and tell the service to run it.",
+      "jp": "Azureのようなクラウドのサービスは、サーバーを管理しなくても、コンテナを直接動かせます。イメージをレジストリに送り、サービスに動かすよう伝えます。"
+     },
+     {
+      "sp": 0,
+      "en": "And with logs?",
+      "jp": "ログとは、どうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "A container should write its logs to standard output. Then the platform collects them in one place, which connects straight to the logging and monitoring lecture.",
+      "jp": "コンテナは、ログを標準出力に書くべきです。すると、基盤がそれを一か所に集めるので、ログ設計と監視の講義にそのままつながります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a security side to this?",
+      "jp": "セキュリティの面もありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Scan images for known vulnerabilities, use trusted base images, and keep them updated. This is the vulnerability management we saw in the security operations lecture.",
+      "jp": "はい。イメージを既知の脆弱性について検査し、信頼できる土台を使い、更新を続けます。セキュリティ運用講義で見た、脆弱性管理そのものです。"
+     },
+     {
+      "sp": 0,
+      "en": "What's a common beginner mistake?",
+      "jp": "初心者によくある間違いは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Running everything as root, exposing every port, and putting secrets in the image. All three break lessons you already know.",
+      "jp": "全てをrootで動かす、全てのポートを公開する、秘密をイメージに入れる。その三つは、もう学んだ教えを破っています。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I practice first?",
+      "jp": "最初に何を練習すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Run a small web server container, publish a port, view its logs, then stop and remove it. Then write a tiny Dockerfile for a script you wrote yourself.",
+      "jp": "小さなウェブサーバーのコンテナを動かし、ポートを公開し、ログを見て、止めて削除します。その後、自分で書いたスクリプトのための、小さなDockerfileを書きます。"
+     }
+    ]
+   }
+  ]
+ }
+]

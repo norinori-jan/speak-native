@@ -1,0 +1,291 @@
+[
+ {
+  "id": "lecture-excel",
+  "ic": "📊",
+  "n": "Excel・Power BI講義：表から見える化へ（やさしい→難しい）",
+  "hint": "Lecture style on spreadsheets and Power BI: Ken teaches Mia clean tables, formulas and lookups, pivot tables, the data model and Power Query, dashboards and DAX basics, and shows how it connects to SQL, Python, KQL logs and accounting work",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：きれいな表を作る",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I use Excel every day, but my sheets get messy. What's the first rule?",
+      "jp": "ケン、Excelは毎日使いますが、シートが散らかります。最初の決まりは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Keep data as a clean table: one header row, one record per row, one kind of value per column. No merged cells, no blank rows.",
+      "jp": "データを、きれいな表として保つことです。見出しは一行、一行に一件、一列に一種類の値。セルの結合も、空白の行も無しです。"
+     },
+     {
+      "sp": 0,
+      "en": "Why are merged cells a problem?",
+      "jp": "なぜ、結合したセルは問題なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "They look nice but break sorting, filtering, and formulas. It's the same idea as a database table from the SQL lecture: a regular shape is what makes data usable.",
+      "jp": "見た目は良いのですが、並べ替え、絞り込み、数式を壊します。SQL講義のデータベースの表と同じ考えで、規則的な形が、データを使えるものにします。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a feature for tables?",
+      "jp": "表のための機能はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, format the range as a Table. It names the columns, grows automatically when you add rows, and makes formulas easier to read.",
+      "jp": "はい、範囲を「テーブル」として書式設定します。列に名前が付き、行を足すと自動で広がり、数式も読みやすくなります。"
+     },
+     {
+      "sp": 0,
+      "en": "What about dates and numbers typed as text?",
+      "jp": "文字として入力された、日付や数字は？"
+     },
+     {
+      "sp": 1,
+      "en": "That's a classic trap. A number stored as text won't add up. Check the cell type, and clean the data before analyzing it.",
+      "jp": "よくある罠です。文字として保存された数字は、合計されません。セルの種類を確認し、分析の前にデータを整えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Should I keep raw data and reports on the same sheet?",
+      "jp": "元のデータと報告は、同じシートに置くべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Keep raw data on its own sheet, untouched, and build reports on other sheets from it. Then you can always trace a number back to its source.",
+      "jp": "いいえ。元のデータは、手を付けずに専用のシートに置き、他のシートで、それを元に報告を作ります。そうすれば、数字を、いつでも元までたどれます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：数式と検索",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Which formulas should I master first?",
+      "jp": "最初に身に付けるべき数式は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "SUM, AVERAGE, COUNT, IF, and the conditional versions: SUMIFS and COUNTIFS. They answer most everyday questions.",
+      "jp": "SUM、AVERAGE、COUNT、IF、そして条件付きの SUMIFS と COUNTIFS です。日常の疑問の大半に答えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What does SUMIFS do?",
+      "jp": "SUMIFS は何をしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It adds up values that meet conditions, like total sales for one region in one month. It's the spreadsheet cousin of SQL's WHERE and GROUP BY.",
+      "jp": "条件に合う値を合計します。ある地域の、ある月の売上の合計のように。SQLの WHERE と GROUP BY の、表計算での親戚です。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I look up a value from another table?",
+      "jp": "別の表から、値を引くには？"
+     },
+     {
+      "sp": 1,
+      "en": "With XLOOKUP, or the older VLOOKUP. You give a key, like a product code, and it returns the matching name or price. It's like a SQL join.",
+      "jp": "XLOOKUPか、古い VLOOKUP を使います。商品コードのようなキーを渡すと、一致する名前や価格を返します。SQLの結合に似ています。"
+     },
+     {
+      "sp": 0,
+      "en": "Why do lookups sometimes return errors?",
+      "jp": "なぜ、検索がエラーを返すことがあるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Usually the key doesn't match exactly: a trailing space, different case, or a number stored as text. Clean the keys, and handle the not-found case on purpose.",
+      "jp": "たいてい、キーが正確に一致していません。末尾の空白、大文字小文字の違い、文字として保存された数字。キーを整え、見つからない場合を、意図して扱います。"
+     },
+     {
+      "sp": 0,
+      "en": "What's an absolute reference?",
+      "jp": "絶対参照とは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A dollar sign locks a row or column so it doesn't move when you copy the formula. Forgetting it is the most common reason copied formulas go wrong.",
+      "jp": "ドル記号が、行や列を固定し、数式をコピーしても動かないようにします。これを忘れるのが、コピーした数式が狂う、最も多い理由です。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：ピボットテーブルで集計する",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What is a pivot table?",
+      "jp": "ピボットテーブルとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A tool that summarizes a big table by dragging fields: rows, columns, and values. You get totals by region and month without writing a formula.",
+      "jp": "フィールドをドラッグして、大きな表を要約する道具です。行、列、値を選べば、数式を書かずに、地域別、月別の合計が得られます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is it so useful?",
+      "jp": "なぜ、そんなに便利なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "You can change your question in seconds. Drag a different field and the whole view re-slices. It's exploration, not just reporting.",
+      "jp": "数秒で、問いを変えられます。別のフィールドをドラッグすれば、全体の見え方が切り直されます。報告だけでなく、探索のための道具です。"
+     },
+     {
+      "sp": 0,
+      "en": "Does it work on logs too?",
+      "jp": "ログにも使えますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Export a few thousand sign-in events, and a pivot shows failures by user and hour. It's the point-and-click version of a KQL summarize.",
+      "jp": "はい。数千件のサインインのイベントを書き出せば、ピボットが、ユーザー別、時間別の失敗を示します。KQLの summarize の、クリック操作版です。"
+     },
+     {
+      "sp": 0,
+      "en": "Why won't my pivot update when the data changes?",
+      "jp": "なぜ、データが変わっても、ピボットが更新されないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "You must refresh it. And if the source is a Table, new rows are included automatically. Another reason to use Tables.",
+      "jp": "更新の操作が必要です。そして、元がテーブルなら、新しい行は自動で含まれます。テーブルを使う、もう一つの理由です。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I watch for in the totals?",
+      "jp": "合計では、何に気を付けますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Always sanity check. Does the grand total match the source? Duplicates and blank rows quietly make a summary wrong while looking professional.",
+      "jp": "必ず、妥当性を確認します。総計は、元と一致しますか。重複や空白の行は、見た目は立派なまま、静かに集計を狂わせます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：Power Queryとデータモデル",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, what is Power Query?",
+      "jp": "ケン、Power Queryとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A tool that cleans and reshapes data step by step, and remembers the steps. Next month, you refresh, and the same cleaning runs again.",
+      "jp": "データを一歩ずつ整え、形を変え、その手順を覚えておく道具です。来月は、更新するだけで、同じ整理が、もう一度実行されます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is that better than cleaning by hand?",
+      "jp": "なぜ、手作業で整えるより良いのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's repeatable and visible. Every step is listed, so someone else can check it, and there's no copy-paste mistake. It's the same value as a script, without writing code.",
+      "jp": "繰り返せて、見えるからです。全ての手順が並ぶので、他の人が確認でき、コピーと貼り付けの間違いもありません。コードを書かずに、スクリプトと同じ価値を得られます。"
+     },
+     {
+      "sp": 0,
+      "en": "Where can the data come from?",
+      "jp": "データは、どこから来られますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Files, folders, databases, web APIs, and cloud services. You can combine a SQL query result with a CSV file in one report.",
+      "jp": "ファイル、フォルダー、データベース、ウェブのAPI、クラウドのサービスです。SQLの問い合わせ結果と、CSVのファイルを、一つの報告に組み合わせられます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a data model?",
+      "jp": "データモデルとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Several tables connected by relationships. A sales table links to a product table and a date table by keys. It's a small database inside your report.",
+      "jp": "関係で結ばれた、複数の表です。売上の表が、商品の表や日付の表と、キーでつながります。報告の中にある、小さなデータベースです。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a good shape for the model?",
+      "jp": "モデルの良い形は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A star: one central table of events, like sales, surrounded by small descriptive tables, like products and customers. It's simple, fast, and easy to reason about.",
+      "jp": "星の形です。売上のような出来事の表を中心に、商品や顧客のような、小さな説明の表が取り囲みます。単純で、速く、考えやすい形です。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：ダッシュボードと、他の分野とのつながり",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How is Power BI different from Excel?",
+      "jp": "Power BIは、Excelと何が違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It handles larger data, builds interactive dashboards, refreshes on a schedule, and can be shared online. Excel is for working; Power BI is for showing and monitoring.",
+      "jp": "より大きなデータを扱い、操作できるダッシュボードを作り、予定で更新され、オンラインで共有できます。Excelは作業のため、Power BIは見せることと監視のためです。"
+     },
+     {
+      "sp": 0,
+      "en": "What makes a good dashboard?",
+      "jp": "良いダッシュボードの条件は何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "One clear question, a few key numbers on top, and charts that answer it. Too many colors and visuals hide the message.",
+      "jp": "明確な一つの問い、上部の少数の重要な数字、それに答えるグラフです。色や図が多すぎると、伝えたいことが隠れます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is DAX?",
+      "jp": "DAXとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The formula language for measures in Power BI. A measure like total sales or year-over-year change is calculated on the fly, depending on how the user filters.",
+      "jp": "Power BIで、メジャーを作る、数式の言語です。総売上や前年比のような値が、利用者の絞り込みに応じて、その場で計算されます。"
+     },
+     {
+      "sp": 0,
+      "en": "How does this connect to accounting?",
+      "jp": "これは、会計とどうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Accounting data is perfect for it: monthly trial balances, budget versus actual, and trends by department. A clean data model turns a closing process into a living report.",
+      "jp": "会計のデータに最適です。月次の試算表、予算と実績、部門別の推移。きれいなデータモデルが、決算の作業を、生きた報告に変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "And with the security side?",
+      "jp": "セキュリティの面とは、どうつながりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Sign-in counts, alert volumes, and patch status become a dashboard for managers. Remember access control too: share only with the people who should see the data.",
+      "jp": "サインインの数、アラートの量、更新の状況が、管理者向けのダッシュボードになります。アクセス制御も忘れずに。データを見るべき人にだけ、共有します。"
+     }
+    ]
+   }
+  ]
+ }
+]

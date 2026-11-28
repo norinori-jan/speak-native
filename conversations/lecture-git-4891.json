@@ -1,0 +1,301 @@
+[
+ {
+  "id": "lecture-git",
+  "ic": "🌿",
+  "n": "Git講義：変更の記録と共同作業（やさしい→難しい）",
+  "hint": "Lecture style on Git: Ken teaches Mia what a commit is, how branches and merges work, how to fix mistakes safely, and how to work with GitHub and pull requests",
+  "level": 3,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：Gitは何のためにあるのか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, I keep saving files like report_final, report_final2, report_really_final. Is Git the fix for that?",
+      "jp": "ケン、私はいつも report_final、report_final2、report_本当に最終 のようにファイルを保存しています。Gitはその解決策ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. Git keeps one file and remembers every version of it. You can go back to any earlier point, and you can see who changed what and why.",
+      "jp": "まさにそうです。Gitは、ファイルを一つだけ持ち、その全ての版を覚えています。以前の時点に戻れますし、誰が何をなぜ変えたかも見られます。"
+     },
+     {
+      "sp": 0,
+      "en": "So it's like a very careful history book?",
+      "jp": "では、とても丁寧な歴史の本のようなものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Each page is called a commit. A commit is a snapshot of your project at one moment, plus a short message saying what you did.",
+      "jp": "はい。そのページ一つ一つがコミットです。コミットは、ある瞬間のプロジェクトの写しと、何をしたかの短いメッセージです。"
+     },
+     {
+      "sp": 0,
+      "en": "Is Git the same as GitHub?",
+      "jp": "GitとGitHubは同じものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. Git is the tool on your computer. GitHub is a website that stores a copy of your repository online, so you can back it up and share it with others.",
+      "jp": "いいえ。Gitはあなたのコンピューターにある道具です。GitHubは、リポジトリのコピーをネット上に置くサイトで、バックアップや他の人との共有ができます。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a repository, then?",
+      "jp": "では、リポジトリとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's simply a project folder that Git is watching. Inside, there's a hidden folder where Git stores the whole history.",
+      "jp": "Gitが見ている、ただのプロジェクトのフォルダーです。中には隠しフォルダーがあり、Gitがそこに全ての履歴を保存しています。"
+     },
+     {
+      "sp": 0,
+      "en": "Can I break something by using Git?",
+      "jp": "Gitを使って、何かを壊すことはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's hard to lose committed work. That's the beauty of it. Most mistakes can be undone, as long as you committed first.",
+      "jp": "コミットした作業を失うのは難しいです。それがGitの良さです。先にコミットしてあれば、たいていの間違いは元に戻せます。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：コミットの流れ（add と commit）",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Walk me through saving my work with Git.",
+      "jp": "Gitで作業を保存する流れを、順に教えてください。"
+     },
+     {
+      "sp": 1,
+      "en": "First you change files. Then you run git add to choose what goes into the next snapshot. Then git commit to record it with a message.",
+      "jp": "まずファイルを変更します。次に git add で、次の写しに入れるものを選びます。そして git commit で、メッセージ付きで記録します。"
+     },
+     {
+      "sp": 0,
+      "en": "Why two steps? Why not save everything at once?",
+      "jp": "なぜ二段階なのですか？一度に全部保存しないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because you might have changed ten files for two different reasons. The add step lets you group them into two clean commits.",
+      "jp": "十個のファイルを、二つの別の理由で変更しているかもしれないからです。addの段階で、それを二つのきれいなコミットに分けられます。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I see what I've changed so far?",
+      "jp": "ここまでに何を変えたか、どう見ますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Use git status to see which files changed, and git diff to see the exact lines. I run both before every commit.",
+      "jp": "git status で変更されたファイルを、git diff で正確な行を見ます。私はコミットの前に、毎回両方を実行します。"
+     },
+     {
+      "sp": 0,
+      "en": "What makes a good commit message?",
+      "jp": "良いコミットメッセージとは、どんなものですか？"
+     },
+     {
+      "sp": 1,
+      "en": "One short line that says what changed and, if possible, why. \"Fix login error on empty password\" is useful. \"Updates\" is not.",
+      "jp": "何を、できれば理由も、一行で短く書くことです。「空のパスワードでのログインエラーを修正」は役に立ちます。「更新」は役に立ちません。"
+     },
+     {
+      "sp": 0,
+      "en": "How big should a commit be?",
+      "jp": "コミットの大きさは、どのくらいが良いですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Small and focused. If you can't describe it in one line, it's probably two commits.",
+      "jp": "小さく、一つのことに絞ります。一行で説明できないなら、たいてい二つのコミットです。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：ブランチとマージ",
+    "l": [
+     {
+      "sp": 0,
+      "en": "What is a branch?",
+      "jp": "ブランチとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A branch is a separate line of work. You can try a new feature there without touching the main line, which is usually called main.",
+      "jp": "ブランチは、別の作業の流れです。そこで新機能を試しても、通常mainと呼ばれる本線には触れません。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not just edit main directly?",
+      "jp": "なぜ、mainを直接編集しないのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because main should always work. If your experiment breaks something, it only breaks your branch, and you can throw it away.",
+      "jp": "mainは、常に動く状態であるべきだからです。実験が何かを壊しても、壊れるのはあなたのブランチだけで、捨てられます。"
+     },
+     {
+      "sp": 0,
+      "en": "And when the feature is ready?",
+      "jp": "そして、機能が完成したらどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You merge it. Git combines your branch's commits into main. If both sides changed different parts of the file, it just works.",
+      "jp": "マージします。Gitが、あなたのブランチのコミットをmainに合流させます。両方が違う部分を変えていれば、そのままうまくいきます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if both sides changed the same line?",
+      "jp": "両方が同じ行を変えていたら、どうなりますか？"
+     },
+     {
+      "sp": 1,
+      "en": "That's a conflict. Git stops and marks both versions in the file. You choose what the final text should be, save it, and commit.",
+      "jp": "それがコンフリクトです。Gitは止まり、ファイルの中に両方の版に印を付けます。最終的な文章を自分で選んで、保存し、コミットします。"
+     },
+     {
+      "sp": 0,
+      "en": "Is a conflict a sign that I did something wrong?",
+      "jp": "コンフリクトは、私が何か間違えた印ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "No. It's just two people editing the same spot. It's normal, and it's calm work once you read the markers carefully.",
+      "jp": "いいえ。二人が同じ場所を編集しただけです。普通のことで、印を落ち着いて読めば、冷静にできる作業です。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：間違いを安全に戻す",
+    "l": [
+     {
+      "sp": 0,
+      "en": "I committed something by mistake. Can I undo it?",
+      "jp": "間違ってコミットしてしまいました。取り消せますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. The safest way is git revert. It creates a new commit that cancels the old one, so the history stays honest.",
+      "jp": "はい。最も安全なのは git revert です。古いコミットを打ち消す新しいコミットを作るので、履歴は正直なままです。"
+     },
+     {
+      "sp": 0,
+      "en": "What about git reset?",
+      "jp": "git reset はどうですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Reset moves the branch backward and can erase commits from the history. It's fine on your own local work, but dangerous on something you've already shared.",
+      "jp": "resetは、ブランチを後ろに動かし、履歴からコミットを消せます。自分のローカルの作業なら構いませんが、すでに共有したものには危険です。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is it dangerous once shared?",
+      "jp": "共有した後は、なぜ危険なのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because other people already have those commits. If you rewrite history, their copy and yours no longer match, and that creates a mess.",
+      "jp": "他の人が、すでにそのコミットを持っているからです。履歴を書き換えると、相手のコピーとあなたのものが一致しなくなり、混乱を生みます。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I changed a file and want to throw the change away?",
+      "jp": "ファイルを変更して、その変更を捨てたい場合はどうしますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You can restore the file from the last commit. But be careful: uncommitted changes that you discard can't be recovered.",
+      "jp": "最後のコミットからファイルを復元できます。ただし注意してください。コミットしていない変更は、捨てると取り戻せません。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there a way to pause my work without committing?",
+      "jp": "コミットせずに、作業を一時的に置いておく方法はありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes, git stash. It puts your unfinished changes on a shelf so you can switch tasks, and you bring them back later.",
+      "jp": "はい、git stash です。未完成の変更を棚に置いて別の作業に移り、後で戻せます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：GitHubとプルリクエスト",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I get my commits onto GitHub?",
+      "jp": "コミットを、どうやってGitHubに載せますか？"
+     },
+     {
+      "sp": 1,
+      "en": "You push. git push sends your new commits to the online copy. To get other people's work, you pull.",
+      "jp": "プッシュします。git push で、新しいコミットをオンラインのコピーに送ります。他の人の作業を取り込むには、プルします。"
+     },
+     {
+      "sp": 0,
+      "en": "Why does my push sometimes get rejected?",
+      "jp": "なぜ、プッシュが拒否されることがあるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Usually because someone else pushed first. Your copy is behind. Pull their changes, resolve any conflict, then push again.",
+      "jp": "たいてい、他の誰かが先にプッシュしたからです。あなたのコピーは遅れています。相手の変更をプルし、コンフリクトがあれば解決して、もう一度プッシュします。"
+     },
+     {
+      "sp": 0,
+      "en": "What is a pull request?",
+      "jp": "プルリクエストとは何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's a proposal: \"Please merge my branch into main.\" Others can read the changes, comment, and approve before anything is merged.",
+      "jp": "「私のブランチをmainに合流させてください」という提案です。合流の前に、他の人が変更を読み、コメントし、承認できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why is review so valuable?",
+      "jp": "なぜレビューは、それほど価値があるのですか？"
+     },
+     {
+      "sp": 1,
+      "en": "A second pair of eyes catches mistakes you can't see anymore. It also spreads knowledge, so the whole team understands the code.",
+      "jp": "第二の目が、自分には見えなくなった間違いを見つけます。また知識が広がるので、チーム全体がコードを理解できます。"
+     },
+     {
+      "sp": 0,
+      "en": "Is there anything I should never commit?",
+      "jp": "絶対にコミットしてはいけないものはありますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: passwords, API keys, and tokens. Once they're in the history, they're very hard to remove. Keep them out with a gitignore file and an environment variable.",
+      "jp": "はい。パスワード、APIキー、トークンです。履歴に入ると、消すのがとても難しくなります。gitignoreファイルと環境変数で、外に置いてください。"
+     },
+     {
+      "sp": 0,
+      "en": "What if I already committed a key by accident?",
+      "jp": "すでに、間違ってキーをコミットしてしまったら？"
+     },
+     {
+      "sp": 1,
+      "en": "Assume it's leaked. Revoke it and create a new one right away. Cleaning the history is secondary to making the old key useless.",
+      "jp": "漏れたものと考えてください。すぐに無効にして、新しいものを作ります。履歴の掃除は、古いキーを使えなくすることよりも後回しです。"
+     }
+    ]
+   }
+  ]
+ }
+]

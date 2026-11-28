@@ -1,0 +1,396 @@
+[
+ {
+  "id": "lecture-kql",
+  "ic": "🔎",
+  "n": "調査・自動化講義：KQLとGraph（やさしい→難しい）",
+  "hint": "Lecture style on investigation and automation: Ken teaches Mia how to read logs with KQL in Defender, how to pull device information with Microsoft Graph and PowerShell, how to combine them in an investigation, and how to automate safely",
+  "level": 5,
+  "keywords": [
+   "script",
+   "lecture",
+   "coding"
+  ],
+  "d": [
+   {
+    "t": "第1講：なぜログを検索するのか",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Ken, my team lead said I should learn KQL and Graph. Why do those two matter?",
+      "jp": "ケン、チームリーダーが、KQLとGraphを学ぶように言いました。なぜその二つが大事なんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Because they answer two different questions. KQL answers \"What happened on the device?\" by searching logs. Graph answers \"Whose device is it, and what state is it in?\" by reading Intune and Entra information.",
+      "jp": "二つが、違う問いに答えるからです。KQLは、ログを検索して「端末で何が起きたのか」に答えます。Graphは、IntuneやEntraの情報を読んで「誰の端末で、どんな状態か」に答えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Why not just click around in the portal?",
+      "jp": "なぜ、ポータルをクリックして回るだけではだめなんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Clicking is fine for one device. But when someone asks, \"How many devices have this problem?\" or \"Did this happen anywhere else?\", you need to ask the data a question and get a count in seconds.",
+      "jp": "一台なら、クリックで十分です。でも、「この問題のある端末は何台か」「他でも起きたか」と聞かれたら、データに質問して、数秒で件数を得る必要があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Is KQL hard to learn?",
+      "jp": "KQLは、学ぶのが難しいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's gentler than it looks. You start with a table name and pass the data through steps separated by a vertical bar, like a pipeline. Filter, choose columns, count, sort. If you've used PowerShell pipelines, you already have the right instinct.",
+      "jp": "見た目より、やさしいです。表の名前から始めて、縦棒で区切った手順にデータを通します。パイプラインのようにです。絞り、列を選び、数え、並べます。PowerShellのパイプラインを使ったことがあれば、もう正しい感覚があります。"
+     },
+     {
+      "sp": 0,
+      "en": "Where do I practice?",
+      "jp": "どこで練習しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "In a test environment or a learning course, never by trying things on real logs without permission. Logs contain real people's activity, so even reading them is a responsibility.",
+      "jp": "検証用の環境か、学習コースで、許可なく本物のログで試すことはしません。ログには本物の人の行動が入っているので、読むだけでも責任が伴います。"
+     },
+     {
+      "sp": 0,
+      "en": "That's an important point.",
+      "jp": "大事な点ですね。"
+     },
+     {
+      "sp": 1,
+      "en": "It is. Power with data always comes with a duty to handle it carefully.",
+      "jp": "はい。データの力には、それを慎重に扱う責任が、いつも伴います。"
+     }
+    ]
+   },
+   {
+    "t": "第2講：KQLの基本の型",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Show me a first query.",
+      "jp": "最初のクエリを見せてください。"
+     },
+     {
+      "sp": 1,
+      "en": "DeviceProcessEvents, then a vertical bar, then where Timestamp is greater than ago of one day, then a vertical bar, and take ten. In words: \"From the process table, keep the last day, and show ten rows.\"",
+      "jp": "DeviceProcessEvents、縦棒、where Timestampがagoの1日より大きい、縦棒、take 10。言葉にすると、「プロセスの表から、直近一日を残して、十行見せる」です。"
+     },
+     {
+      "sp": 0,
+      "en": "Why filter by time first?",
+      "jp": "なぜ、最初に時間で絞るんですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Logs are huge. If you filter by time first, the query runs faster and the result is easier to understand. Time, then device, then text: that's the order I recommend.",
+      "jp": "ログは巨大です。最初に時間で絞れば、クエリが速く動き、結果も分かりやすくなります。時間、端末、文字の順がおすすめです。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I choose which columns to see?",
+      "jp": "どの列を見るかは、どう選びますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With project. It keeps only the columns you name, like Timestamp, DeviceName, and ProcessCommandLine. It also protects privacy, because you show only what you need.",
+      "jp": "projectを使います。指定した列、Timestamp、DeviceName、ProcessCommandLineなどだけを残します。必要なものだけを見せるので、プライバシーも守れます。"
+     },
+     {
+      "sp": 0,
+      "en": "And counting things?",
+      "jp": "数えるには？"
+     },
+     {
+      "sp": 1,
+      "en": "With summarize. \"summarize count() by DeviceName\" gives one row per device with its count. It's the same idea as GROUP BY in SQL.",
+      "jp": "summarizeです。「summarize count() by DeviceName」は、端末ごとに一行で件数を出します。SQLのGROUP BYと同じ考え方です。"
+     },
+     {
+      "sp": 0,
+      "en": "I noticed \"has\" and \"contains.\" Are they different?",
+      "jp": "「has」と「contains」があるのに気づきました。違いますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. \"has\" looks for a whole term, and it's fast. \"contains\" looks for any piece of text, and it's slower. Start with has, and switch only if you need a fragment.",
+      "jp": "はい。「has」は、語としてまるごと探し、速いです。「contains」は、文字のどんな断片も探し、遅いです。まずhasを使い、断片が必要な時だけ切り替えます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about uppercase and lowercase?",
+      "jp": "大文字と小文字は？"
+     },
+     {
+      "sp": 1,
+      "en": "Double-equals is case-sensitive. Use equals-tilde for case-insensitive matching. Windows file names vary in case, so equals-tilde is usually what you want.",
+      "jp": "等号二つは、大文字小文字を区別します。無視して比べるには、等号とチルダを使います。Windowsのファイル名は大文字小文字が揺れるので、通常は等号とチルダが適しています。"
+     }
+    ]
+   },
+   {
+    "t": "第3講：集計と調査の問い",
+    "l": [
+     {
+      "sp": 0,
+      "en": "How do I find something unusual in thousands of rows?",
+      "jp": "何千行の中から、普段と違うものを、どう見つけますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Aggregate, then compare. Count events per device, then look at the top ten. A device with a much larger number than the others deserves a closer look.",
+      "jp": "集計して、比べます。端末ごとの事象を数え、上位十件を見ます。他よりずっと多い端末は、詳しく見る価値があります。"
+     },
+     {
+      "sp": 0,
+      "en": "But a big number doesn't always mean a problem, right?",
+      "jp": "でも、数が多いことが、いつも問題とは限りませんよね？"
+     },
+     {
+      "sp": 1,
+      "en": "Exactly. A software deployment server will naturally have many connections. That's why you need a baseline, meaning what's normal. Unusual means different from normal, not simply large.",
+      "jp": "その通りです。ソフトウェア配布のサーバーは、当然、接続が多くなります。だからベースライン、つまり普段の状態を知る必要があります。普段と違う、というのは、単に大きいという意味ではありません。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the latest state of each device?",
+      "jp": "各端末の、最新の状態は？"
+     },
+     {
+      "sp": 1,
+      "en": "Use arg_max. \"summarize arg_max of Timestamp, star, by DeviceId\" returns the most recent row for each device. Without it, a table that stores history would show the same device many times.",
+      "jp": "arg_maxを使います。「summarize arg_max(Timestamp, *) by DeviceId」は、端末ごとの最新の行を返します。それがないと、履歴を持つ表では、同じ端末が何度も出ます。"
+     },
+     {
+      "sp": 0,
+      "en": "And combining two tables?",
+      "jp": "二つの表を、組み合わせるには？"
+     },
+     {
+      "sp": 1,
+      "en": "With join, matching on a key such as AlertId or DeviceId. But be careful: a join can multiply rows, so count before and after, just like in SQL.",
+      "jp": "joinを使い、AlertIdやDeviceIdのようなキーで合わせます。ただし、注意が必要です。joinで行が増えることがあるので、SQLと同じく、前後で件数を数えます。"
+     },
+     {
+      "sp": 0,
+      "en": "How should I read the result?",
+      "jp": "結果は、どう読めばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Slowly, and with context. Ask: what time was it, which account ran it, what started it, and where did it connect? One line rarely tells the full story.",
+      "jp": "ゆっくり、文脈と一緒に。何時だったか、どのアカウントが実行したか、何が起動したか、どこに接続したか、を問います。一行で、全体の話が分かることは、めったにありません。"
+     },
+     {
+      "sp": 0,
+      "en": "So the query gives clues, and I still need judgment.",
+      "jp": "つまり、クエリは手がかりをくれて、判断は私がするんですね。"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. And when you're unsure, ask the security team before you act.",
+      "jp": "はい。そして自信がない時は、行動する前に、セキュリティ担当に聞きます。"
+     }
+    ]
+   },
+   {
+    "t": "第4講：Microsoft GraphとPowerShell",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Now Graph. What is it, in simple terms?",
+      "jp": "では、Graphです。簡単に言うと、何ですか？"
+     },
+     {
+      "sp": 1,
+      "en": "It's the common doorway to Microsoft 365 data. Through it, a script can read and change things like users, groups, and managed devices, the same things you see in the portals.",
+      "jp": "Microsoft 365のデータへの、共通の入口です。それを通して、スクリプトが、ユーザー、グループ、管理対象の端末のような、ポータルで見えるものを、読んだり変えたりできます。"
+     },
+     {
+      "sp": 0,
+      "en": "How does a PowerShell script connect?",
+      "jp": "PowerShellのスクリプトは、どうやって接続しますか？"
+     },
+     {
+      "sp": 1,
+      "en": "With the Microsoft Graph PowerShell SDK. You run Connect-MgGraph with the scopes you need, sign in, and consent. A scope is a permission, such as reading managed devices.",
+      "jp": "Microsoft Graph PowerShell SDKを使います。必要なスコープを付けてConnect-MgGraphを実行し、サインインして、同意します。スコープは、管理対象の端末を読む、のような権限です。"
+     },
+     {
+      "sp": 0,
+      "en": "Which permissions should I ask for?",
+      "jp": "どの権限を求めるべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "The smallest set that does the job. If you only need to list devices, ask for a read permission, not read-write. Strong permissions like remote lock or wipe should never be requested casually.",
+      "jp": "仕事ができる、最小の組み合わせです。端末を一覧するだけなら、読み書きではなく、読み取りの権限を求めます。遠隔ロックやワイプのような強い権限は、軽い気持ちで求めてはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "How do I list devices?",
+      "jp": "端末を一覧するには？"
+     },
+     {
+      "sp": 1,
+      "en": "Get-MgDeviceManagementManagedDevice with the -All switch. Without -All, you may get only the first page of results and think it's everything.",
+      "jp": "Get-MgDeviceManagementManagedDeviceに、-Allを付けます。-Allがないと、最初のページだけを受け取り、それが全部だと思ってしまうことがあります。"
+     },
+     {
+      "sp": 0,
+      "en": "And then I filter in PowerShell?",
+      "jp": "それから、PowerShellで絞るんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes: Where-Object ComplianceState -eq 'noncompliant', then Select-Object DeviceName, OperatingSystem, LastSyncDateTime, then Export-Csv. In three lines, you have a list of non-compliant devices.",
+      "jp": "はい。Where-Object ComplianceState -eq 'noncompliant'、次にSelect-Object DeviceName, OperatingSystem, LastSyncDateTime、それからExport-Csv。三行で、非準拠の端末の一覧ができます。"
+     },
+     {
+      "sp": 0,
+      "en": "What about the \"429\" error I once saw?",
+      "jp": "以前見た「429」のエラーは？"
+     },
+     {
+      "sp": 1,
+      "en": "That's throttling. You called too fast, and the service asked you to slow down. Add short pauses, and when you see 429, wait longer before retrying.",
+      "jp": "スロットリングです。呼び出しが速すぎて、サービスが、減速を求めたのです。短い待ち時間を入れ、429が出たら、再試行の前に、もっと長く待ちます。"
+     }
+    ]
+   },
+   {
+    "t": "第5講：KQLとGraphを組み合わせる調査",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Let's do a full investigation. Defender flags a suspicious PowerShell command. Where do I start?",
+      "jp": "通しの調査をやりましょう。Defenderが、不審なPowerShellのコマンドを検知しました。どこから始めますか？"
+     },
+     {
+      "sp": 1,
+      "en": "Read the alert: severity, device, user, and time. Then use KQL to look around that moment, say one hour before and after, on that device. What processes ran, what connected to the internet, what files appeared?",
+      "jp": "アラートを読みます。重大度、端末、ユーザー、時刻です。それからKQLで、その時刻の前後、たとえば前後一時間を、その端末について調べます。どのプロセスが実行され、何がインターネットに接続し、どのファイルが現れたか。"
+     },
+     {
+      "sp": 0,
+      "en": "And then I check whether it spread?",
+      "jp": "それから、広がったか確認するんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "Yes. Search for the same command line or the same file across all devices, and count how many devices are involved. One device is an incident. Fifty devices is a major incident.",
+      "jp": "はい。同じコマンドラインや同じファイルを、全端末から探し、関わった端末の数を数えます。一台なら、インシデントです。五十台なら、重大なインシデントです。"
+     },
+     {
+      "sp": 0,
+      "en": "Where does Graph come in?",
+      "jp": "Graphは、どこで出てきますか？"
+     },
+     {
+      "sp": 1,
+      "en": "To learn about the device and its owner: Is it compliant, is it encrypted, when did it last sync, and who uses it? That tells you who to contact, and how risky the situation is.",
+      "jp": "端末と持ち主について知るためです。準拠しているか、暗号化されているか、最後の同期はいつか、誰が使っているか。それで、誰に連絡するか、状況がどれほど危険かが分かります。"
+     },
+     {
+      "sp": 0,
+      "en": "Then I decide what to do?",
+      "jp": "それから、どうするか決めるんですね？"
+     },
+     {
+      "sp": 1,
+      "en": "With the runbook. Maybe isolate the device, revoke the user's sessions, and escalate. Important actions need approval, and you must not destroy evidence by wiping or reinstalling.",
+      "jp": "手順書に従って。端末を隔離し、利用者のセッションを取り消し、上へ上げるかもしれません。重要な操作には承認が必要で、初期化や再インストールで証拠を壊してはいけません。"
+     },
+     {
+      "sp": 0,
+      "en": "What should I write in the report, in English?",
+      "jp": "報告には、英語で何を書けばいいですか？"
+     },
+     {
+      "sp": 1,
+      "en": "Something like: \"At ten fifteen, Defender detected an encoded PowerShell command on one device. We found no similar activity on other devices. The device has been isolated, and the security team is investigating.\"",
+      "jp": "こんな感じです。「10時15分に、Defenderが一台の端末で、エンコードされたPowerShellのコマンドを検知しました。他の端末で、同様の動きは見つかっていません。端末は隔離され、セキュリティ担当が調査中です」。"
+     },
+     {
+      "sp": 0,
+      "en": "It's short, factual, and shows the next step.",
+      "jp": "短く、事実に基づき、次の手順も示していますね。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the formula. Facts, scope, action, and status.",
+      "jp": "それが型です。事実、範囲、対応、状況です。"
+     }
+    ]
+   },
+   {
+    "t": "第6講：安全な自動化と運用",
+    "l": [
+     {
+      "sp": 0,
+      "en": "Once I can do this by hand, how do I automate it safely?",
+      "jp": "手でできるようになったら、それを安全に自動化するには？"
+     },
+     {
+      "sp": 1,
+      "en": "Start with read-only scripts. A script that only lists and reports can't break anything. Add changes later, and only for small, tested cases.",
+      "jp": "読み取りだけのスクリプトから始めます。一覧と報告だけをするスクリプトは、何も壊せません。変更は、あとで、小さく試験済みの場合にだけ加えます。"
+     },
+     {
+      "sp": 0,
+      "en": "And for scripts that change things?",
+      "jp": "変更をするスクリプトは？"
+     },
+     {
+      "sp": 1,
+      "en": "First show the list of targets without changing anything, like a dry run. Check the count. Try one or two devices. Then run the rest, logging each result. For the most dangerous actions, like a wipe, don't automate at all.",
+      "jp": "最初に、何も変えずに、対象の一覧を表示します。乾燥実行のようにです。件数を確認します。一台か二台で試します。それから残りを実行し、各結果を記録します。ワイプのように最も危険な操作は、自動化しません。"
+     },
+     {
+      "sp": 0,
+      "en": "How should a script sign in when nobody is there to type a password?",
+      "jp": "誰もパスワードを打てない時、スクリプトは、どうサインインすべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "With an app registration that has only the permissions it needs, and a certificate instead of a password. Never write secrets in the script. And review those app permissions regularly, because an automation account is a powerful key.",
+      "jp": "必要な権限だけを持つアプリの登録と、パスワードの代わりに証明書を使います。スクリプトに秘密を書いてはいけません。そして、それらのアプリの権限を、定期的に見直します。自動化のアカウントは、強力な鍵だからです。"
+     },
+     {
+      "sp": 0,
+      "en": "What should the script log?",
+      "jp": "スクリプトは、何を記録すべきですか？"
+     },
+     {
+      "sp": 1,
+      "en": "What it did, to which target, when, and with what result. Don't put personal data or secrets in the log. Good logs let you answer, three months later, \"What happened on that day?\"",
+      "jp": "何を、どの対象に、いつ、どんな結果で行ったか。個人情報や秘密は、ログに入れません。良いログがあれば、三か月後に「あの日、何が起きたか」に答えられます。"
+     },
+     {
+      "sp": 0,
+      "en": "And if the script runs twice by mistake?",
+      "jp": "スクリプトが、間違って二回実行されたら？"
+     },
+     {
+      "sp": 1,
+      "en": "Design it to be safe: check the current state first and do nothing if it's already correct. That's idempotency, and it turns mistakes into non-events.",
+      "jp": "安全になるように設計します。まず現在の状態を確認し、すでに正しければ、何もしません。それが冪等性で、間違いを、何も起きないことに変えます。"
+     },
+     {
+      "sp": 0,
+      "en": "Thank you, Ken. KQL, Graph, and PowerShell now feel like one toolbox.",
+      "jp": "ありがとう、ケン。KQL、Graph、PowerShellが、一つの道具箱のように感じられます。"
+     },
+     {
+      "sp": 1,
+      "en": "That's the right feeling. Practice on a test environment, save your useful queries, and review each script with a colleague. Careful practice builds trust.",
+      "jp": "その感覚で正しいです。検証環境で練習し、役立つクエリを保存し、各スクリプトを、同僚とレビューします。慎重な練習が、信頼を築きます。"
+     }
+    ]
+   }
+  ]
+ }
+]
